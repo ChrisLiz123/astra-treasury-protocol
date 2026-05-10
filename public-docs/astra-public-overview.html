@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>AstraTreasury Public Docs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root { color-scheme: dark; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    body { margin: 0; background: #0d1117; color: #e6edf3; }
+    header { padding: 28px 32px; background: #010409; border-bottom: 1px solid #30363d; }
+    main { padding: 24px 32px 48px; display: grid; gap: 18px; }
+    .card { background: #161b22; border: 1px solid #30363d; border-radius: 14px; padding: 18px; }
+    a { color: #58a6ff; }
+    code { background: #0d1117; padding: 2px 5px; border-radius: 5px; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border-bottom: 1px solid #30363d; padding: 10px; text-align: left; vertical-align: top; }
+    .muted { color: #8b949e; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>AstraTreasury Protocol Public Docs</h1>
+  <div class="muted">Base Sepolia testnet documentation and safety workflow.</div>
+</header>
+<main>
+  <section class="card">
+    <h2>Documents</h2>
+    <ul>
+      <li><a href="/public-docs/README.md">README</a></li>
+      <li><a href="/public-docs/contracts.md">Contracts</a></li>
+      <li><a href="/public-docs/safety-workflow.md">Safety workflow</a></li>
+      <li><a href="/public-docs/dashboard-api.md">Dashboard/API</a></li>
+      <li><a href="/public-docs/verification.md">Verification</a></li>
+      <li><a href="/public-docs/status-snapshot.json">Status snapshot JSON</a></li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>Contracts</h2>
+    <table>
+      <thead><tr><th>Contract</th><th>Address</th><th>BaseScan</th></tr></thead>
+      <tbody>
+        <tr><td>AstraToken</td><td><code>0x0e1a0446c9660cbdcdb05a684e497a036861c0da</code></td><td><a href="https://sepolia.basescan.org/address/0x0e1a0446c9660cbdcdb05a684e497a036861c0da" target="_blank" rel="noreferrer">Open</a></td></tr>
+<tr><td>TreasuryPolicy</td><td><code>0x53a14b2c4de81dfe64e938eec3852fc0cd48ccff</code></td><td><a href="https://sepolia.basescan.org/address/0x53a14b2c4de81dfe64e938eec3852fc0cd48ccff" target="_blank" rel="noreferrer">Open</a></td></tr>
+<tr><td>TreasuryVault</td><td><code>0x47716e8efbf8bb5325738f4b87beaf6e635d153a</code></td><td><a href="https://sepolia.basescan.org/address/0x47716e8efbf8bb5325738f4b87beaf6e635d153a" target="_blank" rel="noreferrer">Open</a></td></tr>
+<tr><td>SignalRegistry</td><td><code>0x7a9ea35172d69ce2650ff410b0caffbfa9789d0e</code></td><td><a href="https://sepolia.basescan.org/address/0x7a9ea35172d69ce2650ff410b0caffbfa9789d0e" target="_blank" rel="noreferrer">Open</a></td></tr>
+<tr><td>ExecutionController</td><td><code>0x1076c83ae89ebda88b38c39a3f98c37da2ede830</code></td><td><a href="https://sepolia.basescan.org/address/0x1076c83ae89ebda88b38c39a3f98c37da2ede830" target="_blank" rel="noreferrer">Open</a></td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>Safety Summary</h2>
+    <p>AI signals are paper-traded first, signal submission requires manual approval, and treasury execution requires a separate policy-aware manual approval.</p>
+    <p>This is a Base Sepolia testnet prototype. It is not an investment product and does not promise returns.</p>
+  </section>
+</main>
+</body>
+</html>

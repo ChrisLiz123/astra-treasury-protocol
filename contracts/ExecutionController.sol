@@ -20,6 +20,23 @@ interface ITreasuryPolicyValidator {
 
 interface ISignalRegistryLookup {
     function signalExists(bytes32 signalId) external view returns (bool);
+
+    function signals(bytes32 signalId)
+        external
+        view
+        returns (
+            bytes32 storedSignalId,
+            string memory modelVersion,
+            uint8 actionType,
+            uint16 confidenceBps,
+            uint16 riskBps,
+            uint256 maxSizeUsd,
+            bytes32 dataHash,
+            string memory reasonCode,
+            uint64 createdAt,
+            address submittedBy,
+            bool cancelled
+        );
 }
 
 interface ITreasuryVaultExecutor {
@@ -85,6 +102,7 @@ contract ExecutionController is AccessControl, Pausable, ReentrancyGuard {
     error EmptyActionId();
     error DuplicateAction(bytes32 actionId);
     error UnknownSignal(bytes32 signalId);
+    error CancelledSignal(bytes32 signalId);
     error ZeroRecipient();
     error PolicyRejected(string reason);
 
@@ -171,8 +189,19 @@ contract ExecutionController is AccessControl, Pausable, ReentrancyGuard {
         if (proposal.actionId == bytes32(0)) revert EmptyActionId();
         if (actionExecuted[proposal.actionId]) revert DuplicateAction(proposal.actionId);
         if (proposal.recipient == address(0)) revert ZeroRecipient();
-        if (proposal.signalId != bytes32(0) && !ISignalRegistryLookup(signalRegistry).signalExists(proposal.signalId)) {
-            revert UnknownSignal(proposal.signalId);
+
+        if (proposal.signalId != bytes32(0)) {
+            ISignalRegistryLookup registry = ISignalRegistryLookup(signalRegistry);
+
+            if (!registry.signalExists(proposal.signalId)) {
+                revert UnknownSignal(proposal.signalId);
+            }
+
+            (,,,,,,,,,, bool cancelled) = registry.signals(proposal.signalId);
+
+            if (cancelled) {
+                revert CancelledSignal(proposal.signalId);
+            }
         }
     }
 

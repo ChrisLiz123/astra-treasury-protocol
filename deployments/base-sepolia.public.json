@@ -1,6 +1,6 @@
 {
   "schema": "astra-deployment-manifest-v0.1",
-  "generatedAt": "2026-05-10T00:33:36.829Z",
+  "generatedAt": "2026-05-10T03:07:48.073Z",
   "project": "AstraTreasury Protocol",
   "version": "0.1.0",
   "status": "public-testnet-prototype",
@@ -20,7 +20,7 @@
     "treasuryPolicy": "0x53a14b2c4de81dfe64e938eec3852fc0cd48ccff",
     "treasuryVault": "0x47716e8efbf8bb5325738f4b87beaf6e635d153a",
     "signalRegistry": "0x7a9ea35172d69ce2650ff410b0caffbfa9789d0e",
-    "executionController": "0x409d633b4d71868de78e0ebc36729f58254d1810"
+    "executionController": "0x1076c83ae89ebda88b38c39a3f98c37da2ede830"
   },
   "publicSite": {
     "root": "https://astratreasury.ai",

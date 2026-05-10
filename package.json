@@ -52,7 +52,10 @@
     "test:audit": "npm run compile:local && npm run foundry:test",
     "audit:invariants": "node services/audit/invariant-check.mjs",
     "audit:invariants:deep": "AUDIT_POLICY_FUZZ_RUNS=250 node services/audit/invariant-check.mjs",
-    "audit:prepare": "npm run release:prepare && npm run audit:invariants && npm run ops:status"
+    "audit:prepare": "npm run release:prepare && npm run audit:invariants && npm run ops:status",
+    "audit:stateful": "hardhat run scripts/stateful-local-check.ts --build-profile production",
+    "audit:full": "npm run release:prepare && npm run audit:invariants && npm run audit:stateful && npm run ops:status",
+    "deploy:controller:v011:base-sepolia": "hardhat run scripts/deploy-controller-v011-base-sepolia.ts --build-profile production --network baseSepolia"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",

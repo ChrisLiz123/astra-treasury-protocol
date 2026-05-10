@@ -1,0 +1,796 @@
+{
+  "generatedAt": "2026-05-10T03:07:41.140Z",
+  "status": {
+    "ok": true,
+    "endpoint": "/api/status",
+    "data": {
+      "app": "AstraTreasury Protocol Dashboard API",
+      "network": "Base Sepolia",
+      "chainId": 84532,
+      "generatedAt": "2026-05-10T03:07:42.546Z",
+      "treasury": {
+        "token": {
+          "address": "0x0E1a0446C9660CbdcDB05a684E497a036861C0Da",
+          "name": "AstraTreasury Token",
+          "symbol": "ASTP",
+          "decimals": 18,
+          "totalSupplyRaw": "1000000000000000000000000000",
+          "totalSupply": "1000000000"
+        },
+        "vault": {
+          "address": "0x47716E8EfBf8bb5325738F4B87beAf6e635d153a",
+          "astpBalanceRaw": "349999999000000000000000000",
+          "astpBalance": "349999999",
+          "ethBalanceWei": "0",
+          "ethBalance": "0"
+        },
+        "watchedBalances": {
+          "treasuryVault": {
+            "address": "0x47716E8EfBf8bb5325738F4B87beAf6e635d153a",
+            "astpRaw": "349999999000000000000000000",
+            "astp": "349999999"
+          },
+          "liquidityWallet": {
+            "address": "0x17C8036cD9d192bd1DdD40b552bbAeB4fcd250E7",
+            "astpRaw": "650000001000000000000000000",
+            "astp": "650000001"
+          },
+          "ecosystemWallet": {
+            "address": "0x17C8036cD9d192bd1DdD40b552bbAeB4fcd250E7",
+            "astpRaw": "650000001000000000000000000",
+            "astp": "650000001"
+          },
+          "teamWallet": {
+            "address": "0x17C8036cD9d192bd1DdD40b552bbAeB4fcd250E7",
+            "astpRaw": "650000001000000000000000000",
+            "astp": "650000001"
+          },
+          "communityWallet": {
+            "address": "0x17C8036cD9d192bd1DdD40b552bbAeB4fcd250E7",
+            "astpRaw": "650000001000000000000000000",
+            "astp": "650000001"
+          },
+          "advisorsWallet": {
+            "address": "0x17C8036cD9d192bd1DdD40b552bbAeB4fcd250E7",
+            "astpRaw": "650000001000000000000000000",
+            "astp": "650000001"
+          }
+        }
+      },
+      "policy": {
+        "address": "0x53a14b2c4de81DFE64e938EEc3852Fc0cd48CCFf",
+        "approvedAssets": {
+          "astp": true,
+          "nativeEth": true
+        },
+        "config": {
+          "maxSingleTradeBps": 50,
+          "maxDailyTradeBps": 200,
+          "minStableReserveBps": 4000,
+          "maxMonthlyBuybackRevenueBps": 2000,
+          "maxSlippageBps": 100,
+          "allowBuybacks": true,
+          "allowLiquidityActions": true,
+          "allowGrants": true
+        }
+      },
+      "latestSignal": {
+        "found": true,
+        "source": "ASTRA_SIGNAL_ID",
+        "signalId": "0x50644840e108d28bea946fdbb07e427c71d416fee81a9960e70ffaa2b2dd8363",
+        "modelVersion": "astra-risk-v0.1",
+        "actionType": 1,
+        "actionName": "ADD_LIQUIDITY",
+        "confidenceBps": 7400,
+        "riskBps": 1001,
+        "maxSizeUsdRaw": "5000",
+        "dataHash": "0x47a85b51aa014bd18c013c101a25e9337011754c8dd61362129b3137ba84be2e",
+        "reasonCode": "LOW_DEPTH_HIGH_SPREAD",
+        "createdAt": 1778343576,
+        "submittedBy": "0x17C8036cD9d192bd1DdD40b552bbAeB4fcd250E7",
+        "cancelled": false
+      },
+      "recentExecution": {
+        "found": false,
+        "message": "No ActionExecuted events found in the lookback window.",
+        "lookbackBlocks": "50000"
+      },
+      "health": {
+        "status": "OK",
+        "checkedAt": "2026-05-10T03:07:42.546Z",
+        "rpcUrl": "https://base-sepolia-rpc.publicnode.com",
+        "contracts": {
+          "token": "0x0E1a0446C9660CbdcDB05a684E497a036861C0Da",
+          "policy": "0x53a14b2c4de81DFE64e938EEc3852Fc0cd48CCFf",
+          "vault": "0x47716E8EfBf8bb5325738F4B87beAf6e635d153a",
+          "signalRegistry": "0x7a9Ea35172d69cE2650FF410B0caffbFa9789D0e",
+          "controller": "0x1076C83ae89ebda88B38c39A3f98c37Da2eDe830"
+        },
+        "code": {
+          "token": {
+            "address": "0x0E1a0446C9660CbdcDB05a684E497a036861C0Da",
+            "hasCode": true
+          },
+          "policy": {
+            "address": "0x53a14b2c4de81DFE64e938EEc3852Fc0cd48CCFf",
+            "hasCode": true
+          },
+          "vault": {
+            "address": "0x47716E8EfBf8bb5325738F4B87beAf6e635d153a",
+            "hasCode": true
+          },
+          "signalRegistry": {
+            "address": "0x7a9Ea35172d69cE2650FF410B0caffbFa9789D0e",
+            "hasCode": true
+          },
+          "controller": {
+            "address": "0x1076C83ae89ebda88B38c39A3f98c37Da2eDe830",
+            "hasCode": true
+          }
+        },
+        "checks": {
+          "tokenHasCode": true,
+          "policyHasCode": true,
+          "vaultHasCode": true,
+          "signalRegistryHasCode": true,
+          "controllerHasCode": true,
+          "astpApproved": true,
+          "nativeEthApproved": true,
+          "vaultPolicyMatches": true,
+          "controllerVaultMatches": true,
+          "controllerPolicyMatches": true,
+          "controllerRegistryMatches": true,
+          "controllerCanMoveVaultFunds": true,
+          "vaultNotPaused": true,
+          "signalRegistryNotPaused": true,
+          "executionControllerNotPaused": true
+        },
+        "paused": {
+          "vaultPaused": false,
+          "signalRegistryPaused": false,
+          "executionControllerPaused": false
+        }
+      }
+    }
+  },
+  "health": {
+    "ok": true,
+    "endpoint": "/api/health",
+    "data": {
+      "status": "OK",
+      "checkedAt": "2026-05-10T03:07:43.633Z",
+      "rpcUrl": "https://base-sepolia-rpc.publicnode.com",
+      "contracts": {
+        "token": "0x0E1a0446C9660CbdcDB05a684E497a036861C0Da",
+        "policy": "0x53a14b2c4de81DFE64e938EEc3852Fc0cd48CCFf",
+        "vault": "0x47716E8EfBf8bb5325738F4B87beAf6e635d153a",
+        "signalRegistry": "0x7a9Ea35172d69cE2650FF410B0caffbFa9789D0e",
+        "controller": "0x1076C83ae89ebda88B38c39A3f98c37Da2eDe830"
+      },
+      "code": {
+        "token": {
+          "address": "0x0E1a0446C9660CbdcDB05a684E497a036861C0Da",
+          "hasCode": true
+        },
+        "policy": {
+          "address": "0x53a14b2c4de81DFE64e938EEc3852Fc0cd48CCFf",
+          "hasCode": true
+        },
+        "vault": {
+          "address": "0x47716E8EfBf8bb5325738F4B87beAf6e635d153a",
+          "hasCode": true
+        },
+        "signalRegistry": {
+          "address": "0x7a9Ea35172d69cE2650FF410B0caffbFa9789D0e",
+          "hasCode": true
+        },
+        "controller": {
+          "address": "0x1076C83ae89ebda88B38c39A3f98c37Da2eDe830",
+          "hasCode": true
+        }
+      },
+      "checks": {
+        "tokenHasCode": true,
+        "policyHasCode": true,
+        "vaultHasCode": true,
+        "signalRegistryHasCode": true,
+        "controllerHasCode": true,
+        "astpApproved": true,
+        "nativeEthApproved": true,
+        "vaultPolicyMatches": true,
+        "controllerVaultMatches": true,
+        "controllerPolicyMatches": true,
+        "controllerRegistryMatches": true,
+        "controllerCanMoveVaultFunds": true,
+        "vaultNotPaused": true,
+        "signalRegistryNotPaused": true,
+        "executionControllerNotPaused": true
+      },
+      "paused": {
+        "vaultPaused": false,
+        "signalRegistryPaused": false,
+        "executionControllerPaused": false
+      }
+    }
+  },
+  "paper": {
+    "ok": true,
+    "endpoint": "/api/paper/status",
+    "data": {
+      "app": "AstraTreasury Paper-Trading Dashboard",
+      "generatedAt": "2026-05-10T03:07:43.636Z",
+      "health": {
+        "status": "OK",
+        "loopHealthy": true,
+        "heartbeatStatus": "OK",
+        "lastCheckedAt": "2026-05-10T03:05:07.701Z",
+        "lastObservedActionName": "ADD_LIQUIDITY",
+        "duplicateSkipped": true,
+        "errorCountShown": 0
+      },
+      "files": {
+        "paperDir": "/opt/astra-treasury-protocol/reports/paper-trading",
+        "latest": {
+          "exists": true,
+          "file": "/opt/astra-treasury-protocol/reports/paper-trading/latest.json"
+        },
+        "latestObserved": {
+          "exists": true,
+          "file": "/opt/astra-treasury-protocol/reports/paper-trading/latest-observed.json"
+        },
+        "state": {
+          "exists": true,
+          "file": "/opt/astra-treasury-protocol/reports/paper-trading/state.json"
+        },
+        "signals": {
+          "exists": true,
+          "file": "/opt/astra-treasury-protocol/reports/paper-trading/signals.jsonl"
+        },
+        "heartbeat": {
+          "exists": true,
+          "file": "/opt/astra-treasury-protocol/reports/paper-trading/heartbeat.json"
+        }
+      },
+      "summary": {
+        "totalPaperSignalsShown": 1,
+        "pendingManualApprovalsShown": 1,
+        "onchainSubmissionsShown": 0,
+        "cashUsd": 995000,
+        "liquidityUsd": 5000,
+        "astpTokens": 0,
+        "lastTokenPriceUsd": 0.025,
+        "totalPaperValueUsd": 1000000,
+        "signalCount": 1,
+        "appliedPaperActionCount": 1
+      },
+      "heartbeat": {
+        "file": "/opt/astra-treasury-protocol/reports/paper-trading/heartbeat.json",
+        "exists": true,
+        "data": {
+          "status": "OK",
+          "mode": "loop",
+          "checkedAt": "2026-05-10T03:05:07.701Z",
+          "intervalSeconds": 300,
+          "skipDuplicates": true,
+          "lastObservedSignalId": "0xa9d7e6c67fc39787ed730fc32bc95ea414075c1a79cb7c7bdd43ccfc0ccb4500",
+          "lastObservedFingerprint": "0x055dcb28d36922dd2d6d4c853cd500813b442d50f7b9c411c39335c117b96ccc",
+          "lastObservedActionName": "ADD_LIQUIDITY",
+          "duplicateSkipped": true
+        }
+      },
+      "latest": {
+        "latestPending": {
+          "file": "/opt/astra-treasury-protocol/reports/paper-trading/latest.json",
+          "exists": true,
+          "data": {
+            "schema": "astra-paper-signal-v0.1",
+            "capturedAt": "2026-05-09T18:13:20.789Z",
+            "signalId": "0x9e769684b9622ca06a945f6833a61877b0911d0d1c9782b86d805a931e1d07bc",
+            "paperSignalId": "0x9e769684b9622ca06a945f6833a61877b0911d0d1c9782b86d805a931e1d07bc",
+            "fingerprint": "0x055dcb28d36922dd2d6d4c853cd500813b442d50f7b9c411c39335c117b96ccc",
+            "status": "PENDING_MANUAL_APPROVAL",
+            "manualApprovalRequired": true,
+            "submittedOnChain": false,
+            "eligibleForManualSubmission": true,
+            "actionName": "ADD_LIQUIDITY",
+            "snapshot": {
+              "token_price_usd": 0.025,
+              "liquidity_depth_usd": 35000,
+              "spread_bps": 160,
+              "volatility_24h_bps": 2100,
+              "stable_reserve_ratio_bps": 4800,
+              "treasury_value_usd": 1000000,
+              "buy_sell_imbalance_bps": -1200
+            },
+            "signal": {
+              "model_version": "astra-risk-v0.1",
+              "action_type": 1,
+              "confidence_bps": 7400,
+              "risk_bps": 1001,
+              "max_size_usd": 5000,
+              "data_hash": "0x47a85b51aa014bd18c013c101a25e9337011754c8dd61362129b3137ba84be2e",
+              "reason_code": "LOW_DEPTH_HIGH_SPREAD",
+              "generated_at": 1778350400
+            },
+            "paperEffect": {
+              "applied": true,
+              "action": "VIRTUAL_ADD_LIQUIDITY",
+              "amountUsd": 5000,
+              "astpTokensDelta": 0,
+              "note": "Moved virtual USD from cash reserve into simulated liquidity allocation."
+            },
+            "paperStateAfter": {
+              "version": "paper-state-v0.1",
+              "createdAt": "2026-05-09T18:13:20.840Z",
+              "updatedAt": "2026-05-09T18:13:20.840Z",
+              "cashUsd": 995000,
+              "liquidityUsd": 5000,
+              "astpTokens": 0,
+              "lastTokenPriceUsd": 0.025,
+              "totalPaperValueUsd": 1000000,
+              "signalCount": 1,
+              "appliedPaperActionCount": 1
+            },
+            "safety": {
+              "privateKeyUsed": false,
+              "onChainTransactionSent": false,
+              "treasuryFundsMoved": false,
+              "note": "Paper-trading signal only. Manual approval is required before any on-chain submission."
+            }
+          }
+        },
+        "latestObserved": {
+          "file": "/opt/astra-treasury-protocol/reports/paper-trading/latest-observed.json",
+          "exists": true,
+          "data": {
+            "observedAt": "2026-05-10T03:05:07.701Z",
+            "signalId": "0xa9d7e6c67fc39787ed730fc32bc95ea414075c1a79cb7c7bdd43ccfc0ccb4500",
+            "fingerprint": "0x055dcb28d36922dd2d6d4c853cd500813b442d50f7b9c411c39335c117b96ccc",
+            "actionName": "ADD_LIQUIDITY",
+            "duplicateOfLatestPending": true,
+            "snapshot": {
+              "token_price_usd": 0.025,
+              "liquidity_depth_usd": 35000,
+              "spread_bps": 160,
+              "volatility_24h_bps": 2100,
+              "stable_reserve_ratio_bps": 4800,
+              "treasury_value_usd": 1000000,
+              "buy_sell_imbalance_bps": -1200
+            },
+            "signal": {
+              "model_version": "astra-risk-v0.1",
+              "action_type": 1,
+              "confidence_bps": 7400,
+              "risk_bps": 1001,
+              "max_size_usd": 5000,
+              "data_hash": "0x47a85b51aa014bd18c013c101a25e9337011754c8dd61362129b3137ba84be2e",
+              "reason_code": "LOW_DEPTH_HIGH_SPREAD",
+              "generated_at": 1778382307
+            }
+          }
+        }
+      },
+      "state": {
+        "file": "/opt/astra-treasury-protocol/reports/paper-trading/state.json",
+        "exists": true,
+        "data": {
+          "version": "paper-state-v0.1",
+          "createdAt": "2026-05-09T18:13:20.840Z",
+          "updatedAt": "2026-05-09T18:13:20.840Z",
+          "cashUsd": 995000,
+          "liquidityUsd": 5000,
+          "astpTokens": 0,
+          "lastTokenPriceUsd": 0.025,
+          "totalPaperValueUsd": 1000000,
+          "signalCount": 1,
+          "appliedPaperActionCount": 1
+        }
+      },
+      "pendingManualApprovals": [
+        {
+          "schema": "astra-paper-signal-v0.1",
+          "capturedAt": "2026-05-09T18:13:20.789Z",
+          "signalId": "0x9e769684b9622ca06a945f6833a61877b0911d0d1c9782b86d805a931e1d07bc",
+          "paperSignalId": "0x9e769684b9622ca06a945f6833a61877b0911d0d1c9782b86d805a931e1d07bc",
+          "fingerprint": "0x055dcb28d36922dd2d6d4c853cd500813b442d50f7b9c411c39335c117b96ccc",
+          "status": "PENDING_MANUAL_APPROVAL",
+          "manualApprovalRequired": true,
+          "submittedOnChain": false,
+          "eligibleForManualSubmission": true,
+          "actionName": "ADD_LIQUIDITY",
+          "snapshot": {
+            "token_price_usd": 0.025,
+            "liquidity_depth_usd": 35000,
+            "spread_bps": 160,
+            "volatility_24h_bps": 2100,
+            "stable_reserve_ratio_bps": 4800,
+            "treasury_value_usd": 1000000,
+            "buy_sell_imbalance_bps": -1200
+          },
+          "signal": {
+            "model_version": "astra-risk-v0.1",
+            "action_type": 1,
+            "confidence_bps": 7400,
+            "risk_bps": 1001,
+            "max_size_usd": 5000,
+            "data_hash": "0x47a85b51aa014bd18c013c101a25e9337011754c8dd61362129b3137ba84be2e",
+            "reason_code": "LOW_DEPTH_HIGH_SPREAD",
+            "generated_at": 1778350400
+          },
+          "paperEffect": {
+            "applied": true,
+            "action": "VIRTUAL_ADD_LIQUIDITY",
+            "amountUsd": 5000,
+            "astpTokensDelta": 0,
+            "note": "Moved virtual USD from cash reserve into simulated liquidity allocation."
+          },
+          "paperStateAfter": {
+            "version": "paper-state-v0.1",
+            "createdAt": "2026-05-09T18:13:20.840Z",
+            "updatedAt": "2026-05-09T18:13:20.840Z",
+            "cashUsd": 995000,
+            "liquidityUsd": 5000,
+            "astpTokens": 0,
+            "lastTokenPriceUsd": 0.025,
+            "totalPaperValueUsd": 1000000,
+            "signalCount": 1,
+            "appliedPaperActionCount": 1
+          },
+          "safety": {
+            "privateKeyUsed": false,
+            "onChainTransactionSent": false,
+            "treasuryFundsMoved": false,
+            "note": "Paper-trading signal only. Manual approval is required before any on-chain submission."
+          },
+          "onchainSubmissionCount": 0,
+          "latestOnchainSubmission": null,
+          "onchainSubmissions": []
+        }
+      ],
+      "recentSignals": {
+        "found": true,
+        "count": 1,
+        "limit": 50,
+        "file": "/opt/astra-treasury-protocol/reports/paper-trading/signals.jsonl",
+        "exists": true,
+        "items": [
+          {
+            "schema": "astra-paper-signal-v0.1",
+            "capturedAt": "2026-05-09T18:13:20.789Z",
+            "signalId": "0x9e769684b9622ca06a945f6833a61877b0911d0d1c9782b86d805a931e1d07bc",
+            "paperSignalId": "0x9e769684b9622ca06a945f6833a61877b0911d0d1c9782b86d805a931e1d07bc",
+            "fingerprint": "0x055dcb28d36922dd2d6d4c853cd500813b442d50f7b9c411c39335c117b96ccc",
+            "status": "PENDING_MANUAL_APPROVAL",
+            "manualApprovalRequired": true,
+            "submittedOnChain": false,
+            "eligibleForManualSubmission": true,
+            "actionName": "ADD_LIQUIDITY",
+            "snapshot": {
+              "token_price_usd": 0.025,
+              "liquidity_depth_usd": 35000,
+              "spread_bps": 160,
+              "volatility_24h_bps": 2100,
+              "stable_reserve_ratio_bps": 4800,
+              "treasury_value_usd": 1000000,
+              "buy_sell_imbalance_bps": -1200
+            },
+            "signal": {
+              "model_version": "astra-risk-v0.1",
+              "action_type": 1,
+              "confidence_bps": 7400,
+              "risk_bps": 1001,
+              "max_size_usd": 5000,
+              "data_hash": "0x47a85b51aa014bd18c013c101a25e9337011754c8dd61362129b3137ba84be2e",
+              "reason_code": "LOW_DEPTH_HIGH_SPREAD",
+              "generated_at": 1778350400
+            },
+            "paperEffect": {
+              "applied": true,
+              "action": "VIRTUAL_ADD_LIQUIDITY",
+              "amountUsd": 5000,
+              "astpTokensDelta": 0,
+              "note": "Moved virtual USD from cash reserve into simulated liquidity allocation."
+            },
+            "paperStateAfter": {
+              "version": "paper-state-v0.1",
+              "createdAt": "2026-05-09T18:13:20.840Z",
+              "updatedAt": "2026-05-09T18:13:20.840Z",
+              "cashUsd": 995000,
+              "liquidityUsd": 5000,
+              "astpTokens": 0,
+              "lastTokenPriceUsd": 0.025,
+              "totalPaperValueUsd": 1000000,
+              "signalCount": 1,
+              "appliedPaperActionCount": 1
+            },
+            "safety": {
+              "privateKeyUsed": false,
+              "onChainTransactionSent": false,
+              "treasuryFundsMoved": false,
+              "note": "Paper-trading signal only. Manual approval is required before any on-chain submission."
+            },
+            "onchainSubmissionCount": 0,
+            "latestOnchainSubmission": null,
+            "onchainSubmissions": []
+          }
+        ]
+      },
+      "recentErrors": {
+        "found": false,
+        "count": 0,
+        "limit": 5,
+        "file": "/opt/astra-treasury-protocol/reports/paper-trading/errors.jsonl",
+        "exists": false,
+        "items": []
+      },
+      "onchainSubmissions": {
+        "found": false,
+        "count": 0,
+        "limit": 50,
+        "file": "/opt/astra-treasury-protocol/reports/paper-trading/onchain-submissions.jsonl",
+        "exists": false,
+        "items": []
+      }
+    }
+  },
+  "signalApprovalQueue": {
+    "ok": true,
+    "endpoint": "/api/paper/approval-queue",
+    "data": {
+      "app": "AstraTreasury Manual Approval Queue",
+      "generatedAt": "2026-05-10T03:07:43.638Z",
+      "file": "/opt/astra-treasury-protocol/reports/paper-trading/approval-queue.json",
+      "eventsFile": "/opt/astra-treasury-protocol/reports/paper-trading/approval-events.jsonl",
+      "queueExists": true,
+      "queueUpdatedAt": "2026-05-09T18:43:31.941Z",
+      "summary": {
+        "total": 1,
+        "new": 0,
+        "approved": 1,
+        "submittedOnChain": 0,
+        "rejected": 0
+      },
+      "grouped": {
+        "new": [],
+        "approved": [
+          {
+            "signalId": "0x9e769684b9622ca06a945f6833a61877b0911d0d1c9782b86d805a931e1d07bc",
+            "status": "APPROVED",
+            "capturedAt": "2026-05-09T18:13:20.789Z",
+            "updatedAt": "2026-05-09T18:43:31.941Z",
+            "actionName": "ADD_LIQUIDITY",
+            "reasonCode": "LOW_DEPTH_HIGH_SPREAD",
+            "confidenceBps": 7400,
+            "riskBps": 1001,
+            "paperRecord": {
+              "schema": "astra-paper-signal-v0.1",
+              "capturedAt": "2026-05-09T18:13:20.789Z",
+              "signalId": "0x9e769684b9622ca06a945f6833a61877b0911d0d1c9782b86d805a931e1d07bc",
+              "paperSignalId": "0x9e769684b9622ca06a945f6833a61877b0911d0d1c9782b86d805a931e1d07bc",
+              "fingerprint": "0x055dcb28d36922dd2d6d4c853cd500813b442d50f7b9c411c39335c117b96ccc",
+              "status": "PENDING_MANUAL_APPROVAL",
+              "manualApprovalRequired": true,
+              "submittedOnChain": false,
+              "eligibleForManualSubmission": true,
+              "actionName": "ADD_LIQUIDITY",
+              "snapshot": {
+                "token_price_usd": 0.025,
+                "liquidity_depth_usd": 35000,
+                "spread_bps": 160,
+                "volatility_24h_bps": 2100,
+                "stable_reserve_ratio_bps": 4800,
+                "treasury_value_usd": 1000000,
+                "buy_sell_imbalance_bps": -1200
+              },
+              "signal": {
+                "model_version": "astra-risk-v0.1",
+                "action_type": 1,
+                "confidence_bps": 7400,
+                "risk_bps": 1001,
+                "max_size_usd": 5000,
+                "data_hash": "0x47a85b51aa014bd18c013c101a25e9337011754c8dd61362129b3137ba84be2e",
+                "reason_code": "LOW_DEPTH_HIGH_SPREAD",
+                "generated_at": 1778350400
+              },
+              "paperEffect": {
+                "applied": true,
+                "action": "VIRTUAL_ADD_LIQUIDITY",
+                "amountUsd": 5000,
+                "astpTokensDelta": 0,
+                "note": "Moved virtual USD from cash reserve into simulated liquidity allocation."
+              },
+              "paperStateAfter": {
+                "version": "paper-state-v0.1",
+                "createdAt": "2026-05-09T18:13:20.840Z",
+                "updatedAt": "2026-05-09T18:13:20.840Z",
+                "cashUsd": 995000,
+                "liquidityUsd": 5000,
+                "astpTokens": 0,
+                "lastTokenPriceUsd": 0.025,
+                "totalPaperValueUsd": 1000000,
+                "signalCount": 1,
+                "appliedPaperActionCount": 1
+              },
+              "safety": {
+                "privateKeyUsed": false,
+                "onChainTransactionSent": false,
+                "treasuryFundsMoved": false,
+                "note": "Paper-trading signal only. Manual approval is required before any on-chain submission."
+              },
+              "onchainSubmissionCount": 0,
+              "latestOnchainSubmission": null,
+              "onchainSubmissions": []
+            },
+            "approval": {
+              "approvedAt": "2026-05-09T18:33:03.605Z",
+              "approvedBy": "root",
+              "note": "approved for Base Sepolia signal-registry test"
+            },
+            "rejection": null,
+            "submittedOnChain": false,
+            "latestTxHash": null,
+            "latestOnchainSubmission": null,
+            "onchainSubmissions": []
+          }
+        ],
+        "submittedOnChain": [],
+        "rejected": []
+      },
+      "items": [
+        {
+          "signalId": "0x9e769684b9622ca06a945f6833a61877b0911d0d1c9782b86d805a931e1d07bc",
+          "status": "APPROVED",
+          "capturedAt": "2026-05-09T18:13:20.789Z",
+          "updatedAt": "2026-05-09T18:43:31.941Z",
+          "actionName": "ADD_LIQUIDITY",
+          "reasonCode": "LOW_DEPTH_HIGH_SPREAD",
+          "confidenceBps": 7400,
+          "riskBps": 1001,
+          "paperRecord": {
+            "schema": "astra-paper-signal-v0.1",
+            "capturedAt": "2026-05-09T18:13:20.789Z",
+            "signalId": "0x9e769684b9622ca06a945f6833a61877b0911d0d1c9782b86d805a931e1d07bc",
+            "paperSignalId": "0x9e769684b9622ca06a945f6833a61877b0911d0d1c9782b86d805a931e1d07bc",
+            "fingerprint": "0x055dcb28d36922dd2d6d4c853cd500813b442d50f7b9c411c39335c117b96ccc",
+            "status": "PENDING_MANUAL_APPROVAL",
+            "manualApprovalRequired": true,
+            "submittedOnChain": false,
+            "eligibleForManualSubmission": true,
+            "actionName": "ADD_LIQUIDITY",
+            "snapshot": {
+              "token_price_usd": 0.025,
+              "liquidity_depth_usd": 35000,
+              "spread_bps": 160,
+              "volatility_24h_bps": 2100,
+              "stable_reserve_ratio_bps": 4800,
+              "treasury_value_usd": 1000000,
+              "buy_sell_imbalance_bps": -1200
+            },
+            "signal": {
+              "model_version": "astra-risk-v0.1",
+              "action_type": 1,
+              "confidence_bps": 7400,
+              "risk_bps": 1001,
+              "max_size_usd": 5000,
+              "data_hash": "0x47a85b51aa014bd18c013c101a25e9337011754c8dd61362129b3137ba84be2e",
+              "reason_code": "LOW_DEPTH_HIGH_SPREAD",
+              "generated_at": 1778350400
+            },
+            "paperEffect": {
+              "applied": true,
+              "action": "VIRTUAL_ADD_LIQUIDITY",
+              "amountUsd": 5000,
+              "astpTokensDelta": 0,
+              "note": "Moved virtual USD from cash reserve into simulated liquidity allocation."
+            },
+            "paperStateAfter": {
+              "version": "paper-state-v0.1",
+              "createdAt": "2026-05-09T18:13:20.840Z",
+              "updatedAt": "2026-05-09T18:13:20.840Z",
+              "cashUsd": 995000,
+              "liquidityUsd": 5000,
+              "astpTokens": 0,
+              "lastTokenPriceUsd": 0.025,
+              "totalPaperValueUsd": 1000000,
+              "signalCount": 1,
+              "appliedPaperActionCount": 1
+            },
+            "safety": {
+              "privateKeyUsed": false,
+              "onChainTransactionSent": false,
+              "treasuryFundsMoved": false,
+              "note": "Paper-trading signal only. Manual approval is required before any on-chain submission."
+            },
+            "onchainSubmissionCount": 0,
+            "latestOnchainSubmission": null,
+            "onchainSubmissions": []
+          },
+          "approval": {
+            "approvedAt": "2026-05-09T18:33:03.605Z",
+            "approvedBy": "root",
+            "note": "approved for Base Sepolia signal-registry test"
+          },
+          "rejection": null,
+          "submittedOnChain": false,
+          "latestTxHash": null,
+          "latestOnchainSubmission": null,
+          "onchainSubmissions": []
+        }
+      ],
+      "recentApprovalEvents": [
+        {
+          "at": "2026-05-09T18:33:03.605Z",
+          "type": "APPROVED",
+          "signalId": "0x9e769684b9622ca06a945f6833a61877b0911d0d1c9782b86d805a931e1d07bc",
+          "status": "APPROVED",
+          "actionName": "ADD_LIQUIDITY",
+          "reasonCode": "LOW_DEPTH_HIGH_SPREAD",
+          "note": "approved for Base Sepolia signal-registry test",
+          "actor": "root"
+        }
+      ]
+    }
+  },
+  "executionQueue": {
+    "ok": true,
+    "endpoint": "/api/execution-queue",
+    "data": {
+      "app": "AstraTreasury Policy-Aware Execution Queue",
+      "generatedAt": "2026-05-10T03:07:43.639Z",
+      "file": "/opt/astra-treasury-protocol/reports/execution-queue/execution-queue.json",
+      "eventsFile": "/opt/astra-treasury-protocol/reports/execution-queue/execution-events.jsonl",
+      "executionsFile": "/opt/astra-treasury-protocol/reports/execution-queue/onchain-executions.jsonl",
+      "queueExists": true,
+      "queueUpdatedAt": "2026-05-10T03:06:26.963Z",
+      "summary": {
+        "total": 0,
+        "policyPassed": 0,
+        "approvedForExecution": 0,
+        "executed": 0,
+        "policyBlocked": 0,
+        "rejected": 0,
+        "unsupportedAction": 0,
+        "signalCancelled": 0,
+        "new": 0
+      },
+      "grouped": {
+        "policyPassed": [],
+        "approvedForExecution": [],
+        "executed": [],
+        "policyBlocked": [],
+        "rejected": [],
+        "unsupportedAction": [],
+        "signalCancelled": [],
+        "new": []
+      },
+      "items": [],
+      "recentEvents": [],
+      "onchainExecutions": []
+    }
+  },
+  "actionHistory": {
+    "ok": true,
+    "endpoint": "/api/action-history",
+    "data": {
+      "found": false,
+      "count": 0,
+      "limit": 50,
+      "lookbackBlocks": "50000",
+      "controller": "0x1076C83ae89ebda88B38c39A3f98c37Da2eDe830",
+      "items": []
+    }
+  },
+  "signalHistory": {
+    "ok": true,
+    "endpoint": "/api/signal-history",
+    "data": {
+      "found": false,
+      "count": 0,
+      "limit": 50,
+      "lookbackBlocks": "50000",
+      "signalRegistry": "0x7a9Ea35172d69cE2650FF410B0caffbFa9789D0e",
+      "executionController": "0x1076C83ae89ebda88B38c39A3f98c37Da2eDe830",
+      "items": []
+    }
+  }
+}
