@@ -10,3 +10,5 @@ backups/
 ecosystem*.config.cjs
 deployments/*.env
 !deployments/base-sepolia.public.json
+artifacts-local/
+out/
