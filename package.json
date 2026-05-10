@@ -98,7 +98,10 @@
     "release:public-audit-page": "bash scripts/release/package-public-audit-page.sh",
     "legal:review:validate": "bash scripts/validate-legal-review.sh",
     "legal:review:gate": "npm run legal:review:validate && npm run audit:full && npm run domain:check",
-    "release:legal-review": "bash scripts/release/package-legal-review.sh"
+    "release:legal-review": "bash scripts/release/package-legal-review.sh",
+    "legal:selection:validate": "bash scripts/validate-legal-counsel-selection.sh",
+    "legal:selection:gate": "npm run legal:selection:validate && npm run legal:review:gate && npm run audit:full && npm run domain:check",
+    "release:legal-counsel-selection": "bash scripts/release/package-legal-counsel-selection.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",
