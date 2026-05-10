@@ -58,7 +58,8 @@
     "deploy:controller:v011:base-sepolia": "hardhat run scripts/deploy-controller-v011-base-sepolia.ts --build-profile production --network baseSepolia",
     "audit:local-fuzz": "hardhat run scripts/local-stateful-fuzz.ts --build-profile production",
     "audit:local-fuzz:deep": "LOCAL_FUZZ_SEQUENCES=25 LOCAL_FUZZ_STEPS=60 hardhat run scripts/local-stateful-fuzz.ts --build-profile production",
-    "release:external-review": "bash scripts/release/package-external-review.sh"
+    "release:external-review": "bash scripts/release/package-external-review.sh",
+    "release:mainnet-planning": "bash scripts/release/package-mainnet-planning.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",
