@@ -1,0 +1,38 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Local Solidity compile
+        run: npm run compile:local
+
+      - name: Hardhat compile
+        run: npx hardhat compile
+
+      - name: Release safety check
+        run: npm run release:check
+
+      - name: Local stateful audit
+        run: npm run audit:stateful
+
+      - name: Local randomized stateful fuzz
+        run: npm run audit:local-fuzz
