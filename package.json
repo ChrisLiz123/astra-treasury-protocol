@@ -71,7 +71,10 @@
     "release:mainnet-runbook": "bash scripts/release/package-mainnet-runbook.sh",
     "audit:intake:validate": "bash scripts/validate-audit-intake.sh",
     "audit:intake:gate": "npm run audit:intake:validate && npm run audit:full && npm run mainnet:runbook:validate && npm run ops:status && npm run domain:check",
-    "release:audit-intake": "bash scripts/release/package-audit-intake.sh"
+    "release:audit-intake": "bash scripts/release/package-audit-intake.sh",
+    "audit:outreach:validate": "bash scripts/validate-audit-outreach.sh",
+    "audit:outreach:gate": "npm run audit:outreach:validate && npm run audit:intake:gate",
+    "release:audit-outreach": "bash scripts/release/package-audit-outreach.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",
