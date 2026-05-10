@@ -92,7 +92,10 @@
     "audit:tracker:list": "node services/audit-tracker/audit-tracker.mjs list",
     "audit:tracker:report": "node services/audit-tracker/audit-tracker.mjs report",
     "release:remediation-tracker": "bash scripts/release/package-remediation-tracker.sh",
-    "audit:remediation:gate": "npm run audit:tracker:report && npm run audit:kickoff:gate"
+    "audit:remediation:gate": "npm run audit:tracker:report && npm run audit:kickoff:gate",
+    "docs:audit-public": "node services/docs/generate-public-audit-docs.mjs",
+    "audit:public:gate": "npm run audit:remediation:gate && npm run docs:audit-public",
+    "release:public-audit-page": "bash scripts/release/package-public-audit-page.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",
