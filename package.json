@@ -46,7 +46,13 @@
     "release:manifest": "node scripts/release/generate-public-manifest.mjs",
     "release:check": "node scripts/release/check-public-release.mjs",
     "release:prepare": "npm run compile:local && npm run release:manifest && npm run release:check",
-    "release:package": "bash scripts/release/package-public-release.sh"
+    "release:package": "bash scripts/release/package-public-release.sh",
+    "foundry:test": "PATH=$HOME/.foundry/bin:$PATH forge test -vvv",
+    "foundry:invariant": "PATH=$HOME/.foundry/bin:$PATH forge test --match-test invariant -vvv",
+    "test:audit": "npm run compile:local && npm run foundry:test",
+    "audit:invariants": "node services/audit/invariant-check.mjs",
+    "audit:invariants:deep": "AUDIT_POLICY_FUZZ_RUNS=250 node services/audit/invariant-check.mjs",
+    "audit:prepare": "npm run release:prepare && npm run audit:invariants && npm run ops:status"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",
