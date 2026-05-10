@@ -101,7 +101,12 @@
     "release:legal-review": "bash scripts/release/package-legal-review.sh",
     "legal:selection:validate": "bash scripts/validate-legal-counsel-selection.sh",
     "legal:selection:gate": "npm run legal:selection:validate && npm run legal:review:gate && npm run audit:full && npm run domain:check",
-    "release:legal-counsel-selection": "bash scripts/release/package-legal-counsel-selection.sh"
+    "release:legal-counsel-selection": "bash scripts/release/package-legal-counsel-selection.sh",
+    "governance:gate:validate": "bash scripts/validate-governance-gate.sh",
+    "governance:gate:status": "node scripts/generate-governance-gate-status.mjs",
+    "governance:gate:run": "npm run governance:gate:validate && npm run governance:gate:status",
+    "governance:gate:full": "npm run governance:gate:run && npm run legal:selection:gate && npm run audit:selection-exec:gate && npm run audit:remediation:gate && npm run safe:prepare && npm run mainnet:runbook:validate && npm run ops:status && npm run domain:check",
+    "release:governance-gate": "bash scripts/release/package-governance-gate.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",
