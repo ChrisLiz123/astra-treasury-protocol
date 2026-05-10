@@ -54,14 +54,18 @@
     "audit:invariants:deep": "AUDIT_POLICY_FUZZ_RUNS=250 node services/audit/invariant-check.mjs",
     "audit:prepare": "npm run release:prepare && npm run audit:invariants && npm run ops:status",
     "audit:stateful": "hardhat run scripts/stateful-local-check.ts --build-profile production",
-    "audit:full": "npm run release:prepare && npm run audit:invariants && npm run audit:stateful && npm run audit:local-fuzz && npm run ops:status",
+    "audit:full": "npm run release:prepare && npm run audit:invariants && npm run audit:stateful && npm run audit:local-fuzz && npm run safe:prepare && npm run ops:status",
     "deploy:controller:v011:base-sepolia": "hardhat run scripts/deploy-controller-v011-base-sepolia.ts --build-profile production --network baseSepolia",
     "audit:local-fuzz": "hardhat run scripts/local-stateful-fuzz.ts --build-profile production",
     "audit:local-fuzz:deep": "LOCAL_FUZZ_SEQUENCES=25 LOCAL_FUZZ_STEPS=60 hardhat run scripts/local-stateful-fuzz.ts --build-profile production",
     "release:external-review": "bash scripts/release/package-external-review.sh",
     "release:mainnet-planning": "bash scripts/release/package-mainnet-planning.sh",
     "ops:incident-status": "bash services/ops/incident-status.sh",
-    "release:incident-response": "bash scripts/release/package-incident-response.sh"
+    "release:incident-response": "bash scripts/release/package-incident-response.sh",
+    "safe:plan:validate": "node scripts/validate-safe-role-plan.mjs configs/mainnet-safe-role-plan.template.json",
+    "safe:dry-run:roles": "hardhat run scripts/local-safe-role-transfer-dry-run.ts --build-profile production",
+    "safe:prepare": "npm run safe:plan:validate && npm run safe:dry-run:roles",
+    "release:safe-planning": "bash scripts/release/package-safe-planning.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",

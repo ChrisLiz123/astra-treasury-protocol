@@ -1,0 +1,75 @@
+{
+  "schema": "astra-safe-role-plan-v0.1",
+  "status": "planning-template-not-deployment-authorization",
+  "network": {
+    "name": "Base Mainnet",
+    "chainId": 8453
+  },
+  "notes": [
+    "Placeholder addresses are syntactically valid but not real Safe addresses.",
+    "Do not use this file as deployment authorization.",
+    "Mainnet remains blocked pending external audit, legal review, Safe setup, and go/no-go approval."
+  ],
+  "safes": {
+    "governanceSafe": {
+      "purpose": "Protocol administration, role management, policy updates, migrations",
+      "address": "0x0000000000000000000000000000000000001001",
+      "threshold": 3,
+      "owners": [
+        "0x0000000000000000000000000000000000001011",
+        "0x0000000000000000000000000000000000001012",
+        "0x0000000000000000000000000000000000001013",
+        "0x0000000000000000000000000000000000001014",
+        "0x0000000000000000000000000000000000001015"
+      ]
+    },
+    "treasurySafe": {
+      "purpose": "Treasury reserve decisions outside the vault",
+      "address": "0x0000000000000000000000000000000000002001",
+      "threshold": 3,
+      "owners": [
+        "0x0000000000000000000000000000000000002011",
+        "0x0000000000000000000000000000000000002012",
+        "0x0000000000000000000000000000000000002013",
+        "0x0000000000000000000000000000000000002014",
+        "0x0000000000000000000000000000000000002015"
+      ]
+    },
+    "executorSafe": {
+      "purpose": "Human approval for policy-passed treasury execution proposals",
+      "address": "0x0000000000000000000000000000000000003001",
+      "threshold": 2,
+      "owners": [
+        "0x0000000000000000000000000000000000003011",
+        "0x0000000000000000000000000000000000003012",
+        "0x0000000000000000000000000000000000003013"
+      ]
+    },
+    "signalerSafe": {
+      "purpose": "Submit approved AI signals to SignalRegistry only",
+      "address": "0x0000000000000000000000000000000000004001",
+      "threshold": 2,
+      "owners": [
+        "0x0000000000000000000000000000000000004011",
+        "0x0000000000000000000000000000000000004012",
+        "0x0000000000000000000000000000000000004013"
+      ]
+    }
+  },
+  "rolePlan": {
+    "TreasuryPolicy.DEFAULT_ADMIN_ROLE": "governanceSafe",
+    "TreasuryVault.DEFAULT_ADMIN_ROLE": "governanceSafe",
+    "TreasuryVault.EXECUTOR_ROLE": "ExecutionController only",
+    "SignalRegistry.DEFAULT_ADMIN_ROLE": "governanceSafe",
+    "SignalRegistry.SIGNALER_ROLE": "signalerSafe",
+    "ExecutionController.DEFAULT_ADMIN_ROLE": "governanceSafe",
+    "ExecutionController.EXECUTOR_ROLE": "executorSafe"
+  },
+  "explicitlyDisallowed": [
+    "No single EOA should hold direct TreasuryVault execution authority.",
+    "No autonomous bot should hold ExecutionController.EXECUTOR_ROLE for mainnet v1.",
+    "No Safe spending-limit modules for initial mainnet treasury controls.",
+    "No hidden wallets.",
+    "No public sale or real treasury funding without legal and audit signoff."
+  ]
+}
