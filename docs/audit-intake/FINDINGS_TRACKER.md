@@ -5,7 +5,7 @@
 - OPEN
 - ACKNOWLEDGED
 - FIX_IN_PROGRESS
-- FIXED_PENDING_REVIEW
+- FIXED_PENDING_RETEST
 - FIX_VERIFIED
 - WONT_FIX_ACCEPTED_RISK
 
@@ -19,9 +19,9 @@
 
 ## Findings
 
-| ID | Severity | Title | Status | Owner | Fix PR/Commit | Retest Status | Notes |
-|---|---|---|---|---|---|---|---|
-| ASTRA-001 | MEDIUM | Cancelled signals executable in v0.1.0 | FIX_VERIFIED | AstraTreasury | v0.1.1 patch | Local stateful audit passing | Found internally before external audit |
+| ID | Severity | Title | Status | Owner | Fix Branch | Fix Commit | Retest Status | Notes |
+|---|---|---|---|---|---|---|---|---|
+| ASTRA-001 | MEDIUM | Cancelled signals executable in v0.1.0 | FIX_VERIFIED | AstraTreasury | fixed-before-tracker |  | Local stateful audit passing | Found internally and fixed in v0.1.1 before external audit. |
 
 ## Process
 

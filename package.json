@@ -86,7 +86,13 @@
     "audit:start:manifest": "node scripts/generate-audit-start-manifest.mjs",
     "audit:selection-exec:validate": "bash scripts/validate-auditor-selection-execution.sh",
     "audit:selection-exec:gate": "npm run audit:start:manifest && npm run audit:selection-exec:validate && npm run audit:kickoff:gate && npm run domain:check",
-    "release:auditor-selection-execution": "bash scripts/release/package-auditor-selection-execution.sh"
+    "release:auditor-selection-execution": "bash scripts/release/package-auditor-selection-execution.sh",
+    "audit:tracker": "node services/audit-tracker/audit-tracker.mjs",
+    "audit:tracker:init": "node services/audit-tracker/audit-tracker.mjs init",
+    "audit:tracker:list": "node services/audit-tracker/audit-tracker.mjs list",
+    "audit:tracker:report": "node services/audit-tracker/audit-tracker.mjs report",
+    "release:remediation-tracker": "bash scripts/release/package-remediation-tracker.sh",
+    "audit:remediation:gate": "npm run audit:tracker:report && npm run audit:kickoff:gate"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",

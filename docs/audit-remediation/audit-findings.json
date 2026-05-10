@@ -1,0 +1,23 @@
+{
+  "schema": "astra-audit-findings-v0.1",
+  "createdAt": "2026-05-10T21:47:39.095Z",
+  "updatedAt": "2026-05-10T21:47:39.095Z",
+  "project": "AstraTreasury Protocol",
+  "version": "0.1.1",
+  "findings": [
+    {
+      "id": "ASTRA-001",
+      "source": "Internal",
+      "severity": "MEDIUM",
+      "title": "Cancelled signals executable in v0.1.0",
+      "status": "FIX_VERIFIED",
+      "owner": "AstraTreasury",
+      "branch": "fixed-before-tracker",
+      "fixCommit": "",
+      "retestStatus": "Local stateful audit passing",
+      "notes": "Found internally and fixed in v0.1.1 before external audit.",
+      "createdAt": "2026-05-10T21:47:39.095Z",
+      "updatedAt": "2026-05-10T21:47:39.095Z"
+    }
+  ]
+}
