@@ -74,7 +74,11 @@
     "release:audit-intake": "bash scripts/release/package-audit-intake.sh",
     "audit:outreach:validate": "bash scripts/validate-audit-outreach.sh",
     "audit:outreach:gate": "npm run audit:outreach:validate && npm run audit:intake:gate",
-    "release:audit-outreach": "bash scripts/release/package-audit-outreach.sh"
+    "release:audit-outreach": "bash scripts/release/package-audit-outreach.sh",
+    "audit:selection:validate": "bash scripts/validate-audit-selection.sh",
+    "audit:selection:gate": "npm run audit:selection:validate && npm run audit:outreach:gate && npm run audit:intake:gate && npm run audit:full && npm run domain:check",
+    "audit:start:tag": "bash scripts/create-audit-start-tag.sh",
+    "release:auditor-selection": "bash scripts/release/package-auditor-selection.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",
