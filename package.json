@@ -82,7 +82,11 @@
     "audit:kickoff:validate": "bash scripts/validate-audit-kickoff.sh",
     "audit:kickoff:gate": "npm run audit:kickoff:validate && npm run audit:selection:gate && npm run audit:intake:gate && npm run audit:full && npm run domain:check",
     "audit:kickoff:workspace": "bash scripts/create-audit-workspace.sh",
-    "release:audit-kickoff": "bash scripts/release/package-audit-kickoff.sh"
+    "release:audit-kickoff": "bash scripts/release/package-audit-kickoff.sh",
+    "audit:start:manifest": "node scripts/generate-audit-start-manifest.mjs",
+    "audit:selection-exec:validate": "bash scripts/validate-auditor-selection-execution.sh",
+    "audit:selection-exec:gate": "npm run audit:start:manifest && npm run audit:selection-exec:validate && npm run audit:kickoff:gate && npm run domain:check",
+    "release:auditor-selection-execution": "bash scripts/release/package-auditor-selection-execution.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",

@@ -1,0 +1,56 @@
+{
+  "schema": "astra-audit-start-manifest-v0.1",
+  "generatedAt": "2026-05-10T21:37:57.777Z",
+  "project": "AstraTreasury Protocol",
+  "version": "0.1.1",
+  "auditStatus": "pending-auditor-selection-or-kickoff",
+  "network": "Base Sepolia",
+  "mainnetLaunched": false,
+  "realTreasuryFunds": false,
+  "publicTokenSale": false,
+  "git": {
+    "branch": "main",
+    "commit": "efa88a870e99df78e3fe007af880640c1889545e",
+    "shortCommit": "efa88a8",
+    "workingTreeClean": false,
+    "status": "M deployments/base-sepolia.public.json\n M package.json\n?? docs/audit-selection/SELECTED_AUDITOR_RECORD.md\n?? scripts/generate-audit-start-manifest.mjs\n?? scripts/validate-auditor-selection-execution.sh"
+  },
+  "packages": {
+    "release/astra-treasury-protocol-v0.1.1-audit-candidate.tar.gz": {
+      "exists": true
+    },
+    "release/astra-treasury-protocol-v0.1.1-external-review.tar.gz": {
+      "exists": true
+    },
+    "release/astra-treasury-protocol-v0.1.1-audit-intake.tar.gz": {
+      "exists": true
+    },
+    "release/astra-treasury-protocol-v0.1.1-audit-outreach.tar.gz": {
+      "exists": true
+    },
+    "release/astra-treasury-protocol-v0.1.1-auditor-selection.tar.gz": {
+      "exists": true
+    },
+    "release/astra-treasury-protocol-v0.1.1-audit-kickoff.tar.gz": {
+      "exists": true
+    },
+    "release/astra-treasury-protocol-v0.1.1-mainnet-planning.tar.gz": {
+      "exists": true
+    },
+    "release/astra-treasury-protocol-v0.1.1-mainnet-runbook.tar.gz": {
+      "exists": true
+    },
+    "release/astra-treasury-protocol-v0.1.1-safe-planning.tar.gz": {
+      "exists": true
+    },
+    "release/astra-treasury-protocol-v0.1.1-incident-response.tar.gz": {
+      "exists": true
+    }
+  },
+  "requiredGates": [
+    "npm run release:prepare",
+    "npm run audit:full",
+    "npm run audit:kickoff:gate",
+    "npm run domain:check"
+  ]
+}
