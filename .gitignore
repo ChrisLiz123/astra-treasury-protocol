@@ -1,0 +1,12 @@
+node_modules/
+artifacts/
+cache/
+coverage/
+.env
+.hardhat/
+release/
+reports/
+backups/
+ecosystem*.config.cjs
+deployments/*.env
+!deployments/base-sepolia.public.json

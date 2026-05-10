@@ -1,0 +1,43 @@
+{
+  "schema": "astra-deployment-manifest-v0.1",
+  "generatedAt": "2026-05-10T00:33:36.829Z",
+  "project": "AstraTreasury Protocol",
+  "version": "0.1.0",
+  "status": "public-testnet-prototype",
+  "network": {
+    "name": "Base Sepolia",
+    "chainId": 84532,
+    "explorer": "https://sepolia.basescan.org"
+  },
+  "token": {
+    "name": "AstraTreasury Token",
+    "symbol": "ASTP",
+    "decimals": 18,
+    "supplyModel": "fixed"
+  },
+  "contracts": {
+    "astraToken": "0x0e1a0446c9660cbdcdb05a684e497a036861c0da",
+    "treasuryPolicy": "0x53a14b2c4de81dfe64e938eec3852fc0cd48ccff",
+    "treasuryVault": "0x47716e8efbf8bb5325738f4b87beaf6e635d153a",
+    "signalRegistry": "0x7a9ea35172d69ce2650ff410b0caffbfa9789d0e",
+    "executionController": "0x409d633b4d71868de78e0ebc36729f58254d1810"
+  },
+  "publicSite": {
+    "root": "https://astratreasury.ai",
+    "www": "https://www.astratreasury.ai"
+  },
+  "safetyModel": {
+    "signalApprovalRequired": true,
+    "executionApprovalRequired": true,
+    "policyCheckRequired": true,
+    "mainnetLaunched": false,
+    "realFunds": false
+  },
+  "disclaimers": [
+    "Base Sepolia testnet prototype.",
+    "No public token sale.",
+    "No investment product.",
+    "No promise of returns.",
+    "Testnet ASTP has no real monetary value."
+  ]
+}
