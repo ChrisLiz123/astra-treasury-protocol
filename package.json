@@ -65,7 +65,10 @@
     "safe:plan:validate": "node scripts/validate-safe-role-plan.mjs configs/mainnet-safe-role-plan.template.json",
     "safe:dry-run:roles": "hardhat run scripts/local-safe-role-transfer-dry-run.ts --build-profile production",
     "safe:prepare": "npm run safe:plan:validate && npm run safe:dry-run:roles",
-    "release:safe-planning": "bash scripts/release/package-safe-planning.sh"
+    "release:safe-planning": "bash scripts/release/package-safe-planning.sh",
+    "mainnet:runbook:validate": "bash scripts/validate-mainnet-runbook.sh",
+    "mainnet:dry-run:gate": "npm run mainnet:runbook:validate && npm run safe:prepare && npm run audit:full",
+    "release:mainnet-runbook": "bash scripts/release/package-mainnet-runbook.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",

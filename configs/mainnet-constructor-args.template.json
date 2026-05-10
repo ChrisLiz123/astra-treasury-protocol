@@ -1,0 +1,37 @@
+{
+  "schema": "astra-mainnet-constructor-args-template-v0.1",
+  "status": "template-only-not-deployment-authorization",
+  "network": {
+    "name": "Base Mainnet",
+    "chainId": 8453
+  },
+  "contracts": {
+    "TreasuryPolicy": {
+      "constructor": ["admin"],
+      "values": ["GOVERNANCE_SAFE_ADDRESS"]
+    },
+    "TreasuryVault": {
+      "constructor": ["admin", "policy"],
+      "values": ["GOVERNANCE_SAFE_ADDRESS", "TREASURY_POLICY_ADDRESS"]
+    },
+    "SignalRegistry": {
+      "constructor": ["admin"],
+      "values": ["GOVERNANCE_SAFE_ADDRESS"]
+    },
+    "ExecutionController": {
+      "constructor": ["admin", "vault", "policy", "signalRegistry"],
+      "values": ["GOVERNANCE_SAFE_ADDRESS", "TREASURY_VAULT_ADDRESS", "TREASURY_POLICY_ADDRESS", "SIGNAL_REGISTRY_ADDRESS"]
+    },
+    "AstraToken": {
+      "constructor": ["treasuryVault", "ecosystemWallet", "liquidityWallet", "teamWallet", "communityWallet", "advisorsWallet"],
+      "values": ["TREASURY_VAULT_ADDRESS", "ECOSYSTEM_WALLET", "LIQUIDITY_WALLET", "TEAM_WALLET", "COMMUNITY_WALLET", "ADVISORS_WALLET"]
+    }
+  },
+  "blockedUntil": [
+    "external audit completed",
+    "legal review completed",
+    "Safe addresses finalized",
+    "dedicated Base Mainnet RPC configured",
+    "go or no-go checklist approved"
+  ]
+}
