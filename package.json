@@ -112,7 +112,11 @@
     "release:public-governance-page": "bash scripts/release/package-public-governance-page.sh",
     "docs:transparency-public": "node services/docs/generate-public-transparency-docs.mjs",
     "transparency:public:gate": "npm run docs:audit-public && npm run docs:governance-public && npm run docs:transparency-public",
-    "release:public-transparency-index": "bash scripts/release/package-public-transparency-index.sh"
+    "release:public-transparency-index": "bash scripts/release/package-public-transparency-index.sh",
+    "public:refresh:once": "node services/public-refresh/refresh-loop.mjs --once",
+    "public:refresh:loop": "node services/public-refresh/refresh-loop.mjs",
+    "public:refresh:status": "cat reports/public-refresh/heartbeat.json",
+    "release:public-refresh": "bash scripts/release/package-public-refresh.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",
