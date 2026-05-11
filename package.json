@@ -120,7 +120,10 @@
     "evidence:archive:once": "node services/evidence/evidence-archive.mjs --once",
     "evidence:archive:loop": "node services/evidence/evidence-archive.mjs",
     "evidence:archive:status": "cat reports/evidence/heartbeat.json",
-    "release:evidence-archive": "bash scripts/release/package-evidence-archive.sh"
+    "release:evidence-archive": "bash scripts/release/package-evidence-archive.sh",
+    "docs:packages-public": "node services/docs/generate-public-package-inventory.mjs",
+    "packages:public:gate": "npm run docs:packages-public",
+    "release:public-package-inventory": "bash scripts/release/package-public-package-inventory.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",

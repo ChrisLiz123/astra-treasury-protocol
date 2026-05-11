@@ -1,0 +1,277 @@
+{
+  "schema": "astra-public-package-inventory-v0.1",
+  "generatedAt": "2026-05-11T01:09:05.582Z",
+  "project": "AstraTreasury Protocol",
+  "version": "0.1.1",
+  "network": "Base Sepolia",
+  "mainnetLaunched": false,
+  "realTreasuryFunds": false,
+  "publicTokenSale": false,
+  "repository": {
+    "remote": "git@github.com:chrisliz123/astra-treasury-protocol.git",
+    "githubUrl": "https://github.com/chrisliz123/astra-treasury-protocol",
+    "branch": "main",
+    "commit": "5d9db3ca77a5c638ef6f0777b6282c94afee09e6",
+    "shortCommit": "5d9db3c"
+  },
+  "summary": {
+    "total": 22,
+    "existing": 22,
+    "missing": 0,
+    "byCategory": {
+      "source": 1,
+      "audit": 7,
+      "review": 1,
+      "legal": 2,
+      "mainnet-planning": 2,
+      "governance": 2,
+      "operations": 3,
+      "public-site": 4
+    }
+  },
+  "packages": [
+    {
+      "file": "release/astra-treasury-protocol-v0.1-public-testnet-source.tar.gz",
+      "title": "Public Testnet Source Package",
+      "category": "source",
+      "purpose": "Clean public source package for the v0.1 Base Sepolia testnet release.",
+      "exists": true,
+      "sizeBytes": 78509,
+      "modifiedAt": "2026-05-10T00:32:08.010Z",
+      "sha256": "4287042e0236e215887fadd34ffadd69631d2aebdfc40e783a66c3ffaa2f8c69",
+      "uploadChecklist": "READY_TO_UPLOAD_OR_ALREADY_UPLOADED"
+    },
+    {
+      "file": "release/astra-treasury-protocol-v0.1.1-audit-candidate.tar.gz",
+      "title": "Audit Candidate Package",
+      "category": "audit",
+      "purpose": "Audit candidate source and documentation package.",
+      "exists": true,
+      "sizeBytes": 90262,
+      "modifiedAt": "2026-05-10T12:59:52.826Z",
+      "sha256": "aedd0efda490388818ccdf4d74175e2198bd642a716bf8b9d892993c4e217e4b",
+      "uploadChecklist": "READY_TO_UPLOAD_OR_ALREADY_UPLOADED"
+    },
+    {
+      "file": "release/astra-treasury-protocol-v0.1.1-external-review.tar.gz",
+      "title": "External Review Package",
+      "category": "review",
+      "purpose": "Package for auditors and counsel.",
+      "exists": true,
+      "sizeBytes": 92279,
+      "modifiedAt": "2026-05-10T13:07:39.308Z",
+      "sha256": "231c4193301633d38ba2bf9d61da934370eb462f3b8e62716feeb51834f753ee",
+      "uploadChecklist": "READY_TO_UPLOAD_OR_ALREADY_UPLOADED"
+    },
+    {
+      "file": "release/astra-treasury-protocol-v0.1.1-audit-intake.tar.gz",
+      "title": "Audit Intake Package",
+      "category": "audit",
+      "purpose": "Auditor index, findings tracker, remediation workflow, and intake checklist.",
+      "exists": true,
+      "sizeBytes": 8967,
+      "modifiedAt": "2026-05-10T17:41:36.553Z",
+      "sha256": "b6014f7cefbde02c060f3cb5f4faa6f04eba0f84dbce2571ab1fbc2846d7197d",
+      "uploadChecklist": "READY_TO_UPLOAD_OR_ALREADY_UPLOADED"
+    },
+    {
+      "file": "release/astra-treasury-protocol-v0.1.1-audit-outreach.tar.gz",
+      "title": "Audit Outreach Package",
+      "category": "audit",
+      "purpose": "Auditor shortlist, scorecard, questionnaire, SOW checklist, and outreach log.",
+      "exists": true,
+      "sizeBytes": 8054,
+      "modifiedAt": "2026-05-10T21:15:26.547Z",
+      "sha256": "4d52fc4e3350af7c8370fc5cb15de10be4cce76d1a24c2a10f53513afee49ff5",
+      "uploadChecklist": "READY_TO_UPLOAD_OR_ALREADY_UPLOADED"
+    },
+    {
+      "file": "release/astra-treasury-protocol-v0.1.1-auditor-selection.tar.gz",
+      "title": "Auditor Selection Package",
+      "category": "audit",
+      "purpose": "Quote comparison, selection matrix, decision record, and audit-start checklist.",
+      "exists": true,
+      "sizeBytes": 9451,
+      "modifiedAt": "2026-05-10T21:23:14.199Z",
+      "sha256": "6d9024646c4e1c79fd261d12d82b7a2770fb49049fce559013dcaa080fee9d01",
+      "uploadChecklist": "READY_TO_UPLOAD_OR_ALREADY_UPLOADED"
+    },
+    {
+      "file": "release/astra-treasury-protocol-v0.1.1-auditor-selection-execution.tar.gz",
+      "title": "Auditor Selection Execution Package",
+      "category": "audit",
+      "purpose": "Selected-auditor record, audit-start manifest, and kickoff references.",
+      "exists": true,
+      "sizeBytes": 9548,
+      "modifiedAt": "2026-05-10T21:41:18.452Z",
+      "sha256": "9ba3768cbdc1502130110531746b49b9ea9d31908fe3a6bb85c97373c7d58176",
+      "uploadChecklist": "READY_TO_UPLOAD_OR_ALREADY_UPLOADED"
+    },
+    {
+      "file": "release/astra-treasury-protocol-v0.1.1-audit-kickoff.tar.gz",
+      "title": "Audit Kickoff Package",
+      "category": "audit",
+      "purpose": "Audit kickoff runbook, finding registry, remediation branch policy, and issue templates.",
+      "exists": true,
+      "sizeBytes": 10462,
+      "modifiedAt": "2026-05-10T21:32:39.295Z",
+      "sha256": "95b653a04a96982e65f25bdb83aa9fd3eb834a3840a14781074658b6c98beef4",
+      "uploadChecklist": "READY_TO_UPLOAD_OR_ALREADY_UPLOADED"
+    },
+    {
+      "file": "release/astra-treasury-protocol-v0.1.1-remediation-tracker.tar.gz",
+      "title": "Remediation Tracker Package",
+      "category": "audit",
+      "purpose": "Command-line audit findings and remediation tracker.",
+      "exists": true,
+      "sizeBytes": 8138,
+      "modifiedAt": "2026-05-10T21:48:01.733Z",
+      "sha256": "121a52b7f50600188e12edf3cb6f75b42b98abb8eb957d29a65ebd11f41d835a",
+      "uploadChecklist": "READY_TO_UPLOAD_OR_ALREADY_UPLOADED"
+    },
+    {
+      "file": "release/astra-treasury-protocol-v0.1.1-legal-review.tar.gz",
+      "title": "Legal Review Package",
+      "category": "legal",
+      "purpose": "Legal review execution package, marketing-language policy, legal issue tracker, and tokenomics checklist.",
+      "exists": true,
+      "sizeBytes": 9779,
+      "modifiedAt": "2026-05-10T22:12:23.047Z",
+      "sha256": "4030afc6d3f8f8cdf2faffc4894355ed366cdd000219c69a2d10cdcf28ee717e",
+      "uploadChecklist": "READY_TO_UPLOAD_OR_ALREADY_UPLOADED"
+    },
+    {
+      "file": "release/astra-treasury-protocol-v0.1.1-legal-counsel-selection.tar.gz",
+      "title": "Legal Counsel Selection Package",
+      "category": "legal",
+      "purpose": "Counsel outreach, scorecard, quote comparison, selection decision, and engagement checklist.",
+      "exists": true,
+      "sizeBytes": 12070,
+      "modifiedAt": "2026-05-10T23:45:50.057Z",
+      "sha256": "a044c10f621444229da8a5b91679f91b6eb653cf37e218cc9e6a425330d34290",
+      "uploadChecklist": "READY_TO_UPLOAD_OR_ALREADY_UPLOADED"
+    },
+    {
+      "file": "release/astra-treasury-protocol-v0.1.1-mainnet-planning.tar.gz",
+      "title": "Mainnet Planning Package",
+      "category": "mainnet-planning",
+      "purpose": "Mainnet architecture, Safe role plan, key-management plan, RPC plan, and go/no-go checklist.",
+      "exists": true,
+      "sizeBytes": 8446,
+      "modifiedAt": "2026-05-10T13:21:04.214Z",
+      "sha256": "ccaf195d9fa6b5d5dba74ad59619cd027cca3bf7af8b5d92b8c15b4a790144e4",
+      "uploadChecklist": "READY_TO_UPLOAD_OR_ALREADY_UPLOADED"
+    },
+    {
+      "file": "release/astra-treasury-protocol-v0.1.1-mainnet-runbook.tar.gz",
+      "title": "Mainnet Dry-Run Runbook Package",
+      "category": "mainnet-planning",
+      "purpose": "Dry-run-only deployment runbook, constructor manifest, role-transfer checklist, rollback checklist.",
+      "exists": true,
+      "sizeBytes": 8586,
+      "modifiedAt": "2026-05-10T14:29:35.639Z",
+      "sha256": "cd7beddc03b308cdf255d76d09189485f7acac7c770bb85cf5856a76af5b3b73",
+      "uploadChecklist": "READY_TO_UPLOAD_OR_ALREADY_UPLOADED"
+    },
+    {
+      "file": "release/astra-treasury-protocol-v0.1.1-safe-planning.tar.gz",
+      "title": "Safe Planning Package",
+      "category": "governance",
+      "purpose": "Safe multisig role-plan template, validator, and local Safe-style role-transfer dry run.",
+      "exists": true,
+      "sizeBytes": 8079,
+      "modifiedAt": "2026-05-10T14:05:45.832Z",
+      "sha256": "352e15b99bf09c78752997659668e95456c461d987b68a88cdf61bfc0a2ed3e0",
+      "uploadChecklist": "READY_TO_UPLOAD_OR_ALREADY_UPLOADED"
+    },
+    {
+      "file": "release/astra-treasury-protocol-v0.1.1-incident-response.tar.gz",
+      "title": "Incident Response Package",
+      "category": "operations",
+      "purpose": "Incident response, emergency pause drill, compromised signer runbook, RPC outage runbook, and monitoring checklist.",
+      "exists": true,
+      "sizeBytes": 14002,
+      "modifiedAt": "2026-05-10T13:31:26.087Z",
+      "sha256": "b338a3955d67d5aeb5fedb3551aae48e2fa12f2fff11b65c276716bafe48f722",
+      "uploadChecklist": "READY_TO_UPLOAD_OR_ALREADY_UPLOADED"
+    },
+    {
+      "file": "release/astra-treasury-protocol-v0.1.1-governance-gate.tar.gz",
+      "title": "Governance Gate Package",
+      "category": "governance",
+      "purpose": "Combined audit/legal governance gate, blocker register, signoff matrix, and mainnet-blocked status.",
+      "exists": true,
+      "sizeBytes": 13840,
+      "modifiedAt": "2026-05-10T23:58:39.288Z",
+      "sha256": "e5df221070435b8a889cfa2d1b5891ad239498e528a79e1acaadfd19e87a60a2",
+      "uploadChecklist": "READY_TO_UPLOAD_OR_ALREADY_UPLOADED"
+    },
+    {
+      "file": "release/astra-treasury-protocol-v0.1.1-public-audit-page.tar.gz",
+      "title": "Public Audit Page Package",
+      "category": "public-site",
+      "purpose": "Public audit readiness page and API.",
+      "exists": true,
+      "sizeBytes": 11302,
+      "modifiedAt": "2026-05-10T22:03:43.941Z",
+      "sha256": "8f53f3ebd66bfbeebe177fe1d37bccd79e1768ab415c4bbd85d0151c81da08f5",
+      "uploadChecklist": "READY_TO_UPLOAD_OR_ALREADY_UPLOADED"
+    },
+    {
+      "file": "release/astra-treasury-protocol-v0.1.1-public-governance-page.tar.gz",
+      "title": "Public Governance Page Package",
+      "category": "public-site",
+      "purpose": "Public governance gate page and API.",
+      "exists": true,
+      "sizeBytes": 9164,
+      "modifiedAt": "2026-05-11T00:11:00.317Z",
+      "sha256": "61f2a68a2ae324cfd8c98325bcfbe99a6c8574f186263871db3f0a3039825d45",
+      "uploadChecklist": "READY_TO_UPLOAD_OR_ALREADY_UPLOADED"
+    },
+    {
+      "file": "release/astra-treasury-protocol-v0.1.1-public-transparency-index.tar.gz",
+      "title": "Public Transparency Index Package",
+      "category": "public-site",
+      "purpose": "Public transparency index page and API.",
+      "exists": true,
+      "sizeBytes": 9712,
+      "modifiedAt": "2026-05-11T00:21:05.637Z",
+      "sha256": "5d01df9c84372d8ead87c1f36d12a79994e7d11b8854f227b2b6a934638a079e",
+      "uploadChecklist": "READY_TO_UPLOAD_OR_ALREADY_UPLOADED"
+    },
+    {
+      "file": "release/astra-treasury-protocol-v0.1.1-public-refresh.tar.gz",
+      "title": "Public Refresh Service Package",
+      "category": "operations",
+      "purpose": "Automated refresh loop for sanitized public audit, governance, and transparency pages.",
+      "exists": true,
+      "sizeBytes": 12857,
+      "modifiedAt": "2026-05-11T00:39:35.539Z",
+      "sha256": "e28cb5cfb96d8a64555997d04c39e04a2485e9e054c09f7673158b4fb9c9bf4e",
+      "uploadChecklist": "READY_TO_UPLOAD_OR_ALREADY_UPLOADED"
+    },
+    {
+      "file": "release/astra-treasury-protocol-v0.1.1-evidence-archive.tar.gz",
+      "title": "Public Evidence Archive Package",
+      "category": "operations",
+      "purpose": "Automated evidence snapshots and public evidence archive page/API.",
+      "exists": true,
+      "sizeBytes": 11392,
+      "modifiedAt": "2026-05-11T00:54:27.325Z",
+      "sha256": "7bb3b08fbff835cc648c0514a65f0fafdce3b4d0ff173a5f2230fe00bca539eb",
+      "uploadChecklist": "READY_TO_UPLOAD_OR_ALREADY_UPLOADED"
+    },
+    {
+      "file": "release/astra-treasury-protocol-v0.1.1-public-package-inventory.tar.gz",
+      "title": "Public Package Inventory Package",
+      "category": "public-site",
+      "purpose": "Public package manifest and release inventory page/API.",
+      "exists": true,
+      "sizeBytes": 12705,
+      "modifiedAt": "2026-05-11T01:08:50.646Z",
+      "sha256": "dd2cf38f0e3a187e1ec7c1dafcf17eb0e4ee4b8a6e5a59b4627e32c82188d414",
+      "uploadChecklist": "READY_TO_UPLOAD_OR_ALREADY_UPLOADED"
+    }
+  ],
+  "publicStatement": "These packages are review and transparency artifacts for a Base Sepolia testnet prototype. Mainnet remains blocked pending audit, legal review, Safe finalization, infrastructure readiness, incident-response rehearsal, and go/no-go approval."
+}
