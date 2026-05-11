@@ -126,7 +126,10 @@
     "release:public-package-inventory": "bash scripts/release/package-public-package-inventory.sh",
     "mainnet:config:validate": "node scripts/validate-mainnet-production-config.mjs",
     "mainnet:config:validate-template": "node scripts/validate-mainnet-production-config.mjs configs/mainnet-production.config.template.json || true",
-    "release:mainnet-production-config": "bash scripts/release/package-mainnet-production-config.sh"
+    "release:mainnet-production-config": "bash scripts/release/package-mainnet-production-config.sh",
+    "mainnet:dry-run:v1": "node scripts/mainnet-deployment-dry-run-v1.mjs",
+    "mainnet:dry-run:v1:gate": "npm run mainnet:dry-run:v1 && npm run audit:full && npm run governance:gate:full && npm run ops:status && npm run domain:check",
+    "release:mainnet-dry-run-v1": "bash scripts/release/package-mainnet-dry-run-v1.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",
