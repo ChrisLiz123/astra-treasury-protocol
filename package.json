@@ -140,7 +140,12 @@
     "release:safe-transaction-payloads-v1": "bash scripts/release/package-safe-transaction-payloads-v1.sh",
     "mainnet:final-go-no-go:validate": "bash scripts/validate-final-go-no-go.sh",
     "mainnet:final-go-no-go:gate": "npm run mainnet:final-go-no-go:validate && npm run mainnet:commands:v1:gate && npm run safe:payloads:v1:gate && npm run audit:full && npm run governance:gate:full && npm run ops:status && npm run domain:check",
-    "release:final-go-no-go": "bash scripts/release/package-final-go-no-go.sh"
+    "release:final-go-no-go": "bash scripts/release/package-final-go-no-go.sh",
+    "mainnet:approval:status": "node scripts/set-mainnet-deployment-approval.mjs status",
+    "mainnet:approval:approve": "node scripts/set-mainnet-deployment-approval.mjs approve",
+    "mainnet:approval:reset": "node scripts/set-mainnet-deployment-approval.mjs reset",
+    "mainnet:approval:preflight": "npm run mainnet:approval:status && npm run mainnet:final-go-no-go:gate && npm run mainnet:commands:v1:gate && npm run safe:payloads:v1:gate",
+    "release:deployment-approval-flip": "bash scripts/release/package-deployment-approval-flip.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",
