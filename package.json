@@ -109,7 +109,10 @@
     "release:governance-gate": "bash scripts/release/package-governance-gate.sh",
     "docs:governance-public": "node services/docs/generate-public-governance-docs.mjs",
     "governance:public:gate": "npm run governance:gate:full && npm run docs:governance-public",
-    "release:public-governance-page": "bash scripts/release/package-public-governance-page.sh"
+    "release:public-governance-page": "bash scripts/release/package-public-governance-page.sh",
+    "docs:transparency-public": "node services/docs/generate-public-transparency-docs.mjs",
+    "transparency:public:gate": "npm run docs:audit-public && npm run docs:governance-public && npm run docs:transparency-public",
+    "release:public-transparency-index": "bash scripts/release/package-public-transparency-index.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",

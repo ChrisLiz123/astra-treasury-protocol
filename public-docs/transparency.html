@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AstraTreasury Transparency Index</title>
+  <style>
+    :root { color-scheme: dark; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    body { margin: 0; background: #0d1117; color: #e6edf3; }
+    header { padding: 32px; background: #010409; border-bottom: 1px solid #30363d; }
+    main { padding: 24px 32px 56px; display: grid; gap: 18px; }
+    h1 { margin: 0 0 8px; font-size: 30px; }
+    h2 { margin-top: 0; color: #58a6ff; }
+    a { color: #58a6ff; }
+    .muted { color: #8b949e; overflow-wrap: anywhere; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; }
+    .card { background: #161b22; border: 1px solid #30363d; border-radius: 14px; padding: 18px; box-shadow: 0 12px 30px rgba(0,0,0,.2); }
+    .big { font-size: 26px; font-weight: 700; }
+    .ok { color: #3fb950; font-weight: 700; }
+    .warn { color: #d29922; font-weight: 700; }
+    .danger { color: #f85149; font-weight: 700; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { text-align: left; border-bottom: 1px solid #30363d; padding: 10px 8px; vertical-align: top; }
+    th { color: #58a6ff; font-size: 13px; }
+    td { font-size: 13px; overflow-wrap: anywhere; }
+    code { background: #0d1117; border: 1px solid #30363d; border-radius: 6px; padding: 2px 5px; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>AstraTreasury Transparency Index</h1>
+  <div class="muted">Public transparency index. Sanitized and read-only.</div>
+</header>
+
+<main>
+  <section class="grid">
+    <div class="card">
+      <h2>Network</h2>
+      <div class="big">Base Sepolia</div>
+      <div class="muted">Chain ID: 84532</div>
+    </div>
+
+    <div class="card">
+      <h2>Mainnet</h2>
+      <div class="big danger">BLOCKED</div>
+      <div class="muted">External audit and legal review are not yet complete.</div>
+    </div>
+
+    <div class="card">
+      <h2>Audit</h2>
+      <div class="big">READY_FOR_EXTERNAL_AUDIT</div>
+      <div class="muted"><a href="/audit">Audit readiness</a> · <a href="/api/public/audit">API</a></div>
+    </div>
+
+    <div class="card">
+      <h2>Governance</h2>
+      <div class="big danger">BLOCKING_MAINNET</div>
+      <div class="muted"><a href="/governance">Governance gate</a> · <a href="/api/public/governance">API</a></div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Repository</h2>
+    <p>Branch: <code>main</code></p>
+    <p>Commit: <code>70b3903</code></p>
+    <p><a href="https://github.com/chrisliz123/astra-treasury-protocol" target="_blank" rel="noreferrer">GitHub repository</a></p>
+  </section>
+
+  <section class="card">
+    <h2>Contracts</h2>
+    <table>
+      <thead><tr><th>Contract</th><th>Address</th><th>Explorer</th></tr></thead>
+      <tbody><tr><td>astraToken</td><td><code>0x0e1a0446c9660cbdcdb05a684e497a036861c0da</code></td><td><a target="_blank" rel="noreferrer" href="https://sepolia.basescan.org/address/0x0e1a0446c9660cbdcdb05a684e497a036861c0da">BaseScan</a></td></tr><tr><td>treasuryPolicy</td><td><code>0x53a14b2c4de81dfe64e938eec3852fc0cd48ccff</code></td><td><a target="_blank" rel="noreferrer" href="https://sepolia.basescan.org/address/0x53a14b2c4de81dfe64e938eec3852fc0cd48ccff">BaseScan</a></td></tr><tr><td>treasuryVault</td><td><code>0x47716e8efbf8bb5325738f4b87beaf6e635d153a</code></td><td><a target="_blank" rel="noreferrer" href="https://sepolia.basescan.org/address/0x47716e8efbf8bb5325738f4b87beaf6e635d153a">BaseScan</a></td></tr><tr><td>signalRegistry</td><td><code>0x7a9ea35172d69ce2650ff410b0caffbfa9789d0e</code></td><td><a target="_blank" rel="noreferrer" href="https://sepolia.basescan.org/address/0x7a9ea35172d69ce2650ff410b0caffbfa9789d0e">BaseScan</a></td></tr><tr><td>executionController</td><td><code>0x1076c83ae89ebda88b38c39a3f98c37da2ede830</code></td><td><a target="_blank" rel="noreferrer" href="https://sepolia.basescan.org/address/0x1076c83ae89ebda88b38c39a3f98c37da2ede830">BaseScan</a></td></tr></tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>Review Packages</h2>
+    <table>
+      <thead><tr><th>File</th><th>Exists locally</th><th>Size bytes</th></tr></thead>
+      <tbody><tr><td>release/astra-treasury-protocol-v0.1-public-testnet-source.tar.gz</td><td>yes</td><td>78509</td></tr><tr><td>release/astra-treasury-protocol-v0.1.1-audit-candidate.tar.gz</td><td>yes</td><td>90262</td></tr><tr><td>release/astra-treasury-protocol-v0.1.1-external-review.tar.gz</td><td>yes</td><td>92279</td></tr><tr><td>release/astra-treasury-protocol-v0.1.1-audit-intake.tar.gz</td><td>yes</td><td>8967</td></tr><tr><td>release/astra-treasury-protocol-v0.1.1-audit-outreach.tar.gz</td><td>yes</td><td>8054</td></tr><tr><td>release/astra-treasury-protocol-v0.1.1-auditor-selection.tar.gz</td><td>yes</td><td>9451</td></tr><tr><td>release/astra-treasury-protocol-v0.1.1-auditor-selection-execution.tar.gz</td><td>yes</td><td>9548</td></tr><tr><td>release/astra-treasury-protocol-v0.1.1-audit-kickoff.tar.gz</td><td>yes</td><td>10462</td></tr><tr><td>release/astra-treasury-protocol-v0.1.1-remediation-tracker.tar.gz</td><td>yes</td><td>8138</td></tr><tr><td>release/astra-treasury-protocol-v0.1.1-mainnet-planning.tar.gz</td><td>yes</td><td>8446</td></tr><tr><td>release/astra-treasury-protocol-v0.1.1-mainnet-runbook.tar.gz</td><td>yes</td><td>8586</td></tr><tr><td>release/astra-treasury-protocol-v0.1.1-safe-planning.tar.gz</td><td>yes</td><td>8079</td></tr><tr><td>release/astra-treasury-protocol-v0.1.1-incident-response.tar.gz</td><td>yes</td><td>14002</td></tr><tr><td>release/astra-treasury-protocol-v0.1.1-governance-gate.tar.gz</td><td>yes</td><td>13840</td></tr><tr><td>release/astra-treasury-protocol-v0.1.1-public-audit-page.tar.gz</td><td>yes</td><td>11302</td></tr><tr><td>release/astra-treasury-protocol-v0.1.1-public-governance-page.tar.gz</td><td>yes</td><td>9164</td></tr></tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>Public Docs</h2>
+    <table>
+      <thead><tr><th>File</th><th>Exists locally</th><th>Size bytes</th></tr></thead>
+      <tbody><tr><td>public-docs/README.md</td><td>yes</td><td>818</td></tr><tr><td>public-docs/contracts.md</td><td>yes</td><td>1230</td></tr><tr><td>public-docs/safety-workflow.md</td><td>yes</td><td>823</td></tr><tr><td>public-docs/dashboard-api.md</td><td>yes</td><td>546</td></tr><tr><td>public-docs/verification.md</td><td>yes</td><td>654</td></tr><tr><td>public-docs/audit.html</td><td>yes</td><td>4411</td></tr><tr><td>public-docs/audit-status.json</td><td>yes</td><td>6040</td></tr><tr><td>public-docs/governance.html</td><td>yes</td><td>3916</td></tr><tr><td>public-docs/governance-status.json</td><td>yes</td><td>2711</td></tr></tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>Public Statement</h2>
+    <p>AstraTreasury is a Base Sepolia testnet prototype. Mainnet remains blocked pending external audit, legal review, Safe finalization, production infrastructure, incident-response rehearsal, and go/no-go approval.</p>
+  </section>
+
+  <section class="card">
+    <h2>Public API</h2>
+    <p><a href="/api/public/transparency">/api/public/transparency</a></p>
+    <p><a href="/">Back to public site</a></p>
+  </section>
+</main>
+</body>
+</html>

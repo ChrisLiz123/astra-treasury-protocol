@@ -1,0 +1,260 @@
+{
+  "schema": "astra-public-transparency-status-v0.1",
+  "generatedAt": "2026-05-11T00:21:05.474Z",
+  "project": "AstraTreasury Protocol",
+  "version": "0.1.0",
+  "network": {
+    "name": "Base Sepolia",
+    "chainId": 84532,
+    "explorer": "https://sepolia.basescan.org"
+  },
+  "publicSite": {
+    "root": "https://astratreasury.ai",
+    "www": "https://www.astratreasury.ai",
+    "pages": {
+      "home": "/",
+      "audit": "/audit",
+      "governance": "/governance",
+      "transparency": "/transparency"
+    }
+  },
+  "repository": {
+    "remote": "git@github.com:chrisliz123/astra-treasury-protocol.git",
+    "githubUrl": "https://github.com/chrisliz123/astra-treasury-protocol",
+    "branch": "main",
+    "commit": "70b3903912e903dae44ba1698a76c88d0dfb6866",
+    "shortCommit": "70b3903"
+  },
+  "safetyStatus": {
+    "testnetOnly": true,
+    "mainnetLaunched": false,
+    "realTreasuryFunds": false,
+    "publicTokenSale": false,
+    "investmentProduct": false,
+    "mainnetBlocked": true,
+    "mainnetBlockReason": "External audit and legal review are not yet complete."
+  },
+  "contracts": [
+    {
+      "name": "astraToken",
+      "address": "0x0e1a0446c9660cbdcdb05a684e497a036861c0da",
+      "explorerUrl": "https://sepolia.basescan.org/address/0x0e1a0446c9660cbdcdb05a684e497a036861c0da"
+    },
+    {
+      "name": "treasuryPolicy",
+      "address": "0x53a14b2c4de81dfe64e938eec3852fc0cd48ccff",
+      "explorerUrl": "https://sepolia.basescan.org/address/0x53a14b2c4de81dfe64e938eec3852fc0cd48ccff"
+    },
+    {
+      "name": "treasuryVault",
+      "address": "0x47716e8efbf8bb5325738f4b87beaf6e635d153a",
+      "explorerUrl": "https://sepolia.basescan.org/address/0x47716e8efbf8bb5325738f4b87beaf6e635d153a"
+    },
+    {
+      "name": "signalRegistry",
+      "address": "0x7a9ea35172d69ce2650ff410b0caffbfa9789d0e",
+      "explorerUrl": "https://sepolia.basescan.org/address/0x7a9ea35172d69ce2650ff410b0caffbfa9789d0e"
+    },
+    {
+      "name": "executionController",
+      "address": "0x1076c83ae89ebda88b38c39a3f98c37da2ede830",
+      "explorerUrl": "https://sepolia.basescan.org/address/0x1076c83ae89ebda88b38c39a3f98c37da2ede830"
+    }
+  ],
+  "audit": {
+    "status": "READY_FOR_EXTERNAL_AUDIT",
+    "findings": {
+      "total": 1,
+      "open": 0,
+      "criticalOrHighOpen": 0,
+      "byStatus": {
+        "FIX_VERIFIED": 1
+      },
+      "bySeverity": {
+        "MEDIUM": 1
+      },
+      "items": [
+        {
+          "id": "ASTRA-001",
+          "source": "Internal",
+          "severity": "MEDIUM",
+          "title": "Cancelled signals executable in v0.1.0",
+          "status": "FIX_VERIFIED",
+          "owner": "AstraTreasury",
+          "retestStatus": "Local stateful audit passing",
+          "notes": "Found internally and fixed in v0.1.1 before external audit."
+        }
+      ]
+    },
+    "api": "/api/public/audit",
+    "page": "/audit"
+  },
+  "governance": {
+    "gateStatus": "BLOCKING_MAINNET",
+    "requiredCompletion": {
+      "externalAuditComplete": false,
+      "legalReviewComplete": false,
+      "multisigFinalized": false,
+      "productionRpcReady": false,
+      "incidentResponseRehearsed": false,
+      "mainnetGoNoGoApproved": false
+    },
+    "api": "/api/public/governance",
+    "page": "/governance"
+  },
+  "packages": [
+    {
+      "file": "release/astra-treasury-protocol-v0.1-public-testnet-source.tar.gz",
+      "exists": true,
+      "sizeBytes": 78509,
+      "modifiedAt": "2026-05-10T00:32:08.010Z"
+    },
+    {
+      "file": "release/astra-treasury-protocol-v0.1.1-audit-candidate.tar.gz",
+      "exists": true,
+      "sizeBytes": 90262,
+      "modifiedAt": "2026-05-10T12:59:52.826Z"
+    },
+    {
+      "file": "release/astra-treasury-protocol-v0.1.1-external-review.tar.gz",
+      "exists": true,
+      "sizeBytes": 92279,
+      "modifiedAt": "2026-05-10T13:07:39.308Z"
+    },
+    {
+      "file": "release/astra-treasury-protocol-v0.1.1-audit-intake.tar.gz",
+      "exists": true,
+      "sizeBytes": 8967,
+      "modifiedAt": "2026-05-10T17:41:36.553Z"
+    },
+    {
+      "file": "release/astra-treasury-protocol-v0.1.1-audit-outreach.tar.gz",
+      "exists": true,
+      "sizeBytes": 8054,
+      "modifiedAt": "2026-05-10T21:15:26.547Z"
+    },
+    {
+      "file": "release/astra-treasury-protocol-v0.1.1-auditor-selection.tar.gz",
+      "exists": true,
+      "sizeBytes": 9451,
+      "modifiedAt": "2026-05-10T21:23:14.199Z"
+    },
+    {
+      "file": "release/astra-treasury-protocol-v0.1.1-auditor-selection-execution.tar.gz",
+      "exists": true,
+      "sizeBytes": 9548,
+      "modifiedAt": "2026-05-10T21:41:18.452Z"
+    },
+    {
+      "file": "release/astra-treasury-protocol-v0.1.1-audit-kickoff.tar.gz",
+      "exists": true,
+      "sizeBytes": 10462,
+      "modifiedAt": "2026-05-10T21:32:39.295Z"
+    },
+    {
+      "file": "release/astra-treasury-protocol-v0.1.1-remediation-tracker.tar.gz",
+      "exists": true,
+      "sizeBytes": 8138,
+      "modifiedAt": "2026-05-10T21:48:01.733Z"
+    },
+    {
+      "file": "release/astra-treasury-protocol-v0.1.1-mainnet-planning.tar.gz",
+      "exists": true,
+      "sizeBytes": 8446,
+      "modifiedAt": "2026-05-10T13:21:04.214Z"
+    },
+    {
+      "file": "release/astra-treasury-protocol-v0.1.1-mainnet-runbook.tar.gz",
+      "exists": true,
+      "sizeBytes": 8586,
+      "modifiedAt": "2026-05-10T14:29:35.639Z"
+    },
+    {
+      "file": "release/astra-treasury-protocol-v0.1.1-safe-planning.tar.gz",
+      "exists": true,
+      "sizeBytes": 8079,
+      "modifiedAt": "2026-05-10T14:05:45.832Z"
+    },
+    {
+      "file": "release/astra-treasury-protocol-v0.1.1-incident-response.tar.gz",
+      "exists": true,
+      "sizeBytes": 14002,
+      "modifiedAt": "2026-05-10T13:31:26.087Z"
+    },
+    {
+      "file": "release/astra-treasury-protocol-v0.1.1-governance-gate.tar.gz",
+      "exists": true,
+      "sizeBytes": 13840,
+      "modifiedAt": "2026-05-10T23:58:39.288Z"
+    },
+    {
+      "file": "release/astra-treasury-protocol-v0.1.1-public-audit-page.tar.gz",
+      "exists": true,
+      "sizeBytes": 11302,
+      "modifiedAt": "2026-05-10T22:03:43.941Z"
+    },
+    {
+      "file": "release/astra-treasury-protocol-v0.1.1-public-governance-page.tar.gz",
+      "exists": true,
+      "sizeBytes": 9164,
+      "modifiedAt": "2026-05-11T00:11:00.317Z"
+    }
+  ],
+  "publicDocs": [
+    {
+      "file": "public-docs/README.md",
+      "exists": true,
+      "sizeBytes": 818,
+      "modifiedAt": "2026-05-10T03:07:44.198Z"
+    },
+    {
+      "file": "public-docs/contracts.md",
+      "exists": true,
+      "sizeBytes": 1230,
+      "modifiedAt": "2026-05-10T03:07:44.198Z"
+    },
+    {
+      "file": "public-docs/safety-workflow.md",
+      "exists": true,
+      "sizeBytes": 823,
+      "modifiedAt": "2026-05-10T03:07:44.198Z"
+    },
+    {
+      "file": "public-docs/dashboard-api.md",
+      "exists": true,
+      "sizeBytes": 546,
+      "modifiedAt": "2026-05-10T03:07:44.198Z"
+    },
+    {
+      "file": "public-docs/verification.md",
+      "exists": true,
+      "sizeBytes": 654,
+      "modifiedAt": "2026-05-10T03:07:44.198Z"
+    },
+    {
+      "file": "public-docs/audit.html",
+      "exists": true,
+      "sizeBytes": 4411,
+      "modifiedAt": "2026-05-11T00:21:05.093Z"
+    },
+    {
+      "file": "public-docs/audit-status.json",
+      "exists": true,
+      "sizeBytes": 6040,
+      "modifiedAt": "2026-05-11T00:21:05.093Z"
+    },
+    {
+      "file": "public-docs/governance.html",
+      "exists": true,
+      "sizeBytes": 3916,
+      "modifiedAt": "2026-05-11T00:21:05.277Z"
+    },
+    {
+      "file": "public-docs/governance-status.json",
+      "exists": true,
+      "sizeBytes": 2711,
+      "modifiedAt": "2026-05-11T00:21:05.277Z"
+    }
+  ],
+  "publicStatement": "AstraTreasury is a Base Sepolia testnet prototype. Mainnet remains blocked pending external audit, legal review, Safe finalization, production infrastructure, incident-response rehearsal, and go/no-go approval."
+}
