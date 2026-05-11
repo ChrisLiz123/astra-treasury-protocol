@@ -1,0 +1,84 @@
+{
+  "schema": "astra-public-governance-status-v0.1",
+  "generatedAt": "2026-05-11T00:11:00.154Z",
+  "project": "AstraTreasury Protocol",
+  "version": "0.1.1",
+  "network": "Base Sepolia",
+  "publicSite": {
+    "root": "https://astratreasury.ai",
+    "www": "https://www.astratreasury.ai"
+  },
+  "governanceGate": {
+    "schema": "astra-governance-gate-status-v0.1",
+    "generatedAt": "2026-05-11T00:03:24.135Z",
+    "project": "AstraTreasury Protocol",
+    "version": "0.1.1",
+    "network": "Base Sepolia",
+    "mainnetLaunched": false,
+    "realTreasuryFunds": false,
+    "publicTokenSale": false,
+    "investmentProduct": false,
+    "gateStatus": "BLOCKING_MAINNET",
+    "gateReason": "External audit and legal review are not yet complete.",
+    "findings": {
+      "total": 1,
+      "openCriticalHigh": 0,
+      "bySeverity": {
+        "MEDIUM": 1
+      },
+      "byStatus": {
+        "FIX_VERIFIED": 1
+      }
+    },
+    "requiredCompletion": {
+      "externalAuditComplete": false,
+      "legalReviewComplete": false,
+      "multisigFinalized": false,
+      "productionRpcReady": false,
+      "incidentResponseRehearsed": false,
+      "mainnetGoNoGoApproved": false
+    },
+    "publicStatement": "AstraTreasury is a Base Sepolia testnet prototype. Mainnet remains blocked pending external audit, legal review, Safe finalization, production infrastructure, and go/no-go approval."
+  },
+  "mainnet": {
+    "launched": false,
+    "blocked": true,
+    "blockReason": "External audit and legal review are not yet complete."
+  },
+  "safety": {
+    "realTreasuryFunds": false,
+    "publicTokenSale": false,
+    "investmentProduct": false,
+    "testnetOnly": true
+  },
+  "findings": {
+    "total": 1,
+    "openCriticalHigh": 0,
+    "bySeverity": {
+      "MEDIUM": 1
+    },
+    "byStatus": {
+      "FIX_VERIFIED": 1
+    }
+  },
+  "requiredCompletion": {
+    "externalAuditComplete": false,
+    "legalReviewComplete": false,
+    "multisigFinalized": false,
+    "productionRpcReady": false,
+    "incidentResponseRehearsed": false,
+    "mainnetGoNoGoApproved": false
+  },
+  "documents": {
+    "blockerRegisterExists": true,
+    "signoffMatrixExists": true,
+    "governanceGateDocs": [
+      "docs/governance-gate/COMBINED_AUDIT_LEGAL_GATE.md",
+      "docs/governance-gate/MAINNET_BLOCKER_REGISTER.md",
+      "docs/governance-gate/SIGNOFF_MATRIX.md",
+      "docs/governance-gate/GOVERNANCE_GATE_DECISION_RECORD.md",
+      "docs/governance-gate/GOVERNANCE_GATE_STATUS.md"
+    ]
+  },
+  "publicStatement": "AstraTreasury is a Base Sepolia testnet prototype. Mainnet remains blocked pending external audit, legal review, Safe finalization, production infrastructure, incident-response rehearsal, and go/no-go approval."
+}

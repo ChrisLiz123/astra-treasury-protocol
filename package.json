@@ -106,7 +106,10 @@
     "governance:gate:status": "node scripts/generate-governance-gate-status.mjs",
     "governance:gate:run": "npm run governance:gate:validate && npm run governance:gate:status",
     "governance:gate:full": "npm run governance:gate:run && npm run legal:selection:gate && npm run audit:selection-exec:gate && npm run audit:remediation:gate && npm run safe:prepare && npm run mainnet:runbook:validate && npm run ops:status && npm run domain:check",
-    "release:governance-gate": "bash scripts/release/package-governance-gate.sh"
+    "release:governance-gate": "bash scripts/release/package-governance-gate.sh",
+    "docs:governance-public": "node services/docs/generate-public-governance-docs.mjs",
+    "governance:public:gate": "npm run governance:gate:full && npm run docs:governance-public",
+    "release:public-governance-page": "bash scripts/release/package-public-governance-page.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",
