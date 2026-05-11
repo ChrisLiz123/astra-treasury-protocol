@@ -129,7 +129,11 @@
     "release:mainnet-production-config": "bash scripts/release/package-mainnet-production-config.sh",
     "mainnet:dry-run:v1": "node scripts/mainnet-deployment-dry-run-v1.mjs",
     "mainnet:dry-run:v1:gate": "npm run mainnet:dry-run:v1 && npm run audit:full && npm run governance:gate:full && npm run ops:status && npm run domain:check",
-    "release:mainnet-dry-run-v1": "bash scripts/release/package-mainnet-dry-run-v1.sh"
+    "release:mainnet-dry-run-v1": "bash scripts/release/package-mainnet-dry-run-v1.sh",
+    "mainnet:commands:v1": "node scripts/generate-mainnet-deployment-commands-v1.mjs",
+    "mainnet:commands:v1:gate": "npm run mainnet:commands:v1 && npm run mainnet:dry-run:v1:gate",
+    "deploy:base-mainnet:guarded": "hardhat run scripts/deploy-base-mainnet-guarded.ts --build-profile production --network baseMainnet",
+    "release:mainnet-command-generation-v1": "bash scripts/release/package-mainnet-command-generation-v1.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",
