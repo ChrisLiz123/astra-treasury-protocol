@@ -145,7 +145,12 @@
     "mainnet:approval:approve": "node scripts/set-mainnet-deployment-approval.mjs approve",
     "mainnet:approval:reset": "node scripts/set-mainnet-deployment-approval.mjs reset",
     "mainnet:approval:preflight": "npm run mainnet:approval:status && npm run mainnet:final-go-no-go:gate && npm run mainnet:commands:v1:gate && npm run safe:payloads:v1:gate",
-    "release:deployment-approval-flip": "bash scripts/release/package-deployment-approval-flip.sh"
+    "release:deployment-approval-flip": "bash scripts/release/package-deployment-approval-flip.sh",
+    "mainnet:final-preflight": "hardhat run scripts/mainnet-final-preflight.ts --build-profile production --network baseMainnet",
+    "mainnet:final-preflight:approved": "ASTRA_REQUIRE_MAINNET_APPROVAL=YES hardhat run scripts/mainnet-final-preflight.ts --build-profile production --network baseMainnet",
+    "mainnet:deployment-session:preflight": "npm run mainnet:approval:preflight && npm run mainnet:final-preflight",
+    "mainnet:deployment-session:preflight-approved": "npm run mainnet:approval:status && npm run mainnet:final-preflight:approved",
+    "release:deployment-session-preflight": "bash scripts/release/package-deployment-session-preflight.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",
