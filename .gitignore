@@ -12,3 +12,4 @@ deployments/*.env
 !deployments/base-sepolia.public.json
 /artifacts-local/
 /out/
+/configs/mainnet-production.config.json

@@ -123,7 +123,10 @@
     "release:evidence-archive": "bash scripts/release/package-evidence-archive.sh",
     "docs:packages-public": "node services/docs/generate-public-package-inventory.mjs",
     "packages:public:gate": "npm run docs:packages-public",
-    "release:public-package-inventory": "bash scripts/release/package-public-package-inventory.sh"
+    "release:public-package-inventory": "bash scripts/release/package-public-package-inventory.sh",
+    "mainnet:config:validate": "node scripts/validate-mainnet-production-config.mjs",
+    "mainnet:config:validate-template": "node scripts/validate-mainnet-production-config.mjs configs/mainnet-production.config.template.json || true",
+    "release:mainnet-production-config": "bash scripts/release/package-mainnet-production-config.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",

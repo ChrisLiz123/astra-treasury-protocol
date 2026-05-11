@@ -1,0 +1,46 @@
+{
+  "schema": "astra-mainnet-production-config-v0.1",
+  "status": "template-not-deployment-authorization",
+  "network": {
+    "name": "Base Mainnet",
+    "chainId": 8453,
+    "explorer": "https://basescan.org"
+  },
+  "rpc": {
+    "primaryProvider": "TBD",
+    "primaryRpcConfigVariable": "BASE_MAINNET_RPC_URL",
+    "backupProvider": "TBD",
+    "backupRpcConfigVariable": "BASE_MAINNET_BACKUP_RPC_URL"
+  },
+  "safes": {
+    "governanceSafe": "TBD",
+    "treasurySafe": "TBD",
+    "executorSafe": "TBD",
+    "signalerSafe": "TBD"
+  },
+  "allocationWallets": {
+    "ecosystemWallet": "TBD",
+    "liquidityWallet": "TBD",
+    "teamWallet": "TBD",
+    "communityWallet": "TBD",
+    "advisorsWallet": "TBD"
+  },
+  "deployer": {
+    "address": "TBD",
+    "roleAfterDeployment": "no privileged roles"
+  },
+  "controls": {
+    "auditCleared": true,
+    "legalCleared": true,
+    "publicSaleApproved": false,
+    "realTreasuryFundingApproved": false,
+    "mainnetDeploymentApproved": false
+  },
+  "blockedUntil": [
+    "all TBD placeholders replaced",
+    "primary and backup RPC configured",
+    "Safe addresses finalized",
+    "constructor arguments generated",
+    "final go/no-go approved"
+  ]
+}
