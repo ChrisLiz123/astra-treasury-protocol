@@ -133,7 +133,11 @@
     "mainnet:commands:v1": "node scripts/generate-mainnet-deployment-commands-v1.mjs",
     "mainnet:commands:v1:gate": "npm run mainnet:commands:v1 && npm run mainnet:dry-run:v1:gate",
     "deploy:base-mainnet:guarded": "hardhat run scripts/deploy-base-mainnet-guarded.ts --build-profile production --network baseMainnet",
-    "release:mainnet-command-generation-v1": "bash scripts/release/package-mainnet-command-generation-v1.sh"
+    "release:mainnet-command-generation-v1": "bash scripts/release/package-mainnet-command-generation-v1.sh",
+    "safe:payloads:v1": "node scripts/generate-safe-transaction-payloads-v1.mjs",
+    "safe:payloads:v1:require-deployment": "SAFE_PAYLOADS_REQUIRE_DEPLOYMENT=true node scripts/generate-safe-transaction-payloads-v1.mjs",
+    "safe:payloads:v1:gate": "npm run safe:payloads:v1 && npm run mainnet:commands:v1:gate",
+    "release:safe-transaction-payloads-v1": "bash scripts/release/package-safe-transaction-payloads-v1.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",
