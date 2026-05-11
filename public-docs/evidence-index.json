@@ -1,0 +1,78 @@
+{
+  "schema": "astra-public-evidence-index-v0.1",
+  "generatedAt": "2026-05-11T00:54:40.950Z",
+  "retentionDays": 90,
+  "publicLimit": 30,
+  "snapshotCount": 3,
+  "project": "AstraTreasury Protocol",
+  "network": "Base Sepolia",
+  "mainnetLaunched": false,
+  "realTreasuryFunds": false,
+  "publicTokenSale": false,
+  "mainnetBlocked": true,
+  "items": [
+    {
+      "snapshotId": "2026-05-11T00-54-39-075Z",
+      "generatedAt": "2026-05-11T00:54:40.947Z",
+      "git": {
+        "remote": "git@github.com:chrisliz123/astra-treasury-protocol.git",
+        "githubUrl": "https://github.com/chrisliz123/astra-treasury-protocol",
+        "branch": "main",
+        "commit": "1739860c507345130ea567079eab01287def2fd6",
+        "shortCommit": "1739860"
+      },
+      "network": {
+        "name": "Base Sepolia",
+        "chainId": 84532
+      },
+      "mainnetBlocked": true,
+      "auditStatus": "READY_FOR_EXTERNAL_AUDIT",
+      "governanceGateStatus": "BLOCKING_MAINNET",
+      "openCriticalHighFindings": 0,
+      "publicChecksOk": true,
+      "packageCount": 18
+    },
+    {
+      "snapshotId": "2026-05-11T00-53-59-686Z",
+      "generatedAt": "2026-05-11T00:54:01.591Z",
+      "git": {
+        "remote": "git@github.com:chrisliz123/astra-treasury-protocol.git",
+        "githubUrl": "https://github.com/chrisliz123/astra-treasury-protocol",
+        "branch": "main",
+        "commit": "1739860c507345130ea567079eab01287def2fd6",
+        "shortCommit": "1739860"
+      },
+      "network": {
+        "name": "Base Sepolia",
+        "chainId": 84532
+      },
+      "mainnetBlocked": true,
+      "auditStatus": "READY_FOR_EXTERNAL_AUDIT",
+      "governanceGateStatus": "BLOCKING_MAINNET",
+      "openCriticalHighFindings": 0,
+      "publicChecksOk": true,
+      "packageCount": 18
+    },
+    {
+      "snapshotId": "2026-05-11T00-53-27-703Z",
+      "generatedAt": "2026-05-11T00:53:29.534Z",
+      "git": {
+        "remote": "git@github.com:chrisliz123/astra-treasury-protocol.git",
+        "githubUrl": "https://github.com/chrisliz123/astra-treasury-protocol",
+        "branch": "main",
+        "commit": "1739860c507345130ea567079eab01287def2fd6",
+        "shortCommit": "1739860"
+      },
+      "network": {
+        "name": "Base Sepolia",
+        "chainId": 84532
+      },
+      "mainnetBlocked": true,
+      "auditStatus": "READY_FOR_EXTERNAL_AUDIT",
+      "governanceGateStatus": "BLOCKING_MAINNET",
+      "openCriticalHighFindings": 0,
+      "publicChecksOk": true,
+      "packageCount": 18
+    }
+  ]
+}

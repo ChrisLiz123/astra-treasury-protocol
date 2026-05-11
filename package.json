@@ -116,7 +116,11 @@
     "public:refresh:once": "node services/public-refresh/refresh-loop.mjs --once",
     "public:refresh:loop": "node services/public-refresh/refresh-loop.mjs",
     "public:refresh:status": "cat reports/public-refresh/heartbeat.json",
-    "release:public-refresh": "bash scripts/release/package-public-refresh.sh"
+    "release:public-refresh": "bash scripts/release/package-public-refresh.sh",
+    "evidence:archive:once": "node services/evidence/evidence-archive.mjs --once",
+    "evidence:archive:loop": "node services/evidence/evidence-archive.mjs",
+    "evidence:archive:status": "cat reports/evidence/heartbeat.json",
+    "release:evidence-archive": "bash scripts/release/package-evidence-archive.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",
