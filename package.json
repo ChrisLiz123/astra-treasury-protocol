@@ -137,7 +137,10 @@
     "safe:payloads:v1": "node scripts/generate-safe-transaction-payloads-v1.mjs",
     "safe:payloads:v1:require-deployment": "SAFE_PAYLOADS_REQUIRE_DEPLOYMENT=true node scripts/generate-safe-transaction-payloads-v1.mjs",
     "safe:payloads:v1:gate": "npm run safe:payloads:v1 && npm run mainnet:commands:v1:gate",
-    "release:safe-transaction-payloads-v1": "bash scripts/release/package-safe-transaction-payloads-v1.sh"
+    "release:safe-transaction-payloads-v1": "bash scripts/release/package-safe-transaction-payloads-v1.sh",
+    "mainnet:final-go-no-go:validate": "bash scripts/validate-final-go-no-go.sh",
+    "mainnet:final-go-no-go:gate": "npm run mainnet:final-go-no-go:validate && npm run mainnet:commands:v1:gate && npm run safe:payloads:v1:gate && npm run audit:full && npm run governance:gate:full && npm run ops:status && npm run domain:check",
+    "release:final-go-no-go": "bash scripts/release/package-final-go-no-go.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",
