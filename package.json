@@ -213,7 +213,10 @@
     "post:announcement:complete": "node services/post-announcement-monitor/status.mjs complete",
     "post:announcement:loop": "node services/post-announcement-monitor/status.mjs loop",
     "post:announcement:gate": "npm run announcement:publication:gate && npm run post:announcement:status",
-    "release:post-announcement-monitoring": "bash scripts/release/package-post-announcement-monitoring.sh"
+    "release:post-announcement-monitoring": "bash scripts/release/package-post-announcement-monitoring.sh",
+    "stabilization:status": "node services/stabilization/status.mjs",
+    "stabilization:gate": "npm run public:refresh:once && npm run evidence:archive:once && npm run stabilization:status",
+    "release:restricted-launch-stabilization": "bash scripts/release/package-restricted-launch-stabilization.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",

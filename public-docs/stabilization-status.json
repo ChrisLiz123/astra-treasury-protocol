@@ -1,0 +1,38 @@
+{
+  "schema": "astra-public-restricted-launch-stabilization-status-v0.1",
+  "generatedAt": "2026-05-12T14:58:09.479Z",
+  "status": "RESTRICTED_LAUNCH_STABILIZED",
+  "mode": "BASE_MAINNET_RESTRICTED_OPERATION",
+  "network": {
+    "name": "Base Mainnet",
+    "chainId": 8453
+  },
+  "publicStatement": "AstraTreasury restricted Base Mainnet deployment is stabilized: contracts are deployed, verified, monitored, announcement monitoring is complete, and restricted capabilities remain disabled.",
+  "summary": {
+    "totalChecks": 20,
+    "passed": 20,
+    "failed": 0,
+    "evidenceSnapshots": 24,
+    "activeIncidents": 0,
+    "highOrCriticalEventAlerts": 0
+  },
+  "restrictions": {
+    "publicTokenSale": false,
+    "realTreasuryFunding": false,
+    "stakingOrRewards": false,
+    "buybackProgram": false,
+    "autonomousExecution": false,
+    "mainnetExecutionQueue": false,
+    "paperToOnchainAutomation": false
+  },
+  "failures": [],
+  "nextCapabilitiesRequireSeparateApproval": [
+    "public token sale",
+    "real treasury funding",
+    "staking or rewards",
+    "buyback program",
+    "mainnet execution queue",
+    "paper-to-on-chain automation",
+    "autonomous execution"
+  ]
+}

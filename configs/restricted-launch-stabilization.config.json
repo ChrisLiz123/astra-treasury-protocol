@@ -1,0 +1,27 @@
+{
+  "schema": "astra-restricted-launch-stabilization-config-v0.1",
+  "status": "restricted-launch-stabilization",
+  "network": {
+    "name": "Base Mainnet",
+    "chainId": 8453
+  },
+  "requiredStatus": {
+    "restrictedLaunch": "RESTRICTED_LAUNCH_READY",
+    "postAnnouncement": "POST_ANNOUNCEMENT_WINDOW_COMPLETE",
+    "mainnetMonitor": "PASS",
+    "eventMonitorNoHighCriticalAlerts": true,
+    "alertsRequireNoResponse": true,
+    "noActiveIncidents": true,
+    "executionQueueDisabled": true,
+    "restrictedOperationsMode": "MAINNET_RESTRICTED_OPERATION"
+  },
+  "stillDisabled": {
+    "publicTokenSale": true,
+    "realTreasuryFunding": true,
+    "stakingOrRewards": true,
+    "buybackProgram": true,
+    "autonomousExecution": true,
+    "mainnetExecutionQueue": true,
+    "paperToOnchainAutomation": true
+  }
+}
