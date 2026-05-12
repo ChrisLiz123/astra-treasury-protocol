@@ -1,0 +1,48 @@
+{
+  "schema": "astra-brand-kit-v0.1",
+  "generatedAt": "2026-05-12T21:57:40.325Z",
+  "project": "AstraTreasury Protocol",
+  "token": {
+    "name": "AstraTreasury Token",
+    "symbol": "ASTP",
+    "network": "Base Mainnet",
+    "chainId": 8453,
+    "address": "0xc7c39837d0e604eeb525fc8fc501a5475a20419b"
+  },
+  "assets": {
+    "logo256": "https://astratreasury.ai/assets/brand/astratoken-logo-256.png",
+    "logo512": "https://astratreasury.ai/assets/brand/astratoken-logo-512.png",
+    "logo1024": "https://astratreasury.ai/assets/brand/astratoken-logo-1024.png",
+    "favicon": "https://astratreasury.ai/favicon.png",
+    "appleTouchIcon": "https://astratreasury.ai/apple-touch-icon.png",
+    "socialPreview": "https://astratreasury.ai/og-image.png"
+  },
+  "colors": {
+    "midnight": "#08111f",
+    "surface": "#0e1a2b",
+    "blue": "#67a7ff",
+    "green": "#41d49b",
+    "text": "#edf4fb",
+    "muted": "#9aaec4"
+  },
+  "usage": {
+    "approved": [
+      "Use the official AstraToken logo on public AstraTreasury token metadata pages.",
+      "Use the logo for wallet visibility, token lists, and explorer update requests.",
+      "Use restricted-mode language when displaying token identity."
+    ],
+    "prohibited": [
+      "Do not imply a public token sale is live.",
+      "Do not imply ASTP is an investment product.",
+      "Do not imply staking, rewards, buybacks, autonomous execution, or treasury funding are live."
+    ]
+  },
+  "restrictions": {
+    "publicTokenSale": false,
+    "realTreasuryFunding": false,
+    "stakingOrRewards": false,
+    "buybackProgram": false,
+    "autonomousExecution": false,
+    "mainnetExecutionQueue": false
+  }
+}

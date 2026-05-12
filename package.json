@@ -228,7 +228,10 @@
     "token:metadata:gate": "npm run token:metadata && test -f public-docs/assets/token/astratoken-logo-256.png && test -f public-docs/token-status.json && test -f public-docs/astratreasury-tokenlist.json",
     "wallet:metadata": "node services/wallet/generate-wallet-page.mjs",
     "wallet:gate": "npm run token:metadata:gate && npm run wallet:metadata",
-    "release:token-wallet-readiness": "bash scripts/release/package-token-wallet-readiness.sh"
+    "release:token-wallet-readiness": "bash scripts/release/package-token-wallet-readiness.sh",
+    "brand:kit": "node services/brand/generate-brand-kit.mjs",
+    "brand:gate": "npm run token:metadata:gate && npm run brand:kit",
+    "release:token-brand-kit": "bash scripts/release/package-token-brand-kit.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",
