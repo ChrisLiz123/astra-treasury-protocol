@@ -1,0 +1,43 @@
+{
+  "schema": "astra-public-post-announcement-monitoring-status-v0.1",
+  "generatedAt": "2026-05-12T14:37:38.641Z",
+  "status": "POST_ANNOUNCEMENT_MONITORING_ACTIVE",
+  "window": {
+    "state": "active",
+    "configuredState": "active",
+    "windowHours": 24,
+    "startedAt": "2026-05-12T14:33:44.661Z",
+    "endsAt": "2026-05-13T14:33:44.661Z",
+    "completedAt": ""
+  },
+  "publication": {
+    "announcementPosted": true,
+    "publications": [
+      {
+        "date": "2026-05-12T14:33:39.219Z",
+        "channel": "X",
+        "url": "https://x.com/YOUR_POST_URL",
+        "status": "POSTED",
+        "notes": "Restricted launch announcement posted"
+      }
+    ]
+  },
+  "summary": {
+    "totalChecks": 9,
+    "passed": 9,
+    "failed": 0,
+    "activeIncidents": 0,
+    "highOrCriticalAlerts": 0,
+    "evidenceSnapshots": 18
+  },
+  "failures": [],
+  "restrictions": {
+    "publicTokenSale": false,
+    "realTreasuryFunding": false,
+    "stakingOrRewards": false,
+    "buybackProgram": false,
+    "autonomousExecution": false,
+    "mainnetExecutionQueue": false
+  },
+  "publicStatement": "AstraTreasury restricted launch announcement monitoring tracks public links, monitors, alerts, incidents, and evidence snapshots. Restricted capabilities remain disabled."
+}

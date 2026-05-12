@@ -206,7 +206,14 @@
     "release:restricted-launch-announcement": "bash scripts/release/package-restricted-launch-announcement.sh",
     "announcement:publication:status": "node services/announcement-publication/status.mjs",
     "announcement:publication:gate": "npm run announcement:gate && npm run mainnet:launch:gate && npm run announcement:publication:status",
-    "release:announcement-publication-monitoring": "bash scripts/release/package-announcement-publication-monitoring.sh"
+    "release:announcement-publication-monitoring": "bash scripts/release/package-announcement-publication-monitoring.sh",
+    "post:announcement:mark-posted": "node services/post-announcement-monitor/status.mjs mark-posted",
+    "post:announcement:start": "node services/post-announcement-monitor/status.mjs start",
+    "post:announcement:status": "node services/post-announcement-monitor/status.mjs status",
+    "post:announcement:complete": "node services/post-announcement-monitor/status.mjs complete",
+    "post:announcement:loop": "node services/post-announcement-monitor/status.mjs loop",
+    "post:announcement:gate": "npm run announcement:publication:gate && npm run post:announcement:status",
+    "release:post-announcement-monitoring": "bash scripts/release/package-post-announcement-monitoring.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",

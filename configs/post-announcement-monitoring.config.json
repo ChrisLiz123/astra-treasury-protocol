@@ -1,0 +1,26 @@
+{
+  "schema": "astra-post-announcement-monitoring-config-v0.1",
+  "status": "active",
+  "windowHours": 24,
+  "startedAt": "2026-05-12T14:33:44.661Z",
+  "endsAt": "2026-05-13T14:33:44.661Z",
+  "completedAt": "",
+  "requirements": {
+    "announcementPosted": true,
+    "publicLinksReachable": true,
+    "mainnetMonitorPassing": true,
+    "eventMonitorNoHighCriticalAlerts": true,
+    "alertResponseNotRequired": true,
+    "noActiveIncidents": true,
+    "restrictedLaunchReady": true,
+    "evidenceSnapshotCaptured": true
+  },
+  "restrictionsRemainDisabled": {
+    "publicTokenSale": true,
+    "realTreasuryFunding": true,
+    "stakingOrRewards": true,
+    "buybackProgram": true,
+    "autonomousExecution": true,
+    "mainnetExecutionQueue": true
+  }
+}
