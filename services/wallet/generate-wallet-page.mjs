@@ -1,0 +1,303 @@
+import fs from "node:fs";
+import path from "node:path";
+
+const root = process.cwd();
+
+const tokenStatusFile = path.join(root, "public-docs", "token-status.json");
+const publicJsonFile = path.join(root, "public-docs", "wallet-status.json");
+const publicHtmlFile = path.join(root, "public-docs", "wallet.html");
+
+fs.mkdirSync(path.dirname(publicJsonFile), { recursive: true });
+
+function readJson(filePath, fallback = {}) {
+  try {
+    if (!fs.existsSync(filePath)) return fallback;
+    return JSON.parse(fs.readFileSync(filePath, "utf8"));
+  } catch (error) {
+    return { error: error.message };
+  }
+}
+
+function escapeHtml(value) {
+  return String(value ?? "").replace(/[&<>"]/g, (ch) => ({
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    "\"": "&quot;"
+  }[ch]));
+}
+
+const token = readJson(tokenStatusFile);
+
+if (!/^0x[a-fA-F0-9]{40}$/.test(token.address || "")) {
+  throw new Error("Missing valid token address in public-docs/token-status.json");
+}
+
+const walletStatus = {
+  schema: "astra-wallet-visibility-status-v0.1",
+  generatedAt: new Date().toISOString(),
+  project: "AstraTreasury Protocol",
+  network: {
+    name: "Base Mainnet",
+    chainId: 8453,
+    chainIdHex: "0x2105"
+  },
+  token: {
+    name: token.name || "AstraTreasury Token",
+    symbol: token.symbol || "ASTP",
+    address: token.address,
+    decimals: token.decimals || 18,
+    logoURI: token.logoURI || "https://astratreasury.ai/assets/token/astratoken-logo-256.png"
+  },
+  walletAction: {
+    method: "wallet_watchAsset",
+    type: "ERC20"
+  },
+  restrictions: {
+    publicTokenSale: false,
+    realTreasuryFunding: false,
+    stakingOrRewards: false,
+    buybackProgram: false,
+    autonomousExecution: false,
+    mainnetExecutionQueue: false
+  },
+  publicStatement:
+    "This page helps wallets display ASTP. It is not a public token sale, investment product, staking/rewards launch, buyback program, or autonomous execution launch."
+};
+
+fs.writeFileSync(publicJsonFile, JSON.stringify(walletStatus, null, 2) + "\n");
+
+const html = `<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Add AstraToken to Wallet</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #08111f;
+      --surface: #0e1a2b;
+      --surface-2: #111f33;
+      --border: rgba(148, 163, 184, 0.2);
+      --text: #edf4fb;
+      --muted: #9aaec4;
+      --blue: #67a7ff;
+      --green: #41d49b;
+      --yellow: #f4c35f;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    body {
+      margin: 0;
+      background: linear-gradient(180deg, #07101d, var(--bg));
+      color: var(--text);
+    }
+
+    a { color: var(--blue); text-decoration: none; }
+
+    main {
+      width: min(980px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 44px 0 72px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 28px;
+      box-shadow: 0 22px 70px rgba(0,0,0,.28);
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 28px;
+      align-items: center;
+    }
+
+    img {
+      width: 150px;
+      height: 150px;
+      border-radius: 28px;
+      border: 1px solid var(--border);
+      background: #07101d;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: 38px;
+      letter-spacing: -1px;
+    }
+
+    p {
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 22px;
+    }
+
+    button, .button {
+      border: 0;
+      border-radius: 12px;
+      padding: 13px 16px;
+      font-weight: 800;
+      cursor: pointer;
+      background: var(--text);
+      color: #07101d;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .button.secondary {
+      background: rgba(255,255,255,.06);
+      border: 1px solid var(--border);
+      color: var(--text);
+    }
+
+    .meta {
+      margin-top: 28px;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      overflow: hidden;
+    }
+
+    .row {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 16px;
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .row:last-child { border-bottom: 0; }
+
+    .label {
+      color: var(--muted);
+    }
+
+    code {
+      color: var(--muted);
+      overflow-wrap: anywhere;
+      font-size: 13px;
+    }
+
+    .notice {
+      margin-top: 22px;
+      padding: 16px;
+      border-radius: 16px;
+      background: rgba(244,195,95,.08);
+      border: 1px solid rgba(244,195,95,.22);
+      color: #f7d99a;
+      line-height: 1.6;
+    }
+
+    .status {
+      margin-top: 16px;
+      color: var(--green);
+      font-weight: 800;
+    }
+
+    @media (max-width: 720px) {
+      .hero, .row {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+<main>
+  <div class="card">
+    <div class="hero">
+      <img src="/assets/token/astratoken-logo-256.png" alt="AstraTreasury Token logo" />
+      <div>
+        <h1>Add ASTP to your wallet</h1>
+        <p>
+          This page helps compatible wallets display AstraTreasury Token on Base Mainnet.
+          It does not buy, sell, transfer, stake, or approve any token.
+        </p>
+
+        <div class="actions">
+          <button id="addTokenButton" type="button">Add ASTP to wallet</button>
+          <a class="button secondary" href="/token">View token metadata</a>
+          <a class="button secondary" href="/mainnet">View mainnet manifest</a>
+        </div>
+
+        <div id="walletStatus" class="status" aria-live="polite"></div>
+      </div>
+    </div>
+
+    <div class="meta">
+      <div class="row"><div class="label">Network</div><div>Base Mainnet</div></div>
+      <div class="row"><div class="label">Chain ID</div><div>8453 / 0x2105</div></div>
+      <div class="row"><div class="label">Token</div><div>AstraTreasury Token</div></div>
+      <div class="row"><div class="label">Symbol</div><div>ASTP</div></div>
+      <div class="row"><div class="label">Decimals</div><div>18</div></div>
+      <div class="row"><div class="label">Contract</div><div><code>${escapeHtml(token.address)}</code></div></div>
+      <div class="row"><div class="label">Logo</div><div><a href="/assets/token/astratoken-logo-256.png">Official 256px logo</a></div></div>
+    </div>
+
+    <div class="notice">
+      AstraTreasury is not offering a public token sale. ASTP is not marketed as an investment product.
+      Real treasury funding, staking/rewards, buybacks, autonomous execution, and mainnet execution queue activation remain disabled.
+    </div>
+  </div>
+</main>
+
+<script>
+const token = ${JSON.stringify(walletStatus.token)};
+const chainIdHex = "0x2105";
+
+async function addToken() {
+  const status = document.getElementById("walletStatus");
+
+  if (!window.ethereum || !window.ethereum.request) {
+    status.textContent = "No compatible injected wallet was detected.";
+    return;
+  }
+
+  try {
+    try {
+      await window.ethereum.request({
+        method: "wallet_switchEthereumChain",
+        params: [{ chainId: chainIdHex }]
+      });
+    } catch (switchError) {
+      status.textContent = "Please switch your wallet to Base Mainnet, then try again.";
+    }
+
+    const wasAdded = await window.ethereum.request({
+      method: "wallet_watchAsset",
+      params: {
+        type: "ERC20",
+        options: {
+          address: token.address,
+          symbol: token.symbol,
+          decimals: token.decimals,
+          image: token.logoURI
+        }
+      }
+    });
+
+    status.textContent = wasAdded ? "ASTP was added to your wallet watchlist." : "Wallet did not add ASTP.";
+  } catch (error) {
+    status.textContent = "Wallet request failed: " + (error?.message || String(error));
+  }
+}
+
+document.getElementById("addTokenButton").addEventListener("click", addToken);
+</script>
+</body>
+</html>`;
+
+fs.writeFileSync(publicHtmlFile, html + "\n");
+
+console.log("Wrote public-docs/wallet-status.json");
+console.log("Wrote public-docs/wallet.html");

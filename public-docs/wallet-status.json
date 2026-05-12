@@ -1,0 +1,30 @@
+{
+  "schema": "astra-wallet-visibility-status-v0.1",
+  "generatedAt": "2026-05-12T21:41:44.644Z",
+  "project": "AstraTreasury Protocol",
+  "network": {
+    "name": "Base Mainnet",
+    "chainId": 8453,
+    "chainIdHex": "0x2105"
+  },
+  "token": {
+    "name": "AstraTreasury Token",
+    "symbol": "ASTP",
+    "address": "0xc7c39837d0e604eeb525fc8fc501a5475a20419b",
+    "decimals": 18,
+    "logoURI": "https://astratreasury.ai/assets/token/astratoken-logo-256.png"
+  },
+  "walletAction": {
+    "method": "wallet_watchAsset",
+    "type": "ERC20"
+  },
+  "restrictions": {
+    "publicTokenSale": false,
+    "realTreasuryFunding": false,
+    "stakingOrRewards": false,
+    "buybackProgram": false,
+    "autonomousExecution": false,
+    "mainnetExecutionQueue": false
+  },
+  "publicStatement": "This page helps wallets display ASTP. It is not a public token sale, investment product, staking/rewards launch, buyback program, or autonomous execution launch."
+}

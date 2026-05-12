@@ -764,6 +764,10 @@ const html = `<!doctype html>
           <strong>Roadmap</strong>
           <span>Future capabilities and approval tracks.</span>
         </a>
+        <a class="link-card" href="/wallet">
+          <strong>Add to wallet</strong>
+          <span>Wallet visibility for ASTP. This is not a purchase flow.</span>
+        </a>
         <a class="link-card" href="/api/public/home">
           <strong>Home API</strong>
           <span>Machine-readable public status.</span>

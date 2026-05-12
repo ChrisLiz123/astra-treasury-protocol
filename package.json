@@ -223,7 +223,12 @@
     "release:capability-roadmap-governance": "bash scripts/release/package-capability-roadmap-governance.sh",
     "docs:home-public": "node services/homepage/generate-homepage.mjs",
     "homepage:gate": "npm run docs:home-public",
-    "release:public-homepage-refresh": "bash scripts/release/package-public-homepage-refresh.sh"
+    "release:public-homepage-refresh": "bash scripts/release/package-public-homepage-refresh.sh",
+    "token:metadata": "node services/token-metadata/generate-token-metadata.mjs",
+    "token:metadata:gate": "npm run token:metadata && test -f public-docs/assets/token/astratoken-logo-256.png && test -f public-docs/token-status.json && test -f public-docs/astratreasury-tokenlist.json",
+    "wallet:metadata": "node services/wallet/generate-wallet-page.mjs",
+    "wallet:gate": "npm run token:metadata:gate && npm run wallet:metadata",
+    "release:token-wallet-readiness": "bash scripts/release/package-token-wallet-readiness.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",
