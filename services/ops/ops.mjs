@@ -180,7 +180,8 @@ function getPm2Status() {
         astraPublicRefreshOnline: byName["astra-public-refresh"]?.status === "online",
         astraEvidenceArchiveOnline: byName["astra-evidence-archive"]?.status === "online",
         astraMainnetMonitorOnline: byName["astra-mainnet-monitor"]?.status === "online",
-        astraMainnetEventsOnline: byName["astra-mainnet-events"]?.status === "online"
+        astraMainnetEventsOnline: byName["astra-mainnet-events"]?.status === "online",
+        astraOperatorNotificationsOnline: byName["astra-operator-notifications"]?.status === "online"
       }
     };
   } catch (error) {
@@ -287,6 +288,7 @@ async function collectStatus() {
     astraEvidenceArchiveOnline: Boolean(pm2.required?.astraEvidenceArchiveOnline),
     astraMainnetMonitorOnline: Boolean(pm2.required?.astraMainnetMonitorOnline),
     astraMainnetEventsOnline: Boolean(pm2.required?.astraMainnetEventsOnline),
+    astraOperatorNotificationsOnline: Boolean(pm2.required?.astraOperatorNotificationsOnline),
     deploymentFilePresent: local.files.deployment.exists,
     paperStatePresent: local.files.paperState.exists
   };

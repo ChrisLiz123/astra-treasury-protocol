@@ -181,7 +181,12 @@
     "release:mainnet-event-monitor": "bash scripts/release/package-mainnet-event-monitor.sh",
     "mainnet:alerts:status": "node services/mainnet-alerts/status.mjs",
     "mainnet:alerts:gate": "npm run mainnet:events:once && npm run mainnet:alerts:status",
-    "release:mainnet-alert-escalation": "bash scripts/release/package-mainnet-alert-escalation.sh"
+    "release:mainnet-alert-escalation": "bash scripts/release/package-mainnet-alert-escalation.sh",
+    "notify:operator:once": "node services/operator-notifications/notifier.mjs --once",
+    "notify:operator:test": "node services/operator-notifications/notifier.mjs --once --test",
+    "notify:operator:loop": "node services/operator-notifications/notifier.mjs",
+    "notify:operator:status": "cat reports/operator-notifications/heartbeat.json",
+    "release:operator-notifications": "bash scripts/release/package-operator-notifications.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",
