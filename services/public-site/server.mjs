@@ -308,7 +308,7 @@ function indexHtml() {
         <li><a href="/api/public/status">/api/public/status</a></li>
         <li><a href="/api/public/contracts">/api/public/contracts</a></li>
         <li><a href="/api/public/verification">/api/public/verification</a></li>
-        <li><a href="/api/public/audit">/api/public/audit</a></li>\n        <li><a href="/api/public/governance">/api/public/governance</a></li>\n        <li><a href="/api/public/transparency">/api/public/transparency</a></li>\n        <li><a href="/api/public/evidence">/api/public/evidence</a></li>\n        <li><a href="/api/public/packages">/api/public/packages</a></li>\n        <li><a href="/api/public/mainnet">/api/public/mainnet</a></li>\n        <li><a href="/api/public/live">/api/public/live</a></li>\n        <li><a href="/api/public/restricted-operations">/api/public/restricted-operations</a></li>\n        <li><a href="/api/public/monitor">/api/public/monitor</a></li>\n        <li><a href="/api/public/mainnet-execution">/api/public/mainnet-execution</a></li>\n        <li><a href="/api/public/mainnet-events">/api/public/mainnet-events</a></li>\n        <li><a href="/api/public/alerts">/api/public/alerts</a></li>\n        <li><a href="/api/public/incidents">/api/public/incidents</a></li>\n        <li><a href="/api/public/launch">/api/public/launch</a></li>\n        <li><a href="/api/public/announcement">/api/public/announcement</a></li>\n        <li><a href="/api/public/announcement-publication">/api/public/announcement-publication</a></li>\n        <li><a href="/api/public/post-announcement">/api/public/post-announcement</a></li>\n        <li><a href="/api/public/stabilization">/api/public/stabilization</a></li>\n        <li><a href="/api/public/roadmap">/api/public/roadmap</a></li>
+        <li><a href="/api/public/audit">/api/public/audit</a></li>\n        <li><a href="/api/public/governance">/api/public/governance</a></li>\n        <li><a href="/api/public/transparency">/api/public/transparency</a></li>\n        <li><a href="/api/public/evidence">/api/public/evidence</a></li>\n        <li><a href="/api/public/packages">/api/public/packages</a></li>\n        <li><a href="/api/public/mainnet">/api/public/mainnet</a></li>\n        <li><a href="/api/public/live">/api/public/live</a></li>\n        <li><a href="/api/public/restricted-operations">/api/public/restricted-operations</a></li>\n        <li><a href="/api/public/monitor">/api/public/monitor</a></li>\n        <li><a href="/api/public/mainnet-execution">/api/public/mainnet-execution</a></li>\n        <li><a href="/api/public/mainnet-events">/api/public/mainnet-events</a></li>\n        <li><a href="/api/public/alerts">/api/public/alerts</a></li>\n        <li><a href="/api/public/incidents">/api/public/incidents</a></li>\n        <li><a href="/api/public/launch">/api/public/launch</a></li>\n        <li><a href="/api/public/announcement">/api/public/announcement</a></li>\n        <li><a href="/api/public/announcement-publication">/api/public/announcement-publication</a></li>\n        <li><a href="/api/public/post-announcement">/api/public/post-announcement</a></li>\n        <li><a href="/api/public/stabilization">/api/public/stabilization</a></li>\n        <li><a href="/api/public/roadmap">/api/public/roadmap</a></li>\n        <li><a href="/api/public/home">/api/public/home</a></li>
         <li><a href="/healthz">/healthz</a></li>
       </ul>
     </section>
@@ -801,6 +801,30 @@ const server = http.createServer((req, res) => {
 
       if (!fs.existsSync(filePath)) {
         jsonResponse(res, { error: "Capability roadmap not generated yet. Run: npm run roadmap:status" }, 404);
+        return;
+      }
+
+      textResponse(res, readText(filePath), 200, "application/json; charset=utf-8");
+      return;
+    }
+
+    if (url.pathname === "/" || url.pathname === "/index.html") {
+      const filePath = path.join(docsDir, "index.html");
+
+      if (!fs.existsSync(filePath)) {
+        textResponse(res, "Homepage not generated yet. Run: npm run docs:home-public\n", 404);
+        return;
+      }
+
+      textResponse(res, readText(filePath), 200, "text/html; charset=utf-8");
+      return;
+    }
+
+    if (url.pathname === "/api/public/home") {
+      const filePath = path.join(docsDir, "home-status.json");
+
+      if (!fs.existsSync(filePath)) {
+        jsonResponse(res, { error: "Homepage status not generated yet. Run: npm run docs:home-public" }, 404);
         return;
       }
 

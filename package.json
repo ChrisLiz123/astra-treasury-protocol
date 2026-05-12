@@ -220,7 +220,10 @@
     "roadmap:validate": "node scripts/validate-capability-roadmap.mjs",
     "roadmap:status": "node services/capability-roadmap/status.mjs",
     "roadmap:gate": "npm run roadmap:validate && npm run roadmap:status",
-    "release:capability-roadmap-governance": "bash scripts/release/package-capability-roadmap-governance.sh"
+    "release:capability-roadmap-governance": "bash scripts/release/package-capability-roadmap-governance.sh",
+    "docs:home-public": "node services/homepage/generate-homepage.mjs",
+    "homepage:gate": "npm run docs:home-public",
+    "release:public-homepage-refresh": "bash scripts/release/package-public-homepage-refresh.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",
