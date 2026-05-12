@@ -1,24 +1,24 @@
 {
-  "schema": "astra-home-status-v0.1",
-  "generatedAt": "2026-05-12T18:22:23.347Z",
+  "schema": "astra-home-status-v0.3",
+  "generatedAt": "2026-05-12T19:07:24.254Z",
   "project": "AstraTreasury Protocol",
   "version": "0.1.1",
   "branch": "main",
-  "shortCommit": "524aa01",
-  "publicStatement": "AstraTreasury is deployed on Base Mainnet in restricted operational mode. Public token sale, real treasury funding, staking/rewards, buybacks, autonomous execution, and mainnet execution queue activation remain disabled.",
+  "shortCommit": "d871c69",
+  "publicStatement": "AstraTreasury is deployed on Base Mainnet in restricted operational mode. Public token sale, real treasury funding, staking and rewards, buybacks, autonomous execution, and mainnet execution queue activation remain disabled.",
   "network": {
     "name": "Base Mainnet",
     "chainId": 8453
   },
   "summary": {
     "contractCount": 5,
-    "liveStatus": "MAINNET_CONTRACTS_DEPLOYED_RESTRICTED_OPERATION",
     "launchStatus": "RESTRICTED_LAUNCH_READY",
+    "liveStatus": "MAINNET_CONTRACTS_DEPLOYED_RESTRICTED_OPERATION",
     "monitorStatus": "PASS",
+    "stabilizationStatus": "RESTRICTED_LAUNCH_STABILIZED",
+    "roadmapStatus": "CAPABILITY_ROADMAP_READY",
     "alertsResponseRequired": false,
     "activeIncidents": 0,
-    "roadmapStatus": "CAPABILITY_ROADMAP_READY",
-    "stabilizationStatus": "RESTRICTED_LAUNCH_STABILIZED",
     "packageCount": 22
   },
   "restrictions": {
