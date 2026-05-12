@@ -1,0 +1,38 @@
+{
+  "schema": "astra-restricted-launch-announcement-config-v0.1",
+  "status": "restricted-launch-announcement-ready",
+  "network": {
+    "name": "Base Mainnet",
+    "chainId": 8453
+  },
+  "approvedClaims": [
+    "Base Mainnet contracts are deployed.",
+    "Governance Safe setup is complete.",
+    "Post-deployment verification passed.",
+    "Monitoring and alerting are active.",
+    "Restricted operations are enforced.",
+    "No public token sale is approved.",
+    "No real treasury funding is approved.",
+    "No staking, rewards, buybacks, or autonomous execution are approved."
+  ],
+  "prohibitedClaims": [
+    "guaranteed returns",
+    "passive income",
+    "risk-free",
+    "guaranteed buybacks",
+    "token sale is live",
+    "staking is live",
+    "rewards are live",
+    "treasury is funded",
+    "autonomous trading is live",
+    "investment opportunity"
+  ],
+  "requiredLinks": [
+    "https://astratreasury.ai/mainnet",
+    "https://astratreasury.ai/live",
+    "https://astratreasury.ai/monitor",
+    "https://astratreasury.ai/restricted-operations",
+    "https://astratreasury.ai/launch",
+    "https://astratreasury.ai/transparency"
+  ]
+}

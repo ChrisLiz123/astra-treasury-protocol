@@ -1,0 +1,35 @@
+{
+  "schema": "astra-public-announcement-status-v0.1",
+  "generatedAt": "2026-05-12T13:56:33.851Z",
+  "project": "AstraTreasury Protocol",
+  "version": "0.1.1",
+  "network": {
+    "name": "Base Mainnet",
+    "chainId": 8453
+  },
+  "announcementStatus": "READY_FOR_REVIEWED_PUBLIC_POSTING",
+  "restrictedLaunchStatus": "RESTRICTED_LAUNCH_READY",
+  "liveStatus": "MAINNET_CONTRACTS_DEPLOYED_RESTRICTED_OPERATION",
+  "monitorStatus": "PASS",
+  "restrictions": {
+    "publicTokenSale": false,
+    "realTreasuryFunding": false,
+    "stakingOrRewards": false,
+    "buybackProgram": false,
+    "autonomousExecution": false,
+    "mainnetExecutionQueue": false
+  },
+  "publicStatement": "AstraTreasury Base Mainnet contracts are deployed in restricted operational mode. This is not a public token sale, investment product, staking/rewards launch, buyback program, or autonomous execution launch.",
+  "publicLinks": {
+    "mainnet": "/mainnet",
+    "live": "/live",
+    "monitor": "/monitor",
+    "restrictedOperations": "/restricted-operations",
+    "launch": "/launch",
+    "transparency": "/transparency",
+    "announcement": "/announcement"
+  },
+  "announcement": "# AstraTreasury Restricted Mainnet Deployment Announcement\n\n## Approved announcement\n\nAstraTreasury Protocol has completed a restricted Base Mainnet deployment.\n\nThe deployed contracts are public, verified, monitored, and controlled through Safe-based governance. AstraTreasury remains in restricted operational mode.\n\nCurrent status:\n\n- Base Mainnet contracts deployed.\n- Governance Safe setup complete.\n- Post-deployment verification passed.\n- Read-only mainnet monitoring active.\n- Event monitoring and alert escalation active.\n- Incident acknowledgement workflow active.\n- Mainnet execution queue disabled.\n- Public token sale not approved.\n- Real treasury funding not approved.\n- Staking and rewards not approved.\n- Buyback program not approved.\n- Autonomous execution not approved.\n\nPublic links:\n\n- Mainnet manifest: https://astratreasury.ai/mainnet\n- Live status: https://astratreasury.ai/live\n- Monitor: https://astratreasury.ai/monitor\n- Restricted operations: https://astratreasury.ai/restricted-operations\n- Restricted launch status: https://astratreasury.ai/launch\n- Transparency index: https://astratreasury.ai/transparency\n\n## Required disclaimer\n\nAstraTreasury is not offering a public token sale. ASTP is not being marketed as an investment product. The deployment does not approve real treasury funding, staking, rewards, buybacks, or autonomous execution.\n",
+  "socialTemplate": "# Social Post Template\n\nAstraTreasury Protocol has completed a restricted Base Mainnet deployment.\n\nContracts are deployed, verified, monitored, and governed through Safe-based controls.\n\nRestricted mode remains active:\n\n- No public token sale\n- No real treasury funding\n- No staking/rewards\n- No buyback program\n- No autonomous execution\n- Mainnet execution queue disabled\n\nPublic status:\nhttps://astratreasury.ai/launch\n\nTransparency:\nhttps://astratreasury.ai/transparency\n\nAstraTreasury is not an investment product and does not promise returns.\n",
+  "faq": "# Restricted Launch Public FAQ\n\n## Is AstraTreasury live on mainnet?\n\nAstraTreasury contracts are deployed on Base Mainnet in restricted operational mode.\n\n## Is there a public token sale?\n\nNo.\n\n## Is ASTP an investment product?\n\nNo. AstraTreasury does not promise returns.\n\n## Is the treasury funded with real assets?\n\nNo real treasury funding is approved.\n\n## Are staking or rewards live?\n\nNo.\n\n## Are buybacks live?\n\nNo.\n\n## Is autonomous execution live?\n\nNo.\n\n## Is the mainnet execution queue enabled?\n\nNo. The mainnet execution queue remains disabled.\n\n## What is available publicly?\n\nThe mainnet contract manifest, monitoring pages, alert status, incident summary, transparency index, and restricted launch status are publicly available.\n"
+}

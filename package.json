@@ -199,7 +199,11 @@
     "release:incident-acknowledgement": "bash scripts/release/package-incident-acknowledgement.sh",
     "mainnet:launch:status": "node services/restricted-launch/status.mjs",
     "mainnet:launch:gate": "npm run mainnet:monitor:once && npm run mainnet:events:once && npm run mainnet:alerts:status && npm run incident:sync && npm run incident:report && npm run mainnet:restricted:gate && npm run mainnet:execution:status && npm run mainnet:launch:status",
-    "release:restricted-launch-status": "bash scripts/release/package-restricted-launch-status.sh"
+    "release:restricted-launch-status": "bash scripts/release/package-restricted-launch-status.sh",
+    "announcement:validate": "node scripts/validate-restricted-launch-announcement.mjs",
+    "announcement:public": "node services/announcement/generate-public-announcement.mjs",
+    "announcement:gate": "npm run mainnet:launch:gate && npm run announcement:validate && npm run announcement:public",
+    "release:restricted-launch-announcement": "bash scripts/release/package-restricted-launch-announcement.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",
