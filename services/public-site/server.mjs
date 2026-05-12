@@ -298,7 +298,7 @@ function indexHtml() {
         <li><a href="/docs/safety-workflow.md">Safety workflow</a></li>
         <li><a href="/docs/dashboard-api.md">Dashboard/API</a></li>
         <li><a href="/docs/verification.md">Verification</a></li>
-        <li><a href="/audit">Audit readiness</a></li>\n        <li><a href="/governance">Governance gate</a></li>\n        <li><a href="/transparency">Transparency index</a></li>\n        <li><a href="/evidence">Evidence archive</a></li>\n        <li><a href="/packages">Package inventory</a></li>\n        <li><a href="/mainnet">Base Mainnet deployment</a></li>\n        <li><a href="/live">Mainnet live status</a></li>\n        <li><a href="/restricted-operations">Restricted operations</a></li>\n        <li><a href="/monitor">Mainnet monitor</a></li>\n        <li><a href="/mainnet-execution">Mainnet execution queue</a></li>\n        <li><a href="/mainnet-events">Mainnet event monitor</a></li>
+        <li><a href="/audit">Audit readiness</a></li>\n        <li><a href="/governance">Governance gate</a></li>\n        <li><a href="/transparency">Transparency index</a></li>\n        <li><a href="/evidence">Evidence archive</a></li>\n        <li><a href="/packages">Package inventory</a></li>\n        <li><a href="/mainnet">Base Mainnet deployment</a></li>\n        <li><a href="/live">Mainnet live status</a></li>\n        <li><a href="/restricted-operations">Restricted operations</a></li>\n        <li><a href="/monitor">Mainnet monitor</a></li>\n        <li><a href="/mainnet-execution">Mainnet execution queue</a></li>\n        <li><a href="/mainnet-events">Mainnet event monitor</a></li>\n        <li><a href="/alerts">Mainnet alerts</a></li>
       </ul>
     </section>
 
@@ -308,7 +308,7 @@ function indexHtml() {
         <li><a href="/api/public/status">/api/public/status</a></li>
         <li><a href="/api/public/contracts">/api/public/contracts</a></li>
         <li><a href="/api/public/verification">/api/public/verification</a></li>
-        <li><a href="/api/public/audit">/api/public/audit</a></li>\n        <li><a href="/api/public/governance">/api/public/governance</a></li>\n        <li><a href="/api/public/transparency">/api/public/transparency</a></li>\n        <li><a href="/api/public/evidence">/api/public/evidence</a></li>\n        <li><a href="/api/public/packages">/api/public/packages</a></li>\n        <li><a href="/api/public/mainnet">/api/public/mainnet</a></li>\n        <li><a href="/api/public/live">/api/public/live</a></li>\n        <li><a href="/api/public/restricted-operations">/api/public/restricted-operations</a></li>\n        <li><a href="/api/public/monitor">/api/public/monitor</a></li>\n        <li><a href="/api/public/mainnet-execution">/api/public/mainnet-execution</a></li>\n        <li><a href="/api/public/mainnet-events">/api/public/mainnet-events</a></li>
+        <li><a href="/api/public/audit">/api/public/audit</a></li>\n        <li><a href="/api/public/governance">/api/public/governance</a></li>\n        <li><a href="/api/public/transparency">/api/public/transparency</a></li>\n        <li><a href="/api/public/evidence">/api/public/evidence</a></li>\n        <li><a href="/api/public/packages">/api/public/packages</a></li>\n        <li><a href="/api/public/mainnet">/api/public/mainnet</a></li>\n        <li><a href="/api/public/live">/api/public/live</a></li>\n        <li><a href="/api/public/restricted-operations">/api/public/restricted-operations</a></li>\n        <li><a href="/api/public/monitor">/api/public/monitor</a></li>\n        <li><a href="/api/public/mainnet-execution">/api/public/mainnet-execution</a></li>\n        <li><a href="/api/public/mainnet-events">/api/public/mainnet-events</a></li>\n        <li><a href="/api/public/alerts">/api/public/alerts</a></li>
         <li><a href="/healthz">/healthz</a></li>
       </ul>
     </section>
@@ -609,6 +609,30 @@ const server = http.createServer((req, res) => {
 
       if (!fs.existsSync(filePath)) {
         jsonResponse(res, { error: "Mainnet event monitor status not generated yet. Run: npm run mainnet:events:once" }, 404);
+        return;
+      }
+
+      textResponse(res, readText(filePath), 200, "application/json; charset=utf-8");
+      return;
+    }
+
+    if (url.pathname === "/alerts") {
+      const filePath = path.join(docsDir, "alerts.html");
+
+      if (!fs.existsSync(filePath)) {
+        textResponse(res, "Alerts page not generated yet. Run: npm run mainnet:alerts:status\n", 404);
+        return;
+      }
+
+      textResponse(res, readText(filePath), 200, "text/html; charset=utf-8");
+      return;
+    }
+
+    if (url.pathname === "/api/public/alerts") {
+      const filePath = path.join(docsDir, "mainnet-alerts-status.json");
+
+      if (!fs.existsSync(filePath)) {
+        jsonResponse(res, { error: "Mainnet alert status not generated yet. Run: npm run mainnet:alerts:status" }, 404);
         return;
       }
 

@@ -1,0 +1,59 @@
+{
+  "schema": "astra-mainnet-alert-escalation-config-v0.1",
+  "status": "restricted-mainnet-alerting",
+  "network": {
+    "name": "Base Mainnet",
+    "chainId": 8453
+  },
+  "severityRules": {
+    "CRITICAL": {
+      "examples": [
+        "VAULT_ASTP_OUTFLOW"
+      ],
+      "requiredResponse": [
+        "Preserve evidence",
+        "Confirm transaction on BaseScan",
+        "Notify Governance Safe owners",
+        "Notify Treasury Safe owners",
+        "Review whether emergency pause or role revocation is required",
+        "Do not enable any additional restricted capability"
+      ]
+    },
+    "HIGH": {
+      "examples": [
+        "ROLE_GRANTED",
+        "ROLE_REVOKED",
+        "CONTRACT_PAUSED",
+        "CONTRACT_UNPAUSED",
+        "RESTRICTED_FLAG_ENABLED"
+      ],
+      "requiredResponse": [
+        "Confirm whether the event was authorized",
+        "Record transaction hash and signer context",
+        "Notify governance/operator reviewers",
+        "Review role state and monitor output",
+        "Update incident notes"
+      ]
+    },
+    "WARN": {
+      "examples": [
+        "LOG_QUERY_ERROR",
+        "RPC_ERROR"
+      ],
+      "requiredResponse": [
+        "Check primary RPC",
+        "Check backup RPC",
+        "Re-run monitor",
+        "Escalate if repeated"
+      ]
+    }
+  },
+  "hardRules": {
+    "publicTokenSale": "not approved",
+    "realTreasuryFunding": "not approved",
+    "stakingOrRewards": "not approved",
+    "buybackProgram": "not approved",
+    "autonomousExecution": "not approved",
+    "mainnetExecutionQueue": "disabled"
+  }
+}

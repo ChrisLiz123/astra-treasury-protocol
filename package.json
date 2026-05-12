@@ -178,7 +178,10 @@
     "mainnet:events:once": "node services/mainnet-event-monitor/mainnet-event-monitor.mjs --once",
     "mainnet:events:loop": "node services/mainnet-event-monitor/mainnet-event-monitor.mjs",
     "mainnet:events:status": "cat reports/mainnet-event-monitor/heartbeat.json",
-    "release:mainnet-event-monitor": "bash scripts/release/package-mainnet-event-monitor.sh"
+    "release:mainnet-event-monitor": "bash scripts/release/package-mainnet-event-monitor.sh",
+    "mainnet:alerts:status": "node services/mainnet-alerts/status.mjs",
+    "mainnet:alerts:gate": "npm run mainnet:events:once && npm run mainnet:alerts:status",
+    "release:mainnet-alert-escalation": "bash scripts/release/package-mainnet-alert-escalation.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",

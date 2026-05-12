@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AstraTreasury Mainnet Alerts</title>
+  <style>
+    :root { color-scheme: dark; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    body { margin: 0; background: #0d1117; color: #e6edf3; }
+    header { padding: 32px; background: #010409; border-bottom: 1px solid #30363d; }
+    main { padding: 24px 32px 56px; display: grid; gap: 18px; }
+    h1 { margin: 0 0 8px; font-size: 30px; }
+    h2 { margin-top: 0; color: #58a6ff; }
+    a { color: #58a6ff; }
+    .muted { color: #8b949e; }
+    .card { background: #161b22; border: 1px solid #30363d; border-radius: 14px; padding: 18px; }
+    .big { font-size: 26px; font-weight: 700; }
+    .ok { color: #3fb950; font-weight: 700; }
+    .warn { color: #d29922; font-weight: 700; }
+    .fail { color: #f85149; font-weight: 700; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { text-align: left; border-bottom: 1px solid #30363d; padding: 10px 8px; }
+    th { color: #58a6ff; font-size: 13px; }
+    td { font-size: 13px; overflow-wrap: anywhere; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>AstraTreasury Mainnet Alerts</h1>
+  <div class="muted">Read-only alert escalation status for restricted mainnet operation.</div>
+</header>
+<main>
+  <section class="card">
+    <h2>Status</h2>
+    <div class="big ok">CLEAR</div>
+    <p>AstraTreasury mainnet monitor has no high or critical alerts in the latest public snapshot.</p>
+  </section>
+
+  <section class="card">
+    <h2>Alerts</h2>
+    <table>
+      <thead><tr><th>Severity</th><th>Type</th><th>Message</th><th>Transaction</th><th>Response required</th></tr></thead>
+      <tbody><tr><td colspan="5">No alerts in latest snapshot.</td></tr></tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>Escalation Rules</h2>
+    <table>
+      <thead><tr><th>Severity</th><th>Examples</th><th>Required response</th></tr></thead>
+      <tbody><tr><td>CRITICAL</td><td>VAULT_ASTP_OUTFLOW</td><td>Preserve evidence | Confirm transaction on BaseScan | Notify Governance Safe owners | Notify Treasury Safe owners | Review whether emergency pause or role revocation is required | Do not enable any additional restricted capability</td></tr><tr><td>HIGH</td><td>ROLE_GRANTED, ROLE_REVOKED, CONTRACT_PAUSED, CONTRACT_UNPAUSED, RESTRICTED_FLAG_ENABLED</td><td>Confirm whether the event was authorized | Record transaction hash and signer context | Notify governance/operator reviewers | Review role state and monitor output | Update incident notes</td></tr><tr><td>WARN</td><td>LOG_QUERY_ERROR, RPC_ERROR</td><td>Check primary RPC | Check backup RPC | Re-run monitor | Escalate if repeated</td></tr></tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>Public API</h2>
+    <p><a href="/api/public/alerts">/api/public/alerts</a></p>
+    <p><a href="/mainnet-events">Mainnet event monitor</a></p>
+    <p><a href="/">Back to public site</a></p>
+  </section>
+</main>
+</body>
+</html>
