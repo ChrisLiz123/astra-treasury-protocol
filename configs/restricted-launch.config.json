@@ -1,0 +1,30 @@
+{
+  "schema": "astra-restricted-launch-config-v0.1",
+  "status": "restricted-mainnet-launch-status",
+  "network": {
+    "name": "Base Mainnet",
+    "chainId": 8453
+  },
+  "requiredPassingChecks": {
+    "postdeployVerification": true,
+    "mainnetMonitor": true,
+    "eventMonitorNoHighOrCriticalAlerts": true,
+    "alertStatusNoResponseRequired": true,
+    "noActiveIncidents": true,
+    "restrictedOperations": true,
+    "executionQueueDisabled": true
+  },
+  "restrictedCapabilitiesMustRemainDisabled": [
+    "publicTokenSaleApproved",
+    "realTreasuryFundingApproved",
+    "stakingOrRewardsApproved",
+    "buybackProgramApproved",
+    "autonomousExecutionApproved",
+    "mainnetExecutionQueueEnabled",
+    "mainnetPaperToOnchainAutomationEnabled"
+  ],
+  "publicStatusLanguage": {
+    "approved": "Base Mainnet contracts are deployed in restricted operational mode.",
+    "notApproved": "AstraTreasury is not approved for public token sale, real treasury funding, staking/rewards, buybacks, autonomous execution, or unrestricted mainnet operation."
+  }
+}

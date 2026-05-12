@@ -196,7 +196,10 @@
     "incident:dismiss": "node services/incident-tracker/incident-tracker.mjs dismiss",
     "incident:report": "node services/incident-tracker/incident-tracker.mjs report",
     "incident:gate": "npm run mainnet:alerts:gate && npm run incident:sync && npm run incident:report",
-    "release:incident-acknowledgement": "bash scripts/release/package-incident-acknowledgement.sh"
+    "release:incident-acknowledgement": "bash scripts/release/package-incident-acknowledgement.sh",
+    "mainnet:launch:status": "node services/restricted-launch/status.mjs",
+    "mainnet:launch:gate": "npm run mainnet:monitor:once && npm run mainnet:events:once && npm run mainnet:alerts:status && npm run incident:sync && npm run incident:report && npm run mainnet:restricted:gate && npm run mainnet:execution:status && npm run mainnet:launch:status",
+    "release:restricted-launch-status": "bash scripts/release/package-restricted-launch-status.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",
