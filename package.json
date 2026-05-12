@@ -203,7 +203,10 @@
     "announcement:validate": "node scripts/validate-restricted-launch-announcement.mjs",
     "announcement:public": "node services/announcement/generate-public-announcement.mjs",
     "announcement:gate": "npm run mainnet:launch:gate && npm run announcement:validate && npm run announcement:public",
-    "release:restricted-launch-announcement": "bash scripts/release/package-restricted-launch-announcement.sh"
+    "release:restricted-launch-announcement": "bash scripts/release/package-restricted-launch-announcement.sh",
+    "announcement:publication:status": "node services/announcement-publication/status.mjs",
+    "announcement:publication:gate": "npm run announcement:gate && npm run mainnet:launch:gate && npm run announcement:publication:status",
+    "release:announcement-publication-monitoring": "bash scripts/release/package-announcement-publication-monitoring.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",

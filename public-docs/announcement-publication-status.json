@@ -1,0 +1,76 @@
+{
+  "schema": "astra-public-announcement-publication-status-v0.1",
+  "generatedAt": "2026-05-12T14:10:56.207Z",
+  "status": "READY_FOR_REVIEWED_PUBLIC_POSTING",
+  "announcementPosted": false,
+  "publicStatement": "AstraTreasury restricted launch announcement is ready for reviewed public posting.",
+  "summary": {
+    "totalChecks": 6,
+    "passed": 6,
+    "failed": 0,
+    "publications": 0,
+    "activeIncidents": 0,
+    "responseRequired": false
+  },
+  "requiredLinkChecks": [
+    {
+      "url": "https://astratreasury.ai/announcement",
+      "ok": true,
+      "status": 200,
+      "statusText": "OK"
+    },
+    {
+      "url": "https://astratreasury.ai/launch",
+      "ok": true,
+      "status": 200,
+      "statusText": "OK"
+    },
+    {
+      "url": "https://astratreasury.ai/mainnet",
+      "ok": true,
+      "status": 200,
+      "statusText": "OK"
+    },
+    {
+      "url": "https://astratreasury.ai/live",
+      "ok": true,
+      "status": 200,
+      "statusText": "OK"
+    },
+    {
+      "url": "https://astratreasury.ai/monitor",
+      "ok": true,
+      "status": 200,
+      "statusText": "OK"
+    },
+    {
+      "url": "https://astratreasury.ai/restricted-operations",
+      "ok": true,
+      "status": 200,
+      "statusText": "OK"
+    },
+    {
+      "url": "https://astratreasury.ai/mainnet-execution",
+      "ok": true,
+      "status": 200,
+      "statusText": "OK"
+    },
+    {
+      "url": "https://astratreasury.ai/transparency",
+      "ok": true,
+      "status": 200,
+      "statusText": "OK"
+    }
+  ],
+  "publicationLinkChecks": [],
+  "publications": [],
+  "failures": [],
+  "restrictions": {
+    "publicTokenSale": false,
+    "realTreasuryFunding": false,
+    "stakingOrRewards": false,
+    "buybackProgram": false,
+    "autonomousExecution": false,
+    "mainnetExecutionQueue": false
+  }
+}

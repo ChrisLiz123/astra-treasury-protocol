@@ -1,0 +1,28 @@
+{
+  "schema": "astra-announcement-publication-config-v0.1",
+  "status": "ready-to-publish",
+  "announcementPosted": false,
+  "network": {
+    "name": "Base Mainnet",
+    "chainId": 8453
+  },
+  "requiredPublicLinks": [
+    "https://astratreasury.ai/announcement",
+    "https://astratreasury.ai/launch",
+    "https://astratreasury.ai/mainnet",
+    "https://astratreasury.ai/live",
+    "https://astratreasury.ai/monitor",
+    "https://astratreasury.ai/restricted-operations",
+    "https://astratreasury.ai/mainnet-execution",
+    "https://astratreasury.ai/transparency"
+  ],
+  "publications": [],
+  "postRules": {
+    "noPublicTokenSaleLanguage": true,
+    "noInvestmentProductLanguage": true,
+    "noReturnsLanguage": true,
+    "noTreasuryFundingClaim": true,
+    "noStakingRewardsBuybackClaim": true,
+    "restrictedModeOnly": true
+  }
+}
