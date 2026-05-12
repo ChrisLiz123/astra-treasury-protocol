@@ -1,10 +1,10 @@
 {
   "schema": "astra-home-status-v0.1",
-  "generatedAt": "2026-05-12T18:12:58.147Z",
+  "generatedAt": "2026-05-12T18:22:23.347Z",
   "project": "AstraTreasury Protocol",
   "version": "0.1.1",
   "branch": "main",
-  "shortCommit": "a5492d3",
+  "shortCommit": "524aa01",
   "publicStatement": "AstraTreasury is deployed on Base Mainnet in restricted operational mode. Public token sale, real treasury funding, staking/rewards, buybacks, autonomous execution, and mainnet execution queue activation remain disabled.",
   "network": {
     "name": "Base Mainnet",
