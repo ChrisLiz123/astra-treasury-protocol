@@ -153,7 +153,10 @@
     "release:deployment-session-preflight": "bash scripts/release/package-deployment-session-preflight.sh",
     "mainnet:deployment-session:plan": "node scripts/mainnet-deployment-session-plan-v1.mjs",
     "mainnet:deployment-session:gate": "npm run mainnet:deployment-session:plan && npm run mainnet:deployment-session:preflight && npm run mainnet:final-go-no-go:gate && npm run safe:payloads:v1:gate",
-    "release:deployment-session-execution-plan": "bash scripts/release/package-deployment-session-execution-plan.sh"
+    "release:deployment-session-execution-plan": "bash scripts/release/package-deployment-session-execution-plan.sh",
+    "mainnet:postdeploy:check": "hardhat run scripts/mainnet-postdeploy-check-v1.ts --build-profile production --network baseMainnet",
+    "mainnet:postdeploy:check:with-safe-tx": "MAINNET_SAFE_SETUP_TX_HASH=$MAINNET_SAFE_SETUP_TX_HASH hardhat run scripts/mainnet-postdeploy-check-v1.ts --build-profile production --network baseMainnet",
+    "release:mainnet-postdeploy-verification": "bash scripts/release/package-mainnet-postdeploy-verification.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",
