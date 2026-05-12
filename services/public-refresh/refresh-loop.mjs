@@ -76,7 +76,8 @@ function refreshOnce() {
     "docs:governance-public",
     "docs:transparency-public",
     "docs:packages-public",
-    "docs:live-public"
+    "docs:live-public",
+    "mainnet:restricted:status"
   ];
 
   for (const script of scripts) {
@@ -94,7 +95,9 @@ function refreshOnce() {
     "public-docs/packages.html",
     "public-docs/package-inventory.json",
     "public-docs/live.html",
-    "public-docs/live-status.json"
+    "public-docs/live-status.json",
+    "public-docs/restricted-operations.html",
+    "public-docs/restricted-operations-status.json"
   ].map(fileStatus);
 
   const missingFiles = files.filter((item) => !item.exists);

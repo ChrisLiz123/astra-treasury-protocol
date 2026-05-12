@@ -163,7 +163,11 @@
     "release:basescan-mainnet-manifest": "bash scripts/release/package-basescan-mainnet-manifest.sh",
     "docs:live-public": "node scripts/generate-mainnet-live-status.mjs",
     "mainnet:live:gate": "npm run governance:gate:status && npm run docs:mainnet-public && npm run docs:governance-public && npm run docs:live-public && npm run docs:transparency-public && npm run docs:packages-public",
-    "release:mainnet-live-status": "bash scripts/release/package-mainnet-live-status.sh"
+    "release:mainnet-live-status": "bash scripts/release/package-mainnet-live-status.sh",
+    "mainnet:restricted:validate": "node scripts/validate-restricted-operations.mjs",
+    "mainnet:restricted:status": "node scripts/generate-restricted-operations-status.mjs",
+    "mainnet:restricted:gate": "npm run mainnet:restricted:validate && npm run mainnet:restricted:status && npm run mainnet:live:gate",
+    "release:restricted-operations": "bash scripts/release/package-restricted-operations.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",

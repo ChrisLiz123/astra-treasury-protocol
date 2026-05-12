@@ -1,0 +1,52 @@
+{
+  "schema": "astra-restricted-operations-config-v0.1",
+  "status": "restricted-mainnet-operation",
+  "network": {
+    "name": "Base Mainnet",
+    "chainId": 8453
+  },
+  "mainnet": {
+    "contractsDeployed": true,
+    "governanceSafeSetupComplete": true,
+    "postdeployVerificationPassed": true
+  },
+  "restrictedCapabilities": {
+    "publicTokenSaleApproved": false,
+    "realTreasuryFundingApproved": false,
+    "stakingOrRewardsApproved": false,
+    "buybackProgramApproved": false,
+    "autonomousExecutionApproved": false,
+    "mainnetExecutionQueueEnabled": false,
+    "mainnetPaperToOnchainAutomationEnabled": false
+  },
+  "unlockRequirements": {
+    "publicTokenSale": [
+      "separate legal approval",
+      "governance approval",
+      "public disclosure update"
+    ],
+    "realTreasuryFunding": [
+      "treasury Safe approval",
+      "funding source approval",
+      "risk disclosure update",
+      "incident response rehearsal"
+    ],
+    "stakingOrRewards": [
+      "legal review",
+      "tax/accounting review",
+      "security review",
+      "governance approval"
+    ],
+    "buybackProgram": [
+      "legal market-conduct review",
+      "treasury policy review",
+      "governance approval",
+      "public disclosure update"
+    ],
+    "autonomousExecution": [
+      "not approved for v1",
+      "requires separate audit",
+      "requires governance approval"
+    ]
+  }
+}
