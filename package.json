@@ -174,7 +174,11 @@
     "release:mainnet-operational-monitor": "bash scripts/release/package-mainnet-operational-monitor.sh",
     "mainnet:execution:status": "node services/mainnet-execution-queue/status.mjs",
     "mainnet:execution:gate": "npm run mainnet:monitor:once && npm run mainnet:restricted:gate && npm run mainnet:execution:status",
-    "release:mainnet-execution-queue-disabled": "bash scripts/release/package-mainnet-execution-queue-disabled.sh"
+    "release:mainnet-execution-queue-disabled": "bash scripts/release/package-mainnet-execution-queue-disabled.sh",
+    "mainnet:events:once": "node services/mainnet-event-monitor/mainnet-event-monitor.mjs --once",
+    "mainnet:events:loop": "node services/mainnet-event-monitor/mainnet-event-monitor.mjs",
+    "mainnet:events:status": "cat reports/mainnet-event-monitor/heartbeat.json",
+    "release:mainnet-event-monitor": "bash scripts/release/package-mainnet-event-monitor.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",

@@ -1,0 +1,24 @@
+{
+  "schema": "astra-public-mainnet-event-monitor-status-v1",
+  "checkedAt": "2026-05-12T12:28:44.267Z",
+  "status": "PASS",
+  "mode": "READ_ONLY_EVENT_MONITOR",
+  "network": {
+    "name": "Base Mainnet",
+    "chainId": 8453
+  },
+  "blockRange": {
+    "fromBlock": "45899635",
+    "toBlock": "45899784",
+    "latestBlock": "45899784",
+    "bootstrapped": false
+  },
+  "summary": {
+    "alerts": 0,
+    "highOrCriticalAlerts": 0,
+    "observations": 0
+  },
+  "alerts": [],
+  "observations": [],
+  "publicStatement": "AstraTreasury mainnet event monitor is read-only. Restricted mode remains active."
+}
