@@ -736,6 +736,10 @@ const html = `<!doctype html>
       </div>
 
       <div class="link-grid">
+        <a class="link-card" href="/trust">
+          <strong>Trust Center</strong>
+          <span>Deployment, monitoring, alerts, incidents, token metadata, and restrictions.</span>
+        </a>
         <a class="link-card" href="/live">
           <strong>Live status</strong>
           <span>Current restricted mainnet posture.</span>

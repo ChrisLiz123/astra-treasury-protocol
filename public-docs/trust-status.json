@@ -1,0 +1,169 @@
+{
+  "schema": "astra-public-trust-center-v0.1",
+  "generatedAt": "2026-05-12T23:12:52.556Z",
+  "project": "AstraTreasury Protocol",
+  "version": "0.1.1",
+  "status": "TRUST_CENTER_READY",
+  "network": {
+    "name": "Base Mainnet",
+    "chainId": 8453
+  },
+  "publicStatement": "AstraTreasury public trust status is healthy for restricted Base Mainnet operation. Restricted capabilities remain disabled.",
+  "summary": {
+    "totalChecks": 10,
+    "passed": 10,
+    "failed": 0,
+    "contractCount": 5,
+    "activeIncidents": 0,
+    "alertResponseRequired": false,
+    "evidenceSnapshots": 30,
+    "packageCount": 22
+  },
+  "sections": {
+    "deployment": {
+      "status": "base-mainnet-contracts-deployed-postdeploy-verified",
+      "contracts": 5,
+      "page": "/mainnet",
+      "api": "/api/public/mainnet"
+    },
+    "live": {
+      "status": "MAINNET_CONTRACTS_DEPLOYED_RESTRICTED_OPERATION",
+      "page": "/live",
+      "api": "/api/public/live"
+    },
+    "launch": {
+      "status": "RESTRICTED_LAUNCH_READY",
+      "page": "/launch",
+      "api": "/api/public/launch"
+    },
+    "stabilization": {
+      "status": "RESTRICTED_LAUNCH_STABILIZED",
+      "page": "/stabilization",
+      "api": "/api/public/stabilization"
+    },
+    "monitoring": {
+      "status": "PASS",
+      "eventStatus": "PASS",
+      "page": "/monitor",
+      "eventsPage": "/mainnet-events"
+    },
+    "alerts": {
+      "status": "CLEAR",
+      "responseRequired": false,
+      "page": "/alerts"
+    },
+    "incidents": {
+      "status": "NO_ACTIVE_INCIDENTS",
+      "active": 0,
+      "page": "/incidents"
+    },
+    "restrictions": {
+      "status": "MAINNET_RESTRICTED_OPERATION",
+      "executionQueue": "MAINNET_EXECUTION_QUEUE_DISABLED",
+      "page": "/restricted-operations",
+      "executionPage": "/mainnet-execution"
+    },
+    "token": {
+      "status": "restricted-operational-mode",
+      "symbol": "ASTP",
+      "address": "0xc7c39837d0e604eeb525fc8fc501a5475a20419b",
+      "page": "/token",
+      "walletPage": "/wallet",
+      "brandPage": "/brand",
+      "marketPage": "/market"
+    },
+    "roadmap": {
+      "status": "CAPABILITY_ROADMAP_READY",
+      "page": "/roadmap"
+    },
+    "evidence": {
+      "snapshots": 30,
+      "page": "/evidence"
+    }
+  },
+  "checks": [
+    {
+      "name": "Base Mainnet manifest exists",
+      "pass": true,
+      "details": {
+        "contractCount": 5
+      }
+    },
+    {
+      "name": "Operational monitor passing",
+      "pass": true,
+      "details": {
+        "status": "PASS"
+      }
+    },
+    {
+      "name": "Event monitor has no high/critical alerts",
+      "pass": true,
+      "details": {
+        "eventStatus": "PASS",
+        "highOrCriticalAlerts": 0
+      }
+    },
+    {
+      "name": "Alerts do not require operator response",
+      "pass": true,
+      "details": {
+        "alertStatus": "CLEAR",
+        "responseRequired": false
+      }
+    },
+    {
+      "name": "No active incidents",
+      "pass": true,
+      "details": {
+        "activeIncidents": 0
+      }
+    },
+    {
+      "name": "Restricted operations active",
+      "pass": true,
+      "details": {
+        "mode": "MAINNET_RESTRICTED_OPERATION"
+      }
+    },
+    {
+      "name": "Mainnet execution queue disabled",
+      "pass": true,
+      "details": {
+        "mode": "MAINNET_EXECUTION_QUEUE_DISABLED"
+      }
+    },
+    {
+      "name": "Evidence archive exists",
+      "pass": true,
+      "details": {
+        "snapshotCount": 30
+      }
+    },
+    {
+      "name": "Token metadata published",
+      "pass": true,
+      "details": {
+        "address": "0xc7c39837d0e604eeb525fc8fc501a5475a20419b",
+        "logoURI": "https://astratreasury.ai/assets/token/astratoken-logo-256.png"
+      }
+    },
+    {
+      "name": "Capability roadmap ready",
+      "pass": true,
+      "details": {
+        "status": "CAPABILITY_ROADMAP_READY"
+      }
+    }
+  ],
+  "failures": [],
+  "restrictions": {
+    "publicTokenSale": false,
+    "realTreasuryFunding": false,
+    "stakingOrRewards": false,
+    "buybackProgram": false,
+    "autonomousExecution": false,
+    "mainnetExecutionQueue": false,
+    "paperToOnchainAutomation": false
+  }
+}

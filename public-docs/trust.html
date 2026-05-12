@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AstraTreasury Trust Center</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #08111f;
+      --surface: #0e1a2b;
+      --surface-2: #111f33;
+      --border: rgba(148, 163, 184, 0.2);
+      --text: #edf4fb;
+      --muted: #9aaec4;
+      --blue: #67a7ff;
+      --green: #41d49b;
+      --yellow: #f4c35f;
+      --red: #f87171;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    body {
+      margin: 0;
+      background: linear-gradient(180deg, #07101d, var(--bg));
+      color: var(--text);
+    }
+
+    a { color: var(--blue); text-decoration: none; }
+
+    main {
+      width: min(1120px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 44px 0 72px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 28px;
+      box-shadow: 0 22px 70px rgba(0,0,0,.28);
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: 42px;
+      letter-spacing: -1.2px;
+    }
+
+    h2 {
+      margin: 0 0 14px;
+      font-size: 24px;
+      letter-spacing: -0.5px;
+    }
+
+    p {
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    .hero {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      align-items: flex-start;
+    }
+
+    .badge {
+      display: inline-flex;
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-weight: 850;
+      font-size: 13px;
+      background: rgba(65, 212, 155, .10);
+      border: 1px solid rgba(65, 212, 155, .22);
+      color: var(--green);
+      white-space: nowrap;
+    }
+
+    .stats {
+      margin-top: 24px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+
+    .stat {
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background: rgba(255,255,255,.03);
+      padding: 18px;
+    }
+
+    .label {
+      color: var(--muted);
+      font-size: 13px;
+      margin-bottom: 8px;
+    }
+
+    .value {
+      font-size: 24px;
+      font-weight: 850;
+    }
+
+    .ok { color: var(--green); }
+    .warn { color: var(--yellow); }
+    .danger { color: var(--red); }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      overflow: hidden;
+    }
+
+    th, td {
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--border);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      color: var(--muted);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      background: rgba(255,255,255,.03);
+    }
+
+    tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .notice {
+      padding: 16px;
+      border-radius: 16px;
+      background: rgba(244,195,95,.08);
+      border: 1px solid rgba(244,195,95,.22);
+      color: #f7d99a;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 840px) {
+      .hero {
+        flex-direction: column;
+      }
+
+      .stats {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+<main>
+  <section class="card">
+    <div class="hero">
+      <div>
+        <h1>AstraTreasury Trust Center</h1>
+        <p>
+          A centralized public view of deployment status, monitoring, alerts, incidents,
+          evidence, token metadata, restricted operations, and future capability governance.
+        </p>
+      </div>
+      <div class="badge">Trust Center Ready</div>
+    </div>
+
+    <div class="stats">
+      <div class="stat">
+        <div class="label">Checks</div>
+        <div class="value ok">10/10</div>
+      </div>
+      <div class="stat">
+        <div class="label">Contracts</div>
+        <div class="value">5</div>
+      </div>
+      <div class="stat">
+        <div class="label">Active incidents</div>
+        <div class="value ok">0</div>
+      </div>
+      <div class="stat">
+        <div class="label">Evidence snapshots</div>
+        <div class="value">30</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Status overview</h2>
+    <table>
+      <thead>
+        <tr><th>Area</th><th>Status</th><th>Link</th></tr>
+      </thead>
+      <tbody><tr>
+<td>Deployment</td>
+<td><span class="ok">Base-Mainnet-Contracts-Deployed-Postdeploy-Verified</span></td>
+<td><a href="/mainnet">View</a></td>
+</tr><tr>
+<td>Restricted launch</td>
+<td><span class="ok">Restricted launch ready</span></td>
+<td><a href="/launch">View</a></td>
+</tr><tr>
+<td>Live status</td>
+<td><span class="ok">Restricted mainnet operation</span></td>
+<td><a href="/live">View</a></td>
+</tr><tr>
+<td>Operational monitor</td>
+<td><span class="ok">Passing</span></td>
+<td><a href="/monitor">View</a></td>
+</tr><tr>
+<td>Event monitor</td>
+<td><span class="ok">Passing</span></td>
+<td><a href="/mainnet-events">View</a></td>
+</tr><tr>
+<td>Alerts</td>
+<td><span class="ok">Clear</span></td>
+<td><a href="/alerts">View</a></td>
+</tr><tr>
+<td>Incidents</td>
+<td><span class="danger">No active incidents</span></td>
+<td><a href="/incidents">View</a></td>
+</tr><tr>
+<td>Execution queue</td>
+<td><span class="ok">Execution queue disabled</span></td>
+<td><a href="/mainnet-execution">View</a></td>
+</tr><tr>
+<td>Restricted operations</td>
+<td><span class="ok">Restricted operation</span></td>
+<td><a href="/restricted-operations">View</a></td>
+</tr><tr>
+<td>Token metadata</td>
+<td><span class="ok">Restricted-Operational-Mode</span></td>
+<td><a href="/token">View</a></td>
+</tr><tr>
+<td>Market data</td>
+<td><span class="warn">No public DEX market data</span></td>
+<td><a href="/market">View</a></td>
+</tr><tr>
+<td>Roadmap</td>
+<td><span class="ok">Roadmap ready</span></td>
+<td><a href="/roadmap">View</a></td>
+</tr><tr>
+<td>Evidence archive</td>
+<td><span class="ok">30 Snapshots</span></td>
+<td><a href="/evidence">View</a></td>
+</tr></tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>Trust checks</h2>
+    <table>
+      <thead>
+        <tr><th>Check</th><th>Status</th></tr>
+      </thead>
+      <tbody><tr>
+<td>Base Mainnet manifest exists</td>
+<td><span class="ok">PASS</span></td>
+</tr><tr>
+<td>Operational monitor passing</td>
+<td><span class="ok">PASS</span></td>
+</tr><tr>
+<td>Event monitor has no high/critical alerts</td>
+<td><span class="ok">PASS</span></td>
+</tr><tr>
+<td>Alerts do not require operator response</td>
+<td><span class="ok">PASS</span></td>
+</tr><tr>
+<td>No active incidents</td>
+<td><span class="ok">PASS</span></td>
+</tr><tr>
+<td>Restricted operations active</td>
+<td><span class="ok">PASS</span></td>
+</tr><tr>
+<td>Mainnet execution queue disabled</td>
+<td><span class="ok">PASS</span></td>
+</tr><tr>
+<td>Evidence archive exists</td>
+<td><span class="ok">PASS</span></td>
+</tr><tr>
+<td>Token metadata published</td>
+<td><span class="ok">PASS</span></td>
+</tr><tr>
+<td>Capability roadmap ready</td>
+<td><span class="ok">PASS</span></td>
+</tr></tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>Important restrictions</h2>
+    <div class="notice">
+      Public token sale, real treasury funding, staking/rewards, buybacks, autonomous execution,
+      paper-to-on-chain automation, and mainnet execution queue activation remain disabled.
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Public API</h2>
+    <p><a href="/api/public/trust">/api/public/trust</a></p>
+    <p><a href="/transparency">Transparency index</a></p>
+    <p><a href="/">Back to homepage</a></p>
+  </section>
+</main>
+</body>
+</html>
