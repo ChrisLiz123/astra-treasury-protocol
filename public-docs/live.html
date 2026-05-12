@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AstraTreasury Mainnet Live Status</title>
+  <style>
+    :root { color-scheme: dark; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    body { margin: 0; background: #0d1117; color: #e6edf3; }
+    header { padding: 32px; background: #010409; border-bottom: 1px solid #30363d; }
+    main { padding: 24px 32px 56px; display: grid; gap: 18px; }
+    h1 { margin: 0 0 8px; font-size: 30px; }
+    h2 { margin-top: 0; color: #58a6ff; }
+    a { color: #58a6ff; }
+    .muted { color: #8b949e; overflow-wrap: anywhere; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; }
+    .card { background: #161b22; border: 1px solid #30363d; border-radius: 14px; padding: 18px; box-shadow: 0 12px 30px rgba(0,0,0,.2); }
+    .big { font-size: 26px; font-weight: 700; }
+    .ok { color: #3fb950; font-weight: 700; }
+    .warn { color: #d29922; font-weight: 700; }
+    .danger { color: #f85149; font-weight: 700; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { text-align: left; border-bottom: 1px solid #30363d; padding: 10px 8px; vertical-align: top; }
+    th { color: #58a6ff; font-size: 13px; }
+    td { font-size: 13px; overflow-wrap: anywhere; }
+    code { background: #0d1117; border: 1px solid #30363d; border-radius: 6px; padding: 2px 5px; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>AstraTreasury Mainnet Live Status</h1>
+  <div class="muted">Public status. Sanitized and read-only.</div>
+</header>
+
+<main>
+  <section class="grid">
+    <div class="card">
+      <h2>Status</h2>
+      <div class="big ok">MAINNET_CONTRACTS_DEPLOYED_RESTRICTED_OPERATION</div>
+      <div class="muted">Generated 2026-05-12T10:24:02.555Z</div>
+    </div>
+
+    <div class="card">
+      <h2>Network</h2>
+      <div class="big">Base Mainnet</div>
+      <div class="muted">Chain ID: 8453</div>
+    </div>
+
+    <div class="card">
+      <h2>Verification</h2>
+      <div class="big ok">PASS</div>
+      <div class="muted">Post-deployment checks</div>
+    </div>
+
+    <div class="card">
+      <h2>Restrictions</h2>
+      <div class="big warn">RESTRICTED</div>
+      <div class="muted">No public sale, real treasury funding, staking/rewards, buybacks, or autonomous execution.</div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Contracts</h2>
+    <table>
+      <thead><tr><th>Contract</th><th>Address</th><th>Explorer</th></tr></thead>
+      <tbody><tr><td>treasuryPolicy</td><td><code>0xb55a0805ea8a26e7bd6f199c4e962964c332faf1</code></td><td><a target="_blank" rel="noreferrer" href="https://basescan.org/address/0xb55a0805ea8a26e7bd6f199c4e962964c332faf1">BaseScan</a></td></tr><tr><td>treasuryVault</td><td><code>0xe5fd264246adad7107a0c42d75b7bd37c85e2c4a</code></td><td><a target="_blank" rel="noreferrer" href="https://basescan.org/address/0xe5fd264246adad7107a0c42d75b7bd37c85e2c4a">BaseScan</a></td></tr><tr><td>signalRegistry</td><td><code>0x75ea3857b9f4f7218764a508331b1e7b5518d652</code></td><td><a target="_blank" rel="noreferrer" href="https://basescan.org/address/0x75ea3857b9f4f7218764a508331b1e7b5518d652">BaseScan</a></td></tr><tr><td>executionController</td><td><code>0xc6f7b5e2611e5b6c4bcab64fdc7c2f4f319acf59</code></td><td><a target="_blank" rel="noreferrer" href="https://basescan.org/address/0xc6f7b5e2611e5b6c4bcab64fdc7c2f4f319acf59">BaseScan</a></td></tr><tr><td>astraToken</td><td><code>0xc7c39837d0e604eeb525fc8fc501a5475a20419b</code></td><td><a target="_blank" rel="noreferrer" href="https://basescan.org/address/0xc7c39837d0e604eeb525fc8fc501a5475a20419b">BaseScan</a></td></tr></tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>Safes</h2>
+    <table>
+      <thead><tr><th>Safe</th><th>Address</th></tr></thead>
+      <tbody><tr><td>governanceSafe</td><td><code>0x8992B4173cf791Cf88eC36cd53b27F3BF22404D3</code></td></tr><tr><td>treasurySafe</td><td><code>0xe2554515AaC8a3835326a4Ed5e9F44c319BE335C</code></td></tr><tr><td>executorSafe</td><td><code>0xBea6124d6ed0CE1ce26e184A39e28B65eDCEE461</code></td></tr><tr><td>signalerSafe</td><td><code>0xf3270118e25c3BeAfA863caD4516e9E3aDCd48D1</code></td></tr></tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>Public Statement</h2>
+    <p>AstraTreasury Base Mainnet contracts are deployed and Governance Safe setup has been verified. Public token sale, real treasury funding, staking/rewards, buybacks, and autonomous execution remain disabled.</p>
+  </section>
+
+  <section class="card">
+    <h2>Public API</h2>
+    <p><a href="/api/public/live">/api/public/live</a></p>
+    <p><a href="/mainnet">Base Mainnet manifest</a></p>
+    <p><a href="/transparency">Transparency index</a></p>
+    <p><a href="/">Back to public site</a></p>
+  </section>
+</main>
+</body>
+</html>

@@ -160,7 +160,10 @@
     "mainnet:verification:assets": "node scripts/export-mainnet-verification-assets.mjs",
     "verify:base-mainnet": "bash reports/mainnet-verification/base-mainnet-verify-commands.sh",
     "docs:mainnet-public": "node services/docs/generate-public-mainnet-docs.mjs",
-    "release:basescan-mainnet-manifest": "bash scripts/release/package-basescan-mainnet-manifest.sh"
+    "release:basescan-mainnet-manifest": "bash scripts/release/package-basescan-mainnet-manifest.sh",
+    "docs:live-public": "node scripts/generate-mainnet-live-status.mjs",
+    "mainnet:live:gate": "npm run governance:gate:status && npm run docs:mainnet-public && npm run docs:governance-public && npm run docs:live-public && npm run docs:transparency-public && npm run docs:packages-public",
+    "release:mainnet-live-status": "bash scripts/release/package-mainnet-live-status.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",
