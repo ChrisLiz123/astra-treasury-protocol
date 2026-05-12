@@ -156,7 +156,11 @@
     "release:deployment-session-execution-plan": "bash scripts/release/package-deployment-session-execution-plan.sh",
     "mainnet:postdeploy:check": "hardhat run scripts/mainnet-postdeploy-check-v1.ts --build-profile production --network baseMainnet",
     "mainnet:postdeploy:check:with-safe-tx": "MAINNET_SAFE_SETUP_TX_HASH=$MAINNET_SAFE_SETUP_TX_HASH hardhat run scripts/mainnet-postdeploy-check-v1.ts --build-profile production --network baseMainnet",
-    "release:mainnet-postdeploy-verification": "bash scripts/release/package-mainnet-postdeploy-verification.sh"
+    "release:mainnet-postdeploy-verification": "bash scripts/release/package-mainnet-postdeploy-verification.sh",
+    "mainnet:verification:assets": "node scripts/export-mainnet-verification-assets.mjs",
+    "verify:base-mainnet": "bash reports/mainnet-verification/base-mainnet-verify-commands.sh",
+    "docs:mainnet-public": "node services/docs/generate-public-mainnet-docs.mjs",
+    "release:basescan-mainnet-manifest": "bash scripts/release/package-basescan-mainnet-manifest.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",

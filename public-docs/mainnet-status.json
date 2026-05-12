@@ -1,0 +1,65 @@
+{
+  "schema": "astra-base-mainnet-public-manifest-v0.1",
+  "generatedAt": "2026-05-12T09:42:48.338Z",
+  "project": "AstraTreasury Protocol",
+  "version": "0.1.1",
+  "status": "base-mainnet-contracts-deployed-postdeploy-verified",
+  "network": {
+    "name": "Base Mainnet",
+    "chainId": 8453,
+    "explorer": "https://basescan.org"
+  },
+  "publicSite": {
+    "root": "https://astratreasury.ai",
+    "www": "https://www.astratreasury.ai"
+  },
+  "safetyStatus": {
+    "publicTokenSale": false,
+    "realTreasuryFunding": false,
+    "stakingOrRewardsLaunch": false,
+    "buybackProgram": false,
+    "autonomousExecution": false
+  },
+  "contracts": {
+    "treasuryPolicy": "0xb55a0805ea8a26e7bd6f199c4e962964c332faf1",
+    "treasuryVault": "0xe5fd264246adad7107a0c42d75b7bd37c85e2c4a",
+    "signalRegistry": "0x75ea3857b9f4f7218764a508331b1e7b5518d652",
+    "executionController": "0xc6f7b5e2611e5b6c4bcab64fdc7c2f4f319acf59",
+    "astraToken": "0xc7c39837d0e604eeb525fc8fc501a5475a20419b"
+  },
+  "safes": {
+    "governanceSafe": "0x8992B4173cf791Cf88eC36cd53b27F3BF22404D3",
+    "treasurySafe": "0xe2554515AaC8a3835326a4Ed5e9F44c319BE335C",
+    "executorSafe": "0xBea6124d6ed0CE1ce26e184A39e28B65eDCEE461",
+    "signalerSafe": "0xf3270118e25c3BeAfA863caD4516e9E3aDCd48D1"
+  },
+  "allocationWallets": {
+    "ecosystemWallet": "0x6507701C615772A48082b2C3FeccC9B1f1E21eb8",
+    "liquidityWallet": "0x475984654421b637B01b65E47EFE2A0FEe9422FE",
+    "teamWallet": "0xe5A3f02B32316827Dd30C42c18a027770441667A",
+    "communityWallet": "0x0386edbf9EC166A0d3575ff82A7108f6F012C6dA",
+    "advisorsWallet": "0xF27FB0462f5B1d99f293736FC26C1084707c5c9f"
+  },
+  "deployer": {
+    "address": "0x8715F4CDFD379A2249f2DE9f3515475615c72145",
+    "finalRoleState": "no long-term privileged roles expected"
+  },
+  "explorerLinks": {
+    "treasuryPolicy": "https://basescan.org/address/0xb55a0805ea8a26e7bd6f199c4e962964c332faf1",
+    "treasuryVault": "https://basescan.org/address/0xe5fd264246adad7107a0c42d75b7bd37c85e2c4a",
+    "signalRegistry": "https://basescan.org/address/0x75ea3857b9f4f7218764a508331b1e7b5518d652",
+    "executionController": "https://basescan.org/address/0xc6f7b5e2611e5b6c4bcab64fdc7c2f4f319acf59",
+    "astraToken": "https://basescan.org/address/0xc7c39837d0e604eeb525fc8fc501a5475a20419b"
+  },
+  "verification": {
+    "commandScript": "reports/mainnet-verification/base-mainnet-verify-commands.sh",
+    "constructorArgsDir": "reports/mainnet-verification/constructor-args-no-0x",
+    "buildProfile": "production"
+  },
+  "disclaimers": [
+    "Base Mainnet contracts are deployed.",
+    "This does not approve public token sale.",
+    "This does not approve real treasury funding.",
+    "This does not approve staking, rewards, buybacks, or autonomous execution."
+  ]
+}
