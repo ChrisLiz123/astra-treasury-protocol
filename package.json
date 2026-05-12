@@ -237,7 +237,10 @@
     "release:public-market-data": "bash scripts/release/package-public-market-data.sh",
     "trust:center": "node services/trust-center/generate-trust-center.mjs",
     "trust:gate": "npm run trust:center",
-    "release:public-trust-center": "bash scripts/release/package-public-trust-center.sh"
+    "release:public-trust-center": "bash scripts/release/package-public-trust-center.sh",
+    "website:professional": "node services/professional-pages/generate-professional-pages.mjs",
+    "website:professional:gate": "npm run trust:gate && npm run website:professional",
+    "release:professional-website-pages": "bash scripts/release/package-professional-website-pages.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",

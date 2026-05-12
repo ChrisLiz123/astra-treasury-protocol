@@ -298,7 +298,7 @@ function indexHtml() {
         <li><a href="/docs/safety-workflow.md">Safety workflow</a></li>
         <li><a href="/docs/dashboard-api.md">Dashboard/API</a></li>
         <li><a href="/docs/verification.md">Verification</a></li>
-        <li><a href="/audit">Audit readiness</a></li>\n        <li><a href="/governance">Governance gate</a></li>\n        <li><a href="/transparency">Transparency index</a></li>\n        <li><a href="/evidence">Evidence archive</a></li>\n        <li><a href="/packages">Package inventory</a></li>\n        <li><a href="/mainnet">Base Mainnet deployment</a></li>\n        <li><a href="/live">Mainnet live status</a></li>\n        <li><a href="/restricted-operations">Restricted operations</a></li>\n        <li><a href="/monitor">Mainnet monitor</a></li>\n        <li><a href="/mainnet-execution">Mainnet execution queue</a></li>\n        <li><a href="/mainnet-events">Mainnet event monitor</a></li>\n        <li><a href="/alerts">Mainnet alerts</a></li>\n        <li><a href="/incidents">Incident summary</a></li>\n        <li><a href="/launch">Restricted launch status</a></li>\n        <li><a href="/announcement">Restricted launch announcement</a></li>\n        <li><a href="/announcement-publication">Announcement publication status</a></li>\n        <li><a href="/post-announcement">Post-announcement monitoring</a></li>\n        <li><a href="/stabilization">Restricted launch stabilization</a></li>\n        <li><a href="/roadmap">Capability roadmap</a></li>\n        <li><a href="/token">AstraToken</a></li>\n        <li><a href="/wallet">Add ASTP to wallet</a></li>\n        <li><a href="/brand">Brand kit</a></li>\n        <li><a href="/market">Market data</a></li>\n        <li><a href="/trust">Trust Center</a></li>
+        <li><a href="/audit">Audit readiness</a></li>\n        <li><a href="/governance">Governance gate</a></li>\n        <li><a href="/transparency">Transparency index</a></li>\n        <li><a href="/evidence">Evidence archive</a></li>\n        <li><a href="/packages">Package inventory</a></li>\n        <li><a href="/mainnet">Base Mainnet deployment</a></li>\n        <li><a href="/live">Mainnet live status</a></li>\n        <li><a href="/restricted-operations">Restricted operations</a></li>\n        <li><a href="/monitor">Mainnet monitor</a></li>\n        <li><a href="/mainnet-execution">Mainnet execution queue</a></li>\n        <li><a href="/mainnet-events">Mainnet event monitor</a></li>\n        <li><a href="/alerts">Mainnet alerts</a></li>\n        <li><a href="/incidents">Incident summary</a></li>\n        <li><a href="/launch">Restricted launch status</a></li>\n        <li><a href="/announcement">Restricted launch announcement</a></li>\n        <li><a href="/announcement-publication">Announcement publication status</a></li>\n        <li><a href="/post-announcement">Post-announcement monitoring</a></li>\n        <li><a href="/stabilization">Restricted launch stabilization</a></li>\n        <li><a href="/roadmap">Capability roadmap</a></li>\n        <li><a href="/token">AstraToken</a></li>\n        <li><a href="/wallet">Add ASTP to wallet</a></li>\n        <li><a href="/brand">Brand kit</a></li>\n        <li><a href="/market">Market data</a></li>\n        <li><a href="/trust">Trust Center</a></li>\n        <li><a href="/faq">FAQ</a></li>\n        <li><a href="/api">API directory</a></li>\n        <li><a href="/security">Security</a></li>\n        <li><a href="/architecture">Architecture</a></li>\n        <li><a href="/protocol">Protocol</a></li>
       </ul>
     </section>
 
@@ -308,7 +308,7 @@ function indexHtml() {
         <li><a href="/api/public/status">/api/public/status</a></li>
         <li><a href="/api/public/contracts">/api/public/contracts</a></li>
         <li><a href="/api/public/verification">/api/public/verification</a></li>
-        <li><a href="/api/public/audit">/api/public/audit</a></li>\n        <li><a href="/api/public/governance">/api/public/governance</a></li>\n        <li><a href="/api/public/transparency">/api/public/transparency</a></li>\n        <li><a href="/api/public/evidence">/api/public/evidence</a></li>\n        <li><a href="/api/public/packages">/api/public/packages</a></li>\n        <li><a href="/api/public/mainnet">/api/public/mainnet</a></li>\n        <li><a href="/api/public/live">/api/public/live</a></li>\n        <li><a href="/api/public/restricted-operations">/api/public/restricted-operations</a></li>\n        <li><a href="/api/public/monitor">/api/public/monitor</a></li>\n        <li><a href="/api/public/mainnet-execution">/api/public/mainnet-execution</a></li>\n        <li><a href="/api/public/mainnet-events">/api/public/mainnet-events</a></li>\n        <li><a href="/api/public/alerts">/api/public/alerts</a></li>\n        <li><a href="/api/public/incidents">/api/public/incidents</a></li>\n        <li><a href="/api/public/launch">/api/public/launch</a></li>\n        <li><a href="/api/public/announcement">/api/public/announcement</a></li>\n        <li><a href="/api/public/announcement-publication">/api/public/announcement-publication</a></li>\n        <li><a href="/api/public/post-announcement">/api/public/post-announcement</a></li>\n        <li><a href="/api/public/stabilization">/api/public/stabilization</a></li>\n        <li><a href="/api/public/roadmap">/api/public/roadmap</a></li>\n        <li><a href="/api/public/home">/api/public/home</a></li>\n        <li><a href="/api/public/token">/api/public/token</a></li>\n        <li><a href="/api/public/wallet">/api/public/wallet</a></li>\n        <li><a href="/api/public/brand">/api/public/brand</a></li>\n        <li><a href="/api/public/market">/api/public/market</a></li>\n        <li><a href="/api/public/trust">/api/public/trust</a></li>
+        <li><a href="/api/public/audit">/api/public/audit</a></li>\n        <li><a href="/api/public/governance">/api/public/governance</a></li>\n        <li><a href="/api/public/transparency">/api/public/transparency</a></li>\n        <li><a href="/api/public/evidence">/api/public/evidence</a></li>\n        <li><a href="/api/public/packages">/api/public/packages</a></li>\n        <li><a href="/api/public/mainnet">/api/public/mainnet</a></li>\n        <li><a href="/api/public/live">/api/public/live</a></li>\n        <li><a href="/api/public/restricted-operations">/api/public/restricted-operations</a></li>\n        <li><a href="/api/public/monitor">/api/public/monitor</a></li>\n        <li><a href="/api/public/mainnet-execution">/api/public/mainnet-execution</a></li>\n        <li><a href="/api/public/mainnet-events">/api/public/mainnet-events</a></li>\n        <li><a href="/api/public/alerts">/api/public/alerts</a></li>\n        <li><a href="/api/public/incidents">/api/public/incidents</a></li>\n        <li><a href="/api/public/launch">/api/public/launch</a></li>\n        <li><a href="/api/public/announcement">/api/public/announcement</a></li>\n        <li><a href="/api/public/announcement-publication">/api/public/announcement-publication</a></li>\n        <li><a href="/api/public/post-announcement">/api/public/post-announcement</a></li>\n        <li><a href="/api/public/stabilization">/api/public/stabilization</a></li>\n        <li><a href="/api/public/roadmap">/api/public/roadmap</a></li>\n        <li><a href="/api/public/home">/api/public/home</a></li>\n        <li><a href="/api/public/token">/api/public/token</a></li>\n        <li><a href="/api/public/wallet">/api/public/wallet</a></li>\n        <li><a href="/api/public/brand">/api/public/brand</a></li>\n        <li><a href="/api/public/market">/api/public/market</a></li>\n        <li><a href="/api/public/trust">/api/public/trust</a></li>\n        <li><a href="/api/public/faq">/api/public/faq</a></li>\n        <li><a href="/api/public/api-directory">/api/public/api-directory</a></li>\n        <li><a href="/api/public/security">/api/public/security</a></li>\n        <li><a href="/api/public/architecture">/api/public/architecture</a></li>\n        <li><a href="/api/public/protocol">/api/public/protocol</a></li>
         <li><a href="/healthz">/healthz</a></li>
       </ul>
     </section>
@@ -1072,6 +1072,106 @@ const server = http.createServer((req, res) => {
         return;
       }
 
+      textResponse(res, readText(filePath), 200, "application/json; charset=utf-8");
+      return;
+    }
+
+    if (url.pathname === "/protocol") {
+      const filePath = path.join(docsDir, "protocol.html");
+      if (!fs.existsSync(filePath)) {
+        textResponse(res, "Protocol page not generated yet. Run: npm run website:professional\n", 404);
+        return;
+      }
+      textResponse(res, readText(filePath), 200, "text/html; charset=utf-8");
+      return;
+    }
+
+    if (url.pathname === "/api/public/protocol") {
+      const filePath = path.join(docsDir, "protocol-status.json");
+      if (!fs.existsSync(filePath)) {
+        jsonResponse(res, { error: "Protocol status not generated yet. Run: npm run website:professional" }, 404);
+        return;
+      }
+      textResponse(res, readText(filePath), 200, "application/json; charset=utf-8");
+      return;
+    }
+
+    if (url.pathname === "/architecture") {
+      const filePath = path.join(docsDir, "architecture.html");
+      if (!fs.existsSync(filePath)) {
+        textResponse(res, "Architecture page not generated yet. Run: npm run website:professional\n", 404);
+        return;
+      }
+      textResponse(res, readText(filePath), 200, "text/html; charset=utf-8");
+      return;
+    }
+
+    if (url.pathname === "/api/public/architecture") {
+      const filePath = path.join(docsDir, "architecture-status.json");
+      if (!fs.existsSync(filePath)) {
+        jsonResponse(res, { error: "Architecture status not generated yet. Run: npm run website:professional" }, 404);
+        return;
+      }
+      textResponse(res, readText(filePath), 200, "application/json; charset=utf-8");
+      return;
+    }
+
+    if (url.pathname === "/security") {
+      const filePath = path.join(docsDir, "security.html");
+      if (!fs.existsSync(filePath)) {
+        textResponse(res, "Security page not generated yet. Run: npm run website:professional\n", 404);
+        return;
+      }
+      textResponse(res, readText(filePath), 200, "text/html; charset=utf-8");
+      return;
+    }
+
+    if (url.pathname === "/api/public/security") {
+      const filePath = path.join(docsDir, "security-status.json");
+      if (!fs.existsSync(filePath)) {
+        jsonResponse(res, { error: "Security status not generated yet. Run: npm run website:professional" }, 404);
+        return;
+      }
+      textResponse(res, readText(filePath), 200, "application/json; charset=utf-8");
+      return;
+    }
+
+    if (url.pathname === "/api") {
+      const filePath = path.join(docsDir, "api.html");
+      if (!fs.existsSync(filePath)) {
+        textResponse(res, "API directory not generated yet. Run: npm run website:professional\n", 404);
+        return;
+      }
+      textResponse(res, readText(filePath), 200, "text/html; charset=utf-8");
+      return;
+    }
+
+    if (url.pathname === "/api/public/api-directory") {
+      const filePath = path.join(docsDir, "api-directory.json");
+      if (!fs.existsSync(filePath)) {
+        jsonResponse(res, { error: "API directory not generated yet. Run: npm run website:professional" }, 404);
+        return;
+      }
+      textResponse(res, readText(filePath), 200, "application/json; charset=utf-8");
+      return;
+    }
+
+    if (url.pathname === "/faq") {
+      const filePath = path.join(docsDir, "faq.html");
+      if (!fs.existsSync(filePath)) {
+        textResponse(res, "FAQ page not generated yet. Run: npm run website:professional\n", 404);
+        return;
+      }
+      textResponse(res, readText(filePath), 200, "text/html; charset=utf-8");
+      return;
+    }
+
+    if (url.pathname === "/api/public/faq") {
+      const filePath = path.join(docsDir, "faq-status.json");
+      if (!fs.existsSync(filePath)) {
+        jsonResponse(res, { error: "FAQ status not generated yet. Run: npm run website:professional" }, 404);
+        return;
+      }
       textResponse(res, readText(filePath), 200, "application/json; charset=utf-8");
       return;
     }

@@ -1,0 +1,95 @@
+{
+  "schema": "astra-api-directory-v0.1",
+  "generatedAt": "2026-05-12T23:22:21.124Z",
+  "status": "PUBLIC_API_DIRECTORY_PUBLISHED",
+  "endpoints": [
+    {
+      "path": "/api/public/home",
+      "description": "Homepage status"
+    },
+    {
+      "path": "/api/public/trust",
+      "description": "Trust Center status"
+    },
+    {
+      "path": "/api/public/mainnet",
+      "description": "Base Mainnet manifest"
+    },
+    {
+      "path": "/api/public/live",
+      "description": "Live restricted-mode status"
+    },
+    {
+      "path": "/api/public/launch",
+      "description": "Restricted launch status"
+    },
+    {
+      "path": "/api/public/stabilization",
+      "description": "Restricted launch stabilization"
+    },
+    {
+      "path": "/api/public/monitor",
+      "description": "Mainnet operational monitor"
+    },
+    {
+      "path": "/api/public/mainnet-events",
+      "description": "Mainnet event monitor"
+    },
+    {
+      "path": "/api/public/alerts",
+      "description": "Alert escalation status"
+    },
+    {
+      "path": "/api/public/incidents",
+      "description": "Incident summary"
+    },
+    {
+      "path": "/api/public/restricted-operations",
+      "description": "Restricted operations status"
+    },
+    {
+      "path": "/api/public/mainnet-execution",
+      "description": "Mainnet execution queue status"
+    },
+    {
+      "path": "/api/public/token",
+      "description": "AstraToken metadata"
+    },
+    {
+      "path": "/api/public/wallet",
+      "description": "Wallet visibility metadata"
+    },
+    {
+      "path": "/api/public/brand",
+      "description": "Brand kit metadata"
+    },
+    {
+      "path": "/api/public/market",
+      "description": "Read-only market data"
+    },
+    {
+      "path": "/api/public/roadmap",
+      "description": "Capability roadmap"
+    },
+    {
+      "path": "/api/public/evidence",
+      "description": "Evidence archive"
+    },
+    {
+      "path": "/api/public/packages",
+      "description": "Package inventory"
+    },
+    {
+      "path": "/api/public/transparency",
+      "description": "Transparency index"
+    },
+    {
+      "path": "/api/public/announcement",
+      "description": "Announcement package"
+    },
+    {
+      "path": "/api/public/post-announcement",
+      "description": "Post-announcement monitoring"
+    }
+  ]
+}

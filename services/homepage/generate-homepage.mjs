@@ -740,6 +740,18 @@ const html = `<!doctype html>
           <strong>Trust Center</strong>
           <span>Deployment, monitoring, alerts, incidents, token metadata, and restrictions.</span>
         </a>
+        <a class="link-card" href="/protocol">
+          <strong>Protocol</strong>
+          <span>How AstraTreasury works at a high level.</span>
+        </a>
+        <a class="link-card" href="/architecture">
+          <strong>Architecture</strong>
+          <span>Contracts, roles, and control model.</span>
+        </a>
+        <a class="link-card" href="/security">
+          <strong>Security</strong>
+          <span>Monitoring, alerts, incidents, and restricted controls.</span>
+        </a>
         <a class="link-card" href="/live">
           <strong>Live status</strong>
           <span>Current restricted mainnet posture.</span>
@@ -775,6 +787,14 @@ const html = `<!doctype html>
         <a class="link-card" href="/wallet">
           <strong>Add to wallet</strong>
           <span>Wallet visibility for ASTP. This is not a purchase flow.</span>
+        </a>
+        <a class="link-card" href="/faq">
+          <strong>FAQ</strong>
+          <span>Plain-language answers about restricted mode and ASTP.</span>
+        </a>
+        <a class="link-card" href="/api">
+          <strong>API directory</strong>
+          <span>Read-only public JSON endpoints.</span>
         </a>
         <a class="link-card" href="/api/public/home">
           <strong>Home API</strong>

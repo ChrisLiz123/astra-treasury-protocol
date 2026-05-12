@@ -1,0 +1,13 @@
+{
+  "schema": "astra-protocol-page-status-v0.1",
+  "generatedAt": "2026-05-12T23:22:21.123Z",
+  "status": "PROTOCOL_OVERVIEW_PUBLISHED",
+  "mode": "MAINNET_CONTRACTS_DEPLOYED_RESTRICTED_OPERATION",
+  "sections": [
+    "signals",
+    "policy",
+    "safe governance",
+    "monitoring",
+    "restrictions"
+  ]
+}

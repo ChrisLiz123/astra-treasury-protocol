@@ -1,0 +1,13 @@
+{
+  "schema": "astra-faq-status-v0.1",
+  "generatedAt": "2026-05-12T23:22:21.124Z",
+  "status": "FAQ_PUBLISHED",
+  "restrictions": {
+    "publicTokenSale": false,
+    "realTreasuryFunding": false,
+    "stakingOrRewards": false,
+    "buybackProgram": false,
+    "autonomousExecution": false,
+    "mainnetExecutionQueue": false
+  }
+}

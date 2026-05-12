@@ -1,0 +1,16 @@
+{
+  "schema": "astra-architecture-page-status-v0.1",
+  "generatedAt": "2026-05-12T23:22:21.123Z",
+  "status": "ARCHITECTURE_OVERVIEW_PUBLISHED",
+  "contracts": {
+    "treasuryPolicy": "0xb55a0805ea8a26e7bd6f199c4e962964c332faf1",
+    "treasuryVault": "0xe5fd264246adad7107a0c42d75b7bd37c85e2c4a",
+    "signalRegistry": "0x75ea3857b9f4f7218764a508331b1e7b5518d652",
+    "executionController": "0xc6f7b5e2611e5b6c4bcab64fdc7c2f4f319acf59",
+    "astraToken": "0xc7c39837d0e604eeb525fc8fc501a5475a20419b"
+  },
+  "network": {
+    "name": "Base Mainnet",
+    "chainId": 8453
+  }
+}

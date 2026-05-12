@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Public API directory · AstraTreasury</title>
+  <meta name="description" content="AstraTreasury exposes sanitized JSON endpoints for public inspection. These endpoints do not expose private keys, runtime secrets, webhooks, or operator notes." />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <meta property="og:title" content="Public API directory · AstraTreasury" />
+  <meta property="og:description" content="AstraTreasury exposes sanitized JSON endpoints for public inspection. These endpoints do not expose private keys, runtime secrets, webhooks, or operator notes." />
+  <meta property="og:image" content="https://astratreasury.ai/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #08111f;
+      --surface: #0e1a2b;
+      --surface-2: #111f33;
+      --border: rgba(148, 163, 184, 0.20);
+      --text: #edf4fb;
+      --muted: #9aaec4;
+      --blue: #67a7ff;
+      --green: #41d49b;
+      --yellow: #f4c35f;
+      --red: #f87171;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    body {
+      margin: 0;
+      color: var(--text);
+      background: linear-gradient(180deg, #07101d, var(--bg));
+    }
+
+    a { color: var(--blue); text-decoration: none; }
+
+    main {
+      width: min(1120px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 42px 0 72px;
+    }
+
+    .top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 24px;
+      margin-bottom: 18px;
+    }
+
+    .eyebrow {
+      color: var(--green);
+      font-weight: 850;
+      font-size: 13px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      margin: 0 0 12px;
+      font-size: 42px;
+      line-height: 1.04;
+      letter-spacing: -1.3px;
+    }
+
+    p {
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    .status-pill {
+      white-space: nowrap;
+      border: 1px solid rgba(65, 212, 155, .24);
+      background: rgba(65, 212, 155, .10);
+      color: var(--green);
+      border-radius: 999px;
+      padding: 9px 13px;
+      font-size: 13px;
+      font-weight: 850;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 24px;
+      margin-bottom: 18px;
+      box-shadow: 0 22px 70px rgba(0,0,0,.25);
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .panel {
+      background: rgba(255,255,255,.03);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 18px;
+    }
+
+    .panel h3 {
+      margin: 0 0 8px;
+      font-size: 17px;
+    }
+
+    .panel p {
+      margin: 0;
+      font-size: 14px;
+    }
+
+    .kicker {
+      color: var(--blue);
+      font-size: 12px;
+      font-weight: 850;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      margin-bottom: 9px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      overflow: hidden;
+    }
+
+    th, td {
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--border);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      color: var(--muted);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      background: rgba(255,255,255,.03);
+    }
+
+    tr:last-child td { border-bottom: 0; }
+
+    code {
+      color: var(--muted);
+      font-size: 12px;
+      overflow-wrap: anywhere;
+    }
+
+    .ok { color: var(--green); }
+    .warn { color: var(--yellow); }
+    .danger { color: var(--red); }
+
+    .notice {
+      background: rgba(244,195,95,.08);
+      border: 1px solid rgba(244,195,95,.22);
+      color: #f7d99a;
+      border-radius: 16px;
+      padding: 16px;
+      line-height: 1.6;
+    }
+
+    .links {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+
+    .link-card {
+      background: rgba(255,255,255,.03);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 16px;
+    }
+
+    .link-card strong {
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .link-card span {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 860px) {
+      .top {
+        flex-direction: column;
+      }
+      .grid-3, .links {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+<main>
+  <section class="top">
+    <div>
+      <div class="eyebrow">Read-only public endpoints</div>
+      <h1>Public API directory</h1>
+      <p>AstraTreasury exposes sanitized JSON endpoints for public inspection. These endpoints do not expose private keys, runtime secrets, webhooks, or operator notes.</p>
+    </div>
+    <a class="status-pill" href="/api/public/">Endpoints: 22</a>
+  </section>
+
+  
+<section class="card">
+  <h2>Public endpoints</h2>
+  <table>
+    <thead><tr><th>Endpoint</th><th>Description</th><th>Link</th></tr></thead>
+    <tbody><tr><td><code>/api/public/home</code></td><td>Homepage status</td><td><a href="/api/public/home">Open</a></td></tr><tr><td><code>/api/public/trust</code></td><td>Trust Center status</td><td><a href="/api/public/trust">Open</a></td></tr><tr><td><code>/api/public/mainnet</code></td><td>Base Mainnet manifest</td><td><a href="/api/public/mainnet">Open</a></td></tr><tr><td><code>/api/public/live</code></td><td>Live restricted-mode status</td><td><a href="/api/public/live">Open</a></td></tr><tr><td><code>/api/public/launch</code></td><td>Restricted launch status</td><td><a href="/api/public/launch">Open</a></td></tr><tr><td><code>/api/public/stabilization</code></td><td>Restricted launch stabilization</td><td><a href="/api/public/stabilization">Open</a></td></tr><tr><td><code>/api/public/monitor</code></td><td>Mainnet operational monitor</td><td><a href="/api/public/monitor">Open</a></td></tr><tr><td><code>/api/public/mainnet-events</code></td><td>Mainnet event monitor</td><td><a href="/api/public/mainnet-events">Open</a></td></tr><tr><td><code>/api/public/alerts</code></td><td>Alert escalation status</td><td><a href="/api/public/alerts">Open</a></td></tr><tr><td><code>/api/public/incidents</code></td><td>Incident summary</td><td><a href="/api/public/incidents">Open</a></td></tr><tr><td><code>/api/public/restricted-operations</code></td><td>Restricted operations status</td><td><a href="/api/public/restricted-operations">Open</a></td></tr><tr><td><code>/api/public/mainnet-execution</code></td><td>Mainnet execution queue status</td><td><a href="/api/public/mainnet-execution">Open</a></td></tr><tr><td><code>/api/public/token</code></td><td>AstraToken metadata</td><td><a href="/api/public/token">Open</a></td></tr><tr><td><code>/api/public/wallet</code></td><td>Wallet visibility metadata</td><td><a href="/api/public/wallet">Open</a></td></tr><tr><td><code>/api/public/brand</code></td><td>Brand kit metadata</td><td><a href="/api/public/brand">Open</a></td></tr><tr><td><code>/api/public/market</code></td><td>Read-only market data</td><td><a href="/api/public/market">Open</a></td></tr><tr><td><code>/api/public/roadmap</code></td><td>Capability roadmap</td><td><a href="/api/public/roadmap">Open</a></td></tr><tr><td><code>/api/public/evidence</code></td><td>Evidence archive</td><td><a href="/api/public/evidence">Open</a></td></tr><tr><td><code>/api/public/packages</code></td><td>Package inventory</td><td><a href="/api/public/packages">Open</a></td></tr><tr><td><code>/api/public/transparency</code></td><td>Transparency index</td><td><a href="/api/public/transparency">Open</a></td></tr><tr><td><code>/api/public/announcement</code></td><td>Announcement package</td><td><a href="/api/public/announcement">Open</a></td></tr><tr><td><code>/api/public/post-announcement</code></td><td>Post-announcement monitoring</td><td><a href="/api/public/post-announcement">Open</a></td></tr></tbody>
+  </table>
+</section>
+
+  <section class="card">
+    <h2>Restriction notice</h2>
+    <div class="notice">
+      Public token sale, real treasury funding, staking/rewards, buybacks, autonomous execution,
+      paper-to-on-chain automation, and mainnet execution queue activation remain disabled.
+    </div>
+  </section>
+
+  <section class="card">
+    <p><a href="/">Back to homepage</a> · <a href="/trust">Trust Center</a> · <a href="/transparency">Transparency index</a></p>
+  </section>
+</main>
+</body>
+</html>

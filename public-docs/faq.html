@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FAQ · AstraTreasury</title>
+  <meta name="description" content="Short answers about AstraTreasury’s restricted Base Mainnet deployment, ASTP visibility, monitoring, and what is not approved." />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <meta property="og:title" content="FAQ · AstraTreasury" />
+  <meta property="og:description" content="Short answers about AstraTreasury’s restricted Base Mainnet deployment, ASTP visibility, monitoring, and what is not approved." />
+  <meta property="og:image" content="https://astratreasury.ai/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #08111f;
+      --surface: #0e1a2b;
+      --surface-2: #111f33;
+      --border: rgba(148, 163, 184, 0.20);
+      --text: #edf4fb;
+      --muted: #9aaec4;
+      --blue: #67a7ff;
+      --green: #41d49b;
+      --yellow: #f4c35f;
+      --red: #f87171;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    body {
+      margin: 0;
+      color: var(--text);
+      background: linear-gradient(180deg, #07101d, var(--bg));
+    }
+
+    a { color: var(--blue); text-decoration: none; }
+
+    main {
+      width: min(1120px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 42px 0 72px;
+    }
+
+    .top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 24px;
+      margin-bottom: 18px;
+    }
+
+    .eyebrow {
+      color: var(--green);
+      font-weight: 850;
+      font-size: 13px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      margin: 0 0 12px;
+      font-size: 42px;
+      line-height: 1.04;
+      letter-spacing: -1.3px;
+    }
+
+    p {
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    .status-pill {
+      white-space: nowrap;
+      border: 1px solid rgba(65, 212, 155, .24);
+      background: rgba(65, 212, 155, .10);
+      color: var(--green);
+      border-radius: 999px;
+      padding: 9px 13px;
+      font-size: 13px;
+      font-weight: 850;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 24px;
+      margin-bottom: 18px;
+      box-shadow: 0 22px 70px rgba(0,0,0,.25);
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .panel {
+      background: rgba(255,255,255,.03);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 18px;
+    }
+
+    .panel h3 {
+      margin: 0 0 8px;
+      font-size: 17px;
+    }
+
+    .panel p {
+      margin: 0;
+      font-size: 14px;
+    }
+
+    .kicker {
+      color: var(--blue);
+      font-size: 12px;
+      font-weight: 850;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      margin-bottom: 9px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      overflow: hidden;
+    }
+
+    th, td {
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--border);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      color: var(--muted);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      background: rgba(255,255,255,.03);
+    }
+
+    tr:last-child td { border-bottom: 0; }
+
+    code {
+      color: var(--muted);
+      font-size: 12px;
+      overflow-wrap: anywhere;
+    }
+
+    .ok { color: var(--green); }
+    .warn { color: var(--yellow); }
+    .danger { color: var(--red); }
+
+    .notice {
+      background: rgba(244,195,95,.08);
+      border: 1px solid rgba(244,195,95,.22);
+      color: #f7d99a;
+      border-radius: 16px;
+      padding: 16px;
+      line-height: 1.6;
+    }
+
+    .links {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+
+    .link-card {
+      background: rgba(255,255,255,.03);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 16px;
+    }
+
+    .link-card strong {
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .link-card span {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 860px) {
+      .top {
+        flex-direction: column;
+      }
+      .grid-3, .links {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+<main>
+  <section class="top">
+    <div>
+      <div class="eyebrow">Restricted mode questions</div>
+      <h1>FAQ</h1>
+      <p>Short answers about AstraTreasury’s restricted Base Mainnet deployment, ASTP visibility, monitoring, and what is not approved.</p>
+    </div>
+    <a class="status-pill" href="/restricted-operations">Mode: Restricted</a>
+  </section>
+
+  
+<section class="card">
+  <h2>Frequently asked questions</h2>
+  <table>
+    <thead><tr><th>Question</th><th>Answer</th></tr></thead>
+    <tbody><tr><td>Is AstraTreasury live on mainnet?</td><td>AstraTreasury contracts are deployed on Base Mainnet in restricted operational mode.</td></tr><tr><td>Is there a public token sale?</td><td>No. No public token sale is approved.</td></tr><tr><td>Is ASTP an investment product?</td><td>No. ASTP is not marketed as an investment product and AstraTreasury does not promise returns.</td></tr><tr><td>Is the treasury funded with real assets?</td><td>No real treasury funding is approved.</td></tr><tr><td>Are staking or rewards live?</td><td>No. Staking and rewards are not approved.</td></tr><tr><td>Are buybacks active?</td><td>No. No buyback program is approved.</td></tr><tr><td>Is autonomous execution live?</td><td>No. Autonomous execution is not approved.</td></tr><tr><td>Is the mainnet execution queue enabled?</td><td>No. The mainnet execution queue remains disabled.</td></tr><tr><td>Why publish market data if there is no public sale?</td><td>The market page is read-only. It shows data only if public DEX data exists and does not approve trading or launch activity.</td></tr><tr><td>Where can I verify the official token metadata?</td><td>Use the token, wallet, brand, and Trust Center pages.</td></tr></tbody>
+  </table>
+</section>
+
+  <section class="card">
+    <h2>Restriction notice</h2>
+    <div class="notice">
+      Public token sale, real treasury funding, staking/rewards, buybacks, autonomous execution,
+      paper-to-on-chain automation, and mainnet execution queue activation remain disabled.
+    </div>
+  </section>
+
+  <section class="card">
+    <p><a href="/">Back to homepage</a> · <a href="/trust">Trust Center</a> · <a href="/transparency">Transparency index</a></p>
+  </section>
+</main>
+</body>
+</html>
