@@ -1,0 +1,34 @@
+{
+  "schema": "astra-market-status-v0.1",
+  "generatedAt": "2026-05-12T22:56:07.466Z",
+  "project": "AstraTreasury Protocol",
+  "network": {
+    "name": "Base Mainnet",
+    "chainId": 8453
+  },
+  "token": {
+    "name": "AstraTreasury Token",
+    "symbol": "ASTP",
+    "address": "0xc7c39837d0e604eeb525fc8fc501a5475a20419b",
+    "decimals": 18,
+    "logoURI": "https://astratreasury.ai/assets/token/astratoken-logo-256.png"
+  },
+  "status": "NO_PUBLIC_DEX_MARKET_DATA",
+  "dataSource": {
+    "primary": "DEX Screener",
+    "ok": true,
+    "fetchedPairs": 0,
+    "error": null
+  },
+  "market": null,
+  "allPairs": [],
+  "restrictions": {
+    "publicTokenSale": false,
+    "realTreasuryFunding": false,
+    "stakingOrRewards": false,
+    "buybackProgram": false,
+    "autonomousExecution": false,
+    "mainnetExecutionQueue": false
+  },
+  "publicStatement": "No public DEX market data is currently available for ASTP. AstraTreasury remains in restricted operational mode with no public token sale, real treasury funding, staking/rewards, buybacks, or autonomous execution approved."
+}

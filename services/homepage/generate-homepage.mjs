@@ -764,6 +764,10 @@ const html = `<!doctype html>
           <strong>Roadmap</strong>
           <span>Future capabilities and approval tracks.</span>
         </a>
+        <a class="link-card" href="/market">
+          <strong>Market data</strong>
+          <span>Read-only DEX market status when public data exists.</span>
+        </a>
         <a class="link-card" href="/wallet">
           <strong>Add to wallet</strong>
           <span>Wallet visibility for ASTP. This is not a purchase flow.</span>
