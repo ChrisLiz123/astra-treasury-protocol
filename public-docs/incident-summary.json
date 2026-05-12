@@ -1,0 +1,16 @@
+{
+  "schema": "astra-public-incident-summary-v0.1",
+  "generatedAt": "2026-05-12T13:40:55.237Z",
+  "project": "AstraTreasury Protocol",
+  "network": "Base Mainnet",
+  "status": "NO_ACTIVE_INCIDENTS",
+  "summary": {
+    "total": 0,
+    "active": 0,
+    "resolved": 0,
+    "criticalActive": 0,
+    "highActive": 0
+  },
+  "incidents": [],
+  "publicStatement": "No active mainnet incidents are recorded in the latest public summary."
+}

@@ -186,7 +186,17 @@
     "notify:operator:test": "node services/operator-notifications/notifier.mjs --once --test",
     "notify:operator:loop": "node services/operator-notifications/notifier.mjs",
     "notify:operator:status": "cat reports/operator-notifications/heartbeat.json",
-    "release:operator-notifications": "bash scripts/release/package-operator-notifications.sh"
+    "release:operator-notifications": "bash scripts/release/package-operator-notifications.sh",
+    "incident:sync": "node services/incident-tracker/incident-tracker.mjs sync",
+    "incident:list": "node services/incident-tracker/incident-tracker.mjs list",
+    "incident:add": "node services/incident-tracker/incident-tracker.mjs add",
+    "incident:ack": "node services/incident-tracker/incident-tracker.mjs ack",
+    "incident:investigate": "node services/incident-tracker/incident-tracker.mjs investigate",
+    "incident:resolve": "node services/incident-tracker/incident-tracker.mjs resolve",
+    "incident:dismiss": "node services/incident-tracker/incident-tracker.mjs dismiss",
+    "incident:report": "node services/incident-tracker/incident-tracker.mjs report",
+    "incident:gate": "npm run mainnet:alerts:gate && npm run incident:sync && npm run incident:report",
+    "release:incident-acknowledgement": "bash scripts/release/package-incident-acknowledgement.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",
