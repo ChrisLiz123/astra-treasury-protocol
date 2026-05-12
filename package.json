@@ -216,7 +216,11 @@
     "release:post-announcement-monitoring": "bash scripts/release/package-post-announcement-monitoring.sh",
     "stabilization:status": "node services/stabilization/status.mjs",
     "stabilization:gate": "npm run public:refresh:once && npm run evidence:archive:once && npm run stabilization:status",
-    "release:restricted-launch-stabilization": "bash scripts/release/package-restricted-launch-stabilization.sh"
+    "release:restricted-launch-stabilization": "bash scripts/release/package-restricted-launch-stabilization.sh",
+    "roadmap:validate": "node scripts/validate-capability-roadmap.mjs",
+    "roadmap:status": "node services/capability-roadmap/status.mjs",
+    "roadmap:gate": "npm run roadmap:validate && npm run roadmap:status",
+    "release:capability-roadmap-governance": "bash scripts/release/package-capability-roadmap-governance.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",

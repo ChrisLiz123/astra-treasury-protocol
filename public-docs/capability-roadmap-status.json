@@ -1,0 +1,116 @@
+{
+  "schema": "astra-public-capability-roadmap-status-v0.1",
+  "generatedAt": "2026-05-12T15:37:53.939Z",
+  "status": "CAPABILITY_ROADMAP_READY",
+  "mode": "PLANNING_ONLY_NO_CAPABILITY_ENABLED",
+  "network": {
+    "name": "Base Mainnet",
+    "chainId": 8453
+  },
+  "publicStatement": "AstraTreasury future capabilities are documented as separate approval tracks. Public sale, real treasury funding, staking/rewards, buybacks, autonomous execution, and mainnet execution queue activation remain disabled.",
+  "summary": {
+    "capabilityCount": 7,
+    "disabledCapabilities": 7,
+    "totalChecks": 16,
+    "passed": 16,
+    "failed": 0
+  },
+  "capabilities": {
+    "publicTokenSale": {
+      "status": "DISABLED",
+      "approvalRequired": true,
+      "requiredApprovals": [
+        "legal review update",
+        "governance approval",
+        "public disclosure update",
+        "launch plan",
+        "jurisdictional review"
+      ],
+      "riskLevel": "HIGH"
+    },
+    "realTreasuryFunding": {
+      "status": "DISABLED",
+      "approvalRequired": true,
+      "requiredApprovals": [
+        "Treasury Safe approval",
+        "accounting review",
+        "source-of-funds documentation",
+        "treasury risk limits",
+        "incident response drill",
+        "public disclosure update"
+      ],
+      "riskLevel": "HIGH"
+    },
+    "stakingOrRewards": {
+      "status": "DISABLED",
+      "approvalRequired": true,
+      "requiredApprovals": [
+        "legal review",
+        "tax/accounting review",
+        "security review",
+        "governance approval",
+        "public disclosure update"
+      ],
+      "riskLevel": "HIGH"
+    },
+    "buybackProgram": {
+      "status": "DISABLED",
+      "approvalRequired": true,
+      "requiredApprovals": [
+        "market-conduct legal review",
+        "treasury policy review",
+        "governance approval",
+        "monitoring plan",
+        "public disclosure update"
+      ],
+      "riskLevel": "HIGH"
+    },
+    "mainnetExecutionQueue": {
+      "status": "DISABLED",
+      "approvalRequired": true,
+      "requiredApprovals": [
+        "governance approval",
+        "treasury funding approval",
+        "execution dry run",
+        "monitoring plan",
+        "restricted-operation unlock milestone"
+      ],
+      "riskLevel": "MEDIUM"
+    },
+    "paperToOnchainAutomation": {
+      "status": "DISABLED",
+      "approvalRequired": true,
+      "requiredApprovals": [
+        "separate security review",
+        "governance approval",
+        "manual approval controls",
+        "monitoring plan",
+        "rollback procedure"
+      ],
+      "riskLevel": "HIGH"
+    },
+    "autonomousExecution": {
+      "status": "DISABLED",
+      "approvalRequired": true,
+      "requiredApprovals": [
+        "not approved for v1",
+        "separate external audit",
+        "separate legal review",
+        "governance approval",
+        "emergency stop controls",
+        "extensive monitoring"
+      ],
+      "riskLevel": "CRITICAL"
+    }
+  },
+  "restrictions": {
+    "publicTokenSale": false,
+    "realTreasuryFunding": false,
+    "stakingOrRewards": false,
+    "buybackProgram": false,
+    "autonomousExecution": false,
+    "mainnetExecutionQueue": false,
+    "paperToOnchainAutomation": false
+  },
+  "failures": []
+}

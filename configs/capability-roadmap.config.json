@@ -1,0 +1,98 @@
+{
+  "schema": "astra-capability-roadmap-config-v0.1",
+  "status": "planning-only",
+  "network": {
+    "name": "Base Mainnet",
+    "chainId": 8453
+  },
+  "currentMode": "restricted-mainnet-operation",
+  "capabilities": {
+    "publicTokenSale": {
+      "status": "DISABLED",
+      "approvalRequired": true,
+      "requiredApprovals": [
+        "legal review update",
+        "governance approval",
+        "public disclosure update",
+        "launch plan",
+        "jurisdictional review"
+      ],
+      "riskLevel": "HIGH"
+    },
+    "realTreasuryFunding": {
+      "status": "DISABLED",
+      "approvalRequired": true,
+      "requiredApprovals": [
+        "Treasury Safe approval",
+        "accounting review",
+        "source-of-funds documentation",
+        "treasury risk limits",
+        "incident response drill",
+        "public disclosure update"
+      ],
+      "riskLevel": "HIGH"
+    },
+    "stakingOrRewards": {
+      "status": "DISABLED",
+      "approvalRequired": true,
+      "requiredApprovals": [
+        "legal review",
+        "tax/accounting review",
+        "security review",
+        "governance approval",
+        "public disclosure update"
+      ],
+      "riskLevel": "HIGH"
+    },
+    "buybackProgram": {
+      "status": "DISABLED",
+      "approvalRequired": true,
+      "requiredApprovals": [
+        "market-conduct legal review",
+        "treasury policy review",
+        "governance approval",
+        "monitoring plan",
+        "public disclosure update"
+      ],
+      "riskLevel": "HIGH"
+    },
+    "mainnetExecutionQueue": {
+      "status": "DISABLED",
+      "approvalRequired": true,
+      "requiredApprovals": [
+        "governance approval",
+        "treasury funding approval",
+        "execution dry run",
+        "monitoring plan",
+        "restricted-operation unlock milestone"
+      ],
+      "riskLevel": "MEDIUM"
+    },
+    "paperToOnchainAutomation": {
+      "status": "DISABLED",
+      "approvalRequired": true,
+      "requiredApprovals": [
+        "separate security review",
+        "governance approval",
+        "manual approval controls",
+        "monitoring plan",
+        "rollback procedure"
+      ],
+      "riskLevel": "HIGH"
+    },
+    "autonomousExecution": {
+      "status": "DISABLED",
+      "approvalRequired": true,
+      "requiredApprovals": [
+        "not approved for v1",
+        "separate external audit",
+        "separate legal review",
+        "governance approval",
+        "emergency stop controls",
+        "extensive monitoring"
+      ],
+      "riskLevel": "CRITICAL"
+    }
+  },
+  "hardRule": "No capability may be enabled by editing this roadmap alone. Every capability requires a separate milestone, review, approval, and public status update."
+}
