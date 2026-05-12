@@ -13,3 +13,4 @@ deployments/*.env
 /artifacts-local/
 /out/
 /configs/mainnet-production.config.json
+/.runtime/

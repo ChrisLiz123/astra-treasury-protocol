@@ -167,7 +167,11 @@
     "mainnet:restricted:validate": "node scripts/validate-restricted-operations.mjs",
     "mainnet:restricted:status": "node scripts/generate-restricted-operations-status.mjs",
     "mainnet:restricted:gate": "npm run mainnet:restricted:validate && npm run mainnet:restricted:status && npm run mainnet:live:gate",
-    "release:restricted-operations": "bash scripts/release/package-restricted-operations.sh"
+    "release:restricted-operations": "bash scripts/release/package-restricted-operations.sh",
+    "mainnet:monitor:once": "node services/mainnet-monitor/mainnet-monitor.mjs --once",
+    "mainnet:monitor:loop": "node services/mainnet-monitor/mainnet-monitor.mjs",
+    "mainnet:monitor:status": "cat reports/mainnet-monitor/heartbeat.json",
+    "release:mainnet-operational-monitor": "bash scripts/release/package-mainnet-operational-monitor.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",

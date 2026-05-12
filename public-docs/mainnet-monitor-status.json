@@ -1,0 +1,47 @@
+{
+  "schema": "astra-public-mainnet-monitor-status-v1",
+  "checkedAt": "2026-05-12T11:40:20.453Z",
+  "status": "PASS",
+  "mode": "READ_ONLY_MAINNET_MONITOR",
+  "network": {
+    "name": "Base Mainnet",
+    "chainId": 8453
+  },
+  "summary": {
+    "totalChecks": 40,
+    "passed": 40,
+    "failed": 0,
+    "warnings": 0
+  },
+  "contracts": {
+    "treasuryPolicy": "0xB55a0805eA8a26e7Bd6f199c4e962964c332Faf1",
+    "treasuryVault": "0xE5Fd264246Adad7107A0c42d75B7Bd37C85e2c4A",
+    "signalRegistry": "0x75ea3857B9F4f7218764a508331B1e7B5518D652",
+    "executionController": "0xc6F7B5e2611e5b6c4Bcab64FDC7C2F4F319aCF59",
+    "astraToken": "0xC7c39837D0E604eEB525Fc8Fc501A5475a20419b"
+  },
+  "safes": {
+    "governanceSafe": "0x8992B4173cf791Cf88eC36cd53b27F3BF22404D3",
+    "treasurySafe": "0xe2554515AaC8a3835326a4Ed5e9F44c319BE335C",
+    "executorSafe": "0xBea6124d6ed0CE1ce26e184A39e28B65eDCEE461",
+    "signalerSafe": "0xf3270118e25c3BeAfA863caD4516e9E3aDCd48D1"
+  },
+  "token": {
+    "name": "AstraTreasury Token",
+    "symbol": "ASTP",
+    "decimals": 18,
+    "totalSupplyFormatted": "1000000000",
+    "vaultBalanceFormatted": "350000000"
+  },
+  "restrictedCapabilities": {
+    "publicTokenSaleApproved": false,
+    "realTreasuryFundingApproved": false,
+    "stakingOrRewardsApproved": false,
+    "buybackProgramApproved": false,
+    "autonomousExecutionApproved": false,
+    "mainnetExecutionQueueEnabled": false,
+    "mainnetPaperToOnchainAutomationEnabled": false
+  },
+  "failures": [],
+  "publicStatement": "AstraTreasury Base Mainnet contracts are monitored in read-only restricted mode. Public token sale, real treasury funding, staking/rewards, buybacks, and autonomous execution remain disabled."
+}
