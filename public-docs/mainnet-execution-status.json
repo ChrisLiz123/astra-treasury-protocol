@@ -1,0 +1,40 @@
+{
+  "schema": "astra-public-mainnet-execution-queue-status-v0.1",
+  "generatedAt": "2026-05-12T11:55:15.870Z",
+  "status": "PASS",
+  "mode": "MAINNET_EXECUTION_QUEUE_DISABLED",
+  "network": {
+    "name": "Base Mainnet",
+    "chainId": 8453
+  },
+  "publicStatement": "AstraTreasury mainnet execution queue is disabled. No real treasury execution, paper-to-on-chain automation, autonomous execution, public sale, staking/rewards, or buyback program is approved.",
+  "queue": {
+    "enabled": false,
+    "paperToOnchainAutomationEnabled": false,
+    "autonomousExecutionEnabled": false,
+    "manualExecutionApprovalRequired": true,
+    "governanceSafeApprovalRequired": true
+  },
+  "hardStops": {
+    "publicTokenSaleApproved": false,
+    "realTreasuryFundingApproved": false,
+    "stakingOrRewardsApproved": false,
+    "buybackProgramApproved": false,
+    "autonomousExecutionApproved": false
+  },
+  "restrictedCapabilities": {
+    "publicTokenSaleApproved": false,
+    "realTreasuryFundingApproved": false,
+    "stakingOrRewardsApproved": false,
+    "buybackProgramApproved": false,
+    "autonomousExecutionApproved": false,
+    "mainnetExecutionQueueEnabled": false,
+    "mainnetPaperToOnchainAutomationEnabled": false
+  },
+  "summary": {
+    "totalChecks": 20,
+    "passed": 20,
+    "failed": 0
+  },
+  "failures": []
+}

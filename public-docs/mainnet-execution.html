@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AstraTreasury Mainnet Execution Queue</title>
+  <style>
+    :root { color-scheme: dark; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    body { margin: 0; background: #0d1117; color: #e6edf3; }
+    header { padding: 32px; background: #010409; border-bottom: 1px solid #30363d; }
+    main { padding: 24px 32px 56px; display: grid; gap: 18px; }
+    h1 { margin: 0 0 8px; font-size: 30px; }
+    h2 { margin-top: 0; color: #58a6ff; }
+    a { color: #58a6ff; }
+    .muted { color: #8b949e; }
+    .card { background: #161b22; border: 1px solid #30363d; border-radius: 14px; padding: 18px; }
+    .big { font-size: 26px; font-weight: 700; }
+    .ok { color: #3fb950; font-weight: 700; }
+    .warn { color: #d29922; font-weight: 700; }
+    .fail { color: #f85149; font-weight: 700; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { text-align: left; border-bottom: 1px solid #30363d; padding: 10px 8px; }
+    th { color: #58a6ff; font-size: 13px; }
+    td { font-size: 13px; overflow-wrap: anywhere; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>AstraTreasury Mainnet Execution Queue</h1>
+  <div class="muted">Public restricted execution status. Sanitized and read-only.</div>
+</header>
+<main>
+  <section class="card">
+    <h2>Status</h2>
+    <div class="big ok">MAINNET_EXECUTION_QUEUE_DISABLED</div>
+    <p>AstraTreasury mainnet execution queue is disabled. No real treasury execution, paper-to-on-chain automation, autonomous execution, public sale, staking/rewards, or buyback program is approved.</p>
+  </section>
+
+  <section class="card">
+    <h2>Activation Requirements</h2>
+    <table>
+      <thead><tr><th>Requirement</th><th>Status</th></tr></thead>
+      <tbody><tr><td>separate governance approval</td><td>required before activation</td></tr><tr><td>separate legal review update</td><td>required before activation</td></tr><tr><td>separate treasury funding approval</td><td>required before activation</td></tr><tr><td>incident response drill completed</td><td>required before activation</td></tr><tr><td>mainnet execution dry run completed</td><td>required before activation</td></tr><tr><td>public status page updated</td><td>required before activation</td></tr></tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>Checks</h2>
+    <table>
+      <thead><tr><th>Check</th><th>Status</th></tr></thead>
+      <tbody><tr><td>Base Mainnet public manifest exists</td><td>PASS</td></tr><tr><td>Post-deployment verification passed</td><td>PASS</td></tr><tr><td>Mainnet monitor passing or available</td><td>PASS</td></tr><tr><td>Mainnet execution queue disabled</td><td>PASS</td></tr><tr><td>Paper-to-on-chain automation disabled</td><td>PASS</td></tr><tr><td>Autonomous execution disabled</td><td>PASS</td></tr><tr><td>Manual execution approval required</td><td>PASS</td></tr><tr><td>Governance Safe approval required</td><td>PASS</td></tr><tr><td>hard stop remains false: publicTokenSaleApproved</td><td>PASS</td></tr><tr><td>hard stop remains false: realTreasuryFundingApproved</td><td>PASS</td></tr><tr><td>hard stop remains false: stakingOrRewardsApproved</td><td>PASS</td></tr><tr><td>hard stop remains false: buybackProgramApproved</td><td>PASS</td></tr><tr><td>hard stop remains false: autonomousExecutionApproved</td><td>PASS</td></tr><tr><td>restricted flag remains false: publicTokenSaleApproved</td><td>PASS</td></tr><tr><td>restricted flag remains false: realTreasuryFundingApproved</td><td>PASS</td></tr><tr><td>restricted flag remains false: stakingOrRewardsApproved</td><td>PASS</td></tr><tr><td>restricted flag remains false: buybackProgramApproved</td><td>PASS</td></tr><tr><td>restricted flag remains false: autonomousExecutionApproved</td><td>PASS</td></tr><tr><td>restricted flag remains false: mainnetExecutionQueueEnabled</td><td>PASS</td></tr><tr><td>restricted flag remains false: mainnetPaperToOnchainAutomationEnabled</td><td>PASS</td></tr></tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>Public API</h2>
+    <p><a href="/api/public/mainnet-execution">/api/public/mainnet-execution</a></p>
+    <p><a href="/monitor">Mainnet monitor</a></p>
+    <p><a href="/restricted-operations">Restricted operations</a></p>
+    <p><a href="/">Back to public site</a></p>
+  </section>
+</main>
+</body>
+</html>

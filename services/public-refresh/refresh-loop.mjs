@@ -78,7 +78,8 @@ function refreshOnce() {
     "docs:packages-public",
     "docs:live-public",
     "mainnet:restricted:status",
-    "mainnet:monitor:once"
+    "mainnet:monitor:once",
+    "mainnet:execution:status"
   ];
 
   for (const script of scripts) {
@@ -100,7 +101,9 @@ function refreshOnce() {
     "public-docs/restricted-operations.html",
     "public-docs/restricted-operations-status.json",
     "public-docs/monitor.html",
-    "public-docs/mainnet-monitor-status.json"
+    "public-docs/mainnet-monitor-status.json",
+    "public-docs/mainnet-execution.html",
+    "public-docs/mainnet-execution-status.json"
   ].map(fileStatus);
 
   const missingFiles = files.filter((item) => !item.exists);

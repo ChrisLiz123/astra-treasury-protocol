@@ -1,0 +1,37 @@
+{
+  "schema": "astra-mainnet-execution-queue-config-v0.1",
+  "status": "disabled-restricted-mode",
+  "network": {
+    "name": "Base Mainnet",
+    "chainId": 8453
+  },
+  "queue": {
+    "enabled": false,
+    "paperToOnchainAutomationEnabled": false,
+    "autonomousExecutionEnabled": false,
+    "manualExecutionApprovalRequired": true,
+    "governanceSafeApprovalRequired": true
+  },
+  "allowedWhenEnabled": {
+    "requiresSeparateGovernanceApproval": true,
+    "requiresLegalReviewUpdate": true,
+    "requiresIncidentResponseDrill": true,
+    "requiresTreasuryFundingApproval": true,
+    "requiresPublicDisclosureUpdate": true
+  },
+  "hardStops": {
+    "publicTokenSaleApproved": false,
+    "realTreasuryFundingApproved": false,
+    "stakingOrRewardsApproved": false,
+    "buybackProgramApproved": false,
+    "autonomousExecutionApproved": false
+  },
+  "activationRequirements": [
+    "separate governance approval",
+    "separate legal review update",
+    "separate treasury funding approval",
+    "incident response drill completed",
+    "mainnet execution dry run completed",
+    "public status page updated"
+  ]
+}
