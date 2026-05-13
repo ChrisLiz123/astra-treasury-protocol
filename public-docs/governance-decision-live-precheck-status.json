@@ -1,6 +1,6 @@
 {
   "schema": "astra-governance-decision-live-precheck-status-v0.1",
-  "generatedAt": "2026-05-13T19:53:53.503Z",
+  "generatedAt": "2026-05-13T19:56:45.216Z",
   "status": "GOVERNANCE_DECISION_RECORDING_LIVE_PRECHECK_READY_TO_RECORD",
   "currentApprovedMode": "restricted-mainnet-operation",
   "selectedAction": {
