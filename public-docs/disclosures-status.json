@@ -1,0 +1,56 @@
+{
+  "schema": "astra-public-disclosures-status-v0.1",
+  "generatedAt": "2026-05-13T13:54:07.639Z",
+  "status": "PUBLIC_DISCLOSURE_UPDATE_DRAFT_READY_NOT_APPROVED",
+  "currentApprovedMode": "restricted-mainnet-operation",
+  "publicDisclosuresApproved": false,
+  "fullLaunchApproved": false,
+  "network": {
+    "name": "Base Mainnet",
+    "chainId": 8453
+  },
+  "publicStatement": "AstraTreasury public disclosure update is drafted for review. Full launch and restricted capabilities are not approved.",
+  "summary": {
+    "totalChecks": 16,
+    "passed": 16,
+    "failed": 0,
+    "disclosureAreas": 12,
+    "prohibitedClaims": 15
+  },
+  "requiredDisclosureAreas": {
+    "restrictedMode": "DRAFTED",
+    "noPublicSale": "DRAFTED",
+    "noInvestmentProduct": "DRAFTED",
+    "noTreasuryFunding": "DRAFTED",
+    "noStakingRewards": "DRAFTED",
+    "noBuybacks": "DRAFTED",
+    "noAutonomousExecution": "DRAFTED",
+    "executionQueueDisabled": "DRAFTED",
+    "marketDataReadOnly": "DRAFTED",
+    "walletVisibilityNotSale": "DRAFTED",
+    "riskDisclosure": "DRAFTED",
+    "legalReviewRequiredBeforeFullLaunch": "DRAFTED"
+  },
+  "currentStatuses": {
+    "fullLaunch": "FULL_LAUNCH_READINESS_TRACK_OPEN_PLANNING_ONLY",
+    "legalFullLaunch": "LEGAL_FULL_LAUNCH_REVIEW_OPEN_NOT_APPROVED",
+    "treasuryFunding": "TREASURY_FUNDING_READINESS_TRACK_OPEN_NOT_APPROVED",
+    "executionDryRun": "EXECUTION_QUEUE_DRY_RUN_V2_PASS_DISABLED_MODE",
+    "restrictedOperations": "MAINNET_RESTRICTED_OPERATION",
+    "mainnetExecution": "MAINNET_EXECUTION_QUEUE_DISABLED",
+    "market": "NO_PUBLIC_DEX_MARKET_DATA",
+    "token": "restricted-operational-mode"
+  },
+  "restrictions": {
+    "publicTokenSale": false,
+    "realTreasuryFunding": false,
+    "stakingOrRewards": false,
+    "buybackProgram": false,
+    "autonomousExecution": false,
+    "mainnetExecutionQueue": false,
+    "paperToOnchainAutomation": false
+  },
+  "failures": [],
+  "currentDisclosureStatement": "# Current Public Disclosure Statement\n\nAstraTreasury Protocol is deployed on Base Mainnet in restricted operational mode.\n\nThe deployment includes public contract visibility, Safe-based governance controls, read-only monitoring, event monitoring, alert escalation, incident acknowledgement, evidence snapshots, token metadata, and public transparency pages.\n\nAstraTreasury is not offering a public token sale. ASTP is not marketed as an investment product. Real treasury funding, staking/rewards, buybacks, autonomous execution, paper-to-on-chain automation, and mainnet execution queue activation remain disabled.\n\nMarket data, if available, is displayed as read-only public information and does not constitute an offer, sale, recommendation, or investment claim.\n\nWallet visibility features only help compatible wallets display ASTP and do not buy, sell, transfer, stake, or approve the token.\n",
+  "riskDisclosureDraft": "# Risk Disclosure Draft\n\nAstraTreasury Protocol remains in restricted Base Mainnet operation.\n\nAny future capability, including public token sale, treasury funding, staking/rewards, buybacks, execution queue activation, paper-to-on-chain automation, or autonomous execution, requires separate review and approval.\n\nSmart contracts, digital assets, public blockchain networks, wallets, RPC providers, explorers, data providers, and governance workflows may carry operational, technical, security, legal, market, tax, and availability risks.\n\nAstraTreasury does not promise returns, yield, liquidity, buybacks, or price performance.\n\nThis draft is for review and should not be treated as final legal advice or final public disclosure until approved.\n"
+}

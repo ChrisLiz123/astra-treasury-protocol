@@ -256,7 +256,11 @@
     "execution:dry-run:v2:validate": "node scripts/validate-execution-queue-dry-run-v2.mjs",
     "execution:dry-run:v2:status": "node services/execution-dry-run/status.mjs",
     "execution:dry-run:v2:gate": "npm run execution:dry-run:v2:validate && npm run execution:dry-run:v2:status",
-    "release:execution-queue-dry-run-v2": "bash scripts/release/package-execution-queue-dry-run-v2.sh"
+    "release:execution-queue-dry-run-v2": "bash scripts/release/package-execution-queue-dry-run-v2.sh",
+    "disclosures:validate": "node scripts/validate-public-disclosure-update.mjs",
+    "disclosures:status": "node services/disclosures/status.mjs",
+    "disclosures:gate": "npm run disclosures:validate && npm run disclosures:status",
+    "release:public-disclosure-update": "bash scripts/release/package-public-disclosure-update.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",

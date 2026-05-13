@@ -1,0 +1,52 @@
+{
+  "schema": "astra-public-disclosure-update-config-v0.1",
+  "status": "planning-only-disclosures-not-final",
+  "network": {
+    "name": "Base Mainnet",
+    "chainId": 8453
+  },
+  "currentApprovedMode": "restricted-mainnet-operation",
+  "publicDisclosuresApproved": false,
+  "fullLaunchApproved": false,
+  "capabilityApprovals": {
+    "publicTokenSaleApproved": false,
+    "realTreasuryFundingApproved": false,
+    "stakingOrRewardsApproved": false,
+    "buybackProgramApproved": false,
+    "mainnetExecutionQueueApproved": false,
+    "paperToOnchainAutomationApproved": false,
+    "autonomousExecutionApproved": false
+  },
+  "requiredDisclosureAreas": {
+    "restrictedMode": "DRAFTED",
+    "noPublicSale": "DRAFTED",
+    "noInvestmentProduct": "DRAFTED",
+    "noTreasuryFunding": "DRAFTED",
+    "noStakingRewards": "DRAFTED",
+    "noBuybacks": "DRAFTED",
+    "noAutonomousExecution": "DRAFTED",
+    "executionQueueDisabled": "DRAFTED",
+    "marketDataReadOnly": "DRAFTED",
+    "walletVisibilityNotSale": "DRAFTED",
+    "riskDisclosure": "DRAFTED",
+    "legalReviewRequiredBeforeFullLaunch": "DRAFTED"
+  },
+  "prohibitedClaims": [
+    "public sale is live",
+    "buy now",
+    "investment opportunity",
+    "passive income",
+    "guaranteed returns",
+    "risk-free",
+    "treasury is funded",
+    "staking is live",
+    "rewards are live",
+    "buybacks are active",
+    "autonomous execution is live",
+    "trading bot is live",
+    "full launch is complete",
+    "yield product",
+    "guaranteed buyback"
+  ],
+  "hardRule": "This disclosure package is planning-only. It does not approve full launch or any restricted capability."
+}
