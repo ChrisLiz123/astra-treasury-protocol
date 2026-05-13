@@ -292,7 +292,11 @@
     "full-launch:governance-vote:validate": "node scripts/validate-full-launch-governance-vote.mjs",
     "full-launch:governance-vote:status": "node services/full-launch-governance-vote/status.mjs",
     "full-launch:governance-vote:gate": "npm run full-launch:governance-vote:validate && npm run full-launch:governance-vote:status",
-    "release:full-launch-governance-vote": "bash scripts/release/package-full-launch-governance-vote.sh"
+    "release:full-launch-governance-vote": "bash scripts/release/package-full-launch-governance-vote.sh",
+    "full-launch:vote-opening:validate": "node scripts/validate-full-launch-governance-vote-opening.mjs",
+    "full-launch:vote-opening:status": "node services/full-launch-governance-vote-opening/status.mjs",
+    "full-launch:vote-opening:gate": "npm run full-launch:vote-opening:validate && npm run full-launch:vote-opening:status",
+    "release:governance-vote-opening": "bash scripts/release/package-governance-vote-opening.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",
