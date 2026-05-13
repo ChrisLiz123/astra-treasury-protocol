@@ -280,7 +280,11 @@
     "treasury:disclosure:validate": "node scripts/validate-treasury-disclosure-approval.mjs",
     "treasury:disclosure:status": "node services/treasury-disclosure/status.mjs",
     "treasury:disclosure:gate": "npm run treasury:disclosure:validate && npm run treasury:disclosure:status",
-    "release:treasury-disclosure-approval": "bash scripts/release/package-treasury-disclosure-approval.sh"
+    "release:treasury-disclosure-approval": "bash scripts/release/package-treasury-disclosure-approval.sh",
+    "treasury:safe-tx:validate": "node scripts/validate-treasury-safe-transaction-package.mjs",
+    "treasury:safe-tx:status": "node services/treasury-safe-transaction/status.mjs",
+    "treasury:safe-tx:gate": "npm run treasury:safe-tx:validate && npm run treasury:safe-tx:status",
+    "release:treasury-safe-transaction-package-prep": "bash scripts/release/package-treasury-safe-transaction-package-prep.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",

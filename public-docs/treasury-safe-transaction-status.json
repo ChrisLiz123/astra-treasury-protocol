@@ -1,0 +1,105 @@
+{
+  "schema": "astra-public-treasury-safe-transaction-package-status-v0.1",
+  "generatedAt": "2026-05-13T14:52:27.110Z",
+  "status": "TREASURY_SAFE_TRANSACTION_PACKAGE_SCAFFOLD_READY_NO_PAYLOAD",
+  "mode": "PLANNING_ONLY_NO_SAFE_PAYLOAD",
+  "currentApprovedMode": "restricted-mainnet-operation",
+  "safeTransactionPayloadGenerated": false,
+  "safeTransactionPrepared": false,
+  "safeTransactionSubmitted": false,
+  "safeTransactionSigned": false,
+  "safeTransactionExecuted": false,
+  "treasuryFundingTransactionAuthorized": false,
+  "treasuryFundingExecuted": false,
+  "network": {
+    "name": "Base Mainnet",
+    "chainId": 8453
+  },
+  "publicStatement": "AstraTreasury Treasury Safe transaction package scaffold is prepared for review. No Safe payload is generated, no Safe transaction is prepared, and no treasury funding is authorized.",
+  "summary": {
+    "totalChecks": 37,
+    "passed": 37,
+    "failed": 0,
+    "activeIncidents": 0,
+    "responseRequired": false
+  },
+  "packageStatus": {
+    "transactionPackageScaffoldPrepared": true,
+    "safeTransactionPayloadGenerated": false,
+    "safeTransactionPrepared": false,
+    "safeTransactionSubmitted": false,
+    "safeTransactionSigned": false,
+    "safeTransactionExecuted": false,
+    "treasuryFundingTransactionAuthorized": false,
+    "treasuryFundingExecuted": false,
+    "treasurySafeApprovalRecorded": false,
+    "treasuryDisclosureFinalApproved": false,
+    "treasuryRiskLimitsApproved": false,
+    "fundingSourceApproved": false,
+    "treasuryFundingApproved": false
+  },
+  "requiredBeforePayloadGeneration": {
+    "treasuryDisclosureFinalApproved": false,
+    "treasuryRiskLimitsApproved": false,
+    "fundingSourceApproved": false,
+    "treasurySafeApprovalRecorded": false,
+    "treasuryFundingApproved": false,
+    "governanceApprovalRecorded": false,
+    "mainnetMonitorPassing": true,
+    "activeIncidentsZero": true
+  },
+  "payloadPreparationRules": {
+    "doNotGenerateSafePayload": true,
+    "doNotSubmitSafeTransaction": true,
+    "doNotRequestSignatures": true,
+    "doNotExecuteTransaction": true,
+    "doNotMoveFunds": true,
+    "doNotEnableExecution": true
+  },
+  "transactionTemplate": {
+    "network": "Base Mainnet",
+    "safe": "not approved",
+    "asset": "not approved",
+    "amount": "not approved",
+    "source": "not approved",
+    "destination": "not approved",
+    "purpose": "not approved",
+    "calldata": "not generated",
+    "safePayload": "not generated",
+    "safeTxHash": "",
+    "executionTxHash": ""
+  },
+  "currentStatuses": {
+    "stabilization": "RESTRICTED_LAUNCH_STABILIZED",
+    "treasuryDisclosure": "TREASURY_DISCLOSURE_APPROVAL_TRACK_OPEN_NOT_APPROVED",
+    "treasuryTransactionDryRun": "TREASURY_FUNDING_TRANSACTION_DRY_RUN_PASS_NOT_AUTHORIZED",
+    "treasurySafe": "TREASURY_SAFE_APPROVAL_TRACK_OPEN_NOT_APPROVED",
+    "treasurySource": "TREASURY_FUNDING_SOURCE_REVIEW_TRACK_OPEN_NOT_APPROVED",
+    "treasuryRisk": "TREASURY_RISK_LIMITS_DRAFT_READY_NOT_APPROVED",
+    "treasuryFunding": "TREASURY_FUNDING_READINESS_TRACK_OPEN_NOT_APPROVED",
+    "monitor": "PASS",
+    "alerts": "CLEAR",
+    "incidents": "NO_ACTIVE_INCIDENTS",
+    "mainnetExecution": "MAINNET_EXECUTION_QUEUE_DISABLED"
+  },
+  "safes": {
+    "governanceSafe": "0x8992B4173cf791Cf88eC36cd53b27F3BF22404D3",
+    "treasurySafe": "0xe2554515AaC8a3835326a4Ed5e9F44c319BE335C",
+    "executorSafe": "0xBea6124d6ed0CE1ce26e184A39e28B65eDCEE461",
+    "signalerSafe": "0xf3270118e25c3BeAfA863caD4516e9E3aDCd48D1"
+  },
+  "restrictions": {
+    "publicTokenSale": false,
+    "realTreasuryFunding": false,
+    "stakingOrRewards": false,
+    "buybackProgram": false,
+    "autonomousExecution": false,
+    "mainnetExecutionQueue": false,
+    "paperToOnchainAutomation": false
+  },
+  "nextPossibleMilestones": [
+    "Full-launch governance decision package",
+    "Treasury funding authorization package",
+    "Treasury Safe transaction payload generation package"
+  ]
+}

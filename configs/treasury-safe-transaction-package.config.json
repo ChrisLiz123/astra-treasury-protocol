@@ -1,0 +1,68 @@
+{
+  "schema": "astra-treasury-safe-transaction-package-config-v0.1",
+  "status": "planning-only-no-safe-payload",
+  "network": {
+    "name": "Base Mainnet",
+    "chainId": 8453
+  },
+  "currentApprovedMode": "restricted-mainnet-operation",
+  "operatorReportedClearances": {
+    "auditCleared": true,
+    "legalCleared": true,
+    "note": "Operator reported audit and legal requirements cleared. This does not authorize or prepare a Treasury Safe transaction."
+  },
+  "transactionPackageScaffoldPrepared": true,
+  "safeTransactionPayloadGenerated": false,
+  "safeTransactionPrepared": false,
+  "safeTransactionSubmitted": false,
+  "safeTransactionSigned": false,
+  "safeTransactionExecuted": false,
+  "treasuryFundingTransactionAuthorized": false,
+  "treasuryFundingExecuted": false,
+  "treasurySafeApprovalRecorded": false,
+  "treasuryDisclosureFinalApproved": false,
+  "treasuryRiskLimitsApproved": false,
+  "fundingSourceApproved": false,
+  "treasuryFundingApproved": false,
+  "transactionTemplate": {
+    "network": "Base Mainnet",
+    "safe": "not approved",
+    "asset": "not approved",
+    "amount": "not approved",
+    "source": "not approved",
+    "destination": "not approved",
+    "purpose": "not approved",
+    "calldata": "not generated",
+    "safePayload": "not generated",
+    "safeTxHash": "",
+    "executionTxHash": ""
+  },
+  "requiredBeforePayloadGeneration": {
+    "treasuryDisclosureFinalApproved": false,
+    "treasuryRiskLimitsApproved": false,
+    "fundingSourceApproved": false,
+    "treasurySafeApprovalRecorded": false,
+    "treasuryFundingApproved": false,
+    "governanceApprovalRecorded": false,
+    "mainnetMonitorPassing": true,
+    "activeIncidentsZero": true
+  },
+  "payloadPreparationRules": {
+    "doNotGenerateSafePayload": true,
+    "doNotSubmitSafeTransaction": true,
+    "doNotRequestSignatures": true,
+    "doNotExecuteTransaction": true,
+    "doNotMoveFunds": true,
+    "doNotEnableExecution": true
+  },
+  "hardStops": {
+    "publicTokenSaleApproved": false,
+    "realTreasuryFundingApproved": false,
+    "stakingOrRewardsApproved": false,
+    "buybackProgramApproved": false,
+    "mainnetExecutionQueueEnabled": false,
+    "paperToOnchainAutomationEnabled": false,
+    "autonomousExecutionApproved": false
+  },
+  "hardRule": "This package prepares the transaction-package structure only. It must not generate, submit, sign, execute, or authorize a Treasury Safe transaction."
+}
