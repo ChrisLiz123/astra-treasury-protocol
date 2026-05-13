@@ -1,0 +1,263 @@
+{
+  "schema": "astra-restricted-mode-release-candidate-status-v0.1",
+  "generatedAt": "2026-05-13T20:47:47.025Z",
+  "status": "RESTRICTED_MODE_RELEASE_CANDIDATE_READY_DECISION_RECORDED_ALL_DISABLED",
+  "currentApprovedMode": "restricted-mainnet-operation",
+  "releaseCandidateScope": "post-governance-decision-restricted-mode-all-disabled",
+  "publicStatement": "AstraTreasury restricted-mode release candidate is ready. Governance decision is recorded, all restricted capabilities remain disabled and not approved, and evidence is sealed.",
+  "summary": {
+    "artifactCount": 18,
+    "missingArtifactCount": 0,
+    "totalChecks": 15,
+    "passed": 15,
+    "failed": 0,
+    "activeIncidents": 0,
+    "responseRequired": false,
+    "monitorStatus": "PASS"
+  },
+  "releaseCandidate": {
+    "releaseCandidateHash": "6fa1204422f16f0fef793bd743dab02215439956db7510eb23b5855734f95896",
+    "hashAlgorithm": "SHA-256",
+    "artifactHashes": [
+      {
+        "path": "reports/full-launch-governance-decision/live/governance-decision-record.json",
+        "bytes": 2105,
+        "sha256": "371102b4cdd12055a004787f991aef1df8fdde378f34f310cc70d0ba8a575391"
+      },
+      {
+        "path": "reports/action-approvals/governance-decision/action-approval-record.json",
+        "bytes": 1586,
+        "sha256": "f569ac1a128e762d28f594812e050a778bef9d790bc7b51cd09623d01a0fd8df"
+      },
+      {
+        "path": "reports/signed-governance-resolution-evidence/import/signed-governance-resolution-evidence.json",
+        "bytes": 1774,
+        "sha256": "53d1772eb86086bf67feeb40ee39cc9ec9c26502b9ef73aa20c7b748e6007281"
+      },
+      {
+        "path": "reports/restricted-mode-evidence-seal/restricted-mode-evidence-seal.json",
+        "bytes": 8060,
+        "sha256": "577c7b07bbea00460a7ae9c71ccfee689074ff4ad8357cb94ccfc37035bcad8f"
+      },
+      {
+        "path": "public-docs/governance-decision-status.json",
+        "bytes": 2574,
+        "sha256": "ad7b6b6a5f8dd840ec334dfbbc505b675a2a13c88e5cf4b6812f107913c7cc21"
+      },
+      {
+        "path": "public-docs/restricted-mode-final-status.json",
+        "bytes": 3170,
+        "sha256": "14b7161d79e1605a8d908c5317d18e3f14a522a552ac37c3b54dade8d8696d51"
+      },
+      {
+        "path": "public-docs/restricted-mode-monitoring-baseline-status.json",
+        "bytes": 4742,
+        "sha256": "2e271875aaf5016a70322e1560805cb189cfb6fcaf9d6c8b331da99f6a3ff7a1"
+      },
+      {
+        "path": "public-docs/restricted-mode-evidence-seal-status.json",
+        "bytes": 8060,
+        "sha256": "577c7b07bbea00460a7ae9c71ccfee689074ff4ad8357cb94ccfc37035bcad8f"
+      },
+      {
+        "path": "public-docs/capability-matrix-status.json",
+        "bytes": 4146,
+        "sha256": "fed79d480fe50e22d8a1249ac4072dd3e2418d62d3cdebc62ae0e277391f4c23"
+      },
+      {
+        "path": "public-docs/public-status-update-status.json",
+        "bytes": 3145,
+        "sha256": "f9af0fed5e14bda46a48838c8967582af2876d0e0832a422e3e4aa6e7311a593"
+      },
+      {
+        "path": "public-docs/launch-control-status.json",
+        "bytes": 3637,
+        "sha256": "0f3aaca93d754d8d59572704d8133886c4fa355e8a0668cdd0c0a74bf362b353"
+      },
+      {
+        "path": "public-docs/mainnet-monitor-status.json",
+        "bytes": 1707,
+        "sha256": "262b7fa885ccfa29486bf38df29f0616d09ffe50cf1a6555d35c3859f0ff446e"
+      },
+      {
+        "path": "public-docs/mainnet-alerts-status.json",
+        "bytes": 2128,
+        "sha256": "122e1dad403be0aac99607c331264b9e0457a77cc97506272c7922362ac808ea"
+      },
+      {
+        "path": "public-docs/incident-summary.json",
+        "bytes": 432,
+        "sha256": "57b57c2637eaf8f5600b1b4664211d3562becd7258fb6c81c68857349f295b7b"
+      },
+      {
+        "path": "public-docs/mainnet-execution-status.json",
+        "bytes": 1320,
+        "sha256": "10d59ab5c652c02eb05d95b474d10287ee0ea4c8d90749abaa7291378eda0e5d"
+      },
+      {
+        "path": "public-docs/treasury-funding-status.json",
+        "bytes": 2489,
+        "sha256": "d87c2c774d0f782c4ca38857d3c77f2cf06037218af677ad9cdd365ba64c5e91"
+      },
+      {
+        "path": "public-docs/treasury-safe-transaction-status.json",
+        "bytes": 3932,
+        "sha256": "881b35ce7c12faab4fcabb6286d2fc10e8a61a48f19d30c30d01214024590812"
+      },
+      {
+        "path": "public-docs/full-launch-status.json",
+        "bytes": 2717,
+        "sha256": "16dec6e30bbec9b9692ea41c76cac4b798ef2c17ac5adb49a9fffa209e1a9cdc"
+      }
+    ]
+  },
+  "checks": [
+    {
+      "name": "Governance decision recorded",
+      "pass": true,
+      "details": {
+        "governanceDecisionRecorded": true
+      }
+    },
+    {
+      "name": "Restricted-mode final status synced",
+      "pass": true,
+      "details": {
+        "status": "RESTRICTED_MODE_FINAL_STATUS_SYNCED_DECISION_RECORDED_ALL_DISABLED"
+      }
+    },
+    {
+      "name": "Monitoring baseline established",
+      "pass": true,
+      "details": {
+        "status": "RESTRICTED_MODE_MONITORING_BASELINE_ESTABLISHED_DECISION_RECORDED_ALL_DISABLED"
+      }
+    },
+    {
+      "name": "Evidence seal generated",
+      "pass": true,
+      "details": {
+        "status": "RESTRICTED_MODE_EVIDENCE_SEALED_DECISION_RECORDED_ALL_DISABLED",
+        "sealHash": "da1c83bfc738ae07d0a92173f5dfd7e51fd22a7794b9c19d8f4e0a4afcc225af"
+      }
+    },
+    {
+      "name": "Capability Matrix all-disabled",
+      "pass": true,
+      "details": {
+        "allCapabilitiesDisabled": true,
+        "allCapabilityApprovalsFalse": true
+      }
+    },
+    {
+      "name": "Public Status Update finalized",
+      "pass": true,
+      "details": {
+        "publicStatusUpdateFinalApproved": true
+      }
+    },
+    {
+      "name": "Mainnet monitor passing",
+      "pass": true,
+      "details": {
+        "status": "PASS"
+      }
+    },
+    {
+      "name": "Alerts do not require response",
+      "pass": true,
+      "details": {
+        "responseRequired": false
+      }
+    },
+    {
+      "name": "No active incidents",
+      "pass": true,
+      "details": {
+        "activeIncidents": 0
+      }
+    },
+    {
+      "name": "Execution queue disabled",
+      "pass": true,
+      "details": {
+        "mode": "MAINNET_EXECUTION_QUEUE_DISABLED"
+      }
+    },
+    {
+      "name": "Full launch not approved",
+      "pass": true,
+      "details": {
+        "fullLaunchApproved": false,
+        "governanceDecisionFullLaunchApproved": false
+      }
+    },
+    {
+      "name": "Treasury funding not approved",
+      "pass": true,
+      "details": {
+        "treasuryFundingApproved": false
+      }
+    },
+    {
+      "name": "Treasury funding not executed",
+      "pass": true,
+      "details": {
+        "treasuryFundingExecuted": false
+      }
+    },
+    {
+      "name": "Safe payload not generated",
+      "pass": true,
+      "details": {
+        "safeTransactionPayloadGenerated": false
+      }
+    },
+    {
+      "name": "Safe transaction not prepared",
+      "pass": true,
+      "details": {
+        "safeTransactionPrepared": false
+      }
+    }
+  ],
+  "failures": [],
+  "missingArtifacts": [],
+  "currentStatuses": {
+    "governanceDecision": "GOVERNANCE_DECISION_RECORDED_RESTRICTED_MODE_ALL_DISABLED",
+    "restrictedModeFinalStatus": "RESTRICTED_MODE_FINAL_STATUS_SYNCED_DECISION_RECORDED_ALL_DISABLED",
+    "restrictedModeMonitoringBaseline": "RESTRICTED_MODE_MONITORING_BASELINE_ESTABLISHED_DECISION_RECORDED_ALL_DISABLED",
+    "restrictedModeEvidenceSeal": "RESTRICTED_MODE_EVIDENCE_SEALED_DECISION_RECORDED_ALL_DISABLED",
+    "capabilityMatrix": "CAPABILITY_MATRIX_FINALIZED_ALL_DISABLED",
+    "publicStatusUpdate": "PUBLIC_STATUS_UPDATE_FINALIZED_RESTRICTED_MODE",
+    "launchControl": "LAUNCH_CONTROL_READY_RESTRICTED_MODE",
+    "fullLaunch": "FULL_LAUNCH_READINESS_TRACK_OPEN_PLANNING_ONLY",
+    "treasuryFunding": "TREASURY_FUNDING_READINESS_TRACK_OPEN_NOT_APPROVED",
+    "treasurySafeTransaction": "TREASURY_SAFE_TRANSACTION_PACKAGE_SCAFFOLD_READY_NO_PAYLOAD",
+    "monitor": "PASS",
+    "alerts": "CLEAR",
+    "incidents": "NO_ACTIVE_INCIDENTS",
+    "mainnetExecution": "MAINNET_EXECUTION_QUEUE_DISABLED"
+  },
+  "restrictions": {
+    "publicTokenSale": false,
+    "realTreasuryFunding": false,
+    "stakingOrRewards": false,
+    "buybackProgram": false,
+    "autonomousExecution": false,
+    "mainnetExecutionQueue": false,
+    "paperToOnchainAutomation": false,
+    "safeTransactionPayloadGeneration": false,
+    "safeTransactionExecution": false
+  },
+  "safety": {
+    "sendsTransactions": false,
+    "movesFunds": false,
+    "deploysContracts": false,
+    "enablesExecution": false,
+    "approvesPublicSale": false,
+    "approvesTreasuryFunding": false,
+    "preparesSafeTransaction": false,
+    "approvesFullLaunch": false
+  }
+}

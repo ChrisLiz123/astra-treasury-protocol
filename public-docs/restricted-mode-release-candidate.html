@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AstraTreasury Restricted-Mode Release Candidate</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #08111f;
+      --surface: #0e1a2b;
+      --border: rgba(148, 163, 184, 0.2);
+      --text: #edf4fb;
+      --muted: #9aaec4;
+      --blue: #67a7ff;
+      --green: #41d49b;
+      --yellow: #f4c35f;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    body { margin: 0; background: linear-gradient(180deg, #07101d, var(--bg)); color: var(--text); }
+    a { color: var(--blue); text-decoration: none; }
+
+    main {
+      width: min(1120px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 44px 0 72px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 28px;
+      box-shadow: 0 22px 70px rgba(0,0,0,.28);
+      margin-bottom: 18px;
+    }
+
+    h1 { margin: 0 0 10px; font-size: 42px; letter-spacing: -1.2px; }
+    h2 { margin: 0 0 14px; font-size: 24px; }
+    p { color: var(--muted); line-height: 1.65; }
+
+    .badge {
+      display: inline-flex;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(65,212,155,.10);
+      border: 1px solid rgba(65,212,155,.22);
+      color: var(--green);
+      font-weight: 850;
+      margin-bottom: 16px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      overflow: hidden;
+    }
+
+    th, td {
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--border);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      color: var(--muted);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      background: rgba(255,255,255,.03);
+    }
+
+    tr:last-child td { border-bottom: 0; }
+
+    code {
+      color: var(--muted);
+      overflow-wrap: anywhere;
+      font-size: 12px;
+    }
+
+    .notice {
+      padding: 16px;
+      border-radius: 16px;
+      background: rgba(244,195,95,.08);
+      border: 1px solid rgba(244,195,95,.22);
+      color: #f7d99a;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+<main>
+  <section class="card">
+    <div class="badge">Release candidate · restricted mode</div>
+    <h1>Restricted-Mode Release Candidate</h1>
+    <p>AstraTreasury restricted-mode release candidate is ready. Governance decision is recorded, all restricted capabilities remain disabled and not approved, and evidence is sealed.</p>
+    <p><strong>Release candidate hash:</strong> <code>6fa1204422f16f0fef793bd743dab02215439956db7510eb23b5855734f95896</code></p>
+  </section>
+
+  <section class="card">
+    <h2>Release artifacts</h2>
+    <table>
+      <thead><tr><th>Artifact</th><th>Bytes</th><th>SHA-256</th></tr></thead>
+      <tbody><tr><td>reports/full-launch-governance-decision/live/governance-decision-record.json</td><td>2105</td><td><code>371102b4cdd12055a004787f991aef1df8fdde378f34f310cc70d0ba8a575391</code></td></tr><tr><td>reports/action-approvals/governance-decision/action-approval-record.json</td><td>1586</td><td><code>f569ac1a128e762d28f594812e050a778bef9d790bc7b51cd09623d01a0fd8df</code></td></tr><tr><td>reports/signed-governance-resolution-evidence/import/signed-governance-resolution-evidence.json</td><td>1774</td><td><code>53d1772eb86086bf67feeb40ee39cc9ec9c26502b9ef73aa20c7b748e6007281</code></td></tr><tr><td>reports/restricted-mode-evidence-seal/restricted-mode-evidence-seal.json</td><td>8060</td><td><code>577c7b07bbea00460a7ae9c71ccfee689074ff4ad8357cb94ccfc37035bcad8f</code></td></tr><tr><td>public-docs/governance-decision-status.json</td><td>2574</td><td><code>ad7b6b6a5f8dd840ec334dfbbc505b675a2a13c88e5cf4b6812f107913c7cc21</code></td></tr><tr><td>public-docs/restricted-mode-final-status.json</td><td>3170</td><td><code>14b7161d79e1605a8d908c5317d18e3f14a522a552ac37c3b54dade8d8696d51</code></td></tr><tr><td>public-docs/restricted-mode-monitoring-baseline-status.json</td><td>4742</td><td><code>2e271875aaf5016a70322e1560805cb189cfb6fcaf9d6c8b331da99f6a3ff7a1</code></td></tr><tr><td>public-docs/restricted-mode-evidence-seal-status.json</td><td>8060</td><td><code>577c7b07bbea00460a7ae9c71ccfee689074ff4ad8357cb94ccfc37035bcad8f</code></td></tr><tr><td>public-docs/capability-matrix-status.json</td><td>4146</td><td><code>fed79d480fe50e22d8a1249ac4072dd3e2418d62d3cdebc62ae0e277391f4c23</code></td></tr><tr><td>public-docs/public-status-update-status.json</td><td>3145</td><td><code>f9af0fed5e14bda46a48838c8967582af2876d0e0832a422e3e4aa6e7311a593</code></td></tr><tr><td>public-docs/launch-control-status.json</td><td>3637</td><td><code>0f3aaca93d754d8d59572704d8133886c4fa355e8a0668cdd0c0a74bf362b353</code></td></tr><tr><td>public-docs/mainnet-monitor-status.json</td><td>1707</td><td><code>262b7fa885ccfa29486bf38df29f0616d09ffe50cf1a6555d35c3859f0ff446e</code></td></tr><tr><td>public-docs/mainnet-alerts-status.json</td><td>2128</td><td><code>122e1dad403be0aac99607c331264b9e0457a77cc97506272c7922362ac808ea</code></td></tr><tr><td>public-docs/incident-summary.json</td><td>432</td><td><code>57b57c2637eaf8f5600b1b4664211d3562becd7258fb6c81c68857349f295b7b</code></td></tr><tr><td>public-docs/mainnet-execution-status.json</td><td>1320</td><td><code>10d59ab5c652c02eb05d95b474d10287ee0ea4c8d90749abaa7291378eda0e5d</code></td></tr><tr><td>public-docs/treasury-funding-status.json</td><td>2489</td><td><code>d87c2c774d0f782c4ca38857d3c77f2cf06037218af677ad9cdd365ba64c5e91</code></td></tr><tr><td>public-docs/treasury-safe-transaction-status.json</td><td>3932</td><td><code>881b35ce7c12faab4fcabb6286d2fc10e8a61a48f19d30c30d01214024590812</code></td></tr><tr><td>public-docs/full-launch-status.json</td><td>2717</td><td><code>16dec6e30bbec9b9692ea41c76cac4b798ef2c17ac5adb49a9fffa209e1a9cdc</code></td></tr></tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>Checks</h2>
+    <table>
+      <thead><tr><th>Check</th><th>Status</th><th>Details</th></tr></thead>
+      <tbody><tr><td>Governance decision recorded</td><td>PASS</td><td><code>{&quot;governanceDecisionRecorded&quot;:true}</code></td></tr><tr><td>Restricted-mode final status synced</td><td>PASS</td><td><code>{&quot;status&quot;:&quot;RESTRICTED_MODE_FINAL_STATUS_SYNCED_DECISION_RECORDED_ALL_DISABLED&quot;}</code></td></tr><tr><td>Monitoring baseline established</td><td>PASS</td><td><code>{&quot;status&quot;:&quot;RESTRICTED_MODE_MONITORING_BASELINE_ESTABLISHED_DECISION_RECORDED_ALL_DISABLED&quot;}</code></td></tr><tr><td>Evidence seal generated</td><td>PASS</td><td><code>{&quot;status&quot;:&quot;RESTRICTED_MODE_EVIDENCE_SEALED_DECISION_RECORDED_ALL_DISABLED&quot;,&quot;sealHash&quot;:&quot;da1c83bfc738ae07d0a92173f5dfd7e51fd22a7794b9c19d8f4e0a4afcc225af&quot;}</code></td></tr><tr><td>Capability Matrix all-disabled</td><td>PASS</td><td><code>{&quot;allCapabilitiesDisabled&quot;:true,&quot;allCapabilityApprovalsFalse&quot;:true}</code></td></tr><tr><td>Public Status Update finalized</td><td>PASS</td><td><code>{&quot;publicStatusUpdateFinalApproved&quot;:true}</code></td></tr><tr><td>Mainnet monitor passing</td><td>PASS</td><td><code>{&quot;status&quot;:&quot;PASS&quot;}</code></td></tr><tr><td>Alerts do not require response</td><td>PASS</td><td><code>{&quot;responseRequired&quot;:false}</code></td></tr><tr><td>No active incidents</td><td>PASS</td><td><code>{&quot;activeIncidents&quot;:0}</code></td></tr><tr><td>Execution queue disabled</td><td>PASS</td><td><code>{&quot;mode&quot;:&quot;MAINNET_EXECUTION_QUEUE_DISABLED&quot;}</code></td></tr><tr><td>Full launch not approved</td><td>PASS</td><td><code>{&quot;fullLaunchApproved&quot;:false,&quot;governanceDecisionFullLaunchApproved&quot;:false}</code></td></tr><tr><td>Treasury funding not approved</td><td>PASS</td><td><code>{&quot;treasuryFundingApproved&quot;:false}</code></td></tr><tr><td>Treasury funding not executed</td><td>PASS</td><td><code>{&quot;treasuryFundingExecuted&quot;:false}</code></td></tr><tr><td>Safe payload not generated</td><td>PASS</td><td><code>{&quot;safeTransactionPayloadGenerated&quot;:false}</code></td></tr><tr><td>Safe transaction not prepared</td><td>PASS</td><td><code>{&quot;safeTransactionPrepared&quot;:false}</code></td></tr></tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>Current statuses</h2>
+    <table>
+      <thead><tr><th>Area</th><th>Status</th></tr></thead>
+      <tbody><tr><td>governanceDecision</td><td>Governance Decision Recorded Restricted Mode All Disabled</td></tr><tr><td>restrictedModeFinalStatus</td><td>Restricted Mode Final Status Synced Decision Recorded All Disabled</td></tr><tr><td>restrictedModeMonitoringBaseline</td><td>Restricted Mode Monitoring Baseline Established Decision Recorded All Disabled</td></tr><tr><td>restrictedModeEvidenceSeal</td><td>Restricted Mode Evidence Sealed Decision Recorded All Disabled</td></tr><tr><td>capabilityMatrix</td><td>Capability Matrix Finalized All Disabled</td></tr><tr><td>publicStatusUpdate</td><td>Public Status Update Finalized Restricted Mode</td></tr><tr><td>launchControl</td><td>Launch Control Ready Restricted Mode</td></tr><tr><td>fullLaunch</td><td>Full Launch Readiness Track Open Planning Only</td></tr><tr><td>treasuryFunding</td><td>Treasury Funding Readiness Track Open Not Approved</td></tr><tr><td>treasurySafeTransaction</td><td>Treasury Safe Transaction Package Scaffold Ready No Payload</td></tr><tr><td>monitor</td><td>Pass</td></tr><tr><td>alerts</td><td>Clear</td></tr><tr><td>incidents</td><td>No Active Incidents</td></tr><tr><td>mainnetExecution</td><td>Mainnet Execution Queue Disabled</td></tr></tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>Important</h2>
+    <div class="notice">
+      This release candidate is a restricted-mode package only. It does not approve launch, funding,
+      public sale, staking/rewards, buybacks, execution, automation, autonomous execution,
+      Safe payload generation, or Safe transaction execution.
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Public API</h2>
+    <p><a href="/api/public/restricted-mode-release-candidate">/api/public/restricted-mode-release-candidate</a></p>
+    <p><a href="/restricted-mode-evidence-seal">Restricted-Mode Evidence Seal</a></p>
+    <p><a href="/restricted-mode-monitoring-baseline">Restricted-Mode Monitoring Baseline</a></p>
+    <p><a href="/">Back to homepage</a></p>
+  </section>
+</main>
+</body>
+</html>

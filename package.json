@@ -368,7 +368,11 @@
     "restricted-mode:evidence-seal:status": "node services/restricted-mode-evidence-seal/status.mjs",
     "restricted-mode:evidence-seal:validate": "node scripts/validate-restricted-mode-evidence-seal.mjs",
     "restricted-mode:evidence-seal:gate": "npm run restricted-mode:evidence-seal:status && npm run restricted-mode:evidence-seal:validate",
-    "release:restricted-mode-evidence-seal": "bash scripts/release/package-restricted-mode-evidence-seal.sh"
+    "release:restricted-mode-evidence-seal": "bash scripts/release/package-restricted-mode-evidence-seal.sh",
+    "restricted-mode:release-candidate:status": "node services/restricted-mode-release-candidate/status.mjs",
+    "restricted-mode:release-candidate:validate": "node scripts/validate-restricted-mode-release-candidate.mjs",
+    "restricted-mode:release-candidate:gate": "npm run restricted-mode:release-candidate:status && npm run restricted-mode:release-candidate:validate",
+    "release:restricted-mode-release-candidate": "bash scripts/release/package-restricted-mode-release-candidate.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",
