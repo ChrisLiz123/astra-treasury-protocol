@@ -324,7 +324,11 @@
     "launch:control:validate": "node scripts/validate-launch-control.mjs",
     "launch:control:status": "node services/launch-control/status.mjs",
     "launch:control:gate": "npm run launch:control:validate && npm run launch:control:status",
-    "release:launch-control-matrix": "bash scripts/release/package-launch-control-matrix.sh"
+    "release:launch-control-matrix": "bash scripts/release/package-launch-control-matrix.sh",
+    "action:governance-decision:validate": "node scripts/validate-action-approval-governance-decision.mjs",
+    "action:governance-decision:status": "node services/action-approval/governance-decision-status.mjs",
+    "action:governance-decision:gate": "npm run action:governance-decision:validate && npm run action:governance-decision:status",
+    "release:action-governance-decision-approval": "bash scripts/release/package-action-governance-decision-approval.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",

@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AstraTreasury Governance Decision Approval</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #08111f;
+      --surface: #0e1a2b;
+      --border: rgba(148, 163, 184, 0.2);
+      --text: #edf4fb;
+      --muted: #9aaec4;
+      --blue: #67a7ff;
+      --green: #41d49b;
+      --yellow: #f4c35f;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    body { margin: 0; background: linear-gradient(180deg, #07101d, var(--bg)); color: var(--text); }
+    a { color: var(--blue); text-decoration: none; }
+
+    main {
+      width: min(1120px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 44px 0 72px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 28px;
+      box-shadow: 0 22px 70px rgba(0,0,0,.28);
+      margin-bottom: 18px;
+    }
+
+    h1 { margin: 0 0 10px; font-size: 42px; letter-spacing: -1.2px; }
+    h2 { margin: 0 0 14px; font-size: 24px; }
+    p { color: var(--muted); line-height: 1.65; }
+
+    .badge {
+      display: inline-flex;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(244,195,95,.08);
+      border: 1px solid rgba(244,195,95,.22);
+      color: var(--yellow);
+      font-weight: 850;
+      margin-bottom: 16px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      overflow: hidden;
+    }
+
+    th, td {
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--border);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      color: var(--muted);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      background: rgba(255,255,255,.03);
+    }
+
+    tr:last-child td { border-bottom: 0; }
+
+    .notice {
+      padding: 16px;
+      border-radius: 16px;
+      background: rgba(244,195,95,.08);
+      border: 1px solid rgba(244,195,95,.22);
+      color: #f7d99a;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+<main>
+  <section class="card">
+    <div class="badge">Action-specific path · approval not recorded</div>
+    <h1>Governance Decision Approval</h1>
+    <p>AstraTreasury has selected governance decision recording as the first action-specific approval path. The path is ready, but approval remains blocked until vote/result, signed resolution, capability matrix, evidence, and final approval requirements are complete.</p>
+  </section>
+
+  <section class="card">
+    <h2>Action approval status</h2>
+    <table>
+      <thead><tr><th>Item</th><th>Status</th></tr></thead>
+      <tbody><tr><td>actionSpecificApprovalRequested</td><td>Pending / false</td></tr><tr><td>actionSpecificApprovalRecorded</td><td>Pending / false</td></tr><tr><td>actionSpecificApprovalExecuted</td><td>Pending / false</td></tr><tr><td>governanceDecisionRecordingAuthorized</td><td>Pending / false</td></tr><tr><td>governanceDecisionRecorded</td><td>Pending / false</td></tr><tr><td>governanceDecisionPublished</td><td>Pending / false</td></tr><tr><td>fullLaunchApproved</td><td>Pending / false</td></tr><tr><td>treasuryFundingApproved</td><td>Pending / false</td></tr><tr><td>treasuryFundingTransactionAuthorized</td><td>Pending / false</td></tr><tr><td>treasuryFundingExecuted</td><td>Pending / false</td></tr><tr><td>safeTransactionPayloadGenerated</td><td>Pending / false</td></tr><tr><td>safeTransactionPrepared</td><td>Pending / false</td></tr><tr><td>safeTransactionSubmitted</td><td>Pending / false</td></tr><tr><td>safeTransactionSigned</td><td>Pending / false</td></tr><tr><td>safeTransactionExecuted</td><td>Pending / false</td></tr></tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>Current blockers</h2>
+    <table>
+      <thead><tr><th>Blocker</th><th>Meaning</th></tr></thead>
+      <tbody><tr><td>signedGovernanceResolutionExists</td><td>Required before approval</td></tr><tr><td>voteResultRecorded</td><td>Required before approval</td></tr><tr><td>resolutionSigningAuthorizationRecorded</td><td>Required before approval</td></tr><tr><td>capabilityMatrixFinalApproved</td><td>Required before approval</td></tr><tr><td>publicStatusUpdateFinalApproved</td><td>Required before approval</td></tr><tr><td>decisionRecorderAssigned</td><td>Required before approval</td></tr><tr><td>finalActionApprovalRecorded</td><td>Required before approval</td></tr></tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>Dry-run cases</h2>
+    <table>
+      <thead><tr><th>ID</th><th>Case</th><th>Outcome</th><th>Status</th></tr></thead>
+      <tbody><tr><td>ACTION-GOV-DECISION-001</td><td>Missing vote result blocks action approval</td><td>BLOCKED</td><td>PASS</td></tr><tr><td>ACTION-GOV-DECISION-002</td><td>Missing signed resolution blocks action approval</td><td>BLOCKED</td><td>PASS</td></tr><tr><td>ACTION-GOV-DECISION-003</td><td>Missing resolution authorization blocks action approval</td><td>BLOCKED</td><td>PASS</td></tr><tr><td>ACTION-GOV-DECISION-004</td><td>Missing capability matrix blocks action approval</td><td>BLOCKED</td><td>PASS</td></tr><tr><td>ACTION-GOV-DECISION-005</td><td>Missing public status update blocks action approval</td><td>BLOCKED</td><td>PASS</td></tr><tr><td>ACTION-GOV-DECISION-006</td><td>Action approval recording attempt</td><td>BLOCKED</td><td>PASS</td></tr><tr><td>ACTION-GOV-DECISION-007</td><td>Governance decision recording attempt</td><td>BLOCKED</td><td>PASS</td></tr><tr><td>ACTION-GOV-DECISION-008</td><td>Full launch approval attempt</td><td>BLOCKED</td><td>PASS</td></tr><tr><td>ACTION-GOV-DECISION-009</td><td>Capability approval attempt</td><td>BLOCKED</td><td>PASS</td></tr></tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>Approval checklist</h2>
+    <table>
+      <thead><tr><th>Item</th><th>Status</th></tr></thead>
+      <tbody><tr><td>selectedActionReviewed</td><td>Pending</td></tr><tr><td>scopeReviewed</td><td>Pending</td></tr><tr><td>voteResultReviewed</td><td>Pending</td></tr><tr><td>signedResolutionReviewed</td><td>Pending</td></tr><tr><td>capabilityMatrixReviewed</td><td>Pending</td></tr><tr><td>approvedCapabilitiesReviewed</td><td>Pending</td></tr><tr><td>disabledCapabilitiesReviewed</td><td>Pending</td></tr><tr><td>publicStatusUpdateReviewed</td><td>Pending</td></tr><tr><td>evidenceReferenceReviewed</td><td>Pending</td></tr><tr><td>decisionRecorderAssigned</td><td>Pending</td></tr><tr><td>monitoringStatusReviewed</td><td>Pending</td></tr><tr><td>incidentStatusReviewed</td><td>Pending</td></tr><tr><td>finalActionApprovalRecorded</td><td>Pending</td></tr></tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>Current statuses</h2>
+    <table>
+      <thead><tr><th>Area</th><th>Status</th></tr></thead>
+      <tbody><tr><td>launchControl</td><td>Launch Control Ready Restricted Mode</td></tr><tr><td>stabilization</td><td>Restricted Launch Stabilized</td></tr><tr><td>fullLaunch</td><td>Full Launch Readiness Track Open Planning Only</td></tr><tr><td>decisionRecording</td><td>Full Launch Governance Decision Recording Package Ready Not Recorded</td></tr><tr><td>decisionAuthorization</td><td>Full Launch Governance Decision Recording Authorization Package Ready Not Recorded</td></tr><tr><td>governanceResolution</td><td>Full Launch Governance Resolution Package Ready Not Signed</td></tr><tr><td>resolutionAuthorization</td><td>Full Launch Governance Resolution Authorization Package Ready Not Recorded</td></tr><tr><td>treasuryFunding</td><td>Treasury Funding Readiness Track Open Not Approved</td></tr><tr><td>treasurySafeTransaction</td><td>Treasury Safe Transaction Package Scaffold Ready No Payload</td></tr><tr><td>monitor</td><td>Pass</td></tr><tr><td>alerts</td><td>Clear</td></tr><tr><td>incidents</td><td>No Active Incidents</td></tr><tr><td>mainnetExecution</td><td>Mainnet Execution Queue Disabled</td></tr></tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>Important</h2>
+    <div class="notice">
+      This is the first action-specific approval path. It does not record approval or a governance decision.
+      Full launch and all restricted capabilities remain not approved.
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Public API</h2>
+    <p><a href="/api/public/governance-decision-approval">/api/public/governance-decision-approval</a></p>
+    <p><a href="/launch-control">Launch Control</a></p>
+    <p><a href="/full-launch-governance-decision-recording">Governance decision recording</a></p>
+    <p><a href="/">Back to homepage</a></p>
+  </section>
+</main>
+</body>
+</html>

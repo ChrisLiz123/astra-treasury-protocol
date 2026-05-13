@@ -1,0 +1,120 @@
+{
+  "schema": "astra-action-specific-governance-decision-approval-config-v0.1",
+  "status": "action-specific-approval-not-recorded",
+  "network": {
+    "name": "Base Mainnet",
+    "chainId": 8453
+  },
+  "selectedAction": {
+    "id": "governance-decision-recording",
+    "label": "Record final governance decision",
+    "category": "governance",
+    "description": "Authorize and record the final governance decision that defines exactly which capabilities, if any, are approved."
+  },
+  "currentApprovedMode": "restricted-mainnet-operation",
+  "operatorReportedClearances": {
+    "auditCleared": true,
+    "legalCleared": true,
+    "note": "Operator reported audit and legal requirements cleared."
+  },
+  "actionSpecificApprovalRequested": false,
+  "actionSpecificApprovalRecorded": false,
+  "actionSpecificApprovalExecuted": false,
+  "governanceDecisionRecordingAuthorized": false,
+  "governanceDecisionRecorded": false,
+  "governanceDecisionPublished": false,
+  "fullLaunchApproved": false,
+  "publicDisclosuresFinalApproved": false,
+  "treasuryDisclosureFinalApproved": false,
+  "treasuryFundingApproved": false,
+  "treasuryFundingTransactionAuthorized": false,
+  "treasuryFundingExecuted": false,
+  "safeTransactionPayloadGenerated": false,
+  "safeTransactionPrepared": false,
+  "safeTransactionSubmitted": false,
+  "safeTransactionSigned": false,
+  "safeTransactionExecuted": false,
+  "capabilityApprovals": {
+    "publicTokenSaleApproved": false,
+    "realTreasuryFundingApproved": false,
+    "stakingOrRewardsApproved": false,
+    "buybackProgramApproved": false,
+    "mainnetExecutionQueueApproved": false,
+    "paperToOnchainAutomationApproved": false,
+    "autonomousExecutionApproved": false
+  },
+  "requiredBeforeActionApproval": {
+    "launchControlReady": true,
+    "restrictedLaunchStabilized": true,
+    "auditClearanceRecorded": true,
+    "legalClearanceRecorded": true,
+    "mainnetMonitorPassing": true,
+    "activeIncidentsZero": true,
+    "governanceDecisionRecordingPackageReady": true,
+    "governanceDecisionRecordingAuthorizationPackageReady": true,
+    "signedGovernanceResolutionExists": false,
+    "voteResultRecorded": false,
+    "resolutionSigningAuthorizationRecorded": false,
+    "capabilityMatrixFinalApproved": false,
+    "publicStatusUpdateFinalApproved": false,
+    "decisionRecorderAssigned": false,
+    "finalActionApprovalRecorded": false
+  },
+  "approvalChecklist": {
+    "selectedActionReviewed": false,
+    "scopeReviewed": false,
+    "voteResultReviewed": false,
+    "signedResolutionReviewed": false,
+    "capabilityMatrixReviewed": false,
+    "approvedCapabilitiesReviewed": false,
+    "disabledCapabilitiesReviewed": false,
+    "publicStatusUpdateReviewed": false,
+    "evidenceReferenceReviewed": false,
+    "decisionRecorderAssigned": false,
+    "monitoringStatusReviewed": false,
+    "incidentStatusReviewed": false,
+    "finalActionApprovalRecorded": false
+  },
+  "draftApprovalRecord": {
+    "decision": "NOT APPROVED",
+    "actionId": "governance-decision-recording",
+    "approvalDate": "",
+    "approver": "TBD",
+    "decisionRecordReference": "TBD",
+    "resolutionReference": "TBD",
+    "voteResult": "TBD",
+    "approvedCapabilities": [],
+    "disabledCapabilities": [
+      "publicTokenSale",
+      "realTreasuryFunding",
+      "stakingOrRewards",
+      "buybackProgram",
+      "mainnetExecutionQueue",
+      "paperToOnchainAutomation",
+      "autonomousExecution"
+    ],
+    "evidenceReference": "TBD",
+    "publicStatusUpdate": "TBD"
+  },
+  "dryRunCases": {
+    "missingVoteResultBlocksApproval": true,
+    "missingSignedResolutionBlocksApproval": true,
+    "missingResolutionAuthorizationBlocksApproval": true,
+    "missingCapabilityMatrixBlocksApproval": true,
+    "missingPublicStatusUpdateBlocksApproval": true,
+    "noActionApprovalRecorded": true,
+    "noGovernanceDecisionRecorded": true,
+    "noFullLaunchApproved": true,
+    "noCapabilityApproved": true
+  },
+  "hardStops": {
+    "publicTokenSaleApproved": false,
+    "realTreasuryFundingApproved": false,
+    "stakingOrRewardsApproved": false,
+    "buybackProgramApproved": false,
+    "mainnetExecutionQueueEnabled": false,
+    "paperToOnchainAutomationEnabled": false,
+    "autonomousExecutionApproved": false
+  },
+  "hardRule": "This is the selected action-specific approval path. It must not record approval, record a governance decision, approve full launch, or approve any restricted capability until final approval evidence exists."
+}

@@ -744,6 +744,10 @@ const html = `<!doctype html>
           <strong>Launch Control</strong>
           <span>Consolidated launch matrix. Generic prep is complete.</span>
         </a>
+        <a class="link-card" href="/governance-decision-approval">
+          <strong>Governance decision approval</strong>
+          <span>First action-specific approval path. Approval is not recorded.</span>
+        </a>
         <a class="link-card" href="/protocol">
           <strong>Protocol</strong>
           <span>How AstraTreasury works at a high level.</span>

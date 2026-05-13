@@ -1,0 +1,440 @@
+{
+  "schema": "astra-action-specific-governance-decision-approval-status-v0.1",
+  "generatedAt": "2026-05-13T17:54:00.851Z",
+  "status": "ACTION_SPECIFIC_APPROVAL_PATH_READY_BLOCKED_PENDING_EVIDENCE",
+  "selectedAction": {
+    "id": "governance-decision-recording",
+    "label": "Record final governance decision",
+    "category": "governance",
+    "description": "Authorize and record the final governance decision that defines exactly which capabilities, if any, are approved."
+  },
+  "currentApprovedMode": "restricted-mainnet-operation",
+  "actionSpecificApprovalRecorded": false,
+  "governanceDecisionRecorded": false,
+  "fullLaunchApproved": false,
+  "publicStatement": "AstraTreasury has selected governance decision recording as the first action-specific approval path. The path is ready, but approval remains blocked until vote/result, signed resolution, capability matrix, evidence, and final approval requirements are complete.",
+  "summary": {
+    "totalChecks": 26,
+    "passed": 26,
+    "failed": 0,
+    "dryRunCases": 9,
+    "dryRunCasesPassed": 9,
+    "failedCases": 0,
+    "activeIncidents": 0,
+    "responseRequired": false,
+    "blockerCount": 7
+  },
+  "clearances": {
+    "auditCleared": true,
+    "legalCleared": true,
+    "note": "Operator reported audit and legal requirements cleared."
+  },
+  "approvalStatus": {
+    "actionSpecificApprovalRequested": false,
+    "actionSpecificApprovalRecorded": false,
+    "actionSpecificApprovalExecuted": false,
+    "governanceDecisionRecordingAuthorized": false,
+    "governanceDecisionRecorded": false,
+    "governanceDecisionPublished": false,
+    "fullLaunchApproved": false,
+    "treasuryFundingApproved": false,
+    "treasuryFundingTransactionAuthorized": false,
+    "treasuryFundingExecuted": false,
+    "safeTransactionPayloadGenerated": false,
+    "safeTransactionPrepared": false,
+    "safeTransactionSubmitted": false,
+    "safeTransactionSigned": false,
+    "safeTransactionExecuted": false
+  },
+  "requiredBeforeActionApproval": {
+    "launchControlReady": true,
+    "restrictedLaunchStabilized": true,
+    "auditClearanceRecorded": true,
+    "legalClearanceRecorded": true,
+    "mainnetMonitorPassing": true,
+    "activeIncidentsZero": true,
+    "governanceDecisionRecordingPackageReady": true,
+    "governanceDecisionRecordingAuthorizationPackageReady": true,
+    "signedGovernanceResolutionExists": false,
+    "voteResultRecorded": false,
+    "resolutionSigningAuthorizationRecorded": false,
+    "capabilityMatrixFinalApproved": false,
+    "publicStatusUpdateFinalApproved": false,
+    "decisionRecorderAssigned": false,
+    "finalActionApprovalRecorded": false
+  },
+  "actionBlockers": [
+    "signedGovernanceResolutionExists",
+    "voteResultRecorded",
+    "resolutionSigningAuthorizationRecorded",
+    "capabilityMatrixFinalApproved",
+    "publicStatusUpdateFinalApproved",
+    "decisionRecorderAssigned",
+    "finalActionApprovalRecorded"
+  ],
+  "approvalChecklist": {
+    "selectedActionReviewed": false,
+    "scopeReviewed": false,
+    "voteResultReviewed": false,
+    "signedResolutionReviewed": false,
+    "capabilityMatrixReviewed": false,
+    "approvedCapabilitiesReviewed": false,
+    "disabledCapabilitiesReviewed": false,
+    "publicStatusUpdateReviewed": false,
+    "evidenceReferenceReviewed": false,
+    "decisionRecorderAssigned": false,
+    "monitoringStatusReviewed": false,
+    "incidentStatusReviewed": false,
+    "finalActionApprovalRecorded": false
+  },
+  "draftApprovalRecord": {
+    "decision": "NOT APPROVED",
+    "actionId": "governance-decision-recording",
+    "approvalDate": "",
+    "approver": "TBD",
+    "decisionRecordReference": "TBD",
+    "resolutionReference": "TBD",
+    "voteResult": "TBD",
+    "approvedCapabilities": [],
+    "disabledCapabilities": [
+      "publicTokenSale",
+      "realTreasuryFunding",
+      "stakingOrRewards",
+      "buybackProgram",
+      "mainnetExecutionQueue",
+      "paperToOnchainAutomation",
+      "autonomousExecution"
+    ],
+    "evidenceReference": "TBD",
+    "publicStatusUpdate": "TBD"
+  },
+  "capabilityApprovals": {
+    "publicTokenSaleApproved": false,
+    "realTreasuryFundingApproved": false,
+    "stakingOrRewardsApproved": false,
+    "buybackProgramApproved": false,
+    "mainnetExecutionQueueApproved": false,
+    "paperToOnchainAutomationApproved": false,
+    "autonomousExecutionApproved": false
+  },
+  "dryRunCases": [
+    {
+      "id": "ACTION-GOV-DECISION-001",
+      "title": "Missing vote result blocks action approval",
+      "expected": "BLOCKED",
+      "actual": "BLOCKED",
+      "reason": "vote result is not recorded",
+      "pass": true
+    },
+    {
+      "id": "ACTION-GOV-DECISION-002",
+      "title": "Missing signed resolution blocks action approval",
+      "expected": "BLOCKED",
+      "actual": "BLOCKED",
+      "reason": "signed governance resolution does not exist",
+      "pass": true
+    },
+    {
+      "id": "ACTION-GOV-DECISION-003",
+      "title": "Missing resolution authorization blocks action approval",
+      "expected": "BLOCKED",
+      "actual": "BLOCKED",
+      "reason": "resolution signing authorization is not recorded",
+      "pass": true
+    },
+    {
+      "id": "ACTION-GOV-DECISION-004",
+      "title": "Missing capability matrix blocks action approval",
+      "expected": "BLOCKED",
+      "actual": "BLOCKED",
+      "reason": "capability matrix is not final-approved",
+      "pass": true
+    },
+    {
+      "id": "ACTION-GOV-DECISION-005",
+      "title": "Missing public status update blocks action approval",
+      "expected": "BLOCKED",
+      "actual": "BLOCKED",
+      "reason": "public status update is not final-approved",
+      "pass": true
+    },
+    {
+      "id": "ACTION-GOV-DECISION-006",
+      "title": "Action approval recording attempt",
+      "expected": "BLOCKED",
+      "actual": "BLOCKED",
+      "reason": "this package must not record approval",
+      "pass": true
+    },
+    {
+      "id": "ACTION-GOV-DECISION-007",
+      "title": "Governance decision recording attempt",
+      "expected": "BLOCKED",
+      "actual": "BLOCKED",
+      "reason": "this package must not record a governance decision",
+      "pass": true
+    },
+    {
+      "id": "ACTION-GOV-DECISION-008",
+      "title": "Full launch approval attempt",
+      "expected": "BLOCKED",
+      "actual": "BLOCKED",
+      "reason": "this package must not approve full launch",
+      "pass": true
+    },
+    {
+      "id": "ACTION-GOV-DECISION-009",
+      "title": "Capability approval attempt",
+      "expected": "BLOCKED",
+      "actual": "BLOCKED",
+      "reason": "this package must not approve any capability",
+      "pass": true
+    }
+  ],
+  "currentStatuses": {
+    "launchControl": "LAUNCH_CONTROL_READY_RESTRICTED_MODE",
+    "stabilization": "RESTRICTED_LAUNCH_STABILIZED",
+    "fullLaunch": "FULL_LAUNCH_READINESS_TRACK_OPEN_PLANNING_ONLY",
+    "decisionRecording": "FULL_LAUNCH_GOVERNANCE_DECISION_RECORDING_PACKAGE_READY_NOT_RECORDED",
+    "decisionAuthorization": "FULL_LAUNCH_GOVERNANCE_DECISION_RECORDING_AUTHORIZATION_PACKAGE_READY_NOT_RECORDED",
+    "governanceResolution": "FULL_LAUNCH_GOVERNANCE_RESOLUTION_PACKAGE_READY_NOT_SIGNED",
+    "resolutionAuthorization": "FULL_LAUNCH_GOVERNANCE_RESOLUTION_AUTHORIZATION_PACKAGE_READY_NOT_RECORDED",
+    "treasuryFunding": "TREASURY_FUNDING_READINESS_TRACK_OPEN_NOT_APPROVED",
+    "treasurySafeTransaction": "TREASURY_SAFE_TRANSACTION_PACKAGE_SCAFFOLD_READY_NO_PAYLOAD",
+    "monitor": "PASS",
+    "alerts": "CLEAR",
+    "incidents": "NO_ACTIVE_INCIDENTS",
+    "mainnetExecution": "MAINNET_EXECUTION_QUEUE_DISABLED"
+  },
+  "checks": [
+    {
+      "name": "Selected action is governance decision recording",
+      "pass": true,
+      "details": {
+        "selectedAction": "governance-decision-recording"
+      }
+    },
+    {
+      "name": "Generic preparation complete",
+      "pass": true,
+      "details": {
+        "genericPreparationComplete": true
+      }
+    },
+    {
+      "name": "Additional generic preparation stopped",
+      "pass": true,
+      "details": {
+        "additionalGenericPreparationRecommended": false
+      }
+    },
+    {
+      "name": "Audit clearance recorded",
+      "pass": true,
+      "details": {
+        "auditCleared": true
+      }
+    },
+    {
+      "name": "Legal clearance recorded",
+      "pass": true,
+      "details": {
+        "legalCleared": true
+      }
+    },
+    {
+      "name": "Restricted launch stabilized",
+      "pass": true,
+      "details": {
+        "status": "RESTRICTED_LAUNCH_STABILIZED"
+      }
+    },
+    {
+      "name": "Mainnet monitor passing",
+      "pass": true,
+      "details": {
+        "status": "PASS"
+      }
+    },
+    {
+      "name": "Alerts do not require response",
+      "pass": true,
+      "details": {
+        "responseRequired": false
+      }
+    },
+    {
+      "name": "No active incidents",
+      "pass": true,
+      "details": {
+        "activeIncidents": 0
+      }
+    },
+    {
+      "name": "Decision recording authorization not recorded",
+      "pass": true,
+      "details": {
+        "decisionRecordingAuthorizationRecorded": false
+      }
+    },
+    {
+      "name": "Governance decision not recorded",
+      "pass": true,
+      "details": {
+        "governanceDecisionRecorded": false
+      }
+    },
+    {
+      "name": "Governance resolution not signed",
+      "pass": true,
+      "details": {
+        "governanceResolutionSigned": false
+      }
+    },
+    {
+      "name": "Resolution signing authorization not recorded",
+      "pass": true,
+      "details": {
+        "resolutionSigningAuthorizationRecorded": false
+      }
+    },
+    {
+      "name": "Full launch not approved",
+      "pass": true,
+      "details": {
+        "publicFullLaunchApproved": false,
+        "configFullLaunchApproved": false
+      }
+    },
+    {
+      "name": "Treasury funding not approved",
+      "pass": true,
+      "details": {
+        "treasuryFundingApproved": false
+      }
+    },
+    {
+      "name": "Safe payload not generated",
+      "pass": true,
+      "details": {
+        "safeTransactionPayloadGenerated": false
+      }
+    },
+    {
+      "name": "Mainnet execution queue disabled",
+      "pass": true,
+      "details": {
+        "mode": "MAINNET_EXECUTION_QUEUE_DISABLED"
+      }
+    },
+    {
+      "name": "ACTION-GOV-DECISION-001: Missing vote result blocks action approval",
+      "pass": true,
+      "details": {
+        "expected": "BLOCKED",
+        "actual": "BLOCKED",
+        "reason": "vote result is not recorded"
+      }
+    },
+    {
+      "name": "ACTION-GOV-DECISION-002: Missing signed resolution blocks action approval",
+      "pass": true,
+      "details": {
+        "expected": "BLOCKED",
+        "actual": "BLOCKED",
+        "reason": "signed governance resolution does not exist"
+      }
+    },
+    {
+      "name": "ACTION-GOV-DECISION-003: Missing resolution authorization blocks action approval",
+      "pass": true,
+      "details": {
+        "expected": "BLOCKED",
+        "actual": "BLOCKED",
+        "reason": "resolution signing authorization is not recorded"
+      }
+    },
+    {
+      "name": "ACTION-GOV-DECISION-004: Missing capability matrix blocks action approval",
+      "pass": true,
+      "details": {
+        "expected": "BLOCKED",
+        "actual": "BLOCKED",
+        "reason": "capability matrix is not final-approved"
+      }
+    },
+    {
+      "name": "ACTION-GOV-DECISION-005: Missing public status update blocks action approval",
+      "pass": true,
+      "details": {
+        "expected": "BLOCKED",
+        "actual": "BLOCKED",
+        "reason": "public status update is not final-approved"
+      }
+    },
+    {
+      "name": "ACTION-GOV-DECISION-006: Action approval recording attempt",
+      "pass": true,
+      "details": {
+        "expected": "BLOCKED",
+        "actual": "BLOCKED",
+        "reason": "this package must not record approval"
+      }
+    },
+    {
+      "name": "ACTION-GOV-DECISION-007: Governance decision recording attempt",
+      "pass": true,
+      "details": {
+        "expected": "BLOCKED",
+        "actual": "BLOCKED",
+        "reason": "this package must not record a governance decision"
+      }
+    },
+    {
+      "name": "ACTION-GOV-DECISION-008: Full launch approval attempt",
+      "pass": true,
+      "details": {
+        "expected": "BLOCKED",
+        "actual": "BLOCKED",
+        "reason": "this package must not approve full launch"
+      }
+    },
+    {
+      "name": "ACTION-GOV-DECISION-009: Capability approval attempt",
+      "pass": true,
+      "details": {
+        "expected": "BLOCKED",
+        "actual": "BLOCKED",
+        "reason": "this package must not approve any capability"
+      }
+    }
+  ],
+  "failures": [],
+  "restrictions": {
+    "publicTokenSale": false,
+    "realTreasuryFunding": false,
+    "stakingOrRewards": false,
+    "buybackProgram": false,
+    "autonomousExecution": false,
+    "mainnetExecutionQueue": false,
+    "paperToOnchainAutomation": false
+  },
+  "nextPossibleMilestones": [
+    "Capability matrix finalization",
+    "Public status update finalization",
+    "Governance vote/result evidence import",
+    "Signed resolution evidence import",
+    "Governance decision recording live package"
+  ],
+  "safety": {
+    "sendsTransactions": false,
+    "movesFunds": false,
+    "deploysContracts": false,
+    "enablesExecution": false,
+    "approvesPublicSale": false,
+    "approvesTreasuryFunding": false,
+    "preparesSafeTransaction": false,
+    "recordsGovernanceDecision": false,
+    "approvesFullLaunch": false
+  }
+}
