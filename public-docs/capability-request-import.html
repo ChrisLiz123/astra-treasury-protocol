@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AstraTreasury Capability Request Import</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #08111f;
+      --surface: #0e1a2b;
+      --border: rgba(148, 163, 184, 0.2);
+      --text: #edf4fb;
+      --muted: #9aaec4;
+      --blue: #67a7ff;
+      --green: #41d49b;
+      --yellow: #f4c35f;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    body { margin: 0; background: linear-gradient(180deg, #07101d, var(--bg)); color: var(--text); }
+    a { color: var(--blue); text-decoration: none; }
+
+    main {
+      width: min(1120px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 44px 0 72px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 28px;
+      box-shadow: 0 22px 70px rgba(0,0,0,.28);
+      margin-bottom: 18px;
+    }
+
+    h1 { margin: 0 0 10px; font-size: 42px; letter-spacing: -1.2px; }
+    h2 { margin: 0 0 14px; font-size: 24px; }
+    p { color: var(--muted); line-height: 1.65; }
+
+    .badge {
+      display: inline-flex;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(65,212,155,.10);
+      border: 1px solid rgba(65,212,155,.22);
+      color: var(--green);
+      font-weight: 850;
+      margin-bottom: 16px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      overflow: hidden;
+    }
+
+    th, td {
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--border);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      color: var(--muted);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      background: rgba(255,255,255,.03);
+    }
+
+    tr:last-child td { border-bottom: 0; }
+
+    code {
+      color: var(--muted);
+      overflow-wrap: anywhere;
+      font-size: 12px;
+    }
+
+    .notice {
+      padding: 16px;
+      border-radius: 16px;
+      background: rgba(244,195,95,.08);
+      border: 1px solid rgba(244,195,95,.22);
+      color: #f7d99a;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+<main>
+  <section class="card">
+    <div class="badge">Request import · no capability approved</div>
+    <h1>Capability Request Import</h1>
+    <p>AstraTreasury capability request import template is ready. No active request is imported, and all restricted capabilities remain disabled and not approved.</p>
+    <p><strong>Request import hash:</strong> <code>e2c0151221c84b8ab98fae527c6618baad792bbd5b6354deafbf3e95cae6c599</code></p>
+  </section>
+
+  <section class="card">
+    <h2>Allowed request capabilities</h2>
+    <table>
+      <thead><tr><th>Capability</th><th>Boundary</th></tr></thead>
+      <tbody><tr><td>fullLaunch</td><td>Import for review only. Separate approval required.</td></tr><tr><td>publicTokenSale</td><td>Import for review only. Separate approval required.</td></tr><tr><td>realTreasuryFunding</td><td>Import for review only. Separate approval required.</td></tr><tr><td>stakingOrRewards</td><td>Import for review only. Separate approval required.</td></tr><tr><td>buybackProgram</td><td>Import for review only. Separate approval required.</td></tr><tr><td>mainnetExecutionQueue</td><td>Import for review only. Separate approval required.</td></tr><tr><td>paperToOnchainAutomation</td><td>Import for review only. Separate approval required.</td></tr><tr><td>autonomousExecution</td><td>Import for review only. Separate approval required.</td></tr><tr><td>safeTransactionPayloadGeneration</td><td>Import for review only. Separate approval required.</td></tr><tr><td>safeTransactionExecution</td><td>Import for review only. Separate approval required.</td></tr></tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>Request summary</h2>
+    <table>
+      <thead><tr><th>Field</th><th>Value</th></tr></thead>
+      <tbody><tr><td>requestId</td><td>no active request</td></tr><tr><td>requestedCapability</td><td>none</td></tr><tr><td>requesterReference</td><td>none</td></tr><tr><td>authorityReference</td><td>none</td></tr><tr><td>purpose</td><td>none</td></tr><tr><td>scope</td><td>none</td></tr><tr><td>evidenceReference</td><td>none</td></tr><tr><td>publicStatusPlan</td><td>none</td></tr><tr><td>onchainImpact</td><td>false</td></tr><tr><td>safeTransactionImpact</td><td>false</td></tr><tr><td>safePayloadGenerationRequested</td><td>false</td></tr><tr><td>executionQueueActivationRequested</td><td>false</td></tr><tr><td>fundsMovementRequested</td><td>false</td></tr><tr><td>requestedAt</td><td></td></tr></tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>Request issues</h2>
+    <table>
+      <thead><tr><th>Issue</th></tr></thead>
+      <tbody><tr><td>No request issues.</td></tr></tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>Request import artifacts</h2>
+    <table>
+      <thead><tr><th>Artifact</th><th>Bytes</th><th>SHA-256</th></tr></thead>
+      <tbody><tr><td>configs/capability-request-import.config.json</td><td>2248</td><td><code>a869ef998ccd646bd8a1c05ee86dc6983616eca9c20f930563ec641767176f37</code></td></tr><tr><td>configs/capability-activation-intake.config.json</td><td>2249</td><td><code>99c031a01f4a360cad0fd34e13fee9afa7ab743061f41e6cc823b077a5dcb0f2</code></td></tr><tr><td>docs/capability-request-import/CAPABILITY_REQUEST_IMPORT_TEMPLATE.md</td><td>776</td><td><code>315719d3d89833356492dd1613ce2afebbf84bad6da5927d5a11472bf1cb6578</code></td></tr><tr><td>docs/capability-request-import/CAPABILITY_REQUEST_IMPORT_RUNBOOK.md</td><td>560</td><td><code>bbe4dc8edaa6813330920469fbcb96166ec10dfac3180314a213aa7c38673dd3</code></td></tr><tr><td>docs/capability-request-import/CAPABILITY_REQUEST_FIELDS.md</td><td>806</td><td><code>e510dc84387b5d4a001c34616ef7dafa00bc179cb573ffb0173e68b1a4b8a4f0</code></td></tr><tr><td>docs/capability-request-import/CAPABILITY_REQUEST_IMPORT_BOUNDARIES.md</td><td>496</td><td><code>652ad11a16239a31f884229a858754dc45e93e5adf4de2ae4ed24db9e4565405</code></td></tr><tr><td>scripts/import-capability-activation-request.mjs</td><td>8646</td><td><code>53f6ab8120797c6b4950b1363def2c9aa59635a8efe08faed11b0dc89567b3c9</code></td></tr><tr><td>public-docs/capability-activation-intake-status.json</td><td>12555</td><td><code>d6d6598621741224fcafdaecbb72175e8b7c69818c1ade3a5c6ab359ffdd55a0</code></td></tr><tr><td>public-docs/restricted-mode-operator-checklist-status.json</td><td>12413</td><td><code>025069d0876f07e28337b64e8e571f78952e6eab4ac71465fd82592f6c037599</code></td></tr><tr><td>public-docs/restricted-mode-maintenance-schedule-status.json</td><td>11836</td><td><code>f574fcdeb030da1183f190591e206455916c061e86687b48988b5437ee698859</code></td></tr><tr><td>public-docs/restricted-mode-final-release-status.json</td><td>10362</td><td><code>326c73b856fef7d8812c7775ee38ef0ab2b7491697f05046e21c295d17d9d031</code></td></tr><tr><td>public-docs/governance-decision-status.json</td><td>2574</td><td><code>d95e769839091f9425aa61a38e533ec5927a108c9904489af834f4857796b4ef</code></td></tr><tr><td>public-docs/capability-matrix-status.json</td><td>4146</td><td><code>e0ce2ac503d2ce12e1f85c5931f71fdc9a202b88485887d935a95f87f44771cf</code></td></tr><tr><td>public-docs/full-launch-status.json</td><td>2717</td><td><code>16dec6e30bbec9b9692ea41c76cac4b798ef2c17ac5adb49a9fffa209e1a9cdc</code></td></tr><tr><td>public-docs/treasury-funding-status.json</td><td>2489</td><td><code>d87c2c774d0f782c4ca38857d3c77f2cf06037218af677ad9cdd365ba64c5e91</code></td></tr><tr><td>public-docs/treasury-safe-transaction-status.json</td><td>3932</td><td><code>881b35ce7c12faab4fcabb6286d2fc10e8a61a48f19d30c30d01214024590812</code></td></tr><tr><td>public-docs/mainnet-monitor-status.json</td><td>1707</td><td><code>22f70299f604bcad1ca255e2a274363b581dacd6d87048c480b899d3243d3f95</code></td></tr><tr><td>public-docs/mainnet-alerts-status.json</td><td>2128</td><td><code>6d1f757de7217e5ee96528e5c74b13eed36091847d5001ca50d29b8eed4d6a18</code></td></tr><tr><td>public-docs/incident-summary.json</td><td>432</td><td><code>57b57c2637eaf8f5600b1b4664211d3562becd7258fb6c81c68857349f295b7b</code></td></tr><tr><td>public-docs/mainnet-execution-status.json</td><td>1320</td><td><code>6a7742ddced5f063606f6425e9a5f81d3a6556cb5dfb81b5b994766cd63371dd</code></td></tr></tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>Checks</h2>
+    <table>
+      <thead><tr><th>Check</th><th>Status</th><th>Details</th></tr></thead>
+      <tbody><tr><td>Request import template prepared</td><td>PASS</td><td><code>{&quot;requestImportTemplatePrepared&quot;:true}</code></td></tr><tr><td>Request importer prepared</td><td>PASS</td><td><code>{&quot;requestImporterPrepared&quot;:true}</code></td></tr><tr><td>Capability intake gate healthy</td><td>PASS</td><td><code>{&quot;status&quot;:&quot;CAPABILITY_ACTIVATION_INTAKE_GATE_READY_NO_ACTIVE_REQUEST&quot;}</code></td></tr><tr><td>Operator checklist ready</td><td>PASS</td><td><code>{&quot;status&quot;:&quot;RESTRICTED_MODE_OPERATOR_CHECKLIST_READY_DECISION_RECORDED_ALL_DISABLED&quot;}</code></td></tr><tr><td>Maintenance schedule ready</td><td>PASS</td><td><code>{&quot;status&quot;:&quot;RESTRICTED_MODE_MAINTENANCE_SCHEDULE_READY_DECISION_RECORDED_ALL_DISABLED&quot;}</code></td></tr><tr><td>Final release ready</td><td>PASS</td><td><code>{&quot;status&quot;:&quot;RESTRICTED_MODE_FINAL_RELEASE_READY_DECISION_RECORDED_ALL_DISABLED&quot;}</code></td></tr><tr><td>Governance decision recorded</td><td>PASS</td><td><code>{&quot;governanceDecisionRecorded&quot;:true}</code></td></tr><tr><td>Capability Matrix all-disabled</td><td>PASS</td><td><code>{&quot;allCapabilitiesDisabled&quot;:true,&quot;allCapabilityApprovalsFalse&quot;:true}</code></td></tr><tr><td>Mainnet monitor passing</td><td>PASS</td><td><code>{&quot;status&quot;:&quot;PASS&quot;}</code></td></tr><tr><td>Alerts do not require response</td><td>PASS</td><td><code>{&quot;responseRequired&quot;:false}</code></td></tr><tr><td>No active incidents</td><td>PASS</td><td><code>{&quot;activeIncidents&quot;:0}</code></td></tr><tr><td>Execution queue disabled</td><td>PASS</td><td><code>{&quot;mode&quot;:&quot;MAINNET_EXECUTION_QUEUE_DISABLED&quot;}</code></td></tr><tr><td>Full launch not approved</td><td>PASS</td><td><code>{&quot;fullLaunchApproved&quot;:false,&quot;governanceDecisionFullLaunchApproved&quot;:false}</code></td></tr><tr><td>Treasury funding not approved</td><td>PASS</td><td><code>{&quot;treasuryFundingApproved&quot;:false}</code></td></tr><tr><td>Treasury funding not executed</td><td>PASS</td><td><code>{&quot;treasuryFundingExecuted&quot;:false}</code></td></tr><tr><td>Safe payload not generated</td><td>PASS</td><td><code>{&quot;safeTransactionPayloadGenerated&quot;:false}</code></td></tr><tr><td>Safe transaction not prepared</td><td>PASS</td><td><code>{&quot;safeTransactionPrepared&quot;:false}</code></td></tr><tr><td>Active request valid if present</td><td>PASS</td><td><code>{&quot;requestFilePresent&quot;:false,&quot;requestIssues&quot;:[]}</code></td></tr></tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>Current statuses</h2>
+    <table>
+      <thead><tr><th>Area</th><th>Status</th></tr></thead>
+      <tbody><tr><td>capabilityActivationIntake</td><td>Capability Activation Intake Gate Ready No Active Request</td></tr><tr><td>restrictedModeOperatorChecklist</td><td>Restricted Mode Operator Checklist Ready Decision Recorded All Disabled</td></tr><tr><td>restrictedModeMaintenanceSchedule</td><td>Restricted Mode Maintenance Schedule Ready Decision Recorded All Disabled</td></tr><tr><td>restrictedModeFinalRelease</td><td>Restricted Mode Final Release Ready Decision Recorded All Disabled</td></tr><tr><td>governanceDecision</td><td>Governance Decision Recorded Restricted Mode All Disabled</td></tr><tr><td>capabilityMatrix</td><td>Capability Matrix Finalized All Disabled</td></tr><tr><td>fullLaunch</td><td>Full Launch Readiness Track Open Planning Only</td></tr><tr><td>treasuryFunding</td><td>Treasury Funding Readiness Track Open Not Approved</td></tr><tr><td>treasurySafeTransaction</td><td>Treasury Safe Transaction Package Scaffold Ready No Payload</td></tr><tr><td>monitor</td><td>Pass</td></tr><tr><td>alerts</td><td>Clear</td></tr><tr><td>incidents</td><td>No Active Incidents</td></tr><tr><td>mainnetExecution</td><td>Mainnet Execution Queue Disabled</td></tr></tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>Important</h2>
+    <div class="notice">
+      Request import is for review only. It does not approve launch, funding, public sale,
+      staking/rewards, buybacks, execution, automation, autonomous execution, Safe payload generation,
+      or Safe transaction execution.
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Public API</h2>
+    <p><a href="/api/public/capability-request-import">/api/public/capability-request-import</a></p>
+    <p><a href="/capability-activation-intake">Capability Activation Intake</a></p>
+    <p><a href="/restricted-mode-operator-checklist">Restricted-Mode Operator Checklist</a></p>
+    <p><a href="/">Back to homepage</a></p>
+  </section>
+</main>
+</body>
+</html>

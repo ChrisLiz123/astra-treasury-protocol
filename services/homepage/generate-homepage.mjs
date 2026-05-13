@@ -800,6 +800,10 @@ const html = `<!doctype html>
           <strong>Capability intake</strong>
           <span>Safe request gate for future capability activation.</span>
         </a>
+        <a class="link-card" href="/capability-request-import">
+          <strong>Capability request import</strong>
+          <span>Guarded request import for review only.</span>
+        </a>
         <a class="link-card" href="/governance-vote-result-evidence">
           <strong>Vote/result evidence</strong>
           <span>Evidence import path. No decision is recorded.</span>

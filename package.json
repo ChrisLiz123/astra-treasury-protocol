@@ -392,7 +392,12 @@
     "capability:intake:validate": "node scripts/validate-capability-activation-intake.mjs",
     "capability:intake:status": "node services/capability-activation-intake/status.mjs",
     "capability:intake:gate": "npm run capability:intake:validate && npm run capability:intake:status",
-    "release:capability-activation-intake-gate": "bash scripts/release/package-capability-activation-intake-gate.sh"
+    "release:capability-activation-intake-gate": "bash scripts/release/package-capability-activation-intake-gate.sh",
+    "capability:request-import:import": "node scripts/import-capability-activation-request.mjs",
+    "capability:request-import:status": "node services/capability-request-import/status.mjs",
+    "capability:request-import:validate": "node scripts/validate-capability-request-import.mjs",
+    "capability:request-import:gate": "npm run capability:request-import:status && npm run capability:request-import:validate",
+    "release:capability-request-import-template": "bash scripts/release/package-capability-request-import-template.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",

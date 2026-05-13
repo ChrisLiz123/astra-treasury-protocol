@@ -1,0 +1,58 @@
+{
+  "schema": "astra-capability-request-import-config-v0.1",
+  "status": "capability-request-import-template",
+  "network": {
+    "name": "Base Mainnet",
+    "chainId": 8453
+  },
+  "currentApprovedMode": "restricted-mainnet-operation",
+  "requestImportScope": "future-capability-request-import-for-review-only",
+  "requestImportTemplatePrepared": true,
+  "requestImporterPrepared": true,
+  "activeRequestFile": "reports/capability-activation-intake/requests/capability-activation-request.json",
+  "allowedCapabilities": [
+    "fullLaunch",
+    "publicTokenSale",
+    "realTreasuryFunding",
+    "stakingOrRewards",
+    "buybackProgram",
+    "mainnetExecutionQueue",
+    "paperToOnchainAutomation",
+    "autonomousExecution",
+    "safeTransactionPayloadGeneration",
+    "safeTransactionExecution"
+  ],
+  "requiresCapabilityActivationIntakeGate": true,
+  "requiresOperatorChecklist": true,
+  "requiresMaintenanceSchedule": true,
+  "requiresFinalRelease": true,
+  "requiresGovernanceDecisionRecorded": true,
+  "requiresAllCapabilitiesDisabled": true,
+  "importRules": {
+    "importDoesNotApproveCapability": true,
+    "importDoesNotGenerateSafePayload": true,
+    "importDoesNotEnableExecutionQueue": true,
+    "importDoesNotMoveFunds": true,
+    "importRequiresExactCapabilityName": true,
+    "importRequiresRequesterReference": true,
+    "importRequiresAuthorityReference": true,
+    "importRequiresEvidenceReference": true,
+    "importRequiresPublicStatusPlan": true,
+    "importRequiresSeparateActivationPath": true
+  },
+  "expectedPosture": {
+    "governanceDecisionRecorded": true,
+    "fullLaunchApproved": false,
+    "publicTokenSaleApproved": false,
+    "realTreasuryFundingApproved": false,
+    "stakingOrRewardsApproved": false,
+    "buybackProgramApproved": false,
+    "mainnetExecutionQueueApproved": false,
+    "paperToOnchainAutomationApproved": false,
+    "autonomousExecutionApproved": false,
+    "safeTransactionPayloadGenerated": false,
+    "safeTransactionPrepared": false,
+    "safeTransactionExecutionApproved": false
+  },
+  "hardRule": "This request importer imports future activation requests for review only. It does not approve any capability, generate a Safe payload, move funds, enable execution, or approve full launch."
+}
