@@ -1,0 +1,71 @@
+{
+  "schema": "astra-governance-decision-recording-live-precheck-config-v0.1",
+  "status": "live-precheck-framework-ready",
+  "network": {
+    "name": "Base Mainnet",
+    "chainId": 8453
+  },
+  "currentApprovedMode": "restricted-mainnet-operation",
+  "operatorReportedClearances": {
+    "auditCleared": true,
+    "legalCleared": true,
+    "note": "Operator reported audit and legal requirements cleared."
+  },
+  "selectedAction": {
+    "id": "governance-decision-recording-live-precheck",
+    "label": "Governance decision recording live precheck",
+    "category": "governance-live-precheck",
+    "description": "Run final precheck before any governance decision recording action."
+  },
+  "precheckOnly": true,
+  "livePrecheckFrameworkPrepared": true,
+  "livePrecheckExecuted": false,
+  "readyToRecordGovernanceDecision": false,
+  "governanceDecisionRecordingAuthorized": false,
+  "governanceDecisionRecorded": false,
+  "governanceDecisionPublished": false,
+  "fullLaunchApproved": false,
+  "publicDisclosuresFinalApproved": false,
+  "treasuryDisclosureFinalApproved": false,
+  "treasuryFundingApproved": false,
+  "treasuryFundingTransactionAuthorized": false,
+  "treasuryFundingExecuted": false,
+  "safeTransactionPayloadGenerated": false,
+  "safeTransactionPrepared": false,
+  "safeTransactionSubmitted": false,
+  "safeTransactionSigned": false,
+  "safeTransactionExecuted": false,
+  "requiredBeforeLiveRecording": {
+    "launchControlReady": true,
+    "capabilityMatrixFinalized": true,
+    "publicStatusUpdateFinalized": true,
+    "voteResultEvidenceImportedAndValidated": false,
+    "signedResolutionEvidenceImportedAndValidated": false,
+    "actionSpecificApprovalRecorded": false,
+    "decisionRecorderAssigned": false,
+    "mainnetMonitorPassing": true,
+    "activeIncidentsZero": true,
+    "mainnetExecutionQueueDisabled": true,
+    "treasuryFundingNotApproved": true,
+    "safePayloadNotGenerated": true
+  },
+  "capabilityApprovals": {
+    "publicTokenSaleApproved": false,
+    "realTreasuryFundingApproved": false,
+    "stakingOrRewardsApproved": false,
+    "buybackProgramApproved": false,
+    "mainnetExecutionQueueApproved": false,
+    "paperToOnchainAutomationApproved": false,
+    "autonomousExecutionApproved": false
+  },
+  "hardStops": {
+    "publicTokenSaleApproved": false,
+    "realTreasuryFundingApproved": false,
+    "stakingOrRewardsApproved": false,
+    "buybackProgramApproved": false,
+    "mainnetExecutionQueueEnabled": false,
+    "paperToOnchainAutomationEnabled": false,
+    "autonomousExecutionApproved": false
+  },
+  "hardRule": "This is a live precheck only. It must not record a governance decision, approve full launch, approve treasury funding, generate a Safe payload, or approve any restricted capability."
+}

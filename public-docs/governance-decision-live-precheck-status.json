@@ -1,0 +1,84 @@
+{
+  "schema": "astra-governance-decision-live-precheck-status-v0.1",
+  "generatedAt": "2026-05-13T18:43:41.093Z",
+  "status": "GOVERNANCE_DECISION_RECORDING_LIVE_PRECHECK_BLOCKED_PENDING_EVIDENCE_OR_APPROVAL",
+  "currentApprovedMode": "restricted-mainnet-operation",
+  "selectedAction": {
+    "id": "governance-decision-recording-live-precheck",
+    "label": "Governance decision recording live precheck",
+    "category": "governance-live-precheck",
+    "description": "Run final precheck before any governance decision recording action."
+  },
+  "precheckOnly": true,
+  "livePrecheckFrameworkPrepared": true,
+  "readyToRecordGovernanceDecision": false,
+  "governanceDecisionRecorded": false,
+  "fullLaunchApproved": false,
+  "publicStatement": "AstraTreasury governance decision recording live precheck is blocked until required evidence and final approvals are present. No governance decision is recorded.",
+  "summary": {
+    "totalPrerequisites": 15,
+    "passedPrerequisites": 12,
+    "blockerCount": 3,
+    "activeIncidents": 0,
+    "responseRequired": false,
+    "monitorStatus": "PASS"
+  },
+  "prerequisites": {
+    "launchControlReady": true,
+    "capabilityMatrixFinalized": true,
+    "publicStatusUpdateFinalized": true,
+    "voteResultEvidenceImportedAndValidated": false,
+    "signedResolutionEvidenceImportedAndValidated": false,
+    "actionSpecificApprovalRecorded": false,
+    "governanceDecisionNotAlreadyRecorded": true,
+    "fullLaunchNotAlreadyApproved": true,
+    "treasuryFundingNotApproved": true,
+    "safePayloadNotGenerated": true,
+    "safeTransactionNotPrepared": true,
+    "mainnetMonitorPassing": true,
+    "activeIncidentsZero": true,
+    "alertsDoNotRequireResponse": true,
+    "mainnetExecutionQueueDisabled": true
+  },
+  "blockers": [
+    "voteResultEvidenceImportedAndValidated",
+    "signedResolutionEvidenceImportedAndValidated",
+    "actionSpecificApprovalRecorded"
+  ],
+  "currentStatuses": {
+    "launchControl": "LAUNCH_CONTROL_READY_RESTRICTED_MODE",
+    "capabilityMatrix": "CAPABILITY_MATRIX_FINALIZED_ALL_DISABLED",
+    "publicStatusUpdate": "PUBLIC_STATUS_UPDATE_FINALIZED_RESTRICTED_MODE",
+    "actionApproval": "ACTION_SPECIFIC_APPROVAL_PATH_READY_BLOCKED_PENDING_EVIDENCE",
+    "voteResultEvidence": "GOVERNANCE_VOTE_RESULT_EVIDENCE_IMPORT_READY_NO_EVIDENCE",
+    "signedResolutionEvidence": "SIGNED_GOVERNANCE_RESOLUTION_EVIDENCE_IMPORT_READY_NO_EVIDENCE",
+    "fullLaunch": "FULL_LAUNCH_READINESS_TRACK_OPEN_PLANNING_ONLY",
+    "decisionRecording": "FULL_LAUNCH_GOVERNANCE_DECISION_RECORDING_PACKAGE_READY_NOT_RECORDED",
+    "treasuryFunding": "TREASURY_FUNDING_READINESS_TRACK_OPEN_NOT_APPROVED",
+    "treasurySafeTransaction": "TREASURY_SAFE_TRANSACTION_PACKAGE_SCAFFOLD_READY_NO_PAYLOAD",
+    "monitor": "PASS",
+    "alerts": "CLEAR",
+    "incidents": "NO_ACTIVE_INCIDENTS",
+    "mainnetExecution": "MAINNET_EXECUTION_QUEUE_DISABLED"
+  },
+  "restrictions": {
+    "publicTokenSale": false,
+    "realTreasuryFunding": false,
+    "stakingOrRewards": false,
+    "buybackProgram": false,
+    "autonomousExecution": false,
+    "mainnetExecutionQueue": false,
+    "paperToOnchainAutomation": false
+  },
+  "safety": {
+    "sendsTransactions": false,
+    "movesFunds": false,
+    "deploysContracts": false,
+    "enablesExecution": false,
+    "approvesPublicSale": false,
+    "approvesTreasuryFunding": false,
+    "preparesSafeTransaction": false,
+    "recordsGovernanceDecision": false,
+    "approvesFullLaunch": false
+  }
+}

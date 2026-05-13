@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AstraTreasury Governance Decision Live Precheck</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #08111f;
+      --surface: #0e1a2b;
+      --border: rgba(148, 163, 184, 0.2);
+      --text: #edf4fb;
+      --muted: #9aaec4;
+      --blue: #67a7ff;
+      --green: #41d49b;
+      --yellow: #f4c35f;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    body { margin: 0; background: linear-gradient(180deg, #07101d, var(--bg)); color: var(--text); }
+    a { color: var(--blue); text-decoration: none; }
+
+    main {
+      width: min(1120px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 44px 0 72px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 28px;
+      box-shadow: 0 22px 70px rgba(0,0,0,.28);
+      margin-bottom: 18px;
+    }
+
+    h1 { margin: 0 0 10px; font-size: 42px; letter-spacing: -1.2px; }
+    h2 { margin: 0 0 14px; font-size: 24px; }
+    p { color: var(--muted); line-height: 1.65; }
+
+    .badge {
+      display: inline-flex;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(244,195,95,.08);
+      border: 1px solid rgba(244,195,95,.22);
+      color: var(--yellow);
+      font-weight: 850;
+      margin-bottom: 16px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      overflow: hidden;
+    }
+
+    th, td {
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--border);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      color: var(--muted);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      background: rgba(255,255,255,.03);
+    }
+
+    tr:last-child td { border-bottom: 0; }
+
+    .notice {
+      padding: 16px;
+      border-radius: 16px;
+      background: rgba(244,195,95,.08);
+      border: 1px solid rgba(244,195,95,.22);
+      color: #f7d99a;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+<main>
+  <section class="card">
+    <div class="badge">Live precheck · no decision recorded</div>
+    <h1>Governance Decision Live Precheck</h1>
+    <p>AstraTreasury governance decision recording live precheck is blocked until required evidence and final approvals are present. No governance decision is recorded.</p>
+  </section>
+
+  <section class="card">
+    <h2>Prerequisites</h2>
+    <table>
+      <thead><tr><th>Prerequisite</th><th>Status</th></tr></thead>
+      <tbody><tr><td>launchControlReady</td><td>PASS</td></tr><tr><td>capabilityMatrixFinalized</td><td>PASS</td></tr><tr><td>publicStatusUpdateFinalized</td><td>PASS</td></tr><tr><td>voteResultEvidenceImportedAndValidated</td><td>BLOCKED</td></tr><tr><td>signedResolutionEvidenceImportedAndValidated</td><td>BLOCKED</td></tr><tr><td>actionSpecificApprovalRecorded</td><td>BLOCKED</td></tr><tr><td>governanceDecisionNotAlreadyRecorded</td><td>PASS</td></tr><tr><td>fullLaunchNotAlreadyApproved</td><td>PASS</td></tr><tr><td>treasuryFundingNotApproved</td><td>PASS</td></tr><tr><td>safePayloadNotGenerated</td><td>PASS</td></tr><tr><td>safeTransactionNotPrepared</td><td>PASS</td></tr><tr><td>mainnetMonitorPassing</td><td>PASS</td></tr><tr><td>activeIncidentsZero</td><td>PASS</td></tr><tr><td>alertsDoNotRequireResponse</td><td>PASS</td></tr><tr><td>mainnetExecutionQueueDisabled</td><td>PASS</td></tr></tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>Blockers</h2>
+    <table>
+      <thead><tr><th>Blocker</th></tr></thead>
+      <tbody><tr><td>voteResultEvidenceImportedAndValidated</td></tr><tr><td>signedResolutionEvidenceImportedAndValidated</td></tr><tr><td>actionSpecificApprovalRecorded</td></tr></tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>Current statuses</h2>
+    <table>
+      <thead><tr><th>Area</th><th>Status</th></tr></thead>
+      <tbody><tr><td>launchControl</td><td>Launch Control Ready Restricted Mode</td></tr><tr><td>capabilityMatrix</td><td>Capability Matrix Finalized All Disabled</td></tr><tr><td>publicStatusUpdate</td><td>Public Status Update Finalized Restricted Mode</td></tr><tr><td>actionApproval</td><td>Action Specific Approval Path Ready Blocked Pending Evidence</td></tr><tr><td>voteResultEvidence</td><td>Governance Vote Result Evidence Import Ready No Evidence</td></tr><tr><td>signedResolutionEvidence</td><td>Signed Governance Resolution Evidence Import Ready No Evidence</td></tr><tr><td>fullLaunch</td><td>Full Launch Readiness Track Open Planning Only</td></tr><tr><td>decisionRecording</td><td>Full Launch Governance Decision Recording Package Ready Not Recorded</td></tr><tr><td>treasuryFunding</td><td>Treasury Funding Readiness Track Open Not Approved</td></tr><tr><td>treasurySafeTransaction</td><td>Treasury Safe Transaction Package Scaffold Ready No Payload</td></tr><tr><td>monitor</td><td>Pass</td></tr><tr><td>alerts</td><td>Clear</td></tr><tr><td>incidents</td><td>No Active Incidents</td></tr><tr><td>mainnetExecution</td><td>Mainnet Execution Queue Disabled</td></tr></tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>Important</h2>
+    <div class="notice">
+      This is a precheck only. It does not record a governance decision, approve full launch,
+      approve any capability, generate a Safe payload, or execute a transaction.
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Public API</h2>
+    <p><a href="/api/public/governance-decision-live-precheck">/api/public/governance-decision-live-precheck</a></p>
+    <p><a href="/governance-decision-approval">Governance decision approval</a></p>
+    <p><a href="/signed-governance-resolution-evidence">Signed resolution evidence</a></p>
+    <p><a href="/">Back to homepage</a></p>
+  </section>
+</main>
+</body>
+</html>
