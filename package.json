@@ -260,7 +260,11 @@
     "disclosures:validate": "node scripts/validate-public-disclosure-update.mjs",
     "disclosures:status": "node services/disclosures/status.mjs",
     "disclosures:gate": "npm run disclosures:validate && npm run disclosures:status",
-    "release:public-disclosure-update": "bash scripts/release/package-public-disclosure-update.sh"
+    "release:public-disclosure-update": "bash scripts/release/package-public-disclosure-update.sh",
+    "treasury:risk:validate": "node scripts/validate-treasury-risk-limits.mjs",
+    "treasury:risk:status": "node services/treasury-risk/status.mjs",
+    "treasury:risk:gate": "npm run treasury:risk:validate && npm run treasury:risk:status",
+    "release:treasury-risk-limits": "bash scripts/release/package-treasury-risk-limits.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",

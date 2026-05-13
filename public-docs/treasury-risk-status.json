@@ -1,0 +1,79 @@
+{
+  "schema": "astra-public-treasury-risk-limits-status-v0.1",
+  "generatedAt": "2026-05-13T14:04:42.578Z",
+  "status": "TREASURY_RISK_LIMITS_DRAFT_READY_NOT_APPROVED",
+  "currentApprovedMode": "restricted-mainnet-operation",
+  "treasuryRiskLimitsApproved": false,
+  "treasuryFundingApproved": false,
+  "treasuryFundingTransactionAuthorized": false,
+  "treasuryFundingExecuted": false,
+  "network": {
+    "name": "Base Mainnet",
+    "chainId": 8453
+  },
+  "publicStatement": "AstraTreasury treasury risk limits are drafted for review. Effective funding limits remain zero and no real treasury funding is approved.",
+  "summary": {
+    "totalChecks": 16,
+    "passed": 16,
+    "failed": 0,
+    "activeIncidents": 0,
+    "responseRequired": false
+  },
+  "effectiveLimits": {
+    "maximumInitialFundingUsd": 0,
+    "maximumSingleTransferUsd": 0,
+    "maximumDailyTransferUsd": 0,
+    "approvedExternalTreasuryAssets": [],
+    "approvedFundingDestinations": [],
+    "executionQueueEnabled": false
+  },
+  "proposedLimits": {
+    "maximumInitialFundingUsd": "TBD",
+    "maximumSingleTransferUsd": "TBD",
+    "maximumDailyTransferUsd": "TBD",
+    "approvedExternalTreasuryAssets": "TBD",
+    "approvedFundingDestinations": "TBD",
+    "requiredSafeThreshold": "TBD",
+    "monitoringFrequency": "continuous plus manual review"
+  },
+  "requiredControls": {
+    "governanceApprovalRequired": true,
+    "treasurySafeApprovalRequired": true,
+    "riskLimitDecisionRecordRequired": true,
+    "sourceOfFundsRecordRequired": true,
+    "publicDisclosureUpdateRequired": true,
+    "incidentResponseDrillRequired": true,
+    "mainnetMonitorRequired": true,
+    "eventMonitorRequired": true,
+    "alertWorkflowRequired": true,
+    "incidentWorkflowRequired": true
+  },
+  "currentStatuses": {
+    "stabilization": "RESTRICTED_LAUNCH_STABILIZED",
+    "fullLaunch": "FULL_LAUNCH_READINESS_TRACK_OPEN_PLANNING_ONLY",
+    "legalFullLaunch": "LEGAL_FULL_LAUNCH_REVIEW_OPEN_NOT_APPROVED",
+    "treasuryFunding": "TREASURY_FUNDING_READINESS_TRACK_OPEN_NOT_APPROVED",
+    "executionDryRun": "EXECUTION_QUEUE_DRY_RUN_V2_PASS_DISABLED_MODE",
+    "disclosures": "PUBLIC_DISCLOSURE_UPDATE_DRAFT_READY_NOT_APPROVED",
+    "restrictedOperations": "MAINNET_RESTRICTED_OPERATION",
+    "mainnetExecution": "MAINNET_EXECUTION_QUEUE_DISABLED",
+    "monitor": "PASS",
+    "alerts": "CLEAR",
+    "incidents": "NO_ACTIVE_INCIDENTS"
+  },
+  "restrictions": {
+    "publicTokenSale": false,
+    "realTreasuryFunding": false,
+    "stakingOrRewards": false,
+    "buybackProgram": false,
+    "autonomousExecution": false,
+    "mainnetExecutionQueue": false,
+    "paperToOnchainAutomation": false
+  },
+  "nextPossibleMilestones": [
+    "Treasury funding source review",
+    "Treasury Safe approval package",
+    "Treasury funding transaction dry run",
+    "Treasury disclosure approval package"
+  ]
+}
