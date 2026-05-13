@@ -772,6 +772,10 @@ const html = `<!doctype html>
           <strong>Monitoring baseline</strong>
           <span>Post-governance restricted-mode monitoring snapshot.</span>
         </a>
+        <a class="link-card" href="/restricted-mode-evidence-seal">
+          <strong>Evidence seal</strong>
+          <span>Cryptographic evidence manifest for restricted-mode posture.</span>
+        </a>
         <a class="link-card" href="/governance-vote-result-evidence">
           <strong>Vote/result evidence</strong>
           <span>Evidence import path. No decision is recorded.</span>

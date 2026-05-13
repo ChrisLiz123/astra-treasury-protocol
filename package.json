@@ -364,7 +364,11 @@
     "restricted-mode:monitoring-baseline:validate": "node scripts/validate-restricted-mode-monitoring-baseline.mjs",
     "restricted-mode:monitoring-baseline:status": "node services/restricted-mode-monitoring-baseline/status.mjs",
     "restricted-mode:monitoring-baseline:gate": "npm run restricted-mode:monitoring-baseline:validate && npm run restricted-mode:monitoring-baseline:status",
-    "release:restricted-mode-monitoring-baseline": "bash scripts/release/package-restricted-mode-monitoring-baseline.sh"
+    "release:restricted-mode-monitoring-baseline": "bash scripts/release/package-restricted-mode-monitoring-baseline.sh",
+    "restricted-mode:evidence-seal:status": "node services/restricted-mode-evidence-seal/status.mjs",
+    "restricted-mode:evidence-seal:validate": "node scripts/validate-restricted-mode-evidence-seal.mjs",
+    "restricted-mode:evidence-seal:gate": "npm run restricted-mode:evidence-seal:status && npm run restricted-mode:evidence-seal:validate",
+    "release:restricted-mode-evidence-seal": "bash scripts/release/package-restricted-mode-evidence-seal.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",
