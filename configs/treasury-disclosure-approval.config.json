@@ -1,0 +1,69 @@
+{
+  "schema": "astra-treasury-disclosure-approval-config-v0.1",
+  "status": "planning-only-disclosure-approval-not-recorded",
+  "network": {
+    "name": "Base Mainnet",
+    "chainId": 8453
+  },
+  "currentApprovedMode": "restricted-mainnet-operation",
+  "operatorReportedClearances": {
+    "auditCleared": true,
+    "legalCleared": true,
+    "note": "Operator reported audit and legal requirements cleared. This does not record treasury disclosure approval or authorize funding."
+  },
+  "treasuryDisclosureApprovalRequested": false,
+  "treasuryDisclosureApprovalRecorded": false,
+  "treasuryDisclosureFinalApproved": false,
+  "treasuryFundingApproved": false,
+  "treasuryFundingTransactionAuthorized": false,
+  "treasuryFundingExecuted": false,
+  "treasurySafeApprovalRecorded": false,
+  "fundingSourceApproved": false,
+  "treasuryRiskLimitsApproved": false,
+  "requiredBeforeTreasuryDisclosureApproval": {
+    "currentPublicDisclosureDraftExists": true,
+    "riskDisclosureDraftExists": true,
+    "treasuryFundingSourceReviewExists": true,
+    "treasuryRiskLimitsDraftExists": true,
+    "treasurySafeApprovalPackageExists": true,
+    "treasuryTransactionDryRunPassed": true,
+    "finalDisclosureReviewerAssigned": false,
+    "fundingSourceApproved": false,
+    "treasuryRiskLimitsApproved": false,
+    "treasurySafeApprovalRecorded": false,
+    "governanceApprovalRecorded": false
+  },
+  "approvalChecklist": {
+    "restrictedModeLanguageReviewed": false,
+    "noPublicSaleLanguageReviewed": false,
+    "noInvestmentProductLanguageReviewed": false,
+    "treasuryFundingLanguageReviewed": false,
+    "riskDisclosureReviewed": false,
+    "marketDataLanguageReviewed": false,
+    "walletVisibilityLanguageReviewed": false,
+    "jurisdictionalLanguageReviewed": false,
+    "websitePagesReviewed": false,
+    "apiPagesReviewed": false,
+    "finalReviewerSignoffRecorded": false
+  },
+  "publicSafeDisclosureStatus": {
+    "restrictedMode": "drafted",
+    "noPublicSale": "drafted",
+    "noInvestmentProduct": "drafted",
+    "treasuryFundingNotApproved": "drafted",
+    "marketDataReadOnly": "drafted",
+    "walletVisibilityNotPurchaseFlow": "drafted",
+    "riskDisclosure": "drafted",
+    "finalApproved": "no"
+  },
+  "hardStops": {
+    "publicTokenSaleApproved": false,
+    "realTreasuryFundingApproved": false,
+    "stakingOrRewardsApproved": false,
+    "buybackProgramApproved": false,
+    "mainnetExecutionQueueEnabled": false,
+    "paperToOnchainAutomationEnabled": false,
+    "autonomousExecutionApproved": false
+  },
+  "hardRule": "This package prepares treasury disclosure approval only. It does not approve funding, authorize a transaction, or enable any restricted capability."
+}

@@ -1,0 +1,98 @@
+{
+  "schema": "astra-public-treasury-disclosure-approval-status-v0.1",
+  "generatedAt": "2026-05-13T14:41:38.812Z",
+  "status": "TREASURY_DISCLOSURE_APPROVAL_TRACK_OPEN_NOT_APPROVED",
+  "currentApprovedMode": "restricted-mainnet-operation",
+  "treasuryDisclosureApprovalRecorded": false,
+  "treasuryDisclosureFinalApproved": false,
+  "treasuryFundingApproved": false,
+  "treasuryFundingTransactionAuthorized": false,
+  "treasuryFundingExecuted": false,
+  "network": {
+    "name": "Base Mainnet",
+    "chainId": 8453
+  },
+  "publicStatement": "AstraTreasury Treasury Disclosure approval track is open for planning. Treasury disclosures are drafted but not final-approved, and no treasury funding is approved or authorized.",
+  "summary": {
+    "totalChecks": 37,
+    "passed": 37,
+    "failed": 0,
+    "activeIncidents": 0,
+    "responseRequired": false
+  },
+  "approvalStatus": {
+    "treasuryDisclosureApprovalRequested": false,
+    "treasuryDisclosureApprovalRecorded": false,
+    "treasuryDisclosureFinalApproved": false,
+    "treasuryFundingApproved": false,
+    "treasuryFundingTransactionAuthorized": false,
+    "treasuryFundingExecuted": false,
+    "treasurySafeApprovalRecorded": false,
+    "fundingSourceApproved": false,
+    "treasuryRiskLimitsApproved": false
+  },
+  "requiredBeforeTreasuryDisclosureApproval": {
+    "currentPublicDisclosureDraftExists": true,
+    "riskDisclosureDraftExists": true,
+    "treasuryFundingSourceReviewExists": true,
+    "treasuryRiskLimitsDraftExists": true,
+    "treasurySafeApprovalPackageExists": true,
+    "treasuryTransactionDryRunPassed": true,
+    "finalDisclosureReviewerAssigned": false,
+    "fundingSourceApproved": false,
+    "treasuryRiskLimitsApproved": false,
+    "treasurySafeApprovalRecorded": false,
+    "governanceApprovalRecorded": false
+  },
+  "approvalChecklist": {
+    "restrictedModeLanguageReviewed": false,
+    "noPublicSaleLanguageReviewed": false,
+    "noInvestmentProductLanguageReviewed": false,
+    "treasuryFundingLanguageReviewed": false,
+    "riskDisclosureReviewed": false,
+    "marketDataLanguageReviewed": false,
+    "walletVisibilityLanguageReviewed": false,
+    "jurisdictionalLanguageReviewed": false,
+    "websitePagesReviewed": false,
+    "apiPagesReviewed": false,
+    "finalReviewerSignoffRecorded": false
+  },
+  "publicSafeDisclosureStatus": {
+    "restrictedMode": "drafted",
+    "noPublicSale": "drafted",
+    "noInvestmentProduct": "drafted",
+    "treasuryFundingNotApproved": "drafted",
+    "marketDataReadOnly": "drafted",
+    "walletVisibilityNotPurchaseFlow": "drafted",
+    "riskDisclosure": "drafted",
+    "finalApproved": "no"
+  },
+  "currentStatuses": {
+    "disclosures": "PUBLIC_DISCLOSURE_UPDATE_DRAFT_READY_NOT_APPROVED",
+    "treasuryFunding": "TREASURY_FUNDING_READINESS_TRACK_OPEN_NOT_APPROVED",
+    "treasuryRisk": "TREASURY_RISK_LIMITS_DRAFT_READY_NOT_APPROVED",
+    "treasurySource": "TREASURY_FUNDING_SOURCE_REVIEW_TRACK_OPEN_NOT_APPROVED",
+    "treasurySafe": "TREASURY_SAFE_APPROVAL_TRACK_OPEN_NOT_APPROVED",
+    "treasuryTransactionDryRun": "TREASURY_FUNDING_TRANSACTION_DRY_RUN_PASS_NOT_AUTHORIZED",
+    "fullLaunch": "FULL_LAUNCH_READINESS_TRACK_OPEN_PLANNING_ONLY",
+    "legalFullLaunch": "LEGAL_FULL_LAUNCH_REVIEW_OPEN_NOT_APPROVED",
+    "monitor": "PASS",
+    "alerts": "CLEAR",
+    "incidents": "NO_ACTIVE_INCIDENTS",
+    "mainnetExecution": "MAINNET_EXECUTION_QUEUE_DISABLED"
+  },
+  "restrictions": {
+    "publicTokenSale": false,
+    "realTreasuryFunding": false,
+    "stakingOrRewards": false,
+    "buybackProgram": false,
+    "autonomousExecution": false,
+    "mainnetExecutionQueue": false,
+    "paperToOnchainAutomation": false
+  },
+  "nextPossibleMilestones": [
+    "Treasury Safe transaction package preparation",
+    "Full-launch governance decision package",
+    "Treasury funding authorization package"
+  ]
+}
