@@ -388,7 +388,11 @@
     "restricted-mode:operator-checklist:validate": "node scripts/validate-restricted-mode-operator-checklist.mjs",
     "restricted-mode:operator-checklist:status": "node services/restricted-mode-operator-checklist/status.mjs",
     "restricted-mode:operator-checklist:gate": "npm run restricted-mode:operator-checklist:validate && npm run restricted-mode:operator-checklist:status",
-    "release:restricted-mode-operator-checklist": "bash scripts/release/package-restricted-mode-operator-checklist.sh"
+    "release:restricted-mode-operator-checklist": "bash scripts/release/package-restricted-mode-operator-checklist.sh",
+    "capability:intake:validate": "node scripts/validate-capability-activation-intake.mjs",
+    "capability:intake:status": "node services/capability-activation-intake/status.mjs",
+    "capability:intake:gate": "npm run capability:intake:validate && npm run capability:intake:status",
+    "release:capability-activation-intake-gate": "bash scripts/release/package-capability-activation-intake-gate.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",

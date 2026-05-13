@@ -1,0 +1,18 @@
+{
+  "schema": "astra-capability-activation-request-v0.1",
+  "requestId": "TBD",
+  "requestedCapability": "TBD",
+  "requesterReference": "TBD",
+  "authorityReference": "TBD",
+  "purpose": "TBD",
+  "scope": "TBD",
+  "evidenceReference": "TBD",
+  "publicStatusPlan": "TBD",
+  "onchainImpact": false,
+  "safeTransactionImpact": false,
+  "safePayloadGenerationRequested": false,
+  "executionQueueActivationRequested": false,
+  "fundsMovementRequested": false,
+  "requestedAt": "YYYY-MM-DDTHH:MM:SSZ",
+  "notes": "Sanitized request only. Do not include secrets or private keys."
+}

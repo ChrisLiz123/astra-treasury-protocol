@@ -1,0 +1,60 @@
+{
+  "schema": "astra-capability-activation-intake-gate-config-v0.1",
+  "status": "capability-activation-intake-gate",
+  "network": {
+    "name": "Base Mainnet",
+    "chainId": 8453
+  },
+  "currentApprovedMode": "restricted-mainnet-operation",
+  "intakeScope": "future-capability-request-intake-only",
+  "intakeGatePrepared": true,
+  "activeRequestFile": "reports/capability-activation-intake/requests/capability-activation-request.json",
+  "activeRequestRequired": false,
+  "allowedCapabilities": [
+    "fullLaunch",
+    "publicTokenSale",
+    "realTreasuryFunding",
+    "stakingOrRewards",
+    "buybackProgram",
+    "mainnetExecutionQueue",
+    "paperToOnchainAutomation",
+    "autonomousExecution",
+    "safeTransactionPayloadGeneration",
+    "safeTransactionExecution"
+  ],
+  "requiresOperatorChecklist": true,
+  "requiresMaintenanceSchedule": true,
+  "requiresFinalRelease": true,
+  "requiresGovernanceDecisionRecorded": true,
+  "requiresAllCapabilitiesDisabled": true,
+  "operatorReportedClearances": {
+    "auditCleared": true,
+    "legalCleared": true,
+    "note": "Operator reported audit and legal requirements cleared."
+  },
+  "intakeRules": {
+    "intakeDoesNotApproveCapability": true,
+    "intakeDoesNotGenerateSafePayload": true,
+    "intakeDoesNotEnableExecutionQueue": true,
+    "intakeRequiresExactCapabilityName": true,
+    "intakeRequiresAuthorityReference": true,
+    "intakeRequiresEvidenceReference": true,
+    "intakeRequiresPublicStatusPlan": true,
+    "intakeRequiresSeparateActivationPath": true
+  },
+  "expectedPosture": {
+    "governanceDecisionRecorded": true,
+    "fullLaunchApproved": false,
+    "publicTokenSaleApproved": false,
+    "realTreasuryFundingApproved": false,
+    "stakingOrRewardsApproved": false,
+    "buybackProgramApproved": false,
+    "mainnetExecutionQueueApproved": false,
+    "paperToOnchainAutomationApproved": false,
+    "autonomousExecutionApproved": false,
+    "safeTransactionPayloadGenerated": false,
+    "safeTransactionPrepared": false,
+    "safeTransactionExecutionApproved": false
+  },
+  "hardRule": "This intake gate accepts future activation requests for review only. It does not approve any capability, generate a Safe payload, move funds, enable execution, or approve full launch."
+}

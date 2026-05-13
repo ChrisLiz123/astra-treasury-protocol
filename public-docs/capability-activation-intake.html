@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AstraTreasury Capability Activation Intake</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #08111f;
+      --surface: #0e1a2b;
+      --border: rgba(148, 163, 184, 0.2);
+      --text: #edf4fb;
+      --muted: #9aaec4;
+      --blue: #67a7ff;
+      --green: #41d49b;
+      --yellow: #f4c35f;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    body { margin: 0; background: linear-gradient(180deg, #07101d, var(--bg)); color: var(--text); }
+    a { color: var(--blue); text-decoration: none; }
+
+    main {
+      width: min(1120px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 44px 0 72px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 28px;
+      box-shadow: 0 22px 70px rgba(0,0,0,.28);
+      margin-bottom: 18px;
+    }
+
+    h1 { margin: 0 0 10px; font-size: 42px; letter-spacing: -1.2px; }
+    h2 { margin: 0 0 14px; font-size: 24px; }
+    p { color: var(--muted); line-height: 1.65; }
+
+    .badge {
+      display: inline-flex;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(65,212,155,.10);
+      border: 1px solid rgba(65,212,155,.22);
+      color: var(--green);
+      font-weight: 850;
+      margin-bottom: 16px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      overflow: hidden;
+    }
+
+    th, td {
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--border);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      color: var(--muted);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      background: rgba(255,255,255,.03);
+    }
+
+    tr:last-child td { border-bottom: 0; }
+
+    code {
+      color: var(--muted);
+      overflow-wrap: anywhere;
+      font-size: 12px;
+    }
+
+    .notice {
+      padding: 16px;
+      border-radius: 16px;
+      background: rgba(244,195,95,.08);
+      border: 1px solid rgba(244,195,95,.22);
+      color: #f7d99a;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+<main>
+  <section class="card">
+    <div class="badge">Intake gate · no capability approved</div>
+    <h1>Capability Activation Intake</h1>
+    <p>AstraTreasury capability activation intake gate is ready. No active capability activation request is imported, and all restricted capabilities remain disabled and not approved.</p>
+    <p><strong>Intake gate hash:</strong> <code>f93cf4d82270696c97693256228b829b33f20969506980457260a2cd3bc40416</code></p>
+  </section>
+
+  <section class="card">
+    <h2>Allowed intake capabilities</h2>
+    <table>
+      <thead><tr><th>Capability</th><th>Boundary</th></tr></thead>
+      <tbody><tr><td>fullLaunch</td><td>Requires separate action-specific approval</td></tr><tr><td>publicTokenSale</td><td>Requires separate action-specific approval</td></tr><tr><td>realTreasuryFunding</td><td>Requires separate action-specific approval</td></tr><tr><td>stakingOrRewards</td><td>Requires separate action-specific approval</td></tr><tr><td>buybackProgram</td><td>Requires separate action-specific approval</td></tr><tr><td>mainnetExecutionQueue</td><td>Requires separate action-specific approval</td></tr><tr><td>paperToOnchainAutomation</td><td>Requires separate action-specific approval</td></tr><tr><td>autonomousExecution</td><td>Requires separate action-specific approval</td></tr><tr><td>safeTransactionPayloadGeneration</td><td>Requires separate action-specific approval</td></tr><tr><td>safeTransactionExecution</td><td>Requires separate action-specific approval</td></tr></tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>Active request summary</h2>
+    <table>
+      <thead><tr><th>Field</th><th>Value</th></tr></thead>
+      <tbody><tr><td>requestId</td><td>no active request</td></tr><tr><td>requestedCapability</td><td>none</td></tr><tr><td>requesterReference</td><td>none</td></tr><tr><td>authorityReference</td><td>none</td></tr><tr><td>purpose</td><td>none</td></tr><tr><td>scope</td><td>none</td></tr><tr><td>evidenceReference</td><td>none</td></tr><tr><td>publicStatusPlan</td><td>none</td></tr><tr><td>onchainImpact</td><td>false</td></tr><tr><td>safeTransactionImpact</td><td>false</td></tr><tr><td>safePayloadGenerationRequested</td><td>false</td></tr><tr><td>executionQueueActivationRequested</td><td>false</td></tr><tr><td>fundsMovementRequested</td><td>false</td></tr><tr><td>requestedAt</td><td></td></tr></tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>Intake artifacts</h2>
+    <table>
+      <thead><tr><th>Artifact</th><th>Bytes</th><th>SHA-256</th></tr></thead>
+      <tbody><tr><td>public-docs/restricted-mode-operator-checklist-status.json</td><td>12413</td><td><code>5ddbabd6313a7a77329fbe62485275ab6cf6cb028cd648b6abdca8278740b728</code></td></tr><tr><td>public-docs/restricted-mode-maintenance-schedule-status.json</td><td>11836</td><td><code>e7ad71583d6f32f3eb208ab1c24952f650b290610f39e773e12bb0c4db29de4f</code></td></tr><tr><td>public-docs/restricted-mode-operations-handoff-status.json</td><td>9929</td><td><code>58e58c64674a38f7cb7f2ddc6d43d4eb64955ebe31dfdd044773388f2155aa05</code></td></tr><tr><td>public-docs/restricted-mode-final-release-status.json</td><td>10362</td><td><code>6927296a3d6d980e2084a7b7a90224c2f07baa690638e08bb593c41d208ee344</code></td></tr><tr><td>public-docs/restricted-mode-release-candidate-status.json</td><td>8698</td><td><code>a54a2218b289e288240d2dcc2618c38fc0870fd4de849f860f0ed0f3ba272f7d</code></td></tr><tr><td>public-docs/restricted-mode-evidence-seal-status.json</td><td>8060</td><td><code>39a2e04ea076869ca8c728173235c952421d476727a3a91f62dba48e9b9b66bf</code></td></tr><tr><td>public-docs/restricted-mode-monitoring-baseline-status.json</td><td>4742</td><td><code>1db46813e1ed40d31b1b11399ade7b463a459f3b4cae88b629c3c9e141dd1d36</code></td></tr><tr><td>public-docs/restricted-mode-final-status.json</td><td>3170</td><td><code>4960bb7b63fc9777c29ac746ef2191949e76caaeb927d78631a0b2fa0c8f5f52</code></td></tr><tr><td>public-docs/governance-decision-status.json</td><td>2574</td><td><code>bbab94dfb7e9f28063f0e0467637bcb08b99f66d404a3fa531ed0b3430d0c087</code></td></tr><tr><td>public-docs/capability-matrix-status.json</td><td>4146</td><td><code>e27c469580e99b64cc234cbe829246d3b6aef011ccd58e4054ca23bfebe7dca2</code></td></tr><tr><td>public-docs/public-status-update-status.json</td><td>3145</td><td><code>e18ab84455005723c76e2bc6de84c9e8be0fd31c0899f527a05d2561e775538f</code></td></tr><tr><td>public-docs/launch-control-status.json</td><td>3637</td><td><code>3684984730c79cd5c1e20ce599313eefafbfa6b823095885871b88ea76b23d3e</code></td></tr><tr><td>public-docs/mainnet-monitor-status.json</td><td>1707</td><td><code>793d44126f94815109700b4aa15a8972aa6ed8b47e46962c47cb23231faf3f1a</code></td></tr><tr><td>public-docs/mainnet-alerts-status.json</td><td>2128</td><td><code>49c42b7002b4cb0a06af55d956b68e1ce1ae7ea2a6cd83820587f5c4d7b530b7</code></td></tr><tr><td>public-docs/incident-summary.json</td><td>432</td><td><code>57b57c2637eaf8f5600b1b4664211d3562becd7258fb6c81c68857349f295b7b</code></td></tr><tr><td>public-docs/mainnet-execution-status.json</td><td>1320</td><td><code>47d16cc1af74a4056655ce40ef49d6bd298fa8f41900c5ba6884dec4d5f6190d</code></td></tr><tr><td>public-docs/treasury-funding-status.json</td><td>2489</td><td><code>d87c2c774d0f782c4ca38857d3c77f2cf06037218af677ad9cdd365ba64c5e91</code></td></tr><tr><td>public-docs/treasury-safe-transaction-status.json</td><td>3932</td><td><code>881b35ce7c12faab4fcabb6286d2fc10e8a61a48f19d30c30d01214024590812</code></td></tr><tr><td>public-docs/full-launch-status.json</td><td>2717</td><td><code>16dec6e30bbec9b9692ea41c76cac4b798ef2c17ac5adb49a9fffa209e1a9cdc</code></td></tr><tr><td>docs/capability-activation-intake/CAPABILITY_ACTIVATION_INTAKE_GATE.md</td><td>1075</td><td><code>f78d9fefcdb64a2e965e3af820b823c59e65d2b4dfffd2032781b49bf08886b7</code></td></tr><tr><td>docs/capability-activation-intake/CAPABILITY_ACTIVATION_REQUEST_TEMPLATE.json</td><td>575</td><td><code>c67564e60fbc0bdd06bc1c91cc400389d2901a0027b15dd51281e394eddee8af</code></td></tr><tr><td>docs/capability-activation-intake/CAPABILITY_ACTIVATION_INTAKE_CHECKLIST.md</td><td>639</td><td><code>87306ae4ca7c8a11a001cdb54d5c972e91036e133b07f4453640b7dd3964de55</code></td></tr><tr><td>docs/capability-activation-intake/CAPABILITY_ACTIVATION_BOUNDARIES.md</td><td>724</td><td><code>4f9d1a2cc39beb335287ac0a8a353f93b3388505e4ad974ea509a1f9b9f84c7a</code></td></tr><tr><td>docs/capability-activation-intake/CAPABILITY_ACTIVATION_INTAKE_RUNBOOK.md</td><td>513</td><td><code>9f99e48a19fd941c6bea607c7ee7d332698d3767fd3c40909a489b1ed91000bd</code></td></tr></tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>Checks</h2>
+    <table>
+      <thead><tr><th>Check</th><th>Status</th><th>Details</th></tr></thead>
+      <tbody><tr><td>Operator checklist ready</td><td>PASS</td><td><code>{&quot;status&quot;:&quot;RESTRICTED_MODE_OPERATOR_CHECKLIST_READY_DECISION_RECORDED_ALL_DISABLED&quot;}</code></td></tr><tr><td>Maintenance schedule ready</td><td>PASS</td><td><code>{&quot;status&quot;:&quot;RESTRICTED_MODE_MAINTENANCE_SCHEDULE_READY_DECISION_RECORDED_ALL_DISABLED&quot;}</code></td></tr><tr><td>Operations handoff ready</td><td>PASS</td><td><code>{&quot;status&quot;:&quot;RESTRICTED_MODE_OPERATIONS_HANDOFF_READY_DECISION_RECORDED_ALL_DISABLED&quot;}</code></td></tr><tr><td>Final release ready</td><td>PASS</td><td><code>{&quot;status&quot;:&quot;RESTRICTED_MODE_FINAL_RELEASE_READY_DECISION_RECORDED_ALL_DISABLED&quot;}</code></td></tr><tr><td>Release candidate ready</td><td>PASS</td><td><code>{&quot;status&quot;:&quot;RESTRICTED_MODE_RELEASE_CANDIDATE_READY_DECISION_RECORDED_ALL_DISABLED&quot;}</code></td></tr><tr><td>Evidence seal generated</td><td>PASS</td><td><code>{&quot;status&quot;:&quot;RESTRICTED_MODE_EVIDENCE_SEALED_DECISION_RECORDED_ALL_DISABLED&quot;}</code></td></tr><tr><td>Monitoring baseline established</td><td>PASS</td><td><code>{&quot;status&quot;:&quot;RESTRICTED_MODE_MONITORING_BASELINE_ESTABLISHED_DECISION_RECORDED_ALL_DISABLED&quot;}</code></td></tr><tr><td>Restricted-mode final status synced</td><td>PASS</td><td><code>{&quot;status&quot;:&quot;RESTRICTED_MODE_FINAL_STATUS_SYNCED_DECISION_RECORDED_ALL_DISABLED&quot;}</code></td></tr><tr><td>Governance decision recorded</td><td>PASS</td><td><code>{&quot;governanceDecisionRecorded&quot;:true}</code></td></tr><tr><td>Capability Matrix all-disabled</td><td>PASS</td><td><code>{&quot;allCapabilitiesDisabled&quot;:true,&quot;allCapabilityApprovalsFalse&quot;:true}</code></td></tr><tr><td>Public Status Update finalized</td><td>PASS</td><td><code>{&quot;publicStatusUpdateFinalApproved&quot;:true}</code></td></tr><tr><td>Mainnet monitor passing</td><td>PASS</td><td><code>{&quot;status&quot;:&quot;PASS&quot;}</code></td></tr><tr><td>Alerts do not require response</td><td>PASS</td><td><code>{&quot;responseRequired&quot;:false}</code></td></tr><tr><td>No active incidents</td><td>PASS</td><td><code>{&quot;activeIncidents&quot;:0}</code></td></tr><tr><td>Execution queue disabled</td><td>PASS</td><td><code>{&quot;mode&quot;:&quot;MAINNET_EXECUTION_QUEUE_DISABLED&quot;}</code></td></tr><tr><td>Full launch not approved</td><td>PASS</td><td><code>{&quot;fullLaunchApproved&quot;:false,&quot;governanceDecisionFullLaunchApproved&quot;:false}</code></td></tr><tr><td>Treasury funding not approved</td><td>PASS</td><td><code>{&quot;treasuryFundingApproved&quot;:false}</code></td></tr><tr><td>Treasury funding not executed</td><td>PASS</td><td><code>{&quot;treasuryFundingExecuted&quot;:false}</code></td></tr><tr><td>Safe payload not generated</td><td>PASS</td><td><code>{&quot;safeTransactionPayloadGenerated&quot;:false}</code></td></tr><tr><td>Safe transaction not prepared</td><td>PASS</td><td><code>{&quot;safeTransactionPrepared&quot;:false}</code></td></tr><tr><td>Active request valid if present</td><td>PASS</td><td><code>{&quot;requestFilePresent&quot;:false,&quot;requestIssues&quot;:[]}</code></td></tr></tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>Current statuses</h2>
+    <table>
+      <thead><tr><th>Area</th><th>Status</th></tr></thead>
+      <tbody><tr><td>restrictedModeOperatorChecklist</td><td>Restricted Mode Operator Checklist Ready Decision Recorded All Disabled</td></tr><tr><td>restrictedModeMaintenanceSchedule</td><td>Restricted Mode Maintenance Schedule Ready Decision Recorded All Disabled</td></tr><tr><td>restrictedModeOperationsHandoff</td><td>Restricted Mode Operations Handoff Ready Decision Recorded All Disabled</td></tr><tr><td>restrictedModeFinalRelease</td><td>Restricted Mode Final Release Ready Decision Recorded All Disabled</td></tr><tr><td>restrictedModeReleaseCandidate</td><td>Restricted Mode Release Candidate Ready Decision Recorded All Disabled</td></tr><tr><td>restrictedModeEvidenceSeal</td><td>Restricted Mode Evidence Sealed Decision Recorded All Disabled</td></tr><tr><td>restrictedModeMonitoringBaseline</td><td>Restricted Mode Monitoring Baseline Established Decision Recorded All Disabled</td></tr><tr><td>restrictedModeFinalStatus</td><td>Restricted Mode Final Status Synced Decision Recorded All Disabled</td></tr><tr><td>governanceDecision</td><td>Governance Decision Recorded Restricted Mode All Disabled</td></tr><tr><td>capabilityMatrix</td><td>Capability Matrix Finalized All Disabled</td></tr><tr><td>publicStatusUpdate</td><td>Public Status Update Finalized Restricted Mode</td></tr><tr><td>launchControl</td><td>Launch Control Ready Restricted Mode</td></tr><tr><td>fullLaunch</td><td>Full Launch Readiness Track Open Planning Only</td></tr><tr><td>treasuryFunding</td><td>Treasury Funding Readiness Track Open Not Approved</td></tr><tr><td>treasurySafeTransaction</td><td>Treasury Safe Transaction Package Scaffold Ready No Payload</td></tr><tr><td>monitor</td><td>Pass</td></tr><tr><td>alerts</td><td>Clear</td></tr><tr><td>incidents</td><td>No Active Incidents</td></tr><tr><td>mainnetExecution</td><td>Mainnet Execution Queue Disabled</td></tr></tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>Important</h2>
+    <div class="notice">
+      This intake gate accepts requests for review only. It does not approve launch, funding,
+      public sale, staking/rewards, buybacks, execution, automation, autonomous execution,
+      Safe payload generation, or Safe transaction execution.
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Public API</h2>
+    <p><a href="/api/public/capability-activation-intake">/api/public/capability-activation-intake</a></p>
+    <p><a href="/restricted-mode-operator-checklist">Restricted-Mode Operator Checklist</a></p>
+    <p><a href="/restricted-mode-maintenance-schedule">Restricted-Mode Maintenance Schedule</a></p>
+    <p><a href="/">Back to homepage</a></p>
+  </section>
+</main>
+</body>
+</html>
