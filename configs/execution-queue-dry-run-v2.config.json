@@ -1,0 +1,35 @@
+{
+  "schema": "astra-execution-queue-dry-run-v2-config",
+  "status": "planning-only-disabled-mode",
+  "network": {
+    "name": "Base Mainnet",
+    "chainId": 8453
+  },
+  "dryRunVersion": "v2",
+  "executionQueue": {
+    "enabled": false,
+    "mainnetExecutionQueueEnabled": false,
+    "paperToOnchainAutomationEnabled": false,
+    "autonomousExecutionEnabled": false,
+    "manualExecutionApprovalRequired": true,
+    "governanceSafeApprovalRequired": true,
+    "executorSafeReviewRequired": true,
+    "treasuryFundingRequiredForRealExecution": true
+  },
+  "dryRunRules": {
+    "sendTransactions": false,
+    "moveFunds": false,
+    "enableExecution": false,
+    "approveTreasuryFunding": false,
+    "approvePublicSale": false,
+    "approveAutonomousExecution": false
+  },
+  "expectedOutcomes": {
+    "queueDisabledBlocksExecution": true,
+    "treasuryFundingNotApprovedBlocksFundingDependentExecution": true,
+    "manualApprovalRequired": true,
+    "autonomousExecutionBlocked": true,
+    "paperToOnchainAutomationBlocked": true
+  },
+  "hardRule": "Dry run v2 verifies the disabled execution path only. It must not enable or authorize mainnet execution."
+}

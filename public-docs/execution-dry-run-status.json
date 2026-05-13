@@ -1,0 +1,94 @@
+{
+  "schema": "astra-public-execution-queue-dry-run-v2-status",
+  "generatedAt": "2026-05-13T13:45:10.225Z",
+  "status": "EXECUTION_QUEUE_DRY_RUN_V2_PASS_DISABLED_MODE",
+  "mode": "DRY_RUN_ONLY_DISABLED_MAINNET_QUEUE",
+  "network": {
+    "name": "Base Mainnet",
+    "chainId": 8453
+  },
+  "publicStatement": "Execution Queue Dry Run v2 confirms that mainnet execution remains blocked in restricted mode. No transaction is sent, no funds are moved, and no execution capability is enabled.",
+  "summary": {
+    "totalChecks": 21,
+    "passed": 21,
+    "failed": 0,
+    "dryRunCases": 5,
+    "dryRunCasesPassed": 5,
+    "failedCases": 0,
+    "activeIncidents": 0,
+    "responseRequired": false
+  },
+  "currentStatuses": {
+    "stabilization": "RESTRICTED_LAUNCH_STABILIZED",
+    "fullLaunch": "FULL_LAUNCH_READINESS_TRACK_OPEN_PLANNING_ONLY",
+    "legalFullLaunch": "LEGAL_FULL_LAUNCH_REVIEW_OPEN_NOT_APPROVED",
+    "treasuryFunding": "TREASURY_FUNDING_READINESS_TRACK_OPEN_NOT_APPROVED",
+    "restrictedOperations": "MAINNET_RESTRICTED_OPERATION",
+    "mainnetExecution": "MAINNET_EXECUTION_QUEUE_DISABLED",
+    "monitor": "PASS",
+    "alerts": "CLEAR",
+    "incidents": "NO_ACTIVE_INCIDENTS"
+  },
+  "executionQueue": {
+    "enabled": false,
+    "mainnetExecutionQueueEnabled": false,
+    "paperToOnchainAutomationEnabled": false,
+    "autonomousExecutionEnabled": false,
+    "manualExecutionApprovalRequired": true,
+    "governanceSafeApprovalRequired": true,
+    "executorSafeReviewRequired": true,
+    "treasuryFundingRequiredForRealExecution": true
+  },
+  "dryRunCases": [
+    {
+      "id": "DRY-RUN-V2-001",
+      "title": "Queue-disabled execution attempt",
+      "expected": "BLOCKED",
+      "actual": "BLOCKED",
+      "reason": "mainnetExecutionQueueEnabled is false",
+      "pass": true
+    },
+    {
+      "id": "DRY-RUN-V2-002",
+      "title": "Funding-dependent execution attempt",
+      "expected": "BLOCKED",
+      "actual": "BLOCKED",
+      "reason": "real treasury funding is not approved",
+      "pass": true
+    },
+    {
+      "id": "DRY-RUN-V2-003",
+      "title": "Paper-to-on-chain automation attempt",
+      "expected": "BLOCKED",
+      "actual": "BLOCKED",
+      "reason": "paper-to-on-chain automation is disabled",
+      "pass": true
+    },
+    {
+      "id": "DRY-RUN-V2-004",
+      "title": "Autonomous execution attempt",
+      "expected": "BLOCKED",
+      "actual": "BLOCKED",
+      "reason": "autonomous execution is disabled",
+      "pass": true
+    },
+    {
+      "id": "DRY-RUN-V2-005",
+      "title": "Execution without manual approvals",
+      "expected": "BLOCKED",
+      "actual": "BLOCKED",
+      "reason": "manual and Governance Safe approval are required",
+      "pass": true
+    }
+  ],
+  "restrictions": {
+    "publicTokenSale": false,
+    "realTreasuryFunding": false,
+    "stakingOrRewards": false,
+    "buybackProgram": false,
+    "autonomousExecution": false,
+    "mainnetExecutionQueue": false,
+    "paperToOnchainAutomation": false
+  },
+  "failures": []
+}

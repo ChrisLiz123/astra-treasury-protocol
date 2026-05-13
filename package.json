@@ -252,7 +252,11 @@
     "treasury:funding:validate": "node scripts/validate-treasury-funding-readiness.mjs",
     "treasury:funding:status": "node services/treasury-funding/status.mjs",
     "treasury:funding:gate": "npm run treasury:funding:validate && npm run treasury:funding:status",
-    "release:treasury-funding-readiness": "bash scripts/release/package-treasury-funding-readiness.sh"
+    "release:treasury-funding-readiness": "bash scripts/release/package-treasury-funding-readiness.sh",
+    "execution:dry-run:v2:validate": "node scripts/validate-execution-queue-dry-run-v2.mjs",
+    "execution:dry-run:v2:status": "node services/execution-dry-run/status.mjs",
+    "execution:dry-run:v2:gate": "npm run execution:dry-run:v2:validate && npm run execution:dry-run:v2:status",
+    "release:execution-queue-dry-run-v2": "bash scripts/release/package-execution-queue-dry-run-v2.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",
