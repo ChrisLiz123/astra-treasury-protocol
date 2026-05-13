@@ -1,6 +1,6 @@
 {
   "schema": "astra-signed-governance-resolution-evidence-status-v0.1",
-  "generatedAt": "2026-05-13T18:34:17.654Z",
+  "generatedAt": "2026-05-13T18:50:20.270Z",
   "status": "SIGNED_GOVERNANCE_RESOLUTION_EVIDENCE_IMPORT_READY_NO_EVIDENCE",
   "currentApprovedMode": "restricted-mainnet-operation",
   "evidenceImportFrameworkPrepared": true,

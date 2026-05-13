@@ -67,5 +67,9 @@
     "paperToOnchainAutomationEnabled": false,
     "autonomousExecutionApproved": false
   },
-  "hardRule": "This is a live precheck only. It must not record a governance decision, approve full launch, approve treasury funding, generate a Safe payload, or approve any restricted capability."
+  "hardRule": "This is a live precheck only. It must not record a governance decision, approve full launch, approve treasury funding, generate a Safe payload, or approve any restricted capability.",
+  "governanceProcessMode": "resolution-only",
+  "voteResultEvidenceRequired": false,
+  "signedResolutionEvidenceRequired": true,
+  "resolutionOnlyNote": "Governance process is resolution-only. Separate vote/result evidence is not required. The signed governance resolution evidence is the controlling governance evidence."
 }

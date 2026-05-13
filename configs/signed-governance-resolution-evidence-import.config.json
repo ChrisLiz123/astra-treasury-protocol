@@ -45,11 +45,13 @@
     "governanceResolutionSigned": "must be true",
     "resolutionSigningAuthorizationRecorded": "must be true",
     "resolutionSigningAuthorizationReference": "required",
-    "voteResultReference": "required",
+    "voteResultReference": "not required for resolution-only governance",
     "capabilityMatrixReference": "required",
     "publicStatusReference": "required",
     "evidenceReference": "required",
-    "approvedCapabilities": "must be empty for restricted-mode all-disabled path"
+    "approvedCapabilities": "must be empty for restricted-mode all-disabled path",
+    "governanceProcessMode": "must be resolution-only",
+    "governanceProcessReference": "required"
   },
   "capabilityApprovals": {
     "publicTokenSaleApproved": false,
@@ -69,5 +71,9 @@
     "paperToOnchainAutomationEnabled": false,
     "autonomousExecutionApproved": false
   },
-  "hardRule": "This package prepares the signed-resolution evidence import path only. It must not fabricate evidence, sign a resolution, record a governance decision, approve full launch, or approve any restricted capability."
+  "hardRule": "This package prepares the signed-resolution evidence import path only. It must not fabricate evidence, sign a resolution, record a governance decision, approve full launch, or approve any restricted capability.",
+  "governanceProcessMode": "resolution-only",
+  "voteResultEvidenceRequired": false,
+  "signedResolutionEvidenceRequired": true,
+  "resolutionOnlyNote": "Governance process is resolution-only. Separate vote/result evidence is not required. The signed governance resolution evidence is the controlling governance evidence."
 }

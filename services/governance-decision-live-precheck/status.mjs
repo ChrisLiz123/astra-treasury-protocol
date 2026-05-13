@@ -60,6 +60,7 @@ const incidents = readJson("public-docs/incident-summary.json");
 const execution = readJson("public-docs/mainnet-execution-status.json");
 
 const activeIncidents = Number(incidents?.summary?.active || 0);
+const resolutionOnlyMode = config.governanceProcessMode === "resolution-only";
 const responseRequired = Boolean(alerts?.responseRequired);
 
 const prerequisites = {
@@ -73,9 +74,13 @@ const prerequisites = {
     publicStatusUpdate.doesNotApproveCapabilities === true &&
     publicStatusUpdate.fullLaunchApproved === false,
   voteResultEvidenceImportedAndValidated:
-    voteEvidence.voteResultImported === true &&
-    voteEvidence.voteResultValidated === true &&
-    voteEvidence.voteResultRecorded === true,
+    resolutionOnlyMode
+      ? true
+      : (
+          voteEvidence.voteResultImported === true &&
+          voteEvidence.voteResultValidated === true &&
+          voteEvidence.voteResultRecorded === true
+        ),
   signedResolutionEvidenceImportedAndValidated:
     signedResolutionEvidence.signedResolutionEvidenceImported === true &&
     signedResolutionEvidence.signedResolutionValidated === true &&
@@ -120,6 +125,7 @@ const report = {
   status,
   currentApprovedMode: "restricted-mainnet-operation",
   selectedAction: config.selectedAction || {},
+  governanceProcessMode: config.governanceProcessMode || "vote-or-resolution",
   precheckOnly: true,
   livePrecheckFrameworkPrepared: Boolean(config.livePrecheckFrameworkPrepared),
   readyToRecordGovernanceDecision,

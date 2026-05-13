@@ -1,6 +1,6 @@
 {
   "schema": "astra-governance-decision-live-precheck-status-v0.1",
-  "generatedAt": "2026-05-13T18:43:41.093Z",
+  "generatedAt": "2026-05-13T19:16:50.055Z",
   "status": "GOVERNANCE_DECISION_RECORDING_LIVE_PRECHECK_BLOCKED_PENDING_EVIDENCE_OR_APPROVAL",
   "currentApprovedMode": "restricted-mainnet-operation",
   "selectedAction": {
@@ -9,6 +9,7 @@
     "category": "governance-live-precheck",
     "description": "Run final precheck before any governance decision recording action."
   },
+  "governanceProcessMode": "resolution-only",
   "precheckOnly": true,
   "livePrecheckFrameworkPrepared": true,
   "readyToRecordGovernanceDecision": false,
@@ -17,8 +18,8 @@
   "publicStatement": "AstraTreasury governance decision recording live precheck is blocked until required evidence and final approvals are present. No governance decision is recorded.",
   "summary": {
     "totalPrerequisites": 15,
-    "passedPrerequisites": 12,
-    "blockerCount": 3,
+    "passedPrerequisites": 13,
+    "blockerCount": 2,
     "activeIncidents": 0,
     "responseRequired": false,
     "monitorStatus": "PASS"
@@ -27,7 +28,7 @@
     "launchControlReady": true,
     "capabilityMatrixFinalized": true,
     "publicStatusUpdateFinalized": true,
-    "voteResultEvidenceImportedAndValidated": false,
+    "voteResultEvidenceImportedAndValidated": true,
     "signedResolutionEvidenceImportedAndValidated": false,
     "actionSpecificApprovalRecorded": false,
     "governanceDecisionNotAlreadyRecorded": true,
@@ -41,7 +42,6 @@
     "mainnetExecutionQueueDisabled": true
   },
   "blockers": [
-    "voteResultEvidenceImportedAndValidated",
     "signedResolutionEvidenceImportedAndValidated",
     "actionSpecificApprovalRecorded"
   ],

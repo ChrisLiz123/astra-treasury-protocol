@@ -50,7 +50,27 @@ function isNonEmptyString(value) {
   return typeof value === "string" && value.trim().length > 0;
 }
 
+function isPlaceholderEvidenceValue(value) {
+  const normalized = String(value ?? "").trim().toLowerCase();
+
+  return (
+    normalized === "tbd" ||
+    normalized.includes("tbd") ||
+    normalized === "todo" ||
+    normalized.includes("todo") ||
+    normalized === "not imported" ||
+    normalized === "yyyy-mm-ddthh:mm:ssz" ||
+    normalized.includes("placeholder") ||
+    normalized.includes("paste_")
+  );
+}
+
+function isUsableEvidenceString(value) {
+  return isNonEmptyString(value) && !isPlaceholderEvidenceValue(value);
+}
+
 const config = readJson("configs/signed-governance-resolution-evidence-import.config.json");
+const governanceProcessMode = config.governanceProcessMode || "vote-or-resolution";
 const launchControl = readJson("public-docs/launch-control-status.json");
 const capabilityMatrix = readJson("public-docs/capability-matrix-status.json");
 const publicStatusUpdate = readJson("public-docs/public-status-update-status.json");
@@ -89,20 +109,31 @@ if (evidence) {
     validationIssues.push("Evidence schema is invalid.");
   }
 
-  for (const key of [
+  const requiredEvidenceFields = [
     "resolutionTitle",
     "resolutionReference",
     "resolutionHash",
     "signedAt",
     "resolutionSigningAuthorizationReference",
-    "voteResultReference",
     "capabilityMatrixReference",
     "publicStatusReference",
     "evidenceReference"
-  ]) {
-    if (!isNonEmptyString(evidence[key])) {
-      validationIssues.push(`Missing required evidence field: ${key}`);
+  ];
+
+  if (governanceProcessMode === "resolution-only") {
+    requiredEvidenceFields.push("governanceProcessReference");
+  } else {
+    requiredEvidenceFields.push("voteResultReference");
+  }
+
+  for (const key of requiredEvidenceFields) {
+    if (!isUsableEvidenceString(evidence[key])) {
+      validationIssues.push(`Missing, empty, or placeholder evidence field: ${key}`);
     }
+  }
+
+  if (governanceProcessMode === "resolution-only" && evidence.governanceProcessMode !== "resolution-only") {
+    validationIssues.push("Evidence must set governanceProcessMode to resolution-only.");
   }
 
   if (evidence.governanceResolutionSigned !== true) {
@@ -166,6 +197,8 @@ const status = !safe
 
 const evidenceSummary = signedResolutionEvidenceImported
   ? {
+      governanceProcessMode: evidence.governanceProcessMode || governanceProcessMode,
+      governanceProcessReference: evidence.governanceProcessReference || "",
       resolutionTitle: evidence.resolutionTitle || "",
       resolutionReference: evidence.resolutionReference || "",
       resolutionHash: evidence.resolutionHash || "",
@@ -181,6 +214,8 @@ const evidenceSummary = signedResolutionEvidenceImported
       evidenceReference: evidence.evidenceReference || ""
     }
   : {
+      governanceProcessMode,
+      governanceProcessReference: "not imported",
       resolutionTitle: "not imported",
       resolutionReference: "not imported",
       resolutionHash: "not imported",

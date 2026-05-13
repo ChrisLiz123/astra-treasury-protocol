@@ -1,6 +1,6 @@
 {
   "schema": "astra-action-specific-governance-decision-approval-status-v0.1",
-  "generatedAt": "2026-05-13T18:34:18.656Z",
+  "generatedAt": "2026-05-13T19:16:49.571Z",
   "status": "ACTION_SPECIFIC_APPROVAL_PATH_READY_BLOCKED_PENDING_EVIDENCE",
   "selectedAction": {
     "id": "governance-decision-recording",
@@ -8,6 +8,7 @@
     "category": "governance",
     "description": "Authorize and record the final governance decision that defines exactly which capabilities, if any, are approved."
   },
+  "governanceProcessMode": "resolution-only",
   "currentApprovedMode": "restricted-mainnet-operation",
   "actionSpecificApprovalRecorded": false,
   "governanceDecisionRecorded": false,
@@ -22,7 +23,7 @@
     "failedCases": 0,
     "activeIncidents": 0,
     "responseRequired": false,
-    "blockerCount": 5
+    "blockerCount": 4
   },
   "clearances": {
     "auditCleared": true,
@@ -56,7 +57,7 @@
     "governanceDecisionRecordingPackageReady": true,
     "governanceDecisionRecordingAuthorizationPackageReady": true,
     "signedGovernanceResolutionExists": false,
-    "voteResultRecorded": false,
+    "voteResultRecorded": true,
     "resolutionSigningAuthorizationRecorded": false,
     "capabilityMatrixFinalApproved": true,
     "publicStatusUpdateFinalApproved": true,
@@ -65,7 +66,6 @@
   },
   "actionBlockers": [
     "signedGovernanceResolutionExists",
-    "voteResultRecorded",
     "resolutionSigningAuthorizationRecorded",
     "decisionRecorderAssigned",
     "finalActionApprovalRecorded"
@@ -118,10 +118,10 @@
   "dryRunCases": [
     {
       "id": "ACTION-GOV-DECISION-001",
-      "title": "Vote/result evidence status",
-      "expected": "BLOCKED",
-      "actual": "BLOCKED",
-      "reason": "vote result is not imported and validated",
+      "title": "Governance process result evidence status",
+      "expected": "SATISFIED",
+      "actual": "SATISFIED",
+      "reason": "resolution-only governance does not require separate vote/result evidence",
       "pass": true
     },
     {
@@ -158,10 +158,10 @@
     },
     {
       "id": "ACTION-GOV-DECISION-006",
-      "title": "Action approval recording attempt",
+      "title": "Action approval recording status",
       "expected": "BLOCKED",
       "actual": "BLOCKED",
-      "reason": "this package must not record approval",
+      "reason": "this package has not recorded action-specific approval",
       "pass": true
     },
     {
@@ -330,12 +330,12 @@
       }
     },
     {
-      "name": "ACTION-GOV-DECISION-001: Vote/result evidence status",
+      "name": "ACTION-GOV-DECISION-001: Governance process result evidence status",
       "pass": true,
       "details": {
-        "expected": "BLOCKED",
-        "actual": "BLOCKED",
-        "reason": "vote result is not imported and validated"
+        "expected": "SATISFIED",
+        "actual": "SATISFIED",
+        "reason": "resolution-only governance does not require separate vote/result evidence"
       }
     },
     {
@@ -375,12 +375,12 @@
       }
     },
     {
-      "name": "ACTION-GOV-DECISION-006: Action approval recording attempt",
+      "name": "ACTION-GOV-DECISION-006: Action approval recording status",
       "pass": true,
       "details": {
         "expected": "BLOCKED",
         "actual": "BLOCKED",
-        "reason": "this package must not record approval"
+        "reason": "this package has not recorded action-specific approval"
       }
     },
     {

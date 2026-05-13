@@ -348,7 +348,9 @@
     "governance:decision-live-precheck:validate": "node scripts/validate-governance-decision-live-precheck.mjs",
     "governance:decision-live-precheck:status": "node services/governance-decision-live-precheck/status.mjs",
     "governance:decision-live-precheck:gate": "npm run governance:decision-live-precheck:validate && npm run governance:decision-live-precheck:status",
-    "release:governance-decision-live-precheck": "bash scripts/release/package-governance-decision-live-precheck.sh"
+    "release:governance-decision-live-precheck": "bash scripts/release/package-governance-decision-live-precheck.sh",
+    "action:governance-decision:record-approval": "node scripts/record-governance-decision-action-approval.mjs",
+    "release:resolution-only-governance-adapter": "bash scripts/release/package-resolution-only-governance-adapter.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",

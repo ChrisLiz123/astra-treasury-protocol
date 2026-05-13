@@ -7,7 +7,7 @@
   "governanceResolutionSigned": true,
   "resolutionSigningAuthorizationRecorded": true,
   "resolutionSigningAuthorizationReference": "TBD",
-  "voteResultReference": "TBD",
+  "voteResultReference": "not applicable - resolution-only governance",
   "approvedCapabilities": [],
   "disabledCapabilities": [
     "publicTokenSale",
@@ -23,5 +23,8 @@
   "capabilityMatrixReference": "public-docs/capability-matrix-status.json",
   "publicStatusReference": "public-docs/public-status-update-status.json",
   "evidenceReference": "TBD",
-  "notes": "Do not include private signer data, private keys, seed phrases, passwords, secret material, or non-public compliance notes."
+  "notes": "Do not include private signer data, private keys, seed phrases, passwords, secret material, or non-public compliance notes.",
+  "governanceProcessMode": "resolution-only",
+  "governanceProcessReference": "TBD",
+  "resultSummary": "TBD"
 }

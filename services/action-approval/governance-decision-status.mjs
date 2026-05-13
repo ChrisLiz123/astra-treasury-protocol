@@ -67,6 +67,8 @@ const incidents = readJson("public-docs/incident-summary.json");
 const execution = readJson("public-docs/mainnet-execution-status.json");
 
 const baseRequiredBeforeActionApproval = config.requiredBeforeActionApproval || {};
+const resolutionOnlyMode = config.governanceProcessMode === "resolution-only";
+
 const publicStatusUpdateFinalized =
   publicStatusUpdate.publicStatusUpdateFinalApproved === true &&
   publicStatusUpdate.doesNotApproveCapabilities === true &&
@@ -78,6 +80,9 @@ const voteResultEvidenceImportedAndValid =
   voteResultEvidence.voteResultValidated === true &&
   voteResultEvidence.voteResultRecorded === true;
 
+const voteResultRequirementSatisfied =
+  resolutionOnlyMode ? true : voteResultEvidenceImportedAndValid;
+
 const signedResolutionEvidenceImportedAndValid =
   signedResolutionEvidence.signedResolutionEvidenceImported === true &&
   signedResolutionEvidence.signedResolutionValidated === true &&
@@ -88,7 +93,7 @@ const resolutionAuthorizationEvidenceImportedAndValid =
 
 const effectiveRequiredBeforeActionApproval = {
   ...baseRequiredBeforeActionApproval,
-  voteResultRecorded: voteResultEvidenceImportedAndValid
+  voteResultRecorded: voteResultRequirementSatisfied
     ? true
     : baseRequiredBeforeActionApproval.voteResultRecorded,
   signedGovernanceResolutionExists: signedResolutionEvidenceImportedAndValid
@@ -185,12 +190,14 @@ check(checks, "Mainnet execution queue disabled", execution.mode === "MAINNET_EX
 const dryRunCases = [
   {
     id: "ACTION-GOV-DECISION-001",
-    title: "Vote/result evidence status",
+    title: "Governance process result evidence status",
     expected: effectiveRequiredBeforeActionApproval?.voteResultRecorded === true ? "SATISFIED" : "BLOCKED",
     actual: effectiveRequiredBeforeActionApproval?.voteResultRecorded === true ? "SATISFIED" : "BLOCKED",
-    reason: effectiveRequiredBeforeActionApproval?.voteResultRecorded === true
-      ? "vote/result evidence is imported and validated"
-      : "vote result is not imported and validated"
+    reason: resolutionOnlyMode
+      ? "resolution-only governance does not require separate vote/result evidence"
+      : (effectiveRequiredBeforeActionApproval?.voteResultRecorded === true
+          ? "vote/result evidence is imported and validated"
+          : "vote result is not imported and validated")
   },
   {
     id: "ACTION-GOV-DECISION-002",
@@ -230,10 +237,12 @@ const dryRunCases = [
   },
   {
     id: "ACTION-GOV-DECISION-006",
-    title: "Action approval recording attempt",
-    expected: "BLOCKED",
-    actual: config.actionSpecificApprovalRecorded === false ? "BLOCKED" : "NOT_BLOCKED",
-    reason: "this package must not record approval"
+    title: "Action approval recording status",
+    expected: config.actionSpecificApprovalRecorded === true ? "SATISFIED" : "BLOCKED",
+    actual: config.actionSpecificApprovalRecorded === true ? "SATISFIED" : "BLOCKED",
+    reason: config.actionSpecificApprovalRecorded === true
+      ? "action-specific approval is recorded for governance decision recording"
+      : "this package has not recorded action-specific approval"
   },
   {
     id: "ACTION-GOV-DECISION-007",
@@ -295,7 +304,9 @@ const actionBlockers = Object.entries(effectiveRequiredBeforeActionApproval || {
   .map(([key]) => key);
 
 const status = failures.length === 0
-  ? "ACTION_SPECIFIC_APPROVAL_PATH_READY_BLOCKED_PENDING_EVIDENCE"
+  ? (Boolean(config.actionSpecificApprovalRecorded) && actionBlockers.length === 0
+      ? "ACTION_SPECIFIC_GOVERNANCE_DECISION_APPROVAL_RECORDED_READY_FOR_LIVE_PRECHECK"
+      : "ACTION_SPECIFIC_APPROVAL_PATH_READY_BLOCKED_PENDING_EVIDENCE")
   : "ACTION_SPECIFIC_APPROVAL_PATH_REVIEW_REQUIRED";
 
 const report = {
@@ -303,8 +314,9 @@ const report = {
   generatedAt: new Date().toISOString(),
   status,
   selectedAction: config.selectedAction,
+  governanceProcessMode: config.governanceProcessMode || "vote-or-resolution",
   currentApprovedMode: "restricted-mainnet-operation",
-  actionSpecificApprovalRecorded: false,
+  actionSpecificApprovalRecorded: Boolean(config.actionSpecificApprovalRecorded),
   governanceDecisionRecorded: false,
   fullLaunchApproved: false,
   publicStatement:

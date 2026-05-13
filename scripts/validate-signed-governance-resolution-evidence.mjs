@@ -42,6 +42,25 @@ function isNonEmptyString(value) {
   return typeof value === "string" && value.trim().length > 0;
 }
 
+function isPlaceholderEvidenceValue(value) {
+  const normalized = String(value ?? "").trim().toLowerCase();
+
+  return (
+    normalized === "tbd" ||
+    normalized.includes("tbd") ||
+    normalized === "todo" ||
+    normalized.includes("todo") ||
+    normalized === "not imported" ||
+    normalized === "yyyy-mm-ddthh:mm:ssz" ||
+    normalized.includes("placeholder") ||
+    normalized.includes("paste_")
+  );
+}
+
+function isUsableEvidenceString(value) {
+  return isNonEmptyString(value) && !isPlaceholderEvidenceValue(value);
+}
+
 for (const file of requiredFiles) {
   if (!fs.existsSync(path.join(root, file))) {
     issue(file, "Missing required signed-resolution evidence file.");
@@ -50,6 +69,7 @@ for (const file of requiredFiles) {
 
 if (issues.length === 0) {
   const config = readJson("configs/signed-governance-resolution-evidence-import.config.json");
+const governanceProcessMode = config.governanceProcessMode || "vote-or-resolution";
   const launchControl = readJson("public-docs/launch-control-status.json");
   const capabilityMatrix = readJson("public-docs/capability-matrix-status.json");
   const publicStatusUpdate = readJson("public-docs/public-status-update-status.json");
@@ -178,20 +198,31 @@ if (issues.length === 0) {
         issue("evidence.schema", "Evidence schema must be astra-signed-governance-resolution-evidence-v0.1.");
       }
 
-      for (const key of [
+      const requiredEvidenceFields = [
         "resolutionTitle",
         "resolutionReference",
         "resolutionHash",
         "signedAt",
         "resolutionSigningAuthorizationReference",
-        "voteResultReference",
         "capabilityMatrixReference",
         "publicStatusReference",
         "evidenceReference"
-      ]) {
-        if (!isNonEmptyString(evidence[key])) {
-          issue(`evidence.${key}`, "Required evidence field is missing or empty.");
+      ];
+
+      if (governanceProcessMode === "resolution-only") {
+        requiredEvidenceFields.push("governanceProcessReference");
+      } else {
+        requiredEvidenceFields.push("voteResultReference");
+      }
+
+      for (const key of requiredEvidenceFields) {
+        if (!isUsableEvidenceString(evidence[key])) {
+          issue(`evidence.${key}`, "Required evidence field is missing, empty, or a placeholder.");
         }
+      }
+
+      if (governanceProcessMode === "resolution-only" && evidence.governanceProcessMode !== "resolution-only") {
+        issue("evidence.governanceProcessMode", "Evidence must set governanceProcessMode to resolution-only.");
       }
 
       if (evidence.governanceResolutionSigned !== true) {
