@@ -11,6 +11,7 @@ const requiredFiles = [
   "docs/action-approvals/governance-decision/ACTION_APPROVAL_BLOCKERS.md",
   "public-docs/launch-control-status.json",
   "public-docs/capability-matrix-status.json",
+  "public-docs/public-status-update-status.json",
   "public-docs/stabilization-status.json",
   "public-docs/full-launch-status.json",
   "public-docs/full-launch-governance-decision-recording-status.json",
@@ -62,6 +63,7 @@ if (issues.length === 0) {
   const config = readJson("configs/action-approval-governance-decision.config.json");
   const launchControl = readJson("public-docs/launch-control-status.json");
   const capabilityMatrix = readJson("public-docs/capability-matrix-status.json");
+  const publicStatusUpdate = readJson("public-docs/public-status-update-status.json");
   const stabilization = readJson("public-docs/stabilization-status.json");
   const fullLaunch = readJson("public-docs/full-launch-status.json");
   const decisionRecording = readJson("public-docs/full-launch-governance-decision-recording-status.json");
@@ -101,6 +103,22 @@ if (issues.length === 0) {
 
   if (capabilityMatrix.allCapabilityApprovalsFalse !== true) {
     issue("capabilityMatrix.allCapabilityApprovalsFalse", "Capability matrix must keep all approvals false.");
+  }
+
+  if (publicStatusUpdate.publicStatusUpdateFinalApproved !== true) {
+    issue("publicStatusUpdate.publicStatusUpdateFinalApproved", "Public status update must be final-approved.");
+  }
+
+  if (publicStatusUpdate.doesNotApproveCapabilities !== true) {
+    issue("publicStatusUpdate.doesNotApproveCapabilities", "Public status update must not approve capabilities.");
+  }
+
+  if (publicStatusUpdate.fullLaunchApproved !== false) {
+    issue("publicStatusUpdate.fullLaunchApproved", "Public status update must keep full launch not approved.");
+  }
+
+  if (publicStatusUpdate.governanceDecisionRecorded !== false) {
+    issue("publicStatusUpdate.governanceDecisionRecorded", "Public status update must keep governance decision not recorded.");
   }
 
   if (stabilization.status !== "RESTRICTED_LAUNCH_STABILIZED") {

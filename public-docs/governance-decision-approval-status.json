@@ -1,6 +1,6 @@
 {
   "schema": "astra-action-specific-governance-decision-approval-status-v0.1",
-  "generatedAt": "2026-05-13T18:04:24.851Z",
+  "generatedAt": "2026-05-13T18:13:15.396Z",
   "status": "ACTION_SPECIFIC_APPROVAL_PATH_READY_BLOCKED_PENDING_EVIDENCE",
   "selectedAction": {
     "id": "governance-decision-recording",
@@ -22,7 +22,7 @@
     "failedCases": 0,
     "activeIncidents": 0,
     "responseRequired": false,
-    "blockerCount": 6
+    "blockerCount": 5
   },
   "clearances": {
     "auditCleared": true,
@@ -59,7 +59,7 @@
     "voteResultRecorded": false,
     "resolutionSigningAuthorizationRecorded": false,
     "capabilityMatrixFinalApproved": true,
-    "publicStatusUpdateFinalApproved": false,
+    "publicStatusUpdateFinalApproved": true,
     "decisionRecorderAssigned": false,
     "finalActionApprovalRecorded": false
   },
@@ -67,7 +67,6 @@
     "signedGovernanceResolutionExists",
     "voteResultRecorded",
     "resolutionSigningAuthorizationRecorded",
-    "publicStatusUpdateFinalApproved",
     "decisionRecorderAssigned",
     "finalActionApprovalRecorded"
   ],
@@ -151,10 +150,10 @@
     },
     {
       "id": "ACTION-GOV-DECISION-005",
-      "title": "Missing public status update blocks action approval",
-      "expected": "BLOCKED",
-      "actual": "BLOCKED",
-      "reason": "public status update is not final-approved",
+      "title": "Public status update finalization status",
+      "expected": "SATISFIED",
+      "actual": "SATISFIED",
+      "reason": "public status update is finalized for restricted-mode / all-disabled posture",
       "pass": true
     },
     {
@@ -193,6 +192,7 @@
   "currentStatuses": {
     "launchControl": "LAUNCH_CONTROL_READY_RESTRICTED_MODE",
     "capabilityMatrix": "CAPABILITY_MATRIX_FINALIZED_ALL_DISABLED",
+    "publicStatusUpdate": "PUBLIC_STATUS_UPDATE_FINALIZED_RESTRICTED_MODE",
     "stabilization": "RESTRICTED_LAUNCH_STABILIZED",
     "fullLaunch": "FULL_LAUNCH_READINESS_TRACK_OPEN_PLANNING_ONLY",
     "decisionRecording": "FULL_LAUNCH_GOVERNANCE_DECISION_RECORDING_PACKAGE_READY_NOT_RECORDED",
@@ -364,12 +364,12 @@
       }
     },
     {
-      "name": "ACTION-GOV-DECISION-005: Missing public status update blocks action approval",
+      "name": "ACTION-GOV-DECISION-005: Public status update finalization status",
       "pass": true,
       "details": {
-        "expected": "BLOCKED",
-        "actual": "BLOCKED",
-        "reason": "public status update is not final-approved"
+        "expected": "SATISFIED",
+        "actual": "SATISFIED",
+        "reason": "public status update is finalized for restricted-mode / all-disabled posture"
       }
     },
     {

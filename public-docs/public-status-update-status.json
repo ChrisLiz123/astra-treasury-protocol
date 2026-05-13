@@ -1,0 +1,67 @@
+{
+  "schema": "astra-public-status-update-finalization-status-v0.1",
+  "generatedAt": "2026-05-13T18:13:14.904Z",
+  "status": "PUBLIC_STATUS_UPDATE_FINALIZED_RESTRICTED_MODE",
+  "currentApprovedMode": "restricted-mainnet-operation",
+  "publicStatusUpdateFinalized": true,
+  "publicStatusUpdateFinalApproved": true,
+  "finalApprovalScope": "restricted-mode-no-capability-approval",
+  "doesNotApproveCapabilities": true,
+  "governanceDecisionRecorded": false,
+  "fullLaunchApproved": false,
+  "finalPublicStatusUpdate": {
+    "headline": "AstraTreasury remains in restricted Base Mainnet operation.",
+    "summary": "Audit and legal requirements are cleared per operator confirmation. The capability matrix is finalized as all-disabled. Full launch, public token sale, real treasury funding, staking/rewards, buybacks, autonomous execution, paper-to-on-chain automation, mainnet execution queue activation, Safe payload generation, and Safe transaction execution remain not approved.",
+    "mode": "restricted-mainnet-operation",
+    "capabilityPosture": "all-disabled",
+    "approvalPosture": "no-capability-approved"
+  },
+  "publicStatement": "AstraTreasury public status update is finalized for restricted-mode / all-disabled status. No governance decision is recorded, full launch is not approved, and no restricted capability is approved.",
+  "summary": {
+    "activeIncidents": 0,
+    "responseRequired": false,
+    "monitorStatus": "PASS",
+    "capabilityApprovalCount": 0
+  },
+  "capabilityApprovals": {
+    "publicTokenSaleApproved": false,
+    "realTreasuryFundingApproved": false,
+    "stakingOrRewardsApproved": false,
+    "buybackProgramApproved": false,
+    "mainnetExecutionQueueApproved": false,
+    "paperToOnchainAutomationApproved": false,
+    "autonomousExecutionApproved": false
+  },
+  "currentStatuses": {
+    "launchControl": "LAUNCH_CONTROL_READY_RESTRICTED_MODE",
+    "capabilityMatrix": "CAPABILITY_MATRIX_FINALIZED_ALL_DISABLED",
+    "stabilization": "RESTRICTED_LAUNCH_STABILIZED",
+    "fullLaunch": "FULL_LAUNCH_READINESS_TRACK_OPEN_PLANNING_ONLY",
+    "treasuryFunding": "TREASURY_FUNDING_READINESS_TRACK_OPEN_NOT_APPROVED",
+    "treasurySafeTransaction": "TREASURY_SAFE_TRANSACTION_PACKAGE_SCAFFOLD_READY_NO_PAYLOAD",
+    "monitor": "PASS",
+    "alerts": "CLEAR",
+    "incidents": "NO_ACTIVE_INCIDENTS",
+    "mainnetExecution": "MAINNET_EXECUTION_QUEUE_DISABLED"
+  },
+  "restrictions": {
+    "publicTokenSale": false,
+    "realTreasuryFunding": false,
+    "stakingOrRewards": false,
+    "buybackProgram": false,
+    "autonomousExecution": false,
+    "mainnetExecutionQueue": false,
+    "paperToOnchainAutomation": false
+  },
+  "safety": {
+    "sendsTransactions": false,
+    "movesFunds": false,
+    "deploysContracts": false,
+    "enablesExecution": false,
+    "approvesPublicSale": false,
+    "approvesTreasuryFunding": false,
+    "preparesSafeTransaction": false,
+    "recordsGovernanceDecision": false,
+    "approvesFullLaunch": false
+  }
+}

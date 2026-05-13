@@ -49,6 +49,7 @@ function check(checks, name, pass, details = {}) {
 
 const config = readJson("configs/action-approval-governance-decision.config.json");
 const capabilityMatrix = readJson("public-docs/capability-matrix-status.json");
+const publicStatusUpdate = readJson("public-docs/public-status-update-status.json");
 const launchControl = readJson("public-docs/launch-control-status.json");
 const stabilization = readJson("public-docs/stabilization-status.json");
 const fullLaunch = readJson("public-docs/full-launch-status.json");
@@ -64,6 +65,12 @@ const incidents = readJson("public-docs/incident-summary.json");
 const execution = readJson("public-docs/mainnet-execution-status.json");
 
 const baseRequiredBeforeActionApproval = config.requiredBeforeActionApproval || {};
+const publicStatusUpdateFinalized =
+  publicStatusUpdate.publicStatusUpdateFinalApproved === true &&
+  publicStatusUpdate.doesNotApproveCapabilities === true &&
+  publicStatusUpdate.fullLaunchApproved === false &&
+  publicStatusUpdate.governanceDecisionRecorded === false;
+
 const effectiveRequiredBeforeActionApproval = {
   ...baseRequiredBeforeActionApproval,
   capabilityMatrixFinalApproved:
@@ -71,7 +78,10 @@ const effectiveRequiredBeforeActionApproval = {
     capabilityMatrix.allCapabilitiesDisabled === true &&
     capabilityMatrix.allCapabilityApprovalsFalse === true
       ? true
-      : baseRequiredBeforeActionApproval.capabilityMatrixFinalApproved
+      : baseRequiredBeforeActionApproval.capabilityMatrixFinalApproved,
+  publicStatusUpdateFinalApproved: publicStatusUpdateFinalized
+    ? true
+    : baseRequiredBeforeActionApproval.publicStatusUpdateFinalApproved
 };
 
 const activeIncidents = Number(incidents?.summary?.active || 0);
@@ -181,10 +191,12 @@ const dryRunCases = [
   },
   {
     id: "ACTION-GOV-DECISION-005",
-    title: "Missing public status update blocks action approval",
-    expected: "BLOCKED",
-    actual: effectiveRequiredBeforeActionApproval?.publicStatusUpdateFinalApproved === false ? "BLOCKED" : "NOT_BLOCKED",
-    reason: "public status update is not final-approved"
+    title: "Public status update finalization status",
+    expected: effectiveRequiredBeforeActionApproval?.publicStatusUpdateFinalApproved === true ? "SATISFIED" : "BLOCKED",
+    actual: effectiveRequiredBeforeActionApproval?.publicStatusUpdateFinalApproved === true ? "SATISFIED" : "BLOCKED",
+    reason: effectiveRequiredBeforeActionApproval?.publicStatusUpdateFinalApproved === true
+      ? "public status update is finalized for restricted-mode / all-disabled posture"
+      : "public status update is not final-approved"
   },
   {
     id: "ACTION-GOV-DECISION-006",
@@ -289,6 +301,7 @@ const report = {
   currentStatuses: {
     launchControl: launchControl.status || "UNKNOWN",
     capabilityMatrix: capabilityMatrix.status || "UNKNOWN",
+    publicStatusUpdate: publicStatusUpdate.status || "UNKNOWN",
     stabilization: stabilization.status || "UNKNOWN",
     fullLaunch: fullLaunch.status || "UNKNOWN",
     decisionRecording: decisionRecording.status || "UNKNOWN",

@@ -748,6 +748,10 @@ const html = `<!doctype html>
           <strong>Capability Matrix</strong>
           <span>Finalized all-disabled capability map.</span>
         </a>
+        <a class="link-card" href="/public-status-update">
+          <strong>Public Status Update</strong>
+          <span>Finalized restricted-mode public status language.</span>
+        </a>
         <a class="link-card" href="/governance-decision-approval">
           <strong>Governance decision approval</strong>
           <span>First action-specific approval path. Approval is not recorded.</span>

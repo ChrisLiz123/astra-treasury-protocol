@@ -332,7 +332,11 @@
     "capability:matrix:validate": "node scripts/validate-capability-matrix.mjs",
     "capability:matrix:status": "node services/capability-matrix/status.mjs",
     "capability:matrix:gate": "npm run capability:matrix:validate && npm run capability:matrix:status",
-    "release:capability-matrix-finalization": "bash scripts/release/package-capability-matrix-finalization.sh"
+    "release:capability-matrix-finalization": "bash scripts/release/package-capability-matrix-finalization.sh",
+    "public-status:update:validate": "node scripts/validate-public-status-update-finalization.mjs",
+    "public-status:update:status": "node services/public-status-update/status.mjs",
+    "public-status:update:gate": "npm run public-status:update:validate && npm run public-status:update:status",
+    "release:public-status-update-finalization": "bash scripts/release/package-public-status-update-finalization.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",
