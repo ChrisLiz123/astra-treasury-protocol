@@ -1,0 +1,91 @@
+{
+  "schema": "astra-full-launch-governance-vote-config-v0.1",
+  "status": "planning-only-vote-not-opened",
+  "network": {
+    "name": "Base Mainnet",
+    "chainId": 8453
+  },
+  "currentApprovedMode": "restricted-mainnet-operation",
+  "operatorReportedClearances": {
+    "auditCleared": true,
+    "legalCleared": true,
+    "note": "Operator reported audit and legal requirements cleared. This does not by itself open a governance vote, record a governance decision, or approve full launch."
+  },
+  "governanceVotePackagePrepared": true,
+  "governanceVoteOpened": false,
+  "governanceVoteCompleted": false,
+  "governanceResolutionPrepared": false,
+  "governanceResolutionSigned": false,
+  "governanceDecisionRecorded": false,
+  "governanceFullLaunchApprovalRecorded": false,
+  "fullLaunchApproved": false,
+  "publicDisclosuresFinalApproved": false,
+  "treasuryDisclosureFinalApproved": false,
+  "treasuryFundingApproved": false,
+  "treasuryFundingTransactionAuthorized": false,
+  "treasuryFundingExecuted": false,
+  "safeTransactionPayloadGenerated": false,
+  "safeTransactionPrepared": false,
+  "safeTransactionSubmitted": false,
+  "safeTransactionSigned": false,
+  "safeTransactionExecuted": false,
+  "capabilityApprovals": {
+    "publicTokenSaleApproved": false,
+    "realTreasuryFundingApproved": false,
+    "stakingOrRewardsApproved": false,
+    "buybackProgramApproved": false,
+    "mainnetExecutionQueueApproved": false,
+    "paperToOnchainAutomationApproved": false,
+    "autonomousExecutionApproved": false
+  },
+  "requiredBeforeVoteOpening": {
+    "restrictedLaunchStabilized": true,
+    "auditClearanceRecorded": true,
+    "legalClearanceRecorded": true,
+    "fullLaunchReadinessTrackExists": true,
+    "fullLaunchGovernanceDecisionPackageReady": true,
+    "treasurySafeTransactionPackageScaffoldReady": true,
+    "mainnetMonitorPassing": true,
+    "activeIncidentsZero": true,
+    "finalGovernanceApproverAssigned": false,
+    "voteScopeApproved": false,
+    "resolutionTextApproved": false,
+    "capabilityMatrixReviewed": false,
+    "publicStatusUpdateDrafted": false,
+    "signerOrVoterListConfirmed": false
+  },
+  "voteChecklist": {
+    "voteScopeReviewed": false,
+    "resolutionTextReviewed": false,
+    "capabilityMatrixReviewed": false,
+    "treasuryFundingImplicationsReviewed": false,
+    "executionQueueImplicationsReviewed": false,
+    "publicDisclosureImplicationsReviewed": false,
+    "operatorRunbookReviewed": false,
+    "monitoringStatusReviewed": false,
+    "incidentStatusReviewed": false,
+    "publicStatusUpdateReviewed": false,
+    "finalVoteApprovalRecorded": false
+  },
+  "proposedVoteScope": {
+    "summary": "TBD",
+    "fullLaunchApproval": "not proposed",
+    "publicTokenSale": "not proposed",
+    "realTreasuryFunding": "not proposed",
+    "stakingOrRewards": "not proposed",
+    "buybackProgram": "not proposed",
+    "mainnetExecutionQueue": "not proposed",
+    "paperToOnchainAutomation": "not proposed",
+    "autonomousExecution": "not proposed"
+  },
+  "hardStops": {
+    "publicTokenSaleApproved": false,
+    "realTreasuryFundingApproved": false,
+    "stakingOrRewardsApproved": false,
+    "buybackProgramApproved": false,
+    "mainnetExecutionQueueEnabled": false,
+    "paperToOnchainAutomationEnabled": false,
+    "autonomousExecutionApproved": false
+  },
+  "hardRule": "This package prepares a governance vote/resolution scaffold only. It does not open a vote, record a decision, approve full launch, or approve any restricted capability."
+}

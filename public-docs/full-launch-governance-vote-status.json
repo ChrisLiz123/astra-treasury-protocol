@@ -1,0 +1,115 @@
+{
+  "schema": "astra-public-full-launch-governance-vote-status-v0.1",
+  "generatedAt": "2026-05-13T16:10:53.987Z",
+  "status": "FULL_LAUNCH_GOVERNANCE_VOTE_PACKAGE_READY_NOT_OPENED",
+  "mode": "PLANNING_ONLY_VOTE_NOT_OPENED",
+  "currentApprovedMode": "restricted-mainnet-operation",
+  "governanceVoteOpened": false,
+  "governanceVoteCompleted": false,
+  "governanceDecisionRecorded": false,
+  "fullLaunchApproved": false,
+  "network": {
+    "name": "Base Mainnet",
+    "chainId": 8453
+  },
+  "publicStatement": "AstraTreasury full-launch governance vote package is ready for review. No vote is open, no governance decision is recorded, and full launch is not approved.",
+  "summary": {
+    "totalChecks": 44,
+    "passed": 44,
+    "failed": 0,
+    "activeIncidents": 0,
+    "responseRequired": false
+  },
+  "voteStatus": {
+    "governanceVotePackagePrepared": true,
+    "governanceVoteOpened": false,
+    "governanceVoteCompleted": false,
+    "governanceResolutionPrepared": false,
+    "governanceResolutionSigned": false,
+    "governanceDecisionRecorded": false,
+    "governanceFullLaunchApprovalRecorded": false,
+    "fullLaunchApproved": false,
+    "treasuryFundingApproved": false,
+    "treasuryFundingTransactionAuthorized": false,
+    "treasuryFundingExecuted": false,
+    "safeTransactionPayloadGenerated": false,
+    "safeTransactionPrepared": false,
+    "safeTransactionSubmitted": false,
+    "safeTransactionSigned": false,
+    "safeTransactionExecuted": false
+  },
+  "capabilityApprovals": {
+    "publicTokenSaleApproved": false,
+    "realTreasuryFundingApproved": false,
+    "stakingOrRewardsApproved": false,
+    "buybackProgramApproved": false,
+    "mainnetExecutionQueueApproved": false,
+    "paperToOnchainAutomationApproved": false,
+    "autonomousExecutionApproved": false
+  },
+  "requiredBeforeVoteOpening": {
+    "restrictedLaunchStabilized": true,
+    "auditClearanceRecorded": true,
+    "legalClearanceRecorded": true,
+    "fullLaunchReadinessTrackExists": true,
+    "fullLaunchGovernanceDecisionPackageReady": true,
+    "treasurySafeTransactionPackageScaffoldReady": true,
+    "mainnetMonitorPassing": true,
+    "activeIncidentsZero": true,
+    "finalGovernanceApproverAssigned": false,
+    "voteScopeApproved": false,
+    "resolutionTextApproved": false,
+    "capabilityMatrixReviewed": false,
+    "publicStatusUpdateDrafted": false,
+    "signerOrVoterListConfirmed": false
+  },
+  "voteChecklist": {
+    "voteScopeReviewed": false,
+    "resolutionTextReviewed": false,
+    "capabilityMatrixReviewed": false,
+    "treasuryFundingImplicationsReviewed": false,
+    "executionQueueImplicationsReviewed": false,
+    "publicDisclosureImplicationsReviewed": false,
+    "operatorRunbookReviewed": false,
+    "monitoringStatusReviewed": false,
+    "incidentStatusReviewed": false,
+    "publicStatusUpdateReviewed": false,
+    "finalVoteApprovalRecorded": false
+  },
+  "proposedVoteScope": {
+    "summary": "TBD",
+    "fullLaunchApproval": "not proposed",
+    "publicTokenSale": "not proposed",
+    "realTreasuryFunding": "not proposed",
+    "stakingOrRewards": "not proposed",
+    "buybackProgram": "not proposed",
+    "mainnetExecutionQueue": "not proposed",
+    "paperToOnchainAutomation": "not proposed",
+    "autonomousExecution": "not proposed"
+  },
+  "currentStatuses": {
+    "stabilization": "RESTRICTED_LAUNCH_STABILIZED",
+    "fullLaunch": "FULL_LAUNCH_READINESS_TRACK_OPEN_PLANNING_ONLY",
+    "fullLaunchGovernance": "FULL_LAUNCH_GOVERNANCE_DECISION_PACKAGE_READY_NOT_APPROVED",
+    "treasurySafeTransaction": "TREASURY_SAFE_TRANSACTION_PACKAGE_SCAFFOLD_READY_NO_PAYLOAD",
+    "treasuryFunding": "TREASURY_FUNDING_READINESS_TRACK_OPEN_NOT_APPROVED",
+    "monitor": "PASS",
+    "alerts": "CLEAR",
+    "incidents": "NO_ACTIVE_INCIDENTS",
+    "mainnetExecution": "MAINNET_EXECUTION_QUEUE_DISABLED"
+  },
+  "restrictions": {
+    "publicTokenSale": false,
+    "realTreasuryFunding": false,
+    "stakingOrRewards": false,
+    "buybackProgram": false,
+    "autonomousExecution": false,
+    "mainnetExecutionQueue": false,
+    "paperToOnchainAutomation": false
+  },
+  "nextPossibleMilestones": [
+    "Governance vote opening package",
+    "Governance resolution signing package",
+    "Capability-specific activation package"
+  ]
+}
