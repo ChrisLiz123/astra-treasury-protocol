@@ -384,7 +384,11 @@
     "restricted-mode:maintenance-schedule:validate": "node scripts/validate-restricted-mode-maintenance-schedule.mjs",
     "restricted-mode:maintenance-schedule:status": "node services/restricted-mode-maintenance-schedule/status.mjs",
     "restricted-mode:maintenance-schedule:gate": "npm run restricted-mode:maintenance-schedule:validate && npm run restricted-mode:maintenance-schedule:status",
-    "release:restricted-mode-maintenance-schedule": "bash scripts/release/package-restricted-mode-maintenance-schedule.sh"
+    "release:restricted-mode-maintenance-schedule": "bash scripts/release/package-restricted-mode-maintenance-schedule.sh",
+    "restricted-mode:operator-checklist:validate": "node scripts/validate-restricted-mode-operator-checklist.mjs",
+    "restricted-mode:operator-checklist:status": "node services/restricted-mode-operator-checklist/status.mjs",
+    "restricted-mode:operator-checklist:gate": "npm run restricted-mode:operator-checklist:validate && npm run restricted-mode:operator-checklist:status",
+    "release:restricted-mode-operator-checklist": "bash scripts/release/package-restricted-mode-operator-checklist.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",

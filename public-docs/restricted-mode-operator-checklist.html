@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AstraTreasury Restricted-Mode Operator Checklist</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #08111f;
+      --surface: #0e1a2b;
+      --border: rgba(148, 163, 184, 0.2);
+      --text: #edf4fb;
+      --muted: #9aaec4;
+      --blue: #67a7ff;
+      --green: #41d49b;
+      --yellow: #f4c35f;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    body { margin: 0; background: linear-gradient(180deg, #07101d, var(--bg)); color: var(--text); }
+    a { color: var(--blue); text-decoration: none; }
+
+    main {
+      width: min(1120px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 44px 0 72px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 28px;
+      box-shadow: 0 22px 70px rgba(0,0,0,.28);
+      margin-bottom: 18px;
+    }
+
+    h1 { margin: 0 0 10px; font-size: 42px; letter-spacing: -1.2px; }
+    h2 { margin: 0 0 14px; font-size: 24px; }
+    p { color: var(--muted); line-height: 1.65; }
+
+    .badge {
+      display: inline-flex;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(65,212,155,.10);
+      border: 1px solid rgba(65,212,155,.22);
+      color: var(--green);
+      font-weight: 850;
+      margin-bottom: 16px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      overflow: hidden;
+    }
+
+    th, td {
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--border);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      color: var(--muted);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      background: rgba(255,255,255,.03);
+    }
+
+    tr:last-child td { border-bottom: 0; }
+
+    code {
+      color: var(--muted);
+      overflow-wrap: anywhere;
+      font-size: 12px;
+    }
+
+    .notice {
+      padding: 16px;
+      border-radius: 16px;
+      background: rgba(244,195,95,.08);
+      border: 1px solid rgba(244,195,95,.22);
+      color: #f7d99a;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+<main>
+  <section class="card">
+    <div class="badge">Operator checklist · restricted mode</div>
+    <h1>Restricted-Mode Operator Checklist</h1>
+    <p>AstraTreasury restricted-mode operator checklist is ready. Governance decision is recorded, restricted-mode operations are in steady state, and all restricted capabilities remain disabled and not approved.</p>
+    <p><strong>Operator checklist hash:</strong> <code>21802865806646bfb77f294c57599f04c180662601f7c819d44fb6e7fcc8855e</code></p>
+  </section>
+
+  <section class="card">
+    <h2>Checklist sections</h2>
+    <table>
+      <thead><tr><th>Section</th><th>Actions</th></tr></thead>
+      <tbody><tr><td>beforeTouchingProduction</td><td>Confirm current mode is restricted-mainnet-operation.; Confirm governance decision is recorded.; Confirm full launch is not approved.; Confirm treasury funding is not approved.; Confirm Safe payload is not generated.; Confirm mainnet execution queue is disabled.; Confirm monitor is passing.; Confirm active incidents are zero.</td></tr><tr><td>beforePublicStatusChange</td><td>Run public refresh.; Run affected status gate.; Run evidence archive.; Confirm public language does not imply capability approval.; Confirm updated page and API route are reachable.; Commit and publish updated public artifacts.</td></tr><tr><td>beforeFutureCapabilityApproval</td><td>Open a separate action-specific approval path.; Name the exact capability.; Confirm authority and evidence source.; Confirm monitor passing and no active incidents.; Confirm public status update plan.; Confirm Safe review if on-chain action is involved.; Do not reuse restricted-mode approval as activation approval.</td></tr><tr><td>incidentOperatorChecklist</td><td>Open or update incident record.; Preserve evidence.; Do not activate any capability.; Update public status if material.; Run evidence archive after update.; Resolve or document follow-up.</td></tr></tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>Checklist artifacts</h2>
+    <table>
+      <thead><tr><th>Artifact</th><th>Bytes</th><th>SHA-256</th></tr></thead>
+      <tbody><tr><td>public-docs/restricted-mode-maintenance-schedule-status.json</td><td>11836</td><td><code>8e07a1155aede62dc1c5cda3f693777e0b004d27cbda82e81184c2906f8a8a2a</code></td></tr><tr><td>public-docs/restricted-mode-operations-handoff-status.json</td><td>9929</td><td><code>acf2befbc6d14ee8d94f894c3ca9f9f8c6fb5774e0ea7b4bf4c2b561bbe55e59</code></td></tr><tr><td>public-docs/restricted-mode-final-release-status.json</td><td>10362</td><td><code>9f997bd654a12e09c22ca06ed82fc1a7f585b488f5f1645e8fcffc11ea33311d</code></td></tr><tr><td>public-docs/restricted-mode-release-candidate-status.json</td><td>8698</td><td><code>b18caf0dc1bc5fdc58013b76e270730493262b1232077461b80b7ca7416b91ad</code></td></tr><tr><td>public-docs/restricted-mode-evidence-seal-status.json</td><td>8060</td><td><code>c9e8e2a21739637da6a301363cd00c9f260cb1b4f3c15ac0203c3a034aeece54</code></td></tr><tr><td>public-docs/restricted-mode-monitoring-baseline-status.json</td><td>4742</td><td><code>ac7288ee0634de8b62c3b61fef1da7435593a9befa82bbdd440208c33cfbb75c</code></td></tr><tr><td>public-docs/restricted-mode-final-status.json</td><td>3170</td><td><code>76a28c0f5846686589b95d941714f7df7147fcadd63aaaee25f25a0dc6029d47</code></td></tr><tr><td>public-docs/governance-decision-status.json</td><td>2574</td><td><code>8d294eb10c76fa8bc80f02db2a0c3d726b49058565ee705ba193b1596d78076a</code></td></tr><tr><td>public-docs/capability-matrix-status.json</td><td>4146</td><td><code>9768c7082d15e4a47dce92bbdad6fe748d04a9ab289050fbb084df1c46c342c6</code></td></tr><tr><td>public-docs/public-status-update-status.json</td><td>3145</td><td><code>97dcf448bb0fed6fc1878a802a7b76bd3c967c1f167eed6f0aa1823fbbc2108d</code></td></tr><tr><td>public-docs/launch-control-status.json</td><td>3637</td><td><code>51e694744e24a5a1ee57f03746e5b5c95803e0f4a49f985fdeccb3e28459060b</code></td></tr><tr><td>public-docs/mainnet-monitor-status.json</td><td>1707</td><td><code>ae555bdae5d7ba00a07892b1a9010efdcfde0e5c9b4ccb10fc787052a4c3bba8</code></td></tr><tr><td>public-docs/mainnet-alerts-status.json</td><td>2128</td><td><code>d58b8947c13ee878a7e9e14f3a9d12c86bbae8abd87134834cc2ed70743c993e</code></td></tr><tr><td>public-docs/incident-summary.json</td><td>432</td><td><code>57b57c2637eaf8f5600b1b4664211d3562becd7258fb6c81c68857349f295b7b</code></td></tr><tr><td>public-docs/mainnet-execution-status.json</td><td>1320</td><td><code>3741bf1ba4dfc8edc24ee4565618ae3ba23095f17612595e486d35a110b135cd</code></td></tr><tr><td>public-docs/treasury-funding-status.json</td><td>2489</td><td><code>d87c2c774d0f782c4ca38857d3c77f2cf06037218af677ad9cdd365ba64c5e91</code></td></tr><tr><td>public-docs/treasury-safe-transaction-status.json</td><td>3932</td><td><code>881b35ce7c12faab4fcabb6286d2fc10e8a61a48f19d30c30d01214024590812</code></td></tr><tr><td>public-docs/full-launch-status.json</td><td>2717</td><td><code>16dec6e30bbec9b9692ea41c76cac4b798ef2c17ac5adb49a9fffa209e1a9cdc</code></td></tr><tr><td>docs/restricted-mode-operator-checklist/RESTRICTED_MODE_OPERATOR_CHECKLIST.md</td><td>786</td><td><code>67d054d332c26224b633eca729f2ce968790b493a1c3166f4357f03d6bea6771</code></td></tr><tr><td>docs/restricted-mode-operator-checklist/BEFORE_TOUCHING_PRODUCTION.md</td><td>717</td><td><code>38eb38f9402a7a6714630b1f5ef3059164683a72043fd8c1e915a4b2d3ef2468</code></td></tr><tr><td>docs/restricted-mode-operator-checklist/PUBLIC_STATUS_CHANGE_CHECKLIST.md</td><td>664</td><td><code>de2deb6f3803160b2e2ad66c421e66588a698b16dce290494d1119ca815b0fad</code></td></tr><tr><td>docs/restricted-mode-operator-checklist/FUTURE_CAPABILITY_APPROVAL_START_CHECKLIST.md</td><td>938</td><td><code>7f5684f116b2a3f8e4ea0c5a2dc91b495aaa79178011977790a2819dc72c08ad</code></td></tr><tr><td>docs/restricted-mode-operator-checklist/INCIDENT_OPERATOR_CHECKLIST.md</td><td>528</td><td><code>0a80bb3e28a237b3531e6079ce2606d9b4cd1ea6f2147246a8e5e4f959ac105a</code></td></tr></tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>Checks</h2>
+    <table>
+      <thead><tr><th>Check</th><th>Status</th><th>Details</th></tr></thead>
+      <tbody><tr><td>Maintenance schedule ready</td><td>PASS</td><td><code>{&quot;status&quot;:&quot;RESTRICTED_MODE_MAINTENANCE_SCHEDULE_READY_DECISION_RECORDED_ALL_DISABLED&quot;}</code></td></tr><tr><td>Operations handoff ready</td><td>PASS</td><td><code>{&quot;status&quot;:&quot;RESTRICTED_MODE_OPERATIONS_HANDOFF_READY_DECISION_RECORDED_ALL_DISABLED&quot;}</code></td></tr><tr><td>Final release ready</td><td>PASS</td><td><code>{&quot;status&quot;:&quot;RESTRICTED_MODE_FINAL_RELEASE_READY_DECISION_RECORDED_ALL_DISABLED&quot;}</code></td></tr><tr><td>Release candidate ready</td><td>PASS</td><td><code>{&quot;status&quot;:&quot;RESTRICTED_MODE_RELEASE_CANDIDATE_READY_DECISION_RECORDED_ALL_DISABLED&quot;}</code></td></tr><tr><td>Evidence seal generated</td><td>PASS</td><td><code>{&quot;status&quot;:&quot;RESTRICTED_MODE_EVIDENCE_SEALED_DECISION_RECORDED_ALL_DISABLED&quot;}</code></td></tr><tr><td>Monitoring baseline established</td><td>PASS</td><td><code>{&quot;status&quot;:&quot;RESTRICTED_MODE_MONITORING_BASELINE_ESTABLISHED_DECISION_RECORDED_ALL_DISABLED&quot;}</code></td></tr><tr><td>Restricted-mode final status synced</td><td>PASS</td><td><code>{&quot;status&quot;:&quot;RESTRICTED_MODE_FINAL_STATUS_SYNCED_DECISION_RECORDED_ALL_DISABLED&quot;}</code></td></tr><tr><td>Governance decision recorded</td><td>PASS</td><td><code>{&quot;governanceDecisionRecorded&quot;:true}</code></td></tr><tr><td>Capability Matrix all-disabled</td><td>PASS</td><td><code>{&quot;allCapabilitiesDisabled&quot;:true,&quot;allCapabilityApprovalsFalse&quot;:true}</code></td></tr><tr><td>Public Status Update finalized</td><td>PASS</td><td><code>{&quot;publicStatusUpdateFinalApproved&quot;:true}</code></td></tr><tr><td>Mainnet monitor passing</td><td>PASS</td><td><code>{&quot;status&quot;:&quot;PASS&quot;}</code></td></tr><tr><td>Alerts do not require response</td><td>PASS</td><td><code>{&quot;responseRequired&quot;:false}</code></td></tr><tr><td>No active incidents</td><td>PASS</td><td><code>{&quot;activeIncidents&quot;:0}</code></td></tr><tr><td>Execution queue disabled</td><td>PASS</td><td><code>{&quot;mode&quot;:&quot;MAINNET_EXECUTION_QUEUE_DISABLED&quot;}</code></td></tr><tr><td>Full launch not approved</td><td>PASS</td><td><code>{&quot;fullLaunchApproved&quot;:false,&quot;governanceDecisionFullLaunchApproved&quot;:false}</code></td></tr><tr><td>Treasury funding not approved</td><td>PASS</td><td><code>{&quot;treasuryFundingApproved&quot;:false}</code></td></tr><tr><td>Treasury funding not executed</td><td>PASS</td><td><code>{&quot;treasuryFundingExecuted&quot;:false}</code></td></tr><tr><td>Safe payload not generated</td><td>PASS</td><td><code>{&quot;safeTransactionPayloadGenerated&quot;:false}</code></td></tr><tr><td>Safe transaction not prepared</td><td>PASS</td><td><code>{&quot;safeTransactionPrepared&quot;:false}</code></td></tr></tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>Current statuses</h2>
+    <table>
+      <thead><tr><th>Area</th><th>Status</th></tr></thead>
+      <tbody><tr><td>restrictedModeMaintenanceSchedule</td><td>Restricted Mode Maintenance Schedule Ready Decision Recorded All Disabled</td></tr><tr><td>restrictedModeOperationsHandoff</td><td>Restricted Mode Operations Handoff Ready Decision Recorded All Disabled</td></tr><tr><td>restrictedModeFinalRelease</td><td>Restricted Mode Final Release Ready Decision Recorded All Disabled</td></tr><tr><td>restrictedModeReleaseCandidate</td><td>Restricted Mode Release Candidate Ready Decision Recorded All Disabled</td></tr><tr><td>restrictedModeEvidenceSeal</td><td>Restricted Mode Evidence Sealed Decision Recorded All Disabled</td></tr><tr><td>restrictedModeMonitoringBaseline</td><td>Restricted Mode Monitoring Baseline Established Decision Recorded All Disabled</td></tr><tr><td>restrictedModeFinalStatus</td><td>Restricted Mode Final Status Synced Decision Recorded All Disabled</td></tr><tr><td>governanceDecision</td><td>Governance Decision Recorded Restricted Mode All Disabled</td></tr><tr><td>capabilityMatrix</td><td>Capability Matrix Finalized All Disabled</td></tr><tr><td>publicStatusUpdate</td><td>Public Status Update Finalized Restricted Mode</td></tr><tr><td>launchControl</td><td>Launch Control Ready Restricted Mode</td></tr><tr><td>fullLaunch</td><td>Full Launch Readiness Track Open Planning Only</td></tr><tr><td>treasuryFunding</td><td>Treasury Funding Readiness Track Open Not Approved</td></tr><tr><td>treasurySafeTransaction</td><td>Treasury Safe Transaction Package Scaffold Ready No Payload</td></tr><tr><td>monitor</td><td>Pass</td></tr><tr><td>alerts</td><td>Clear</td></tr><tr><td>incidents</td><td>No Active Incidents</td></tr><tr><td>mainnetExecution</td><td>Mainnet Execution Queue Disabled</td></tr></tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>Important</h2>
+    <div class="notice">
+      This operator checklist documents restricted-mode operational controls only.
+      It does not approve launch, funding, public sale, staking/rewards, buybacks, execution,
+      automation, autonomous execution, Safe payload generation, or Safe transaction execution.
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Public API</h2>
+    <p><a href="/api/public/restricted-mode-operator-checklist">/api/public/restricted-mode-operator-checklist</a></p>
+    <p><a href="/restricted-mode-maintenance-schedule">Restricted-Mode Maintenance Schedule</a></p>
+    <p><a href="/restricted-mode-operations-handoff">Restricted-Mode Operations Handoff</a></p>
+    <p><a href="/">Back to homepage</a></p>
+  </section>
+</main>
+</body>
+</html>

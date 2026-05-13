@@ -1,0 +1,73 @@
+{
+  "schema": "astra-restricted-mode-operator-checklist-config-v0.1",
+  "status": "restricted-mode-operator-checklist",
+  "network": {
+    "name": "Base Mainnet",
+    "chainId": 8453
+  },
+  "currentApprovedMode": "restricted-mainnet-operation",
+  "operatorChecklistScope": "post-maintenance-schedule-restricted-mode-all-disabled",
+  "operatorChecklistPrepared": true,
+  "requiresMaintenanceSchedule": true,
+  "requiresOperationsHandoff": true,
+  "requiresFinalRelease": true,
+  "requiresMonitoringBaseline": true,
+  "requiresAllCapabilitiesDisabled": true,
+  "operatorReportedClearances": {
+    "auditCleared": true,
+    "legalCleared": true,
+    "note": "Operator reported audit and legal requirements cleared."
+  },
+  "operatorChecklist": {
+    "beforeTouchingProduction": [
+      "Confirm current mode is restricted-mainnet-operation.",
+      "Confirm governance decision is recorded.",
+      "Confirm full launch is not approved.",
+      "Confirm treasury funding is not approved.",
+      "Confirm Safe payload is not generated.",
+      "Confirm mainnet execution queue is disabled.",
+      "Confirm monitor is passing.",
+      "Confirm active incidents are zero."
+    ],
+    "beforePublicStatusChange": [
+      "Run public refresh.",
+      "Run affected status gate.",
+      "Run evidence archive.",
+      "Confirm public language does not imply capability approval.",
+      "Confirm updated page and API route are reachable.",
+      "Commit and publish updated public artifacts."
+    ],
+    "beforeFutureCapabilityApproval": [
+      "Open a separate action-specific approval path.",
+      "Name the exact capability.",
+      "Confirm authority and evidence source.",
+      "Confirm monitor passing and no active incidents.",
+      "Confirm public status update plan.",
+      "Confirm Safe review if on-chain action is involved.",
+      "Do not reuse restricted-mode approval as activation approval."
+    ],
+    "incidentOperatorChecklist": [
+      "Open or update incident record.",
+      "Preserve evidence.",
+      "Do not activate any capability.",
+      "Update public status if material.",
+      "Run evidence archive after update.",
+      "Resolve or document follow-up."
+    ]
+  },
+  "expectedPosture": {
+    "governanceDecisionRecorded": true,
+    "fullLaunchApproved": false,
+    "publicTokenSaleApproved": false,
+    "realTreasuryFundingApproved": false,
+    "stakingOrRewardsApproved": false,
+    "buybackProgramApproved": false,
+    "mainnetExecutionQueueApproved": false,
+    "paperToOnchainAutomationApproved": false,
+    "autonomousExecutionApproved": false,
+    "safeTransactionPayloadGenerated": false,
+    "safeTransactionPrepared": false,
+    "safeTransactionExecutionApproved": false
+  },
+  "hardRule": "This operator checklist documents restricted-mode operating controls only. It does not approve launch, funding, public sale, staking, rewards, buybacks, execution, automation, autonomous execution, Safe payload generation, or Safe transaction execution."
+}
