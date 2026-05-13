@@ -1,0 +1,74 @@
+{
+  "schema": "astra-governance-vote-result-evidence-import-config-v0.1",
+  "status": "import-framework-ready-no-evidence",
+  "network": {
+    "name": "Base Mainnet",
+    "chainId": 8453
+  },
+  "currentApprovedMode": "restricted-mainnet-operation",
+  "operatorReportedClearances": {
+    "auditCleared": true,
+    "legalCleared": true,
+    "note": "Operator reported audit and legal requirements cleared."
+  },
+  "selectedAction": {
+    "id": "governance-vote-result-evidence-import",
+    "label": "Import governance vote/result evidence",
+    "category": "governance-evidence",
+    "description": "Import and validate sanitized governance vote/result evidence before governance decision recording."
+  },
+  "evidenceImportFrameworkPrepared": true,
+  "voteEvidenceImported": false,
+  "voteResultImported": false,
+  "voteResultValidated": false,
+  "voteResultRecorded": false,
+  "voteOpened": false,
+  "voteCompleted": false,
+  "governanceDecisionRecorded": false,
+  "fullLaunchApproved": false,
+  "publicDisclosuresFinalApproved": false,
+  "treasuryDisclosureFinalApproved": false,
+  "treasuryFundingApproved": false,
+  "treasuryFundingTransactionAuthorized": false,
+  "treasuryFundingExecuted": false,
+  "safeTransactionPayloadGenerated": false,
+  "safeTransactionPrepared": false,
+  "safeTransactionSubmitted": false,
+  "safeTransactionSigned": false,
+  "safeTransactionExecuted": false,
+  "expectedEvidenceFile": "reports/governance-vote-result-evidence/import/governance-vote-result-evidence.json",
+  "requiredEvidenceFields": {
+    "schema": "astra-governance-vote-result-evidence-v0.1",
+    "voteTitle": "required",
+    "voteUrl": "required",
+    "voteMechanism": "required",
+    "openedAt": "required",
+    "closedAt": "required",
+    "voteOpened": "must be true",
+    "voteCompleted": "must be true",
+    "voteResultRecorded": "must be true",
+    "result": "required",
+    "evidenceReference": "required",
+    "capabilityMatrixReference": "required",
+    "publicStatusReference": "required"
+  },
+  "capabilityApprovals": {
+    "publicTokenSaleApproved": false,
+    "realTreasuryFundingApproved": false,
+    "stakingOrRewardsApproved": false,
+    "buybackProgramApproved": false,
+    "mainnetExecutionQueueApproved": false,
+    "paperToOnchainAutomationApproved": false,
+    "autonomousExecutionApproved": false
+  },
+  "hardStops": {
+    "publicTokenSaleApproved": false,
+    "realTreasuryFundingApproved": false,
+    "stakingOrRewardsApproved": false,
+    "buybackProgramApproved": false,
+    "mainnetExecutionQueueEnabled": false,
+    "paperToOnchainAutomationEnabled": false,
+    "autonomousExecutionApproved": false
+  },
+  "hardRule": "This package prepares the vote/result evidence import path only. It must not fabricate evidence, record a governance decision, approve full launch, or approve any restricted capability."
+}

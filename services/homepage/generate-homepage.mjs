@@ -756,6 +756,10 @@ const html = `<!doctype html>
           <strong>Governance decision approval</strong>
           <span>First action-specific approval path. Approval is not recorded.</span>
         </a>
+        <a class="link-card" href="/governance-vote-result-evidence">
+          <strong>Vote/result evidence</strong>
+          <span>Evidence import path. No decision is recorded.</span>
+        </a>
         <a class="link-card" href="/protocol">
           <strong>Protocol</strong>
           <span>How AstraTreasury works at a high level.</span>

@@ -336,7 +336,11 @@
     "public-status:update:validate": "node scripts/validate-public-status-update-finalization.mjs",
     "public-status:update:status": "node services/public-status-update/status.mjs",
     "public-status:update:gate": "npm run public-status:update:validate && npm run public-status:update:status",
-    "release:public-status-update-finalization": "bash scripts/release/package-public-status-update-finalization.sh"
+    "release:public-status-update-finalization": "bash scripts/release/package-public-status-update-finalization.sh",
+    "governance:vote-result-evidence:validate": "node scripts/validate-governance-vote-result-evidence.mjs",
+    "governance:vote-result-evidence:status": "node services/governance-vote-result-evidence/status.mjs",
+    "governance:vote-result-evidence:gate": "npm run governance:vote-result-evidence:validate && npm run governance:vote-result-evidence:status",
+    "release:governance-vote-result-evidence-import": "bash scripts/release/package-governance-vote-result-evidence-import.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",

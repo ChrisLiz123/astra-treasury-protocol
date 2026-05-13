@@ -1,0 +1,27 @@
+{
+  "schema": "astra-governance-vote-result-evidence-v0.1",
+  "voteTitle": "TBD",
+  "voteUrl": "TBD",
+  "voteMechanism": "TBD",
+  "openedAt": "YYYY-MM-DDTHH:MM:SSZ",
+  "closedAt": "YYYY-MM-DDTHH:MM:SSZ",
+  "voteOpened": true,
+  "voteCompleted": true,
+  "voteResultRecorded": true,
+  "result": "TBD",
+  "resultSummary": "TBD",
+  "approvedCapabilities": [],
+  "disabledCapabilities": [
+    "publicTokenSale",
+    "realTreasuryFunding",
+    "stakingOrRewards",
+    "buybackProgram",
+    "mainnetExecutionQueue",
+    "paperToOnchainAutomation",
+    "autonomousExecution"
+  ],
+  "capabilityMatrixReference": "public-docs/capability-matrix-status.json",
+  "publicStatusReference": "public-docs/public-status-update-status.json",
+  "evidenceReference": "TBD",
+  "notes": "Do not include private voter data, private signer data, private keys, seed phrases, or non-public compliance notes."
+}

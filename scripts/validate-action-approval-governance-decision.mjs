@@ -12,6 +12,7 @@ const requiredFiles = [
   "public-docs/launch-control-status.json",
   "public-docs/capability-matrix-status.json",
   "public-docs/public-status-update-status.json",
+  "public-docs/governance-vote-result-evidence-status.json",
   "public-docs/stabilization-status.json",
   "public-docs/full-launch-status.json",
   "public-docs/full-launch-governance-decision-recording-status.json",
@@ -64,6 +65,7 @@ if (issues.length === 0) {
   const launchControl = readJson("public-docs/launch-control-status.json");
   const capabilityMatrix = readJson("public-docs/capability-matrix-status.json");
   const publicStatusUpdate = readJson("public-docs/public-status-update-status.json");
+  const voteResultEvidence = readJson("public-docs/governance-vote-result-evidence-status.json");
   const stabilization = readJson("public-docs/stabilization-status.json");
   const fullLaunch = readJson("public-docs/full-launch-status.json");
   const decisionRecording = readJson("public-docs/full-launch-governance-decision-recording-status.json");
@@ -119,6 +121,18 @@ if (issues.length === 0) {
 
   if (publicStatusUpdate.governanceDecisionRecorded !== false) {
     issue("publicStatusUpdate.governanceDecisionRecorded", "Public status update must keep governance decision not recorded.");
+  }
+
+  if (voteResultEvidence.voteResultImported === true && voteResultEvidence.voteResultValidated !== true) {
+    issue("voteResultEvidence.voteResultValidated", "Imported vote/result evidence must be validated.");
+  }
+
+  if (voteResultEvidence.fullLaunchApproved !== false) {
+    issue("voteResultEvidence.fullLaunchApproved", "Vote/result evidence import must not approve full launch.");
+  }
+
+  if (voteResultEvidence.governanceDecisionRecorded !== false) {
+    issue("voteResultEvidence.governanceDecisionRecorded", "Vote/result evidence import must not record governance decision.");
   }
 
   if (stabilization.status !== "RESTRICTED_LAUNCH_STABILIZED") {

@@ -50,6 +50,7 @@ function check(checks, name, pass, details = {}) {
 const config = readJson("configs/action-approval-governance-decision.config.json");
 const capabilityMatrix = readJson("public-docs/capability-matrix-status.json");
 const publicStatusUpdate = readJson("public-docs/public-status-update-status.json");
+const voteResultEvidence = readJson("public-docs/governance-vote-result-evidence-status.json");
 const launchControl = readJson("public-docs/launch-control-status.json");
 const stabilization = readJson("public-docs/stabilization-status.json");
 const fullLaunch = readJson("public-docs/full-launch-status.json");
@@ -71,8 +72,16 @@ const publicStatusUpdateFinalized =
   publicStatusUpdate.fullLaunchApproved === false &&
   publicStatusUpdate.governanceDecisionRecorded === false;
 
+const voteResultEvidenceImportedAndValid =
+  voteResultEvidence.voteResultImported === true &&
+  voteResultEvidence.voteResultValidated === true &&
+  voteResultEvidence.voteResultRecorded === true;
+
 const effectiveRequiredBeforeActionApproval = {
   ...baseRequiredBeforeActionApproval,
+  voteResultRecorded: voteResultEvidenceImportedAndValid
+    ? true
+    : baseRequiredBeforeActionApproval.voteResultRecorded,
   capabilityMatrixFinalApproved:
     capabilityMatrix.capabilityMatrixFinalized === true &&
     capabilityMatrix.allCapabilitiesDisabled === true &&
@@ -161,10 +170,12 @@ check(checks, "Mainnet execution queue disabled", execution.mode === "MAINNET_EX
 const dryRunCases = [
   {
     id: "ACTION-GOV-DECISION-001",
-    title: "Missing vote result blocks action approval",
-    expected: "BLOCKED",
-    actual: effectiveRequiredBeforeActionApproval?.voteResultRecorded === false ? "BLOCKED" : "NOT_BLOCKED",
-    reason: "vote result is not recorded"
+    title: "Vote/result evidence status",
+    expected: effectiveRequiredBeforeActionApproval?.voteResultRecorded === true ? "SATISFIED" : "BLOCKED",
+    actual: effectiveRequiredBeforeActionApproval?.voteResultRecorded === true ? "SATISFIED" : "BLOCKED",
+    reason: effectiveRequiredBeforeActionApproval?.voteResultRecorded === true
+      ? "vote/result evidence is imported and validated"
+      : "vote result is not imported and validated"
   },
   {
     id: "ACTION-GOV-DECISION-002",
@@ -302,6 +313,7 @@ const report = {
     launchControl: launchControl.status || "UNKNOWN",
     capabilityMatrix: capabilityMatrix.status || "UNKNOWN",
     publicStatusUpdate: publicStatusUpdate.status || "UNKNOWN",
+    voteResultEvidence: voteResultEvidence.status || "UNKNOWN",
     stabilization: stabilization.status || "UNKNOWN",
     fullLaunch: fullLaunch.status || "UNKNOWN",
     decisionRecording: decisionRecording.status || "UNKNOWN",

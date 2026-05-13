@@ -1,6 +1,6 @@
 {
   "schema": "astra-action-specific-governance-decision-approval-status-v0.1",
-  "generatedAt": "2026-05-13T18:13:15.396Z",
+  "generatedAt": "2026-05-13T18:23:53.842Z",
   "status": "ACTION_SPECIFIC_APPROVAL_PATH_READY_BLOCKED_PENDING_EVIDENCE",
   "selectedAction": {
     "id": "governance-decision-recording",
@@ -118,10 +118,10 @@
   "dryRunCases": [
     {
       "id": "ACTION-GOV-DECISION-001",
-      "title": "Missing vote result blocks action approval",
+      "title": "Vote/result evidence status",
       "expected": "BLOCKED",
       "actual": "BLOCKED",
-      "reason": "vote result is not recorded",
+      "reason": "vote result is not imported and validated",
       "pass": true
     },
     {
@@ -193,6 +193,7 @@
     "launchControl": "LAUNCH_CONTROL_READY_RESTRICTED_MODE",
     "capabilityMatrix": "CAPABILITY_MATRIX_FINALIZED_ALL_DISABLED",
     "publicStatusUpdate": "PUBLIC_STATUS_UPDATE_FINALIZED_RESTRICTED_MODE",
+    "voteResultEvidence": "GOVERNANCE_VOTE_RESULT_EVIDENCE_IMPORT_READY_NO_EVIDENCE",
     "stabilization": "RESTRICTED_LAUNCH_STABILIZED",
     "fullLaunch": "FULL_LAUNCH_READINESS_TRACK_OPEN_PLANNING_ONLY",
     "decisionRecording": "FULL_LAUNCH_GOVERNANCE_DECISION_RECORDING_PACKAGE_READY_NOT_RECORDED",
@@ -328,12 +329,12 @@
       }
     },
     {
-      "name": "ACTION-GOV-DECISION-001: Missing vote result blocks action approval",
+      "name": "ACTION-GOV-DECISION-001: Vote/result evidence status",
       "pass": true,
       "details": {
         "expected": "BLOCKED",
         "actual": "BLOCKED",
-        "reason": "vote result is not recorded"
+        "reason": "vote result is not imported and validated"
       }
     },
     {
