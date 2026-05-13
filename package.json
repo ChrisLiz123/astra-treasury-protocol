@@ -376,7 +376,11 @@
     "restricted-mode:final-release:status": "node services/restricted-mode-final-release/status.mjs",
     "restricted-mode:final-release:validate": "node scripts/validate-restricted-mode-final-release.mjs",
     "restricted-mode:final-release:gate": "npm run restricted-mode:final-release:status && npm run restricted-mode:final-release:validate",
-    "release:restricted-mode-final-release": "bash scripts/release/package-restricted-mode-final-release.sh"
+    "release:restricted-mode-final-release": "bash scripts/release/package-restricted-mode-final-release.sh",
+    "restricted-mode:operations-handoff:validate": "node scripts/validate-restricted-mode-operations-handoff.mjs",
+    "restricted-mode:operations-handoff:status": "node services/restricted-mode-operations-handoff/status.mjs",
+    "restricted-mode:operations-handoff:gate": "npm run restricted-mode:operations-handoff:validate && npm run restricted-mode:operations-handoff:status",
+    "release:restricted-mode-operations-handoff": "bash scripts/release/package-restricted-mode-operations-handoff.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",

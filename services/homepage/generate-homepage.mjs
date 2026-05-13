@@ -784,6 +784,10 @@ const html = `<!doctype html>
           <strong>Final release</strong>
           <span>Restricted-mode final release package.</span>
         </a>
+        <a class="link-card" href="/restricted-mode-operations-handoff">
+          <strong>Operations handoff</strong>
+          <span>Restricted-mode steady-state operating procedure.</span>
+        </a>
         <a class="link-card" href="/governance-vote-result-evidence">
           <strong>Vote/result evidence</strong>
           <span>Evidence import path. No decision is recorded.</span>

@@ -1,0 +1,43 @@
+{
+  "schema": "astra-restricted-mode-operations-handoff-config-v0.1",
+  "status": "restricted-mode-operations-handoff",
+  "network": {
+    "name": "Base Mainnet",
+    "chainId": 8453
+  },
+  "currentApprovedMode": "restricted-mainnet-operation",
+  "handoffScope": "post-final-release-restricted-mode-all-disabled",
+  "handoffPrepared": true,
+  "requiresGovernanceDecisionRecorded": true,
+  "requiresRestrictedModeFinalRelease": true,
+  "requiresEvidenceSeal": true,
+  "requiresMonitoringBaseline": true,
+  "requiresAllCapabilitiesDisabled": true,
+  "operatorReportedClearances": {
+    "auditCleared": true,
+    "legalCleared": true,
+    "note": "Operator reported audit and legal requirements cleared."
+  },
+  "steadyStateOperations": {
+    "monitoringCadence": "continuous monitor plus periodic manual review",
+    "publicRefreshCadence": "public refresh after every material status change",
+    "evidenceArchiveCadence": "archive after every material status change",
+    "incidentResponseRequired": true,
+    "capabilityActivationRequiresSeparateApproval": true
+  },
+  "expectedPosture": {
+    "governanceDecisionRecorded": true,
+    "fullLaunchApproved": false,
+    "publicTokenSaleApproved": false,
+    "realTreasuryFundingApproved": false,
+    "stakingOrRewardsApproved": false,
+    "buybackProgramApproved": false,
+    "mainnetExecutionQueueApproved": false,
+    "paperToOnchainAutomationApproved": false,
+    "autonomousExecutionApproved": false,
+    "safeTransactionPayloadGenerated": false,
+    "safeTransactionPrepared": false,
+    "safeTransactionExecutionApproved": false
+  },
+  "hardRule": "This operations handoff documents restricted-mode steady-state operations only. It does not approve launch, funding, public sale, staking, rewards, buybacks, execution, automation, autonomous execution, Safe payload generation, or Safe transaction execution."
+}
