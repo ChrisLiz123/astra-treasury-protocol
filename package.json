@@ -409,7 +409,12 @@
     "dex:liquidity-parameters:validate": "node scripts/validate-dex-liquidity-parameter-review.mjs",
     "dex:liquidity-parameters:status": "node services/dex-liquidity-parameters/status.mjs",
     "dex:liquidity-parameters:gate": "npm run dex:liquidity-parameters:validate && npm run dex:liquidity-parameters:status",
-    "release:dex-liquidity-parameter-review": "bash scripts/release/package-dex-liquidity-parameter-review.sh"
+    "release:dex-liquidity-parameter-review": "bash scripts/release/package-dex-liquidity-parameter-review.sh",
+    "dex:liquidity-selection:import": "node scripts/import-dex-liquidity-parameter-selection.mjs",
+    "dex:liquidity-selection:status": "node services/dex-liquidity-parameter-selection/status.mjs",
+    "dex:liquidity-selection:validate": "node scripts/validate-dex-liquidity-parameter-selection.mjs",
+    "dex:liquidity-selection:gate": "npm run dex:liquidity-selection:status && npm run dex:liquidity-selection:validate",
+    "release:dex-liquidity-parameter-selection-import": "bash scripts/release/package-dex-liquidity-parameter-selection-import.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",

@@ -1,0 +1,79 @@
+{
+  "schema": "astra-dex-liquidity-parameter-selection-import-config-v0.1",
+  "status": "dex-liquidity-parameter-selection-import-template",
+  "network": {
+    "name": "Base Mainnet",
+    "chainId": 8453
+  },
+  "currentApprovedMode": "restricted-mainnet-operation",
+  "selectedPublicPurchasePath": "dex-liquidity-pool-trading",
+  "candidateVenue": "Uniswap on Base",
+  "selectionImportPrepared": true,
+  "selectionImportOnly": true,
+  "selectionFile": "reports/dex-liquidity-parameter-selection/import/dex-liquidity-parameter-selection.json",
+  "allowedPairs": [
+    "ASTRA/USDC",
+    "ASTRA/WETH"
+  ],
+  "allowedPoolVersions": [
+    "v2",
+    "v3",
+    "v4"
+  ],
+  "parametersSelected": false,
+  "parametersFinalized": false,
+  "dexLiquidityPathApproved": false,
+  "liquidityPoolCreationApproved": false,
+  "liquidityProvisionApproved": false,
+  "publicTradingApproved": false,
+  "publicTradingLinkApproved": false,
+  "buyPageActivationApproved": false,
+  "safePayloadGenerationApproved": false,
+  "safeTransactionExecutionApproved": false,
+  "treasuryFundingApproved": false,
+  "fullLaunchApproved": false,
+  "importRules": {
+    "importDoesNotFinalizeParameters": true,
+    "importDoesNotApprovePoolCreation": true,
+    "importDoesNotApproveLiquidityProvision": true,
+    "importDoesNotGenerateSafePayload": true,
+    "importDoesNotMoveFunds": true,
+    "importDoesNotEnablePublicTrading": true,
+    "importDoesNotActivateBuyPage": true
+  },
+  "requiredSelectionFields": [
+    "selectionId",
+    "dexVenue",
+    "poolVersion",
+    "tokenPair",
+    "astraTokenAddress",
+    "counterAssetSymbol",
+    "counterAssetAddress",
+    "feeTierOrPoolType",
+    "initialPriceApproach",
+    "initialPriceHuman",
+    "liquidityAmountAstra",
+    "liquidityAmountCounterAsset",
+    "liquiditySource",
+    "priceRange",
+    "slippageGuidance",
+    "impermanentLossDisclosure",
+    "mevRiskDisclosure",
+    "tokenImpersonationDisclosure",
+    "safeTransactionPath",
+    "publicTradingLinkPlan",
+    "buyPageLanguage",
+    "selectedAt"
+  ],
+  "hardStops": {
+    "poolCreated": false,
+    "liquidityAdded": false,
+    "safePayloadGenerated": false,
+    "safeTransactionExecuted": false,
+    "publicTradingEnabled": false,
+    "buyPageActivated": false,
+    "treasuryFundsMoved": false,
+    "fullLaunchApproved": false
+  },
+  "hardRule": "This importer records selected DEX/liquidity parameters for review only. It does not finalize parameters, create a pool, add liquidity, approve public trading, generate a Safe payload, move funds, or approve full launch."
+}
