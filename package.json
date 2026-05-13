@@ -248,7 +248,11 @@
     "legal:full-launch:validate": "node scripts/validate-legal-full-launch-review.mjs",
     "legal:full-launch:status": "node services/legal-full-launch/status.mjs",
     "legal:full-launch:gate": "npm run legal:full-launch:validate && npm run legal:full-launch:status",
-    "release:legal-full-launch-review": "bash scripts/release/package-legal-full-launch-review.sh"
+    "release:legal-full-launch-review": "bash scripts/release/package-legal-full-launch-review.sh",
+    "treasury:funding:validate": "node scripts/validate-treasury-funding-readiness.mjs",
+    "treasury:funding:status": "node services/treasury-funding/status.mjs",
+    "treasury:funding:gate": "npm run treasury:funding:validate && npm run treasury:funding:status",
+    "release:treasury-funding-readiness": "bash scripts/release/package-treasury-funding-readiness.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",

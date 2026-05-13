@@ -1,0 +1,36 @@
+{
+  "schema": "astra-treasury-funding-readiness-config-v0.1",
+  "status": "planning-only-not-approved",
+  "network": {
+    "name": "Base Mainnet",
+    "chainId": 8453
+  },
+  "currentApprovedMode": "restricted-mainnet-operation",
+  "treasuryFundingApproved": false,
+  "treasuryFundingTransactionAuthorized": false,
+  "treasuryFundingExecuted": false,
+  "fundingSourceApproved": false,
+  "treasurySafeApprovalRecorded": false,
+  "riskLimitsApproved": false,
+  "accountingReviewComplete": false,
+  "legalReviewComplete": false,
+  "publicDisclosureUpdated": false,
+  "incidentResponseDrillCurrent": false,
+  "capabilityDependencies": {
+    "legalFullLaunchReviewRequired": true,
+    "governanceApprovalRequired": true,
+    "treasurySafeApprovalRequired": true,
+    "mainnetMonitorRequired": true,
+    "incidentWorkflowRequired": true,
+    "publicDisclosureRequired": true
+  },
+  "hardStops": {
+    "publicTokenSaleApproved": false,
+    "stakingOrRewardsApproved": false,
+    "buybackProgramApproved": false,
+    "autonomousExecutionApproved": false,
+    "mainnetExecutionQueueEnabled": false,
+    "paperToOnchainAutomationEnabled": false
+  },
+  "hardRule": "This gate is planning-only. It does not approve, authorize, or execute real treasury funding."
+}
