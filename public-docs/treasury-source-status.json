@@ -1,0 +1,87 @@
+{
+  "schema": "astra-public-treasury-funding-source-review-status-v0.1",
+  "generatedAt": "2026-05-13T14:13:27.548Z",
+  "status": "TREASURY_FUNDING_SOURCE_REVIEW_TRACK_OPEN_NOT_APPROVED",
+  "currentApprovedMode": "restricted-mainnet-operation",
+  "sourceReviewApproved": false,
+  "fundingSourceApproved": false,
+  "treasuryFundingApproved": false,
+  "treasuryFundingTransactionAuthorized": false,
+  "treasuryFundingExecuted": false,
+  "network": {
+    "name": "Base Mainnet",
+    "chainId": 8453
+  },
+  "publicStatement": "AstraTreasury treasury funding source review is open for planning. No funding source is approved, no funding transaction is authorized, and no real treasury funding is executed.",
+  "summary": {
+    "totalChecks": 22,
+    "passed": 22,
+    "failed": 0,
+    "activeIncidents": 0,
+    "responseRequired": false
+  },
+  "publicSafeSummary": {
+    "sourceType": "not approved",
+    "asset": "not approved",
+    "amount": "not approved",
+    "destination": "not approved"
+  },
+  "fundingSourceStatus": {
+    "sourceReviewApproved": false,
+    "fundingSourceApproved": false,
+    "sourceOfFundsDocumented": false,
+    "sourceComplianceReviewed": false,
+    "sourceAccountingReviewed": false,
+    "sourceSanctionsReviewed": false,
+    "fundingAssetApproved": false,
+    "fundingSenderApproved": false,
+    "fundingDestinationApproved": false,
+    "treasuryFundingApproved": false,
+    "treasuryFundingTransactionAuthorized": false,
+    "treasuryFundingExecuted": false
+  },
+  "requiredControls": {
+    "legalReviewRequired": true,
+    "accountingReviewRequired": true,
+    "sanctionsComplianceReviewRequired": true,
+    "sourceOfFundsRecordRequired": true,
+    "treasuryRiskLimitsRequired": true,
+    "governanceApprovalRequired": true,
+    "treasurySafeApprovalRequired": true,
+    "publicDisclosureUpdateRequired": true,
+    "incidentResponseCurrentRequired": true,
+    "mainnetMonitorRequired": true
+  },
+  "confidentiality": {
+    "doNotPublishBankAccountDetails": true,
+    "doNotPublishPrivateWalletControls": true,
+    "doNotPublishSensitiveEntityDetails": true,
+    "publicSummaryOnly": true
+  },
+  "currentStatuses": {
+    "stabilization": "RESTRICTED_LAUNCH_STABILIZED",
+    "fullLaunch": "FULL_LAUNCH_READINESS_TRACK_OPEN_PLANNING_ONLY",
+    "legalFullLaunch": "LEGAL_FULL_LAUNCH_REVIEW_OPEN_NOT_APPROVED",
+    "treasuryFunding": "TREASURY_FUNDING_READINESS_TRACK_OPEN_NOT_APPROVED",
+    "treasuryRisk": "TREASURY_RISK_LIMITS_DRAFT_READY_NOT_APPROVED",
+    "disclosures": "PUBLIC_DISCLOSURE_UPDATE_DRAFT_READY_NOT_APPROVED",
+    "monitor": "PASS",
+    "alerts": "CLEAR",
+    "incidents": "NO_ACTIVE_INCIDENTS",
+    "mainnetExecution": "MAINNET_EXECUTION_QUEUE_DISABLED"
+  },
+  "restrictions": {
+    "publicTokenSale": false,
+    "realTreasuryFunding": false,
+    "stakingOrRewards": false,
+    "buybackProgram": false,
+    "autonomousExecution": false,
+    "mainnetExecutionQueue": false,
+    "paperToOnchainAutomation": false
+  },
+  "nextPossibleMilestones": [
+    "Treasury Safe approval package",
+    "Treasury funding transaction dry run",
+    "Treasury public disclosure approval package"
+  ]
+}
