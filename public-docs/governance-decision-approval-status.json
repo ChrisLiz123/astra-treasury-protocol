@@ -1,6 +1,6 @@
 {
   "schema": "astra-action-specific-governance-decision-approval-status-v0.1",
-  "generatedAt": "2026-05-13T19:56:44.696Z",
+  "generatedAt": "2026-05-13T20:06:25.816Z",
   "status": "ACTION_SPECIFIC_GOVERNANCE_DECISION_APPROVAL_RECORDED_READY_FOR_LIVE_PRECHECK",
   "selectedAction": {
     "id": "governance-decision-recording",

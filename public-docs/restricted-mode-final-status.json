@@ -1,0 +1,72 @@
+{
+  "schema": "astra-restricted-mode-final-status-v0.1",
+  "generatedAt": "2026-05-13T20:18:49.248Z",
+  "status": "RESTRICTED_MODE_FINAL_STATUS_SYNCED_DECISION_RECORDED_ALL_DISABLED",
+  "currentApprovedMode": "restricted-mainnet-operation",
+  "publicStatement": "AstraTreasury governance decision is recorded for restricted Base Mainnet operation. All restricted capabilities remain disabled and not approved.",
+  "summary": {
+    "governanceDecisionRecorded": true,
+    "activeIncidents": 0,
+    "responseRequired": false,
+    "monitorStatus": "PASS",
+    "approvedCapabilityCount": 0
+  },
+  "finalPosture": {
+    "governanceDecisionRecorded": true,
+    "fullLaunchApproved": false,
+    "publicTokenSaleApproved": false,
+    "realTreasuryFundingApproved": false,
+    "stakingOrRewardsApproved": false,
+    "buybackProgramApproved": false,
+    "mainnetExecutionQueueApproved": false,
+    "paperToOnchainAutomationApproved": false,
+    "autonomousExecutionApproved": false,
+    "safeTransactionPayloadGenerated": false,
+    "safeTransactionExecutionApproved": false
+  },
+  "governanceDecision": {
+    "decisionId": "ASTRA-GOV-DEC-20260513-001",
+    "recordedAt": "2026-05-13T20:04:11.257Z",
+    "decisionRecorder": "Founder",
+    "decisionScope": "restricted-mode-all-disabled",
+    "governanceProcessMode": "resolution-only",
+    "resolutionReference": "/opt/astra-treasury-protocol/reports/governance-resolutions/ASTRA-GOV-RES-20260513-001/resolution.signed.asc",
+    "resolutionHash": "2d9b6479793a9371dd406e8742d92f0b2d7d93866fdbe8a706041bc6d3922442",
+    "approvedCapabilities": [],
+    "disabledCapabilities": [
+      "publicTokenSale",
+      "realTreasuryFunding",
+      "stakingOrRewards",
+      "buybackProgram",
+      "mainnetExecutionQueue",
+      "paperToOnchainAutomation",
+      "autonomousExecution",
+      "safeTransactionPayloadGeneration",
+      "safeTransactionExecution"
+    ]
+  },
+  "currentStatuses": {
+    "governanceDecision": "GOVERNANCE_DECISION_RECORDED_RESTRICTED_MODE_ALL_DISABLED",
+    "capabilityMatrix": "CAPABILITY_MATRIX_FINALIZED_ALL_DISABLED",
+    "publicStatusUpdate": "PUBLIC_STATUS_UPDATE_FINALIZED_RESTRICTED_MODE",
+    "launchControl": "LAUNCH_CONTROL_READY_RESTRICTED_MODE",
+    "fullLaunch": "FULL_LAUNCH_READINESS_TRACK_OPEN_PLANNING_ONLY",
+    "treasuryFunding": "TREASURY_FUNDING_READINESS_TRACK_OPEN_NOT_APPROVED",
+    "treasurySafeTransaction": "TREASURY_SAFE_TRANSACTION_PACKAGE_SCAFFOLD_READY_NO_PAYLOAD",
+    "monitor": "PASS",
+    "alerts": "CLEAR",
+    "incidents": "NO_ACTIVE_INCIDENTS",
+    "mainnetExecution": "MAINNET_EXECUTION_QUEUE_DISABLED"
+  },
+  "safety": {
+    "sendsTransactions": false,
+    "movesFunds": false,
+    "deploysContracts": false,
+    "enablesExecution": false,
+    "approvesPublicSale": false,
+    "approvesTreasuryFunding": false,
+    "preparesSafeTransaction": false,
+    "approvesFullLaunch": false
+  },
+  "hardRule": "This sync reflects the recorded restricted-mode / all-disabled governance decision. It does not approve full launch, funding, public sale, staking, rewards, buybacks, execution, automation, autonomous execution, Safe payload generation, or Safe transaction execution."
+}

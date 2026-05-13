@@ -13,9 +13,9 @@
   },
   "publicStatusUpdateFinalized": true,
   "publicStatusUpdateFinalApproved": true,
-  "finalApprovalScope": "restricted-mode-no-capability-approval",
+  "finalApprovalScope": "restricted-mode-decision-recorded-no-capability-approval",
   "doesNotApproveCapabilities": true,
-  "governanceDecisionRecorded": false,
+  "governanceDecisionRecorded": true,
   "fullLaunchApproved": false,
   "publicDisclosuresFinalApproved": false,
   "treasuryFundingApproved": false,
@@ -36,11 +36,11 @@
     "autonomousExecutionApproved": false
   },
   "finalPublicStatusUpdate": {
-    "headline": "AstraTreasury remains in restricted Base Mainnet operation.",
-    "summary": "Audit and legal requirements are cleared per operator confirmation. The capability matrix is finalized as all-disabled. Full launch, public token sale, real treasury funding, staking/rewards, buybacks, autonomous execution, paper-to-on-chain automation, mainnet execution queue activation, Safe payload generation, and Safe transaction execution remain not approved.",
+    "headline": "AstraTreasury governance decision is recorded for restricted Base Mainnet operation.",
+    "summary": "AstraTreasury remains in restricted Base Mainnet operation. The governance decision is recorded for an all-disabled capability posture. Full launch, public token sale, real treasury funding, staking/rewards, buybacks, autonomous execution, paper-to-on-chain automation, mainnet execution queue activation, Safe payload generation, and Safe transaction execution remain not approved.",
     "mode": "restricted-mainnet-operation",
     "capabilityPosture": "all-disabled",
-    "approvalPosture": "no-capability-approved"
+    "approvalPosture": "governance-decision-recorded-no-capability-approved"
   },
   "hardRule": "This public status update is finalized only for restricted-mode / all-disabled status. It does not approve full launch or any restricted capability."
 }

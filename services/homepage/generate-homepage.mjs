@@ -764,6 +764,10 @@ const html = `<!doctype html>
           <strong>Governance decision</strong>
           <span>Restricted-mode / all-disabled decision record.</span>
         </a>
+        <a class="link-card" href="/restricted-mode-final-status">
+          <strong>Final restricted-mode status</strong>
+          <span>Synced public status after governance decision recording.</span>
+        </a>
         <a class="link-card" href="/governance-vote-result-evidence">
           <strong>Vote/result evidence</strong>
           <span>Evidence import path. No decision is recorded.</span>

@@ -52,6 +52,7 @@ const capabilityMatrix = readJson("public-docs/capability-matrix-status.json");
 const publicStatusUpdate = readJson("public-docs/public-status-update-status.json");
 const voteResultEvidence = readJson("public-docs/governance-vote-result-evidence-status.json");
 const signedResolutionEvidence = readJson("public-docs/signed-governance-resolution-evidence-status.json");
+const governanceDecision = readJson("public-docs/governance-decision-status.json");
 const launchControl = readJson("public-docs/launch-control-status.json");
 const stabilization = readJson("public-docs/stabilization-status.json");
 const fullLaunch = readJson("public-docs/full-launch-status.json");
@@ -73,7 +74,7 @@ const publicStatusUpdateFinalized =
   publicStatusUpdate.publicStatusUpdateFinalApproved === true &&
   publicStatusUpdate.doesNotApproveCapabilities === true &&
   publicStatusUpdate.fullLaunchApproved === false &&
-  publicStatusUpdate.governanceDecisionRecorded === false;
+  (publicStatusUpdate.governanceDecisionRecorded === false || governanceDecision.governanceDecisionRecorded === true);
 
 const voteResultEvidenceImportedAndValid =
   voteResultEvidence.voteResultImported === true &&
@@ -344,6 +345,7 @@ const report = {
     launchControl: launchControl.status || "UNKNOWN",
     capabilityMatrix: capabilityMatrix.status || "UNKNOWN",
     publicStatusUpdate: publicStatusUpdate.status || "UNKNOWN",
+    governanceDecision: governanceDecision.status || "UNKNOWN",
     voteResultEvidence: voteResultEvidence.status || "UNKNOWN",
     signedResolutionEvidence: signedResolutionEvidence.status || "UNKNOWN",
     stabilization: stabilization.status || "UNKNOWN",

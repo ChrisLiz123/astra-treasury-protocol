@@ -5,11 +5,11 @@ import { fileURLToPath } from "node:url";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, "../..");
 
-const reportDir = path.join(root, "reports", "launch-control");
-const reportFile = path.join(reportDir, "launch-control-status.json");
+const reportDir = path.join(root, "reports", "restricted-mode-final-status");
+const reportFile = path.join(reportDir, "restricted-mode-final-status.json");
 
-const publicJsonFile = path.join(root, "public-docs", "launch-control-status.json");
-const publicHtmlFile = path.join(root, "public-docs", "launch-control.html");
+const publicJsonFile = path.join(root, "public-docs", "restricted-mode-final-status.json");
+const publicHtmlFile = path.join(root, "public-docs", "restricted-mode-final-status.html");
 
 fs.mkdirSync(reportDir, { recursive: true });
 
@@ -43,12 +43,12 @@ function humanize(value) {
     .replace(/\b\w/g, (c) => c.toUpperCase());
 }
 
-const config = readJson("configs/launch-control.config.json");
-const stabilization = readJson("public-docs/stabilization-status.json");
-const fullLaunch = readJson("public-docs/full-launch-status.json");
-const governance = readJson("public-docs/full-launch-governance-status.json");
-const decisionAuth = readJson("public-docs/full-launch-governance-decision-recording-authorization-status.json");
+const config = readJson("configs/restricted-mode-final-status.config.json");
 const governanceDecision = readJson("public-docs/governance-decision-status.json");
+const capabilityMatrix = readJson("public-docs/capability-matrix-status.json");
+const publicStatusUpdate = readJson("public-docs/public-status-update-status.json");
+const launchControl = readJson("public-docs/launch-control-status.json");
+const fullLaunch = readJson("public-docs/full-launch-status.json");
 const treasuryFunding = readJson("public-docs/treasury-funding-status.json");
 const treasurySafeTx = readJson("public-docs/treasury-safe-transaction-status.json");
 const monitor = readJson("public-docs/mainnet-monitor-status.json");
@@ -59,81 +59,61 @@ const execution = readJson("public-docs/mainnet-execution-status.json");
 const activeIncidents = Number(incidents?.summary?.active || 0);
 const responseRequired = Boolean(alerts?.responseRequired);
 
-const requiredVsOptional = [
-  ["Audit and legal clearance", "Recorded per operator confirmation", "Complete"],
-  ["Restricted launch stabilization", stabilization.status || "UNKNOWN", "Required"],
-  ["Mainnet monitor", monitor.status || "UNKNOWN", "Required"],
-  ["Incident status", activeIncidents === 0 ? "No active incidents" : "Active incidents present", "Required"],
-  ["Governance decision", governanceDecision.governanceDecisionRecorded === true ? "Recorded" : "Not recorded", "Required before activation"],
-  ["Treasury funding approval", treasuryFunding.treasuryFundingApproved === true ? "Approved" : "Not approved", "Required only before funding"],
-  ["Safe transaction payload", treasurySafeTx.safeTransactionPayloadGenerated === true ? "Generated" : "Not generated", "Required only before Safe execution"],
-  ["More generic prep pages", "Not recommended", "Optional / stop here"]
-];
-
-const capabilityStates = {
-  fullLaunchApproved: Boolean(fullLaunch.fullLaunchApproved),
-  governanceDecisionRecorded: Boolean(governanceDecision.governanceDecisionRecorded),
+const finalPosture = {
+  governanceDecisionRecorded: governanceDecision.governanceDecisionRecorded === true,
+  fullLaunchApproved: false,
   publicTokenSaleApproved: false,
-  realTreasuryFundingApproved: Boolean(treasuryFunding.treasuryFundingApproved),
-  treasuryFundingExecuted: Boolean(treasuryFunding.treasuryFundingExecuted),
-  safeTransactionPayloadGenerated: Boolean(treasurySafeTx.safeTransactionPayloadGenerated),
-  safeTransactionPrepared: Boolean(treasurySafeTx.safeTransactionPrepared),
-  mainnetExecutionQueueEnabled: execution.mode !== "MAINNET_EXECUTION_QUEUE_DISABLED",
+  realTreasuryFundingApproved: false,
   stakingOrRewardsApproved: false,
   buybackProgramApproved: false,
+  mainnetExecutionQueueApproved: false,
   paperToOnchainAutomationApproved: false,
-  autonomousExecutionApproved: false
+  autonomousExecutionApproved: false,
+  safeTransactionPayloadGenerated: false,
+  safeTransactionExecutionApproved: false
 };
 
-const unsafe = Object.entries(capabilityStates)
-  .filter(([key, value]) => value === true && key !== "governanceDecisionRecorded")
-  .map(([key]) => key);
+const safe =
+  finalPosture.governanceDecisionRecorded === true &&
+  capabilityMatrix.allCapabilitiesDisabled === true &&
+  capabilityMatrix.allCapabilityApprovalsFalse === true &&
+  publicStatusUpdate.publicStatusUpdateFinalApproved === true &&
+  fullLaunch.fullLaunchApproved === false &&
+  treasuryFunding.treasuryFundingApproved === false &&
+  treasuryFunding.treasuryFundingExecuted === false &&
+  treasurySafeTx.safeTransactionPayloadGenerated === false &&
+  treasurySafeTx.safeTransactionPrepared === false &&
+  monitor.status === "PASS" &&
+  responseRequired === false &&
+  activeIncidents === 0 &&
+  execution.mode === "MAINNET_EXECUTION_QUEUE_DISABLED";
 
-const status = unsafe.length === 0 && monitor.status === "PASS" && activeIncidents === 0
-  ? "LAUNCH_CONTROL_READY_RESTRICTED_MODE"
-  : "LAUNCH_CONTROL_REVIEW_REQUIRED";
+const status = safe
+  ? "RESTRICTED_MODE_FINAL_STATUS_SYNCED_DECISION_RECORDED_ALL_DISABLED"
+  : "RESTRICTED_MODE_FINAL_STATUS_REVIEW_REQUIRED";
 
 const report = {
-  schema: "astra-launch-control-status-v0.1",
+  schema: "astra-restricted-mode-final-status-v0.1",
   generatedAt: new Date().toISOString(),
   status,
   currentApprovedMode: "restricted-mainnet-operation",
-  genericPreparationComplete: true,
-  additionalGenericPreparationRecommended: false,
   publicStatement:
-    "AstraTreasury generic launch preparation is complete. Further work should be capability-specific or governance-action-specific. Full launch and restricted capabilities remain not approved.",
+    "AstraTreasury governance decision is recorded for restricted Base Mainnet operation. All restricted capabilities remain disabled and not approved.",
   summary: {
-    auditCleared: true,
-    legalCleared: true,
+    governanceDecisionRecorded: finalPosture.governanceDecisionRecorded,
     activeIncidents,
     responseRequired,
     monitorStatus: monitor.status || "UNKNOWN",
-    restrictedLaunchStatus: stabilization.status || "UNKNOWN",
-    unsafeEnabledItems: unsafe
+    approvedCapabilityCount: Object.values(finalPosture).filter((value) => value === true).length - 1
   },
-  requiredVsOptional,
-  capabilityStates,
-  nextRecommendedActions: [
-    "Stop creating generic preparation packages.",
-    "Choose one specific action path.",
-    "Use explicit approval before enabling any capability.",
-    "Keep all public status pages synced through evidence archive."
-  ],
-  specificActionPaths: [
-    "Governance decision recording live path",
-    "Treasury funding authorization path",
-    "Safe transaction payload path",
-    "Execution queue activation path",
-    "Public sale path",
-    "Staking/rewards path",
-    "Buyback path"
-  ],
+  finalPosture,
+  governanceDecision: governanceDecision.decision || {},
   currentStatuses: {
-    stabilization: stabilization.status || "UNKNOWN",
-    fullLaunch: fullLaunch.status || "UNKNOWN",
-    governance: governance.status || "UNKNOWN",
-    decisionAuthorization: decisionAuth.status || "UNKNOWN",
     governanceDecision: governanceDecision.status || "UNKNOWN",
+    capabilityMatrix: capabilityMatrix.status || "UNKNOWN",
+    publicStatusUpdate: publicStatusUpdate.status || "UNKNOWN",
+    launchControl: launchControl.status || "UNKNOWN",
+    fullLaunch: fullLaunch.status || "UNKNOWN",
     treasuryFunding: treasuryFunding.status || "UNKNOWN",
     treasurySafeTransaction: treasurySafeTx.status || "UNKNOWN",
     monitor: monitor.status || "UNKNOWN",
@@ -148,24 +128,21 @@ const report = {
     enablesExecution: false,
     approvesPublicSale: false,
     approvesTreasuryFunding: false,
-    recordsGovernanceDecision: false,
+    preparesSafeTransaction: false,
     approvesFullLaunch: false
-  }
+  },
+  hardRule: config.hardRule
 };
 
 writeJson(reportFile, report);
 writeJson(publicJsonFile, report);
 
-const requiredRows = requiredVsOptional.map(([area, state, type]) => {
-  return `<tr><td>${escapeHtml(area)}</td><td>${escapeHtml(state)}</td><td>${escapeHtml(type)}</td></tr>`;
+const postureRows = Object.entries(finalPosture).map(([key, value]) => {
+  return `<tr><td>${escapeHtml(key)}</td><td>${value ? "True" : "False"}</td></tr>`;
 }).join("");
 
-const capabilityRows = Object.entries(capabilityStates).map(([key, value]) => {
-  return `<tr><td>${escapeHtml(key)}</td><td>${value ? "Enabled / approved" : "Disabled / not approved"}</td></tr>`;
-}).join("");
-
-const pathRows = report.specificActionPaths.map((item) => {
-  return `<tr><td>${escapeHtml(item)}</td><td>Use only when pursuing this exact action.</td></tr>`;
+const decisionRows = Object.entries(report.governanceDecision || {}).map(([key, value]) => {
+  return `<tr><td>${escapeHtml(key)}</td><td>${escapeHtml(Array.isArray(value) ? JSON.stringify(value) : value)}</td></tr>`;
 }).join("");
 
 const statusRows = Object.entries(report.currentStatuses).map(([key, value]) => {
@@ -177,7 +154,7 @@ const html = `<!doctype html>
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>AstraTreasury Launch Control</title>
+  <title>AstraTreasury Restricted-Mode Final Status</title>
   <style>
     :root {
       color-scheme: dark;
@@ -263,32 +240,24 @@ const html = `<!doctype html>
 <body>
 <main>
   <section class="card">
-    <div class="badge">Restricted mode · generic prep complete</div>
-    <h1>Launch Control</h1>
+    <div class="badge">Governance decision recorded · restricted mode</div>
+    <h1>Restricted-Mode Final Status</h1>
     <p>${escapeHtml(report.publicStatement)}</p>
   </section>
 
   <section class="card">
-    <h2>Required vs optional</h2>
+    <h2>Final posture</h2>
     <table>
-      <thead><tr><th>Area</th><th>Status</th><th>Meaning</th></tr></thead>
-      <tbody>${requiredRows}</tbody>
+      <thead><tr><th>Item</th><th>Value</th></tr></thead>
+      <tbody>${postureRows}</tbody>
     </table>
   </section>
 
   <section class="card">
-    <h2>Capability states</h2>
+    <h2>Governance decision</h2>
     <table>
-      <thead><tr><th>Capability</th><th>Status</th></tr></thead>
-      <tbody>${capabilityRows}</tbody>
-    </table>
-  </section>
-
-  <section class="card">
-    <h2>Specific action paths</h2>
-    <table>
-      <thead><tr><th>Path</th><th>Use</th></tr></thead>
-      <tbody>${pathRows}</tbody>
+      <thead><tr><th>Field</th><th>Value</th></tr></thead>
+      <tbody>${decisionRows || '<tr><td colspan="2">No decision details available.</td></tr>'}</tbody>
     </table>
   </section>
 
@@ -301,19 +270,18 @@ const html = `<!doctype html>
   </section>
 
   <section class="card">
-    <h2>Decision</h2>
+    <h2>Important</h2>
     <div class="notice">
-      More generic preparation is not necessary. The next work should be tied to one exact action:
-      governance decision recording, treasury funding authorization, Safe payload generation, execution activation,
-      public sale, staking/rewards, or buyback approval.
+      This final status sync does not approve full launch, funding, public sale, staking/rewards,
+      buybacks, execution, automation, autonomous execution, Safe payload generation, or Safe transaction execution.
     </div>
   </section>
 
   <section class="card">
     <h2>Public API</h2>
-    <p><a href="/api/public/launch-control">/api/public/launch-control</a></p>
-    <p><a href="/trust">Trust Center</a></p>
-    <p><a href="/full-launch">Full launch readiness</a></p>
+    <p><a href="/api/public/restricted-mode-final-status">/api/public/restricted-mode-final-status</a></p>
+    <p><a href="/governance-decision">Governance Decision</a></p>
+    <p><a href="/launch-control">Launch Control</a></p>
     <p><a href="/">Back to homepage</a></p>
   </section>
 </main>
@@ -322,9 +290,9 @@ const html = `<!doctype html>
 
 fs.writeFileSync(publicHtmlFile, html + "\n");
 
-console.log("AstraTreasury Launch Control");
-console.log("============================");
+console.log("AstraTreasury Restricted-Mode Final Status");
+console.log("==========================================");
 console.log(`Status: ${report.status}`);
-console.log("Generic preparation complete: true");
-console.log("Additional generic preparation recommended: false");
+console.log(`Governance decision recorded: ${report.summary.governanceDecisionRecorded}`);
+console.log(`Approved capability count: ${report.summary.approvedCapabilityCount}`);
 console.log(`Report: ${reportFile}`);

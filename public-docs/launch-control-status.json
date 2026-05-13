@@ -1,6 +1,6 @@
 {
   "schema": "astra-launch-control-status-v0.1",
-  "generatedAt": "2026-05-13T17:44:49.043Z",
+  "generatedAt": "2026-05-13T20:18:50.754Z",
   "status": "LAUNCH_CONTROL_READY_RESTRICTED_MODE",
   "currentApprovedMode": "restricted-mainnet-operation",
   "genericPreparationComplete": true,
@@ -38,8 +38,8 @@
     ],
     [
       "Governance decision",
-      "Not recorded",
-      "Required only before activation"
+      "Recorded",
+      "Required before activation"
     ],
     [
       "Treasury funding approval",
@@ -59,7 +59,7 @@
   ],
   "capabilityStates": {
     "fullLaunchApproved": false,
-    "governanceDecisionRecorded": false,
+    "governanceDecisionRecorded": true,
     "publicTokenSaleApproved": false,
     "realTreasuryFundingApproved": false,
     "treasuryFundingExecuted": false,
@@ -91,6 +91,7 @@
     "fullLaunch": "FULL_LAUNCH_READINESS_TRACK_OPEN_PLANNING_ONLY",
     "governance": "FULL_LAUNCH_GOVERNANCE_DECISION_PACKAGE_READY_NOT_APPROVED",
     "decisionAuthorization": "FULL_LAUNCH_GOVERNANCE_DECISION_RECORDING_AUTHORIZATION_PACKAGE_READY_NOT_RECORDED",
+    "governanceDecision": "GOVERNANCE_DECISION_RECORDED_RESTRICTED_MODE_ALL_DISABLED",
     "treasuryFunding": "TREASURY_FUNDING_READINESS_TRACK_OPEN_NOT_APPROVED",
     "treasurySafeTransaction": "TREASURY_SAFE_TRANSACTION_PACKAGE_SCAFFOLD_READY_NO_PAYLOAD",
     "monitor": "PASS",

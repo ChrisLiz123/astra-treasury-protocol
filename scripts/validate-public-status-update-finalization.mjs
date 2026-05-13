@@ -12,6 +12,7 @@ const requiredFiles = [
   "docs/public-status-update/PUBLIC_STATUS_UPDATE_BLOCKERS.md",
   "public-docs/launch-control-status.json",
   "public-docs/capability-matrix-status.json",
+  "public-docs/governance-decision-status.json",
   "public-docs/stabilization-status.json",
   "public-docs/full-launch-status.json",
   "public-docs/treasury-funding-status.json",
@@ -42,6 +43,7 @@ if (issues.length === 0) {
   const config = readJson("configs/public-status-update-finalization.config.json");
   const launchControl = readJson("public-docs/launch-control-status.json");
   const capabilityMatrix = readJson("public-docs/capability-matrix-status.json");
+  const governanceDecision = readJson("public-docs/governance-decision-status.json");
   const stabilization = readJson("public-docs/stabilization-status.json");
   const fullLaunch = readJson("public-docs/full-launch-status.json");
   const treasuryFunding = readJson("public-docs/treasury-funding-status.json");
@@ -63,16 +65,25 @@ if (issues.length === 0) {
     issue("publicStatusUpdateFinalApproved", "Public status update should be final-approved for restricted-mode status.");
   }
 
-  if (config.finalApprovalScope !== "restricted-mode-no-capability-approval") {
-    issue("finalApprovalScope", "Final approval scope must be restricted-mode-no-capability-approval.");
+  const allowedFinalApprovalScopes = new Set([
+    "restricted-mode-no-capability-approval",
+    "restricted-mode-decision-recorded-no-capability-approval"
+  ]);
+
+  if (!allowedFinalApprovalScopes.has(config.finalApprovalScope)) {
+    issue("finalApprovalScope", "Final approval scope must be restricted-mode-no-capability-approval or restricted-mode-decision-recorded-no-capability-approval.");
   }
 
   if (config.doesNotApproveCapabilities !== true) {
     issue("doesNotApproveCapabilities", "Public status update must explicitly not approve capabilities.");
   }
 
-  if (config.governanceDecisionRecorded !== false) {
-    issue("governanceDecisionRecorded", "Governance decision must remain not recorded.");
+  if (config.governanceDecisionRecorded !== true) {
+    issue("governanceDecisionRecorded", "Governance decision should be recorded for final restricted-mode sync.");
+  }
+
+  if (governanceDecision.governanceDecisionRecorded !== true) {
+    issue("governanceDecision.governanceDecisionRecorded", "Governance decision public status must show recorded.");
   }
 
   if (config.fullLaunchApproved !== false) {

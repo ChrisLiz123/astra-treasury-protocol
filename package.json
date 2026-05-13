@@ -356,7 +356,11 @@
     "governance:decision-recording-live:validate": "node scripts/validate-governance-decision-live-recording.mjs",
     "governance:decision-recording-live:status": "node services/governance-decision-live-recording/status.mjs",
     "governance:decision-recording-live:gate": "npm run governance:decision-recording-live:validate && npm run governance:decision-recording-live:status",
-    "release:governance-decision-recording-live": "bash scripts/release/package-governance-decision-recording-live.sh"
+    "release:governance-decision-recording-live": "bash scripts/release/package-governance-decision-recording-live.sh",
+    "restricted-mode:final-status:validate": "node scripts/validate-restricted-mode-final-status.mjs",
+    "restricted-mode:final-status:status": "node services/restricted-mode-final-status/status.mjs",
+    "restricted-mode:final-status:gate": "npm run restricted-mode:final-status:validate && npm run restricted-mode:final-status:status",
+    "release:restricted-mode-final-status-sync": "bash scripts/release/package-restricted-mode-final-status-sync.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",

@@ -12,6 +12,7 @@ const requiredFiles = [
   "public-docs/launch-control-status.json",
   "public-docs/capability-matrix-status.json",
   "public-docs/public-status-update-status.json",
+  "public-docs/governance-decision-status.json",
   "public-docs/governance-vote-result-evidence-status.json",
   "public-docs/signed-governance-resolution-evidence-status.json",
   "public-docs/stabilization-status.json",
@@ -66,6 +67,7 @@ if (issues.length === 0) {
   const launchControl = readJson("public-docs/launch-control-status.json");
   const capabilityMatrix = readJson("public-docs/capability-matrix-status.json");
   const publicStatusUpdate = readJson("public-docs/public-status-update-status.json");
+  const governanceDecision = readJson("public-docs/governance-decision-status.json");
   const voteResultEvidence = readJson("public-docs/governance-vote-result-evidence-status.json");
   const signedResolutionEvidence = readJson("public-docs/signed-governance-resolution-evidence-status.json");
   const stabilization = readJson("public-docs/stabilization-status.json");
@@ -121,8 +123,8 @@ if (issues.length === 0) {
     issue("publicStatusUpdate.fullLaunchApproved", "Public status update must keep full launch not approved.");
   }
 
-  if (publicStatusUpdate.governanceDecisionRecorded !== false) {
-    issue("publicStatusUpdate.governanceDecisionRecorded", "Public status update must keep governance decision not recorded.");
+  if (publicStatusUpdate.governanceDecisionRecorded !== false && governanceDecision.governanceDecisionRecorded !== true) {
+    issue("publicStatusUpdate.governanceDecisionRecorded", "Public status update may show governance decision recorded only after governance decision is recorded.");
   }
 
   if (voteResultEvidence.voteResultImported === true && voteResultEvidence.voteResultValidated !== true) {
@@ -171,9 +173,7 @@ if (issues.length === 0) {
 
   const mustRemainFalse = [
     "actionSpecificApprovalRequested",
-    "actionSpecificApprovalRecorded",
     "actionSpecificApprovalExecuted",
-    "governanceDecisionRecordingAuthorized",
     "governanceDecisionRecorded",
     "governanceDecisionPublished",
     "fullLaunchApproved",
@@ -229,6 +229,55 @@ if (issues.length === 0) {
 
   if (safeTx.safeTransactionPrepared !== false) {
     issue("safeTransactionPrepared", "Safe transaction must remain not prepared.");
+  }
+
+
+  const actionApprovalRecordPath = path.join(
+    root,
+    "reports",
+    "action-approvals",
+    "governance-decision",
+    "action-approval-record.json"
+  );
+
+  if (config.actionSpecificApprovalRecorded !== false && config.actionSpecificApprovalRecorded !== true) {
+    issue("actionSpecificApprovalRecorded", "Must be a boolean.");
+  }
+
+  if (config.governanceDecisionRecordingAuthorized !== false && config.governanceDecisionRecordingAuthorized !== true) {
+    issue("governanceDecisionRecordingAuthorized", "Must be a boolean.");
+  }
+
+  if (config.actionSpecificApprovalRecorded === true || config.governanceDecisionRecordingAuthorized === true) {
+    if (!fs.existsSync(actionApprovalRecordPath)) {
+      issue("reports/action-approvals/governance-decision/action-approval-record.json", "Action approval record is required when approval is recorded.");
+    } else {
+      const actionRecord = JSON.parse(fs.readFileSync(actionApprovalRecordPath, "utf8"));
+
+      if (actionRecord.schema !== "astra-governance-decision-action-approval-record-v0.1") {
+        issue("actionApprovalRecord.schema", "Invalid action approval record schema.");
+      }
+
+      if (actionRecord.approvalRecorded !== true) {
+        issue("actionApprovalRecord.approvalRecorded", "Action approval record must set approvalRecorded true.");
+      }
+
+      if (actionRecord.actionId !== "governance-decision-recording") {
+        issue("actionApprovalRecord.actionId", "Action approval record must be for governance-decision-recording.");
+      }
+
+      if (actionRecord.governanceDecisionRecorded !== false) {
+        issue("actionApprovalRecord.governanceDecisionRecorded", "Action approval must not record a governance decision.");
+      }
+
+      if (actionRecord.fullLaunchApproved !== false) {
+        issue("actionApprovalRecord.fullLaunchApproved", "Action approval must not approve full launch.");
+      }
+
+      if (!Array.isArray(actionRecord.approvedCapabilities) || actionRecord.approvedCapabilities.length !== 0) {
+        issue("actionApprovalRecord.approvedCapabilities", "Action approval must not approve capabilities.");
+      }
+    }
   }
 
   for (const [key, value] of Object.entries(config.capabilityApprovals || {})) {

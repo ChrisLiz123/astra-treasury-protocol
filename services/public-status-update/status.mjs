@@ -46,6 +46,7 @@ function humanize(value) {
 const config = readJson("configs/public-status-update-finalization.config.json");
 const launchControl = readJson("public-docs/launch-control-status.json");
 const capabilityMatrix = readJson("public-docs/capability-matrix-status.json");
+const governanceDecision = readJson("public-docs/governance-decision-status.json");
 const stabilization = readJson("public-docs/stabilization-status.json");
 const fullLaunch = readJson("public-docs/full-launch-status.json");
 const treasuryFunding = readJson("public-docs/treasury-funding-status.json");
@@ -57,13 +58,18 @@ const execution = readJson("public-docs/mainnet-execution-status.json");
 
 const activeIncidents = Number(incidents?.summary?.active || 0);
 const responseRequired = Boolean(alerts?.responseRequired);
+const allowedFinalApprovalScopes = new Set([
+  "restricted-mode-no-capability-approval",
+  "restricted-mode-decision-recorded-no-capability-approval"
+]);
+const governanceDecisionRecorded = Boolean(governanceDecision.governanceDecisionRecorded || config.governanceDecisionRecorded);
 
 const safe =
   config.publicStatusUpdateFinalized === true &&
   config.publicStatusUpdateFinalApproved === true &&
-  config.finalApprovalScope === "restricted-mode-no-capability-approval" &&
+  allowedFinalApprovalScopes.has(config.finalApprovalScope) &&
   config.doesNotApproveCapabilities === true &&
-  config.governanceDecisionRecorded === false &&
+  
   config.fullLaunchApproved === false &&
   capabilityMatrix.allCapabilitiesDisabled === true &&
   capabilityMatrix.allCapabilityApprovalsFalse === true &&
@@ -89,11 +95,13 @@ const report = {
   publicStatusUpdateFinalApproved: Boolean(config.publicStatusUpdateFinalApproved),
   finalApprovalScope: config.finalApprovalScope,
   doesNotApproveCapabilities: Boolean(config.doesNotApproveCapabilities),
-  governanceDecisionRecorded: false,
+  governanceDecisionRecorded,
   fullLaunchApproved: false,
   finalPublicStatusUpdate: config.finalPublicStatusUpdate || {},
   publicStatement:
-    "AstraTreasury public status update is finalized for restricted-mode / all-disabled status. No governance decision is recorded, full launch is not approved, and no restricted capability is approved.",
+    governanceDecisionRecorded
+      ? "AstraTreasury public status update is finalized. Governance decision is recorded for restricted-mode / all-disabled status. Full launch is not approved, and no restricted capability is approved."
+      : "AstraTreasury public status update is finalized for restricted-mode / all-disabled status. No governance decision is recorded, full launch is not approved, and no restricted capability is approved.",
   summary: {
     activeIncidents,
     responseRequired,
@@ -104,6 +112,7 @@ const report = {
   currentStatuses: {
     launchControl: launchControl.status || "UNKNOWN",
     capabilityMatrix: capabilityMatrix.status || "UNKNOWN",
+    governanceDecision: governanceDecision.status || "UNKNOWN",
     stabilization: stabilization.status || "UNKNOWN",
     fullLaunch: fullLaunch.status || "UNKNOWN",
     treasuryFunding: treasuryFunding.status || "UNKNOWN",
