@@ -804,6 +804,10 @@ const html = `<!doctype html>
           <strong>Capability request import</strong>
           <span>Guarded request import for review only.</span>
         </a>
+        <a class="link-card" href="/capability-request-review">
+          <strong>Capability request review</strong>
+          <span>Review gate before any dedicated action path.</span>
+        </a>
         <a class="link-card" href="/governance-vote-result-evidence">
           <strong>Vote/result evidence</strong>
           <span>Evidence import path. No decision is recorded.</span>

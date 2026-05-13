@@ -397,7 +397,11 @@
     "capability:request-import:status": "node services/capability-request-import/status.mjs",
     "capability:request-import:validate": "node scripts/validate-capability-request-import.mjs",
     "capability:request-import:gate": "npm run capability:request-import:status && npm run capability:request-import:validate",
-    "release:capability-request-import-template": "bash scripts/release/package-capability-request-import-template.sh"
+    "release:capability-request-import-template": "bash scripts/release/package-capability-request-import-template.sh",
+    "capability:request-review:validate": "node scripts/validate-capability-request-review.mjs",
+    "capability:request-review:status": "node services/capability-request-review/status.mjs",
+    "capability:request-review:gate": "npm run capability:request-review:validate && npm run capability:request-review:status",
+    "release:capability-request-review-gate": "bash scripts/release/package-capability-request-review-gate.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",

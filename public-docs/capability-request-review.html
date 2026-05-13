@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AstraTreasury Capability Request Review</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #08111f;
+      --surface: #0e1a2b;
+      --border: rgba(148, 163, 184, 0.2);
+      --text: #edf4fb;
+      --muted: #9aaec4;
+      --blue: #67a7ff;
+      --green: #41d49b;
+      --yellow: #f4c35f;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    body { margin: 0; background: linear-gradient(180deg, #07101d, var(--bg)); color: var(--text); }
+    a { color: var(--blue); text-decoration: none; }
+
+    main {
+      width: min(1120px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 44px 0 72px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 28px;
+      box-shadow: 0 22px 70px rgba(0,0,0,.28);
+      margin-bottom: 18px;
+    }
+
+    h1 { margin: 0 0 10px; font-size: 42px; letter-spacing: -1.2px; }
+    h2 { margin: 0 0 14px; font-size: 24px; }
+    p { color: var(--muted); line-height: 1.65; }
+
+    .badge {
+      display: inline-flex;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(65,212,155,.10);
+      border: 1px solid rgba(65,212,155,.22);
+      color: var(--green);
+      font-weight: 850;
+      margin-bottom: 16px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      overflow: hidden;
+    }
+
+    th, td {
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--border);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      color: var(--muted);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      background: rgba(255,255,255,.03);
+    }
+
+    tr:last-child td { border-bottom: 0; }
+
+    code {
+      color: var(--muted);
+      overflow-wrap: anywhere;
+      font-size: 12px;
+    }
+
+    .notice {
+      padding: 16px;
+      border-radius: 16px;
+      background: rgba(244,195,95,.08);
+      border: 1px solid rgba(244,195,95,.22);
+      color: #f7d99a;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+<main>
+  <section class="card">
+    <div class="badge">Request review · no capability approved</div>
+    <h1>Capability Request Review</h1>
+    <p>AstraTreasury capability request review gate is ready. No active request is present, and all restricted capabilities remain disabled and not approved.</p>
+    <p><strong>Request review hash:</strong> <code>62cdbb569554ac8d5ad840d01557dbbd9154b00abdf6f4fd104863f18ac3f640</code></p>
+  </section>
+
+  <section class="card">
+    <h2>Review outcome</h2>
+    <table>
+      <thead><tr><th>Field</th><th>Value</th></tr></thead>
+      <tbody><tr><td>outcome</td><td>NO_ACTIVE_REQUEST</td></tr><tr><td>requestedCapability</td><td>none</td></tr><tr><td>nextRecommendedMilestone</td><td>Import a real capability request if future activation review is desired.</td></tr><tr><td>capabilityApproved</td><td>false</td></tr><tr><td>safePayloadGenerated</td><td>false</td></tr><tr><td>executionQueueEnabled</td><td>false</td></tr><tr><td>fundsMovementApproved</td><td>false</td></tr></tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>Request summary</h2>
+    <table>
+      <thead><tr><th>Field</th><th>Value</th></tr></thead>
+      <tbody><tr><td>requestId</td><td>no active request</td></tr><tr><td>requestedCapability</td><td>none</td></tr><tr><td>requesterReference</td><td>none</td></tr><tr><td>authorityReference</td><td>none</td></tr><tr><td>purpose</td><td>none</td></tr><tr><td>scope</td><td>none</td></tr><tr><td>evidenceReference</td><td>none</td></tr><tr><td>publicStatusPlan</td><td>none</td></tr><tr><td>onchainImpact</td><td>false</td></tr><tr><td>safeTransactionImpact</td><td>false</td></tr><tr><td>safePayloadGenerationRequested</td><td>false</td></tr><tr><td>executionQueueActivationRequested</td><td>false</td></tr><tr><td>fundsMovementRequested</td><td>false</td></tr><tr><td>requestedAt</td><td></td></tr></tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>Request issues</h2>
+    <table>
+      <thead><tr><th>Issue</th></tr></thead>
+      <tbody><tr><td>No request issues.</td></tr></tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>Review artifacts</h2>
+    <table>
+      <thead><tr><th>Artifact</th><th>Bytes</th><th>SHA-256</th></tr></thead>
+      <tbody><tr><td>configs/capability-request-review.config.json</td><td>2113</td><td><code>989587e33ac699ee9516349d78e741c96787d6d017ab46674bea7aa675775599</code></td></tr><tr><td>configs/capability-request-import.config.json</td><td>2248</td><td><code>a869ef998ccd646bd8a1c05ee86dc6983616eca9c20f930563ec641767176f37</code></td></tr><tr><td>configs/capability-activation-intake.config.json</td><td>2249</td><td><code>99c031a01f4a360cad0fd34e13fee9afa7ab743061f41e6cc823b077a5dcb0f2</code></td></tr><tr><td>docs/capability-request-review/CAPABILITY_REQUEST_REVIEW_GATE.md</td><td>809</td><td><code>14ee9d854a114a914d9a8643d444f40c2c32d2ad6e5181089f68f987190212a9</code></td></tr><tr><td>docs/capability-request-review/CAPABILITY_REQUEST_REVIEW_CHECKLIST.md</td><td>793</td><td><code>a917192c1b490de7ee632873eb8d370539f68fe8e7316500422f75d81fbb92ac</code></td></tr><tr><td>docs/capability-request-review/CAPABILITY_REQUEST_REVIEW_BOUNDARIES.md</td><td>628</td><td><code>fc8dd989bdc3301f51f6cf85c510a72cdaf1cda7268017a9f225209baa1b7cb4</code></td></tr><tr><td>docs/capability-request-review/CAPABILITY_REQUEST_REVIEW_RUNBOOK.md</td><td>482</td><td><code>22b18a630c0eb107983304090766baf7b7d09afee15183bca6d5904d6211561b</code></td></tr><tr><td>public-docs/capability-request-import-status.json</td><td>10474</td><td><code>c7f2654097c07fafafa34da37a85b99ccdc94c478e7c81ffad5c1acdd88c1919</code></td></tr><tr><td>public-docs/capability-activation-intake-status.json</td><td>12555</td><td><code>32566b5f85b3290c7b804081110b2e735e4c6017b978ca29b5835d02e831d283</code></td></tr><tr><td>public-docs/restricted-mode-operator-checklist-status.json</td><td>12413</td><td><code>bd8abb9092c45cdf777c6e35939ec071953b60f304aecdd8f6ec7252512d65cc</code></td></tr><tr><td>public-docs/restricted-mode-maintenance-schedule-status.json</td><td>11836</td><td><code>6f2d8fc38bf420b81c80f920083233596893a595ec552fae682bcae36f6eb23c</code></td></tr><tr><td>public-docs/restricted-mode-final-release-status.json</td><td>10362</td><td><code>74cd6a89ea1ba06c5bb8fdc26a5cbec7df743d3540628df0089b9d1cacff8f33</code></td></tr><tr><td>public-docs/governance-decision-status.json</td><td>2574</td><td><code>ec1c19fb4e69ce2a7a8732aacbece1c5edff2e6298b81c68cd1f7a5eb4b5c95b</code></td></tr><tr><td>public-docs/capability-matrix-status.json</td><td>4146</td><td><code>4398b6a3c1b77ac3b34a42ea991918f1930aeb804f2b1bdb8169ec6e933e4f03</code></td></tr><tr><td>public-docs/full-launch-status.json</td><td>2717</td><td><code>16dec6e30bbec9b9692ea41c76cac4b798ef2c17ac5adb49a9fffa209e1a9cdc</code></td></tr><tr><td>public-docs/treasury-funding-status.json</td><td>2489</td><td><code>d87c2c774d0f782c4ca38857d3c77f2cf06037218af677ad9cdd365ba64c5e91</code></td></tr><tr><td>public-docs/treasury-safe-transaction-status.json</td><td>3932</td><td><code>881b35ce7c12faab4fcabb6286d2fc10e8a61a48f19d30c30d01214024590812</code></td></tr><tr><td>public-docs/mainnet-monitor-status.json</td><td>1707</td><td><code>1722d14777e168b0972e8ca3a675cd2afa5e70cf21f79f51c079251f1405bede</code></td></tr><tr><td>public-docs/mainnet-alerts-status.json</td><td>2128</td><td><code>a33742a16eef11c22236cf5163cea9d6d998b79e320ced7f33e991db7c047c61</code></td></tr><tr><td>public-docs/incident-summary.json</td><td>432</td><td><code>57b57c2637eaf8f5600b1b4664211d3562becd7258fb6c81c68857349f295b7b</code></td></tr><tr><td>public-docs/mainnet-execution-status.json</td><td>1320</td><td><code>c0fe2d6faed2ff87bfd94b7f11c2495fdc6083c8320a9fe23f493e966b46293d</code></td></tr></tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>Checks</h2>
+    <table>
+      <thead><tr><th>Check</th><th>Status</th><th>Details</th></tr></thead>
+      <tbody><tr><td>Request review gate prepared</td><td>PASS</td><td><code>{&quot;requestReviewGatePrepared&quot;:true}</code></td></tr><tr><td>Request import status healthy</td><td>PASS</td><td><code>{&quot;status&quot;:&quot;CAPABILITY_REQUEST_IMPORT_TEMPLATE_READY_NO_ACTIVE_REQUEST&quot;}</code></td></tr><tr><td>Capability intake status healthy</td><td>PASS</td><td><code>{&quot;status&quot;:&quot;CAPABILITY_ACTIVATION_INTAKE_GATE_READY_NO_ACTIVE_REQUEST&quot;}</code></td></tr><tr><td>Operator checklist ready</td><td>PASS</td><td><code>{&quot;status&quot;:&quot;RESTRICTED_MODE_OPERATOR_CHECKLIST_READY_DECISION_RECORDED_ALL_DISABLED&quot;}</code></td></tr><tr><td>Maintenance schedule ready</td><td>PASS</td><td><code>{&quot;status&quot;:&quot;RESTRICTED_MODE_MAINTENANCE_SCHEDULE_READY_DECISION_RECORDED_ALL_DISABLED&quot;}</code></td></tr><tr><td>Final release ready</td><td>PASS</td><td><code>{&quot;status&quot;:&quot;RESTRICTED_MODE_FINAL_RELEASE_READY_DECISION_RECORDED_ALL_DISABLED&quot;}</code></td></tr><tr><td>Governance decision recorded</td><td>PASS</td><td><code>{&quot;governanceDecisionRecorded&quot;:true}</code></td></tr><tr><td>Capability Matrix all-disabled</td><td>PASS</td><td><code>{&quot;allCapabilitiesDisabled&quot;:true,&quot;allCapabilityApprovalsFalse&quot;:true}</code></td></tr><tr><td>Mainnet monitor passing</td><td>PASS</td><td><code>{&quot;status&quot;:&quot;PASS&quot;}</code></td></tr><tr><td>Alerts do not require response</td><td>PASS</td><td><code>{&quot;responseRequired&quot;:false}</code></td></tr><tr><td>No active incidents</td><td>PASS</td><td><code>{&quot;activeIncidents&quot;:0}</code></td></tr><tr><td>Execution queue disabled</td><td>PASS</td><td><code>{&quot;mode&quot;:&quot;MAINNET_EXECUTION_QUEUE_DISABLED&quot;}</code></td></tr><tr><td>Full launch not approved</td><td>PASS</td><td><code>{&quot;fullLaunchApproved&quot;:false,&quot;governanceDecisionFullLaunchApproved&quot;:false}</code></td></tr><tr><td>Treasury funding not approved</td><td>PASS</td><td><code>{&quot;treasuryFundingApproved&quot;:false}</code></td></tr><tr><td>Treasury funding not executed</td><td>PASS</td><td><code>{&quot;treasuryFundingExecuted&quot;:false}</code></td></tr><tr><td>Safe payload not generated</td><td>PASS</td><td><code>{&quot;safeTransactionPayloadGenerated&quot;:false}</code></td></tr><tr><td>Safe transaction not prepared</td><td>PASS</td><td><code>{&quot;safeTransactionPrepared&quot;:false}</code></td></tr><tr><td>Active request valid if present</td><td>PASS</td><td><code>{&quot;requestFilePresent&quot;:false,&quot;requestIssues&quot;:[]}</code></td></tr></tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>Current statuses</h2>
+    <table>
+      <thead><tr><th>Area</th><th>Status</th></tr></thead>
+      <tbody><tr><td>capabilityRequestImport</td><td>Capability Request Import Template Ready No Active Request</td></tr><tr><td>capabilityActivationIntake</td><td>Capability Activation Intake Gate Ready No Active Request</td></tr><tr><td>restrictedModeOperatorChecklist</td><td>Restricted Mode Operator Checklist Ready Decision Recorded All Disabled</td></tr><tr><td>restrictedModeMaintenanceSchedule</td><td>Restricted Mode Maintenance Schedule Ready Decision Recorded All Disabled</td></tr><tr><td>restrictedModeFinalRelease</td><td>Restricted Mode Final Release Ready Decision Recorded All Disabled</td></tr><tr><td>governanceDecision</td><td>Governance Decision Recorded Restricted Mode All Disabled</td></tr><tr><td>capabilityMatrix</td><td>Capability Matrix Finalized All Disabled</td></tr><tr><td>fullLaunch</td><td>Full Launch Readiness Track Open Planning Only</td></tr><tr><td>treasuryFunding</td><td>Treasury Funding Readiness Track Open Not Approved</td></tr><tr><td>treasurySafeTransaction</td><td>Treasury Safe Transaction Package Scaffold Ready No Payload</td></tr><tr><td>monitor</td><td>Pass</td></tr><tr><td>alerts</td><td>Clear</td></tr><tr><td>incidents</td><td>No Active Incidents</td></tr><tr><td>mainnetExecution</td><td>Mainnet Execution Queue Disabled</td></tr></tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>Important</h2>
+    <div class="notice">
+      Request review can recommend opening a dedicated action-specific path. It does not approve launch,
+      funding, public sale, staking/rewards, buybacks, execution, automation, autonomous execution,
+      Safe payload generation, or Safe transaction execution.
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Public API</h2>
+    <p><a href="/api/public/capability-request-review">/api/public/capability-request-review</a></p>
+    <p><a href="/capability-request-import">Capability Request Import</a></p>
+    <p><a href="/capability-activation-intake">Capability Activation Intake</a></p>
+    <p><a href="/">Back to homepage</a></p>
+  </section>
+</main>
+</body>
+</html>

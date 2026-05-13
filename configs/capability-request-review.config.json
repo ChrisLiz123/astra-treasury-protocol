@@ -1,0 +1,54 @@
+{
+  "schema": "astra-capability-request-review-gate-config-v0.1",
+  "status": "capability-request-review-gate",
+  "network": {
+    "name": "Base Mainnet",
+    "chainId": 8453
+  },
+  "currentApprovedMode": "restricted-mainnet-operation",
+  "requestReviewScope": "review-imported-capability-request-only",
+  "requestReviewGatePrepared": true,
+  "activeRequestFile": "reports/capability-activation-intake/requests/capability-activation-request.json",
+  "allowedCapabilities": [
+    "fullLaunch",
+    "publicTokenSale",
+    "realTreasuryFunding",
+    "stakingOrRewards",
+    "buybackProgram",
+    "mainnetExecutionQueue",
+    "paperToOnchainAutomation",
+    "autonomousExecution",
+    "safeTransactionPayloadGeneration",
+    "safeTransactionExecution"
+  ],
+  "requiresCapabilityRequestImport": true,
+  "requiresCapabilityActivationIntakeGate": true,
+  "requiresOperatorChecklist": true,
+  "requiresMaintenanceSchedule": true,
+  "requiresFinalRelease": true,
+  "requiresGovernanceDecisionRecorded": true,
+  "requiresAllCapabilitiesDisabled": true,
+  "reviewRules": {
+    "reviewDoesNotApproveCapability": true,
+    "reviewDoesNotGenerateSafePayload": true,
+    "reviewDoesNotEnableExecutionQueue": true,
+    "reviewDoesNotMoveFunds": true,
+    "reviewCanRecommendDedicatedActionPath": true,
+    "dedicatedActionPathStillRequiresSeparateApproval": true
+  },
+  "expectedPosture": {
+    "governanceDecisionRecorded": true,
+    "fullLaunchApproved": false,
+    "publicTokenSaleApproved": false,
+    "realTreasuryFundingApproved": false,
+    "stakingOrRewardsApproved": false,
+    "buybackProgramApproved": false,
+    "mainnetExecutionQueueApproved": false,
+    "paperToOnchainAutomationApproved": false,
+    "autonomousExecutionApproved": false,
+    "safeTransactionPayloadGenerated": false,
+    "safeTransactionPrepared": false,
+    "safeTransactionExecutionApproved": false
+  },
+  "hardRule": "This review gate may determine that a valid imported request is ready for a dedicated action-specific path. It does not approve any capability, generate a Safe payload, move funds, enable execution, or approve full launch."
+}
