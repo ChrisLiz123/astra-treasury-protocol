@@ -244,7 +244,11 @@
     "full-launch:validate": "node scripts/validate-full-launch-readiness.mjs",
     "full-launch:status": "node services/full-launch/status.mjs",
     "full-launch:gate": "npm run full-launch:validate && npm run full-launch:status",
-    "release:full-launch-readiness": "bash scripts/release/package-full-launch-readiness.sh"
+    "release:full-launch-readiness": "bash scripts/release/package-full-launch-readiness.sh",
+    "legal:full-launch:validate": "node scripts/validate-legal-full-launch-review.mjs",
+    "legal:full-launch:status": "node services/legal-full-launch/status.mjs",
+    "legal:full-launch:gate": "npm run legal:full-launch:validate && npm run legal:full-launch:status",
+    "release:legal-full-launch-review": "bash scripts/release/package-legal-full-launch-review.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",

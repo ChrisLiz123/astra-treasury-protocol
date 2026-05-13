@@ -1,0 +1,33 @@
+{
+  "schema": "astra-legal-full-launch-review-config-v0.1",
+  "status": "legal-review-not-approved",
+  "network": {
+    "name": "Base Mainnet",
+    "chainId": 8453
+  },
+  "currentApprovedMode": "restricted-mainnet-operation",
+  "legalFullLaunchApproved": false,
+  "fullLaunchApproved": false,
+  "capabilityApprovals": {
+    "publicTokenSaleApproved": false,
+    "realTreasuryFundingApproved": false,
+    "stakingOrRewardsApproved": false,
+    "buybackProgramApproved": false,
+    "mainnetExecutionQueueApproved": false,
+    "paperToOnchainAutomationApproved": false,
+    "autonomousExecutionApproved": false
+  },
+  "requiredLegalReviewAreas": {
+    "securitiesLaw": "PENDING_COUNSEL_REVIEW",
+    "moneyTransmissionAmlKyc": "PENDING_COUNSEL_REVIEW",
+    "sanctionsCompliance": "PENDING_COUNSEL_REVIEW",
+    "taxAccounting": "PENDING_COUNSEL_REVIEW",
+    "consumerDisclosures": "PENDING_COUNSEL_REVIEW",
+    "marketingLanguage": "PENDING_COUNSEL_REVIEW",
+    "jurisdictionalRestrictions": "PENDING_COUNSEL_REVIEW",
+    "treasuryFundingStructure": "PENDING_COUNSEL_REVIEW",
+    "tokenDistribution": "PENDING_COUNSEL_REVIEW",
+    "marketProviderListings": "PENDING_COUNSEL_REVIEW"
+  },
+  "hardRule": "This package is a review-preparation package only. It does not approve full launch or any restricted capability."
+}

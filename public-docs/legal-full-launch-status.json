@@ -1,0 +1,51 @@
+{
+  "schema": "astra-public-legal-full-launch-status-v0.1",
+  "generatedAt": "2026-05-13T13:30:03.951Z",
+  "status": "LEGAL_FULL_LAUNCH_REVIEW_OPEN_NOT_APPROVED",
+  "currentApprovedMode": "restricted-mainnet-operation",
+  "legalFullLaunchApproved": false,
+  "fullLaunchApproved": false,
+  "network": {
+    "name": "Base Mainnet",
+    "chainId": 8453
+  },
+  "publicStatement": "AstraTreasury legal full-launch review is open. Full launch and restricted capabilities are not approved.",
+  "summary": {
+    "totalChecks": 22,
+    "passed": 22,
+    "failed": 0,
+    "reviewAreas": 10,
+    "pendingReviewAreas": 10
+  },
+  "reviewAreas": {
+    "securitiesLaw": "PENDING_COUNSEL_REVIEW",
+    "moneyTransmissionAmlKyc": "PENDING_COUNSEL_REVIEW",
+    "sanctionsCompliance": "PENDING_COUNSEL_REVIEW",
+    "taxAccounting": "PENDING_COUNSEL_REVIEW",
+    "consumerDisclosures": "PENDING_COUNSEL_REVIEW",
+    "marketingLanguage": "PENDING_COUNSEL_REVIEW",
+    "jurisdictionalRestrictions": "PENDING_COUNSEL_REVIEW",
+    "treasuryFundingStructure": "PENDING_COUNSEL_REVIEW",
+    "tokenDistribution": "PENDING_COUNSEL_REVIEW",
+    "marketProviderListings": "PENDING_COUNSEL_REVIEW"
+  },
+  "capabilityApprovals": {
+    "publicTokenSaleApproved": false,
+    "realTreasuryFundingApproved": false,
+    "stakingOrRewardsApproved": false,
+    "buybackProgramApproved": false,
+    "mainnetExecutionQueueApproved": false,
+    "paperToOnchainAutomationApproved": false,
+    "autonomousExecutionApproved": false
+  },
+  "restrictions": {
+    "publicTokenSale": false,
+    "realTreasuryFunding": false,
+    "stakingOrRewards": false,
+    "buybackProgram": false,
+    "autonomousExecution": false,
+    "mainnetExecutionQueue": false,
+    "paperToOnchainAutomation": false
+  },
+  "failures": []
+}
