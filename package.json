@@ -380,7 +380,11 @@
     "restricted-mode:operations-handoff:validate": "node scripts/validate-restricted-mode-operations-handoff.mjs",
     "restricted-mode:operations-handoff:status": "node services/restricted-mode-operations-handoff/status.mjs",
     "restricted-mode:operations-handoff:gate": "npm run restricted-mode:operations-handoff:validate && npm run restricted-mode:operations-handoff:status",
-    "release:restricted-mode-operations-handoff": "bash scripts/release/package-restricted-mode-operations-handoff.sh"
+    "release:restricted-mode-operations-handoff": "bash scripts/release/package-restricted-mode-operations-handoff.sh",
+    "restricted-mode:maintenance-schedule:validate": "node scripts/validate-restricted-mode-maintenance-schedule.mjs",
+    "restricted-mode:maintenance-schedule:status": "node services/restricted-mode-maintenance-schedule/status.mjs",
+    "restricted-mode:maintenance-schedule:gate": "npm run restricted-mode:maintenance-schedule:validate && npm run restricted-mode:maintenance-schedule:status",
+    "release:restricted-mode-maintenance-schedule": "bash scripts/release/package-restricted-mode-maintenance-schedule.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",

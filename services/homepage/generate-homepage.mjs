@@ -788,6 +788,10 @@ const html = `<!doctype html>
           <strong>Operations handoff</strong>
           <span>Restricted-mode steady-state operating procedure.</span>
         </a>
+        <a class="link-card" href="/restricted-mode-maintenance-schedule">
+          <strong>Maintenance schedule</strong>
+          <span>Recurring restricted-mode maintenance cadence.</span>
+        </a>
         <a class="link-card" href="/governance-vote-result-evidence">
           <strong>Vote/result evidence</strong>
           <span>Evidence import path. No decision is recorded.</span>

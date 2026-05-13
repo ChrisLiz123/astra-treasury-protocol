@@ -1,0 +1,69 @@
+{
+  "schema": "astra-restricted-mode-maintenance-schedule-config-v0.1",
+  "status": "restricted-mode-maintenance-schedule",
+  "network": {
+    "name": "Base Mainnet",
+    "chainId": 8453
+  },
+  "currentApprovedMode": "restricted-mainnet-operation",
+  "maintenanceScope": "post-handoff-restricted-mode-all-disabled",
+  "maintenanceSchedulePrepared": true,
+  "requiresOperationsHandoff": true,
+  "requiresFinalRelease": true,
+  "requiresMonitoringBaseline": true,
+  "requiresEvidenceSeal": true,
+  "requiresAllCapabilitiesDisabled": true,
+  "operatorReportedClearances": {
+    "auditCleared": true,
+    "legalCleared": true,
+    "note": "Operator reported audit and legal requirements cleared."
+  },
+  "maintenanceCadence": {
+    "daily": [
+      "Run or review mainnet monitor status.",
+      "Confirm alerts do not require response.",
+      "Confirm active incidents are zero.",
+      "Confirm execution queue remains disabled."
+    ],
+    "weekly": [
+      "Run public refresh.",
+      "Run evidence archive.",
+      "Review public status pages.",
+      "Review restricted-mode final release and handoff gates."
+    ],
+    "monthly": [
+      "Review governance decision status.",
+      "Review Capability Matrix.",
+      "Review Launch Control.",
+      "Review incident history.",
+      "Confirm no capability was activated without action-specific approval."
+    ],
+    "quarterly": [
+      "Review signer/access controls.",
+      "Review Safe ownership and governance authority references.",
+      "Review monitoring and alert destinations.",
+      "Review disclosure and legal/audit evidence references."
+    ],
+    "eventDriven": [
+      "After any material status change, run public refresh.",
+      "After any material status change, run evidence archive.",
+      "After any incident, update incident summary and archive evidence.",
+      "Before any capability activation, start a separate action-specific approval path."
+    ]
+  },
+  "expectedPosture": {
+    "governanceDecisionRecorded": true,
+    "fullLaunchApproved": false,
+    "publicTokenSaleApproved": false,
+    "realTreasuryFundingApproved": false,
+    "stakingOrRewardsApproved": false,
+    "buybackProgramApproved": false,
+    "mainnetExecutionQueueApproved": false,
+    "paperToOnchainAutomationApproved": false,
+    "autonomousExecutionApproved": false,
+    "safeTransactionPayloadGenerated": false,
+    "safeTransactionPrepared": false,
+    "safeTransactionExecutionApproved": false
+  },
+  "hardRule": "This maintenance schedule documents recurring restricted-mode operations only. It does not approve launch, funding, public sale, staking, rewards, buybacks, execution, automation, autonomous execution, Safe payload generation, or Safe transaction execution."
+}
