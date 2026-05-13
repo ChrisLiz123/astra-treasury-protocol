@@ -284,7 +284,11 @@
     "treasury:safe-tx:validate": "node scripts/validate-treasury-safe-transaction-package.mjs",
     "treasury:safe-tx:status": "node services/treasury-safe-transaction/status.mjs",
     "treasury:safe-tx:gate": "npm run treasury:safe-tx:validate && npm run treasury:safe-tx:status",
-    "release:treasury-safe-transaction-package-prep": "bash scripts/release/package-treasury-safe-transaction-package-prep.sh"
+    "release:treasury-safe-transaction-package-prep": "bash scripts/release/package-treasury-safe-transaction-package-prep.sh",
+    "full-launch:governance:validate": "node scripts/validate-full-launch-governance-decision.mjs",
+    "full-launch:governance:status": "node services/full-launch-governance/status.mjs",
+    "full-launch:governance:gate": "npm run full-launch:governance:validate && npm run full-launch:governance:status",
+    "release:full-launch-governance-decision": "bash scripts/release/package-full-launch-governance-decision.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",

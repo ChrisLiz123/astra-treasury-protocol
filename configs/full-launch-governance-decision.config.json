@@ -1,0 +1,80 @@
+{
+  "schema": "astra-full-launch-governance-decision-config-v0.1",
+  "status": "planning-only-governance-decision-not-recorded",
+  "network": {
+    "name": "Base Mainnet",
+    "chainId": 8453
+  },
+  "currentApprovedMode": "restricted-mainnet-operation",
+  "operatorReportedClearances": {
+    "auditCleared": true,
+    "legalCleared": true,
+    "note": "Operator reported audit and legal requirements cleared. This does not by itself record governance approval or authorize full launch."
+  },
+  "governanceDecisionPackagePrepared": true,
+  "governanceFullLaunchApprovalRequested": false,
+  "governanceFullLaunchApprovalRecorded": false,
+  "governanceDecisionRecorded": false,
+  "fullLaunchApproved": false,
+  "publicDisclosuresFinalApproved": false,
+  "treasuryDisclosureFinalApproved": false,
+  "treasuryFundingApproved": false,
+  "treasuryFundingTransactionAuthorized": false,
+  "treasuryFundingExecuted": false,
+  "safeTransactionPayloadGenerated": false,
+  "safeTransactionPrepared": false,
+  "safeTransactionSubmitted": false,
+  "safeTransactionSigned": false,
+  "safeTransactionExecuted": false,
+  "capabilityApprovals": {
+    "publicTokenSaleApproved": false,
+    "realTreasuryFundingApproved": false,
+    "stakingOrRewardsApproved": false,
+    "buybackProgramApproved": false,
+    "mainnetExecutionQueueApproved": false,
+    "paperToOnchainAutomationApproved": false,
+    "autonomousExecutionApproved": false
+  },
+  "requiredBeforeGovernanceDecision": {
+    "restrictedLaunchStabilized": true,
+    "auditClearanceRecorded": true,
+    "legalClearanceRecorded": true,
+    "fullLaunchReadinessTrackExists": true,
+    "legalFullLaunchReviewExists": true,
+    "treasuryFundingReadinessExists": true,
+    "treasuryRiskLimitsDraftExists": true,
+    "treasuryFundingSourceReviewExists": true,
+    "treasurySafeApprovalPackageExists": true,
+    "treasuryTransactionDryRunPassed": true,
+    "treasuryDisclosureApprovalTrackExists": true,
+    "treasurySafeTransactionPackageScaffoldExists": true,
+    "mainnetMonitorPassing": true,
+    "activeIncidentsZero": true,
+    "finalGovernanceApproverAssigned": false,
+    "governanceVoteOrResolutionCompleted": false,
+    "finalDecisionRecordSigned": false
+  },
+  "governanceDecisionChecklist": {
+    "scopeReviewed": false,
+    "capabilitiesReviewed": false,
+    "riskLimitsReviewed": false,
+    "fundingSourceReviewed": false,
+    "treasurySafeProcessReviewed": false,
+    "disclosuresReviewed": false,
+    "monitoringReviewed": false,
+    "incidentProcessReviewed": false,
+    "operatorRunbookReviewed": false,
+    "publicStatusUpdateReviewed": false,
+    "finalGovernanceSignoffRecorded": false
+  },
+  "hardStops": {
+    "publicTokenSaleApproved": false,
+    "realTreasuryFundingApproved": false,
+    "stakingOrRewardsApproved": false,
+    "buybackProgramApproved": false,
+    "mainnetExecutionQueueEnabled": false,
+    "paperToOnchainAutomationEnabled": false,
+    "autonomousExecutionApproved": false
+  },
+  "hardRule": "This package prepares the full-launch governance decision process only. It does not approve full launch or any restricted capability."
+}

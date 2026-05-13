@@ -1,0 +1,110 @@
+{
+  "schema": "astra-public-full-launch-governance-decision-status-v0.1",
+  "generatedAt": "2026-05-13T15:46:04.304Z",
+  "status": "FULL_LAUNCH_GOVERNANCE_DECISION_PACKAGE_READY_NOT_APPROVED",
+  "mode": "PLANNING_ONLY_GOVERNANCE_DECISION_NOT_RECORDED",
+  "currentApprovedMode": "restricted-mainnet-operation",
+  "governanceFullLaunchApprovalRecorded": false,
+  "governanceDecisionRecorded": false,
+  "fullLaunchApproved": false,
+  "network": {
+    "name": "Base Mainnet",
+    "chainId": 8453
+  },
+  "publicStatement": "AstraTreasury full-launch governance decision package is ready for review. Full launch and restricted capabilities are not approved.",
+  "summary": {
+    "totalChecks": 47,
+    "passed": 47,
+    "failed": 0,
+    "activeIncidents": 0,
+    "responseRequired": false
+  },
+  "governanceStatus": {
+    "governanceDecisionPackagePrepared": true,
+    "governanceFullLaunchApprovalRequested": false,
+    "governanceFullLaunchApprovalRecorded": false,
+    "governanceDecisionRecorded": false,
+    "fullLaunchApproved": false,
+    "publicDisclosuresFinalApproved": false,
+    "treasuryDisclosureFinalApproved": false,
+    "treasuryFundingApproved": false,
+    "treasuryFundingTransactionAuthorized": false,
+    "treasuryFundingExecuted": false,
+    "safeTransactionPayloadGenerated": false,
+    "safeTransactionPrepared": false,
+    "safeTransactionSubmitted": false,
+    "safeTransactionSigned": false,
+    "safeTransactionExecuted": false
+  },
+  "capabilityApprovals": {
+    "publicTokenSaleApproved": false,
+    "realTreasuryFundingApproved": false,
+    "stakingOrRewardsApproved": false,
+    "buybackProgramApproved": false,
+    "mainnetExecutionQueueApproved": false,
+    "paperToOnchainAutomationApproved": false,
+    "autonomousExecutionApproved": false
+  },
+  "requiredBeforeGovernanceDecision": {
+    "restrictedLaunchStabilized": true,
+    "auditClearanceRecorded": true,
+    "legalClearanceRecorded": true,
+    "fullLaunchReadinessTrackExists": true,
+    "legalFullLaunchReviewExists": true,
+    "treasuryFundingReadinessExists": true,
+    "treasuryRiskLimitsDraftExists": true,
+    "treasuryFundingSourceReviewExists": true,
+    "treasurySafeApprovalPackageExists": true,
+    "treasuryTransactionDryRunPassed": true,
+    "treasuryDisclosureApprovalTrackExists": true,
+    "treasurySafeTransactionPackageScaffoldExists": true,
+    "mainnetMonitorPassing": true,
+    "activeIncidentsZero": true,
+    "finalGovernanceApproverAssigned": false,
+    "governanceVoteOrResolutionCompleted": false,
+    "finalDecisionRecordSigned": false
+  },
+  "governanceDecisionChecklist": {
+    "scopeReviewed": false,
+    "capabilitiesReviewed": false,
+    "riskLimitsReviewed": false,
+    "fundingSourceReviewed": false,
+    "treasurySafeProcessReviewed": false,
+    "disclosuresReviewed": false,
+    "monitoringReviewed": false,
+    "incidentProcessReviewed": false,
+    "operatorRunbookReviewed": false,
+    "publicStatusUpdateReviewed": false,
+    "finalGovernanceSignoffRecorded": false
+  },
+  "currentStatuses": {
+    "stabilization": "RESTRICTED_LAUNCH_STABILIZED",
+    "fullLaunch": "FULL_LAUNCH_READINESS_TRACK_OPEN_PLANNING_ONLY",
+    "legalFullLaunch": "LEGAL_FULL_LAUNCH_REVIEW_OPEN_NOT_APPROVED",
+    "treasuryFunding": "TREASURY_FUNDING_READINESS_TRACK_OPEN_NOT_APPROVED",
+    "treasuryRisk": "TREASURY_RISK_LIMITS_DRAFT_READY_NOT_APPROVED",
+    "treasurySource": "TREASURY_FUNDING_SOURCE_REVIEW_TRACK_OPEN_NOT_APPROVED",
+    "treasurySafe": "TREASURY_SAFE_APPROVAL_TRACK_OPEN_NOT_APPROVED",
+    "treasuryTransactionDryRun": "TREASURY_FUNDING_TRANSACTION_DRY_RUN_PASS_NOT_AUTHORIZED",
+    "treasuryDisclosure": "TREASURY_DISCLOSURE_APPROVAL_TRACK_OPEN_NOT_APPROVED",
+    "treasurySafeTransaction": "TREASURY_SAFE_TRANSACTION_PACKAGE_SCAFFOLD_READY_NO_PAYLOAD",
+    "monitor": "PASS",
+    "alerts": "CLEAR",
+    "incidents": "NO_ACTIVE_INCIDENTS",
+    "mainnetExecution": "MAINNET_EXECUTION_QUEUE_DISABLED"
+  },
+  "restrictions": {
+    "publicTokenSale": false,
+    "realTreasuryFunding": false,
+    "stakingOrRewards": false,
+    "buybackProgram": false,
+    "autonomousExecution": false,
+    "mainnetExecutionQueue": false,
+    "paperToOnchainAutomation": false
+  },
+  "nextPossibleMilestones": [
+    "Full-launch governance vote or resolution",
+    "Treasury funding authorization package",
+    "Capability-specific activation package"
+  ]
+}
