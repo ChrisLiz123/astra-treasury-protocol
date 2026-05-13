@@ -1,0 +1,45 @@
+{
+  "schema": "astra-restricted-mode-monitoring-baseline-config-v0.1",
+  "status": "post-governance-restricted-mode-monitoring-baseline",
+  "network": {
+    "name": "Base Mainnet",
+    "chainId": 8453
+  },
+  "currentApprovedMode": "restricted-mainnet-operation",
+  "baselineScope": "post-governance-decision-restricted-mode-all-disabled",
+  "baselinePrepared": true,
+  "requiresGovernanceDecisionRecorded": true,
+  "requiresRestrictedModeFinalStatus": true,
+  "requiresMainnetMonitorPass": true,
+  "requiresNoActiveIncidents": true,
+  "requiresExecutionQueueDisabled": true,
+  "operatorReportedClearances": {
+    "auditCleared": true,
+    "legalCleared": true,
+    "note": "Operator reported audit and legal requirements cleared."
+  },
+  "expectedPosture": {
+    "governanceDecisionRecorded": true,
+    "fullLaunchApproved": false,
+    "publicTokenSaleApproved": false,
+    "realTreasuryFundingApproved": false,
+    "stakingOrRewardsApproved": false,
+    "buybackProgramApproved": false,
+    "mainnetExecutionQueueApproved": false,
+    "paperToOnchainAutomationApproved": false,
+    "autonomousExecutionApproved": false,
+    "safeTransactionPayloadGenerated": false,
+    "safeTransactionPrepared": false,
+    "safeTransactionExecutionApproved": false
+  },
+  "baselineRules": {
+    "monitorMustPass": true,
+    "alertsMustNotRequireResponse": true,
+    "activeIncidentsMustBeZero": true,
+    "executionQueueMustRemainDisabled": true,
+    "treasuryFundingMustRemainNotApproved": true,
+    "safePayloadMustRemainNotGenerated": true,
+    "allCapabilitiesMustRemainDisabled": true
+  },
+  "hardRule": "This baseline confirms post-governance restricted-mode monitoring only. It does not approve launch, funding, public sale, rewards, buybacks, execution, automation, autonomous execution, Safe payload generation, or Safe transaction execution."
+}

@@ -1,0 +1,161 @@
+{
+  "schema": "astra-restricted-mode-monitoring-baseline-status-v0.1",
+  "generatedAt": "2026-05-13T20:29:59.215Z",
+  "status": "RESTRICTED_MODE_MONITORING_BASELINE_ESTABLISHED_DECISION_RECORDED_ALL_DISABLED",
+  "currentApprovedMode": "restricted-mainnet-operation",
+  "baselineScope": "post-governance-decision-restricted-mode-all-disabled",
+  "publicStatement": "AstraTreasury post-governance restricted-mode monitoring baseline is established. Governance decision is recorded, and all restricted capabilities remain disabled and not approved.",
+  "summary": {
+    "totalChecks": 13,
+    "passed": 13,
+    "failed": 0,
+    "activeIncidents": 0,
+    "responseRequired": false,
+    "monitorStatus": "PASS"
+  },
+  "baselineSnapshot": {
+    "generatedAt": "2026-05-13T20:29:59.215Z",
+    "governanceDecisionRecorded": true,
+    "currentApprovedMode": "restricted-mainnet-operation",
+    "fullLaunchApproved": false,
+    "treasuryFundingApproved": false,
+    "treasuryFundingExecuted": false,
+    "safeTransactionPayloadGenerated": false,
+    "safeTransactionPrepared": false,
+    "mainnetMonitorStatus": "PASS",
+    "alertsResponseRequired": false,
+    "activeIncidents": 0,
+    "mainnetExecutionMode": "MAINNET_EXECUTION_QUEUE_DISABLED"
+  },
+  "checks": [
+    {
+      "name": "Governance decision recorded",
+      "pass": true,
+      "details": {
+        "governanceDecisionRecorded": true
+      }
+    },
+    {
+      "name": "Restricted-mode final status synced",
+      "pass": true,
+      "details": {
+        "status": "RESTRICTED_MODE_FINAL_STATUS_SYNCED_DECISION_RECORDED_ALL_DISABLED"
+      }
+    },
+    {
+      "name": "Capability Matrix all-disabled",
+      "pass": true,
+      "details": {
+        "allCapabilitiesDisabled": true,
+        "allCapabilityApprovalsFalse": true
+      }
+    },
+    {
+      "name": "Public Status Update finalized",
+      "pass": true,
+      "details": {
+        "publicStatusUpdateFinalApproved": true
+      }
+    },
+    {
+      "name": "Mainnet monitor passing",
+      "pass": true,
+      "details": {
+        "status": "PASS"
+      }
+    },
+    {
+      "name": "Alerts do not require response",
+      "pass": true,
+      "details": {
+        "responseRequired": false
+      }
+    },
+    {
+      "name": "No active incidents",
+      "pass": true,
+      "details": {
+        "activeIncidents": 0
+      }
+    },
+    {
+      "name": "Execution queue disabled",
+      "pass": true,
+      "details": {
+        "mode": "MAINNET_EXECUTION_QUEUE_DISABLED"
+      }
+    },
+    {
+      "name": "Full launch not approved",
+      "pass": true,
+      "details": {
+        "fullLaunchApproved": false,
+        "governanceDecisionFullLaunchApproved": false
+      }
+    },
+    {
+      "name": "Treasury funding not approved",
+      "pass": true,
+      "details": {
+        "treasuryFundingApproved": false
+      }
+    },
+    {
+      "name": "Treasury funding not executed",
+      "pass": true,
+      "details": {
+        "treasuryFundingExecuted": false
+      }
+    },
+    {
+      "name": "Safe payload not generated",
+      "pass": true,
+      "details": {
+        "safeTransactionPayloadGenerated": false
+      }
+    },
+    {
+      "name": "Safe transaction not prepared",
+      "pass": true,
+      "details": {
+        "safeTransactionPrepared": false
+      }
+    }
+  ],
+  "failures": [],
+  "currentStatuses": {
+    "governanceDecision": "GOVERNANCE_DECISION_RECORDED_RESTRICTED_MODE_ALL_DISABLED",
+    "restrictedModeFinalStatus": "RESTRICTED_MODE_FINAL_STATUS_SYNCED_DECISION_RECORDED_ALL_DISABLED",
+    "capabilityMatrix": "CAPABILITY_MATRIX_FINALIZED_ALL_DISABLED",
+    "publicStatusUpdate": "PUBLIC_STATUS_UPDATE_FINALIZED_RESTRICTED_MODE",
+    "launchControl": "LAUNCH_CONTROL_READY_RESTRICTED_MODE",
+    "fullLaunch": "FULL_LAUNCH_READINESS_TRACK_OPEN_PLANNING_ONLY",
+    "treasuryFunding": "TREASURY_FUNDING_READINESS_TRACK_OPEN_NOT_APPROVED",
+    "treasurySafeTransaction": "TREASURY_SAFE_TRANSACTION_PACKAGE_SCAFFOLD_READY_NO_PAYLOAD",
+    "monitor": "PASS",
+    "alerts": "CLEAR",
+    "incidents": "NO_ACTIVE_INCIDENTS",
+    "mainnetExecution": "MAINNET_EXECUTION_QUEUE_DISABLED"
+  },
+  "restrictions": {
+    "publicTokenSale": false,
+    "realTreasuryFunding": false,
+    "stakingOrRewards": false,
+    "buybackProgram": false,
+    "autonomousExecution": false,
+    "mainnetExecutionQueue": false,
+    "paperToOnchainAutomation": false,
+    "safeTransactionPayloadGeneration": false,
+    "safeTransactionExecution": false
+  },
+  "safety": {
+    "sendsTransactions": false,
+    "movesFunds": false,
+    "deploysContracts": false,
+    "enablesExecution": false,
+    "approvesPublicSale": false,
+    "approvesTreasuryFunding": false,
+    "preparesSafeTransaction": false,
+    "approvesFullLaunch": false
+  }
+}
