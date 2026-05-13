@@ -312,7 +312,11 @@
     "full-launch:resolution-authorization:validate": "node scripts/validate-full-launch-governance-resolution-authorization.mjs",
     "full-launch:resolution-authorization:status": "node services/full-launch-governance-resolution-authorization/status.mjs",
     "full-launch:resolution-authorization:gate": "npm run full-launch:resolution-authorization:validate && npm run full-launch:resolution-authorization:status",
-    "release:governance-resolution-authorization": "bash scripts/release/package-governance-resolution-authorization.sh"
+    "release:governance-resolution-authorization": "bash scripts/release/package-governance-resolution-authorization.sh",
+    "full-launch:decision-recording:validate": "node scripts/validate-full-launch-governance-decision-recording.mjs",
+    "full-launch:decision-recording:status": "node services/full-launch-governance-decision-recording/status.mjs",
+    "full-launch:decision-recording:gate": "npm run full-launch:decision-recording:validate && npm run full-launch:decision-recording:status",
+    "release:governance-decision-recording": "bash scripts/release/package-governance-decision-recording.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",
