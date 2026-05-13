@@ -1,0 +1,124 @@
+{
+  "schema": "astra-capability-matrix-status-v0.1",
+  "generatedAt": "2026-05-13T18:04:24.365Z",
+  "status": "CAPABILITY_MATRIX_FINALIZED_ALL_DISABLED",
+  "currentApprovedMode": "restricted-mainnet-operation",
+  "capabilityMatrixFinalized": true,
+  "capabilityMatrixFinalApproved": true,
+  "finalApprovalScope": "disabled-state-matrix-only",
+  "doesNotApproveCapabilities": true,
+  "allCapabilitiesDisabled": true,
+  "allCapabilityApprovalsFalse": true,
+  "publicStatement": "AstraTreasury capability matrix is finalized as all-disabled. No restricted capability is approved or enabled.",
+  "summary": {
+    "capabilityCount": 10,
+    "enabledCapabilityCount": 0,
+    "approvedCapabilityCount": 0,
+    "activeIncidents": 0,
+    "responseRequired": false,
+    "monitorStatus": "PASS"
+  },
+  "capabilities": {
+    "fullLaunch": {
+      "label": "Full launch",
+      "approved": false,
+      "enabled": false,
+      "finalStatus": "DISABLED_NOT_APPROVED",
+      "activationPath": "governance-decision-recording"
+    },
+    "publicTokenSale": {
+      "label": "Public token sale",
+      "approved": false,
+      "enabled": false,
+      "finalStatus": "DISABLED_NOT_APPROVED",
+      "activationPath": "public-sale-approval"
+    },
+    "realTreasuryFunding": {
+      "label": "Real treasury funding",
+      "approved": false,
+      "enabled": false,
+      "finalStatus": "DISABLED_NOT_APPROVED",
+      "activationPath": "treasury-funding-authorization"
+    },
+    "stakingOrRewards": {
+      "label": "Staking or rewards",
+      "approved": false,
+      "enabled": false,
+      "finalStatus": "DISABLED_NOT_APPROVED",
+      "activationPath": "staking-rewards-approval"
+    },
+    "buybackProgram": {
+      "label": "Buyback program",
+      "approved": false,
+      "enabled": false,
+      "finalStatus": "DISABLED_NOT_APPROVED",
+      "activationPath": "buyback-approval"
+    },
+    "mainnetExecutionQueue": {
+      "label": "Mainnet execution queue",
+      "approved": false,
+      "enabled": false,
+      "finalStatus": "DISABLED_NOT_APPROVED",
+      "activationPath": "execution-queue-activation"
+    },
+    "paperToOnchainAutomation": {
+      "label": "Paper-to-on-chain automation",
+      "approved": false,
+      "enabled": false,
+      "finalStatus": "DISABLED_NOT_APPROVED",
+      "activationPath": "automation-approval"
+    },
+    "autonomousExecution": {
+      "label": "Autonomous execution",
+      "approved": false,
+      "enabled": false,
+      "finalStatus": "DISABLED_NOT_APPROVED",
+      "activationPath": "autonomous-execution-approval"
+    },
+    "safeTransactionPayloadGeneration": {
+      "label": "Safe transaction payload generation",
+      "approved": false,
+      "enabled": false,
+      "finalStatus": "DISABLED_NOT_APPROVED",
+      "activationPath": "safe-payload-generation"
+    },
+    "safeTransactionExecution": {
+      "label": "Safe transaction execution",
+      "approved": false,
+      "enabled": false,
+      "finalStatus": "DISABLED_NOT_APPROVED",
+      "activationPath": "safe-transaction-execution"
+    }
+  },
+  "currentStatuses": {
+    "launchControl": "LAUNCH_CONTROL_READY_RESTRICTED_MODE",
+    "stabilization": "RESTRICTED_LAUNCH_STABILIZED",
+    "fullLaunch": "FULL_LAUNCH_READINESS_TRACK_OPEN_PLANNING_ONLY",
+    "treasuryFunding": "TREASURY_FUNDING_READINESS_TRACK_OPEN_NOT_APPROVED",
+    "treasurySafeTransaction": "TREASURY_SAFE_TRANSACTION_PACKAGE_SCAFFOLD_READY_NO_PAYLOAD",
+    "monitor": "PASS",
+    "alerts": "CLEAR",
+    "incidents": "NO_ACTIVE_INCIDENTS",
+    "mainnetExecution": "MAINNET_EXECUTION_QUEUE_DISABLED"
+  },
+  "restrictions": {
+    "publicTokenSale": false,
+    "realTreasuryFunding": false,
+    "stakingOrRewards": false,
+    "buybackProgram": false,
+    "autonomousExecution": false,
+    "mainnetExecutionQueue": false,
+    "paperToOnchainAutomation": false
+  },
+  "safety": {
+    "sendsTransactions": false,
+    "movesFunds": false,
+    "deploysContracts": false,
+    "enablesExecution": false,
+    "approvesPublicSale": false,
+    "approvesTreasuryFunding": false,
+    "preparesSafeTransaction": false,
+    "recordsGovernanceDecision": false,
+    "approvesFullLaunch": false
+  }
+}

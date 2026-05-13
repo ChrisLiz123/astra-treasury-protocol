@@ -10,6 +10,7 @@ const requiredFiles = [
   "docs/action-approvals/governance-decision/ACTION_APPROVAL_RECORD_TEMPLATE.md",
   "docs/action-approvals/governance-decision/ACTION_APPROVAL_BLOCKERS.md",
   "public-docs/launch-control-status.json",
+  "public-docs/capability-matrix-status.json",
   "public-docs/stabilization-status.json",
   "public-docs/full-launch-status.json",
   "public-docs/full-launch-governance-decision-recording-status.json",
@@ -60,6 +61,7 @@ for (const file of forbiddenFiles) {
 if (issues.length === 0) {
   const config = readJson("configs/action-approval-governance-decision.config.json");
   const launchControl = readJson("public-docs/launch-control-status.json");
+  const capabilityMatrix = readJson("public-docs/capability-matrix-status.json");
   const stabilization = readJson("public-docs/stabilization-status.json");
   const fullLaunch = readJson("public-docs/full-launch-status.json");
   const decisionRecording = readJson("public-docs/full-launch-governance-decision-recording-status.json");
@@ -87,6 +89,18 @@ if (issues.length === 0) {
 
   if (launchControl.additionalGenericPreparationRecommended !== false) {
     issue("launchControl.additionalGenericPreparationRecommended", "Generic preparation should remain stopped.");
+  }
+
+  if (capabilityMatrix.capabilityMatrixFinalized !== true) {
+    issue("capabilityMatrix.capabilityMatrixFinalized", "Capability matrix must be finalized.");
+  }
+
+  if (capabilityMatrix.allCapabilitiesDisabled !== true) {
+    issue("capabilityMatrix.allCapabilitiesDisabled", "Capability matrix must keep all capabilities disabled.");
+  }
+
+  if (capabilityMatrix.allCapabilityApprovalsFalse !== true) {
+    issue("capabilityMatrix.allCapabilityApprovalsFalse", "Capability matrix must keep all approvals false.");
   }
 
   if (stabilization.status !== "RESTRICTED_LAUNCH_STABILIZED") {

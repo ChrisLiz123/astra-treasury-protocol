@@ -328,7 +328,11 @@
     "action:governance-decision:validate": "node scripts/validate-action-approval-governance-decision.mjs",
     "action:governance-decision:status": "node services/action-approval/governance-decision-status.mjs",
     "action:governance-decision:gate": "npm run action:governance-decision:validate && npm run action:governance-decision:status",
-    "release:action-governance-decision-approval": "bash scripts/release/package-action-governance-decision-approval.sh"
+    "release:action-governance-decision-approval": "bash scripts/release/package-action-governance-decision-approval.sh",
+    "capability:matrix:validate": "node scripts/validate-capability-matrix.mjs",
+    "capability:matrix:status": "node services/capability-matrix/status.mjs",
+    "capability:matrix:gate": "npm run capability:matrix:validate && npm run capability:matrix:status",
+    "release:capability-matrix-finalization": "bash scripts/release/package-capability-matrix-finalization.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",

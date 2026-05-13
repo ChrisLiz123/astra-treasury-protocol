@@ -1,6 +1,6 @@
 {
   "schema": "astra-action-specific-governance-decision-approval-status-v0.1",
-  "generatedAt": "2026-05-13T17:54:00.851Z",
+  "generatedAt": "2026-05-13T18:04:24.851Z",
   "status": "ACTION_SPECIFIC_APPROVAL_PATH_READY_BLOCKED_PENDING_EVIDENCE",
   "selectedAction": {
     "id": "governance-decision-recording",
@@ -22,7 +22,7 @@
     "failedCases": 0,
     "activeIncidents": 0,
     "responseRequired": false,
-    "blockerCount": 7
+    "blockerCount": 6
   },
   "clearances": {
     "auditCleared": true,
@@ -58,7 +58,7 @@
     "signedGovernanceResolutionExists": false,
     "voteResultRecorded": false,
     "resolutionSigningAuthorizationRecorded": false,
-    "capabilityMatrixFinalApproved": false,
+    "capabilityMatrixFinalApproved": true,
     "publicStatusUpdateFinalApproved": false,
     "decisionRecorderAssigned": false,
     "finalActionApprovalRecorded": false
@@ -67,7 +67,6 @@
     "signedGovernanceResolutionExists",
     "voteResultRecorded",
     "resolutionSigningAuthorizationRecorded",
-    "capabilityMatrixFinalApproved",
     "publicStatusUpdateFinalApproved",
     "decisionRecorderAssigned",
     "finalActionApprovalRecorded"
@@ -144,10 +143,10 @@
     },
     {
       "id": "ACTION-GOV-DECISION-004",
-      "title": "Missing capability matrix blocks action approval",
-      "expected": "BLOCKED",
-      "actual": "BLOCKED",
-      "reason": "capability matrix is not final-approved",
+      "title": "Capability matrix finalization status",
+      "expected": "SATISFIED",
+      "actual": "SATISFIED",
+      "reason": "capability matrix is finalized as all-disabled",
       "pass": true
     },
     {
@@ -193,6 +192,7 @@
   ],
   "currentStatuses": {
     "launchControl": "LAUNCH_CONTROL_READY_RESTRICTED_MODE",
+    "capabilityMatrix": "CAPABILITY_MATRIX_FINALIZED_ALL_DISABLED",
     "stabilization": "RESTRICTED_LAUNCH_STABILIZED",
     "fullLaunch": "FULL_LAUNCH_READINESS_TRACK_OPEN_PLANNING_ONLY",
     "decisionRecording": "FULL_LAUNCH_GOVERNANCE_DECISION_RECORDING_PACKAGE_READY_NOT_RECORDED",
@@ -355,12 +355,12 @@
       }
     },
     {
-      "name": "ACTION-GOV-DECISION-004: Missing capability matrix blocks action approval",
+      "name": "ACTION-GOV-DECISION-004: Capability matrix finalization status",
       "pass": true,
       "details": {
-        "expected": "BLOCKED",
-        "actual": "BLOCKED",
-        "reason": "capability matrix is not final-approved"
+        "expected": "SATISFIED",
+        "actual": "SATISFIED",
+        "reason": "capability matrix is finalized as all-disabled"
       }
     },
     {

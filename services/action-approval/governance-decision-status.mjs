@@ -48,6 +48,7 @@ function check(checks, name, pass, details = {}) {
 }
 
 const config = readJson("configs/action-approval-governance-decision.config.json");
+const capabilityMatrix = readJson("public-docs/capability-matrix-status.json");
 const launchControl = readJson("public-docs/launch-control-status.json");
 const stabilization = readJson("public-docs/stabilization-status.json");
 const fullLaunch = readJson("public-docs/full-launch-status.json");
@@ -61,6 +62,17 @@ const monitor = readJson("public-docs/mainnet-monitor-status.json");
 const alerts = readJson("public-docs/mainnet-alerts-status.json");
 const incidents = readJson("public-docs/incident-summary.json");
 const execution = readJson("public-docs/mainnet-execution-status.json");
+
+const baseRequiredBeforeActionApproval = config.requiredBeforeActionApproval || {};
+const effectiveRequiredBeforeActionApproval = {
+  ...baseRequiredBeforeActionApproval,
+  capabilityMatrixFinalApproved:
+    capabilityMatrix.capabilityMatrixFinalized === true &&
+    capabilityMatrix.allCapabilitiesDisabled === true &&
+    capabilityMatrix.allCapabilityApprovalsFalse === true
+      ? true
+      : baseRequiredBeforeActionApproval.capabilityMatrixFinalApproved
+};
 
 const activeIncidents = Number(incidents?.summary?.active || 0);
 const responseRequired = Boolean(alerts?.responseRequired);
@@ -141,35 +153,37 @@ const dryRunCases = [
     id: "ACTION-GOV-DECISION-001",
     title: "Missing vote result blocks action approval",
     expected: "BLOCKED",
-    actual: config.requiredBeforeActionApproval?.voteResultRecorded === false ? "BLOCKED" : "NOT_BLOCKED",
+    actual: effectiveRequiredBeforeActionApproval?.voteResultRecorded === false ? "BLOCKED" : "NOT_BLOCKED",
     reason: "vote result is not recorded"
   },
   {
     id: "ACTION-GOV-DECISION-002",
     title: "Missing signed resolution blocks action approval",
     expected: "BLOCKED",
-    actual: config.requiredBeforeActionApproval?.signedGovernanceResolutionExists === false ? "BLOCKED" : "NOT_BLOCKED",
+    actual: effectiveRequiredBeforeActionApproval?.signedGovernanceResolutionExists === false ? "BLOCKED" : "NOT_BLOCKED",
     reason: "signed governance resolution does not exist"
   },
   {
     id: "ACTION-GOV-DECISION-003",
     title: "Missing resolution authorization blocks action approval",
     expected: "BLOCKED",
-    actual: config.requiredBeforeActionApproval?.resolutionSigningAuthorizationRecorded === false ? "BLOCKED" : "NOT_BLOCKED",
+    actual: effectiveRequiredBeforeActionApproval?.resolutionSigningAuthorizationRecorded === false ? "BLOCKED" : "NOT_BLOCKED",
     reason: "resolution signing authorization is not recorded"
   },
   {
     id: "ACTION-GOV-DECISION-004",
-    title: "Missing capability matrix blocks action approval",
-    expected: "BLOCKED",
-    actual: config.requiredBeforeActionApproval?.capabilityMatrixFinalApproved === false ? "BLOCKED" : "NOT_BLOCKED",
-    reason: "capability matrix is not final-approved"
+    title: "Capability matrix finalization status",
+    expected: effectiveRequiredBeforeActionApproval?.capabilityMatrixFinalApproved === true ? "SATISFIED" : "BLOCKED",
+    actual: effectiveRequiredBeforeActionApproval?.capabilityMatrixFinalApproved === true ? "SATISFIED" : "BLOCKED",
+    reason: effectiveRequiredBeforeActionApproval?.capabilityMatrixFinalApproved === true
+      ? "capability matrix is finalized as all-disabled"
+      : "capability matrix is not final-approved"
   },
   {
     id: "ACTION-GOV-DECISION-005",
     title: "Missing public status update blocks action approval",
     expected: "BLOCKED",
-    actual: config.requiredBeforeActionApproval?.publicStatusUpdateFinalApproved === false ? "BLOCKED" : "NOT_BLOCKED",
+    actual: effectiveRequiredBeforeActionApproval?.publicStatusUpdateFinalApproved === false ? "BLOCKED" : "NOT_BLOCKED",
     reason: "public status update is not final-approved"
   },
   {
@@ -234,7 +248,7 @@ const approvalStatus = {
   safeTransactionExecuted: Boolean(config.safeTransactionExecuted)
 };
 
-const actionBlockers = Object.entries(config.requiredBeforeActionApproval || {})
+const actionBlockers = Object.entries(effectiveRequiredBeforeActionApproval || {})
   .filter(([key, value]) => value === false)
   .map(([key]) => key);
 
@@ -266,7 +280,7 @@ const report = {
   },
   clearances: config.operatorReportedClearances,
   approvalStatus,
-  requiredBeforeActionApproval: config.requiredBeforeActionApproval,
+  requiredBeforeActionApproval: effectiveRequiredBeforeActionApproval,
   actionBlockers,
   approvalChecklist: config.approvalChecklist,
   draftApprovalRecord: config.draftApprovalRecord,
@@ -274,6 +288,7 @@ const report = {
   dryRunCases,
   currentStatuses: {
     launchControl: launchControl.status || "UNKNOWN",
+    capabilityMatrix: capabilityMatrix.status || "UNKNOWN",
     stabilization: stabilization.status || "UNKNOWN",
     fullLaunch: fullLaunch.status || "UNKNOWN",
     decisionRecording: decisionRecording.status || "UNKNOWN",

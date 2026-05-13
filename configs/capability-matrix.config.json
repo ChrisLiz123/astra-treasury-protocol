@@ -1,0 +1,93 @@
+{
+  "schema": "astra-capability-matrix-finalization-config-v0.1",
+  "status": "capability-matrix-finalized-all-disabled",
+  "network": {
+    "name": "Base Mainnet",
+    "chainId": 8453
+  },
+  "currentApprovedMode": "restricted-mainnet-operation",
+  "operatorReportedClearances": {
+    "auditCleared": true,
+    "legalCleared": true,
+    "note": "Operator reported audit and legal requirements cleared."
+  },
+  "capabilityMatrixFinalized": true,
+  "capabilityMatrixFinalApproved": true,
+  "finalApprovalScope": "disabled-state-matrix-only",
+  "doesNotApproveCapabilities": true,
+  "allCapabilitiesDisabled": true,
+  "allCapabilityApprovalsFalse": true,
+  "capabilities": {
+    "fullLaunch": {
+      "label": "Full launch",
+      "approved": false,
+      "enabled": false,
+      "finalStatus": "DISABLED_NOT_APPROVED",
+      "activationPath": "governance-decision-recording"
+    },
+    "publicTokenSale": {
+      "label": "Public token sale",
+      "approved": false,
+      "enabled": false,
+      "finalStatus": "DISABLED_NOT_APPROVED",
+      "activationPath": "public-sale-approval"
+    },
+    "realTreasuryFunding": {
+      "label": "Real treasury funding",
+      "approved": false,
+      "enabled": false,
+      "finalStatus": "DISABLED_NOT_APPROVED",
+      "activationPath": "treasury-funding-authorization"
+    },
+    "stakingOrRewards": {
+      "label": "Staking or rewards",
+      "approved": false,
+      "enabled": false,
+      "finalStatus": "DISABLED_NOT_APPROVED",
+      "activationPath": "staking-rewards-approval"
+    },
+    "buybackProgram": {
+      "label": "Buyback program",
+      "approved": false,
+      "enabled": false,
+      "finalStatus": "DISABLED_NOT_APPROVED",
+      "activationPath": "buyback-approval"
+    },
+    "mainnetExecutionQueue": {
+      "label": "Mainnet execution queue",
+      "approved": false,
+      "enabled": false,
+      "finalStatus": "DISABLED_NOT_APPROVED",
+      "activationPath": "execution-queue-activation"
+    },
+    "paperToOnchainAutomation": {
+      "label": "Paper-to-on-chain automation",
+      "approved": false,
+      "enabled": false,
+      "finalStatus": "DISABLED_NOT_APPROVED",
+      "activationPath": "automation-approval"
+    },
+    "autonomousExecution": {
+      "label": "Autonomous execution",
+      "approved": false,
+      "enabled": false,
+      "finalStatus": "DISABLED_NOT_APPROVED",
+      "activationPath": "autonomous-execution-approval"
+    },
+    "safeTransactionPayloadGeneration": {
+      "label": "Safe transaction payload generation",
+      "approved": false,
+      "enabled": false,
+      "finalStatus": "DISABLED_NOT_APPROVED",
+      "activationPath": "safe-payload-generation"
+    },
+    "safeTransactionExecution": {
+      "label": "Safe transaction execution",
+      "approved": false,
+      "enabled": false,
+      "finalStatus": "DISABLED_NOT_APPROVED",
+      "activationPath": "safe-transaction-execution"
+    }
+  },
+  "hardRule": "The capability matrix is finalized only as a disabled-state approval map. It does not approve or enable any capability."
+}
