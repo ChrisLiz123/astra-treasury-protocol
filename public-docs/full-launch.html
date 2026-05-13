@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AstraTreasury Full Launch Readiness</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #08111f;
+      --surface: #0e1a2b;
+      --border: rgba(148, 163, 184, 0.2);
+      --text: #edf4fb;
+      --muted: #9aaec4;
+      --blue: #67a7ff;
+      --green: #41d49b;
+      --yellow: #f4c35f;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    body { margin: 0; background: linear-gradient(180deg, #07101d, var(--bg)); color: var(--text); }
+    a { color: var(--blue); text-decoration: none; }
+
+    main {
+      width: min(1120px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 44px 0 72px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 28px;
+      box-shadow: 0 22px 70px rgba(0,0,0,.28);
+      margin-bottom: 18px;
+    }
+
+    h1 { margin: 0 0 10px; font-size: 42px; letter-spacing: -1.2px; }
+    h2 { margin: 0 0 14px; font-size: 24px; }
+    p { color: var(--muted); line-height: 1.65; }
+
+    .badge {
+      display: inline-flex;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(244,195,95,.08);
+      border: 1px solid rgba(244,195,95,.22);
+      color: var(--yellow);
+      font-weight: 850;
+      margin-bottom: 16px;
+    }
+
+    .stats {
+      margin-top: 24px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+
+    .stat {
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 18px;
+      background: rgba(255,255,255,.03);
+    }
+
+    .label { color: var(--muted); font-size: 13px; margin-bottom: 8px; }
+    .value { font-size: 24px; font-weight: 850; }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      overflow: hidden;
+    }
+
+    th, td {
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--border);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      color: var(--muted);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      background: rgba(255,255,255,.03);
+    }
+
+    tr:last-child td { border-bottom: 0; }
+
+    .notice {
+      padding: 16px;
+      border-radius: 16px;
+      background: rgba(244,195,95,.08);
+      border: 1px solid rgba(244,195,95,.22);
+      color: #f7d99a;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 850px) {
+      .stats { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+<main>
+  <section class="card">
+    <div class="badge">Planning only · full launch not approved</div>
+    <h1>Full Launch Readiness</h1>
+    <p>AstraTreasury restricted Base Mainnet launch is stabilized. Full launch is not approved. Public token sale, real treasury funding, staking/rewards, buybacks, autonomous execution, paper-to-on-chain automation, and mainnet execution queue activation remain disabled.</p>
+
+    <div class="stats">
+      <div class="stat"><div class="label">Approved mode</div><div class="value">Restricted</div></div>
+      <div class="stat"><div class="label">Checks</div><div class="value">26/26</div></div>
+      <div class="stat"><div class="label">Pending items</div><div class="value">8</div></div>
+      <div class="stat"><div class="label">Full launch</div><div class="value">Not approved</div></div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Current status</h2>
+    <table>
+      <thead><tr><th>Area</th><th>Status</th></tr></thead>
+      <tbody><tr><td>stabilization</td><td>Restricted Launch Stabilized</td></tr><tr><td>restrictedLaunch</td><td>Restricted Launch Ready</td></tr><tr><td>trustCenter</td><td>Trust Center Ready</td></tr><tr><td>monitor</td><td>Pass</td></tr><tr><td>alerts</td><td>Clear</td></tr><tr><td>incidents</td><td>No Active Incidents</td></tr><tr><td>restrictedOperations</td><td>Mainnet Restricted Operation</td></tr><tr><td>executionQueue</td><td>Mainnet Execution Queue Disabled</td></tr><tr><td>roadmap</td><td>Capability Roadmap Ready</td></tr><tr><td>market</td><td>No Public Dex Market Data</td></tr></tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>Pending full-launch items</h2>
+    <table>
+      <thead><tr><th>Item</th><th>Status</th></tr></thead>
+      <tbody><tr><td>legalFullLaunchReview</td><td>Pending separate approval</td></tr><tr><td>governanceFullLaunchApproval</td><td>Pending separate approval</td></tr><tr><td>treasuryFundingApproval</td><td>Pending separate approval</td></tr><tr><td>executionQueueDryRun</td><td>Pending separate approval</td></tr><tr><td>incidentResponseDrillUpdated</td><td>Pending separate approval</td></tr><tr><td>publicDisclosureUpdated</td><td>Pending separate approval</td></tr><tr><td>marketProviderReview</td><td>Pending separate approval</td></tr><tr><td>operatorRunbookUpdated</td><td>Pending separate approval</td></tr></tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>Capability approvals</h2>
+    <table>
+      <thead><tr><th>Capability</th><th>Status</th></tr></thead>
+      <tbody><tr><td>publicTokenSaleApproved</td><td>Not approved</td></tr><tr><td>realTreasuryFundingApproved</td><td>Not approved</td></tr><tr><td>stakingOrRewardsApproved</td><td>Not approved</td></tr><tr><td>buybackProgramApproved</td><td>Not approved</td></tr><tr><td>mainnetExecutionQueueApproved</td><td>Not approved</td></tr><tr><td>paperToOnchainAutomationApproved</td><td>Not approved</td></tr><tr><td>autonomousExecutionApproved</td><td>Not approved</td></tr></tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>Important</h2>
+    <div class="notice">
+      Full launch readiness does not approve a public token sale, real treasury funding, staking/rewards,
+      buybacks, autonomous execution, paper-to-on-chain automation, or mainnet execution queue activation.
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Public API</h2>
+    <p><a href="/api/public/full-launch">/api/public/full-launch</a></p>
+    <p><a href="/stabilization">Restricted launch stabilization</a></p>
+    <p><a href="/roadmap">Capability roadmap</a></p>
+    <p><a href="/">Back to homepage</a></p>
+  </section>
+</main>
+</body>
+</html>

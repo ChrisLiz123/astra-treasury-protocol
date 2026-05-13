@@ -240,7 +240,11 @@
     "release:public-trust-center": "bash scripts/release/package-public-trust-center.sh",
     "website:professional": "node services/professional-pages/generate-professional-pages.mjs",
     "website:professional:gate": "npm run trust:gate && npm run website:professional",
-    "release:professional-website-pages": "bash scripts/release/package-professional-website-pages.sh"
+    "release:professional-website-pages": "bash scripts/release/package-professional-website-pages.sh",
+    "full-launch:validate": "node scripts/validate-full-launch-readiness.mjs",
+    "full-launch:status": "node services/full-launch/status.mjs",
+    "full-launch:gate": "npm run full-launch:validate && npm run full-launch:status",
+    "release:full-launch-readiness": "bash scripts/release/package-full-launch-readiness.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",

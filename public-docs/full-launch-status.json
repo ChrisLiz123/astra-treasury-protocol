@@ -1,0 +1,78 @@
+{
+  "schema": "astra-public-full-launch-readiness-status-v0.1",
+  "generatedAt": "2026-05-13T13:20:56.374Z",
+  "status": "FULL_LAUNCH_READINESS_TRACK_OPEN_PLANNING_ONLY",
+  "currentApprovedMode": "restricted-mainnet-operation",
+  "fullLaunchApproved": false,
+  "network": {
+    "name": "Base Mainnet",
+    "chainId": 8453
+  },
+  "publicStatement": "AstraTreasury restricted Base Mainnet launch is stabilized. Full launch is not approved. Public token sale, real treasury funding, staking/rewards, buybacks, autonomous execution, paper-to-on-chain automation, and mainnet execution queue activation remain disabled.",
+  "summary": {
+    "totalChecks": 26,
+    "passed": 26,
+    "failed": 0,
+    "pendingFullLaunchItems": 8,
+    "activeIncidents": 0,
+    "responseRequired": false
+  },
+  "currentStatuses": {
+    "stabilization": "RESTRICTED_LAUNCH_STABILIZED",
+    "restrictedLaunch": "RESTRICTED_LAUNCH_READY",
+    "trustCenter": "TRUST_CENTER_READY",
+    "monitor": "PASS",
+    "alerts": "CLEAR",
+    "incidents": "NO_ACTIVE_INCIDENTS",
+    "restrictedOperations": "MAINNET_RESTRICTED_OPERATION",
+    "executionQueue": "MAINNET_EXECUTION_QUEUE_DISABLED",
+    "roadmap": "CAPABILITY_ROADMAP_READY",
+    "market": "NO_PUBLIC_DEX_MARKET_DATA"
+  },
+  "capabilityApprovals": {
+    "publicTokenSaleApproved": false,
+    "realTreasuryFundingApproved": false,
+    "stakingOrRewardsApproved": false,
+    "buybackProgramApproved": false,
+    "mainnetExecutionQueueApproved": false,
+    "paperToOnchainAutomationApproved": false,
+    "autonomousExecutionApproved": false
+  },
+  "requiredBeforeFullLaunch": {
+    "restrictedLaunchStabilized": true,
+    "legalFullLaunchReview": false,
+    "governanceFullLaunchApproval": false,
+    "treasuryFundingApproval": false,
+    "executionQueueDryRun": false,
+    "incidentResponseDrillUpdated": false,
+    "publicDisclosureUpdated": false,
+    "marketProviderReview": false,
+    "operatorRunbookUpdated": false
+  },
+  "pendingItems": [
+    "legalFullLaunchReview",
+    "governanceFullLaunchApproval",
+    "treasuryFundingApproval",
+    "executionQueueDryRun",
+    "incidentResponseDrillUpdated",
+    "publicDisclosureUpdated",
+    "marketProviderReview",
+    "operatorRunbookUpdated"
+  ],
+  "restrictions": {
+    "publicTokenSale": false,
+    "realTreasuryFunding": false,
+    "stakingOrRewards": false,
+    "buybackProgram": false,
+    "autonomousExecution": false,
+    "mainnetExecutionQueue": false,
+    "paperToOnchainAutomation": false
+  },
+  "nextPossibleMilestones": [
+    "Legal full-launch review package",
+    "Treasury funding readiness gate",
+    "Execution queue dry run package",
+    "Public disclosure update package",
+    "Full-launch governance decision package"
+  ]
+}

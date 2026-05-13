@@ -1,0 +1,31 @@
+{
+  "schema": "astra-full-launch-readiness-config-v0.1",
+  "status": "planning-only-not-approved",
+  "network": {
+    "name": "Base Mainnet",
+    "chainId": 8453
+  },
+  "currentApprovedMode": "restricted-mainnet-operation",
+  "fullLaunchApproved": false,
+  "capabilityApprovals": {
+    "publicTokenSaleApproved": false,
+    "realTreasuryFundingApproved": false,
+    "stakingOrRewardsApproved": false,
+    "buybackProgramApproved": false,
+    "mainnetExecutionQueueApproved": false,
+    "paperToOnchainAutomationApproved": false,
+    "autonomousExecutionApproved": false
+  },
+  "requiredBeforeFullLaunch": {
+    "restrictedLaunchStabilized": true,
+    "legalFullLaunchReview": false,
+    "governanceFullLaunchApproval": false,
+    "treasuryFundingApproval": false,
+    "executionQueueDryRun": false,
+    "incidentResponseDrillUpdated": false,
+    "publicDisclosureUpdated": false,
+    "marketProviderReview": false,
+    "operatorRunbookUpdated": false
+  },
+  "hardRule": "Full launch requires a separate approval milestone. This config must not be used to enable public sale, treasury funding, execution queue, staking/rewards, buybacks, or autonomous execution by itself."
+}
