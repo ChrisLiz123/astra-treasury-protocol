@@ -268,7 +268,11 @@
     "treasury:source:validate": "node scripts/validate-treasury-funding-source-review.mjs",
     "treasury:source:status": "node services/treasury-source/status.mjs",
     "treasury:source:gate": "npm run treasury:source:validate && npm run treasury:source:status",
-    "release:treasury-funding-source-review": "bash scripts/release/package-treasury-funding-source-review.sh"
+    "release:treasury-funding-source-review": "bash scripts/release/package-treasury-funding-source-review.sh",
+    "treasury:safe:validate": "node scripts/validate-treasury-safe-approval.mjs",
+    "treasury:safe:status": "node services/treasury-safe/status.mjs",
+    "treasury:safe:gate": "npm run treasury:safe:validate && npm run treasury:safe:status",
+    "release:treasury-safe-approval": "bash scripts/release/package-treasury-safe-approval.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",

@@ -1,0 +1,93 @@
+{
+  "schema": "astra-public-treasury-safe-approval-status-v0.1",
+  "generatedAt": "2026-05-13T14:22:00.424Z",
+  "status": "TREASURY_SAFE_APPROVAL_TRACK_OPEN_NOT_APPROVED",
+  "currentApprovedMode": "restricted-mainnet-operation",
+  "treasurySafeApprovalRecorded": false,
+  "treasurySafeTransactionPrepared": false,
+  "treasurySafeTransactionSubmitted": false,
+  "treasurySafeTransactionExecuted": false,
+  "treasuryFundingApproved": false,
+  "treasuryFundingTransactionAuthorized": false,
+  "treasuryFundingExecuted": false,
+  "network": {
+    "name": "Base Mainnet",
+    "chainId": 8453
+  },
+  "publicStatement": "AstraTreasury Treasury Safe approval track is open for planning. No Treasury Safe approval is recorded, no Safe transaction is prepared, and no real treasury funding is authorized.",
+  "summary": {
+    "totalChecks": 25,
+    "passed": 25,
+    "failed": 0,
+    "activeIncidents": 0,
+    "responseRequired": false
+  },
+  "treasurySafeStatus": {
+    "treasurySafeApprovalRequested": false,
+    "treasurySafeApprovalRecorded": false,
+    "treasurySafeTransactionPrepared": false,
+    "treasurySafeTransactionSubmitted": false,
+    "treasurySafeTransactionExecuted": false,
+    "treasuryFundingApproved": false,
+    "treasuryFundingTransactionAuthorized": false,
+    "treasuryFundingExecuted": false,
+    "fundingSourceApproved": false,
+    "treasuryRiskLimitsApproved": false
+  },
+  "requiredBeforeTreasurySafeApproval": {
+    "treasuryRiskLimitsApproved": false,
+    "fundingSourceApproved": false,
+    "sourceOfFundsDocumented": false,
+    "publicDisclosureApproved": false,
+    "fundingTransactionDryRunComplete": false,
+    "governanceApprovalRecorded": false,
+    "incidentResponseCurrent": false,
+    "mainnetMonitorPassing": true,
+    "activeIncidentsZero": true
+  },
+  "safeApprovalChecklist": {
+    "treasurySafeAddressVerified": false,
+    "destinationAddressVerified": false,
+    "assetVerified": false,
+    "amountVerified": false,
+    "riskLimitsVerified": false,
+    "sourceApproved": false,
+    "disclosuresReviewed": false,
+    "transactionPayloadReviewed": false,
+    "signerAvailabilityConfirmed": false,
+    "rollbackPlanReviewed": false
+  },
+  "currentStatuses": {
+    "stabilization": "RESTRICTED_LAUNCH_STABILIZED",
+    "fullLaunch": "FULL_LAUNCH_READINESS_TRACK_OPEN_PLANNING_ONLY",
+    "legalFullLaunch": "LEGAL_FULL_LAUNCH_REVIEW_OPEN_NOT_APPROVED",
+    "treasuryFunding": "TREASURY_FUNDING_READINESS_TRACK_OPEN_NOT_APPROVED",
+    "treasuryRisk": "TREASURY_RISK_LIMITS_DRAFT_READY_NOT_APPROVED",
+    "treasurySource": "TREASURY_FUNDING_SOURCE_REVIEW_TRACK_OPEN_NOT_APPROVED",
+    "disclosures": "PUBLIC_DISCLOSURE_UPDATE_DRAFT_READY_NOT_APPROVED",
+    "monitor": "PASS",
+    "alerts": "CLEAR",
+    "incidents": "NO_ACTIVE_INCIDENTS",
+    "mainnetExecution": "MAINNET_EXECUTION_QUEUE_DISABLED"
+  },
+  "safes": {
+    "governanceSafe": "0x8992B4173cf791Cf88eC36cd53b27F3BF22404D3",
+    "treasurySafe": "0xe2554515AaC8a3835326a4Ed5e9F44c319BE335C",
+    "executorSafe": "0xBea6124d6ed0CE1ce26e184A39e28B65eDCEE461",
+    "signalerSafe": "0xf3270118e25c3BeAfA863caD4516e9E3aDCd48D1"
+  },
+  "restrictions": {
+    "publicTokenSale": false,
+    "realTreasuryFunding": false,
+    "stakingOrRewards": false,
+    "buybackProgram": false,
+    "autonomousExecution": false,
+    "mainnetExecutionQueue": false,
+    "paperToOnchainAutomation": false
+  },
+  "nextPossibleMilestones": [
+    "Treasury funding transaction dry run",
+    "Treasury disclosure approval package",
+    "Treasury Safe transaction package preparation"
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "schema": "astra-treasury-safe-approval-config-v0.1",
+  "status": "planning-only-safe-approval-not-recorded",
+  "network": {
+    "name": "Base Mainnet",
+    "chainId": 8453
+  },
+  "currentApprovedMode": "restricted-mainnet-operation",
+  "operatorReportedClearances": {
+    "auditCleared": true,
+    "legalCleared": true,
+    "note": "Operator reported audit and legal requirements cleared. This does not record Treasury Safe approval or authorize funding."
+  },
+  "treasurySafeApprovalRequested": false,
+  "treasurySafeApprovalRecorded": false,
+  "treasurySafeTransactionPrepared": false,
+  "treasurySafeTransactionSubmitted": false,
+  "treasurySafeTransactionExecuted": false,
+  "treasuryFundingApproved": false,
+  "treasuryFundingTransactionAuthorized": false,
+  "treasuryFundingExecuted": false,
+  "fundingSourceApproved": false,
+  "treasuryRiskLimitsApproved": false,
+  "requiredBeforeTreasurySafeApproval": {
+    "treasuryRiskLimitsApproved": false,
+    "fundingSourceApproved": false,
+    "sourceOfFundsDocumented": false,
+    "publicDisclosureApproved": false,
+    "fundingTransactionDryRunComplete": false,
+    "governanceApprovalRecorded": false,
+    "incidentResponseCurrent": false,
+    "mainnetMonitorPassing": true,
+    "activeIncidentsZero": true
+  },
+  "safeApprovalChecklist": {
+    "treasurySafeAddressVerified": false,
+    "destinationAddressVerified": false,
+    "assetVerified": false,
+    "amountVerified": false,
+    "riskLimitsVerified": false,
+    "sourceApproved": false,
+    "disclosuresReviewed": false,
+    "transactionPayloadReviewed": false,
+    "signerAvailabilityConfirmed": false,
+    "rollbackPlanReviewed": false
+  },
+  "hardStops": {
+    "publicTokenSaleApproved": false,
+    "realTreasuryFundingApproved": false,
+    "stakingOrRewardsApproved": false,
+    "buybackProgramApproved": false,
+    "mainnetExecutionQueueEnabled": false,
+    "paperToOnchainAutomationEnabled": false,
+    "autonomousExecutionApproved": false
+  },
+  "hardRule": "This package prepares the Treasury Safe approval process only. It does not create, submit, sign, execute, or authorize a Safe transaction."
+}
