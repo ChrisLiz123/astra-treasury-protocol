@@ -1,0 +1,38 @@
+{
+  "schema": "astra-restricted-mode-final-release-config-v0.1",
+  "status": "restricted-mode-final-release",
+  "network": {
+    "name": "Base Mainnet",
+    "chainId": 8453
+  },
+  "currentApprovedMode": "restricted-mainnet-operation",
+  "finalReleaseScope": "post-governance-decision-restricted-mode-all-disabled",
+  "finalReleasePrepared": true,
+  "requiresGovernanceDecisionRecorded": true,
+  "requiresRestrictedModeFinalStatus": true,
+  "requiresMonitoringBaseline": true,
+  "requiresEvidenceSeal": true,
+  "requiresReleaseCandidate": true,
+  "requiresAllCapabilitiesDisabled": true,
+  "releaseCandidateArchive": "release/astra-treasury-protocol-v0.1.1-restricted-mode-release-candidate.tar.gz",
+  "operatorReportedClearances": {
+    "auditCleared": true,
+    "legalCleared": true,
+    "note": "Operator reported audit and legal requirements cleared."
+  },
+  "expectedPosture": {
+    "governanceDecisionRecorded": true,
+    "fullLaunchApproved": false,
+    "publicTokenSaleApproved": false,
+    "realTreasuryFundingApproved": false,
+    "stakingOrRewardsApproved": false,
+    "buybackProgramApproved": false,
+    "mainnetExecutionQueueApproved": false,
+    "paperToOnchainAutomationApproved": false,
+    "autonomousExecutionApproved": false,
+    "safeTransactionPayloadGenerated": false,
+    "safeTransactionPrepared": false,
+    "safeTransactionExecutionApproved": false
+  },
+  "hardRule": "This final release packages restricted-mode public artifacts only. It does not approve full launch, funding, public sale, staking, rewards, buybacks, execution, automation, autonomous execution, Safe payload generation, or Safe transaction execution."
+}
