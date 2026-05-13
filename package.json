@@ -340,7 +340,11 @@
     "governance:vote-result-evidence:validate": "node scripts/validate-governance-vote-result-evidence.mjs",
     "governance:vote-result-evidence:status": "node services/governance-vote-result-evidence/status.mjs",
     "governance:vote-result-evidence:gate": "npm run governance:vote-result-evidence:validate && npm run governance:vote-result-evidence:status",
-    "release:governance-vote-result-evidence-import": "bash scripts/release/package-governance-vote-result-evidence-import.sh"
+    "release:governance-vote-result-evidence-import": "bash scripts/release/package-governance-vote-result-evidence-import.sh",
+    "governance:signed-resolution-evidence:validate": "node scripts/validate-signed-governance-resolution-evidence.mjs",
+    "governance:signed-resolution-evidence:status": "node services/signed-governance-resolution-evidence/status.mjs",
+    "governance:signed-resolution-evidence:gate": "npm run governance:signed-resolution-evidence:validate && npm run governance:signed-resolution-evidence:status",
+    "release:signed-governance-resolution-evidence-import": "bash scripts/release/package-signed-governance-resolution-evidence-import.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",

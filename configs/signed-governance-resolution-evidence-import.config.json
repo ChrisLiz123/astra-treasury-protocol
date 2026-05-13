@@ -1,0 +1,73 @@
+{
+  "schema": "astra-signed-governance-resolution-evidence-import-config-v0.1",
+  "status": "import-framework-ready-no-evidence",
+  "network": {
+    "name": "Base Mainnet",
+    "chainId": 8453
+  },
+  "currentApprovedMode": "restricted-mainnet-operation",
+  "operatorReportedClearances": {
+    "auditCleared": true,
+    "legalCleared": true,
+    "note": "Operator reported audit and legal requirements cleared."
+  },
+  "selectedAction": {
+    "id": "signed-governance-resolution-evidence-import",
+    "label": "Import signed governance resolution evidence",
+    "category": "governance-evidence",
+    "description": "Import and validate sanitized signed governance resolution evidence before governance decision recording."
+  },
+  "evidenceImportFrameworkPrepared": true,
+  "signedResolutionEvidenceImported": false,
+  "signedResolutionValidated": false,
+  "signedGovernanceResolutionExists": false,
+  "resolutionSigningAuthorizationRecorded": false,
+  "governanceResolutionSigned": false,
+  "governanceDecisionRecorded": false,
+  "fullLaunchApproved": false,
+  "publicDisclosuresFinalApproved": false,
+  "treasuryDisclosureFinalApproved": false,
+  "treasuryFundingApproved": false,
+  "treasuryFundingTransactionAuthorized": false,
+  "treasuryFundingExecuted": false,
+  "safeTransactionPayloadGenerated": false,
+  "safeTransactionPrepared": false,
+  "safeTransactionSubmitted": false,
+  "safeTransactionSigned": false,
+  "safeTransactionExecuted": false,
+  "expectedEvidenceFile": "reports/signed-governance-resolution-evidence/import/signed-governance-resolution-evidence.json",
+  "requiredEvidenceFields": {
+    "schema": "astra-signed-governance-resolution-evidence-v0.1",
+    "resolutionTitle": "required",
+    "resolutionReference": "required",
+    "resolutionHash": "required",
+    "signedAt": "required",
+    "governanceResolutionSigned": "must be true",
+    "resolutionSigningAuthorizationRecorded": "must be true",
+    "resolutionSigningAuthorizationReference": "required",
+    "voteResultReference": "required",
+    "capabilityMatrixReference": "required",
+    "publicStatusReference": "required",
+    "evidenceReference": "required",
+    "approvedCapabilities": "must be empty for restricted-mode all-disabled path"
+  },
+  "capabilityApprovals": {
+    "publicTokenSaleApproved": false,
+    "realTreasuryFundingApproved": false,
+    "stakingOrRewardsApproved": false,
+    "buybackProgramApproved": false,
+    "mainnetExecutionQueueApproved": false,
+    "paperToOnchainAutomationApproved": false,
+    "autonomousExecutionApproved": false
+  },
+  "hardStops": {
+    "publicTokenSaleApproved": false,
+    "realTreasuryFundingApproved": false,
+    "stakingOrRewardsApproved": false,
+    "buybackProgramApproved": false,
+    "mainnetExecutionQueueEnabled": false,
+    "paperToOnchainAutomationEnabled": false,
+    "autonomousExecutionApproved": false
+  },
+  "hardRule": "This package prepares the signed-resolution evidence import path only. It must not fabricate evidence, sign a resolution, record a governance decision, approve full launch, or approve any restricted capability."
+}

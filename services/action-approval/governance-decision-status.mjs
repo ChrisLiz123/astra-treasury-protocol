@@ -51,6 +51,7 @@ const config = readJson("configs/action-approval-governance-decision.config.json
 const capabilityMatrix = readJson("public-docs/capability-matrix-status.json");
 const publicStatusUpdate = readJson("public-docs/public-status-update-status.json");
 const voteResultEvidence = readJson("public-docs/governance-vote-result-evidence-status.json");
+const signedResolutionEvidence = readJson("public-docs/signed-governance-resolution-evidence-status.json");
 const launchControl = readJson("public-docs/launch-control-status.json");
 const stabilization = readJson("public-docs/stabilization-status.json");
 const fullLaunch = readJson("public-docs/full-launch-status.json");
@@ -77,11 +78,25 @@ const voteResultEvidenceImportedAndValid =
   voteResultEvidence.voteResultValidated === true &&
   voteResultEvidence.voteResultRecorded === true;
 
+const signedResolutionEvidenceImportedAndValid =
+  signedResolutionEvidence.signedResolutionEvidenceImported === true &&
+  signedResolutionEvidence.signedResolutionValidated === true &&
+  signedResolutionEvidence.signedGovernanceResolutionExists === true;
+
+const resolutionAuthorizationEvidenceImportedAndValid =
+  signedResolutionEvidence.resolutionSigningAuthorizationRecorded === true;
+
 const effectiveRequiredBeforeActionApproval = {
   ...baseRequiredBeforeActionApproval,
   voteResultRecorded: voteResultEvidenceImportedAndValid
     ? true
     : baseRequiredBeforeActionApproval.voteResultRecorded,
+  signedGovernanceResolutionExists: signedResolutionEvidenceImportedAndValid
+    ? true
+    : baseRequiredBeforeActionApproval.signedGovernanceResolutionExists,
+  resolutionSigningAuthorizationRecorded: resolutionAuthorizationEvidenceImportedAndValid
+    ? true
+    : baseRequiredBeforeActionApproval.resolutionSigningAuthorizationRecorded,
   capabilityMatrixFinalApproved:
     capabilityMatrix.capabilityMatrixFinalized === true &&
     capabilityMatrix.allCapabilitiesDisabled === true &&
@@ -179,17 +194,21 @@ const dryRunCases = [
   },
   {
     id: "ACTION-GOV-DECISION-002",
-    title: "Missing signed resolution blocks action approval",
-    expected: "BLOCKED",
-    actual: effectiveRequiredBeforeActionApproval?.signedGovernanceResolutionExists === false ? "BLOCKED" : "NOT_BLOCKED",
-    reason: "signed governance resolution does not exist"
+    title: "Signed governance resolution evidence status",
+    expected: effectiveRequiredBeforeActionApproval?.signedGovernanceResolutionExists === true ? "SATISFIED" : "BLOCKED",
+    actual: effectiveRequiredBeforeActionApproval?.signedGovernanceResolutionExists === true ? "SATISFIED" : "BLOCKED",
+    reason: effectiveRequiredBeforeActionApproval?.signedGovernanceResolutionExists === true
+      ? "signed governance resolution evidence is imported and validated"
+      : "signed governance resolution evidence is not imported and validated"
   },
   {
     id: "ACTION-GOV-DECISION-003",
-    title: "Missing resolution authorization blocks action approval",
-    expected: "BLOCKED",
-    actual: effectiveRequiredBeforeActionApproval?.resolutionSigningAuthorizationRecorded === false ? "BLOCKED" : "NOT_BLOCKED",
-    reason: "resolution signing authorization is not recorded"
+    title: "Resolution signing authorization evidence status",
+    expected: effectiveRequiredBeforeActionApproval?.resolutionSigningAuthorizationRecorded === true ? "SATISFIED" : "BLOCKED",
+    actual: effectiveRequiredBeforeActionApproval?.resolutionSigningAuthorizationRecorded === true ? "SATISFIED" : "BLOCKED",
+    reason: effectiveRequiredBeforeActionApproval?.resolutionSigningAuthorizationRecorded === true
+      ? "resolution signing authorization evidence is imported and validated"
+      : "resolution signing authorization evidence is not imported and validated"
   },
   {
     id: "ACTION-GOV-DECISION-004",
@@ -314,6 +333,7 @@ const report = {
     capabilityMatrix: capabilityMatrix.status || "UNKNOWN",
     publicStatusUpdate: publicStatusUpdate.status || "UNKNOWN",
     voteResultEvidence: voteResultEvidence.status || "UNKNOWN",
+    signedResolutionEvidence: signedResolutionEvidence.status || "UNKNOWN",
     stabilization: stabilization.status || "UNKNOWN",
     fullLaunch: fullLaunch.status || "UNKNOWN",
     decisionRecording: decisionRecording.status || "UNKNOWN",

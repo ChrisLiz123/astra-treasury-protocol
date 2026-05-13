@@ -760,6 +760,10 @@ const html = `<!doctype html>
           <strong>Vote/result evidence</strong>
           <span>Evidence import path. No decision is recorded.</span>
         </a>
+        <a class="link-card" href="/signed-governance-resolution-evidence">
+          <strong>Signed resolution evidence</strong>
+          <span>Evidence import path. No decision is recorded.</span>
+        </a>
         <a class="link-card" href="/protocol">
           <strong>Protocol</strong>
           <span>How AstraTreasury works at a high level.</span>

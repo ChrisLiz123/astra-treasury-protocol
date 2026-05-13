@@ -1,0 +1,27 @@
+{
+  "schema": "astra-signed-governance-resolution-evidence-v0.1",
+  "resolutionTitle": "TBD",
+  "resolutionReference": "TBD",
+  "resolutionHash": "TBD",
+  "signedAt": "YYYY-MM-DDTHH:MM:SSZ",
+  "governanceResolutionSigned": true,
+  "resolutionSigningAuthorizationRecorded": true,
+  "resolutionSigningAuthorizationReference": "TBD",
+  "voteResultReference": "TBD",
+  "approvedCapabilities": [],
+  "disabledCapabilities": [
+    "publicTokenSale",
+    "realTreasuryFunding",
+    "stakingOrRewards",
+    "buybackProgram",
+    "mainnetExecutionQueue",
+    "paperToOnchainAutomation",
+    "autonomousExecution",
+    "safeTransactionPayloadGeneration",
+    "safeTransactionExecution"
+  ],
+  "capabilityMatrixReference": "public-docs/capability-matrix-status.json",
+  "publicStatusReference": "public-docs/public-status-update-status.json",
+  "evidenceReference": "TBD",
+  "notes": "Do not include private signer data, private keys, seed phrases, passwords, secret material, or non-public compliance notes."
+}

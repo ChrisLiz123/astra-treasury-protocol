@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AstraTreasury Signed Resolution Evidence</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #08111f;
+      --surface: #0e1a2b;
+      --border: rgba(148, 163, 184, 0.2);
+      --text: #edf4fb;
+      --muted: #9aaec4;
+      --blue: #67a7ff;
+      --yellow: #f4c35f;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    body { margin: 0; background: linear-gradient(180deg, #07101d, var(--bg)); color: var(--text); }
+    a { color: var(--blue); text-decoration: none; }
+
+    main {
+      width: min(1120px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 44px 0 72px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 28px;
+      box-shadow: 0 22px 70px rgba(0,0,0,.28);
+      margin-bottom: 18px;
+    }
+
+    h1 { margin: 0 0 10px; font-size: 42px; letter-spacing: -1.2px; }
+    h2 { margin: 0 0 14px; font-size: 24px; }
+    p { color: var(--muted); line-height: 1.65; }
+
+    .badge {
+      display: inline-flex;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(244,195,95,.08);
+      border: 1px solid rgba(244,195,95,.22);
+      color: var(--yellow);
+      font-weight: 850;
+      margin-bottom: 16px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      overflow: hidden;
+    }
+
+    th, td {
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--border);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      color: var(--muted);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      background: rgba(255,255,255,.03);
+    }
+
+    tr:last-child td { border-bottom: 0; }
+
+    .notice {
+      padding: 16px;
+      border-radius: 16px;
+      background: rgba(244,195,95,.08);
+      border: 1px solid rgba(244,195,95,.22);
+      color: #f7d99a;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+<main>
+  <section class="card">
+    <div class="badge">Evidence import · no decision recorded</div>
+    <h1>Signed Governance Resolution Evidence</h1>
+    <p>AstraTreasury signed governance resolution evidence import path is ready. No signed-resolution evidence has been imported yet, so governance decision recording remains blocked.</p>
+  </section>
+
+  <section class="card">
+    <h2>Evidence summary</h2>
+    <table>
+      <thead><tr><th>Field</th><th>Value</th></tr></thead>
+      <tbody><tr><td>resolutionTitle</td><td>not imported</td></tr><tr><td>resolutionReference</td><td>not imported</td></tr><tr><td>resolutionHash</td><td>not imported</td></tr><tr><td>signedAt</td><td></td></tr><tr><td>governanceResolutionSigned</td><td>false</td></tr><tr><td>resolutionSigningAuthorizationRecorded</td><td>false</td></tr><tr><td>resolutionSigningAuthorizationReference</td><td>not imported</td></tr><tr><td>voteResultReference</td><td>not imported</td></tr><tr><td>approvedCapabilities</td><td>[]</td></tr><tr><td>disabledCapabilities</td><td>[]</td></tr><tr><td>capabilityMatrixReference</td><td>not imported</td></tr><tr><td>publicStatusReference</td><td>not imported</td></tr><tr><td>evidenceReference</td><td>not imported</td></tr></tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>Validation</h2>
+    <table>
+      <thead><tr><th>Issue</th></tr></thead>
+      <tbody><tr><td>No validation issues.</td></tr></tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>Current statuses</h2>
+    <table>
+      <thead><tr><th>Area</th><th>Status</th></tr></thead>
+      <tbody><tr><td>launchControl</td><td>Launch Control Ready Restricted Mode</td></tr><tr><td>capabilityMatrix</td><td>Capability Matrix Finalized All Disabled</td></tr><tr><td>publicStatusUpdate</td><td>Public Status Update Finalized Restricted Mode</td></tr><tr><td>voteResultEvidence</td><td>Governance Vote Result Evidence Import Ready No Evidence</td></tr><tr><td>stabilization</td><td>Restricted Launch Stabilized</td></tr><tr><td>fullLaunch</td><td>Full Launch Readiness Track Open Planning Only</td></tr><tr><td>governanceResolution</td><td>Full Launch Governance Resolution Package Ready Not Signed</td></tr><tr><td>resolutionAuthorization</td><td>Full Launch Governance Resolution Authorization Package Ready Not Recorded</td></tr><tr><td>decisionRecording</td><td>Full Launch Governance Decision Recording Package Ready Not Recorded</td></tr><tr><td>treasuryFunding</td><td>Treasury Funding Readiness Track Open Not Approved</td></tr><tr><td>treasurySafeTransaction</td><td>Treasury Safe Transaction Package Scaffold Ready No Payload</td></tr><tr><td>monitor</td><td>Pass</td></tr><tr><td>alerts</td><td>Clear</td></tr><tr><td>incidents</td><td>No Active Incidents</td></tr><tr><td>mainnetExecution</td><td>Mainnet Execution Queue Disabled</td></tr></tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>Important</h2>
+    <div class="notice">
+      Importing signed-resolution evidence does not record a governance decision and does not approve any capability.
+      Evidence must be real, sanitized, and validated before it can satisfy the governance-decision path.
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Public API</h2>
+    <p><a href="/api/public/signed-governance-resolution-evidence">/api/public/signed-governance-resolution-evidence</a></p>
+    <p><a href="/governance-vote-result-evidence">Governance vote/result evidence</a></p>
+    <p><a href="/governance-decision-approval">Governance decision approval</a></p>
+    <p><a href="/">Back to homepage</a></p>
+  </section>
+</main>
+</body>
+</html>

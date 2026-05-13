@@ -1,6 +1,6 @@
 {
   "schema": "astra-action-specific-governance-decision-approval-status-v0.1",
-  "generatedAt": "2026-05-13T18:23:53.842Z",
+  "generatedAt": "2026-05-13T18:34:18.656Z",
   "status": "ACTION_SPECIFIC_APPROVAL_PATH_READY_BLOCKED_PENDING_EVIDENCE",
   "selectedAction": {
     "id": "governance-decision-recording",
@@ -126,18 +126,18 @@
     },
     {
       "id": "ACTION-GOV-DECISION-002",
-      "title": "Missing signed resolution blocks action approval",
+      "title": "Signed governance resolution evidence status",
       "expected": "BLOCKED",
       "actual": "BLOCKED",
-      "reason": "signed governance resolution does not exist",
+      "reason": "signed governance resolution evidence is not imported and validated",
       "pass": true
     },
     {
       "id": "ACTION-GOV-DECISION-003",
-      "title": "Missing resolution authorization blocks action approval",
+      "title": "Resolution signing authorization evidence status",
       "expected": "BLOCKED",
       "actual": "BLOCKED",
-      "reason": "resolution signing authorization is not recorded",
+      "reason": "resolution signing authorization evidence is not imported and validated",
       "pass": true
     },
     {
@@ -194,6 +194,7 @@
     "capabilityMatrix": "CAPABILITY_MATRIX_FINALIZED_ALL_DISABLED",
     "publicStatusUpdate": "PUBLIC_STATUS_UPDATE_FINALIZED_RESTRICTED_MODE",
     "voteResultEvidence": "GOVERNANCE_VOTE_RESULT_EVIDENCE_IMPORT_READY_NO_EVIDENCE",
+    "signedResolutionEvidence": "SIGNED_GOVERNANCE_RESOLUTION_EVIDENCE_IMPORT_READY_NO_EVIDENCE",
     "stabilization": "RESTRICTED_LAUNCH_STABILIZED",
     "fullLaunch": "FULL_LAUNCH_READINESS_TRACK_OPEN_PLANNING_ONLY",
     "decisionRecording": "FULL_LAUNCH_GOVERNANCE_DECISION_RECORDING_PACKAGE_READY_NOT_RECORDED",
@@ -338,21 +339,21 @@
       }
     },
     {
-      "name": "ACTION-GOV-DECISION-002: Missing signed resolution blocks action approval",
+      "name": "ACTION-GOV-DECISION-002: Signed governance resolution evidence status",
       "pass": true,
       "details": {
         "expected": "BLOCKED",
         "actual": "BLOCKED",
-        "reason": "signed governance resolution does not exist"
+        "reason": "signed governance resolution evidence is not imported and validated"
       }
     },
     {
-      "name": "ACTION-GOV-DECISION-003: Missing resolution authorization blocks action approval",
+      "name": "ACTION-GOV-DECISION-003: Resolution signing authorization evidence status",
       "pass": true,
       "details": {
         "expected": "BLOCKED",
         "actual": "BLOCKED",
-        "reason": "resolution signing authorization is not recorded"
+        "reason": "resolution signing authorization evidence is not imported and validated"
       }
     },
     {
