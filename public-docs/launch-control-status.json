@@ -1,0 +1,111 @@
+{
+  "schema": "astra-launch-control-status-v0.1",
+  "generatedAt": "2026-05-13T17:44:49.043Z",
+  "status": "LAUNCH_CONTROL_READY_RESTRICTED_MODE",
+  "currentApprovedMode": "restricted-mainnet-operation",
+  "genericPreparationComplete": true,
+  "additionalGenericPreparationRecommended": false,
+  "publicStatement": "AstraTreasury generic launch preparation is complete. Further work should be capability-specific or governance-action-specific. Full launch and restricted capabilities remain not approved.",
+  "summary": {
+    "auditCleared": true,
+    "legalCleared": true,
+    "activeIncidents": 0,
+    "responseRequired": false,
+    "monitorStatus": "PASS",
+    "restrictedLaunchStatus": "RESTRICTED_LAUNCH_STABILIZED",
+    "unsafeEnabledItems": []
+  },
+  "requiredVsOptional": [
+    [
+      "Audit and legal clearance",
+      "Recorded per operator confirmation",
+      "Complete"
+    ],
+    [
+      "Restricted launch stabilization",
+      "RESTRICTED_LAUNCH_STABILIZED",
+      "Required"
+    ],
+    [
+      "Mainnet monitor",
+      "PASS",
+      "Required"
+    ],
+    [
+      "Incident status",
+      "No active incidents",
+      "Required"
+    ],
+    [
+      "Governance decision",
+      "Not recorded",
+      "Required only before activation"
+    ],
+    [
+      "Treasury funding approval",
+      "Not approved",
+      "Required only before funding"
+    ],
+    [
+      "Safe transaction payload",
+      "Not generated",
+      "Required only before Safe execution"
+    ],
+    [
+      "More generic prep pages",
+      "Not recommended",
+      "Optional / stop here"
+    ]
+  ],
+  "capabilityStates": {
+    "fullLaunchApproved": false,
+    "governanceDecisionRecorded": false,
+    "publicTokenSaleApproved": false,
+    "realTreasuryFundingApproved": false,
+    "treasuryFundingExecuted": false,
+    "safeTransactionPayloadGenerated": false,
+    "safeTransactionPrepared": false,
+    "mainnetExecutionQueueEnabled": false,
+    "stakingOrRewardsApproved": false,
+    "buybackProgramApproved": false,
+    "paperToOnchainAutomationApproved": false,
+    "autonomousExecutionApproved": false
+  },
+  "nextRecommendedActions": [
+    "Stop creating generic preparation packages.",
+    "Choose one specific action path.",
+    "Use explicit approval before enabling any capability.",
+    "Keep all public status pages synced through evidence archive."
+  ],
+  "specificActionPaths": [
+    "Governance decision recording live path",
+    "Treasury funding authorization path",
+    "Safe transaction payload path",
+    "Execution queue activation path",
+    "Public sale path",
+    "Staking/rewards path",
+    "Buyback path"
+  ],
+  "currentStatuses": {
+    "stabilization": "RESTRICTED_LAUNCH_STABILIZED",
+    "fullLaunch": "FULL_LAUNCH_READINESS_TRACK_OPEN_PLANNING_ONLY",
+    "governance": "FULL_LAUNCH_GOVERNANCE_DECISION_PACKAGE_READY_NOT_APPROVED",
+    "decisionAuthorization": "FULL_LAUNCH_GOVERNANCE_DECISION_RECORDING_AUTHORIZATION_PACKAGE_READY_NOT_RECORDED",
+    "treasuryFunding": "TREASURY_FUNDING_READINESS_TRACK_OPEN_NOT_APPROVED",
+    "treasurySafeTransaction": "TREASURY_SAFE_TRANSACTION_PACKAGE_SCAFFOLD_READY_NO_PAYLOAD",
+    "monitor": "PASS",
+    "alerts": "CLEAR",
+    "incidents": "NO_ACTIVE_INCIDENTS",
+    "mainnetExecution": "MAINNET_EXECUTION_QUEUE_DISABLED"
+  },
+  "safety": {
+    "sendsTransactions": false,
+    "movesFunds": false,
+    "deploysContracts": false,
+    "enablesExecution": false,
+    "approvesPublicSale": false,
+    "approvesTreasuryFunding": false,
+    "recordsGovernanceDecision": false,
+    "approvesFullLaunch": false
+  }
+}

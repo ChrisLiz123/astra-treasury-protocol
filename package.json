@@ -320,7 +320,11 @@
     "full-launch:decision-authorization:validate": "node scripts/validate-full-launch-governance-decision-recording-authorization.mjs",
     "full-launch:decision-authorization:status": "node services/full-launch-governance-decision-recording-authorization/status.mjs",
     "full-launch:decision-authorization:gate": "npm run full-launch:decision-authorization:validate && npm run full-launch:decision-authorization:status",
-    "release:governance-decision-authorization": "bash scripts/release/package-governance-decision-authorization.sh"
+    "release:governance-decision-authorization": "bash scripts/release/package-governance-decision-authorization.sh",
+    "launch:control:validate": "node scripts/validate-launch-control.mjs",
+    "launch:control:status": "node services/launch-control/status.mjs",
+    "launch:control:gate": "npm run launch:control:validate && npm run launch:control:status",
+    "release:launch-control-matrix": "bash scripts/release/package-launch-control-matrix.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",

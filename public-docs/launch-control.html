@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AstraTreasury Launch Control</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #08111f;
+      --surface: #0e1a2b;
+      --border: rgba(148, 163, 184, 0.2);
+      --text: #edf4fb;
+      --muted: #9aaec4;
+      --blue: #67a7ff;
+      --green: #41d49b;
+      --yellow: #f4c35f;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    body { margin: 0; background: linear-gradient(180deg, #07101d, var(--bg)); color: var(--text); }
+    a { color: var(--blue); text-decoration: none; }
+
+    main {
+      width: min(1120px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 44px 0 72px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 28px;
+      box-shadow: 0 22px 70px rgba(0,0,0,.28);
+      margin-bottom: 18px;
+    }
+
+    h1 { margin: 0 0 10px; font-size: 42px; letter-spacing: -1.2px; }
+    h2 { margin: 0 0 14px; font-size: 24px; }
+    p { color: var(--muted); line-height: 1.65; }
+
+    .badge {
+      display: inline-flex;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(65,212,155,.10);
+      border: 1px solid rgba(65,212,155,.22);
+      color: var(--green);
+      font-weight: 850;
+      margin-bottom: 16px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      overflow: hidden;
+    }
+
+    th, td {
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--border);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      color: var(--muted);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      background: rgba(255,255,255,.03);
+    }
+
+    tr:last-child td { border-bottom: 0; }
+
+    .notice {
+      padding: 16px;
+      border-radius: 16px;
+      background: rgba(244,195,95,.08);
+      border: 1px solid rgba(244,195,95,.22);
+      color: #f7d99a;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+<main>
+  <section class="card">
+    <div class="badge">Restricted mode · generic prep complete</div>
+    <h1>Launch Control</h1>
+    <p>AstraTreasury generic launch preparation is complete. Further work should be capability-specific or governance-action-specific. Full launch and restricted capabilities remain not approved.</p>
+  </section>
+
+  <section class="card">
+    <h2>Required vs optional</h2>
+    <table>
+      <thead><tr><th>Area</th><th>Status</th><th>Meaning</th></tr></thead>
+      <tbody><tr><td>Audit and legal clearance</td><td>Recorded per operator confirmation</td><td>Complete</td></tr><tr><td>Restricted launch stabilization</td><td>RESTRICTED_LAUNCH_STABILIZED</td><td>Required</td></tr><tr><td>Mainnet monitor</td><td>PASS</td><td>Required</td></tr><tr><td>Incident status</td><td>No active incidents</td><td>Required</td></tr><tr><td>Governance decision</td><td>Not recorded</td><td>Required only before activation</td></tr><tr><td>Treasury funding approval</td><td>Not approved</td><td>Required only before funding</td></tr><tr><td>Safe transaction payload</td><td>Not generated</td><td>Required only before Safe execution</td></tr><tr><td>More generic prep pages</td><td>Not recommended</td><td>Optional / stop here</td></tr></tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>Capability states</h2>
+    <table>
+      <thead><tr><th>Capability</th><th>Status</th></tr></thead>
+      <tbody><tr><td>fullLaunchApproved</td><td>Disabled / not approved</td></tr><tr><td>governanceDecisionRecorded</td><td>Disabled / not approved</td></tr><tr><td>publicTokenSaleApproved</td><td>Disabled / not approved</td></tr><tr><td>realTreasuryFundingApproved</td><td>Disabled / not approved</td></tr><tr><td>treasuryFundingExecuted</td><td>Disabled / not approved</td></tr><tr><td>safeTransactionPayloadGenerated</td><td>Disabled / not approved</td></tr><tr><td>safeTransactionPrepared</td><td>Disabled / not approved</td></tr><tr><td>mainnetExecutionQueueEnabled</td><td>Disabled / not approved</td></tr><tr><td>stakingOrRewardsApproved</td><td>Disabled / not approved</td></tr><tr><td>buybackProgramApproved</td><td>Disabled / not approved</td></tr><tr><td>paperToOnchainAutomationApproved</td><td>Disabled / not approved</td></tr><tr><td>autonomousExecutionApproved</td><td>Disabled / not approved</td></tr></tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>Specific action paths</h2>
+    <table>
+      <thead><tr><th>Path</th><th>Use</th></tr></thead>
+      <tbody><tr><td>Governance decision recording live path</td><td>Use only when pursuing this exact action.</td></tr><tr><td>Treasury funding authorization path</td><td>Use only when pursuing this exact action.</td></tr><tr><td>Safe transaction payload path</td><td>Use only when pursuing this exact action.</td></tr><tr><td>Execution queue activation path</td><td>Use only when pursuing this exact action.</td></tr><tr><td>Public sale path</td><td>Use only when pursuing this exact action.</td></tr><tr><td>Staking/rewards path</td><td>Use only when pursuing this exact action.</td></tr><tr><td>Buyback path</td><td>Use only when pursuing this exact action.</td></tr></tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>Current statuses</h2>
+    <table>
+      <thead><tr><th>Area</th><th>Status</th></tr></thead>
+      <tbody><tr><td>stabilization</td><td>Restricted Launch Stabilized</td></tr><tr><td>fullLaunch</td><td>Full Launch Readiness Track Open Planning Only</td></tr><tr><td>governance</td><td>Full Launch Governance Decision Package Ready Not Approved</td></tr><tr><td>decisionAuthorization</td><td>Full Launch Governance Decision Recording Authorization Package Ready Not Recorded</td></tr><tr><td>treasuryFunding</td><td>Treasury Funding Readiness Track Open Not Approved</td></tr><tr><td>treasurySafeTransaction</td><td>Treasury Safe Transaction Package Scaffold Ready No Payload</td></tr><tr><td>monitor</td><td>Pass</td></tr><tr><td>alerts</td><td>Clear</td></tr><tr><td>incidents</td><td>No Active Incidents</td></tr><tr><td>mainnetExecution</td><td>Mainnet Execution Queue Disabled</td></tr></tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>Decision</h2>
+    <div class="notice">
+      More generic preparation is not necessary. The next work should be tied to one exact action:
+      governance decision recording, treasury funding authorization, Safe payload generation, execution activation,
+      public sale, staking/rewards, or buyback approval.
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Public API</h2>
+    <p><a href="/api/public/launch-control">/api/public/launch-control</a></p>
+    <p><a href="/trust">Trust Center</a></p>
+    <p><a href="/full-launch">Full launch readiness</a></p>
+    <p><a href="/">Back to homepage</a></p>
+  </section>
+</main>
+</body>
+</html>

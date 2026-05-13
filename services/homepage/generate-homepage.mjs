@@ -740,6 +740,10 @@ const html = `<!doctype html>
           <strong>Trust Center</strong>
           <span>Deployment, monitoring, alerts, incidents, token metadata, and restrictions.</span>
         </a>
+        <a class="link-card" href="/launch-control">
+          <strong>Launch Control</strong>
+          <span>Consolidated launch matrix. Generic prep is complete.</span>
+        </a>
         <a class="link-card" href="/protocol">
           <strong>Protocol</strong>
           <span>How AstraTreasury works at a high level.</span>

@@ -1,0 +1,28 @@
+{
+  "schema": "astra-launch-control-config-v0.1",
+  "status": "restricted-mode-launch-control",
+  "network": {
+    "name": "Base Mainnet",
+    "chainId": 8453
+  },
+  "operatorReportedClearances": {
+    "auditCleared": true,
+    "legalCleared": true,
+    "note": "Operator reported audit and legal requirements cleared."
+  },
+  "currentApprovedMode": "restricted-mainnet-operation",
+  "genericPreparationComplete": true,
+  "additionalGenericPreparationRecommended": false,
+  "nextRecommendedMode": "choose-specific-action",
+  "capabilities": {
+    "fullLaunchApproved": false,
+    "publicTokenSaleApproved": false,
+    "realTreasuryFundingApproved": false,
+    "stakingOrRewardsApproved": false,
+    "buybackProgramApproved": false,
+    "mainnetExecutionQueueApproved": false,
+    "paperToOnchainAutomationApproved": false,
+    "autonomousExecutionApproved": false
+  },
+  "hardRule": "Generic preparation should stop here unless a specific capability or governance action is being activated."
+}
