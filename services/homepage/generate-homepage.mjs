@@ -808,6 +808,10 @@ const html = `<!doctype html>
           <strong>Capability request review</strong>
           <span>Review gate before any dedicated action path.</span>
         </a>
+        <a class="link-card" href="/dex-liquidity-path">
+          <strong>DEX/liquidity path</strong>
+          <span>Selected public purchase path. Not approved.</span>
+        </a>
         <a class="link-card" href="/governance-vote-result-evidence">
           <strong>Vote/result evidence</strong>
           <span>Evidence import path. No decision is recorded.</span>

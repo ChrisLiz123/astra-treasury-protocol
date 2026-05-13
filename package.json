@@ -401,7 +401,11 @@
     "capability:request-review:validate": "node scripts/validate-capability-request-review.mjs",
     "capability:request-review:status": "node services/capability-request-review/status.mjs",
     "capability:request-review:gate": "npm run capability:request-review:validate && npm run capability:request-review:status",
-    "release:capability-request-review-gate": "bash scripts/release/package-capability-request-review-gate.sh"
+    "release:capability-request-review-gate": "bash scripts/release/package-capability-request-review-gate.sh",
+    "dex:liquidity-path:validate": "node scripts/validate-dex-liquidity-path-selection.mjs",
+    "dex:liquidity-path:status": "node services/dex-liquidity-path/status.mjs",
+    "dex:liquidity-path:gate": "npm run dex:liquidity-path:validate && npm run dex:liquidity-path:status",
+    "release:dex-liquidity-path-selection": "bash scripts/release/package-dex-liquidity-path-selection.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",

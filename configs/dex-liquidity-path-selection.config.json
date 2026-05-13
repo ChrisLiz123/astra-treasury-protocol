@@ -1,0 +1,56 @@
+{
+  "schema": "astra-dex-liquidity-path-selection-config-v0.1",
+  "status": "dex-liquidity-path-selected-not-approved",
+  "network": {
+    "name": "Base Mainnet",
+    "chainId": 8453
+  },
+  "currentApprovedMode": "restricted-mainnet-operation",
+  "selectedPublicPurchasePath": {
+    "id": "dex-liquidity-pool-trading",
+    "label": "DEX/liquidity-pool trading",
+    "candidateVenue": "Uniswap on Base",
+    "description": "Public purchase access through a DEX liquidity pool after separate review, approval, pool setup, liquidity provisioning, and public trading-link activation."
+  },
+  "pathSelectionRecorded": true,
+  "pathSelectionOnly": true,
+  "dexPathApproved": false,
+  "liquidityPoolCreationApproved": false,
+  "liquidityProvisionApproved": false,
+  "publicTradingApproved": false,
+  "publicTradingLinkApproved": false,
+  "buyPageActivationApproved": false,
+  "safePayloadGenerationApproved": false,
+  "safeTransactionExecutionApproved": false,
+  "treasuryFundingApproved": false,
+  "fullLaunchApproved": false,
+  "requiresDedicatedActionPath": true,
+  "requiresLiquidityParameterReview": true,
+  "requiresLegalComplianceFinalCheck": true,
+  "requiresSafeReviewIfTreasuryAssetsUsed": true,
+  "requiresPublicRiskDisclosure": true,
+  "pendingDecisions": {
+    "dexVenueFinalized": false,
+    "tokenPairFinalized": false,
+    "liquidityAmountFinalized": false,
+    "initialPriceFinalized": false,
+    "feeTierOrPoolTypeFinalized": false,
+    "slippageAndRiskDisclosureFinalized": false,
+    "liquidityProviderSourceFinalized": false,
+    "safeTransactionPathFinalized": false,
+    "publicTradingLinkFinalized": false
+  },
+  "candidatePairs": [
+    "ASTRA/WETH on Base",
+    "ASTRA/USDC on Base"
+  ],
+  "capabilityBoundaries": {
+    "publicTokenSaleApproved": false,
+    "dexLiquidityPoolTradingApproved": false,
+    "realTreasuryFundingApproved": false,
+    "mainnetExecutionQueueApproved": false,
+    "safeTransactionPayloadGenerated": false,
+    "safeTransactionExecuted": false
+  },
+  "hardRule": "This milestone selects DEX/liquidity-pool trading as the preferred public purchase path only. It must not create a pool, add liquidity, approve public trading, generate a Safe payload, move funds, or approve full launch."
+}
