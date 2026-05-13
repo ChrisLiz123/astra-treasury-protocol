@@ -350,7 +350,13 @@
     "governance:decision-live-precheck:gate": "npm run governance:decision-live-precheck:validate && npm run governance:decision-live-precheck:status",
     "release:governance-decision-live-precheck": "bash scripts/release/package-governance-decision-live-precheck.sh",
     "action:governance-decision:record-approval": "node scripts/record-governance-decision-action-approval.mjs",
-    "release:resolution-only-governance-adapter": "bash scripts/release/package-resolution-only-governance-adapter.sh"
+    "release:resolution-only-governance-adapter": "bash scripts/release/package-resolution-only-governance-adapter.sh",
+    "governance:signed-resolution-evidence:import-resolution-only": "node scripts/import-resolution-only-signed-resolution-evidence.mjs",
+    "governance:decision-recording-live:record": "node scripts/record-governance-decision-live.mjs",
+    "governance:decision-recording-live:validate": "node scripts/validate-governance-decision-live-recording.mjs",
+    "governance:decision-recording-live:status": "node services/governance-decision-live-recording/status.mjs",
+    "governance:decision-recording-live:gate": "npm run governance:decision-recording-live:validate && npm run governance:decision-recording-live:status",
+    "release:governance-decision-recording-live": "bash scripts/release/package-governance-decision-recording-live.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",

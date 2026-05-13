@@ -758,7 +758,11 @@ const html = `<!doctype html>
         </a>
         <a class="link-card" href="/governance-decision-live-precheck">
           <strong>Decision live precheck</strong>
-          <span>Final precheck before decision recording. No decision is recorded.</span>
+          <span>Final precheck before decision recording.</span>
+        </a>
+        <a class="link-card" href="/governance-decision">
+          <strong>Governance decision</strong>
+          <span>Restricted-mode / all-disabled decision record.</span>
         </a>
         <a class="link-card" href="/governance-vote-result-evidence">
           <strong>Vote/result evidence</strong>

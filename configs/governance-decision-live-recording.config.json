@@ -1,0 +1,60 @@
+{
+  "schema": "astra-governance-decision-live-recording-config-v0.1",
+  "status": "governance-decision-recorded-restricted-mode-all-disabled",
+  "network": {
+    "name": "Base Mainnet",
+    "chainId": 8453
+  },
+  "currentApprovedMode": "restricted-mainnet-operation",
+  "recordingScope": "restricted-mode-all-disabled",
+  "operatorReportedClearances": {
+    "auditCleared": true,
+    "legalCleared": true,
+    "note": "Operator reported audit and legal requirements cleared."
+  },
+  "requiresLivePrecheckReady": true,
+  "requiresActionSpecificApprovalRecorded": true,
+  "requiresSignedResolutionEvidence": true,
+  "governanceDecisionRecordingFrameworkPrepared": true,
+  "governanceDecisionRecorded": true,
+  "governanceDecisionPublished": true,
+  "fullLaunchApproved": false,
+  "publicDisclosuresFinalApproved": false,
+  "treasuryDisclosureFinalApproved": false,
+  "treasuryFundingApproved": false,
+  "treasuryFundingTransactionAuthorized": false,
+  "treasuryFundingExecuted": false,
+  "safeTransactionPayloadGenerated": false,
+  "safeTransactionPrepared": false,
+  "safeTransactionSubmitted": false,
+  "safeTransactionSigned": false,
+  "safeTransactionExecuted": false,
+  "approvedCapabilities": [],
+  "disabledCapabilities": [
+    "publicTokenSale",
+    "realTreasuryFunding",
+    "stakingOrRewards",
+    "buybackProgram",
+    "mainnetExecutionQueue",
+    "paperToOnchainAutomation",
+    "autonomousExecution",
+    "safeTransactionPayloadGeneration",
+    "safeTransactionExecution"
+  ],
+  "capabilityApprovals": {
+    "publicTokenSaleApproved": false,
+    "realTreasuryFundingApproved": false,
+    "stakingOrRewardsApproved": false,
+    "buybackProgramApproved": false,
+    "mainnetExecutionQueueApproved": false,
+    "paperToOnchainAutomationApproved": false,
+    "autonomousExecutionApproved": false
+  },
+  "hardRule": "This live package may record only the restricted-mode / all-disabled governance decision. It must not approve full launch, funds movement, Safe execution, or any restricted capability.",
+  "recordedDecision": {
+    "decisionId": "ASTRA-GOV-DEC-20260513-001",
+    "recordedAt": "2026-05-13T20:04:11.257Z",
+    "recordFile": "reports/full-launch-governance-decision/live/governance-decision-record.json",
+    "decisionScope": "restricted-mode-all-disabled"
+  }
+}
