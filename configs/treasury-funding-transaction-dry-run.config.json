@@ -1,0 +1,55 @@
+{
+  "schema": "astra-treasury-funding-transaction-dry-run-config-v0.1",
+  "status": "planning-only-transaction-not-prepared",
+  "network": {
+    "name": "Base Mainnet",
+    "chainId": 8453
+  },
+  "currentApprovedMode": "restricted-mainnet-operation",
+  "operatorReportedClearances": {
+    "auditCleared": true,
+    "legalCleared": true,
+    "note": "Operator reported audit and legal requirements cleared. This does not authorize or prepare a treasury funding transaction."
+  },
+  "dryRunOnly": true,
+  "safeTransactionPrepared": false,
+  "safeTransactionSubmitted": false,
+  "safeTransactionSigned": false,
+  "safeTransactionExecuted": false,
+  "treasuryFundingTransactionAuthorized": false,
+  "treasuryFundingExecuted": false,
+  "treasurySafeApprovalRecorded": false,
+  "fundingSourceApproved": false,
+  "treasuryRiskLimitsApproved": false,
+  "publicDisclosureApproved": false,
+  "transactionPlan": {
+    "asset": "not approved",
+    "amount": "not approved",
+    "source": "not approved",
+    "destination": "not approved",
+    "safe": "not approved",
+    "calldata": "not generated",
+    "safePayload": "not generated",
+    "safeTxHash": "",
+    "executionTxHash": ""
+  },
+  "dryRunCases": {
+    "missingRiskLimitsBlocksTransaction": true,
+    "missingFundingSourceBlocksTransaction": true,
+    "missingTreasurySafeApprovalBlocksTransaction": true,
+    "missingDisclosureApprovalBlocksTransaction": true,
+    "executionQueueDisabledBlocksExecution": true,
+    "zeroEffectiveFundingLimitBlocksFunding": true,
+    "noSafePayloadGenerated": true
+  },
+  "hardStops": {
+    "publicTokenSaleApproved": false,
+    "realTreasuryFundingApproved": false,
+    "stakingOrRewardsApproved": false,
+    "buybackProgramApproved": false,
+    "mainnetExecutionQueueEnabled": false,
+    "paperToOnchainAutomationEnabled": false,
+    "autonomousExecutionApproved": false
+  },
+  "hardRule": "This dry run is planning-only. It must not create, submit, sign, execute, or authorize any Safe transaction."
+}

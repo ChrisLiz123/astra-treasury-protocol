@@ -1,0 +1,117 @@
+{
+  "schema": "astra-public-treasury-funding-transaction-dry-run-status-v0.1",
+  "generatedAt": "2026-05-13T14:30:19.185Z",
+  "status": "TREASURY_FUNDING_TRANSACTION_DRY_RUN_PASS_NOT_AUTHORIZED",
+  "mode": "DRY_RUN_ONLY_NO_SAFE_TRANSACTION",
+  "currentApprovedMode": "restricted-mainnet-operation",
+  "safeTransactionPrepared": false,
+  "safeTransactionSubmitted": false,
+  "safeTransactionSigned": false,
+  "safeTransactionExecuted": false,
+  "treasuryFundingTransactionAuthorized": false,
+  "treasuryFundingExecuted": false,
+  "network": {
+    "name": "Base Mainnet",
+    "chainId": 8453
+  },
+  "publicStatement": "AstraTreasury treasury funding transaction dry run passed in not-authorized mode. No Safe transaction is prepared, submitted, signed, or executed, and no real treasury funding is authorized.",
+  "summary": {
+    "totalChecks": 30,
+    "passed": 30,
+    "failed": 0,
+    "dryRunCases": 6,
+    "dryRunCasesPassed": 6,
+    "failedCases": 0,
+    "activeIncidents": 0,
+    "responseRequired": false
+  },
+  "currentStatuses": {
+    "stabilization": "RESTRICTED_LAUNCH_STABILIZED",
+    "fullLaunch": "FULL_LAUNCH_READINESS_TRACK_OPEN_PLANNING_ONLY",
+    "legalFullLaunch": "LEGAL_FULL_LAUNCH_REVIEW_OPEN_NOT_APPROVED",
+    "treasuryFunding": "TREASURY_FUNDING_READINESS_TRACK_OPEN_NOT_APPROVED",
+    "treasuryRisk": "TREASURY_RISK_LIMITS_DRAFT_READY_NOT_APPROVED",
+    "treasurySource": "TREASURY_FUNDING_SOURCE_REVIEW_TRACK_OPEN_NOT_APPROVED",
+    "treasurySafe": "TREASURY_SAFE_APPROVAL_TRACK_OPEN_NOT_APPROVED",
+    "disclosures": "PUBLIC_DISCLOSURE_UPDATE_DRAFT_READY_NOT_APPROVED",
+    "monitor": "PASS",
+    "alerts": "CLEAR",
+    "incidents": "NO_ACTIVE_INCIDENTS",
+    "mainnetExecution": "MAINNET_EXECUTION_QUEUE_DISABLED"
+  },
+  "transactionPlan": {
+    "asset": "not approved",
+    "amount": "not approved",
+    "source": "not approved",
+    "destination": "not approved",
+    "safe": "not approved",
+    "calldata": "not generated",
+    "safePayload": "not generated",
+    "safeTxHash": "",
+    "executionTxHash": ""
+  },
+  "dryRunCases": [
+    {
+      "id": "TREASURY-TX-DRY-RUN-001",
+      "title": "Missing risk limits blocks transaction",
+      "expected": "BLOCKED",
+      "actual": "BLOCKED",
+      "reason": "treasury risk limits are not approved",
+      "pass": true
+    },
+    {
+      "id": "TREASURY-TX-DRY-RUN-002",
+      "title": "Missing funding source blocks transaction",
+      "expected": "BLOCKED",
+      "actual": "BLOCKED",
+      "reason": "funding source is not approved",
+      "pass": true
+    },
+    {
+      "id": "TREASURY-TX-DRY-RUN-003",
+      "title": "Missing Treasury Safe approval blocks transaction",
+      "expected": "BLOCKED",
+      "actual": "BLOCKED",
+      "reason": "Treasury Safe approval is not recorded",
+      "pass": true
+    },
+    {
+      "id": "TREASURY-TX-DRY-RUN-004",
+      "title": "Missing disclosure approval blocks transaction",
+      "expected": "BLOCKED",
+      "actual": "BLOCKED",
+      "reason": "public disclosures are drafted but not final-approved",
+      "pass": true
+    },
+    {
+      "id": "TREASURY-TX-DRY-RUN-005",
+      "title": "Zero effective funding limit blocks transaction",
+      "expected": "BLOCKED",
+      "actual": "BLOCKED",
+      "reason": "effective funding limits remain zero",
+      "pass": true
+    },
+    {
+      "id": "TREASURY-TX-DRY-RUN-006",
+      "title": "Safe payload generation attempt",
+      "expected": "BLOCKED",
+      "actual": "BLOCKED",
+      "reason": "this dry run must not prepare a Safe payload",
+      "pass": true
+    }
+  ],
+  "restrictions": {
+    "publicTokenSale": false,
+    "realTreasuryFunding": false,
+    "stakingOrRewards": false,
+    "buybackProgram": false,
+    "autonomousExecution": false,
+    "mainnetExecutionQueue": false,
+    "paperToOnchainAutomation": false
+  },
+  "nextPossibleMilestones": [
+    "Treasury disclosure approval package",
+    "Treasury Safe transaction package preparation",
+    "Full-launch governance decision package"
+  ]
+}
