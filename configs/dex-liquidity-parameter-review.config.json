@@ -1,0 +1,91 @@
+{
+  "schema": "astra-dex-liquidity-parameter-review-config-v0.1",
+  "status": "dex-liquidity-parameter-review-ready-not-finalized",
+  "network": {
+    "name": "Base Mainnet",
+    "chainId": 8453
+  },
+  "currentApprovedMode": "restricted-mainnet-operation",
+  "selectedPublicPurchasePath": "dex-liquidity-pool-trading",
+  "candidateVenue": "Uniswap on Base",
+  "parameterReviewPrepared": true,
+  "parameterReviewOnly": true,
+  "parametersFinalized": false,
+  "dexLiquidityPathApproved": false,
+  "liquidityPoolCreationApproved": false,
+  "liquidityProvisionApproved": false,
+  "publicTradingApproved": false,
+  "publicTradingLinkApproved": false,
+  "buyPageActivationApproved": false,
+  "safePayloadGenerationApproved": false,
+  "safeTransactionExecutionApproved": false,
+  "treasuryFundingApproved": false,
+  "fullLaunchApproved": false,
+  "candidatePairs": [
+    {
+      "pair": "ASTRA/WETH",
+      "network": "Base",
+      "status": "candidate-not-finalized",
+      "notes": "WETH pair may be suitable for broad DEX liquidity, subject to treasury, risk, and public disclosure review."
+    },
+    {
+      "pair": "ASTRA/USDC",
+      "network": "Base",
+      "status": "candidate-not-finalized",
+      "notes": "USDC pair may be easier for public price comprehension, subject to treasury, risk, and public disclosure review."
+    }
+  ],
+  "parameterDecisions": {
+    "dexVenueFinalized": false,
+    "poolVersionFinalized": false,
+    "tokenPairFinalized": false,
+    "baseTokenFinalized": false,
+    "quoteTokenFinalized": false,
+    "feeTierOrPoolTypeFinalized": false,
+    "initialPriceApproachFinalized": false,
+    "initialPriceFinalized": false,
+    "liquidityAmountFinalized": false,
+    "liquiditySourceFinalized": false,
+    "priceRangeFinalized": false,
+    "slippageGuidanceFinalized": false,
+    "impermanentLossDisclosureFinalized": false,
+    "mevRiskDisclosureFinalized": false,
+    "tokenImpersonationDisclosureFinalized": false,
+    "safeTransactionPathFinalized": false,
+    "publicTradingLinkFinalized": false,
+    "buyPageLanguageFinalized": false
+  },
+  "parameterPlaceholders": {
+    "finalDexVenue": "",
+    "finalPoolVersion": "",
+    "finalTokenPair": "",
+    "finalFeeTierOrPoolType": "",
+    "initialPriceApproach": "",
+    "initialPrice": "",
+    "liquidityAmountAstra": "",
+    "liquidityAmountCounterAsset": "",
+    "liquiditySource": "",
+    "safeTransactionPath": "",
+    "publicTradingLink": ""
+  },
+  "requiredBeforeFinalization": {
+    "legalComplianceFinalCheck": false,
+    "liquidityProviderSourceApproved": false,
+    "treasuryAssetUseApproved": false,
+    "safeReviewCompletedIfNeeded": false,
+    "publicRiskDisclosureApproved": false,
+    "publicStatusUpdatePrepared": false,
+    "actionSpecificApprovalRecorded": false
+  },
+  "hardStops": {
+    "poolCreated": false,
+    "liquidityAdded": false,
+    "safePayloadGenerated": false,
+    "safeTransactionExecuted": false,
+    "publicTradingEnabled": false,
+    "buyPageActivated": false,
+    "treasuryFundsMoved": false,
+    "fullLaunchApproved": false
+  },
+  "hardRule": "This review framework does not finalize parameters, create a pool, add liquidity, approve public trading, generate a Safe payload, move funds, or approve full launch."
+}
