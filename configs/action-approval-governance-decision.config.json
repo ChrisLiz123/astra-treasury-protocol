@@ -18,9 +18,9 @@
     "note": "Operator reported audit and legal requirements cleared."
   },
   "actionSpecificApprovalRequested": false,
-  "actionSpecificApprovalRecorded": false,
+  "actionSpecificApprovalRecorded": true,
   "actionSpecificApprovalExecuted": false,
-  "governanceDecisionRecordingAuthorized": false,
+  "governanceDecisionRecordingAuthorized": true,
   "governanceDecisionRecorded": false,
   "governanceDecisionPublished": false,
   "fullLaunchApproved": false,
@@ -52,13 +52,13 @@
     "activeIncidentsZero": true,
     "governanceDecisionRecordingPackageReady": true,
     "governanceDecisionRecordingAuthorizationPackageReady": true,
-    "signedGovernanceResolutionExists": false,
-    "voteResultRecorded": false,
-    "resolutionSigningAuthorizationRecorded": false,
-    "capabilityMatrixFinalApproved": false,
-    "publicStatusUpdateFinalApproved": false,
-    "decisionRecorderAssigned": false,
-    "finalActionApprovalRecorded": false
+    "signedGovernanceResolutionExists": true,
+    "voteResultRecorded": true,
+    "resolutionSigningAuthorizationRecorded": true,
+    "capabilityMatrixFinalApproved": true,
+    "publicStatusUpdateFinalApproved": true,
+    "decisionRecorderAssigned": true,
+    "finalActionApprovalRecorded": true
   },
   "approvalChecklist": {
     "selectedActionReviewed": false,
@@ -76,13 +76,13 @@
     "finalActionApprovalRecorded": false
   },
   "draftApprovalRecord": {
-    "decision": "NOT APPROVED",
+    "decision": "APPROVED_FOR_GOVERNANCE_DECISION_RECORDING_ONLY",
     "actionId": "governance-decision-recording",
-    "approvalDate": "",
-    "approver": "TBD",
-    "decisionRecordReference": "TBD",
-    "resolutionReference": "TBD",
-    "voteResult": "TBD",
+    "approvalDate": "2026-05-13T19:53:35.461Z",
+    "approver": "ASTRA-GOV-RES-20260513-001 signed resolution",
+    "decisionRecordReference": "pending-live-recording",
+    "resolutionReference": "/opt/astra-treasury-protocol/reports/governance-resolutions/ASTRA-GOV-RES-20260513-001/resolution.signed.asc",
+    "voteResult": "not-applicable-resolution-only",
     "approvedCapabilities": [],
     "disabledCapabilities": [
       "publicTokenSale",
@@ -91,10 +91,13 @@
       "buybackProgram",
       "mainnetExecutionQueue",
       "paperToOnchainAutomation",
-      "autonomousExecution"
+      "autonomousExecution",
+      "safeTransactionPayloadGeneration",
+      "safeTransactionExecution"
     ],
-    "evidenceReference": "TBD",
-    "publicStatusUpdate": "TBD"
+    "evidenceReference": "reports/action-approvals/governance-decision/action-approval-record.json",
+    "publicStatusUpdate": "public-docs/public-status-update-status.json",
+    "decisionRecorder": "Founder"
   },
   "dryRunCases": {
     "missingVoteResultBlocksApproval": true,

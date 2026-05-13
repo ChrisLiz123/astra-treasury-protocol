@@ -1,7 +1,7 @@
 {
   "schema": "astra-governance-decision-live-precheck-status-v0.1",
-  "generatedAt": "2026-05-13T19:16:50.055Z",
-  "status": "GOVERNANCE_DECISION_RECORDING_LIVE_PRECHECK_BLOCKED_PENDING_EVIDENCE_OR_APPROVAL",
+  "generatedAt": "2026-05-13T19:53:53.503Z",
+  "status": "GOVERNANCE_DECISION_RECORDING_LIVE_PRECHECK_READY_TO_RECORD",
   "currentApprovedMode": "restricted-mainnet-operation",
   "selectedAction": {
     "id": "governance-decision-recording-live-precheck",
@@ -12,14 +12,14 @@
   "governanceProcessMode": "resolution-only",
   "precheckOnly": true,
   "livePrecheckFrameworkPrepared": true,
-  "readyToRecordGovernanceDecision": false,
+  "readyToRecordGovernanceDecision": true,
   "governanceDecisionRecorded": false,
   "fullLaunchApproved": false,
-  "publicStatement": "AstraTreasury governance decision recording live precheck is blocked until required evidence and final approvals are present. No governance decision is recorded.",
+  "publicStatement": "AstraTreasury governance decision recording live precheck is ready. This precheck does not record the governance decision.",
   "summary": {
     "totalPrerequisites": 15,
-    "passedPrerequisites": 13,
-    "blockerCount": 2,
+    "passedPrerequisites": 15,
+    "blockerCount": 0,
     "activeIncidents": 0,
     "responseRequired": false,
     "monitorStatus": "PASS"
@@ -29,8 +29,8 @@
     "capabilityMatrixFinalized": true,
     "publicStatusUpdateFinalized": true,
     "voteResultEvidenceImportedAndValidated": true,
-    "signedResolutionEvidenceImportedAndValidated": false,
-    "actionSpecificApprovalRecorded": false,
+    "signedResolutionEvidenceImportedAndValidated": true,
+    "actionSpecificApprovalRecorded": true,
     "governanceDecisionNotAlreadyRecorded": true,
     "fullLaunchNotAlreadyApproved": true,
     "treasuryFundingNotApproved": true,
@@ -41,17 +41,14 @@
     "alertsDoNotRequireResponse": true,
     "mainnetExecutionQueueDisabled": true
   },
-  "blockers": [
-    "signedResolutionEvidenceImportedAndValidated",
-    "actionSpecificApprovalRecorded"
-  ],
+  "blockers": [],
   "currentStatuses": {
     "launchControl": "LAUNCH_CONTROL_READY_RESTRICTED_MODE",
     "capabilityMatrix": "CAPABILITY_MATRIX_FINALIZED_ALL_DISABLED",
     "publicStatusUpdate": "PUBLIC_STATUS_UPDATE_FINALIZED_RESTRICTED_MODE",
-    "actionApproval": "ACTION_SPECIFIC_APPROVAL_PATH_READY_BLOCKED_PENDING_EVIDENCE",
+    "actionApproval": "ACTION_SPECIFIC_GOVERNANCE_DECISION_APPROVAL_RECORDED_READY_FOR_LIVE_PRECHECK",
     "voteResultEvidence": "GOVERNANCE_VOTE_RESULT_EVIDENCE_IMPORT_READY_NO_EVIDENCE",
-    "signedResolutionEvidence": "SIGNED_GOVERNANCE_RESOLUTION_EVIDENCE_IMPORT_READY_NO_EVIDENCE",
+    "signedResolutionEvidence": "SIGNED_GOVERNANCE_RESOLUTION_EVIDENCE_IMPORTED_PENDING_REVIEW",
     "fullLaunch": "FULL_LAUNCH_READINESS_TRACK_OPEN_PLANNING_ONLY",
     "decisionRecording": "FULL_LAUNCH_GOVERNANCE_DECISION_RECORDING_PACKAGE_READY_NOT_RECORDED",
     "treasuryFunding": "TREASURY_FUNDING_READINESS_TRACK_OPEN_NOT_APPROVED",

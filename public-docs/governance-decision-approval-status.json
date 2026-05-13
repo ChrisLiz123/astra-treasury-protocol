@@ -1,7 +1,7 @@
 {
   "schema": "astra-action-specific-governance-decision-approval-status-v0.1",
-  "generatedAt": "2026-05-13T19:16:49.571Z",
-  "status": "ACTION_SPECIFIC_APPROVAL_PATH_READY_BLOCKED_PENDING_EVIDENCE",
+  "generatedAt": "2026-05-13T19:53:53.005Z",
+  "status": "ACTION_SPECIFIC_GOVERNANCE_DECISION_APPROVAL_RECORDED_READY_FOR_LIVE_PRECHECK",
   "selectedAction": {
     "id": "governance-decision-recording",
     "label": "Record final governance decision",
@@ -10,7 +10,7 @@
   },
   "governanceProcessMode": "resolution-only",
   "currentApprovedMode": "restricted-mainnet-operation",
-  "actionSpecificApprovalRecorded": false,
+  "actionSpecificApprovalRecorded": true,
   "governanceDecisionRecorded": false,
   "fullLaunchApproved": false,
   "publicStatement": "AstraTreasury has selected governance decision recording as the first action-specific approval path. The path is ready, but approval remains blocked until vote/result, signed resolution, capability matrix, evidence, and final approval requirements are complete.",
@@ -23,7 +23,7 @@
     "failedCases": 0,
     "activeIncidents": 0,
     "responseRequired": false,
-    "blockerCount": 4
+    "blockerCount": 0
   },
   "clearances": {
     "auditCleared": true,
@@ -32,9 +32,9 @@
   },
   "approvalStatus": {
     "actionSpecificApprovalRequested": false,
-    "actionSpecificApprovalRecorded": false,
+    "actionSpecificApprovalRecorded": true,
     "actionSpecificApprovalExecuted": false,
-    "governanceDecisionRecordingAuthorized": false,
+    "governanceDecisionRecordingAuthorized": true,
     "governanceDecisionRecorded": false,
     "governanceDecisionPublished": false,
     "fullLaunchApproved": false,
@@ -56,20 +56,15 @@
     "activeIncidentsZero": true,
     "governanceDecisionRecordingPackageReady": true,
     "governanceDecisionRecordingAuthorizationPackageReady": true,
-    "signedGovernanceResolutionExists": false,
+    "signedGovernanceResolutionExists": true,
     "voteResultRecorded": true,
-    "resolutionSigningAuthorizationRecorded": false,
+    "resolutionSigningAuthorizationRecorded": true,
     "capabilityMatrixFinalApproved": true,
     "publicStatusUpdateFinalApproved": true,
-    "decisionRecorderAssigned": false,
-    "finalActionApprovalRecorded": false
+    "decisionRecorderAssigned": true,
+    "finalActionApprovalRecorded": true
   },
-  "actionBlockers": [
-    "signedGovernanceResolutionExists",
-    "resolutionSigningAuthorizationRecorded",
-    "decisionRecorderAssigned",
-    "finalActionApprovalRecorded"
-  ],
+  "actionBlockers": [],
   "approvalChecklist": {
     "selectedActionReviewed": false,
     "scopeReviewed": false,
@@ -86,13 +81,13 @@
     "finalActionApprovalRecorded": false
   },
   "draftApprovalRecord": {
-    "decision": "NOT APPROVED",
+    "decision": "APPROVED_FOR_GOVERNANCE_DECISION_RECORDING_ONLY",
     "actionId": "governance-decision-recording",
-    "approvalDate": "",
-    "approver": "TBD",
-    "decisionRecordReference": "TBD",
-    "resolutionReference": "TBD",
-    "voteResult": "TBD",
+    "approvalDate": "2026-05-13T19:53:35.461Z",
+    "approver": "ASTRA-GOV-RES-20260513-001 signed resolution",
+    "decisionRecordReference": "pending-live-recording",
+    "resolutionReference": "/opt/astra-treasury-protocol/reports/governance-resolutions/ASTRA-GOV-RES-20260513-001/resolution.signed.asc",
+    "voteResult": "not-applicable-resolution-only",
     "approvedCapabilities": [],
     "disabledCapabilities": [
       "publicTokenSale",
@@ -101,10 +96,13 @@
       "buybackProgram",
       "mainnetExecutionQueue",
       "paperToOnchainAutomation",
-      "autonomousExecution"
+      "autonomousExecution",
+      "safeTransactionPayloadGeneration",
+      "safeTransactionExecution"
     ],
-    "evidenceReference": "TBD",
-    "publicStatusUpdate": "TBD"
+    "evidenceReference": "reports/action-approvals/governance-decision/action-approval-record.json",
+    "publicStatusUpdate": "public-docs/public-status-update-status.json",
+    "decisionRecorder": "Founder"
   },
   "capabilityApprovals": {
     "publicTokenSaleApproved": false,
@@ -127,17 +125,17 @@
     {
       "id": "ACTION-GOV-DECISION-002",
       "title": "Signed governance resolution evidence status",
-      "expected": "BLOCKED",
-      "actual": "BLOCKED",
-      "reason": "signed governance resolution evidence is not imported and validated",
+      "expected": "SATISFIED",
+      "actual": "SATISFIED",
+      "reason": "signed governance resolution evidence is imported and validated",
       "pass": true
     },
     {
       "id": "ACTION-GOV-DECISION-003",
       "title": "Resolution signing authorization evidence status",
-      "expected": "BLOCKED",
-      "actual": "BLOCKED",
-      "reason": "resolution signing authorization evidence is not imported and validated",
+      "expected": "SATISFIED",
+      "actual": "SATISFIED",
+      "reason": "resolution signing authorization evidence is imported and validated",
       "pass": true
     },
     {
@@ -159,9 +157,9 @@
     {
       "id": "ACTION-GOV-DECISION-006",
       "title": "Action approval recording status",
-      "expected": "BLOCKED",
-      "actual": "BLOCKED",
-      "reason": "this package has not recorded action-specific approval",
+      "expected": "SATISFIED",
+      "actual": "SATISFIED",
+      "reason": "action-specific approval is recorded for governance decision recording",
       "pass": true
     },
     {
@@ -194,7 +192,7 @@
     "capabilityMatrix": "CAPABILITY_MATRIX_FINALIZED_ALL_DISABLED",
     "publicStatusUpdate": "PUBLIC_STATUS_UPDATE_FINALIZED_RESTRICTED_MODE",
     "voteResultEvidence": "GOVERNANCE_VOTE_RESULT_EVIDENCE_IMPORT_READY_NO_EVIDENCE",
-    "signedResolutionEvidence": "SIGNED_GOVERNANCE_RESOLUTION_EVIDENCE_IMPORT_READY_NO_EVIDENCE",
+    "signedResolutionEvidence": "SIGNED_GOVERNANCE_RESOLUTION_EVIDENCE_IMPORTED_PENDING_REVIEW",
     "stabilization": "RESTRICTED_LAUNCH_STABILIZED",
     "fullLaunch": "FULL_LAUNCH_READINESS_TRACK_OPEN_PLANNING_ONLY",
     "decisionRecording": "FULL_LAUNCH_GOVERNANCE_DECISION_RECORDING_PACKAGE_READY_NOT_RECORDED",
@@ -342,18 +340,18 @@
       "name": "ACTION-GOV-DECISION-002: Signed governance resolution evidence status",
       "pass": true,
       "details": {
-        "expected": "BLOCKED",
-        "actual": "BLOCKED",
-        "reason": "signed governance resolution evidence is not imported and validated"
+        "expected": "SATISFIED",
+        "actual": "SATISFIED",
+        "reason": "signed governance resolution evidence is imported and validated"
       }
     },
     {
       "name": "ACTION-GOV-DECISION-003: Resolution signing authorization evidence status",
       "pass": true,
       "details": {
-        "expected": "BLOCKED",
-        "actual": "BLOCKED",
-        "reason": "resolution signing authorization evidence is not imported and validated"
+        "expected": "SATISFIED",
+        "actual": "SATISFIED",
+        "reason": "resolution signing authorization evidence is imported and validated"
       }
     },
     {
@@ -378,9 +376,9 @@
       "name": "ACTION-GOV-DECISION-006: Action approval recording status",
       "pass": true,
       "details": {
-        "expected": "BLOCKED",
-        "actual": "BLOCKED",
-        "reason": "this package has not recorded action-specific approval"
+        "expected": "SATISFIED",
+        "actual": "SATISFIED",
+        "reason": "action-specific approval is recorded for governance decision recording"
       }
     },
     {
