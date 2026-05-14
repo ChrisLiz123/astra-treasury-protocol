@@ -832,6 +832,10 @@ const html = `<!doctype html>
           <strong>DEX source/Safe impact</strong>
           <span>Planning approval only. No funds or Safe payload.</span>
         </a>
+        <a class="link-card" href="/dex-pool-creation-readiness">
+          <strong>DEX pool readiness</strong>
+          <span>Ready for later pool-creation approval. No pool created.</span>
+        </a>
         <a class="link-card" href="/governance-vote-result-evidence">
           <strong>Vote/result evidence</strong>
           <span>Evidence import path. No decision is recorded.</span>

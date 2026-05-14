@@ -428,7 +428,11 @@
     "dex:liquidity-source-safe:validate": "node scripts/validate-dex-liquidity-source-safe-impact-approval.mjs",
     "dex:liquidity-source-safe:status": "node services/dex-liquidity-source-safe-impact/status.mjs",
     "dex:liquidity-source-safe:gate": "npm run dex:liquidity-source-safe:validate && npm run dex:liquidity-source-safe:status",
-    "release:dex-liquidity-source-safe-impact-approval": "bash scripts/release/package-dex-liquidity-source-safe-impact-approval.sh"
+    "release:dex-liquidity-source-safe-impact-approval": "bash scripts/release/package-dex-liquidity-source-safe-impact-approval.sh",
+    "dex:pool-creation-readiness:validate": "node scripts/validate-dex-pool-creation-readiness.mjs",
+    "dex:pool-creation-readiness:status": "node services/dex-pool-creation-readiness/status.mjs",
+    "dex:pool-creation-readiness:gate": "npm run dex:pool-creation-readiness:validate && npm run dex:pool-creation-readiness:status",
+    "release:dex-pool-creation-readiness": "bash scripts/release/package-dex-pool-creation-readiness.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",
