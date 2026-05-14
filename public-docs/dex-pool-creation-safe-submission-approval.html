@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AstraTreasury DEX Safe Submission Approval</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #08111f;
+      --surface: #0e1a2b;
+      --border: rgba(148, 163, 184, 0.2);
+      --text: #edf4fb;
+      --muted: #9aaec4;
+      --blue: #67a7ff;
+      --yellow: #f4c35f;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    body { margin: 0; background: linear-gradient(180deg, #07101d, var(--bg)); color: var(--text); }
+    a { color: var(--blue); text-decoration: none; }
+
+    main {
+      width: min(1120px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 44px 0 72px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 28px;
+      box-shadow: 0 22px 70px rgba(0,0,0,.28);
+      margin-bottom: 18px;
+    }
+
+    h1 { margin: 0 0 10px; font-size: 42px; letter-spacing: -1.2px; }
+    h2 { margin: 0 0 14px; font-size: 24px; }
+    p { color: var(--muted); line-height: 1.65; }
+
+    .badge {
+      display: inline-flex;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(244,195,95,.08);
+      border: 1px solid rgba(244,195,95,.22);
+      color: var(--yellow);
+      font-weight: 850;
+      margin-bottom: 16px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      overflow: hidden;
+      margin-bottom: 16px;
+    }
+
+    th, td {
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--border);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      color: var(--muted);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      background: rgba(255,255,255,.03);
+    }
+
+    tr:last-child td { border-bottom: 0; }
+
+    code {
+      color: var(--muted);
+      overflow-wrap: anywhere;
+      font-size: 12px;
+    }
+
+    .notice {
+      padding: 16px;
+      border-radius: 16px;
+      background: rgba(244,195,95,.08);
+      border: 1px solid rgba(244,195,95,.22);
+      color: #f7d99a;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+<main>
+  <section class="card">
+    <div class="badge">Safe submission approval · not submitted</div>
+    <h1>DEX Safe Submission Approval</h1>
+    <p>AstraTreasury DEX pool creation Safe submission is approved for a later submission step only. The payload has not been submitted to Safe, not executed, no pool is created, no liquidity is added, no funds are moved, and public trading is not approved.</p>
+    <p><strong>Approval hash:</strong> <code>71114dd9911fb5c2c4617a0b4ec25bb615a33c7c00101340046df9ab0172d536</code></p>
+  </section>
+
+  <section class="card">
+    <h2>Approval summary</h2>
+    <table>
+      <thead><tr><th>Field</th><th>Value</th></tr></thead>
+      <tbody><tr><td>recordedAt</td><td>2026-05-14T10:50:38.082Z</td></tr><tr><td>approver</td><td>Founder</td></tr><tr><td>approvalReference</td><td>ASTRA-20160514-2</td></tr><tr><td>payloadHash</td><td>a809c3b6236519e8fe850415c9fd5bccd268b38f15a339f2d8b80673de976787</td></tr><tr><td>safeAddress</td><td>0xe2554515AaC8a3835326a4Ed5e9F44c319BE335C</td></tr><tr><td>targetAddress</td><td>0x03a520b32C04BF3bEEf7BEb72E919cf822Ed34f1</td></tr><tr><td>functionSignature</td><td>createAndInitializePoolIfNecessary(address,address,uint24,uint160)</td></tr><tr><td>safeSubmissionApproved</td><td>true</td></tr><tr><td>safeTransactionSubmitted</td><td>false</td></tr><tr><td>safeTransactionExecuted</td><td>false</td></tr><tr><td>poolCreated</td><td>false</td></tr><tr><td>liquidityAdded</td><td>false</td></tr><tr><td>fundsMoved</td><td>false</td></tr><tr><td>publicTradingApproved</td><td>false</td></tr><tr><td>fullLaunchApproved</td><td>false</td></tr></tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>Required before actual Safe submission</h2>
+    <table>
+      <thead><tr><th>Requirement</th><th>Status</th></tr></thead>
+      <tbody><tr><td>payloadVerificationReviewComplete</td><td>Complete</td></tr><tr><td>freshNoPoolRecheckImmediatelyBeforeSubmission</td><td>Complete</td></tr><tr><td>safeSubmissionApprovalRecorded</td><td>Complete</td></tr><tr><td>safeExecutionApprovalRecorded</td><td>Required / pending</td></tr><tr><td>operatorSafeSubmissionCommandReviewed</td><td>Required / pending</td></tr><tr><td>publicStatusUpdatePrepared</td><td>Required / pending</td></tr></tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>Checks</h2>
+    <table>
+      <thead><tr><th>Check</th><th>Status</th><th>Details</th></tr></thead>
+      <tbody><tr><td>Framework prepared</td><td>PASS</td><td><code>{&quot;approvalPrepared&quot;:true,&quot;approvalOnly&quot;:true}</code></td></tr><tr><td>Payload verification complete</td><td>PASS</td><td><code>{&quot;status&quot;:&quot;DEX_POOL_CREATION_SAFE_PAYLOAD_VERIFICATION_REVIEW_COMPLETE_NOT_EXECUTED&quot;}</code></td></tr><tr><td>Payload generated but not executed</td><td>PASS</td><td><code>{&quot;status&quot;:&quot;DEX_POOL_CREATION_SAFE_PAYLOAD_GENERATED_NOT_EXECUTED&quot;}</code></td></tr><tr><td>Payload generation approval recorded</td><td>PASS</td><td><code>{&quot;status&quot;:&quot;DEX_POOL_CREATION_SAFE_PAYLOAD_GENERATION_APPROVED_NO_PAYLOAD_GENERATED&quot;}</code></td></tr><tr><td>Fresh no-pool recheck complete</td><td>PASS</td><td><code>{&quot;status&quot;:&quot;DEX_POOL_EXISTENCE_FACTORY_PRECHECK_COMPLETE_NO_POOL_FOUND&quot;,&quot;poolExists&quot;:false}</code></td></tr><tr><td>Payload not submitted or executed</td><td>PASS</td><td><code>{&quot;safeTransactionSubmitted&quot;:false,&quot;safeTransactionExecuted&quot;:false}</code></td></tr><tr><td>Pool/liquidity/funds unchanged</td><td>PASS</td><td><code>{&quot;poolCreated&quot;:false,&quot;liquidityAdded&quot;:false,&quot;fundsMoved&quot;:false}</code></td></tr><tr><td>Full launch not approved</td><td>PASS</td><td><code>{&quot;fullLaunchApproved&quot;:false}</code></td></tr><tr><td>Treasury funding not approved/executed</td><td>PASS</td><td><code>{&quot;treasuryFundingApproved&quot;:false,&quot;treasuryFundingExecuted&quot;:false}</code></td></tr><tr><td>Execution queue disabled</td><td>PASS</td><td><code>{&quot;mode&quot;:&quot;MAINNET_EXECUTION_QUEUE_DISABLED&quot;}</code></td></tr><tr><td>Approval record matches config</td><td>PASS</td><td><code>{&quot;approvalRecordPresent&quot;:true,&quot;configSafeSubmissionApprovalRecorded&quot;:true,&quot;configSafeSubmissionApproved&quot;:true}</code></td></tr><tr><td>No forbidden submission/execution artifacts present</td><td>PASS</td><td><code>{&quot;forbiddenArtifactsPresent&quot;:[]}</code></td></tr></tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>Current statuses</h2>
+    <table>
+      <thead><tr><th>Area</th><th>Status</th></tr></thead>
+      <tbody><tr><td>dexPoolCreationSafePayloadVerification</td><td>Dex Pool Creation Safe Payload Verification Review Complete Not Executed</td></tr><tr><td>dexPoolCreationSafePayloadGeneration</td><td>Dex Pool Creation Safe Payload Generated Not Executed</td></tr><tr><td>dexPoolCreationSafePayloadGenerationApproval</td><td>Dex Pool Creation Safe Payload Generation Approved No Payload Generated</td></tr><tr><td>dexPoolExistencePrecheck</td><td>Dex Pool Existence Factory Precheck Complete No Pool Found</td></tr><tr><td>fullLaunch</td><td>Full Launch Readiness Track Open Planning Only</td></tr><tr><td>treasuryFunding</td><td>Treasury Funding Readiness Track Open Not Approved</td></tr><tr><td>mainnetExecution</td><td>Mainnet Execution Queue Disabled</td></tr></tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>Important</h2>
+    <div class="notice">
+      This page records approval for a later Safe submission step only. It does not submit to Safe,
+      execute a transaction, create a pool, add liquidity, move funds, activate a buy page, or approve public trading.
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Public API</h2>
+    <p><a href="/api/public/dex-pool-creation-safe-submission-approval">/api/public/dex-pool-creation-safe-submission-approval</a></p>
+    <p><a href="/dex-pool-creation-safe-payload-verification">DEX Safe Payload Verification</a></p>
+    <p><a href="/dex-pool-creation-safe-payload-generation">DEX Safe Payload Generation</a></p>
+    <p><a href="/">Back to homepage</a></p>
+  </section>
+</main>
+</body>
+</html>

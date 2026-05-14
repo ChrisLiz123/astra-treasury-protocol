@@ -488,7 +488,12 @@
     "dex:pool-creation-safe-payload-verification:validate": "node scripts/validate-dex-pool-creation-safe-payload-verification.mjs",
     "dex:pool-creation-safe-payload-verification:status": "node services/dex-pool-creation-safe-payload-verification/status.mjs",
     "dex:pool-creation-safe-payload-verification:gate": "npm run dex:pool-creation-safe-payload-verification:verify && npm run dex:pool-creation-safe-payload-verification:validate && npm run dex:pool-creation-safe-payload-verification:status",
-    "release:dex-pool-creation-safe-payload-verification-review": "bash scripts/release/package-dex-pool-creation-safe-payload-verification-review.sh"
+    "release:dex-pool-creation-safe-payload-verification-review": "bash scripts/release/package-dex-pool-creation-safe-payload-verification-review.sh",
+    "dex:pool-creation-safe-submission-approval:record": "node scripts/record-dex-pool-creation-safe-submission-approval.mjs",
+    "dex:pool-creation-safe-submission-approval:validate": "node scripts/validate-dex-pool-creation-safe-submission-approval.mjs",
+    "dex:pool-creation-safe-submission-approval:status": "node services/dex-pool-creation-safe-submission-approval/status.mjs",
+    "dex:pool-creation-safe-submission-approval:gate": "npm run dex:pool-existence-precheck:gate && npm run dex:pool-creation-safe-submission-approval:validate && npm run dex:pool-creation-safe-submission-approval:status",
+    "release:dex-pool-creation-safe-submission-approval": "bash scripts/release/package-dex-pool-creation-safe-submission-approval.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",

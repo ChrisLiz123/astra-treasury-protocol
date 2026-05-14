@@ -1,0 +1,267 @@
+{
+  "schema": "astra-dex-pool-creation-safe-submission-approval-status-v0.1",
+  "generatedAt": "2026-05-14T10:53:36.090Z",
+  "status": "DEX_POOL_CREATION_SAFE_SUBMISSION_APPROVED_NOT_SUBMITTED",
+  "currentApprovedMode": "restricted-mainnet-operation",
+  "publicStatement": "AstraTreasury DEX pool creation Safe submission is approved for a later submission step only. The payload has not been submitted to Safe, not executed, no pool is created, no liquidity is added, no funds are moved, and public trading is not approved.",
+  "summary": {
+    "approvalRecordPresent": true,
+    "safeSubmissionApproved": true,
+    "safeTransactionSubmitted": false,
+    "safeTransactionExecuted": false,
+    "poolCreated": false,
+    "liquidityAdded": false,
+    "fundsMoved": false,
+    "publicTradingApproved": false,
+    "nextRecommendedMilestone": "DEX Pool Creation Safe Submission Preparation",
+    "artifactCount": 15,
+    "missingArtifactCount": 0,
+    "totalChecks": 12,
+    "passed": 12,
+    "failed": 0
+  },
+  "safeSubmissionApproval": {
+    "approvalHash": "71114dd9911fb5c2c4617a0b4ec25bb615a33c7c00101340046df9ab0172d536",
+    "hashAlgorithm": "SHA-256",
+    "approvalSummary": {
+      "recordedAt": "2026-05-14T10:50:38.082Z",
+      "approver": "Founder",
+      "approvalReference": "ASTRA-20160514-2",
+      "payloadHash": "a809c3b6236519e8fe850415c9fd5bccd268b38f15a339f2d8b80673de976787",
+      "safeAddress": "0xe2554515AaC8a3835326a4Ed5e9F44c319BE335C",
+      "targetAddress": "0x03a520b32C04BF3bEEf7BEb72E919cf822Ed34f1",
+      "functionSignature": "createAndInitializePoolIfNecessary(address,address,uint24,uint160)",
+      "safeSubmissionApproved": true,
+      "safeTransactionSubmitted": false,
+      "safeTransactionExecuted": false,
+      "poolCreated": false,
+      "liquidityAdded": false,
+      "fundsMoved": false,
+      "publicTradingApproved": false,
+      "fullLaunchApproved": false
+    },
+    "requiredBeforeActualSafeSubmission": {
+      "payloadVerificationReviewComplete": true,
+      "freshNoPoolRecheckImmediatelyBeforeSubmission": true,
+      "safeSubmissionApprovalRecorded": true,
+      "safeExecutionApprovalRecorded": false,
+      "operatorSafeSubmissionCommandReviewed": false,
+      "publicStatusUpdatePrepared": false
+    },
+    "hardStops": {
+      "safeTransactionSubmitted": false,
+      "safeTransactionQueued": false,
+      "safeTransactionExecuted": false,
+      "poolCreated": false,
+      "liquidityAdded": false,
+      "directExecutionSubmitted": false,
+      "publicTradingEnabled": false,
+      "buyPageActivated": false,
+      "treasuryFundsMoved": false,
+      "fullLaunchApproved": false
+    },
+    "artifactHashes": [
+      {
+        "path": "configs/dex-pool-creation-safe-submission-approval.config.json",
+        "bytes": 3246,
+        "sha256": "c85a46d9a04d99a85bbaa0c6dfc4892cc828c64ba46dc83b1b9887663edf2f5b"
+      },
+      {
+        "path": "docs/dex-pool-creation-safe-submission-approval/DEX_POOL_CREATION_SAFE_SUBMISSION_APPROVAL.md",
+        "bytes": 1009,
+        "sha256": "39258d564c7da2718026899de184704310146bdda4db6513a0e08f67b35af58e"
+      },
+      {
+        "path": "docs/dex-pool-creation-safe-submission-approval/DEX_POOL_CREATION_SAFE_SUBMISSION_APPROVAL_CHECKLIST.md",
+        "bytes": 1001,
+        "sha256": "bfdbaecaf267e05cb8bf39ed26b0cb34793d441c66ea7b970749842367023da4"
+      },
+      {
+        "path": "docs/dex-pool-creation-safe-submission-approval/DEX_POOL_CREATION_SAFE_SUBMISSION_BOUNDARIES.md",
+        "bytes": 517,
+        "sha256": "6584e0d781181f1f264023878f4c2d1066614aa51c60a142d1b77fdc740a70ce"
+      },
+      {
+        "path": "docs/dex-pool-creation-safe-submission-approval/DEX_POOL_CREATION_SAFE_SUBMISSION_APPROVAL_RUNBOOK.md",
+        "bytes": 424,
+        "sha256": "9754a04dc0c6a6988003301c29261ae1130022ee6077968ad961c9cd0bf72909"
+      },
+      {
+        "path": "scripts/record-dex-pool-creation-safe-submission-approval.mjs",
+        "bytes": 11754,
+        "sha256": "5ed5932077da7cc9734db47fbd9429e3843b99668bd09130592fd135c5e6dd36"
+      },
+      {
+        "path": "reports/dex-pool-creation-safe-payload-generation/generated/dex-pool-creation-safe-payload.json",
+        "bytes": 2750,
+        "sha256": "64a77cf8c0a63f8b4f27cbabf37c7b3f2c0ac8d42ccbc6096f438eb2077dfc8d"
+      },
+      {
+        "path": "public-docs/dex-pool-creation-safe-payload-verification-status.json",
+        "bytes": 7167,
+        "sha256": "78afdb22df85f9b7e97b333e78af5f34c8067d9900dae973c073363b1c901afa"
+      },
+      {
+        "path": "public-docs/dex-pool-creation-safe-payload-generation-status.json",
+        "bytes": 6809,
+        "sha256": "ece7cbc49e765c63333529073c17370cbac1b97c5074267dfe253981c62f59a6"
+      },
+      {
+        "path": "public-docs/dex-pool-creation-safe-payload-generation-approval-status.json",
+        "bytes": 20607,
+        "sha256": "28e472acee842908632429015be3aa09ddf22adfc5eee40877d9614401a168e7"
+      },
+      {
+        "path": "public-docs/dex-pool-existence-precheck-status.json",
+        "bytes": 6805,
+        "sha256": "c5eb63059936f56099e8f765c6993ad1d332f23a5e5430e391b2aeb11c381990"
+      },
+      {
+        "path": "public-docs/full-launch-status.json",
+        "bytes": 2717,
+        "sha256": "16dec6e30bbec9b9692ea41c76cac4b798ef2c17ac5adb49a9fffa209e1a9cdc"
+      },
+      {
+        "path": "public-docs/treasury-funding-status.json",
+        "bytes": 2489,
+        "sha256": "d87c2c774d0f782c4ca38857d3c77f2cf06037218af677ad9cdd365ba64c5e91"
+      },
+      {
+        "path": "public-docs/mainnet-execution-status.json",
+        "bytes": 1320,
+        "sha256": "d625479b212b3e8b7e7e0aaf55420d758602401425b503aa3323b3822fda860e"
+      },
+      {
+        "path": "reports/dex-pool-creation-safe-submission-approval/dex-pool-creation-safe-submission-approval-record.json",
+        "bytes": 2031,
+        "sha256": "7cafe493b92f7cf0d882246df46d00c0f9df116f5129b66ac0d9ba96c3e0c871"
+      }
+    ]
+  },
+  "checks": [
+    {
+      "name": "Framework prepared",
+      "pass": true,
+      "details": {
+        "approvalPrepared": true,
+        "approvalOnly": true
+      }
+    },
+    {
+      "name": "Payload verification complete",
+      "pass": true,
+      "details": {
+        "status": "DEX_POOL_CREATION_SAFE_PAYLOAD_VERIFICATION_REVIEW_COMPLETE_NOT_EXECUTED"
+      }
+    },
+    {
+      "name": "Payload generated but not executed",
+      "pass": true,
+      "details": {
+        "status": "DEX_POOL_CREATION_SAFE_PAYLOAD_GENERATED_NOT_EXECUTED"
+      }
+    },
+    {
+      "name": "Payload generation approval recorded",
+      "pass": true,
+      "details": {
+        "status": "DEX_POOL_CREATION_SAFE_PAYLOAD_GENERATION_APPROVED_NO_PAYLOAD_GENERATED"
+      }
+    },
+    {
+      "name": "Fresh no-pool recheck complete",
+      "pass": true,
+      "details": {
+        "status": "DEX_POOL_EXISTENCE_FACTORY_PRECHECK_COMPLETE_NO_POOL_FOUND",
+        "poolExists": false
+      }
+    },
+    {
+      "name": "Payload not submitted or executed",
+      "pass": true,
+      "details": {
+        "safeTransactionSubmitted": false,
+        "safeTransactionExecuted": false
+      }
+    },
+    {
+      "name": "Pool/liquidity/funds unchanged",
+      "pass": true,
+      "details": {
+        "poolCreated": false,
+        "liquidityAdded": false,
+        "fundsMoved": false
+      }
+    },
+    {
+      "name": "Full launch not approved",
+      "pass": true,
+      "details": {
+        "fullLaunchApproved": false
+      }
+    },
+    {
+      "name": "Treasury funding not approved/executed",
+      "pass": true,
+      "details": {
+        "treasuryFundingApproved": false,
+        "treasuryFundingExecuted": false
+      }
+    },
+    {
+      "name": "Execution queue disabled",
+      "pass": true,
+      "details": {
+        "mode": "MAINNET_EXECUTION_QUEUE_DISABLED"
+      }
+    },
+    {
+      "name": "Approval record matches config",
+      "pass": true,
+      "details": {
+        "approvalRecordPresent": true,
+        "configSafeSubmissionApprovalRecorded": true,
+        "configSafeSubmissionApproved": true
+      }
+    },
+    {
+      "name": "No forbidden submission/execution artifacts present",
+      "pass": true,
+      "details": {
+        "forbiddenArtifactsPresent": []
+      }
+    }
+  ],
+  "failures": [],
+  "missingArtifacts": [],
+  "currentStatuses": {
+    "dexPoolCreationSafePayloadVerification": "DEX_POOL_CREATION_SAFE_PAYLOAD_VERIFICATION_REVIEW_COMPLETE_NOT_EXECUTED",
+    "dexPoolCreationSafePayloadGeneration": "DEX_POOL_CREATION_SAFE_PAYLOAD_GENERATED_NOT_EXECUTED",
+    "dexPoolCreationSafePayloadGenerationApproval": "DEX_POOL_CREATION_SAFE_PAYLOAD_GENERATION_APPROVED_NO_PAYLOAD_GENERATED",
+    "dexPoolExistencePrecheck": "DEX_POOL_EXISTENCE_FACTORY_PRECHECK_COMPLETE_NO_POOL_FOUND",
+    "fullLaunch": "FULL_LAUNCH_READINESS_TRACK_OPEN_PLANNING_ONLY",
+    "treasuryFunding": "TREASURY_FUNDING_READINESS_TRACK_OPEN_NOT_APPROVED",
+    "mainnetExecution": "MAINNET_EXECUTION_QUEUE_DISABLED"
+  },
+  "restrictions": {
+    "safeTransactionSubmission": false,
+    "safeTransactionExecution": false,
+    "poolCreationExecution": false,
+    "liquidityProvision": false,
+    "publicTrading": false,
+    "buyPageActivation": false,
+    "realTreasuryFunding": false,
+    "fullLaunch": false
+  },
+  "safety": {
+    "sendsTransactions": false,
+    "submitsToSafe": false,
+    "queuesSafeTransaction": false,
+    "executesSafeTransaction": false,
+    "createsLiquidityPool": false,
+    "addsLiquidity": false,
+    "movesFunds": false,
+    "activatesBuyPage": false,
+    "approvesFullLaunch": false
+  }
+}
