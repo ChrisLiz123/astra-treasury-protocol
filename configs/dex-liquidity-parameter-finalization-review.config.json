@@ -1,0 +1,59 @@
+{
+  "schema": "astra-dex-liquidity-parameter-finalization-review-config-v0.1",
+  "status": "dex-liquidity-parameter-finalization-review",
+  "network": {
+    "name": "Base Mainnet",
+    "chainId": 8453
+  },
+  "currentApprovedMode": "restricted-mainnet-operation",
+  "selectedPublicPurchasePath": "dex-liquidity-pool-trading",
+  "candidateVenue": "Uniswap on Base",
+  "finalizationReviewPrepared": true,
+  "finalizationReviewOnly": true,
+  "selectionRequiredForApproval": true,
+  "parameterSelectionApproved": false,
+  "parametersFinalized": false,
+  "dexLiquidityPathApproved": false,
+  "liquidityPoolCreationApproved": false,
+  "liquidityProvisionApproved": false,
+  "publicTradingApproved": false,
+  "publicTradingLinkApproved": false,
+  "buyPageActivationApproved": false,
+  "safePayloadGenerationApproved": false,
+  "safeTransactionExecutionApproved": false,
+  "treasuryFundingApproved": false,
+  "fullLaunchApproved": false,
+  "reviewReadinessCriteria": {
+    "dexLiquidityPathSelected": true,
+    "parameterReviewReady": true,
+    "parameterSelectionImportedIfPresent": true,
+    "restrictedModeFinalReleaseReady": true,
+    "governanceDecisionRecorded": true,
+    "capabilityMatrixAllDisabled": true,
+    "mainnetMonitorPassing": true,
+    "activeIncidentsZero": true,
+    "executionQueueDisabled": true,
+    "safePayloadNotGenerated": true,
+    "treasuryFundingNotApproved": true
+  },
+  "requiredBeforeParameterApproval": {
+    "legalComplianceFinalCheck": false,
+    "liquidityProviderSourceApproved": false,
+    "treasuryAssetUseApproved": false,
+    "safeReviewCompletedIfNeeded": false,
+    "publicRiskDisclosureApproved": false,
+    "publicStatusUpdatePrepared": false,
+    "actionSpecificApprovalRecorded": false
+  },
+  "hardStops": {
+    "poolCreated": false,
+    "liquidityAdded": false,
+    "safePayloadGenerated": false,
+    "safeTransactionExecuted": false,
+    "publicTradingEnabled": false,
+    "buyPageActivated": false,
+    "treasuryFundsMoved": false,
+    "fullLaunchApproved": false
+  },
+  "hardRule": "This finalization review does not approve or finalize parameters, create a pool, add liquidity, approve public trading, generate a Safe payload, move funds, activate a buy page, or approve full launch."
+}
