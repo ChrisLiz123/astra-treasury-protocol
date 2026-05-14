@@ -468,7 +468,22 @@
     "dex:pool-creation-factory-router:validate": "node scripts/validate-dex-pool-creation-factory-router-execution-path.mjs",
     "dex:pool-creation-factory-router:status": "node services/dex-pool-creation-factory-router-review/status.mjs",
     "dex:pool-creation-factory-router:gate": "npm run dex:pool-creation-sqrtprice:gate && npm run dex:pool-creation-factory-router:review && npm run dex:pool-creation-factory-router:validate && npm run dex:pool-creation-factory-router:status",
-    "release:dex-pool-creation-factory-router-execution-path-review": "bash scripts/release/package-dex-pool-creation-factory-router-execution-path-review.sh"
+    "release:dex-pool-creation-factory-router-execution-path-review": "bash scripts/release/package-dex-pool-creation-factory-router-execution-path-review.sh",
+    "dex:pool-creation-safe-owners:review": "node scripts/review-dex-pool-creation-safe-owners-threshold.mjs",
+    "dex:pool-creation-safe-owners:validate": "node scripts/validate-dex-pool-creation-safe-owners-threshold.mjs",
+    "dex:pool-creation-safe-owners:status": "node services/dex-pool-creation-safe-owners-threshold/status.mjs",
+    "dex:pool-creation-safe-owners:gate": "npm run dex:pool-creation-safe-owners:review && npm run dex:pool-creation-safe-owners:validate && npm run dex:pool-creation-safe-owners:status",
+    "release:dex-pool-creation-safe-owners-threshold-review": "bash scripts/release/package-dex-pool-creation-safe-owners-threshold-review.sh",
+    "dex:pool-creation-safe-payload-generation-approval:record": "node scripts/record-dex-pool-creation-safe-payload-generation-approval.mjs",
+    "dex:pool-creation-safe-payload-generation-approval:validate": "node scripts/validate-dex-pool-creation-safe-payload-generation-approval.mjs",
+    "dex:pool-creation-safe-payload-generation-approval:status": "node services/dex-pool-creation-safe-payload-generation-approval/status.mjs",
+    "dex:pool-creation-safe-payload-generation-approval:gate": "npm run dex:pool-existence-precheck:gate && npm run dex:pool-creation-safe-payload-generation-approval:validate && npm run dex:pool-creation-safe-payload-generation-approval:status",
+    "release:dex-pool-creation-safe-payload-generation-approval": "bash scripts/release/package-dex-pool-creation-safe-payload-generation-approval.sh",
+    "dex:pool-creation-safe-payload-generation:generate": "node scripts/generate-dex-pool-creation-safe-payload.mjs",
+    "dex:pool-creation-safe-payload-generation:validate": "node scripts/validate-dex-pool-creation-safe-payload-generation.mjs",
+    "dex:pool-creation-safe-payload-generation:status": "node services/dex-pool-creation-safe-payload-generation/status.mjs",
+    "dex:pool-creation-safe-payload-generation:gate": "npm run dex:pool-creation-safe-payload-generation:validate && npm run dex:pool-creation-safe-payload-generation:status",
+    "release:dex-pool-creation-safe-payload-generation": "bash scripts/release/package-dex-pool-creation-safe-payload-generation.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",

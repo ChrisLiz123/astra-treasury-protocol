@@ -868,6 +868,18 @@ const html = `<!doctype html>
           <strong>DEX factory/router review</strong>
           <span>Execution path review. No calldata or payload.</span>
         </a>
+        <a class="link-card" href="/dex-pool-creation-safe-owners-threshold">
+          <strong>DEX Safe owners/threshold</strong>
+          <span>Safe account review. No payload generated.</span>
+        </a>
+        <a class="link-card" href="/dex-pool-creation-safe-payload-generation-approval">
+          <strong>DEX Safe payload generation approval</strong>
+          <span>Generation approved. No payload generated yet.</span>
+        </a>
+        <a class="link-card" href="/dex-pool-creation-safe-payload-generation">
+          <strong>DEX Safe payload generation</strong>
+          <span>Local payload generated. Not submitted or executed.</span>
+        </a>
         <a class="link-card" href="/governance-vote-result-evidence">
           <strong>Vote/result evidence</strong>
           <span>Evidence import path. No decision is recorded.</span>
