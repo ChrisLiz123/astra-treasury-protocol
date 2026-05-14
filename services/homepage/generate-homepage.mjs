@@ -892,6 +892,10 @@ const html = `<!doctype html>
           <strong>DEX Safe submission preparation</strong>
           <span>Candidate prepared. Not submitted or executed.</span>
         </a>
+        <a class="link-card" href="/dex-pool-creation-safe-submission-dry-run">
+          <strong>DEX Safe submission dry run</strong>
+          <span>Operator command review. Not submitted.</span>
+        </a>
         <a class="link-card" href="/governance-vote-result-evidence">
           <strong>Vote/result evidence</strong>
           <span>Evidence import path. No decision is recorded.</span>

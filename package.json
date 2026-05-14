@@ -498,7 +498,12 @@
     "dex:pool-creation-safe-submission-preparation:validate": "node scripts/validate-dex-pool-creation-safe-submission-preparation.mjs",
     "dex:pool-creation-safe-submission-preparation:status": "node services/dex-pool-creation-safe-submission-preparation/status.mjs",
     "dex:pool-creation-safe-submission-preparation:gate": "npm run dex:pool-existence-precheck:gate && npm run dex:pool-creation-safe-submission-preparation:prepare && npm run dex:pool-creation-safe-submission-preparation:validate && npm run dex:pool-creation-safe-submission-preparation:status",
-    "release:dex-pool-creation-safe-submission-preparation": "bash scripts/release/package-dex-pool-creation-safe-submission-preparation.sh"
+    "release:dex-pool-creation-safe-submission-preparation": "bash scripts/release/package-dex-pool-creation-safe-submission-preparation.sh",
+    "dex:pool-creation-safe-submission-dry-run:prepare": "node scripts/prepare-dex-pool-creation-safe-submission-dry-run.mjs",
+    "dex:pool-creation-safe-submission-dry-run:validate": "node scripts/validate-dex-pool-creation-safe-submission-dry-run.mjs",
+    "dex:pool-creation-safe-submission-dry-run:status": "node services/dex-pool-creation-safe-submission-dry-run/status.mjs",
+    "dex:pool-creation-safe-submission-dry-run:gate": "npm run dex:pool-existence-precheck:gate && npm run dex:pool-creation-safe-submission-dry-run:prepare && npm run dex:pool-creation-safe-submission-dry-run:validate && npm run dex:pool-creation-safe-submission-dry-run:status",
+    "release:dex-pool-creation-safe-submission-dry-run-review": "bash scripts/release/package-dex-pool-creation-safe-submission-dry-run-review.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",

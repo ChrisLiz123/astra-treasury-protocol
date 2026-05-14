@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AstraTreasury DEX Safe Submission Dry Run</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #08111f;
+      --surface: #0e1a2b;
+      --border: rgba(148, 163, 184, 0.2);
+      --text: #edf4fb;
+      --muted: #9aaec4;
+      --blue: #67a7ff;
+      --yellow: #f4c35f;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    body { margin: 0; background: linear-gradient(180deg, #07101d, var(--bg)); color: var(--text); }
+    a { color: var(--blue); text-decoration: none; }
+
+    main {
+      width: min(1120px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 44px 0 72px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 28px;
+      box-shadow: 0 22px 70px rgba(0,0,0,.28);
+      margin-bottom: 18px;
+    }
+
+    h1 { margin: 0 0 10px; font-size: 42px; letter-spacing: -1.2px; }
+    h2 { margin: 0 0 14px; font-size: 24px; }
+    p { color: var(--muted); line-height: 1.65; }
+
+    .badge {
+      display: inline-flex;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(244,195,95,.08);
+      border: 1px solid rgba(244,195,95,.22);
+      color: var(--yellow);
+      font-weight: 850;
+      margin-bottom: 16px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      overflow: hidden;
+      margin-bottom: 16px;
+    }
+
+    th, td {
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--border);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      color: var(--muted);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      background: rgba(255,255,255,.03);
+    }
+
+    tr:last-child td { border-bottom: 0; }
+
+    code {
+      color: var(--muted);
+      overflow-wrap: anywhere;
+      font-size: 12px;
+    }
+
+    .notice {
+      padding: 16px;
+      border-radius: 16px;
+      background: rgba(244,195,95,.08);
+      border: 1px solid rgba(244,195,95,.22);
+      color: #f7d99a;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+<main>
+  <section class="card">
+    <div class="badge">Safe submission dry run · not submitted</div>
+    <h1>DEX Safe Submission Dry Run</h1>
+    <p>AstraTreasury completed the DEX pool creation Safe submission dry run and operator command review. No Safe API call was made, the Safe UI was not opened by automation, the transaction was not submitted, not queued, not executed, no pool is created, no liquidity is added, no funds are moved, and public trading is not approved.</p>
+    <p><strong>Dry run hash:</strong> <code>b7dceb337039f21f778663839508ae706cfc54055514dd80cc1456538e593bfc</code></p>
+  </section>
+
+  <section class="card">
+    <h2>Summary</h2>
+    <table>
+      <thead><tr><th>Field</th><th>Value</th></tr></thead>
+      <tbody><tr><td>dryRunReady</td><td>true</td></tr><tr><td>payloadHash</td><td>a809c3b6236519e8fe850415c9fd5bccd268b38f15a339f2d8b80673de976787</td></tr><tr><td>safeAddress</td><td>0xe2554515AaC8a3835326a4Ed5e9F44c319BE335C</td></tr><tr><td>targetAddress</td><td>0x03a520b32C04BF3bEEf7BEb72E919cf822Ed34f1</td></tr><tr><td>dataHash</td><td>405eb9864e347427fa8187ce77efe39dddd03b55bfa67c3c09113faac90524ab</td></tr><tr><td>callsSafeTransactionService</td><td>false</td></tr><tr><td>safeUiOpenedByAutomation</td><td>false</td></tr><tr><td>safeTransactionSubmitted</td><td>false</td></tr><tr><td>safeTransactionQueued</td><td>false</td></tr><tr><td>safeTransactionExecuted</td><td>false</td></tr><tr><td>poolCreated</td><td>false</td></tr><tr><td>liquidityAdded</td><td>false</td></tr><tr><td>fundsMoved</td><td>false</td></tr><tr><td>publicTradingApproved</td><td>false</td></tr><tr><td>nextRecommendedMilestone</td><td>DEX Pool Creation Safe Submission Execution Approval</td></tr></tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>Candidate review</h2>
+    <table>
+      <thead><tr><th>Field</th><th>Value</th></tr></thead>
+      <tbody><tr><td>chainId</td><td>8453</td></tr><tr><td>safeAddress</td><td>0xe2554515AaC8a3835326a4Ed5e9F44c319BE335C</td></tr><tr><td>to</td><td>0x03a520b32C04BF3bEEf7BEb72E919cf822Ed34f1</td></tr><tr><td>value</td><td>0</td></tr><tr><td>dataHash</td><td>405eb9864e347427fa8187ce77efe39dddd03b55bfa67c3c09113faac90524ab</td></tr><tr><td>dataBytes</td><td>132</td></tr><tr><td>operation</td><td>CALL</td></tr><tr><td>operationValue</td><td>0</td></tr><tr><td>functionSelector</td><td>0x13ead562</td></tr><tr><td>functionSignature</td><td>createAndInitializePoolIfNecessary(address,address,uint24,uint160)</td></tr><tr><td>payloadHashMatches</td><td>true</td></tr><tr><td>calldataMatchesPayload</td><td>true</td></tr></tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>Operator command review</h2>
+    <table>
+      <thead><tr><th>Field</th><th>Value</th></tr></thead>
+      <tbody><tr><td>reviewOnly</td><td>true</td></tr><tr><td>safeTransactionServiceApiCallMade</td><td>false</td></tr><tr><td>safeUiOpenedByAutomation</td><td>false</td></tr><tr><td>apiKeyRequiredForThisDryRun</td><td>false</td></tr><tr><td>submissionMethodForLaterStep</td><td>Operator-reviewed manual Safe UI or Safe Transaction Service/API Kit flow</td></tr><tr><td>commandTemplateStatus</td><td>review-only-not-executable</td></tr><tr><td>commandTemplate</td><td>Review the Safe address, target, value, operation, calldata hash, and payload hash. | Run a fresh no-pool recheck immediately before actual submission. | Record Safe submission execution approval before actual submission. | Submit only in the later dedicated submission step.</td></tr><tr><td>forbiddenDuringDryRun</td><td>Do not POST to Safe Transaction Service. | Do not open Safe UI to submit. | Do not request signatures. | Do not queue a Safe transaction. | Do not execute a Safe transaction.</td></tr></tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>Required before actual Safe submission</h2>
+    <table>
+      <thead><tr><th>Requirement</th><th>Status</th></tr></thead>
+      <tbody><tr><td>safeSubmissionPreparationReady</td><td>Complete</td></tr><tr><td>safeSubmissionDryRunReviewComplete</td><td>Complete</td></tr><tr><td>freshNoPoolRecheckImmediatelyBeforeSubmission</td><td>Complete</td></tr><tr><td>operatorSafeSubmissionCommandReviewed</td><td>Complete</td></tr><tr><td>safeSubmissionExecutionApprovalRecorded</td><td>Required / pending</td></tr><tr><td>publicStatusUpdatePrepared</td><td>Required / pending</td></tr><tr><td>postSubmissionMonitoringPlanReady</td><td>Required / pending</td></tr></tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>Current statuses</h2>
+    <table>
+      <thead><tr><th>Area</th><th>Status</th></tr></thead>
+      <tbody><tr><td>dexPoolCreationSafeSubmissionPreparation</td><td>Dex Pool Creation Safe Submission Preparation Ready Not Submitted</td></tr><tr><td>dexPoolCreationSafeSubmissionApproval</td><td>Dex Pool Creation Safe Submission Approved Not Submitted</td></tr><tr><td>dexPoolCreationSafePayloadVerification</td><td>Dex Pool Creation Safe Payload Verification Review Complete Not Executed</td></tr><tr><td>dexPoolCreationSafePayloadGeneration</td><td>Dex Pool Creation Safe Payload Generated Not Executed</td></tr><tr><td>dexPoolExistencePrecheck</td><td>Dex Pool Existence Factory Precheck Complete No Pool Found</td></tr><tr><td>fullLaunch</td><td>Full Launch Readiness Track Open Planning Only</td></tr><tr><td>treasuryFunding</td><td>Treasury Funding Readiness Track Open Not Approved</td></tr><tr><td>mainnetExecution</td><td>Mainnet Execution Queue Disabled</td></tr></tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>Important</h2>
+    <div class="notice">
+      This page completes a dry run and command review only. It does not call Safe APIs,
+      open Safe UI, submit to Safe, request signatures, queue, execute, create a pool, add liquidity,
+      move funds, or approve public trading.
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Public API</h2>
+    <p><a href="/api/public/dex-pool-creation-safe-submission-dry-run">/api/public/dex-pool-creation-safe-submission-dry-run</a></p>
+    <p><a href="/dex-pool-creation-safe-submission-preparation">DEX Safe Submission Preparation</a></p>
+    <p><a href="/dex-pool-creation-safe-submission-approval">DEX Safe Submission Approval</a></p>
+    <p><a href="/">Back to homepage</a></p>
+  </section>
+</main>
+</body>
+</html>
