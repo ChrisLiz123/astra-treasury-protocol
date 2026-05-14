@@ -483,7 +483,12 @@
     "dex:pool-creation-safe-payload-generation:validate": "node scripts/validate-dex-pool-creation-safe-payload-generation.mjs",
     "dex:pool-creation-safe-payload-generation:status": "node services/dex-pool-creation-safe-payload-generation/status.mjs",
     "dex:pool-creation-safe-payload-generation:gate": "npm run dex:pool-creation-safe-payload-generation:validate && npm run dex:pool-creation-safe-payload-generation:status",
-    "release:dex-pool-creation-safe-payload-generation": "bash scripts/release/package-dex-pool-creation-safe-payload-generation.sh"
+    "release:dex-pool-creation-safe-payload-generation": "bash scripts/release/package-dex-pool-creation-safe-payload-generation.sh",
+    "dex:pool-creation-safe-payload-verification:verify": "node scripts/verify-dex-pool-creation-safe-payload.mjs",
+    "dex:pool-creation-safe-payload-verification:validate": "node scripts/validate-dex-pool-creation-safe-payload-verification.mjs",
+    "dex:pool-creation-safe-payload-verification:status": "node services/dex-pool-creation-safe-payload-verification/status.mjs",
+    "dex:pool-creation-safe-payload-verification:gate": "npm run dex:pool-creation-safe-payload-verification:verify && npm run dex:pool-creation-safe-payload-verification:validate && npm run dex:pool-creation-safe-payload-verification:status",
+    "release:dex-pool-creation-safe-payload-verification-review": "bash scripts/release/package-dex-pool-creation-safe-payload-verification-review.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",

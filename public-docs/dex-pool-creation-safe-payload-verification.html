@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AstraTreasury DEX Safe Payload Verification</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #08111f;
+      --surface: #0e1a2b;
+      --border: rgba(148, 163, 184, 0.2);
+      --text: #edf4fb;
+      --muted: #9aaec4;
+      --blue: #67a7ff;
+      --yellow: #f4c35f;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    body { margin: 0; background: linear-gradient(180deg, #07101d, var(--bg)); color: var(--text); }
+    a { color: var(--blue); text-decoration: none; }
+
+    main {
+      width: min(1120px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 44px 0 72px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 28px;
+      box-shadow: 0 22px 70px rgba(0,0,0,.28);
+      margin-bottom: 18px;
+    }
+
+    h1 { margin: 0 0 10px; font-size: 42px; letter-spacing: -1.2px; }
+    h2 { margin: 0 0 14px; font-size: 24px; }
+    p { color: var(--muted); line-height: 1.65; }
+
+    .badge {
+      display: inline-flex;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(244,195,95,.08);
+      border: 1px solid rgba(244,195,95,.22);
+      color: var(--yellow);
+      font-weight: 850;
+      margin-bottom: 16px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      overflow: hidden;
+      margin-bottom: 16px;
+    }
+
+    th, td {
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--border);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      color: var(--muted);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      background: rgba(255,255,255,.03);
+    }
+
+    tr:last-child td { border-bottom: 0; }
+
+    code {
+      color: var(--muted);
+      overflow-wrap: anywhere;
+      font-size: 12px;
+    }
+
+    .notice {
+      padding: 16px;
+      border-radius: 16px;
+      background: rgba(244,195,95,.08);
+      border: 1px solid rgba(244,195,95,.22);
+      color: #f7d99a;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+<main>
+  <section class="card">
+    <div class="badge">Payload verified · not submitted</div>
+    <h1>DEX Safe Payload Verification</h1>
+    <p>AstraTreasury verified the generated local DEX pool creation Safe payload. It has not been submitted to Safe, not executed, no pool is created, no liquidity is added, no funds are moved, and public trading is not approved.</p>
+    <p><strong>Verification hash:</strong> <code>7b0335fe91c8949c673c3917191b9a19fe36e0469c8eea07e3917cfbb6c4c015</code></p>
+    <p><strong>Payload hash:</strong> <code>a809c3b6236519e8fe850415c9fd5bccd268b38f15a339f2d8b80673de976787</code></p>
+  </section>
+
+  <section class="card">
+    <h2>Verification summary</h2>
+    <table>
+      <thead><tr><th>Field</th><th>Value</th></tr></thead>
+      <tbody><tr><td>reviewPresent</td><td>true</td></tr><tr><td>payloadHashVerified</td><td>true</td></tr><tr><td>selectorVerified</td><td>true</td></tr><tr><td>targetVerified</td><td>true</td></tr><tr><td>safeAddressVerified</td><td>true</td></tr><tr><td>token0Verified</td><td>true</td></tr><tr><td>token1Verified</td><td>true</td></tr><tr><td>feeVerified</td><td>true</td></tr><tr><td>sqrtPriceX96Verified</td><td>true</td></tr><tr><td>submittedToSafe</td><td>false</td></tr><tr><td>safeTransactionExecuted</td><td>false</td></tr><tr><td>poolCreated</td><td>false</td></tr><tr><td>liquidityAdded</td><td>false</td></tr><tr><td>fundsMoved</td><td>false</td></tr><tr><td>publicTradingApproved</td><td>false</td></tr><tr><td>nextRecommendedMilestone</td><td>DEX Pool Creation Safe Submission Approval Package</td></tr></tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>Decoded calldata</h2>
+    <table>
+      <thead><tr><th>Field</th><th>Value</th></tr></thead>
+      <tbody><tr><td>selector</td><td>0x13ead562</td></tr><tr><td>token0</td><td>0x833589fcd6edb6e08f4c7c32d4f71b54bda02913</td></tr><tr><td>token1</td><td>0xc7c39837d0e604eeb525fc8fc501a5475a20419b</td></tr><tr><td>fee</td><td>10000</td></tr><tr><td>sqrtPriceX96</td><td>792281625142643375935439503360000000</td></tr></tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>Required before Safe submission</h2>
+    <table>
+      <thead><tr><th>Requirement</th><th>Status</th></tr></thead>
+      <tbody><tr><td>payloadVerificationReviewComplete</td><td>Complete</td></tr><tr><td>freshNoPoolRecheckImmediatelyBeforeSubmission</td><td>Required / pending</td></tr><tr><td>safeSubmissionApprovalRecorded</td><td>Required / pending</td></tr><tr><td>safeExecutionApprovalRecorded</td><td>Required / pending</td></tr><tr><td>publicStatusUpdatePrepared</td><td>Required / pending</td></tr></tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>Current statuses</h2>
+    <table>
+      <thead><tr><th>Area</th><th>Status</th></tr></thead>
+      <tbody><tr><td>dexPoolCreationSafePayloadGeneration</td><td>Dex Pool Creation Safe Payload Generated Not Executed</td></tr><tr><td>dexPoolCreationSafePayloadGenerationApproval</td><td>Dex Pool Creation Safe Payload Generation Approved No Payload Generated</td></tr><tr><td>dexPoolCreationSafeOwnersThreshold</td><td>Dex Pool Creation Safe Owners Threshold Review Complete No Payload Generated</td></tr><tr><td>dexPoolCreationFactoryRouterReview</td><td>Dex Pool Creation Factory Router Execution Path Review Complete No Payload Generated</td></tr><tr><td>dexPoolCreationSqrtPriceReview</td><td>Dex Pool Creation Token Ordering Sqrtpricex96 Review Complete No Payload Generated</td></tr><tr><td>dexPoolExistencePrecheck</td><td>Dex Pool Existence Factory Precheck Complete No Pool Found</td></tr><tr><td>fullLaunch</td><td>Full Launch Readiness Track Open Planning Only</td></tr><tr><td>treasuryFunding</td><td>Treasury Funding Readiness Track Open Not Approved</td></tr><tr><td>treasurySafeTransaction</td><td>Treasury Safe Transaction Package Scaffold Ready No Payload</td></tr><tr><td>monitor</td><td>Pass</td></tr><tr><td>alerts</td><td>Clear</td></tr><tr><td>incidents</td><td>No Active Incidents</td></tr><tr><td>mainnetExecution</td><td>Mainnet Execution Queue Disabled</td></tr></tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>Important</h2>
+    <div class="notice">
+      This review verifies the local Safe payload only. It does not submit to Safe,
+      execute a transaction, create a pool, add liquidity, move funds, or approve public trading.
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Public API</h2>
+    <p><a href="/api/public/dex-pool-creation-safe-payload-verification">/api/public/dex-pool-creation-safe-payload-verification</a></p>
+    <p><a href="/dex-pool-creation-safe-payload-generation">DEX Safe Payload Generation</a></p>
+    <p><a href="/dex-pool-creation-safe-payload-generation-approval">DEX Safe Payload Generation Approval</a></p>
+    <p><a href="/">Back to homepage</a></p>
+  </section>
+</main>
+</body>
+</html>
