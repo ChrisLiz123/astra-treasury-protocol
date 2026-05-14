@@ -1,7 +1,7 @@
 {
   "schema": "astra-dex-liquidity-parameter-finalization-review-status-v0.1",
-  "generatedAt": "2026-05-14T00:05:37.688Z",
-  "status": "DEX_LIQUIDITY_PARAMETER_FINALIZATION_REVIEW_READY_NOT_APPROVED",
+  "generatedAt": "2026-05-14T00:17:33.282Z",
+  "status": "DEX_LIQUIDITY_PARAMETER_FINALIZATION_REVIEW_PARAMETERS_APPROVED_NO_POOL",
   "currentApprovedMode": "restricted-mainnet-operation",
   "publicStatement": "AstraTreasury DEX/liquidity parameter finalization review is ready for a later approval step. Parameters are not finalized, no pool is created, no liquidity is added, and public trading is not approved.",
   "summary": {
@@ -16,18 +16,18 @@
     "monitorStatus": "PASS"
   },
   "finalizationReview": {
-    "finalizationReviewHash": "01fe1f2c640e10410064c1c296627f328c065f43ca1449605ff36faf91309d00",
+    "finalizationReviewHash": "d2d3559d5dfbf942d8e740c4eaf8961417b659caa1b832b291a6325fd14c0b40",
     "hashAlgorithm": "SHA-256",
     "reviewOutcome": {
-      "outcome": "READY_FOR_LATER_PARAMETER_APPROVAL_REVIEW",
+      "outcome": "PARAMETERS_APPROVED_NO_POOL_NO_LIQUIDITY",
       "selectedPair": "ASTRA/USDC",
       "selectedPoolVersion": "v3",
-      "parametersFinalized": false,
+      "parametersFinalized": true,
       "poolCreationApproved": false,
       "liquidityProvisionApproved": false,
       "safePayloadGenerated": false,
       "publicTradingApproved": false,
-      "nextRecommendedMilestone": "DEX Liquidity Parameter Approval Package"
+      "nextRecommendedMilestone": "DEX Liquidity Source and Safe Impact Approval"
     },
     "requiredBeforeParameterApproval": {
       "legalComplianceFinalCheck": false,
@@ -97,32 +97,32 @@
       {
         "path": "public-docs/dex-liquidity-parameter-selection-status.json",
         "bytes": 12340,
-        "sha256": "323144169e819cb48303ee7874c6165f1a30284eb01f36bcfcd99254db814576"
+        "sha256": "d49fd0a486579d0b362a4d80af57fce98ae1b2a90440dc5aa3aa90e3c22a656f"
       },
       {
         "path": "public-docs/dex-liquidity-parameters-status.json",
         "bytes": 14231,
-        "sha256": "7a281fb17880a0aa3bbacaa7753fd7ab1582e4c6655f2bf02ea48bd3beb4c9a2"
+        "sha256": "40049093aa1282ed08f4c7cdf7746267a18104cd762c78791dcb910140e7c3c4"
       },
       {
         "path": "public-docs/dex-liquidity-path-status.json",
         "bytes": 11761,
-        "sha256": "fa1805e53e27732710eb727e51be4feb1242d2b6217a8706bbd72fea60453aa6"
+        "sha256": "06fd8a2edb7fa9bf87af30c0bcbdfba1233bab522decca8ccfad2c366be46446"
       },
       {
         "path": "public-docs/restricted-mode-final-release-status.json",
         "bytes": 10362,
-        "sha256": "666983aa1a54877ce4b1704b1c3ba280f6bce6c835811c799419cbf1e6a1bfe3"
+        "sha256": "7dd0e4e618ed5aa97a87ed471fe867cb0a3a4e67b6c80d28ba2c53fbeb53de3e"
       },
       {
         "path": "public-docs/governance-decision-status.json",
         "bytes": 2574,
-        "sha256": "f1aa283bd265ffb3532af6dfb616942ebdd8910691c7e857bf7639a6a29eb63a"
+        "sha256": "8004e42ffd5fa50ecc1c09c49a1cf26150e24e7606aff061a54fd12eecae3496"
       },
       {
         "path": "public-docs/capability-matrix-status.json",
         "bytes": 4146,
-        "sha256": "95c001719331eb74afd4b447505ce63e2329563f4dd7c122feacaa28706267d7"
+        "sha256": "bdddbae478b527a552b31f85409c19398b67dc65d6099a2209a1f4e78bbde45e"
       },
       {
         "path": "public-docs/full-launch-status.json",
@@ -142,12 +142,12 @@
       {
         "path": "public-docs/mainnet-monitor-status.json",
         "bytes": 1707,
-        "sha256": "c73f284757a82bddb9317a3717e1488c6859abd63645a020aab97270520f921a"
+        "sha256": "16cbd70a975fe4384b72571e547a4251bb6140c09e94ab5201a4eff550ac0852"
       },
       {
         "path": "public-docs/mainnet-alerts-status.json",
         "bytes": 2128,
-        "sha256": "130292dfc1296853fd87d69a07f2333deaefe47698774aa7fc1597173aa51820"
+        "sha256": "ebc2967367d2b89d66c86f475582d8288a81dcba6fa1044db01166e6de5ad268"
       },
       {
         "path": "public-docs/incident-summary.json",
@@ -157,7 +157,7 @@
       {
         "path": "public-docs/mainnet-execution-status.json",
         "bytes": 1320,
-        "sha256": "83affea5231962eed4c96747893192862b6fcf9050608be3825336f838917ffa"
+        "sha256": "4f99ee49241aee7a63b6f6020638e945af6f10664efee5328cfc27f10bc33743"
       }
     ]
   },
@@ -373,6 +373,7 @@
   "missingArtifacts": [],
   "currentStatuses": {
     "dexLiquidityParameterSelection": "DEX_LIQUIDITY_PARAMETER_SELECTION_IMPORTED_NOT_APPROVED",
+    "dexLiquidityParameterApproval": "DEX_LIQUIDITY_PARAMETERS_APPROVED_NO_POOL_NO_LIQUIDITY",
     "dexLiquidityParameters": "DEX_LIQUIDITY_PARAMETER_REVIEW_READY_NOT_FINALIZED",
     "dexLiquidityPath": "DEX_LIQUIDITY_PATH_SELECTED_NOT_APPROVED",
     "restrictedModeFinalRelease": "RESTRICTED_MODE_FINAL_RELEASE_READY_DECISION_RECORDED_ALL_DISABLED",

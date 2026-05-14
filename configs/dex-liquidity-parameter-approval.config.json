@@ -1,0 +1,68 @@
+{
+  "schema": "astra-dex-liquidity-parameter-approval-config-v0.1",
+  "status": "dex-liquidity-parameters-approved-no-pool-no-liquidity",
+  "network": {
+    "name": "Base Mainnet",
+    "chainId": 8453
+  },
+  "currentApprovedMode": "restricted-mainnet-operation",
+  "selectedPublicPurchasePath": "dex-liquidity-pool-trading",
+  "candidateVenue": "Uniswap on Base",
+  "parameterApprovalPrepared": true,
+  "parameterApprovalOnly": true,
+  "parameterApprovalRecorded": true,
+  "parametersFinalized": true,
+  "selectionFile": "reports/dex-liquidity-parameter-selection/import/dex-liquidity-parameter-selection.json",
+  "approvalRecordFile": "reports/dex-liquidity-parameter-approval/dex-liquidity-parameter-approval-record.json",
+  "dexLiquidityPathApproved": false,
+  "liquidityPoolCreationApproved": false,
+  "liquidityProvisionApproved": false,
+  "publicTradingApproved": false,
+  "publicTradingLinkApproved": false,
+  "buyPageActivationApproved": false,
+  "safePayloadGenerationApproved": false,
+  "safeTransactionExecutionApproved": false,
+  "treasuryFundingApproved": false,
+  "fullLaunchApproved": false,
+  "approvalScope": {
+    "approvesSelectedParametersOnly": true,
+    "approvesPoolCreation": false,
+    "approvesLiquidityProvision": false,
+    "approvesPublicTrading": false,
+    "approvesSafePayloadGeneration": false,
+    "approvesFundsMovement": false,
+    "approvesBuyPageActivation": false,
+    "approvesFullLaunch": false
+  },
+  "requiredBeforeApproval": {
+    "dexLiquidityParameterSelectionImported": true,
+    "dexLiquidityParameterFinalizationReviewReady": true,
+    "mainnetMonitorPassing": true,
+    "activeIncidentsZero": true,
+    "executionQueueDisabled": true,
+    "safePayloadNotGenerated": true,
+    "treasuryFundingNotApproved": true,
+    "fullLaunchNotApproved": true
+  },
+  "hardStops": {
+    "poolCreated": false,
+    "liquidityAdded": false,
+    "safePayloadGenerated": false,
+    "safeTransactionExecuted": false,
+    "publicTradingEnabled": false,
+    "buyPageActivated": false,
+    "treasuryFundsMoved": false,
+    "fullLaunchApproved": false
+  },
+  "hardRule": "This package approves the selected DEX/liquidity parameter set only. It must not create a pool, add liquidity, approve public trading, generate a Safe payload, move funds, activate a buy page, or approve full launch.",
+  "approvedSelection": {
+    "recordedAt": "2026-05-14T00:15:56.964Z",
+    "approver": "Founder",
+    "approvalReference": "Founder",
+    "recordFile": "reports/dex-liquidity-parameter-approval/dex-liquidity-parameter-approval-record.json",
+    "selectionId": "ASTRA-DEX-PARAM-20260513-001",
+    "tokenPair": "ASTRA/USDC",
+    "poolVersion": "v3",
+    "feeTierOrPoolType": "1%"
+  }
+}

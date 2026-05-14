@@ -824,6 +824,10 @@ const html = `<!doctype html>
           <strong>DEX parameter finalization</strong>
           <span>Review readiness. Not approved.</span>
         </a>
+        <a class="link-card" href="/dex-liquidity-parameter-approval">
+          <strong>DEX parameter approval</strong>
+          <span>Parameter-only approval. No pool or liquidity.</span>
+        </a>
         <a class="link-card" href="/governance-vote-result-evidence">
           <strong>Vote/result evidence</strong>
           <span>Evidence import path. No decision is recorded.</span>

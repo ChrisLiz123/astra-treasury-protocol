@@ -6,21 +6,26 @@ import { fileURLToPath } from "node:url";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, "../..");
 
-const reportDir = path.join(root, "reports", "dex-liquidity-parameter-finalization");
-const reportFile = path.join(reportDir, "dex-liquidity-parameter-finalization-review-status.json");
+const recordRelativePath = "reports/dex-liquidity-parameter-approval/dex-liquidity-parameter-approval-record.json";
+const recordPath = path.join(root, recordRelativePath);
 
-const publicJsonFile = path.join(root, "public-docs", "dex-liquidity-parameter-finalization-status.json");
-const publicHtmlFile = path.join(root, "public-docs", "dex-liquidity-parameter-finalization.html");
+const reportDir = path.join(root, "reports", "dex-liquidity-parameter-approval");
+const reportFile = path.join(reportDir, "dex-liquidity-parameter-approval-status.json");
+
+const publicJsonFile = path.join(root, "public-docs", "dex-liquidity-parameter-approval-status.json");
+const publicHtmlFile = path.join(root, "public-docs", "dex-liquidity-parameter-approval.html");
 
 fs.mkdirSync(reportDir, { recursive: true });
 
 const artifactPaths = [
-  "configs/dex-liquidity-parameter-finalization-review.config.json",
-  "docs/dex-liquidity-parameter-finalization/DEX_LIQUIDITY_PARAMETER_FINALIZATION_REVIEW.md",
-  "docs/dex-liquidity-parameter-finalization/DEX_PARAMETER_FINALIZATION_REVIEW_CHECKLIST.md",
-  "docs/dex-liquidity-parameter-finalization/DEX_PARAMETER_FINALIZATION_BOUNDARIES.md",
-  "docs/dex-liquidity-parameter-finalization/DEX_PARAMETER_FINALIZATION_RUNBOOK.md",
+  "configs/dex-liquidity-parameter-approval.config.json",
+  "docs/dex-liquidity-parameter-approval/DEX_LIQUIDITY_PARAMETER_APPROVAL_PACKAGE.md",
+  "docs/dex-liquidity-parameter-approval/DEX_PARAMETER_APPROVAL_CHECKLIST.md",
+  "docs/dex-liquidity-parameter-approval/DEX_PARAMETER_APPROVAL_BOUNDARIES.md",
+  "docs/dex-liquidity-parameter-approval/DEX_PARAMETER_APPROVAL_RUNBOOK.md",
+  "scripts/record-dex-liquidity-parameter-approval.mjs",
   "public-docs/dex-liquidity-parameter-selection-status.json",
+  "public-docs/dex-liquidity-parameter-finalization-status.json",
   "public-docs/dex-liquidity-parameters-status.json",
   "public-docs/dex-liquidity-path-status.json",
   "public-docs/restricted-mode-final-release-status.json",
@@ -40,6 +45,15 @@ function readJson(relativePath, fallback = {}) {
     const full = path.join(root, relativePath);
     if (!fs.existsSync(full)) return fallback;
     return JSON.parse(fs.readFileSync(full, "utf8"));
+  } catch (error) {
+    return { error: error.message };
+  }
+}
+
+function readJsonPath(filePath, fallback = null) {
+  try {
+    if (!fs.existsSync(filePath)) return fallback;
+    return JSON.parse(fs.readFileSync(filePath, "utf8"));
   } catch (error) {
     return { error: error.message };
   }
@@ -88,9 +102,10 @@ function check(checks, name, pass, details = {}) {
   checks.push({ name, pass: Boolean(pass), details });
 }
 
-const config = readJson("configs/dex-liquidity-parameter-finalization-review.config.json");
+const config = readJson("configs/dex-liquidity-parameter-approval.config.json");
+const record = readJsonPath(recordPath);
 const selection = readJson("public-docs/dex-liquidity-parameter-selection-status.json");
-const parameterApproval = readJson("public-docs/dex-liquidity-parameter-approval-status.json");
+const finalizationReview = readJson("public-docs/dex-liquidity-parameter-finalization-status.json");
 const parameterReview = readJson("public-docs/dex-liquidity-parameters-status.json");
 const dexPath = readJson("public-docs/dex-liquidity-path-status.json");
 const finalRelease = readJson("public-docs/restricted-mode-final-release-status.json");
@@ -104,44 +119,30 @@ const alerts = readJson("public-docs/mainnet-alerts-status.json");
 const incidents = readJson("public-docs/incident-summary.json");
 const execution = readJson("public-docs/mainnet-execution-status.json");
 
+const approvalRecordPresent = Boolean(record && record.schema === "astra-dex-liquidity-parameter-approval-record-v0.1");
 const activeIncidents = Number(incidents?.summary?.active || 0);
 const responseRequired = Boolean(alerts?.responseRequired);
-const selectionImported = selection.status === "DEX_LIQUIDITY_PARAMETER_SELECTION_IMPORTED_NOT_APPROVED" && selection.summary?.selectionValid === true;
-const parametersApproved = parameterApproval.status === "DEX_LIQUIDITY_PARAMETERS_APPROVED_NO_POOL_NO_LIQUIDITY";
 
 const checks = [];
 
-check(checks, "Finalization review prepared", config.finalizationReviewPrepared === true, {
-  finalizationReviewPrepared: config.finalizationReviewPrepared
+check(checks, "Parameter approval framework prepared", config.parameterApprovalPrepared === true, {
+  parameterApprovalPrepared: config.parameterApprovalPrepared
 });
 
-check(checks, "Finalization review only", config.finalizationReviewOnly === true, {
-  finalizationReviewOnly: config.finalizationReviewOnly
+check(checks, "Parameter approval only", config.parameterApprovalOnly === true, {
+  parameterApprovalOnly: config.parameterApprovalOnly
 });
 
-for (const key of [
-  "parameterSelectionApproved",
-  "parametersFinalized",
-  "dexLiquidityPathApproved",
-  "liquidityPoolCreationApproved",
-  "liquidityProvisionApproved",
-  "publicTradingApproved",
-  "publicTradingLinkApproved",
-  "buyPageActivationApproved",
-  "safePayloadGenerationApproved",
-  "safeTransactionExecutionApproved",
-  "treasuryFundingApproved",
-  "fullLaunchApproved"
-]) {
-  check(checks, `${key} remains false`, config[key] === false, { value: config[key] });
-}
-
-check(checks, "Selection status acceptable", [
-  "DEX_LIQUIDITY_PARAMETER_SELECTION_IMPORT_READY_NO_SELECTION",
-  "DEX_LIQUIDITY_PARAMETER_SELECTION_IMPORTED_NOT_APPROVED"
-].includes(selection.status), {
+check(checks, "Valid imported selection exists", selection.status === "DEX_LIQUIDITY_PARAMETER_SELECTION_IMPORTED_NOT_APPROVED" && selection.summary?.selectionValid === true, {
   status: selection.status || "UNKNOWN",
   selectionValid: selection.summary?.selectionValid
+});
+
+check(checks, "Finalization review ready", [
+  "DEX_LIQUIDITY_PARAMETER_FINALIZATION_REVIEW_READY_NOT_APPROVED",
+  "DEX_LIQUIDITY_PARAMETER_FINALIZATION_REVIEW_PARAMETERS_APPROVED_NO_POOL"
+].includes(finalizationReview.status), {
+  status: finalizationReview.status || "UNKNOWN"
 });
 
 check(checks, "Parameter review ready", parameterReview.status === "DEX_LIQUIDITY_PARAMETER_REVIEW_READY_NOT_FINALIZED", {
@@ -202,86 +203,107 @@ check(checks, "Safe transaction not prepared", treasurySafeTx.safeTransactionPre
   safeTransactionPrepared: treasurySafeTx.safeTransactionPrepared
 });
 
+if (approvalRecordPresent) {
+  for (const key of [
+    "poolCreated",
+    "liquidityAdded",
+    "publicTradingApproved",
+    "publicTradingLinkApproved",
+    "buyPageActivated",
+    "safePayloadGenerated",
+    "safeTransactionExecuted",
+    "treasuryFundsMoved",
+    "treasuryFundingApproved",
+    "fullLaunchApproved"
+  ]) {
+    check(checks, `record.${key} remains false`, record[key] === false, { value: record[key] });
+  }
+}
+
 const missingArtifacts = artifactPaths.filter((artifactPath) => {
   return !fs.existsSync(path.join(root, artifactPath));
 });
 
 for (const artifactPath of missingArtifacts) {
-  check(checks, `Finalization review artifact exists: ${artifactPath}`, false, { artifactPath });
+  check(checks, `Parameter approval artifact exists: ${artifactPath}`, false, { artifactPath });
 }
 
 const artifactHashes = artifactPaths
   .filter((artifactPath) => fs.existsSync(path.join(root, artifactPath)))
   .map((artifactPath) => sha256File(artifactPath));
 
+if (fs.existsSync(recordPath)) {
+  artifactHashes.push(sha256File(recordRelativePath));
+}
+
 const payload = {
-  schema: "astra-dex-liquidity-parameter-finalization-review-payload-v0.1",
+  schema: "astra-dex-liquidity-parameter-approval-payload-v0.1",
   currentApprovedMode: "restricted-mainnet-operation",
   selectedPublicPurchasePath: "dex-liquidity-pool-trading",
-  selectionImported,
-  finalizationReviewOnly: true,
-  parametersFinalized: false,
+  approvalRecordPresent,
+  approvesParametersOnly: approvalRecordPresent,
+  poolCreated: false,
+  liquidityAdded: false,
+  publicTradingApproved: false,
   artifactHashes
 };
 
-const finalizationReviewHash = sha256Json(payload);
+const parameterApprovalHash = sha256Json(payload);
 const failures = checks.filter((item) => !item.pass);
 
 const status = failures.length > 0
-  ? "DEX_LIQUIDITY_PARAMETER_FINALIZATION_REVIEW_REQUIRED"
-  : parametersApproved
-    ? "DEX_LIQUIDITY_PARAMETER_FINALIZATION_REVIEW_PARAMETERS_APPROVED_NO_POOL"
-    : selectionImported
-      ? "DEX_LIQUIDITY_PARAMETER_FINALIZATION_REVIEW_READY_NOT_APPROVED"
-      : "DEX_LIQUIDITY_PARAMETER_FINALIZATION_REVIEW_READY_NO_SELECTION";
+  ? "DEX_LIQUIDITY_PARAMETER_APPROVAL_REVIEW_REQUIRED"
+  : approvalRecordPresent
+    ? "DEX_LIQUIDITY_PARAMETERS_APPROVED_NO_POOL_NO_LIQUIDITY"
+    : "DEX_LIQUIDITY_PARAMETER_APPROVAL_READY_PENDING_APPROVAL";
 
-const reviewOutcome = parametersApproved
+const approvalSummary = approvalRecordPresent
   ? {
-      outcome: "PARAMETERS_APPROVED_NO_POOL_NO_LIQUIDITY",
-      selectedPair: parameterApproval.parameterApproval?.approvalSummary?.selectedPair || "",
-      selectedPoolVersion: parameterApproval.parameterApproval?.approvalSummary?.poolVersion || "",
-      parametersFinalized: true,
-      poolCreationApproved: false,
-      liquidityProvisionApproved: false,
-      safePayloadGenerated: false,
+      recordedAt: record.recordedAt,
+      approver: record.approver,
+      approvalReference: record.approvalReference,
+      selectedPair: record.selectionSummary?.tokenPair || "",
+      poolVersion: record.selectionSummary?.poolVersion || "",
+      feeTierOrPoolType: record.selectionSummary?.feeTierOrPoolType || "",
+      initialPriceHuman: record.selectionSummary?.initialPriceHuman || "",
+      liquidityAmountAstra: record.selectionSummary?.liquidityAmountAstra || "",
+      liquidityAmountCounterAsset: record.selectionSummary?.liquidityAmountCounterAsset || "",
+      liquiditySource: record.selectionSummary?.liquiditySource || "",
+      poolCreated: false,
+      liquidityAdded: false,
       publicTradingApproved: false,
-      nextRecommendedMilestone: "DEX Liquidity Source and Safe Impact Approval"
-    }
-  : selectionImported
-    ? {
-      outcome: "READY_FOR_LATER_PARAMETER_APPROVAL_REVIEW",
-      selectedPair: selection.selectionImport?.selectionSummary?.tokenPair || "",
-      selectedPoolVersion: selection.selectionImport?.selectionSummary?.poolVersion || "",
-      parametersFinalized: false,
-      poolCreationApproved: false,
-      liquidityProvisionApproved: false,
       safePayloadGenerated: false,
-      publicTradingApproved: false,
-      nextRecommendedMilestone: "DEX Liquidity Parameter Approval Package"
+      fullLaunchApproved: false
     }
   : {
-      outcome: "NO_SELECTION_IMPORTED",
-      selectedPair: "none",
-      selectedPoolVersion: "none",
-      parametersFinalized: false,
-      poolCreationApproved: false,
-      liquidityProvisionApproved: false,
-      safePayloadGenerated: false,
+      recordedAt: "",
+      approver: "not recorded",
+      approvalReference: "not recorded",
+      selectedPair: selection.selectionImport?.selectionSummary?.tokenPair || "",
+      poolVersion: selection.selectionImport?.selectionSummary?.poolVersion || "",
+      feeTierOrPoolType: selection.selectionImport?.selectionSummary?.feeTierOrPoolType || "",
+      initialPriceHuman: selection.selectionImport?.selectionSummary?.initialPriceHuman || "",
+      liquidityAmountAstra: selection.selectionImport?.selectionSummary?.liquidityAmountAstra || "",
+      liquidityAmountCounterAsset: selection.selectionImport?.selectionSummary?.liquidityAmountCounterAsset || "",
+      liquiditySource: selection.selectionImport?.selectionSummary?.liquiditySource || "",
+      poolCreated: false,
+      liquidityAdded: false,
       publicTradingApproved: false,
-      nextRecommendedMilestone: "Import real DEX liquidity parameter selection before approval review."
+      safePayloadGenerated: false,
+      fullLaunchApproved: false
     };
 
 const report = {
-  schema: "astra-dex-liquidity-parameter-finalization-review-status-v0.1",
+  schema: "astra-dex-liquidity-parameter-approval-status-v0.1",
   generatedAt: new Date().toISOString(),
   status,
   currentApprovedMode: "restricted-mainnet-operation",
   publicStatement:
-    selectionImported
-      ? "AstraTreasury DEX/liquidity parameter finalization review is ready for a later approval step. Parameters are not finalized, no pool is created, no liquidity is added, and public trading is not approved."
-      : "AstraTreasury DEX/liquidity parameter finalization review is ready. No selected parameters are imported, so parameter approval remains unavailable.",
+    approvalRecordPresent
+      ? "AstraTreasury DEX/liquidity parameters are approved for later action-specific execution review only. No pool is created, no liquidity is added, no Safe payload is generated, and public trading is not approved."
+      : "AstraTreasury DEX/liquidity parameter approval framework is ready. Parameters are selected but not yet approved.",
   summary: {
-    selectionImported,
+    approvalRecordPresent,
     artifactCount: artifactHashes.length,
     missingArtifactCount: missingArtifacts.length,
     totalChecks: checks.length,
@@ -291,13 +313,10 @@ const report = {
     responseRequired,
     monitorStatus: monitor.status || "UNKNOWN"
   },
-  finalizationReview: {
-    finalizationReviewHash,
+  parameterApproval: {
+    parameterApprovalHash,
     hashAlgorithm: "SHA-256",
-    reviewOutcome,
-    requiredBeforeParameterApproval: config.requiredBeforeParameterApproval || {},
-    hardStops: config.hardStops || {},
-    selectionSummary: selection.selectionImport?.selectionSummary || {},
+    approvalSummary,
     artifactHashes
   },
   checks,
@@ -305,7 +324,7 @@ const report = {
   missingArtifacts,
   currentStatuses: {
     dexLiquidityParameterSelection: selection.status || "UNKNOWN",
-    dexLiquidityParameterApproval: parameterApproval.status || "UNKNOWN",
+    dexLiquidityParameterFinalization: finalizationReview.status || "UNKNOWN",
     dexLiquidityParameters: parameterReview.status || "UNKNOWN",
     dexLiquidityPath: dexPath.status || "UNKNOWN",
     restrictedModeFinalRelease: finalRelease.status || "UNKNOWN",
@@ -321,7 +340,6 @@ const report = {
   },
   restrictions: {
     dexLiquidityPoolTrading: false,
-    parameterFinalization: false,
     liquidityPoolCreation: false,
     liquidityProvision: false,
     publicTrading: false,
@@ -346,19 +364,7 @@ const report = {
 writeJson(reportFile, report);
 writeJson(publicJsonFile, report);
 
-const outcomeRows = Object.entries(reviewOutcome).map(([key, value]) => {
-  return `<tr><td>${escapeHtml(key)}</td><td>${escapeHtml(value)}</td></tr>`;
-}).join("");
-
-const requiredRows = Object.entries(report.finalizationReview.requiredBeforeParameterApproval).map(([key, value]) => {
-  return `<tr><td>${escapeHtml(key)}</td><td>${value ? "Complete" : "Required / pending"}</td></tr>`;
-}).join("");
-
-const hardStopRows = Object.entries(report.finalizationReview.hardStops).map(([key, value]) => {
-  return `<tr><td>${escapeHtml(key)}</td><td>${value ? "STOP / true" : "False"}</td></tr>`;
-}).join("");
-
-const selectionRows = Object.entries(report.finalizationReview.selectionSummary).map(([key, value]) => {
+const approvalRows = Object.entries(approvalSummary).map(([key, value]) => {
   return `<tr><td>${escapeHtml(key)}</td><td>${escapeHtml(value)}</td></tr>`;
 }).join("");
 
@@ -375,7 +381,7 @@ const html = `<!doctype html>
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>AstraTreasury DEX Parameter Finalization Review</title>
+  <title>AstraTreasury DEX Parameter Approval</title>
   <style>
     :root {
       color-scheme: dark;
@@ -468,41 +474,17 @@ const html = `<!doctype html>
 <body>
 <main>
   <section class="card">
-    <div class="badge">Finalization review · not approved</div>
-    <h1>DEX Parameter Finalization Review</h1>
+    <div class="badge">Parameter approval · no pool/no liquidity</div>
+    <h1>DEX Parameter Approval</h1>
     <p>${escapeHtml(report.publicStatement)}</p>
-    <p><strong>Finalization review hash:</strong> <code>${escapeHtml(finalizationReviewHash)}</code></p>
+    <p><strong>Parameter approval hash:</strong> <code>${escapeHtml(parameterApprovalHash)}</code></p>
   </section>
 
   <section class="card">
-    <h2>Review outcome</h2>
+    <h2>Approval summary</h2>
     <table>
       <thead><tr><th>Field</th><th>Value</th></tr></thead>
-      <tbody>${outcomeRows}</tbody>
-    </table>
-  </section>
-
-  <section class="card">
-    <h2>Imported selection summary</h2>
-    <table>
-      <thead><tr><th>Field</th><th>Value</th></tr></thead>
-      <tbody>${selectionRows || '<tr><td colspan="2">No imported selection.</td></tr>'}</tbody>
-    </table>
-  </section>
-
-  <section class="card">
-    <h2>Required before parameter approval</h2>
-    <table>
-      <thead><tr><th>Requirement</th><th>Status</th></tr></thead>
-      <tbody>${requiredRows}</tbody>
-    </table>
-  </section>
-
-  <section class="card">
-    <h2>Hard stops</h2>
-    <table>
-      <thead><tr><th>Item</th><th>Status</th></tr></thead>
-      <tbody>${hardStopRows}</tbody>
+      <tbody>${approvalRows}</tbody>
     </table>
   </section>
 
@@ -525,16 +507,16 @@ const html = `<!doctype html>
   <section class="card">
     <h2>Important</h2>
     <div class="notice">
-      Finalization review does not approve parameters, create a pool, add liquidity, generate a Safe payload,
+      Parameter approval does not create a pool, add liquidity, generate a Safe payload,
       move funds, activate a buy page, or approve public trading.
     </div>
   </section>
 
   <section class="card">
     <h2>Public API</h2>
-    <p><a href="/api/public/dex-liquidity-parameter-finalization">/api/public/dex-liquidity-parameter-finalization</a></p>
+    <p><a href="/api/public/dex-liquidity-parameter-approval">/api/public/dex-liquidity-parameter-approval</a></p>
+    <p><a href="/dex-liquidity-parameter-finalization">DEX Parameter Finalization Review</a></p>
     <p><a href="/dex-liquidity-parameter-selection">DEX Parameter Selection</a></p>
-    <p><a href="/dex-liquidity-parameters">DEX Liquidity Parameters</a></p>
     <p><a href="/">Back to homepage</a></p>
   </section>
 </main>
@@ -543,11 +525,11 @@ const html = `<!doctype html>
 
 fs.writeFileSync(publicHtmlFile, html + "\n");
 
-console.log("AstraTreasury DEX Liquidity Parameter Finalization Review");
-console.log("=========================================================");
+console.log("AstraTreasury DEX Liquidity Parameter Approval");
+console.log("==============================================");
 console.log(`Status: ${report.status}`);
-console.log(`Selection imported: ${selectionImported}`);
-console.log(`Finalization review hash: ${finalizationReviewHash}`);
+console.log(`Approval record present: ${approvalRecordPresent}`);
+console.log(`Parameter approval hash: ${parameterApprovalHash}`);
 console.log(`Report: ${reportFile}`);
 
 if (failures.length > 0) {
