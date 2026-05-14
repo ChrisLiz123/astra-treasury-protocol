@@ -836,6 +836,38 @@ const html = `<!doctype html>
           <strong>DEX pool readiness</strong>
           <span>Ready for later pool-creation approval. No pool created.</span>
         </a>
+        <a class="link-card" href="/dex-pool-existence-precheck">
+          <strong>DEX pool existence precheck</strong>
+          <span>Read-only factory check. No pool created.</span>
+        </a>
+        <a class="link-card" href="/dex-pool-creation-approval">
+          <strong>DEX pool creation approval</strong>
+          <span>Path approval only. No pool created.</span>
+        </a>
+        <a class="link-card" href="/dex-pool-creation-execution-precheck">
+          <strong>DEX execution precheck</strong>
+          <span>Routes to Safe or direct preparation. No execution.</span>
+        </a>
+        <a class="link-card" href="/dex-pool-creation-safe-payload-preparation">
+          <strong>DEX Safe payload preparation</strong>
+          <span>Safe path ready. No payload generated.</span>
+        </a>
+        <a class="link-card" href="/dex-pool-creation-safe-payload-draft">
+          <strong>DEX Safe payload draft</strong>
+          <span>Non-executable draft. No calldata or payload.</span>
+        </a>
+        <a class="link-card" href="/dex-pool-creation-safe-payload-draft-review">
+          <strong>DEX Safe payload draft review</strong>
+          <span>Token ordering review. No payload generated.</span>
+        </a>
+        <a class="link-card" href="/dex-pool-creation-token-ordering-sqrtprice">
+          <strong>DEX sqrtPriceX96 review</strong>
+          <span>Token ordering and price calculation. No payload.</span>
+        </a>
+        <a class="link-card" href="/dex-pool-creation-factory-router-review">
+          <strong>DEX factory/router review</strong>
+          <span>Execution path review. No calldata or payload.</span>
+        </a>
         <a class="link-card" href="/governance-vote-result-evidence">
           <strong>Vote/result evidence</strong>
           <span>Evidence import path. No decision is recorded.</span>

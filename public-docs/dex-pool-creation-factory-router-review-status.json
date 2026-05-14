@@ -1,0 +1,222 @@
+{
+  "schema": "astra-dex-pool-creation-factory-router-execution-path-public-status-v0.1",
+  "generatedAt": "2026-05-14T02:33:08.652Z",
+  "status": "DEX_POOL_CREATION_FACTORY_ROUTER_EXECUTION_PATH_REVIEW_COMPLETE_NO_PAYLOAD_GENERATED",
+  "currentApprovedMode": "restricted-mainnet-operation",
+  "publicStatement": "AstraTreasury completed the DEX pool creation factory/router execution path review. No encoded calldata is generated, no Safe payload is generated, no Safe transaction is prepared, no pool is created, no liquidity is added, no funds are moved, and public trading is not approved.",
+  "summary": {
+    "factoryRouterExecutionPathReviewed": true,
+    "targetAddress": "0x03a520b32C04BF3bEEf7BEb72E919cf822Ed34f1",
+    "functionSignature": "createAndInitializePoolIfNecessary(address,address,uint24,uint160)",
+    "factoryGetPoolFoundPool": false,
+    "encodedCallDataGenerated": false,
+    "safePayloadGenerated": false,
+    "safeTransactionPrepared": false,
+    "poolCreated": false,
+    "liquidityAdded": false,
+    "publicTradingApproved": false,
+    "nextRecommendedMilestone": "DEX Pool Creation Safe Owners and Threshold Review",
+    "issueCount": 0
+  },
+  "factoryRouterReview": {
+    "reviewHash": "5f145611218b1378184feb00f14d2e072c0be0bf0e71e3cff14cf953846c21fe",
+    "hashAlgorithm": "SHA-256",
+    "intendedExecutionPath": {
+      "targetRole": "Uniswap v3 NonfungiblePositionManager",
+      "targetAddress": "0x03a520b32C04BF3bEEf7BEb72E919cf822Ed34f1",
+      "operation": "CALL",
+      "value": "0",
+      "functionName": "createAndInitializePoolIfNecessary",
+      "functionSignature": "createAndInitializePoolIfNecessary(address,address,uint24,uint160)",
+      "encodedCallDataGenerated": false,
+      "safePayloadGenerated": false,
+      "safeTransactionPrepared": false
+    },
+    "selectedInputsForLaterPayloadGeneration": {
+      "token0Symbol": "USDC",
+      "token0Address": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+      "token1Symbol": "ASTRA",
+      "token1Address": "0xc7c39837d0e604eeb525fc8fc501a5475a20419b",
+      "fee": 10000,
+      "sqrtPriceX96": "792281625142643375935439503360000000",
+      "generatesEncodedCallData": false
+    },
+    "routeReview": {
+      "nonfungiblePositionManagerUsedForPoolCreation": true,
+      "factoryUsedForReadOnlyGetPoolAndNFPMMapping": true,
+      "swapRouter02RequiredForPoolCreationOnly": false,
+      "universalRouterRequiredForPoolCreationOnly": false,
+      "quoterRequiredForPoolCreationOnly": false,
+      "erc20TokenApprovalsRequiredForPoolCreationOnly": false,
+      "liquidityMintingIsSeparateLaterStep": true
+    },
+    "rpcChecks": {
+      "nonfungiblePositionManagerCodePresent": true,
+      "factoryCodePresent": true,
+      "swapRouter02CodePresent": true,
+      "universalRouterCodePresent": true,
+      "quoterV2CodePresent": true,
+      "nfpmFactoryAddress": "0x33128a8fc17869897dce68ed026d694621f6fdfd",
+      "nfpmFactoryMatchesConfiguredFactory": true,
+      "factoryGetPoolCallSucceeded": true,
+      "factoryGetPoolAddress": "0x0000000000000000000000000000000000000000",
+      "factoryGetPoolFoundPool": false
+    },
+    "requiredBeforeSafePayloadGeneration": {
+      "factoryRouterExecutionPathReviewed": true,
+      "tokenApprovalRequirementsReviewed": true,
+      "safeOwnersAndThresholdReviewed": false,
+      "freshNoPoolRecheckCompleted": false,
+      "safePayloadGenerationApprovalRecorded": false,
+      "publicStatusUpdatePrepared": false
+    },
+    "hardStops": {
+      "encodedCallDataGenerated": false,
+      "safePayloadGenerated": false,
+      "safeTransactionPrepared": false,
+      "safeTransactionExecuted": false,
+      "poolCreated": false,
+      "liquidityAdded": false,
+      "directExecutionSubmitted": false,
+      "publicTradingEnabled": false,
+      "buyPageActivated": false,
+      "treasuryFundsMoved": false,
+      "fullLaunchApproved": false
+    },
+    "safety": {
+      "sendsTransactions": false,
+      "movesFunds": false,
+      "createsLiquidityPool": false,
+      "addsLiquidity": false,
+      "enablesPublicTrading": false,
+      "generatesEncodedCallData": false,
+      "generatesSafePayload": false,
+      "preparesSafeTransaction": false,
+      "executesSafeTransaction": false,
+      "activatesBuyPage": false,
+      "approvesFullLaunch": false
+    },
+    "artifactHashes": [
+      {
+        "path": "reports/dex-pool-creation-factory-router-review/dex-pool-creation-factory-router-review.json",
+        "bytes": 3204,
+        "sha256": "5f145611218b1378184feb00f14d2e072c0be0bf0e71e3cff14cf953846c21fe"
+      },
+      {
+        "path": "configs/dex-pool-creation-factory-router-review.config.json",
+        "bytes": 4134,
+        "sha256": "175c34ef9db4dc3934d2ef567897edd37250aa73943388ec3e0d5f43d6c44144"
+      },
+      {
+        "path": "public-docs/dex-pool-creation-token-ordering-sqrtprice-status.json",
+        "bytes": 8771,
+        "sha256": "0fc6b1f18d2bb5619be9d21618594dcc7260d7b8da39c9afe736df70081b516b"
+      },
+      {
+        "path": "public-docs/dex-pool-creation-safe-payload-draft-review-status.json",
+        "bytes": 18144,
+        "sha256": "86fbee4631a50b52f1621a35b15a732a993c718bb8948fe4359012d9b741020d"
+      },
+      {
+        "path": "public-docs/dex-pool-creation-safe-payload-draft-status.json",
+        "bytes": 16215,
+        "sha256": "3b91375f4f45beceb03364a9cc239274fadaaeae3eaa2af1041af506b271028a"
+      },
+      {
+        "path": "public-docs/dex-pool-creation-safe-payload-preparation-status.json",
+        "bytes": 15789,
+        "sha256": "7fdb8b287921c651187b9a234b280cb2d8d4e77ad0f6bc1ccbbf4e0aba0a5736"
+      },
+      {
+        "path": "public-docs/dex-pool-creation-execution-precheck-status.json",
+        "bytes": 15585,
+        "sha256": "fa6b7074b5c216577bd82fbff0498b402828fda58e29243ca18887994ca24df9"
+      },
+      {
+        "path": "public-docs/dex-pool-creation-approval-status.json",
+        "bytes": 12993,
+        "sha256": "fd35457b760588ef8bd6254f881f2978356abc6ef881be5ab146f57d318d7c1b"
+      },
+      {
+        "path": "public-docs/dex-pool-existence-precheck-status.json",
+        "bytes": 6805,
+        "sha256": "7f1f873d4526efd1e8e3b778d1e15282c1273171739bdf64df165edbb45ff5ab"
+      },
+      {
+        "path": "public-docs/full-launch-status.json",
+        "bytes": 2717,
+        "sha256": "16dec6e30bbec9b9692ea41c76cac4b798ef2c17ac5adb49a9fffa209e1a9cdc"
+      },
+      {
+        "path": "public-docs/treasury-funding-status.json",
+        "bytes": 2489,
+        "sha256": "d87c2c774d0f782c4ca38857d3c77f2cf06037218af677ad9cdd365ba64c5e91"
+      },
+      {
+        "path": "public-docs/treasury-safe-transaction-status.json",
+        "bytes": 3932,
+        "sha256": "881b35ce7c12faab4fcabb6286d2fc10e8a61a48f19d30c30d01214024590812"
+      },
+      {
+        "path": "public-docs/mainnet-monitor-status.json",
+        "bytes": 1707,
+        "sha256": "fc74f338e35dac3b6d163a2255258a7ce589c00b7d26fd8ec8f3fa7a88509ba4"
+      },
+      {
+        "path": "public-docs/mainnet-alerts-status.json",
+        "bytes": 2128,
+        "sha256": "f3de83ad3c12881eb3422a8f49eeb046156e0ac1468f2c032d0305a2c4a9aaa3"
+      },
+      {
+        "path": "public-docs/incident-summary.json",
+        "bytes": 432,
+        "sha256": "57b57c2637eaf8f5600b1b4664211d3562becd7258fb6c81c68857349f295b7b"
+      },
+      {
+        "path": "public-docs/mainnet-execution-status.json",
+        "bytes": 1320,
+        "sha256": "a727c00df4190a8125ea6aa9281db153f175f68952afda4f86727e33da464d68"
+      }
+    ]
+  },
+  "currentStatuses": {
+    "dexPoolCreationSqrtPriceReview": "DEX_POOL_CREATION_TOKEN_ORDERING_SQRTPRICEX96_REVIEW_COMPLETE_NO_PAYLOAD_GENERATED",
+    "dexPoolCreationSafePayloadDraftReview": "DEX_POOL_CREATION_SAFE_PAYLOAD_DRAFT_REVIEW_READY_FOR_SQRTPRICEX96_REVIEW_NO_PAYLOAD_GENERATED",
+    "dexPoolCreationSafePayloadDraft": "DEX_POOL_CREATION_SAFE_PAYLOAD_DRAFT_READY_NO_PAYLOAD_GENERATED",
+    "dexPoolCreationSafePayloadPreparation": "DEX_POOL_CREATION_SAFE_PAYLOAD_PREPARATION_READY_NO_PAYLOAD_GENERATED",
+    "dexPoolCreationExecutionPrecheck": "DEX_POOL_CREATION_EXECUTION_PRECHECK_READY_FOR_SAFE_PAYLOAD_PREPARATION_NO_POOL_CREATED",
+    "dexPoolCreationApproval": "DEX_POOL_CREATION_APPROVED_NO_POOL_CREATED",
+    "dexPoolExistencePrecheck": "DEX_POOL_EXISTENCE_FACTORY_PRECHECK_COMPLETE_NO_POOL_FOUND",
+    "fullLaunch": "FULL_LAUNCH_READINESS_TRACK_OPEN_PLANNING_ONLY",
+    "treasuryFunding": "TREASURY_FUNDING_READINESS_TRACK_OPEN_NOT_APPROVED",
+    "treasurySafeTransaction": "TREASURY_SAFE_TRANSACTION_PACKAGE_SCAFFOLD_READY_NO_PAYLOAD",
+    "monitor": "PASS",
+    "alerts": "CLEAR",
+    "incidents": "NO_ACTIVE_INCIDENTS",
+    "mainnetExecution": "MAINNET_EXECUTION_QUEUE_DISABLED"
+  },
+  "restrictions": {
+    "dexLiquidityPoolTrading": false,
+    "poolCreationExecution": false,
+    "liquidityProvision": false,
+    "publicTrading": false,
+    "buyPageActivation": false,
+    "realTreasuryFunding": false,
+    "mainnetExecutionQueue": false,
+    "safeTransactionPayloadGeneration": false,
+    "safeTransactionExecution": false
+  },
+  "safety": {
+    "sendsTransactions": false,
+    "movesFunds": false,
+    "createsLiquidityPool": false,
+    "addsLiquidity": false,
+    "enablesPublicTrading": false,
+    "generatesEncodedCallData": false,
+    "generatesSafePayload": false,
+    "preparesSafeTransaction": false,
+    "submitsDirectExecution": false,
+    "activatesBuyPage": false,
+    "approvesFullLaunch": false
+  }
+}
