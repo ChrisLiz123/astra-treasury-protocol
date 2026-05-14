@@ -1,0 +1,62 @@
+{
+  "schema": "astra-dex-liquidity-source-safe-impact-approval-config-v0.1",
+  "status": "source-safe-impact-framework-ready-approval-not-yet-recorded",
+  "network": {
+    "name": "Base Mainnet",
+    "chainId": 8453
+  },
+  "currentApprovedMode": "restricted-mainnet-operation",
+  "selectedPublicPurchasePath": "dex-liquidity-pool-trading",
+  "candidateVenue": "Uniswap on Base",
+  "sourceSafeImpactApprovalPrepared": true,
+  "sourceSafeImpactApprovalOnly": true,
+  "sourceSafeImpactApprovalRecorded": false,
+  "approvalRecordFile": "reports/dex-liquidity-source-safe-impact/dex-liquidity-source-safe-impact-approval-record.json",
+  "requiresDexParameterApproval": true,
+  "requiresValidParameterSelection": true,
+  "liquiditySourceApprovedForPlanning": false,
+  "safeImpactReviewedForPlanning": false,
+  "treasuryAssetUseAcknowledgedForLaterApproval": false,
+  "externalLiquidityProviderPathAcknowledged": false,
+  "dexLiquidityPathApproved": false,
+  "liquidityPoolCreationApproved": false,
+  "liquidityProvisionApproved": false,
+  "publicTradingApproved": false,
+  "publicTradingLinkApproved": false,
+  "buyPageActivationApproved": false,
+  "safePayloadGenerationApproved": false,
+  "safeTransactionExecutionApproved": false,
+  "treasuryFundingApproved": false,
+  "fullLaunchApproved": false,
+  "allowedLiquiditySourceClassifications": [
+    "external-lp-wallet",
+    "treasury-safe-controlled",
+    "hybrid"
+  ],
+  "allowedSafeImpactClassifications": [
+    "no-safe-required",
+    "safe-review-required-later"
+  ],
+  "approvalScope": {
+    "approvesLiquiditySourceForPlanningOnly": true,
+    "approvesSafeImpactClassificationOnly": true,
+    "approvesPoolCreation": false,
+    "approvesLiquidityProvision": false,
+    "approvesPublicTrading": false,
+    "approvesSafePayloadGeneration": false,
+    "approvesFundsMovement": false,
+    "approvesBuyPageActivation": false,
+    "approvesFullLaunch": false
+  },
+  "hardStops": {
+    "poolCreated": false,
+    "liquidityAdded": false,
+    "safePayloadGenerated": false,
+    "safeTransactionExecuted": false,
+    "publicTradingEnabled": false,
+    "buyPageActivated": false,
+    "treasuryFundsMoved": false,
+    "fullLaunchApproved": false
+  },
+  "hardRule": "This package approves liquidity source classification and Safe-impact planning only. It must not create a pool, add liquidity, approve public trading, generate a Safe payload, move funds, activate a buy page, or approve full launch."
+}
