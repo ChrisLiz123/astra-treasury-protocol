@@ -508,7 +508,12 @@
     "dex:pool-creation-safe-submission-execution-approval:validate": "node scripts/validate-dex-pool-creation-safe-submission-execution-approval.mjs",
     "dex:pool-creation-safe-submission-execution-approval:status": "node services/dex-pool-creation-safe-submission-execution-approval/status.mjs",
     "dex:pool-creation-safe-submission-execution-approval:gate": "npm run dex:pool-existence-precheck:gate && npm run dex:pool-creation-safe-submission-execution-approval:validate && npm run dex:pool-creation-safe-submission-execution-approval:status",
-    "release:dex-pool-creation-safe-submission-execution-approval": "bash scripts/release/package-dex-pool-creation-safe-submission-execution-approval.sh"
+    "release:dex-pool-creation-safe-submission-execution-approval": "bash scripts/release/package-dex-pool-creation-safe-submission-execution-approval.sh",
+    "dex:pool-creation-safe-submission-live:record": "node scripts/record-dex-pool-creation-safe-submission-live.mjs",
+    "dex:pool-creation-safe-submission-live:validate": "node scripts/validate-dex-pool-creation-safe-submission-live.mjs",
+    "dex:pool-creation-safe-submission-live:status": "node services/dex-pool-creation-safe-submission-live/status.mjs",
+    "dex:pool-creation-safe-submission-live:gate": "npm run dex:pool-existence-precheck:gate && npm run dex:pool-creation-safe-submission-live:validate && npm run dex:pool-creation-safe-submission-live:status",
+    "release:dex-pool-creation-safe-submission-live": "bash scripts/release/package-dex-pool-creation-safe-submission-live.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",
