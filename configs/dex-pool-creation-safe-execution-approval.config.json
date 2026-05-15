@@ -1,0 +1,70 @@
+{
+  "schema": "astra-dex-pool-creation-safe-execution-approval-config-v0.1",
+  "status": "safe-execution-approved-not-executed",
+  "network": {
+    "name": "Base Mainnet",
+    "chainId": 8453
+  },
+  "currentApprovedMode": "restricted-mainnet-operation",
+  "selectedPublicPurchasePath": "dex-liquidity-pool-trading",
+  "dexVenue": "Uniswap on Base",
+  "approvalPrepared": true,
+  "approvalOnly": true,
+  "approvalRecordFile": "reports/dex-pool-creation-safe-execution-approval/dex-pool-creation-safe-execution-approval-record.json",
+  "requiresPendingSignatureThresholdReached": true,
+  "requiresSafeSubmissionLiveRecord": true,
+  "requiresSafeSubmissionExecutionApproval": true,
+  "requiresSafeSubmissionDryRun": true,
+  "requiresSafePayloadVerification": true,
+  "requiresFreshNoPoolRecheckBeforeExecution": true,
+  "safeExecutionApprovalRecorded": true,
+  "safeTransactionExecutionApproved": true,
+  "safeTransactionExecuted": false,
+  "poolCreationExecutionApproved": true,
+  "poolCreated": false,
+  "liquidityProvisionApproved": false,
+  "liquidityAdded": false,
+  "publicTradingApproved": false,
+  "publicTradingLinkApproved": false,
+  "buyPageActivationApproved": false,
+  "treasuryFundingApproved": false,
+  "treasuryFundsMoved": false,
+  "fullLaunchApproved": false,
+  "approvalScope": {
+    "approvesLaterSafeExecutionStep": true,
+    "approvesPoolCreationExecutionViaSafe": true,
+    "approvesLiquidityProvision": false,
+    "approvesFundsMovement": false,
+    "approvesPublicTrading": false,
+    "approvesBuyPageActivation": false,
+    "approvesFullLaunch": false
+  },
+  "requiredBeforeActualSafeExecution": {
+    "pendingSignatureThresholdReached": true,
+    "freshNoPoolRecheckBeforeExecution": true,
+    "safeExecutionApprovalRecorded": true,
+    "publicStatusUpdatePrepared": false,
+    "postExecutionMonitoringPlanReady": false,
+    "operatorSafeExecutionCommandReviewed": false
+  },
+  "hardStops": {
+    "safeTransactionExecuted": false,
+    "poolCreated": false,
+    "liquidityAdded": false,
+    "directExecutionSubmitted": false,
+    "publicTradingEnabled": false,
+    "buyPageActivated": false,
+    "treasuryFundsMoved": false,
+    "fullLaunchApproved": false
+  },
+  "hardRule": "This package records approval for the later Safe execution step only. It must not execute the Safe transaction, create a pool, add liquidity, move funds, activate a buy page, approve public trading, approve treasury funding, or approve full launch.",
+  "approvedSafeExecution": {
+    "recordedAt": "2026-05-15T01:07:42.543Z",
+    "approver": "Founder",
+    "approvalReference": "ASTRA-Founder-20260514",
+    "recordFile": "reports/dex-pool-creation-safe-execution-approval/dex-pool-creation-safe-execution-approval-record.json",
+    "safeTxHash": "0x9f77bd0e68d35179068d42da9560663a35002c687a6a0849617ce4bf153bcc70",
+    "safeAddress": "0x8992B4173cf791Cf88eC36cd53b27F3BF22404D3",
+    "payloadHash": "1c53ae761eb247b809cfdc7e4f49cd30d29dfb31112393ead8df2d082e8c0f2a"
+  }
+}
