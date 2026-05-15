@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AstraTreasury DEX Liquidity Provision Approval</title>
+  <style>
+    :root { color-scheme: dark; --bg: #08111f; --surface: #0e1a2b; --border: rgba(148, 163, 184, 0.2); --text: #edf4fb; --muted: #9aaec4; --blue: #67a7ff; --yellow: #f4c35f; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    body { margin: 0; background: linear-gradient(180deg, #07101d, var(--bg)); color: var(--text); }
+    a { color: var(--blue); text-decoration: none; }
+    main { width: min(1120px, calc(100% - 40px)); margin: 0 auto; padding: 44px 0 72px; }
+    .card { background: var(--surface); border: 1px solid var(--border); border-radius: 24px; padding: 28px; box-shadow: 0 22px 70px rgba(0,0,0,.28); margin-bottom: 18px; }
+    h1 { margin: 0 0 10px; font-size: 42px; letter-spacing: -1.2px; }
+    h2 { margin: 0 0 14px; font-size: 24px; }
+    p { color: var(--muted); line-height: 1.65; }
+    .badge { display: inline-flex; padding: 8px 12px; border-radius: 999px; background: rgba(244,195,95,.08); border: 1px solid rgba(244,195,95,.22); color: var(--yellow); font-weight: 850; margin-bottom: 16px; }
+    table { width: 100%; border-collapse: collapse; border: 1px solid var(--border); border-radius: 18px; overflow: hidden; margin-bottom: 16px; }
+    th, td { padding: 14px 16px; border-bottom: 1px solid var(--border); text-align: left; vertical-align: top; }
+    th { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: .08em; background: rgba(255,255,255,.03); }
+    tr:last-child td { border-bottom: 0; }
+    code { color: var(--muted); overflow-wrap: anywhere; font-size: 12px; }
+    .notice { padding: 16px; border-radius: 16px; background: rgba(244,195,95,.08); border: 1px solid rgba(244,195,95,.22); color: #f7d99a; line-height: 1.6; }
+  </style>
+</head>
+<body>
+<main>
+  <section class="card">
+    <div class="badge">Liquidity provision approval · no liquidity added</div>
+    <h1>DEX Liquidity Provision Approval</h1>
+    <p>AstraTreasury approved moving into liquidity-provision planning for the created DEX pool. No liquidity has been added, no Safe liquidity payload has been generated, no token approvals have been executed, no treasury funds have moved, public trading is not approved, and full launch is not approved.</p>
+    <p><strong>Approval hash:</strong> <code>51de470e795bb9b78f1a7573027e882adadc01fc86ff57816495a3773c844cec</code></p>
+  </section>
+
+  <section class="card">
+    <h2>Approval summary</h2>
+    <table><thead><tr><th>Field</th><th>Value</th></tr></thead><tbody><tr><td>recordedAt</td><td>2026-05-15T01:47:44.669Z</td></tr><tr><td>approver</td><td>Founder</td></tr><tr><td>approvalReference</td><td>ASTRA-Founder-202605142147</td></tr><tr><td>poolAddress</td><td>0xe9f5b875ca072073ff66a8596935ec08ca1222bf</td></tr><tr><td>poolLiquidity</td><td>0</td></tr><tr><td>liquidityProvisionApproved</td><td>true</td></tr><tr><td>liquiditySafePayloadGenerated</td><td>false</td></tr><tr><td>tokenApprovalExecuted</td><td>false</td></tr><tr><td>liquidityAdded</td><td>false</td></tr><tr><td>positionMinted</td><td>false</td></tr><tr><td>treasuryFundsMoved</td><td>false</td></tr><tr><td>publicTradingApproved</td><td>false</td></tr><tr><td>fullLaunchApproved</td><td>false</td></tr></tbody></table>
+  </section>
+
+  <section class="card">
+    <h2>Required before liquidity payload generation</h2>
+    <table><thead><tr><th>Requirement</th><th>Status</th></tr></thead><tbody><tr><td>liquidityProvisionApprovalRecorded</td><td>Complete</td></tr><tr><td>poolVerified</td><td>Complete</td></tr><tr><td>poolLiquidityVerifiedZero</td><td>Complete</td></tr><tr><td>treasuryFundingApprovalRecorded</td><td>Required / pending</td></tr><tr><td>tokenApprovalRequirementsReviewed</td><td>Required / pending</td></tr><tr><td>liquidityMintParametersReviewed</td><td>Required / pending</td></tr><tr><td>slippageAndDeadlineReviewed</td><td>Required / pending</td></tr><tr><td>safePayloadGenerationApprovalRecorded</td><td>Required / pending</td></tr><tr><td>publicStatusUpdatePrepared</td><td>Required / pending</td></tr></tbody></table>
+  </section>
+
+  <section class="card">
+    <h2>Checks</h2>
+    <table><thead><tr><th>Check</th><th>Status</th><th>Details</th></tr></thead><tbody><tr><td>Framework prepared</td><td>PASS</td><td><code>{&quot;approvalPrepared&quot;:true,&quot;approvalOnly&quot;:true}</code></td></tr><tr><td>Post-execution pool verification complete</td><td>PASS</td><td><code>{&quot;status&quot;:&quot;DEX_POOL_CREATION_POST_EXECUTION_POOL_VERIFIED_NO_LIQUIDITY_NO_PUBLIC_TRADING&quot;}</code></td></tr><tr><td>Pool verified with zero liquidity</td><td>PASS</td><td><code>{&quot;poolVerified&quot;:true,&quot;liquidityVerifiedZero&quot;:true,&quot;poolLiquidity&quot;:&quot;0&quot;}</code></td></tr><tr><td>Safe execution live recorded</td><td>PASS</td><td><code>{&quot;status&quot;:&quot;DEX_POOL_CREATION_SAFE_EXECUTION_LIVE_RECORDED_POOL_CREATED_NO_LIQUIDITY&quot;}</code></td></tr><tr><td>DEX liquidity parameters approved</td><td>PASS</td><td><code>{&quot;status&quot;:&quot;DEX_LIQUIDITY_PARAMETERS_APPROVED_NO_POOL_NO_LIQUIDITY&quot;}</code></td></tr><tr><td>Source/Safe-impact approved</td><td>PASS</td><td><code>{&quot;status&quot;:&quot;DEX_LIQUIDITY_SOURCE_SAFE_IMPACT_APPROVED_NO_FUNDS_NO_SAFE_PAYLOAD&quot;}</code></td></tr><tr><td>Full launch not approved</td><td>PASS</td><td><code>{&quot;fullLaunchApproved&quot;:false}</code></td></tr><tr><td>Treasury funding not approved/executed</td><td>PASS</td><td><code>{&quot;treasuryFundingApproved&quot;:false,&quot;treasuryFundingExecuted&quot;:false}</code></td></tr><tr><td>Capability Matrix remains all-disabled</td><td>PASS</td><td><code>{&quot;allCapabilitiesDisabled&quot;:true,&quot;allCapabilityApprovalsFalse&quot;:true}</code></td></tr><tr><td>Execution queue disabled</td><td>PASS</td><td><code>{&quot;mode&quot;:&quot;MAINNET_EXECUTION_QUEUE_DISABLED&quot;}</code></td></tr><tr><td>No liquidity or public-trading artifacts present</td><td>PASS</td><td><code>{&quot;forbiddenArtifactsPresent&quot;:[]}</code></td></tr></tbody></table>
+  </section>
+
+  <section class="card">
+    <h2>Current statuses</h2>
+    <table><thead><tr><th>Area</th><th>Status</th></tr></thead><tbody><tr><td>dexPoolPostExecutionVerification</td><td>Dex Pool Creation Post Execution Pool Verified No Liquidity No Public Trading</td></tr><tr><td>dexPoolSafeExecutionLive</td><td>Dex Pool Creation Safe Execution Live Recorded Pool Created No Liquidity</td></tr><tr><td>dexLiquidityParameterApproval</td><td>Dex Liquidity Parameters Approved No Pool No Liquidity</td></tr><tr><td>dexLiquiditySourceSafeImpact</td><td>Dex Liquidity Source Safe Impact Approved No Funds No Safe Payload</td></tr><tr><td>fullLaunch</td><td>Full Launch Readiness Track Open Planning Only</td></tr><tr><td>treasuryFunding</td><td>Treasury Funding Readiness Track Open Not Approved</td></tr><tr><td>capabilityMatrix</td><td>Capability Matrix Finalized All Disabled</td></tr><tr><td>mainnetExecution</td><td>Mainnet Execution Queue Disabled</td></tr></tbody></table>
+  </section>
+
+  <section class="card">
+    <h2>Important</h2>
+    <div class="notice">
+      This approval does not add liquidity, approve token transfers, move treasury funds,
+      activate the buy page, or approve public trading.
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Public API</h2>
+    <p><a href="/api/public/dex-liquidity-provision-approval">/api/public/dex-liquidity-provision-approval</a></p>
+    <p><a href="/dex-pool-creation-post-execution-verification">DEX Post-Execution Pool Verification</a></p>
+    <p><a href="/dex-pool-creation-safe-execution-live">DEX Safe Execution Live</a></p>
+    <p><a href="/">Back to homepage</a></p>
+  </section>
+</main>
+</body>
+</html>

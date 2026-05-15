@@ -532,7 +532,12 @@
     "dex:pool-creation-post-execution:validate": "node scripts/validate-dex-pool-creation-post-execution-verification.mjs",
     "dex:pool-creation-post-execution:status": "node services/dex-pool-creation-post-execution-verification/status.mjs",
     "dex:pool-creation-post-execution:gate": "npm run dex:pool-creation-post-execution:verify && npm run dex:pool-creation-post-execution:validate && npm run dex:pool-creation-post-execution:status",
-    "release:dex-pool-creation-post-execution-verification": "bash scripts/release/package-dex-pool-creation-post-execution-verification.sh"
+    "release:dex-pool-creation-post-execution-verification": "bash scripts/release/package-dex-pool-creation-post-execution-verification.sh",
+    "dex:liquidity-provision-approval:record": "node scripts/record-dex-liquidity-provision-approval.mjs",
+    "dex:liquidity-provision-approval:validate": "node scripts/validate-dex-liquidity-provision-approval.mjs",
+    "dex:liquidity-provision-approval:status": "node services/dex-liquidity-provision-approval/status.mjs",
+    "dex:liquidity-provision-approval:gate": "npm run dex:liquidity-provision-approval:validate && npm run dex:liquidity-provision-approval:status",
+    "release:dex-liquidity-provision-approval": "bash scripts/release/package-dex-liquidity-provision-approval.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",

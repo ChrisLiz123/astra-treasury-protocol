@@ -2760,6 +2760,30 @@ const server = http.createServer((req, res) => {
       return;
     }
 
+    if (url.pathname === "/dex-liquidity-provision-approval") {
+      const filePath = path.join(docsDir, "dex-liquidity-provision-approval.html");
+
+      if (!fs.existsSync(filePath)) {
+        textResponse(res, "DEX liquidity provision approval page not generated yet. Run: npm run dex:liquidity-provision-approval:status\n", 404);
+        return;
+      }
+
+      textResponse(res, readText(filePath), 200, "text/html; charset=utf-8");
+      return;
+    }
+
+    if (url.pathname === "/api/public/dex-liquidity-provision-approval") {
+      const filePath = path.join(docsDir, "dex-liquidity-provision-approval-status.json");
+
+      if (!fs.existsSync(filePath)) {
+        jsonResponse(res, { error: "DEX liquidity provision approval status not generated yet. Run: npm run dex:liquidity-provision-approval:status" }, 404);
+        return;
+      }
+
+      textResponse(res, readText(filePath), 200, "application/json; charset=utf-8");
+      return;
+    }
+
     if (url.pathname === "/healthz") {
       jsonResponse(res, {
         ok: true,
