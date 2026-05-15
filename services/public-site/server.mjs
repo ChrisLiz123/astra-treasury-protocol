@@ -2856,6 +2856,30 @@ const server = http.createServer((req, res) => {
       return;
     }
 
+    if (url.pathname === "/dex-liquidity-funding-transfer-requirements") {
+      const filePath = path.join(docsDir, "dex-liquidity-funding-transfer-requirements.html");
+
+      if (!fs.existsSync(filePath)) {
+        textResponse(res, "DEX liquidity funding transfer requirements page not generated yet. Run: npm run dex:liquidity-funding-transfer-requirements:status\n", 404);
+        return;
+      }
+
+      textResponse(res, readText(filePath), 200, "text/html; charset=utf-8");
+      return;
+    }
+
+    if (url.pathname === "/api/public/dex-liquidity-funding-transfer-requirements") {
+      const filePath = path.join(docsDir, "dex-liquidity-funding-transfer-requirements-status.json");
+
+      if (!fs.existsSync(filePath)) {
+        jsonResponse(res, { error: "DEX liquidity funding transfer requirements status not generated yet. Run: npm run dex:liquidity-funding-transfer-requirements:status" }, 404);
+        return;
+      }
+
+      textResponse(res, readText(filePath), 200, "application/json; charset=utf-8");
+      return;
+    }
+
     if (url.pathname === "/healthz") {
       jsonResponse(res, {
         ok: true,

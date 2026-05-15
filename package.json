@@ -552,7 +552,12 @@
     "dex:liquidity-treasury-funding-approval:validate": "node scripts/validate-dex-liquidity-treasury-funding-approval.mjs",
     "dex:liquidity-treasury-funding-approval:status": "node services/dex-liquidity-treasury-funding-approval/status.mjs",
     "dex:liquidity-treasury-funding-approval:gate": "npm run dex:liquidity-treasury-funding-approval:validate && npm run dex:liquidity-treasury-funding-approval:status",
-    "release:dex-liquidity-treasury-funding-approval": "bash scripts/release/package-dex-liquidity-treasury-funding-approval.sh"
+    "release:dex-liquidity-treasury-funding-approval": "bash scripts/release/package-dex-liquidity-treasury-funding-approval.sh",
+    "dex:liquidity-funding-transfer-requirements:review": "node scripts/review-dex-liquidity-funding-transfer-requirements.mjs",
+    "dex:liquidity-funding-transfer-requirements:validate": "node scripts/validate-dex-liquidity-funding-transfer-requirements.mjs",
+    "dex:liquidity-funding-transfer-requirements:status": "node services/dex-liquidity-funding-transfer-requirements/status.mjs",
+    "dex:liquidity-funding-transfer-requirements:gate": "npm run dex:liquidity-funding-transfer-requirements:review && npm run dex:liquidity-funding-transfer-requirements:validate && npm run dex:liquidity-funding-transfer-requirements:status",
+    "release:dex-liquidity-funding-transfer-requirements": "bash scripts/release/package-dex-liquidity-funding-transfer-requirements.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",
