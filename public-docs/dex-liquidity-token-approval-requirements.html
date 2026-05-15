@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AstraTreasury DEX Token Approval Requirements</title>
+  <style>
+    :root { color-scheme: dark; --bg: #08111f; --surface: #0e1a2b; --border: rgba(148, 163, 184, 0.2); --text: #edf4fb; --muted: #9aaec4; --blue: #67a7ff; --yellow: #f4c35f; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    body { margin: 0; background: linear-gradient(180deg, #07101d, var(--bg)); color: var(--text); }
+    a { color: var(--blue); text-decoration: none; }
+    main { width: min(1120px, calc(100% - 40px)); margin: 0 auto; padding: 44px 0 72px; }
+    .card { background: var(--surface); border: 1px solid var(--border); border-radius: 24px; padding: 28px; box-shadow: 0 22px 70px rgba(0,0,0,.28); margin-bottom: 18px; }
+    h1 { margin: 0 0 10px; font-size: 42px; letter-spacing: -1.2px; }
+    h2 { margin: 0 0 14px; font-size: 24px; }
+    p { color: var(--muted); line-height: 1.65; }
+    .badge { display: inline-flex; padding: 8px 12px; border-radius: 999px; background: rgba(244,195,95,.08); border: 1px solid rgba(244,195,95,.22); color: var(--yellow); font-weight: 850; margin-bottom: 16px; }
+    table { width: 100%; border-collapse: collapse; border: 1px solid var(--border); border-radius: 18px; overflow: hidden; margin-bottom: 16px; }
+    th, td { padding: 14px 16px; border-bottom: 1px solid var(--border); text-align: left; vertical-align: top; }
+    th { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: .08em; background: rgba(255,255,255,.03); }
+    tr:last-child td { border-bottom: 0; }
+    code { color: var(--muted); overflow-wrap: anywhere; font-size: 12px; }
+    .notice { padding: 16px; border-radius: 16px; background: rgba(244,195,95,.08); border: 1px solid rgba(244,195,95,.22); color: #f7d99a; line-height: 1.6; }
+  </style>
+</head>
+<body>
+<main>
+  <section class="card">
+    <div class="badge">Token approval requirements · no approvals executed</div>
+    <h1>DEX Token Approval Requirements</h1>
+    <p>AstraTreasury reviewed DEX liquidity token approval requirements. No approval calldata is generated, no token approvals are executed, no liquidity is added, no treasury funds are moved, public trading is not approved, and full launch is not approved.</p>
+    <p><strong>Review hash:</strong> <code>6a23c49c3a4818fbc489a314567e16f59b95d109cb89eea1abf17cf783668093</code></p>
+  </section>
+
+  <section class="card">
+    <h2>Summary</h2>
+    <table><thead><tr><th>Field</th><th>Value</th></tr></thead><tbody><tr><td>reviewPresent</td><td>true</td></tr><tr><td>tokenApprovalRequirementsReviewed</td><td>true</td></tr><tr><td>poolAddress</td><td>0xe9f5b875ca072073ff66a8596935ec08ca1222bf</td></tr><tr><td>poolLiquidity</td><td>0</td></tr><tr><td>safeAddress</td><td>0x8992B4173cf791Cf88eC36cd53b27F3BF22404D3</td></tr><tr><td>approvalSpenderAddress</td><td>0x03a520b32C04BF3bEEf7BEb72E919cf822Ed34f1</td></tr><tr><td>approvalsLikelyRequired</td><td>true</td></tr><tr><td>tokenApprovalPayloadGenerated</td><td>false</td></tr><tr><td>tokenApprovalExecuted</td><td>false</td></tr><tr><td>liquiditySafePayloadGenerated</td><td>false</td></tr><tr><td>liquidityAdded</td><td>false</td></tr><tr><td>positionMinted</td><td>false</td></tr><tr><td>treasuryFundsMoved</td><td>false</td></tr><tr><td>publicTradingApproved</td><td>false</td></tr><tr><td>fullLaunchApproved</td><td>false</td></tr><tr><td>nextRecommendedMilestone</td><td>DEX Liquidity Mint Parameter Review</td></tr><tr><td>artifactCount</td><td>7</td></tr></tbody></table>
+  </section>
+
+  <section class="card">
+    <h2>Token allowance review</h2>
+    <table>
+      <thead><tr><th>Role</th><th>Symbol</th><th>Token</th><th>Safe balance</th><th>Current allowance</th><th>Planned amount</th><th>Approval likely required</th></tr></thead>
+      <tbody><tr>
+    <td>token0</td>
+    <td>USDC</td>
+    <td><code>0x833589fcd6edb6e08f4c7c32d4f71b54bda02913</code></td>
+    <td>0</td>
+    <td>0</td>
+    <td>1000 USDC</td>
+    <td>true</td>
+  </tr><tr>
+    <td>token1</td>
+    <td>ASTRA</td>
+    <td><code>0xc7c39837d0e604eeb525fc8fc501a5475a20419b</code></td>
+    <td>0</td>
+    <td>0</td>
+    <td>10000000 ASTRA</td>
+    <td>true</td>
+  </tr></tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>Required before token approval payload generation</h2>
+    <table><thead><tr><th>Requirement</th><th>Status</th></tr></thead><tbody><tr><td>tokenApprovalRequirementsReviewed</td><td>Complete</td></tr><tr><td>liquidityProvisionApprovalRecorded</td><td>Complete</td></tr><tr><td>poolVerified</td><td>Complete</td></tr><tr><td>treasuryFundingApprovalRecorded</td><td>Required / pending</td></tr><tr><td>tokenApprovalPayloadGenerationApprovalRecorded</td><td>Required / pending</td></tr><tr><td>safeOwnersAndThresholdReviewed</td><td>Complete</td></tr><tr><td>operatorApprovalCommandReviewed</td><td>Required / pending</td></tr><tr><td>publicStatusUpdatePrepared</td><td>Required / pending</td></tr></tbody></table>
+  </section>
+
+  <section class="card">
+    <h2>Current statuses</h2>
+    <table><thead><tr><th>Area</th><th>Status</th></tr></thead><tbody><tr><td>dexLiquidityProvisionApproval</td><td>Dex Liquidity Provision Approved No Liquidity Added No Funds Moved</td></tr><tr><td>dexPoolPostExecutionVerification</td><td>Dex Pool Creation Post Execution Pool Verified No Liquidity No Public Trading</td></tr><tr><td>fullLaunch</td><td>Full Launch Readiness Track Open Planning Only</td></tr><tr><td>treasuryFunding</td><td>Treasury Funding Readiness Track Open Not Approved</td></tr><tr><td>capabilityMatrix</td><td>Capability Matrix Finalized All Disabled</td></tr><tr><td>mainnetExecution</td><td>Mainnet Execution Queue Disabled</td></tr></tbody></table>
+  </section>
+
+  <section class="card">
+    <h2>Important</h2>
+    <div class="notice">
+      This page reviews token approval requirements only. It does not generate approval calldata,
+      approve tokens, add liquidity, move treasury funds, activate the buy page, or approve public trading.
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Public API</h2>
+    <p><a href="/api/public/dex-liquidity-token-approval-requirements">/api/public/dex-liquidity-token-approval-requirements</a></p>
+    <p><a href="/dex-liquidity-provision-approval">DEX Liquidity Provision Approval</a></p>
+    <p><a href="/dex-pool-creation-post-execution-verification">DEX Post-Execution Pool Verification</a></p>
+    <p><a href="/">Back to homepage</a></p>
+  </section>
+</main>
+</body>
+</html>

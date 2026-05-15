@@ -537,7 +537,12 @@
     "dex:liquidity-provision-approval:validate": "node scripts/validate-dex-liquidity-provision-approval.mjs",
     "dex:liquidity-provision-approval:status": "node services/dex-liquidity-provision-approval/status.mjs",
     "dex:liquidity-provision-approval:gate": "npm run dex:liquidity-provision-approval:validate && npm run dex:liquidity-provision-approval:status",
-    "release:dex-liquidity-provision-approval": "bash scripts/release/package-dex-liquidity-provision-approval.sh"
+    "release:dex-liquidity-provision-approval": "bash scripts/release/package-dex-liquidity-provision-approval.sh",
+    "dex:liquidity-token-approval:review": "node scripts/review-dex-liquidity-token-approval-requirements.mjs",
+    "dex:liquidity-token-approval:validate": "node scripts/validate-dex-liquidity-token-approval-requirements.mjs",
+    "dex:liquidity-token-approval:status": "node services/dex-liquidity-token-approval-requirements/status.mjs",
+    "dex:liquidity-token-approval:gate": "npm run dex:liquidity-token-approval:review && npm run dex:liquidity-token-approval:validate && npm run dex:liquidity-token-approval:status",
+    "release:dex-liquidity-token-approval-requirements": "bash scripts/release/package-dex-liquidity-token-approval-requirements.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",
