@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AstraTreasury DEX Funding Transfer Safe Pending Signatures</title>
+  <style>
+    :root { color-scheme: dark; --bg: #08111f; --surface: #0e1a2b; --border: rgba(148, 163, 184, 0.2); --text: #edf4fb; --muted: #9aaec4; --blue: #67a7ff; --yellow: #f4c35f; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    body { margin: 0; background: linear-gradient(180deg, #07101d, var(--bg)); color: var(--text); }
+    a { color: var(--blue); text-decoration: none; }
+    main { width: min(1120px, calc(100% - 40px)); margin: 0 auto; padding: 44px 0 72px; }
+    .card { background: var(--surface); border: 1px solid var(--border); border-radius: 24px; padding: 28px; box-shadow: 0 22px 70px rgba(0,0,0,.28); margin-bottom: 18px; }
+    h1 { margin: 0 0 10px; font-size: 42px; letter-spacing: -1.2px; }
+    h2 { margin: 0 0 14px; font-size: 24px; }
+    p { color: var(--muted); line-height: 1.65; }
+    .badge { display: inline-flex; padding: 8px 12px; border-radius: 999px; background: rgba(244,195,95,.08); border: 1px solid rgba(244,195,95,.22); color: var(--yellow); font-weight: 850; margin-bottom: 16px; }
+    table { width: 100%; border-collapse: collapse; border: 1px solid var(--border); border-radius: 18px; overflow: hidden; margin-bottom: 16px; }
+    th, td { padding: 14px 16px; border-bottom: 1px solid var(--border); text-align: left; vertical-align: top; }
+    th { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: .08em; background: rgba(255,255,255,.03); }
+    tr:last-child td { border-bottom: 0; }
+    code { color: var(--muted); overflow-wrap: anywhere; font-size: 12px; }
+    .notice { padding: 16px; border-radius: 16px; background: rgba(244,195,95,.08); border: 1px solid rgba(244,195,95,.22); color: #f7d99a; line-height: 1.6; }
+  </style>
+</head>
+<body>
+<main>
+  <section class="card">
+    <div class="badge">Pending signatures monitoring · not executed · no funds moved</div>
+    <h1>DEX Funding Transfer Safe Pending Signatures</h1>
+    <p>AstraTreasury monitored the submitted DEX liquidity funding-transfer Safe transaction. Additional Safe confirmations are still pending, the Safe transaction is not executed, no treasury funds have moved, no token approvals have executed, no liquidity has been added, public trading is not approved, and full launch is not approved.</p>
+    <p><strong>Monitoring hash:</strong> <code>7de1a5386e220ff2f7de965b1fd6a18c469a6ba7e47881f9111451d693f4fd92</code></p>
+  </section>
+
+  <section class="card">
+    <h2>Summary</h2>
+    <table><thead><tr><th>Field</th><th>Value</th></tr></thead><tbody><tr><td>reportPresent</td><td>true</td></tr><tr><td>pendingSignatureMonitoringComplete</td><td>true</td></tr><tr><td>sourceSafeAddress</td><td>0xe2554515AaC8a3835326a4Ed5e9F44c319BE335C</td></tr><tr><td>destinationSafeAddress</td><td>0x8992B4173cf791Cf88eC36cd53b27F3BF22404D3</td></tr><tr><td>payloadHash</td><td>c34c38b064416c9d64222e3ef3d8fd2a27ef695af0d64596a6b46a1bebe825d1</td></tr><tr><td>safeTxHash</td><td>0x1a96aed9f8123f01a69fcd23d69e4fbcc1a730fbab15d9cca883b05c70fb4175</td></tr><tr><td>safeNonce</td><td>0</td></tr><tr><td>confirmationCount</td><td>1</td></tr><tr><td>requiredThreshold</td><td>2</td></tr><tr><td>missingConfirmationCount</td><td>1</td></tr><tr><td>thresholdReached</td><td>false</td></tr><tr><td>safeTransactionSubmitted</td><td>true</td></tr><tr><td>safeTransactionExecuted</td><td>false</td></tr><tr><td>fundingTransferSubmitted</td><td>true</td></tr><tr><td>fundingTransferExecuted</td><td>false</td></tr><tr><td>treasuryFundsMoved</td><td>false</td></tr><tr><td>tokenApprovalExecuted</td><td>false</td></tr><tr><td>liquidityAdded</td><td>false</td></tr><tr><td>positionMinted</td><td>false</td></tr><tr><td>publicTradingApproved</td><td>false</td></tr><tr><td>fullLaunchApproved</td><td>false</td></tr><tr><td>nextRecommendedMilestone</td><td>DEX Liquidity Treasury Funding Transfer Safe Pending Signatures Monitoring</td></tr><tr><td>artifactCount</td><td>9</td></tr></tbody></table>
+  </section>
+
+  <section class="card">
+    <h2>Transfer readiness checks</h2>
+    <table>
+      <thead><tr><th>Role</th><th>Symbol</th><th>Token</th><th>Amount</th><th>Source covers transfer</th><th>Destination unchanged</th></tr></thead>
+      <tbody><tr>
+    <td>token0</td>
+    <td>USDC</td>
+    <td><code>0x833589fcd6edb6e08f4c7c32d4f71b54bda02913</code></td>
+    <td>1000</td>
+    <td>true</td>
+    <td>true</td>
+  </tr><tr>
+    <td>token1</td>
+    <td>ASTRA</td>
+    <td><code>0xc7c39837d0e604eeb525fc8fc501a5475a20419b</code></td>
+    <td>10000000</td>
+    <td>true</td>
+    <td>true</td>
+  </tr></tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>Required before execution approval</h2>
+    <table><thead><tr><th>Requirement</th><th>Status</th></tr></thead><tbody><tr><td>pendingSignatureMonitoringComplete</td><td>Complete</td></tr><tr><td>safeTransactionSubmitted</td><td>Complete</td></tr><tr><td>safeTransactionExecuted</td><td>Required / pending</td></tr><tr><td>fundingTransferExecuted</td><td>Required / pending</td></tr><tr><td>safeTxHashRecorded</td><td>Complete</td></tr><tr><td>safeNonceRecorded</td><td>Complete</td></tr><tr><td>thresholdReached</td><td>Required / pending</td></tr><tr><td>safeExecutionApprovalRecorded</td><td>Required / pending</td></tr><tr><td>publicStatusUpdatePrepared</td><td>Required / pending</td></tr></tbody></table>
+  </section>
+
+  <section class="card">
+    <h2>Current statuses</h2>
+    <table><thead><tr><th>Area</th><th>Status</th></tr></thead><tbody><tr><td>dexFundingTransferSafeSubmissionLive</td><td>Dex Liquidity Treasury Funding Transfer Safe Submission Live Recorded Not Executed No Funds Moved</td></tr><tr><td>dexPoolPostExecutionVerification</td><td>Dex Pool Creation Post Execution Pool Verified No Liquidity No Public Trading</td></tr><tr><td>fullLaunch</td><td>Full Launch Readiness Track Open Planning Only</td></tr><tr><td>treasuryFunding</td><td>Treasury Funding Readiness Track Open Not Approved</td></tr><tr><td>capabilityMatrix</td><td>Capability Matrix Finalized All Disabled</td></tr><tr><td>mainnetExecution</td><td>Mainnet Execution Queue Disabled</td></tr></tbody></table>
+  </section>
+
+  <section class="card">
+    <h2>Important</h2>
+    <div class="notice">
+      This is monitoring only. It has not executed the Safe transaction, and no funds have moved.
+      Execution requires a separate future approval.
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Public API</h2>
+    <p><a href="/api/public/dex-liquidity-funding-transfer-safe-pending-signatures">/api/public/dex-liquidity-funding-transfer-safe-pending-signatures</a></p>
+    <p><a href="/dex-liquidity-funding-transfer-safe-submission-live">DEX Funding Transfer Safe Submission Live</a></p>
+    <p><a href="/dex-liquidity-funding-transfer-safe-submission-dry-run">DEX Funding Transfer Safe Submission Dry Run</a></p>
+    <p><a href="/">Back to homepage</a></p>
+  </section>
+</main>
+</body>
+</html>
