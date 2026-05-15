@@ -567,7 +567,16 @@
     "dex:liquidity-funding-transfer-payload-generation-approval:validate": "node scripts/validate-dex-liquidity-funding-transfer-payload-generation-approval.mjs",
     "dex:liquidity-funding-transfer-payload-generation-approval:status": "node services/dex-liquidity-funding-transfer-payload-generation-approval/status.mjs",
     "dex:liquidity-funding-transfer-payload-generation-approval:gate": "npm run dex:liquidity-funding-transfer-payload-generation-approval:validate && npm run dex:liquidity-funding-transfer-payload-generation-approval:status",
-    "release:dex-liquidity-funding-transfer-payload-generation-approval": "bash scripts/release/package-dex-liquidity-funding-transfer-payload-generation-approval.sh"
+    "release:dex-liquidity-funding-transfer-payload-generation-approval": "bash scripts/release/package-dex-liquidity-funding-transfer-payload-generation-approval.sh",
+    "dex:liquidity-funding-transfer-payload:generate": "node scripts/generate-dex-liquidity-funding-transfer-safe-payload.mjs",
+    "dex:liquidity-funding-transfer-payload:validate": "node scripts/validate-dex-liquidity-funding-transfer-safe-payload.mjs",
+    "dex:liquidity-funding-transfer-payload:status": "node services/dex-liquidity-funding-transfer-safe-payload/status.mjs",
+    "dex:liquidity-funding-transfer-payload:gate": "npm run dex:liquidity-funding-transfer-payload:validate && npm run dex:liquidity-funding-transfer-payload:status",
+    "dex:liquidity-funding-transfer-payload-verification:verify": "node scripts/verify-dex-liquidity-funding-transfer-safe-payload.mjs",
+    "dex:liquidity-funding-transfer-payload-verification:validate": "node scripts/validate-dex-liquidity-funding-transfer-safe-payload-verification.mjs",
+    "dex:liquidity-funding-transfer-payload-verification:status": "node services/dex-liquidity-funding-transfer-safe-payload-verification/status.mjs",
+    "dex:liquidity-funding-transfer-payload-verification:gate": "npm run dex:liquidity-funding-transfer-payload-verification:verify && npm run dex:liquidity-funding-transfer-payload-verification:validate && npm run dex:liquidity-funding-transfer-payload-verification:status",
+    "release:dex-liquidity-funding-transfer-safe-payload-verification": "bash scripts/release/package-dex-liquidity-funding-transfer-safe-payload-verification.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",
