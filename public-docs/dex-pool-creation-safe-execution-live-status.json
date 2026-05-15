@@ -1,0 +1,147 @@
+{
+  "schema": "astra-dex-pool-creation-safe-execution-live-status-v0.1",
+  "generatedAt": "2026-05-15T01:27:30.127Z",
+  "status": "DEX_POOL_CREATION_SAFE_EXECUTION_LIVE_RECORDED_POOL_CREATED_NO_LIQUIDITY",
+  "currentApprovedMode": "restricted-mainnet-operation",
+  "publicStatement": "AstraTreasury recorded Safe execution evidence for DEX pool creation. The pool is created, no liquidity is added, no treasury funds are moved, public trading is not approved, and full launch is not approved.",
+  "summary": {
+    "executionRecordPresent": true,
+    "safeTransactionExecuted": true,
+    "poolCreated": true,
+    "poolAddress": "0xe9f5b875ca072073ff66a8596935ec08ca1222bf",
+    "executionTxHash": "0xe0b5196f6d927cabfd48d868331d155b2b81fbba471f757276e2c76851f78a75",
+    "safeTxHash": "0x9f77bd0e68d35179068d42da9560663a35002c687a6a0849617ce4bf153bcc70",
+    "liquidityAdded": false,
+    "fundsMoved": false,
+    "publicTradingApproved": false,
+    "buyPageActivated": false,
+    "fullLaunchApproved": false,
+    "nextRecommendedMilestone": "DEX Pool Creation Post-Execution Pool Verification and Monitoring",
+    "artifactCount": 5
+  },
+  "safeExecutionLive": {
+    "liveHash": "ee6afda7f0cb4500a2d8aa56a12d630f045f55eadf6ee7136e74fb40c4af86ea",
+    "hashAlgorithm": "SHA-256",
+    "record": {
+      "schema": "astra-dex-pool-creation-safe-execution-live-record-v0.1",
+      "recordedAt": "2026-05-15T01:25:37.997Z",
+      "status": "DEX_POOL_CREATION_SAFE_EXECUTION_LIVE_RECORDED_POOL_CREATED_NO_LIQUIDITY",
+      "selectedPublicPurchasePath": "dex-liquidity-pool-trading",
+      "safeTxHash": "0x9f77bd0e68d35179068d42da9560663a35002c687a6a0849617ce4bf153bcc70",
+      "safeNonce": 1,
+      "safeAddress": "0x8992B4173cf791Cf88eC36cd53b27F3BF22404D3",
+      "payloadHash": "1c53ae761eb247b809cfdc7e4f49cd30d29dfb31112393ead8df2d082e8c0f2a",
+      "targetAddress": "0x03a520b32C04BF3bEEf7BEb72E919cf822Ed34f1",
+      "functionSignature": "createAndInitializePoolIfNecessary(address,address,uint24,uint160)",
+      "executionTxHash": "0xe0b5196f6d927cabfd48d868331d155b2b81fbba471f757276e2c76851f78a75",
+      "executionMethod": "safe-ui-manual",
+      "executedBy": "Founder",
+      "executedAt": "2026-05-15T01:25:36Z",
+      "executionReference": "ASTRA-DEX-SAFE-EXEC-20260515-001",
+      "safeTransactionServiceUrl": "https://safe-transaction-base.safe.global/api/v1/multisig-transactions/0x9f77bd0e68d35179068d42da9560663a35002c687a6a0849617ce4bf153bcc70/",
+      "safeTransactionServiceExecutionConfirmed": true,
+      "receiptStatusSuccess": true,
+      "poolAddress": "0xe9f5b875ca072073ff66a8596935ec08ca1222bf",
+      "token0": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+      "token0Symbol": "USDC",
+      "token1": "0xc7c39837d0e604eeb525fc8fc501a5475a20419b",
+      "token1Symbol": "ASTRA",
+      "fee": 10000,
+      "sqrtPriceX96": "792281625142643375935439503360000000",
+      "safeTransactionExecuted": true,
+      "poolCreated": true,
+      "poolAddressVerified": true,
+      "liquidityProvisionApproved": false,
+      "liquidityAdded": false,
+      "publicTradingApproved": false,
+      "publicTradingLinkApproved": false,
+      "buyPageActivated": false,
+      "treasuryFundingApproved": false,
+      "treasuryFundsMoved": false,
+      "fullLaunchApproved": false,
+      "safety": {
+        "executedByOperator": true,
+        "executedByThisScript": false,
+        "addsLiquidity": false,
+        "movesTreasuryFunds": false,
+        "activatesBuyPage": false,
+        "approvesPublicTrading": false,
+        "approvesFullLaunch": false
+      }
+    },
+    "poolRecord": {
+      "schema": "astra-dex-pool-created-evidence-v0.1",
+      "recordedAt": "2026-05-15T01:25:37.997Z",
+      "status": "DEX_POOL_CREATED_BY_SAFE_EXECUTION_NO_LIQUIDITY",
+      "poolAddress": "0xe9f5b875ca072073ff66a8596935ec08ca1222bf",
+      "safeTxHash": "0x9f77bd0e68d35179068d42da9560663a35002c687a6a0849617ce4bf153bcc70",
+      "executionTxHash": "0xe0b5196f6d927cabfd48d868331d155b2b81fbba471f757276e2c76851f78a75",
+      "safeAddress": "0x8992B4173cf791Cf88eC36cd53b27F3BF22404D3",
+      "targetAddress": "0x03a520b32C04BF3bEEf7BEb72E919cf822Ed34f1",
+      "token0": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+      "token0Symbol": "USDC",
+      "token1": "0xc7c39837d0e604eeb525fc8fc501a5475a20419b",
+      "token1Symbol": "ASTRA",
+      "fee": 10000,
+      "sqrtPriceX96": "792281625142643375935439503360000000",
+      "liquidityAdded": false,
+      "publicTradingApproved": false,
+      "buyPageActivated": false,
+      "fullLaunchApproved": false
+    },
+    "requiredAfterSafeExecution": {
+      "safeExecutionLiveRecorded": true,
+      "executionTransactionHashRecorded": true,
+      "poolAddressVerified": true,
+      "postExecutionMonitoringComplete": false,
+      "liquidityProvisionApprovalRecorded": false,
+      "publicStatusUpdatePrepared": false
+    },
+    "artifactHashes": [
+      {
+        "path": "reports/dex-pool-creation-safe-execution-live/dex-pool-creation-safe-execution-live-record.json",
+        "bytes": 2098,
+        "sha256": "ee6afda7f0cb4500a2d8aa56a12d630f045f55eadf6ee7136e74fb40c4af86ea"
+      },
+      {
+        "path": "reports/dex-pool-creation/live/dex-pool-created.json",
+        "bytes": 894,
+        "sha256": "dc3d3a24ec9352f771b0bf4c5820c9456592335d42a0ac30852c8afee9d76d9f"
+      },
+      {
+        "path": "public-docs/full-launch-status.json",
+        "bytes": 2717,
+        "sha256": "16dec6e30bbec9b9692ea41c76cac4b798ef2c17ac5adb49a9fffa209e1a9cdc"
+      },
+      {
+        "path": "public-docs/treasury-funding-status.json",
+        "bytes": 2489,
+        "sha256": "d87c2c774d0f782c4ca38857d3c77f2cf06037218af677ad9cdd365ba64c5e91"
+      },
+      {
+        "path": "public-docs/mainnet-execution-status.json",
+        "bytes": 1320,
+        "sha256": "de5baeb0e775bdca53198d5c11bd244c6f61a762ded2aa69c13546c576baa1b7"
+      }
+    ]
+  },
+  "currentStatuses": {
+    "fullLaunch": "FULL_LAUNCH_READINESS_TRACK_OPEN_PLANNING_ONLY",
+    "treasuryFunding": "TREASURY_FUNDING_READINESS_TRACK_OPEN_NOT_APPROVED",
+    "mainnetExecution": "MAINNET_EXECUTION_QUEUE_DISABLED"
+  },
+  "restrictions": {
+    "liquidityProvision": false,
+    "publicTrading": false,
+    "buyPageActivation": false,
+    "realTreasuryFunding": false,
+    "fullLaunch": false
+  },
+  "safety": {
+    "addsLiquidity": false,
+    "movesTreasuryFunds": false,
+    "activatesBuyPage": false,
+    "approvesPublicTrading": false,
+    "approvesFullLaunch": false
+  }
+}

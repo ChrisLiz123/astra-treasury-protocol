@@ -522,7 +522,12 @@
     "dex:pool-creation-safe-execution-approval:validate": "node scripts/validate-dex-pool-creation-safe-execution-approval.mjs",
     "dex:pool-creation-safe-execution-approval:status": "node services/dex-pool-creation-safe-execution-approval/status.mjs",
     "dex:pool-creation-safe-execution-approval:gate": "npm run dex:pool-existence-precheck:gate && npm run dex:pool-creation-safe-pending-signatures:gate && npm run dex:pool-creation-safe-execution-approval:validate && npm run dex:pool-creation-safe-execution-approval:status",
-    "release:dex-pool-creation-safe-execution-approval": "bash scripts/release/package-dex-pool-creation-safe-execution-approval.sh"
+    "release:dex-pool-creation-safe-execution-approval": "bash scripts/release/package-dex-pool-creation-safe-execution-approval.sh",
+    "dex:pool-creation-safe-execution-live:record": "node scripts/record-dex-pool-creation-safe-execution-live.mjs",
+    "dex:pool-creation-safe-execution-live:validate": "node scripts/validate-dex-pool-creation-safe-execution-live.mjs",
+    "dex:pool-creation-safe-execution-live:status": "node services/dex-pool-creation-safe-execution-live/status.mjs",
+    "dex:pool-creation-safe-execution-live:gate": "npm run dex:pool-creation-safe-execution-live:validate && npm run dex:pool-creation-safe-execution-live:status",
+    "release:dex-pool-creation-safe-execution-live": "bash scripts/release/package-dex-pool-creation-safe-execution-live.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",

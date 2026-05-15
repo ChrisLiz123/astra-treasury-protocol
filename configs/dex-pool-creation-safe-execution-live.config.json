@@ -1,0 +1,65 @@
+{
+  "schema": "astra-dex-pool-creation-safe-execution-live-config-v0.1",
+  "status": "safe-execution-live-recorded-pool-created-no-liquidity",
+  "network": {
+    "name": "Base Mainnet",
+    "chainId": 8453
+  },
+  "currentApprovedMode": "restricted-mainnet-operation",
+  "selectedPublicPurchasePath": "dex-liquidity-pool-trading",
+  "dexVenue": "Uniswap on Base",
+  "executionEvidenceOnly": true,
+  "executionRecordFile": "reports/dex-pool-creation-safe-execution-live/dex-pool-creation-safe-execution-live-record.json",
+  "poolCreatedRecordFile": "reports/dex-pool-creation/live/dex-pool-created.json",
+  "requiresSafeExecutionApproval": true,
+  "requiresPendingSignatureThresholdReached": true,
+  "requiresSafeSubmissionLiveRecord": true,
+  "requiresSafePayloadVerification": true,
+  "requiresFreshNoPoolRecheckBeforeExecution": true,
+  "safeExecutionLiveRecorded": true,
+  "safeTransactionExecuted": true,
+  "poolCreated": true,
+  "poolAddressVerified": true,
+  "liquidityProvisionApproved": false,
+  "liquidityAdded": false,
+  "publicTradingApproved": false,
+  "publicTradingLinkApproved": false,
+  "buyPageActivationApproved": false,
+  "treasuryFundingApproved": false,
+  "treasuryFundsMoved": false,
+  "fullLaunchApproved": false,
+  "executionScope": {
+    "recordsSafeExecutionEvidence": true,
+    "recordsExecutionTxHash": true,
+    "verifiesSafeTransactionExecuted": true,
+    "verifiesPoolCreated": true,
+    "approvesLiquidityProvision": false,
+    "approvesFundsMovement": false,
+    "approvesPublicTrading": false,
+    "approvesBuyPageActivation": false,
+    "approvesFullLaunch": false
+  },
+  "requiredAfterSafeExecution": {
+    "safeExecutionLiveRecorded": true,
+    "executionTransactionHashRecorded": true,
+    "poolAddressVerified": true,
+    "postExecutionMonitoringComplete": false,
+    "liquidityProvisionApprovalRecorded": false,
+    "publicStatusUpdatePrepared": false
+  },
+  "hardStops": {
+    "liquidityAdded": false,
+    "publicTradingEnabled": false,
+    "buyPageActivated": false,
+    "treasuryFundsMoved": false,
+    "fullLaunchApproved": false
+  },
+  "hardRule": "This package records Safe execution evidence and verifies pool creation only. It must not add liquidity, move funds, activate a buy page, approve public trading, approve treasury funding, or approve full launch.",
+  "liveExecution": {
+    "recordedAt": "2026-05-15T01:25:37.997Z",
+    "executionTxHash": "0xe0b5196f6d927cabfd48d868331d155b2b81fbba471f757276e2c76851f78a75",
+    "safeTxHash": "0x9f77bd0e68d35179068d42da9560663a35002c687a6a0849617ce4bf153bcc70",
+    "poolAddress": "0xe9f5b875ca072073ff66a8596935ec08ca1222bf",
+    "recordFile": "reports/dex-pool-creation-safe-execution-live/dex-pool-creation-safe-execution-live-record.json"
+  }
+}
