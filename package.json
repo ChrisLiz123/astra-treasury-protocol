@@ -547,7 +547,12 @@
     "dex:liquidity-mint-params:validate": "node scripts/validate-dex-liquidity-mint-parameter-review.mjs",
     "dex:liquidity-mint-params:status": "node services/dex-liquidity-mint-parameter-review/status.mjs",
     "dex:liquidity-mint-params:gate": "npm run dex:liquidity-mint-params:review && npm run dex:liquidity-mint-params:validate && npm run dex:liquidity-mint-params:status",
-    "release:dex-liquidity-mint-parameter-review": "bash scripts/release/package-dex-liquidity-mint-parameter-review.sh"
+    "release:dex-liquidity-mint-parameter-review": "bash scripts/release/package-dex-liquidity-mint-parameter-review.sh",
+    "dex:liquidity-treasury-funding-approval:record": "node scripts/record-dex-liquidity-treasury-funding-approval.mjs",
+    "dex:liquidity-treasury-funding-approval:validate": "node scripts/validate-dex-liquidity-treasury-funding-approval.mjs",
+    "dex:liquidity-treasury-funding-approval:status": "node services/dex-liquidity-treasury-funding-approval/status.mjs",
+    "dex:liquidity-treasury-funding-approval:gate": "npm run dex:liquidity-treasury-funding-approval:validate && npm run dex:liquidity-treasury-funding-approval:status",
+    "release:dex-liquidity-treasury-funding-approval": "bash scripts/release/package-dex-liquidity-treasury-funding-approval.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",
