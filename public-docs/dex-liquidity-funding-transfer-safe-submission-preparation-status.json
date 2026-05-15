@@ -1,0 +1,189 @@
+{
+  "schema": "astra-dex-liquidity-funding-transfer-safe-submission-preparation-status-v0.1",
+  "generatedAt": "2026-05-15T22:12:48.472Z",
+  "status": "DEX_LIQUIDITY_TREASURY_FUNDING_TRANSFER_SAFE_SUBMISSION_PREPARED_NOT_SUBMITTED_NO_FUNDS_MOVED",
+  "currentApprovedMode": "restricted-mainnet-operation",
+  "publicStatement": "AstraTreasury prepared the DEX liquidity funding-transfer Safe submission package. The Safe transaction has not been submitted, no Safe transaction has executed, no treasury funds have moved, no token approvals have executed, no liquidity has been added, public trading is not approved, and full launch is not approved.",
+  "summary": {
+    "recordPresent": true,
+    "safeSubmissionPreparationComplete": true,
+    "sourceSafeAddress": "0xe2554515AaC8a3835326a4Ed5e9F44c319BE335C",
+    "destinationSafeAddress": "0x8992B4173cf791Cf88eC36cd53b27F3BF22404D3",
+    "sourceSafeQueueUrl": "https://app.safe.global/transactions/queue?safe=base:0xe2554515AaC8a3835326a4Ed5e9F44c319BE335C",
+    "payloadHash": "c34c38b064416c9d64222e3ef3d8fd2a27ef695af0d64596a6b46a1bebe825d1",
+    "transactionCount": 2,
+    "safeSubmissionDryRunComplete": false,
+    "fundingTransferSubmitted": false,
+    "fundingTransferExecuted": false,
+    "treasuryFundsMoved": false,
+    "tokenApprovalExecuted": false,
+    "liquidityAdded": false,
+    "positionMinted": false,
+    "publicTradingApproved": false,
+    "fullLaunchApproved": false,
+    "nextRecommendedMilestone": "DEX Liquidity Treasury Funding Transfer Safe Submission Dry Run",
+    "artifactCount": 10
+  },
+  "safeSubmissionPreparation": {
+    "preparationHash": "1d5079898ad1d899730b776e75640e19f8ecfeae05a5b7fedff4bad7a11c6099",
+    "hashAlgorithm": "SHA-256",
+    "preparedTransactions": [
+      {
+        "index": 0,
+        "id": "fund-token0-USDC",
+        "role": "token0",
+        "symbol": "USDC",
+        "tokenAddress": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "safeAddress": "0xe2554515AaC8a3835326a4Ed5e9F44c319BE335C",
+        "to": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "value": "0",
+        "data": "0xa9059cbb0000000000000000000000008992b4173cf791cf88ec36cd53b27f3bf22404d3000000000000000000000000000000000000000000000000000000003b9aca00",
+        "dataHash": "468525f58376be96070f8f78502ac87e8c199df50c79fb4add5abd1eefaec9c0",
+        "operation": "CALL",
+        "operationValue": 0,
+        "functionSignature": "transfer(address,uint256)",
+        "recipient": "0x8992B4173cf791Cf88eC36cd53b27F3BF22404D3",
+        "amountRaw": "1000000000",
+        "amountHuman": "1000",
+        "transactionBuilderFields": {
+          "to": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+          "value": "0",
+          "data": "0xa9059cbb0000000000000000000000008992b4173cf791cf88ec36cd53b27f3bf22404d3000000000000000000000000000000000000000000000000000000003b9aca00",
+          "operation": "CALL"
+        },
+        "fundingTransferSubmitted": false,
+        "fundingTransferExecuted": false
+      },
+      {
+        "index": 1,
+        "id": "fund-token1-ASTRA",
+        "role": "token1",
+        "symbol": "ASTRA",
+        "tokenAddress": "0xc7c39837d0e604eeb525fc8fc501a5475a20419b",
+        "safeAddress": "0xe2554515AaC8a3835326a4Ed5e9F44c319BE335C",
+        "to": "0xc7c39837d0e604eeb525fc8fc501a5475a20419b",
+        "value": "0",
+        "data": "0xa9059cbb0000000000000000000000008992b4173cf791cf88ec36cd53b27f3bf22404d3000000000000000000000000000000000000000000084595161401484a000000",
+        "dataHash": "f8aca4cf5288853202b0639538719e1ee627a5e674a5f078506d408f98dde77b",
+        "operation": "CALL",
+        "operationValue": 0,
+        "functionSignature": "transfer(address,uint256)",
+        "recipient": "0x8992B4173cf791Cf88eC36cd53b27F3BF22404D3",
+        "amountRaw": "10000000000000000000000000",
+        "amountHuman": "10000000",
+        "transactionBuilderFields": {
+          "to": "0xc7c39837d0e604eeb525fc8fc501a5475a20419b",
+          "value": "0",
+          "data": "0xa9059cbb0000000000000000000000008992b4173cf791cf88ec36cd53b27f3bf22404d3000000000000000000000000000000000000000000084595161401484a000000",
+          "operation": "CALL"
+        },
+        "fundingTransferSubmitted": false,
+        "fundingTransferExecuted": false
+      }
+    ],
+    "operatorWarnings": [
+      "Use the source Safe, not the destination Safe, for submission.",
+      "Do not change token addresses, recipients, amounts, value, data, or operation.",
+      "Do not execute during the submission step.",
+      "Do not submit any unrelated Safe transaction.",
+      "Do not add liquidity or activate public trading."
+    ],
+    "requiredBeforeFundingTransferSafeSubmissionDryRun": {
+      "safeSubmissionPreparationComplete": true,
+      "safeSubmissionApprovalRecorded": true,
+      "fundingTransferSafePayloadVerified": true,
+      "payloadHashVerified": true,
+      "sourceSafeReviewed": true,
+      "destinationSafeReviewed": true,
+      "tokenTransferAmountsReviewed": true,
+      "operatorSubmissionCommandReviewed": false,
+      "safeSubmissionDryRunComplete": false,
+      "publicStatusUpdatePrepared": false
+    },
+    "artifactHashes": [
+      {
+        "path": "reports/dex-liquidity-funding-transfer-safe-submission-preparation/dex-liquidity-funding-transfer-safe-submission-preparation.json",
+        "bytes": 5713,
+        "sha256": "6fae72f6b01025cfa505fc6beb1e8c7ef9f2cb97fb4ad9f153f2ad74dac8045a"
+      },
+      {
+        "path": "public-docs/dex-liquidity-funding-transfer-safe-submission-approval-status.json",
+        "bytes": 9583,
+        "sha256": "ad4a48293ddb2ef1e578771fc5e7d0f259c5407bbe09967502e10f3b77d9649f"
+      },
+      {
+        "path": "public-docs/dex-liquidity-funding-transfer-safe-payload-verification-status.json",
+        "bytes": 7964,
+        "sha256": "2d5ae271837673b308af156359d33d726f9bf21e0783c987b4d4a8ea813f4d19"
+      },
+      {
+        "path": "public-docs/dex-liquidity-funding-transfer-safe-payload-status.json",
+        "bytes": 8226,
+        "sha256": "64b76cdc50b5fc21719761e8805b923dc2cb4bbd293402e3a808cc371f77a9c7"
+      },
+      {
+        "path": "reports/dex-liquidity-treasury-funding/payload/funding-transfer-safe-payload.json",
+        "bytes": 4705,
+        "sha256": "af52ba6971cac42f55e7a6aa52e062973457f111ea3cf3bb1803633848029887"
+      },
+      {
+        "path": "public-docs/dex-pool-creation-post-execution-verification-status.json",
+        "bytes": 5623,
+        "sha256": "8ac301118b360ee79a1a6e4dc532048a08ca68f3a1321e7dae35928b59d3af06"
+      },
+      {
+        "path": "public-docs/full-launch-status.json",
+        "bytes": 2717,
+        "sha256": "16dec6e30bbec9b9692ea41c76cac4b798ef2c17ac5adb49a9fffa209e1a9cdc"
+      },
+      {
+        "path": "public-docs/treasury-funding-status.json",
+        "bytes": 2489,
+        "sha256": "d87c2c774d0f782c4ca38857d3c77f2cf06037218af677ad9cdd365ba64c5e91"
+      },
+      {
+        "path": "public-docs/capability-matrix-status.json",
+        "bytes": 4146,
+        "sha256": "f3d48a86d32427813e9e88ab3a813a43768fa8501fab008bf71b6e767e83fa70"
+      },
+      {
+        "path": "public-docs/mainnet-execution-status.json",
+        "bytes": 1320,
+        "sha256": "094391d775412c22ee0e30d6a69973b3ef5b800dfea81c6dc39a501eed4cfd96"
+      }
+    ]
+  },
+  "currentStatuses": {
+    "dexFundingTransferSafeSubmissionApproval": "DEX_LIQUIDITY_TREASURY_FUNDING_TRANSFER_SAFE_SUBMISSION_APPROVED_NOT_SUBMITTED_NO_FUNDS_MOVED",
+    "dexFundingTransferPayloadVerification": "DEX_LIQUIDITY_TREASURY_FUNDING_TRANSFER_SAFE_PAYLOAD_VERIFIED_NOT_SUBMITTED_NO_FUNDS_MOVED",
+    "dexFundingTransferSafePayload": "DEX_LIQUIDITY_TREASURY_FUNDING_TRANSFER_SAFE_PAYLOAD_GENERATED_NOT_SUBMITTED_NO_FUNDS_MOVED",
+    "dexPoolPostExecutionVerification": "DEX_POOL_CREATION_POST_EXECUTION_POOL_VERIFIED_NO_LIQUIDITY_NO_PUBLIC_TRADING",
+    "fullLaunch": "FULL_LAUNCH_READINESS_TRACK_OPEN_PLANNING_ONLY",
+    "treasuryFunding": "TREASURY_FUNDING_READINESS_TRACK_OPEN_NOT_APPROVED",
+    "capabilityMatrix": "CAPABILITY_MATRIX_FINALIZED_ALL_DISABLED",
+    "mainnetExecution": "MAINNET_EXECUTION_QUEUE_DISABLED"
+  },
+  "restrictions": {
+    "fundingTransferSubmission": false,
+    "fundingTransferExecution": false,
+    "tokenApprovalExecution": false,
+    "liquidityProvision": false,
+    "publicTrading": false,
+    "buyPageActivation": false,
+    "globalTreasuryFunding": false,
+    "fullLaunch": false
+  },
+  "safety": {
+    "preparationOnly": true,
+    "submitsSafeTransaction": false,
+    "executesSafeTransaction": false,
+    "movesTreasuryFunds": false,
+    "executesTokenApproval": false,
+    "generatesLiquidityCalldata": false,
+    "addsLiquidity": false,
+    "mintsPosition": false,
+    "activatesBuyPage": false,
+    "approvesPublicTrading": false,
+    "approvesFullLaunch": false
+  }
+}
