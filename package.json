@@ -576,7 +576,12 @@
     "dex:liquidity-funding-transfer-payload-verification:validate": "node scripts/validate-dex-liquidity-funding-transfer-safe-payload-verification.mjs",
     "dex:liquidity-funding-transfer-payload-verification:status": "node services/dex-liquidity-funding-transfer-safe-payload-verification/status.mjs",
     "dex:liquidity-funding-transfer-payload-verification:gate": "npm run dex:liquidity-funding-transfer-payload-verification:verify && npm run dex:liquidity-funding-transfer-payload-verification:validate && npm run dex:liquidity-funding-transfer-payload-verification:status",
-    "release:dex-liquidity-funding-transfer-safe-payload-verification": "bash scripts/release/package-dex-liquidity-funding-transfer-safe-payload-verification.sh"
+    "release:dex-liquidity-funding-transfer-safe-payload-verification": "bash scripts/release/package-dex-liquidity-funding-transfer-safe-payload-verification.sh",
+    "dex:liquidity-funding-transfer-safe-submission-approval:record": "node scripts/record-dex-liquidity-funding-transfer-safe-submission-approval.mjs",
+    "dex:liquidity-funding-transfer-safe-submission-approval:validate": "node scripts/validate-dex-liquidity-funding-transfer-safe-submission-approval.mjs",
+    "dex:liquidity-funding-transfer-safe-submission-approval:status": "node services/dex-liquidity-funding-transfer-safe-submission-approval/status.mjs",
+    "dex:liquidity-funding-transfer-safe-submission-approval:gate": "npm run dex:liquidity-funding-transfer-safe-submission-approval:validate && npm run dex:liquidity-funding-transfer-safe-submission-approval:status",
+    "release:dex-liquidity-funding-transfer-safe-submission-approval": "bash scripts/release/package-dex-liquidity-funding-transfer-safe-submission-approval.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",
