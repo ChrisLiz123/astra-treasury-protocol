@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AstraTreasury DEX Post-Execution Pool Verification</title>
+  <style>
+    :root { color-scheme: dark; --bg: #08111f; --surface: #0e1a2b; --border: rgba(148, 163, 184, 0.2); --text: #edf4fb; --muted: #9aaec4; --blue: #67a7ff; --yellow: #f4c35f; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    body { margin: 0; background: linear-gradient(180deg, #07101d, var(--bg)); color: var(--text); }
+    a { color: var(--blue); text-decoration: none; }
+    main { width: min(1120px, calc(100% - 40px)); margin: 0 auto; padding: 44px 0 72px; }
+    .card { background: var(--surface); border: 1px solid var(--border); border-radius: 24px; padding: 28px; box-shadow: 0 22px 70px rgba(0,0,0,.28); margin-bottom: 18px; }
+    h1 { margin: 0 0 10px; font-size: 42px; letter-spacing: -1.2px; }
+    h2 { margin: 0 0 14px; font-size: 24px; }
+    p { color: var(--muted); line-height: 1.65; }
+    .badge { display: inline-flex; padding: 8px 12px; border-radius: 999px; background: rgba(244,195,95,.08); border: 1px solid rgba(244,195,95,.22); color: var(--yellow); font-weight: 850; margin-bottom: 16px; }
+    table { width: 100%; border-collapse: collapse; border: 1px solid var(--border); border-radius: 18px; overflow: hidden; margin-bottom: 16px; }
+    th, td { padding: 14px 16px; border-bottom: 1px solid var(--border); text-align: left; vertical-align: top; }
+    th { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: .08em; background: rgba(255,255,255,.03); }
+    tr:last-child td { border-bottom: 0; }
+    code { color: var(--muted); overflow-wrap: anywhere; font-size: 12px; }
+    .notice { padding: 16px; border-radius: 16px; background: rgba(244,195,95,.08); border: 1px solid rgba(244,195,95,.22); color: #f7d99a; line-height: 1.6; }
+  </style>
+</head>
+<body>
+<main>
+  <section class="card">
+    <div class="badge">Post-execution verification · pool created · zero liquidity</div>
+    <h1>DEX Post-Execution Pool Verification</h1>
+    <p>AstraTreasury verified the created DEX pool after Safe execution. The pool exists and is initialized, liquidity is zero, treasury funds have not moved, public trading is not approved, and full launch is not approved.</p>
+    <p><strong>Verification hash:</strong> <code>600bc870a2578b20e54bde621274971844315ef47a7e4d9c18cf64ec5bf02c5c</code></p>
+  </section>
+
+  <section class="card">
+    <h2>Summary</h2>
+    <table><thead><tr><th>Field</th><th>Value</th></tr></thead><tbody><tr><td>verificationPresent</td><td>true</td></tr><tr><td>poolVerified</td><td>true</td></tr><tr><td>poolAddress</td><td>0xe9f5b875ca072073ff66a8596935ec08ca1222bf</td></tr><tr><td>factoryGetPoolMatchesRecorded</td><td>true</td></tr><tr><td>poolCodePresent</td><td>true</td></tr><tr><td>token0Verified</td><td>true</td></tr><tr><td>token1Verified</td><td>true</td></tr><tr><td>feeVerified</td><td>true</td></tr><tr><td>slot0Initialized</td><td>true</td></tr><tr><td>liquidityVerifiedZero</td><td>true</td></tr><tr><td>poolLiquidity</td><td>0</td></tr><tr><td>liquidityAdded</td><td>false</td></tr><tr><td>fundsMoved</td><td>false</td></tr><tr><td>publicTradingApproved</td><td>false</td></tr><tr><td>buyPageActivated</td><td>false</td></tr><tr><td>fullLaunchApproved</td><td>false</td></tr><tr><td>nextRecommendedMilestone</td><td>DEX Liquidity Provision Approval Package</td></tr><tr><td>artifactCount</td><td>7</td></tr></tbody></table>
+  </section>
+
+  <section class="card">
+    <h2>Pool verification</h2>
+    <table><thead><tr><th>Field</th><th>Value</th></tr></thead><tbody><tr><td>recordedPoolAddress</td><td>0xe9f5b875ca072073ff66a8596935ec08ca1222bf</td></tr><tr><td>factoryAddress</td><td>0x33128a8fc17869897dce68ed026d694621f6fdfd</td></tr><tr><td>factoryGetPoolAddress</td><td>0xe9f5b875ca072073ff66a8596935ec08ca1222bf</td></tr><tr><td>factoryGetPoolMatchesRecorded</td><td>true</td></tr><tr><td>poolCodePresent</td><td>true</td></tr><tr><td>poolToken0</td><td>0x833589fcd6edb6e08f4c7c32d4f71b54bda02913</td></tr><tr><td>expectedToken0</td><td>0x833589fcd6edb6e08f4c7c32d4f71b54bda02913</td></tr><tr><td>token0Verified</td><td>true</td></tr><tr><td>poolToken1</td><td>0xc7c39837d0e604eeb525fc8fc501a5475a20419b</td></tr><tr><td>expectedToken1</td><td>0xc7c39837d0e604eeb525fc8fc501a5475a20419b</td></tr><tr><td>token1Verified</td><td>true</td></tr><tr><td>poolFee</td><td>10000</td></tr><tr><td>expectedFee</td><td>10000</td></tr><tr><td>feeVerified</td><td>true</td></tr><tr><td>poolLiquidity</td><td>0</td></tr><tr><td>liquidityVerifiedZero</td><td>true</td></tr><tr><td>slot0</td><td>{&quot;sqrtPriceX96&quot;:&quot;792281625142643375935439503360000000&quot;,&quot;tickRaw&quot;:&quot;000000000000000000000000000000000000000000000000000000000004eb4a&quot;,&quot;observationIndex&quot;:&quot;0&quot;,&quot;observationCardinality&quot;:&quot;1&quot;,&quot;observationCardinalityNext&quot;:&quot;1&quot;,&quot;feeProtocol&quot;:&quot;0&quot;,&quot;unlocked&quot;:true}</td></tr><tr><td>slot0Initialized</td><td>true</td></tr><tr><td>slot0SqrtMatchesReviewed</td><td>true</td></tr><tr><td>reviewedSqrtPriceX96</td><td>792281625142643375935439503360000000</td></tr></tbody></table>
+  </section>
+
+  <section class="card">
+    <h2>Required before liquidity provision approval</h2>
+    <table><thead><tr><th>Requirement</th><th>Status</th></tr></thead><tbody><tr><td>postExecutionPoolVerified</td><td>Complete</td></tr><tr><td>poolAddressVerified</td><td>Complete</td></tr><tr><td>poolLiquidityVerifiedZero</td><td>Complete</td></tr><tr><td>postExecutionMonitoringComplete</td><td>Complete</td></tr><tr><td>liquidityProvisionApprovalRecorded</td><td>Required / pending</td></tr><tr><td>treasuryFundingApprovalRecorded</td><td>Required / pending</td></tr><tr><td>publicStatusUpdatePrepared</td><td>Required / pending</td></tr></tbody></table>
+  </section>
+
+  <section class="card">
+    <h2>Current statuses</h2>
+    <table><thead><tr><th>Area</th><th>Status</th></tr></thead><tbody><tr><td>dexPoolCreationSafeExecutionLive</td><td>Dex Pool Creation Safe Execution Live Recorded Pool Created No Liquidity</td></tr><tr><td>fullLaunch</td><td>Full Launch Readiness Track Open Planning Only</td></tr><tr><td>treasuryFunding</td><td>Treasury Funding Readiness Track Open Not Approved</td></tr><tr><td>mainnetExecution</td><td>Mainnet Execution Queue Disabled</td></tr></tbody></table>
+  </section>
+
+  <section class="card">
+    <h2>Important</h2>
+    <div class="notice">
+      The pool exists, but liquidity has not been added and public trading is not approved.
+      Buying remains unavailable until liquidity, disclosure, buy page, and public trading approvals are completed.
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Public API</h2>
+    <p><a href="/api/public/dex-pool-creation-post-execution-verification">/api/public/dex-pool-creation-post-execution-verification</a></p>
+    <p><a href="/dex-pool-creation-safe-execution-live">DEX Safe Execution Live</a></p>
+    <p><a href="/">Back to homepage</a></p>
+  </section>
+</main>
+</body>
+</html>

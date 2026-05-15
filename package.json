@@ -527,7 +527,12 @@
     "dex:pool-creation-safe-execution-live:validate": "node scripts/validate-dex-pool-creation-safe-execution-live.mjs",
     "dex:pool-creation-safe-execution-live:status": "node services/dex-pool-creation-safe-execution-live/status.mjs",
     "dex:pool-creation-safe-execution-live:gate": "npm run dex:pool-creation-safe-execution-live:validate && npm run dex:pool-creation-safe-execution-live:status",
-    "release:dex-pool-creation-safe-execution-live": "bash scripts/release/package-dex-pool-creation-safe-execution-live.sh"
+    "release:dex-pool-creation-safe-execution-live": "bash scripts/release/package-dex-pool-creation-safe-execution-live.sh",
+    "dex:pool-creation-post-execution:verify": "node scripts/verify-dex-pool-creation-post-execution.mjs",
+    "dex:pool-creation-post-execution:validate": "node scripts/validate-dex-pool-creation-post-execution-verification.mjs",
+    "dex:pool-creation-post-execution:status": "node services/dex-pool-creation-post-execution-verification/status.mjs",
+    "dex:pool-creation-post-execution:gate": "npm run dex:pool-creation-post-execution:verify && npm run dex:pool-creation-post-execution:validate && npm run dex:pool-creation-post-execution:status",
+    "release:dex-pool-creation-post-execution-verification": "bash scripts/release/package-dex-pool-creation-post-execution-verification.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",

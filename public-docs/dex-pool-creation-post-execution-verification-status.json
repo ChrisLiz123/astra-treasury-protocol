@@ -1,0 +1,136 @@
+{
+  "schema": "astra-dex-pool-creation-post-execution-verification-status-v0.1",
+  "generatedAt": "2026-05-15T01:36:23.938Z",
+  "status": "DEX_POOL_CREATION_POST_EXECUTION_POOL_VERIFIED_NO_LIQUIDITY_NO_PUBLIC_TRADING",
+  "currentApprovedMode": "restricted-mainnet-operation",
+  "publicStatement": "AstraTreasury verified the created DEX pool after Safe execution. The pool exists and is initialized, liquidity is zero, treasury funds have not moved, public trading is not approved, and full launch is not approved.",
+  "summary": {
+    "verificationPresent": true,
+    "poolVerified": true,
+    "poolAddress": "0xe9f5b875ca072073ff66a8596935ec08ca1222bf",
+    "factoryGetPoolMatchesRecorded": true,
+    "poolCodePresent": true,
+    "token0Verified": true,
+    "token1Verified": true,
+    "feeVerified": true,
+    "slot0Initialized": true,
+    "liquidityVerifiedZero": true,
+    "poolLiquidity": "0",
+    "liquidityAdded": false,
+    "fundsMoved": false,
+    "publicTradingApproved": false,
+    "buyPageActivated": false,
+    "fullLaunchApproved": false,
+    "nextRecommendedMilestone": "DEX Liquidity Provision Approval Package",
+    "artifactCount": 7
+  },
+  "postExecutionVerification": {
+    "verificationHash": "600bc870a2578b20e54bde621274971844315ef47a7e4d9c18cf64ec5bf02c5c",
+    "hashAlgorithm": "SHA-256",
+    "poolVerification": {
+      "recordedPoolAddress": "0xe9f5b875ca072073ff66a8596935ec08ca1222bf",
+      "factoryAddress": "0x33128a8fc17869897dce68ed026d694621f6fdfd",
+      "factoryGetPoolAddress": "0xe9f5b875ca072073ff66a8596935ec08ca1222bf",
+      "factoryGetPoolMatchesRecorded": true,
+      "poolCodePresent": true,
+      "poolToken0": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+      "expectedToken0": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+      "token0Verified": true,
+      "poolToken1": "0xc7c39837d0e604eeb525fc8fc501a5475a20419b",
+      "expectedToken1": "0xc7c39837d0e604eeb525fc8fc501a5475a20419b",
+      "token1Verified": true,
+      "poolFee": "10000",
+      "expectedFee": "10000",
+      "feeVerified": true,
+      "poolLiquidity": "0",
+      "liquidityVerifiedZero": true,
+      "slot0": {
+        "sqrtPriceX96": "792281625142643375935439503360000000",
+        "tickRaw": "000000000000000000000000000000000000000000000000000000000004eb4a",
+        "observationIndex": "0",
+        "observationCardinality": "1",
+        "observationCardinalityNext": "1",
+        "feeProtocol": "0",
+        "unlocked": true
+      },
+      "slot0Initialized": true,
+      "slot0SqrtMatchesReviewed": true,
+      "reviewedSqrtPriceX96": "792281625142643375935439503360000000"
+    },
+    "executionEvidence": {
+      "safeTxHash": "0x9f77bd0e68d35179068d42da9560663a35002c687a6a0849617ce4bf153bcc70",
+      "executionTxHash": "0xe0b5196f6d927cabfd48d868331d155b2b81fbba471f757276e2c76851f78a75",
+      "safeAddress": "0x8992B4173cf791Cf88eC36cd53b27F3BF22404D3",
+      "payloadHash": "1c53ae761eb247b809cfdc7e4f49cd30d29dfb31112393ead8df2d082e8c0f2a",
+      "safeTransactionExecuted": true,
+      "poolCreated": true
+    },
+    "requiredBeforeLiquidityProvisionApproval": {
+      "postExecutionPoolVerified": true,
+      "poolAddressVerified": true,
+      "poolLiquidityVerifiedZero": true,
+      "postExecutionMonitoringComplete": true,
+      "liquidityProvisionApprovalRecorded": false,
+      "treasuryFundingApprovalRecorded": false,
+      "publicStatusUpdatePrepared": false
+    },
+    "artifactHashes": [
+      {
+        "path": "reports/dex-pool-creation-post-execution-verification/dex-pool-creation-post-execution-verification.json",
+        "bytes": 3020,
+        "sha256": "76c6794bc2c35d471ea634d57714630454e2e46eef095d843d91abf4704e3e01"
+      },
+      {
+        "path": "reports/dex-pool-creation-safe-execution-live/dex-pool-creation-safe-execution-live-record.json",
+        "bytes": 2098,
+        "sha256": "ee6afda7f0cb4500a2d8aa56a12d630f045f55eadf6ee7136e74fb40c4af86ea"
+      },
+      {
+        "path": "reports/dex-pool-creation/live/dex-pool-created.json",
+        "bytes": 894,
+        "sha256": "dc3d3a24ec9352f771b0bf4c5820c9456592335d42a0ac30852c8afee9d76d9f"
+      },
+      {
+        "path": "public-docs/dex-pool-creation-safe-execution-live-status.json",
+        "bytes": 6481,
+        "sha256": "b81ee4637b3eff987710224553be6ed4ca1b9dbaa32d9ae2328e8ff3ea40400e"
+      },
+      {
+        "path": "public-docs/full-launch-status.json",
+        "bytes": 2717,
+        "sha256": "16dec6e30bbec9b9692ea41c76cac4b798ef2c17ac5adb49a9fffa209e1a9cdc"
+      },
+      {
+        "path": "public-docs/treasury-funding-status.json",
+        "bytes": 2489,
+        "sha256": "d87c2c774d0f782c4ca38857d3c77f2cf06037218af677ad9cdd365ba64c5e91"
+      },
+      {
+        "path": "public-docs/mainnet-execution-status.json",
+        "bytes": 1320,
+        "sha256": "f135e207b28be2a944db907e02e714dc938023d74e5e7915fac86f863d4edbf8"
+      }
+    ]
+  },
+  "currentStatuses": {
+    "dexPoolCreationSafeExecutionLive": "DEX_POOL_CREATION_SAFE_EXECUTION_LIVE_RECORDED_POOL_CREATED_NO_LIQUIDITY",
+    "fullLaunch": "FULL_LAUNCH_READINESS_TRACK_OPEN_PLANNING_ONLY",
+    "treasuryFunding": "TREASURY_FUNDING_READINESS_TRACK_OPEN_NOT_APPROVED",
+    "mainnetExecution": "MAINNET_EXECUTION_QUEUE_DISABLED"
+  },
+  "restrictions": {
+    "liquidityProvision": false,
+    "publicTrading": false,
+    "buyPageActivation": false,
+    "realTreasuryFunding": false,
+    "fullLaunch": false
+  },
+  "safety": {
+    "readOnlyRpcOnly": true,
+    "addsLiquidity": false,
+    "movesTreasuryFunds": false,
+    "activatesBuyPage": false,
+    "approvesPublicTrading": false,
+    "approvesFullLaunch": false
+  }
+}
