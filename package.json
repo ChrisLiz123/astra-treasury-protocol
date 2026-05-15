@@ -542,7 +542,12 @@
     "dex:liquidity-token-approval:validate": "node scripts/validate-dex-liquidity-token-approval-requirements.mjs",
     "dex:liquidity-token-approval:status": "node services/dex-liquidity-token-approval-requirements/status.mjs",
     "dex:liquidity-token-approval:gate": "npm run dex:liquidity-token-approval:review && npm run dex:liquidity-token-approval:validate && npm run dex:liquidity-token-approval:status",
-    "release:dex-liquidity-token-approval-requirements": "bash scripts/release/package-dex-liquidity-token-approval-requirements.sh"
+    "release:dex-liquidity-token-approval-requirements": "bash scripts/release/package-dex-liquidity-token-approval-requirements.sh",
+    "dex:liquidity-mint-params:review": "node scripts/review-dex-liquidity-mint-parameters.mjs",
+    "dex:liquidity-mint-params:validate": "node scripts/validate-dex-liquidity-mint-parameter-review.mjs",
+    "dex:liquidity-mint-params:status": "node services/dex-liquidity-mint-parameter-review/status.mjs",
+    "dex:liquidity-mint-params:gate": "npm run dex:liquidity-mint-params:review && npm run dex:liquidity-mint-params:validate && npm run dex:liquidity-mint-params:status",
+    "release:dex-liquidity-mint-parameter-review": "bash scripts/release/package-dex-liquidity-mint-parameter-review.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",
