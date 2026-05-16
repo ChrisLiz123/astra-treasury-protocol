@@ -611,7 +611,16 @@
     "dex:liquidity-funding-transfer-safe-execution-preparation:validate": "node scripts/validate-dex-liquidity-funding-transfer-safe-execution-preparation.mjs",
     "dex:liquidity-funding-transfer-safe-execution-preparation:status": "node services/dex-liquidity-funding-transfer-safe-execution-preparation/status.mjs",
     "dex:liquidity-funding-transfer-safe-execution-preparation:gate": "npm run dex:liquidity-funding-transfer-safe-execution-preparation:prepare && npm run dex:liquidity-funding-transfer-safe-execution-preparation:validate && npm run dex:liquidity-funding-transfer-safe-execution-preparation:status",
-    "release:dex-liquidity-funding-transfer-safe-execution-preparation": "bash scripts/release/package-dex-liquidity-funding-transfer-safe-execution-preparation.sh"
+    "release:dex-liquidity-funding-transfer-safe-execution-preparation": "bash scripts/release/package-dex-liquidity-funding-transfer-safe-execution-preparation.sh",
+    "dex:liquidity-funding-transfer-safe-execution-live:record": "node scripts/record-dex-liquidity-funding-transfer-safe-execution-live.mjs",
+    "dex:liquidity-funding-transfer-safe-execution-live:validate": "node scripts/validate-dex-liquidity-funding-transfer-safe-execution-live.mjs",
+    "dex:liquidity-funding-transfer-safe-execution-live:status": "node services/dex-liquidity-funding-transfer-safe-execution-live/status.mjs",
+    "dex:liquidity-funding-transfer-safe-execution-live:gate": "npm run dex:liquidity-funding-transfer-safe-execution-live:validate && npm run dex:liquidity-funding-transfer-safe-execution-live:status",
+    "dex:liquidity-funding-transfer-post-execution-balances:verify": "node scripts/verify-dex-liquidity-funding-transfer-post-execution-balances.mjs",
+    "dex:liquidity-funding-transfer-post-execution-balances:validate": "node scripts/validate-dex-liquidity-funding-transfer-post-execution-balances.mjs",
+    "dex:liquidity-funding-transfer-post-execution-balances:status": "node services/dex-liquidity-funding-transfer-post-execution-balances/status.mjs",
+    "dex:liquidity-funding-transfer-post-execution-balances:gate": "npm run dex:liquidity-funding-transfer-post-execution-balances:verify && npm run dex:liquidity-funding-transfer-post-execution-balances:validate && npm run dex:liquidity-funding-transfer-post-execution-balances:status",
+    "release:dex-liquidity-funding-transfer-post-execution-balances": "bash scripts/release/package-dex-liquidity-funding-transfer-post-execution-balances.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",
