@@ -625,7 +625,12 @@
     "dex:liquidity-token-approval-recheck:validate": "node scripts/validate-dex-liquidity-token-approval-requirements-recheck.mjs",
     "dex:liquidity-token-approval-recheck:status": "node services/dex-liquidity-token-approval-requirements-recheck/status.mjs",
     "dex:liquidity-token-approval-recheck:gate": "npm run dex:liquidity-token-approval-recheck:recheck && npm run dex:liquidity-token-approval-recheck:validate && npm run dex:liquidity-token-approval-recheck:status",
-    "release:dex-liquidity-token-approval-requirements-recheck": "bash scripts/release/package-dex-liquidity-token-approval-requirements-recheck.sh"
+    "release:dex-liquidity-token-approval-requirements-recheck": "bash scripts/release/package-dex-liquidity-token-approval-requirements-recheck.sh",
+    "dex:liquidity-token-approval-payload-generation-approval:record": "node scripts/record-dex-liquidity-token-approval-payload-generation-approval.mjs",
+    "dex:liquidity-token-approval-payload-generation-approval:validate": "node scripts/validate-dex-liquidity-token-approval-payload-generation-approval.mjs",
+    "dex:liquidity-token-approval-payload-generation-approval:status": "node services/dex-liquidity-token-approval-payload-generation-approval/status.mjs",
+    "dex:liquidity-token-approval-payload-generation-approval:gate": "npm run dex:liquidity-token-approval-payload-generation-approval:validate && npm run dex:liquidity-token-approval-payload-generation-approval:status",
+    "release:dex-liquidity-token-approval-payload-generation-approval": "bash scripts/release/package-dex-liquidity-token-approval-payload-generation-approval.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",
