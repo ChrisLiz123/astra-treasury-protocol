@@ -650,7 +650,12 @@
     "dex:liquidity-token-approval-safe-submission-preparation:validate": "node scripts/validate-dex-liquidity-token-approval-safe-submission-preparation.mjs",
     "dex:liquidity-token-approval-safe-submission-preparation:status": "node services/dex-liquidity-token-approval-safe-submission-preparation/status.mjs",
     "dex:liquidity-token-approval-safe-submission-preparation:gate": "npm run dex:liquidity-token-approval-safe-submission-preparation:prepare && npm run dex:liquidity-token-approval-safe-submission-preparation:validate && npm run dex:liquidity-token-approval-safe-submission-preparation:status",
-    "release:dex-liquidity-token-approval-safe-submission-preparation": "bash scripts/release/package-dex-liquidity-token-approval-safe-submission-preparation.sh"
+    "release:dex-liquidity-token-approval-safe-submission-preparation": "bash scripts/release/package-dex-liquidity-token-approval-safe-submission-preparation.sh",
+    "dex:liquidity-token-approval-safe-submission-dry-run:run": "node scripts/dry-run-dex-liquidity-token-approval-safe-submission.mjs",
+    "dex:liquidity-token-approval-safe-submission-dry-run:validate": "node scripts/validate-dex-liquidity-token-approval-safe-submission-dry-run.mjs",
+    "dex:liquidity-token-approval-safe-submission-dry-run:status": "node services/dex-liquidity-token-approval-safe-submission-dry-run/status.mjs",
+    "dex:liquidity-token-approval-safe-submission-dry-run:gate": "npm run dex:liquidity-token-approval-safe-submission-dry-run:run && npm run dex:liquidity-token-approval-safe-submission-dry-run:validate && npm run dex:liquidity-token-approval-safe-submission-dry-run:status",
+    "release:dex-liquidity-token-approval-safe-submission-dry-run": "bash scripts/release/package-dex-liquidity-token-approval-safe-submission-dry-run.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",
