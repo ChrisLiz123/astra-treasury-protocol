@@ -3216,6 +3216,30 @@ const server = http.createServer((req, res) => {
       return;
     }
 
+    if (url.pathname === "/dex-liquidity-token-approval-safe-payload-verification") {
+      const filePath = path.join(docsDir, "dex-liquidity-token-approval-safe-payload-verification.html");
+
+      if (!fs.existsSync(filePath)) {
+        textResponse(res, "DEX liquidity token approval Safe payload verification page not generated yet. Run: npm run dex:liquidity-token-approval-payload-verification:status\n", 404);
+        return;
+      }
+
+      textResponse(res, readText(filePath), 200, "text/html; charset=utf-8");
+      return;
+    }
+
+    if (url.pathname === "/api/public/dex-liquidity-token-approval-safe-payload-verification") {
+      const filePath = path.join(docsDir, "dex-liquidity-token-approval-safe-payload-verification-status.json");
+
+      if (!fs.existsSync(filePath)) {
+        jsonResponse(res, { error: "DEX liquidity token approval Safe payload verification status not generated yet. Run: npm run dex:liquidity-token-approval-payload-verification:status" }, 404);
+        return;
+      }
+
+      textResponse(res, readText(filePath), 200, "application/json; charset=utf-8");
+      return;
+    }
+
     if (url.pathname === "/healthz") {
       jsonResponse(res, {
         ok: true,

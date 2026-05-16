@@ -635,7 +635,12 @@
     "dex:liquidity-token-approval-payload:validate": "node scripts/validate-dex-liquidity-token-approval-safe-payload.mjs",
     "dex:liquidity-token-approval-payload:status": "node services/dex-liquidity-token-approval-safe-payload/status.mjs",
     "dex:liquidity-token-approval-payload:gate": "npm run dex:liquidity-token-approval-payload:validate && npm run dex:liquidity-token-approval-payload:status",
-    "release:dex-liquidity-token-approval-safe-payload": "bash scripts/release/package-dex-liquidity-token-approval-safe-payload.sh"
+    "release:dex-liquidity-token-approval-safe-payload": "bash scripts/release/package-dex-liquidity-token-approval-safe-payload.sh",
+    "dex:liquidity-token-approval-payload-verification:verify": "node scripts/verify-dex-liquidity-token-approval-safe-payload.mjs",
+    "dex:liquidity-token-approval-payload-verification:validate": "node scripts/validate-dex-liquidity-token-approval-safe-payload-verification.mjs",
+    "dex:liquidity-token-approval-payload-verification:status": "node services/dex-liquidity-token-approval-safe-payload-verification/status.mjs",
+    "dex:liquidity-token-approval-payload-verification:gate": "npm run dex:liquidity-token-approval-payload-verification:verify && npm run dex:liquidity-token-approval-payload-verification:validate && npm run dex:liquidity-token-approval-payload-verification:status",
+    "release:dex-liquidity-token-approval-safe-payload-verification": "bash scripts/release/package-dex-liquidity-token-approval-safe-payload-verification.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",
