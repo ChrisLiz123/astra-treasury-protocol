@@ -601,7 +601,12 @@
     "dex:liquidity-funding-transfer-safe-pending-signatures:validate": "node scripts/validate-dex-liquidity-funding-transfer-safe-pending-signatures.mjs",
     "dex:liquidity-funding-transfer-safe-pending-signatures:status": "node services/dex-liquidity-funding-transfer-safe-pending-signatures/status.mjs",
     "dex:liquidity-funding-transfer-safe-pending-signatures:gate": "npm run dex:liquidity-funding-transfer-safe-pending-signatures:monitor && npm run dex:liquidity-funding-transfer-safe-pending-signatures:validate && npm run dex:liquidity-funding-transfer-safe-pending-signatures:status",
-    "release:dex-liquidity-funding-transfer-safe-pending-signatures": "bash scripts/release/package-dex-liquidity-funding-transfer-safe-pending-signatures.sh"
+    "release:dex-liquidity-funding-transfer-safe-pending-signatures": "bash scripts/release/package-dex-liquidity-funding-transfer-safe-pending-signatures.sh",
+    "dex:liquidity-funding-transfer-safe-execution-approval:record": "node scripts/record-dex-liquidity-funding-transfer-safe-execution-approval.mjs",
+    "dex:liquidity-funding-transfer-safe-execution-approval:validate": "node scripts/validate-dex-liquidity-funding-transfer-safe-execution-approval.mjs",
+    "dex:liquidity-funding-transfer-safe-execution-approval:status": "node services/dex-liquidity-funding-transfer-safe-execution-approval/status.mjs",
+    "dex:liquidity-funding-transfer-safe-execution-approval:gate": "npm run dex:liquidity-funding-transfer-safe-execution-approval:validate && npm run dex:liquidity-funding-transfer-safe-execution-approval:status",
+    "release:dex-liquidity-funding-transfer-safe-execution-approval": "bash scripts/release/package-dex-liquidity-funding-transfer-safe-execution-approval.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",
