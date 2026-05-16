@@ -670,7 +670,12 @@
     "dex:liquidity-token-approval-safe-execution-approval:validate": "node scripts/validate-dex-liquidity-token-approval-safe-execution-approval.mjs",
     "dex:liquidity-token-approval-safe-execution-approval:status": "node services/dex-liquidity-token-approval-safe-execution-approval/status.mjs",
     "dex:liquidity-token-approval-safe-execution-approval:gate": "npm run dex:liquidity-token-approval-safe-execution-approval:validate && npm run dex:liquidity-token-approval-safe-execution-approval:status",
-    "release:dex-liquidity-token-approval-safe-execution-approval": "bash scripts/release/package-dex-liquidity-token-approval-safe-execution-approval.sh"
+    "release:dex-liquidity-token-approval-safe-execution-approval": "bash scripts/release/package-dex-liquidity-token-approval-safe-execution-approval.sh",
+    "dex:liquidity-token-approval-safe-execution-preparation:prepare": "node scripts/prepare-dex-liquidity-token-approval-safe-execution.mjs",
+    "dex:liquidity-token-approval-safe-execution-preparation:validate": "node scripts/validate-dex-liquidity-token-approval-safe-execution-preparation.mjs",
+    "dex:liquidity-token-approval-safe-execution-preparation:status": "node services/dex-liquidity-token-approval-safe-execution-preparation/status.mjs",
+    "dex:liquidity-token-approval-safe-execution-preparation:gate": "npm run dex:liquidity-token-approval-safe-execution-preparation:prepare && npm run dex:liquidity-token-approval-safe-execution-preparation:validate && npm run dex:liquidity-token-approval-safe-execution-preparation:status",
+    "release:dex-liquidity-token-approval-safe-execution-preparation": "bash scripts/release/package-dex-liquidity-token-approval-safe-execution-preparation.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",
