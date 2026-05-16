@@ -1,0 +1,189 @@
+{
+  "schema": "astra-dex-liquidity-token-approval-safe-pending-signatures-status-v0.1",
+  "generatedAt": "2026-05-16T12:57:36.860Z",
+  "status": "DEX_LIQUIDITY_TOKEN_APPROVAL_SAFE_PENDING_SIGNATURES_THRESHOLD_REACHED_NOT_EXECUTED_NO_APPROVALS_EXECUTED_NO_LIQUIDITY",
+  "currentApprovedMode": "restricted-mainnet-operation",
+  "publicStatement": "AstraTreasury monitored the submitted DEX liquidity token-approval Safe transaction. The required Safe threshold is reached, but the Safe transaction is not executed, no token approval has executed, no liquidity has been added, public trading is not approved, and full launch is not approved.",
+  "summary": {
+    "reportPresent": true,
+    "pendingSignatureMonitoringComplete": true,
+    "liquiditySafeAddress": "0x8992B4173cf791Cf88eC36cd53b27F3BF22404D3",
+    "approvalSpender": "0x03a520b32C04BF3bEEf7BEb72E919cf822Ed34f1",
+    "payloadHash": "4fe2b86c4fd351743b7a4f41e7ca0d5519ec4758f056c648e69fcf299cde0612",
+    "transactionBuilderHash": "b68994c55e91f64e1d84445db1d5a80a6217ccbfeb3ba93d1757954964286903",
+    "safeTxHash": "0xdb3de8028c590d3cf5e9b506b045c681268be96717b4e3c863e9acf2efd5d910",
+    "safeNonce": 4,
+    "confirmationCount": 1,
+    "requiredThreshold": 1,
+    "missingConfirmationCount": 0,
+    "thresholdReached": true,
+    "tokenApprovalSafeSubmissionLiveRecorded": true,
+    "tokenApprovalSafeTransactionSubmitted": true,
+    "tokenApprovalSafeTransactionExecuted": false,
+    "tokenApprovalExecuted": false,
+    "liquidityMintCalldataGenerated": false,
+    "liquiditySafePayloadGenerated": false,
+    "liquidityAdded": false,
+    "positionMinted": false,
+    "publicTradingApproved": false,
+    "fullLaunchApproved": false,
+    "nextRecommendedMilestone": "DEX Liquidity Token Approval Safe Execution Approval",
+    "artifactCount": 11
+  },
+  "pendingSignaturesMonitoring": {
+    "monitoringHash": "0030145de34672402dbfd35fc803382664a5883545d5579890b4c1f739f2ebd6",
+    "hashAlgorithm": "SHA-256",
+    "safeTransactionService": {
+      "safe": "0x8992B4173cf791Cf88eC36cd53b27F3BF22404D3",
+      "nonce": 4,
+      "isExecuted": false,
+      "transactionHash": null,
+      "submissionDate": "2026-05-16T12:41:17.843407Z",
+      "modified": "2026-05-16T12:41:17.874830Z",
+      "confirmationCount": 1,
+      "requiredThreshold": 1,
+      "missingConfirmationCount": 0,
+      "thresholdReached": true
+    },
+    "safeInfo": {
+      "owners": [
+        "0x8715F4CDFD379A2249f2DE9f3515475615c72145"
+      ],
+      "threshold": 1
+    },
+    "approvalStateChecks": [
+      {
+        "id": "approve-token0",
+        "role": "token0",
+        "symbol": "USDC",
+        "tokenAddress": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "approvalMode": "set-allowance-to-required-amount",
+        "amountRaw": "1000000000",
+        "amountHuman": "1000 USDC",
+        "liquiditySafeAddress": "0x8992B4173cf791Cf88eC36cd53b27F3BF22404D3",
+        "approvalSpender": "0x03a520b32C04BF3bEEf7BEb72E919cf822Ed34f1",
+        "currentBalanceRaw": "1000000000",
+        "currentAllowanceRaw": "0",
+        "recordedCurrentAllowanceRaw": "0",
+        "allowanceStillUnexecuted": true,
+        "balanceCoversFinalApproval": true,
+        "tokenApprovalSafeTransactionExecuted": false,
+        "tokenApprovalExecuted": false
+      },
+      {
+        "id": "approve-token1",
+        "role": "token1",
+        "symbol": "ASTRA",
+        "tokenAddress": "0xc7c39837d0e604eeb525fc8fc501a5475a20419b",
+        "approvalMode": "set-allowance-to-required-amount",
+        "amountRaw": "10000000000000000000000000",
+        "amountHuman": "10000000 ASTRA",
+        "liquiditySafeAddress": "0x8992B4173cf791Cf88eC36cd53b27F3BF22404D3",
+        "approvalSpender": "0x03a520b32C04BF3bEEf7BEb72E919cf822Ed34f1",
+        "currentBalanceRaw": "10000000000000000000000000",
+        "currentAllowanceRaw": "0",
+        "recordedCurrentAllowanceRaw": "0",
+        "allowanceStillUnexecuted": true,
+        "balanceCoversFinalApproval": true,
+        "tokenApprovalSafeTransactionExecuted": false,
+        "tokenApprovalExecuted": false
+      }
+    ],
+    "requiredBeforeTokenApprovalSafeExecutionApproval": {
+      "pendingSignatureMonitoringComplete": true,
+      "tokenApprovalSafeTransactionSubmitted": true,
+      "tokenApprovalSafeTransactionExecuted": false,
+      "tokenApprovalExecuted": false,
+      "safeTxHashRecorded": true,
+      "safeNonceRecorded": true,
+      "thresholdReached": true,
+      "safeExecutionApprovalRecorded": false,
+      "publicStatusUpdatePrepared": false
+    },
+    "artifactHashes": [
+      {
+        "path": "reports/dex-liquidity-token-approval-safe-pending-signatures/dex-liquidity-token-approval-safe-pending-signatures-monitoring.json",
+        "bytes": 4340,
+        "sha256": "82f486f6726583b8071af3e5f38b244add57919c292cf367303c6c6f5e3cd02c"
+      },
+      {
+        "path": "public-docs/dex-liquidity-token-approval-safe-submission-live-status.json",
+        "bytes": 10386,
+        "sha256": "bda8c71854ef13f9206f4f35d4577cff6f1ce28bd72bde903c82850a6c2682ec"
+      },
+      {
+        "path": "reports/dex-liquidity-token-approval-safe-submission-live/dex-liquidity-token-approval-safe-submission-live-record.json",
+        "bytes": 3248,
+        "sha256": "e6e3989942033d70138a6f3db579dd66f65083a05b1fa0e106133347c61aacdf"
+      },
+      {
+        "path": "public-docs/dex-liquidity-token-approval-safe-submission-dry-run-status.json",
+        "bytes": 8789,
+        "sha256": "b8a11d112ee7bf652bf0139adc8c22c63796693b6c6940b01e87c70bd6ea849a"
+      },
+      {
+        "path": "public-docs/dex-liquidity-token-approval-safe-payload-verification-status.json",
+        "bytes": 8154,
+        "sha256": "abbbadb8db381ff8b0cb3deb1803cbeec30f638ce0106fb280ca75fd4c455139"
+      },
+      {
+        "path": "reports/dex-liquidity-token-approval/payload/token-approval-safe-payload.json",
+        "bytes": 4413,
+        "sha256": "bc20638ca3d0f880af29e6acbf848e8759907561a2a92d709ccede72d7bb0c65"
+      },
+      {
+        "path": "public-docs/dex-pool-creation-post-execution-verification-status.json",
+        "bytes": 5623,
+        "sha256": "8ac301118b360ee79a1a6e4dc532048a08ca68f3a1321e7dae35928b59d3af06"
+      },
+      {
+        "path": "public-docs/full-launch-status.json",
+        "bytes": 2717,
+        "sha256": "16dec6e30bbec9b9692ea41c76cac4b798ef2c17ac5adb49a9fffa209e1a9cdc"
+      },
+      {
+        "path": "public-docs/treasury-funding-status.json",
+        "bytes": 2489,
+        "sha256": "d87c2c774d0f782c4ca38857d3c77f2cf06037218af677ad9cdd365ba64c5e91"
+      },
+      {
+        "path": "public-docs/capability-matrix-status.json",
+        "bytes": 4146,
+        "sha256": "f3d48a86d32427813e9e88ab3a813a43768fa8501fab008bf71b6e767e83fa70"
+      },
+      {
+        "path": "public-docs/mainnet-execution-status.json",
+        "bytes": 1320,
+        "sha256": "8b47baedca001fc25a3df53e4406465cdbfdc0fef4bd010d50ee40efb50df110"
+      }
+    ]
+  },
+  "currentStatuses": {
+    "dexTokenApprovalSafeSubmissionLive": "DEX_LIQUIDITY_TOKEN_APPROVAL_SAFE_SUBMISSION_LIVE_RECORDED_NOT_EXECUTED_NO_APPROVALS_EXECUTED_NO_LIQUIDITY",
+    "dexTokenApprovalSafeSubmissionDryRun": "DEX_LIQUIDITY_TOKEN_APPROVAL_SAFE_SUBMISSION_DRY_RUN_COMPLETE_NOT_SUBMITTED_NO_APPROVALS_EXECUTED_NO_LIQUIDITY",
+    "dexTokenApprovalSafePayloadVerification": "DEX_LIQUIDITY_TOKEN_APPROVAL_SAFE_PAYLOAD_VERIFIED_NOT_SUBMITTED_NO_APPROVALS_EXECUTED_NO_LIQUIDITY",
+    "dexPoolPostExecutionVerification": "DEX_POOL_CREATION_POST_EXECUTION_POOL_VERIFIED_NO_LIQUIDITY_NO_PUBLIC_TRADING",
+    "fullLaunch": "FULL_LAUNCH_READINESS_TRACK_OPEN_PLANNING_ONLY",
+    "treasuryFunding": "TREASURY_FUNDING_READINESS_TRACK_OPEN_NOT_APPROVED",
+    "capabilityMatrix": "CAPABILITY_MATRIX_FINALIZED_ALL_DISABLED",
+    "mainnetExecution": "MAINNET_EXECUTION_QUEUE_DISABLED"
+  },
+  "restrictions": {
+    "tokenApprovalExecution": false,
+    "liquidityProvision": false,
+    "publicTrading": false,
+    "buyPageActivation": false,
+    "globalTreasuryFunding": false,
+    "fullLaunch": false
+  },
+  "safety": {
+    "monitoringOnly": true,
+    "executesTokenApproval": false,
+    "generatesLiquidityCalldata": false,
+    "addsLiquidity": false,
+    "mintsPosition": false,
+    "activatesBuyPage": false,
+    "approvesPublicTrading": false,
+    "approvesFullLaunch": false
+  }
+}
