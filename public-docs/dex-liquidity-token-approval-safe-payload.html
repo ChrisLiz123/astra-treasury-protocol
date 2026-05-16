@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AstraTreasury DEX Token Approval Safe Payload</title>
+  <style>
+    :root { color-scheme: dark; --bg: #08111f; --surface: #0e1a2b; --border: rgba(148, 163, 184, 0.2); --text: #edf4fb; --muted: #9aaec4; --blue: #67a7ff; --yellow: #f4c35f; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    body { margin: 0; background: linear-gradient(180deg, #07101d, var(--bg)); color: var(--text); }
+    a { color: var(--blue); text-decoration: none; }
+    main { width: min(1120px, calc(100% - 40px)); margin: 0 auto; padding: 44px 0 72px; }
+    .card { background: var(--surface); border: 1px solid var(--border); border-radius: 24px; padding: 28px; box-shadow: 0 22px 70px rgba(0,0,0,.28); margin-bottom: 18px; }
+    h1 { margin: 0 0 10px; font-size: 42px; letter-spacing: -1.2px; }
+    h2 { margin: 0 0 14px; font-size: 24px; }
+    p { color: var(--muted); line-height: 1.65; }
+    .badge { display: inline-flex; padding: 8px 12px; border-radius: 999px; background: rgba(244,195,95,.08); border: 1px solid rgba(244,195,95,.22); color: var(--yellow); font-weight: 850; margin-bottom: 16px; }
+    table { width: 100%; border-collapse: collapse; border: 1px solid var(--border); border-radius: 18px; overflow: hidden; margin-bottom: 16px; }
+    th, td { padding: 14px 16px; border-bottom: 1px solid var(--border); text-align: left; vertical-align: top; }
+    th { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: .08em; background: rgba(255,255,255,.03); }
+    tr:last-child td { border-bottom: 0; }
+    code { color: var(--muted); overflow-wrap: anywhere; font-size: 12px; }
+    .notice { padding: 16px; border-radius: 16px; background: rgba(244,195,95,.08); border: 1px solid rgba(244,195,95,.22); color: #f7d99a; line-height: 1.6; }
+  </style>
+</head>
+<body>
+<main>
+  <section class="card">
+    <div class="badge">Token approval Safe payload · not submitted · no approvals executed</div>
+    <h1>DEX Token Approval Safe Payload</h1>
+    <p>AstraTreasury generated a local DEX liquidity token-approval Safe payload. The Safe transaction has not been submitted, no token approval has executed, no liquidity has been added, public trading is not approved, and full launch is not approved.</p>
+    <p><strong>Payload hash:</strong> <code>4fe2b86c4fd351743b7a4f41e7ca0d5519ec4758f056c648e69fcf299cde0612</code></p>
+  </section>
+
+  <section class="card">
+    <h2>Summary</h2>
+    <table><thead><tr><th>Field</th><th>Value</th></tr></thead><tbody><tr><td>payloadPresent</td><td>true</td></tr><tr><td>tokenApprovalSafePayloadGenerated</td><td>true</td></tr><tr><td>tokenApprovalTransactionBuilderGenerated</td><td>true</td></tr><tr><td>liquiditySafeAddress</td><td>0x8992B4173cf791Cf88eC36cd53b27F3BF22404D3</td></tr><tr><td>approvalSpender</td><td>0x03a520b32C04BF3bEEf7BEb72E919cf822Ed34f1</td></tr><tr><td>payloadHash</td><td>4fe2b86c4fd351743b7a4f41e7ca0d5519ec4758f056c648e69fcf299cde0612</td></tr><tr><td>transactionBuilderHash</td><td>b68994c55e91f64e1d84445db1d5a80a6217ccbfeb3ba93d1757954964286903</td></tr><tr><td>transactionCount</td><td>2</td></tr><tr><td>tokenApprovalSafeTransactionSubmitted</td><td>false</td></tr><tr><td>tokenApprovalSafeTransactionExecuted</td><td>false</td></tr><tr><td>tokenApprovalExecuted</td><td>false</td></tr><tr><td>liquidityMintCalldataGenerated</td><td>false</td></tr><tr><td>liquiditySafePayloadGenerated</td><td>false</td></tr><tr><td>liquidityAdded</td><td>false</td></tr><tr><td>positionMinted</td><td>false</td></tr><tr><td>publicTradingApproved</td><td>false</td></tr><tr><td>fullLaunchApproved</td><td>false</td></tr><tr><td>nextRecommendedMilestone</td><td>DEX Liquidity Token Approval Safe Payload Verification</td></tr><tr><td>artifactCount</td><td>11</td></tr></tbody></table>
+  </section>
+
+  <section class="card">
+    <h2>Generated approval transactions</h2>
+    <table>
+      <thead><tr><th>Role</th><th>Symbol</th><th>Token</th><th>Amount</th><th>Spender</th><th>Data hash</th></tr></thead>
+      <tbody><tr>
+    <td>token0</td>
+    <td>USDC</td>
+    <td><code>0x833589fcd6edb6e08f4c7c32d4f71b54bda02913</code></td>
+    <td>1000 USDC</td>
+    <td><code>0x03a520b32C04BF3bEEf7BEb72E919cf822Ed34f1</code></td>
+    <td><code>73fdb26f10d06c777a2f833c4441c54d1fd612727e55fd44bb8dee33fd7d6d95</code></td>
+  </tr><tr>
+    <td>token1</td>
+    <td>ASTRA</td>
+    <td><code>0xc7c39837d0e604eeb525fc8fc501a5475a20419b</code></td>
+    <td>10000000 ASTRA</td>
+    <td><code>0x03a520b32C04BF3bEEf7BEb72E919cf822Ed34f1</code></td>
+    <td><code>2dbb9a7df0950dd774ca77059cde50a3b5a03099b179b491da1bd4bf6f2a966f</code></td>
+  </tr></tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>Required before verification</h2>
+    <table><thead><tr><th>Requirement</th><th>Status</th></tr></thead><tbody><tr><td>tokenApprovalSafePayloadGenerated</td><td>Complete</td></tr><tr><td>tokenApprovalPayloadHashRecorded</td><td>Complete</td></tr><tr><td>transactionBuilderJsonGenerated</td><td>Complete</td></tr><tr><td>approvalSpenderRecorded</td><td>Complete</td></tr><tr><td>tokenApprovalExecuted</td><td>Required / pending</td></tr><tr><td>liquidityAdded</td><td>Required / pending</td></tr><tr><td>publicStatusUpdatePrepared</td><td>Required / pending</td></tr></tbody></table>
+  </section>
+
+  <section class="card">
+    <h2>Current statuses</h2>
+    <table><thead><tr><th>Area</th><th>Status</th></tr></thead><tbody><tr><td>dexTokenApprovalPayloadGenerationApproval</td><td>Dex Liquidity Token Approval Payload Generation Approved No Payload No Approvals Executed</td></tr><tr><td>dexTokenApprovalRequirementsRecheck</td><td>Dex Liquidity Token Approval Requirements Recheck Complete Approvals Required No Approvals Executed</td></tr><tr><td>dexFundingTransferPostExecutionBalances</td><td>Dex Liquidity Treasury Funding Transfer Post Execution Balances Verified Funds Moved No Liquidity No Public Trading</td></tr><tr><td>dexPoolPostExecutionVerification</td><td>Dex Pool Creation Post Execution Pool Verified No Liquidity No Public Trading</td></tr><tr><td>fullLaunch</td><td>Full Launch Readiness Track Open Planning Only</td></tr><tr><td>treasuryFunding</td><td>Treasury Funding Readiness Track Open Not Approved</td></tr><tr><td>capabilityMatrix</td><td>Capability Matrix Finalized All Disabled</td></tr><tr><td>mainnetExecution</td><td>Mainnet Execution Queue Disabled</td></tr></tbody></table>
+  </section>
+
+  <section class="card">
+    <h2>Important</h2>
+    <div class="notice">
+      This is a local payload only. It has not been submitted, token approvals have not executed,
+      liquidity has not been added, public trading is not approved, and full launch is not approved.
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Public API</h2>
+    <p><a href="/api/public/dex-liquidity-token-approval-safe-payload">/api/public/dex-liquidity-token-approval-safe-payload</a></p>
+    <p><a href="/dex-liquidity-token-approval-payload-generation-approval">DEX Token Approval Payload Generation Approval</a></p>
+    <p><a href="/dex-liquidity-token-approval-requirements-recheck">DEX Token Approval Requirements Recheck</a></p>
+    <p><a href="/">Back to homepage</a></p>
+  </section>
+</main>
+</body>
+</html>
