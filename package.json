@@ -620,7 +620,12 @@
     "dex:liquidity-funding-transfer-post-execution-balances:validate": "node scripts/validate-dex-liquidity-funding-transfer-post-execution-balances.mjs",
     "dex:liquidity-funding-transfer-post-execution-balances:status": "node services/dex-liquidity-funding-transfer-post-execution-balances/status.mjs",
     "dex:liquidity-funding-transfer-post-execution-balances:gate": "npm run dex:liquidity-funding-transfer-post-execution-balances:verify && npm run dex:liquidity-funding-transfer-post-execution-balances:validate && npm run dex:liquidity-funding-transfer-post-execution-balances:status",
-    "release:dex-liquidity-funding-transfer-post-execution-balances": "bash scripts/release/package-dex-liquidity-funding-transfer-post-execution-balances.sh"
+    "release:dex-liquidity-funding-transfer-post-execution-balances": "bash scripts/release/package-dex-liquidity-funding-transfer-post-execution-balances.sh",
+    "dex:liquidity-token-approval-recheck:recheck": "node scripts/recheck-dex-liquidity-token-approval-requirements.mjs",
+    "dex:liquidity-token-approval-recheck:validate": "node scripts/validate-dex-liquidity-token-approval-requirements-recheck.mjs",
+    "dex:liquidity-token-approval-recheck:status": "node services/dex-liquidity-token-approval-requirements-recheck/status.mjs",
+    "dex:liquidity-token-approval-recheck:gate": "npm run dex:liquidity-token-approval-recheck:recheck && npm run dex:liquidity-token-approval-recheck:validate && npm run dex:liquidity-token-approval-recheck:status",
+    "release:dex-liquidity-token-approval-requirements-recheck": "bash scripts/release/package-dex-liquidity-token-approval-requirements-recheck.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",
