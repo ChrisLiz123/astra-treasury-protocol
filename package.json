@@ -675,7 +675,16 @@
     "dex:liquidity-token-approval-safe-execution-preparation:validate": "node scripts/validate-dex-liquidity-token-approval-safe-execution-preparation.mjs",
     "dex:liquidity-token-approval-safe-execution-preparation:status": "node services/dex-liquidity-token-approval-safe-execution-preparation/status.mjs",
     "dex:liquidity-token-approval-safe-execution-preparation:gate": "npm run dex:liquidity-token-approval-safe-execution-preparation:prepare && npm run dex:liquidity-token-approval-safe-execution-preparation:validate && npm run dex:liquidity-token-approval-safe-execution-preparation:status",
-    "release:dex-liquidity-token-approval-safe-execution-preparation": "bash scripts/release/package-dex-liquidity-token-approval-safe-execution-preparation.sh"
+    "release:dex-liquidity-token-approval-safe-execution-preparation": "bash scripts/release/package-dex-liquidity-token-approval-safe-execution-preparation.sh",
+    "dex:liquidity-token-approval-safe-execution-live:record": "node scripts/record-dex-liquidity-token-approval-safe-execution-live.mjs",
+    "dex:liquidity-token-approval-safe-execution-live:validate": "node scripts/validate-dex-liquidity-token-approval-safe-execution-live.mjs",
+    "dex:liquidity-token-approval-safe-execution-live:status": "node services/dex-liquidity-token-approval-safe-execution-live/status.mjs",
+    "dex:liquidity-token-approval-safe-execution-live:gate": "npm run dex:liquidity-token-approval-safe-execution-live:validate && npm run dex:liquidity-token-approval-safe-execution-live:status",
+    "dex:liquidity-token-approval-post-execution-allowances:verify": "node scripts/verify-dex-liquidity-token-approval-post-execution-allowances.mjs",
+    "dex:liquidity-token-approval-post-execution-allowances:validate": "node scripts/validate-dex-liquidity-token-approval-post-execution-allowances.mjs",
+    "dex:liquidity-token-approval-post-execution-allowances:status": "node services/dex-liquidity-token-approval-post-execution-allowances/status.mjs",
+    "dex:liquidity-token-approval-post-execution-allowances:gate": "npm run dex:liquidity-token-approval-post-execution-allowances:verify && npm run dex:liquidity-token-approval-post-execution-allowances:validate && npm run dex:liquidity-token-approval-post-execution-allowances:status",
+    "release:dex-liquidity-token-approval-post-execution-allowances": "bash scripts/release/package-dex-liquidity-token-approval-post-execution-allowances.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",

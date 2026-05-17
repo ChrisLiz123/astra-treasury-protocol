@@ -3408,6 +3408,30 @@ const server = http.createServer((req, res) => {
       return;
     }
 
+    if (url.pathname === "/dex-liquidity-token-approval-post-execution-allowances") {
+      const filePath = path.join(docsDir, "dex-liquidity-token-approval-post-execution-allowances.html");
+
+      if (!fs.existsSync(filePath)) {
+        textResponse(res, "DEX liquidity token approval post-execution allowances page not generated yet. Run: npm run dex:liquidity-token-approval-post-execution-allowances:status\n", 404);
+        return;
+      }
+
+      textResponse(res, readText(filePath), 200, "text/html; charset=utf-8");
+      return;
+    }
+
+    if (url.pathname === "/api/public/dex-liquidity-token-approval-post-execution-allowances") {
+      const filePath = path.join(docsDir, "dex-liquidity-token-approval-post-execution-allowances-status.json");
+
+      if (!fs.existsSync(filePath)) {
+        jsonResponse(res, { error: "DEX liquidity token approval post-execution allowances status not generated yet. Run: npm run dex:liquidity-token-approval-post-execution-allowances:status" }, 404);
+        return;
+      }
+
+      textResponse(res, readText(filePath), 200, "application/json; charset=utf-8");
+      return;
+    }
+
     if (url.pathname === "/healthz") {
       jsonResponse(res, {
         ok: true,
