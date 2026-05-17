@@ -734,7 +734,12 @@
     "dex:liquidity-safe-submission-live:validate": "node scripts/validate-dex-liquidity-safe-submission-live.mjs",
     "dex:liquidity-safe-submission-live:status": "node services/dex-liquidity-safe-submission-live/status.mjs",
     "dex:liquidity-safe-submission-live:gate": "npm run dex:liquidity-safe-submission-live:validate && npm run dex:liquidity-safe-submission-live:status",
-    "release:dex-liquidity-safe-submission-live": "bash scripts/release/package-dex-liquidity-safe-submission-live.sh"
+    "release:dex-liquidity-safe-submission-live": "bash scripts/release/package-dex-liquidity-safe-submission-live.sh",
+    "dex:liquidity-safe-pending-signatures:monitor": "node scripts/monitor-dex-liquidity-safe-pending-signatures.mjs",
+    "dex:liquidity-safe-pending-signatures:validate": "node scripts/validate-dex-liquidity-safe-pending-signatures.mjs",
+    "dex:liquidity-safe-pending-signatures:status": "node services/dex-liquidity-safe-pending-signatures/status.mjs",
+    "dex:liquidity-safe-pending-signatures:gate": "npm run dex:liquidity-safe-pending-signatures:monitor && npm run dex:liquidity-safe-pending-signatures:validate && npm run dex:liquidity-safe-pending-signatures:status",
+    "release:dex-liquidity-safe-pending-signatures": "bash scripts/release/package-dex-liquidity-safe-pending-signatures.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",
