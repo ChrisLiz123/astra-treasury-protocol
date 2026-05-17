@@ -3576,6 +3576,54 @@ const server = http.createServer((req, res) => {
       return;
     }
 
+    if (url.pathname === "/dex-liquidity-safe-submission-approval") {
+      const filePath = path.join(docsDir, "dex-liquidity-safe-submission-approval.html");
+
+      if (!fs.existsSync(filePath)) {
+        textResponse(res, "DEX liquidity Safe submission approval page not generated yet. Run: npm run dex:liquidity-safe-submission-approval:status\n", 404);
+        return;
+      }
+
+      textResponse(res, readText(filePath), 200, "text/html; charset=utf-8");
+      return;
+    }
+
+    if (url.pathname === "/api/public/dex-liquidity-safe-submission-approval") {
+      const filePath = path.join(docsDir, "dex-liquidity-safe-submission-approval-status.json");
+
+      if (!fs.existsSync(filePath)) {
+        jsonResponse(res, { error: "DEX liquidity Safe submission approval status not generated yet. Run: npm run dex:liquidity-safe-submission-approval:status" }, 404);
+        return;
+      }
+
+      textResponse(res, readText(filePath), 200, "application/json; charset=utf-8");
+      return;
+    }
+
+    if (url.pathname === "/dex-liquidity-safe-submission-preparation") {
+      const filePath = path.join(docsDir, "dex-liquidity-safe-submission-preparation.html");
+
+      if (!fs.existsSync(filePath)) {
+        textResponse(res, "DEX liquidity Safe submission preparation page not generated yet. Run: npm run dex:liquidity-safe-submission-preparation:status\n", 404);
+        return;
+      }
+
+      textResponse(res, readText(filePath), 200, "text/html; charset=utf-8");
+      return;
+    }
+
+    if (url.pathname === "/api/public/dex-liquidity-safe-submission-preparation") {
+      const filePath = path.join(docsDir, "dex-liquidity-safe-submission-preparation-status.json");
+
+      if (!fs.existsSync(filePath)) {
+        jsonResponse(res, { error: "DEX liquidity Safe submission preparation status not generated yet. Run: npm run dex:liquidity-safe-submission-preparation:status" }, 404);
+        return;
+      }
+
+      textResponse(res, readText(filePath), 200, "application/json; charset=utf-8");
+      return;
+    }
+
     if (url.pathname === "/healthz") {
       jsonResponse(res, {
         ok: true,
