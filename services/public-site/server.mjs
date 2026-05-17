@@ -3432,6 +3432,54 @@ const server = http.createServer((req, res) => {
       return;
     }
 
+    if (url.pathname === "/dex-liquidity-mint-calldata-generation-approval") {
+      const filePath = path.join(docsDir, "dex-liquidity-mint-calldata-generation-approval.html");
+
+      if (!fs.existsSync(filePath)) {
+        textResponse(res, "DEX liquidity mint calldata generation approval page not generated yet. Run: npm run dex:liquidity-mint-calldata-generation-approval:status\n", 404);
+        return;
+      }
+
+      textResponse(res, readText(filePath), 200, "text/html; charset=utf-8");
+      return;
+    }
+
+    if (url.pathname === "/api/public/dex-liquidity-mint-calldata-generation-approval") {
+      const filePath = path.join(docsDir, "dex-liquidity-mint-calldata-generation-approval-status.json");
+
+      if (!fs.existsSync(filePath)) {
+        jsonResponse(res, { error: "DEX liquidity mint calldata generation approval status not generated yet. Run: npm run dex:liquidity-mint-calldata-generation-approval:status" }, 404);
+        return;
+      }
+
+      textResponse(res, readText(filePath), 200, "application/json; charset=utf-8");
+      return;
+    }
+
+    if (url.pathname === "/dex-liquidity-mint-calldata") {
+      const filePath = path.join(docsDir, "dex-liquidity-mint-calldata.html");
+
+      if (!fs.existsSync(filePath)) {
+        textResponse(res, "DEX liquidity mint calldata page not generated yet. Run: npm run dex:liquidity-mint-calldata:status\n", 404);
+        return;
+      }
+
+      textResponse(res, readText(filePath), 200, "text/html; charset=utf-8");
+      return;
+    }
+
+    if (url.pathname === "/api/public/dex-liquidity-mint-calldata") {
+      const filePath = path.join(docsDir, "dex-liquidity-mint-calldata-status.json");
+
+      if (!fs.existsSync(filePath)) {
+        jsonResponse(res, { error: "DEX liquidity mint calldata status not generated yet. Run: npm run dex:liquidity-mint-calldata:status" }, 404);
+        return;
+      }
+
+      textResponse(res, readText(filePath), 200, "application/json; charset=utf-8");
+      return;
+    }
+
     if (url.pathname === "/healthz") {
       jsonResponse(res, {
         ok: true,

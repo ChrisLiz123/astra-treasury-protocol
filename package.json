@@ -689,7 +689,12 @@
     "dex:liquidity-mint-calldata-generation-approval:validate": "node scripts/validate-dex-liquidity-mint-calldata-generation-approval.mjs",
     "dex:liquidity-mint-calldata-generation-approval:status": "node services/dex-liquidity-mint-calldata-generation-approval/status.mjs",
     "dex:liquidity-mint-calldata-generation-approval:gate": "npm run dex:liquidity-mint-calldata-generation-approval:validate && npm run dex:liquidity-mint-calldata-generation-approval:status",
-    "release:dex-liquidity-mint-calldata-generation-approval": "bash scripts/release/package-dex-liquidity-mint-calldata-generation-approval.sh"
+    "release:dex-liquidity-mint-calldata-generation-approval": "bash scripts/release/package-dex-liquidity-mint-calldata-generation-approval.sh",
+    "dex:liquidity-mint-calldata:generate": "node scripts/generate-dex-liquidity-mint-calldata.mjs",
+    "dex:liquidity-mint-calldata:validate": "node scripts/validate-dex-liquidity-mint-calldata.mjs",
+    "dex:liquidity-mint-calldata:status": "node services/dex-liquidity-mint-calldata/status.mjs",
+    "dex:liquidity-mint-calldata:gate": "npm run dex:liquidity-mint-calldata:validate && npm run dex:liquidity-mint-calldata:status",
+    "release:dex-liquidity-mint-calldata": "bash scripts/release/package-dex-liquidity-mint-calldata.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",
