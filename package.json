@@ -704,7 +704,12 @@
     "dex:liquidity-safe-payload-generation-approval:validate": "node scripts/validate-dex-liquidity-safe-payload-generation-approval.mjs",
     "dex:liquidity-safe-payload-generation-approval:status": "node services/dex-liquidity-safe-payload-generation-approval/status.mjs",
     "dex:liquidity-safe-payload-generation-approval:gate": "npm run dex:liquidity-safe-payload-generation-approval:validate && npm run dex:liquidity-safe-payload-generation-approval:status",
-    "release:dex-liquidity-safe-payload-generation-approval": "bash scripts/release/package-dex-liquidity-safe-payload-generation-approval.sh"
+    "release:dex-liquidity-safe-payload-generation-approval": "bash scripts/release/package-dex-liquidity-safe-payload-generation-approval.sh",
+    "dex:liquidity-safe-payload:generate": "node scripts/generate-dex-liquidity-safe-payload.mjs",
+    "dex:liquidity-safe-payload:validate": "node scripts/validate-dex-liquidity-safe-payload.mjs",
+    "dex:liquidity-safe-payload:status": "node services/dex-liquidity-safe-payload/status.mjs",
+    "dex:liquidity-safe-payload:gate": "npm run dex:liquidity-safe-payload:validate && npm run dex:liquidity-safe-payload:status",
+    "release:dex-liquidity-safe-payload": "bash scripts/release/package-dex-liquidity-safe-payload.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",
