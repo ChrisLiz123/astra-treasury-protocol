@@ -699,7 +699,12 @@
     "dex:liquidity-mint-calldata-verification:validate": "node scripts/validate-dex-liquidity-mint-calldata-verification.mjs",
     "dex:liquidity-mint-calldata-verification:status": "node services/dex-liquidity-mint-calldata-verification/status.mjs",
     "dex:liquidity-mint-calldata-verification:gate": "npm run dex:liquidity-mint-calldata-verification:verify && npm run dex:liquidity-mint-calldata-verification:validate && npm run dex:liquidity-mint-calldata-verification:status",
-    "release:dex-liquidity-mint-calldata-verification": "bash scripts/release/package-dex-liquidity-mint-calldata-verification.sh"
+    "release:dex-liquidity-mint-calldata-verification": "bash scripts/release/package-dex-liquidity-mint-calldata-verification.sh",
+    "dex:liquidity-safe-payload-generation-approval:record": "node scripts/record-dex-liquidity-safe-payload-generation-approval.mjs",
+    "dex:liquidity-safe-payload-generation-approval:validate": "node scripts/validate-dex-liquidity-safe-payload-generation-approval.mjs",
+    "dex:liquidity-safe-payload-generation-approval:status": "node services/dex-liquidity-safe-payload-generation-approval/status.mjs",
+    "dex:liquidity-safe-payload-generation-approval:gate": "npm run dex:liquidity-safe-payload-generation-approval:validate && npm run dex:liquidity-safe-payload-generation-approval:status",
+    "release:dex-liquidity-safe-payload-generation-approval": "bash scripts/release/package-dex-liquidity-safe-payload-generation-approval.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",
