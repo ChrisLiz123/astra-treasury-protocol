@@ -1,0 +1,183 @@
+{
+  "schema": "astra-dex-liquidity-mint-calldata-verification-status-v0.1",
+  "generatedAt": "2026-05-17T12:00:51.096Z",
+  "status": "DEX_LIQUIDITY_MINT_CALLDATA_VERIFIED_NO_SAFE_PAYLOAD_NO_LIQUIDITY_NO_PUBLIC_TRADING",
+  "currentApprovedMode": "restricted-mainnet-operation",
+  "publicStatement": "AstraTreasury verified the generated DEX liquidity mint calldata. No liquidity Safe payload has been generated, no liquidity transaction has been submitted or executed, liquidity has not been added, public trading is not approved, and full launch is not approved.",
+  "summary": {
+    "verified": true,
+    "liquidityMintCalldataGenerated": true,
+    "liquidityMintCalldataVerified": true,
+    "liquiditySafeAddress": "0x8992B4173cf791Cf88eC36cd53b27F3BF22404D3",
+    "nonfungiblePositionManager": "0x03a520b32C04BF3bEEf7BEb72E919cf822Ed34f1",
+    "poolAddress": "0xe9f5b875ca072073ff66a8596935ec08ca1222bf",
+    "calldataHash": "ee78917b2ba39d611fd30eaa1cdafa9374d7d6a359b8dc13b4f7ee15405a009c",
+    "calldataHashVerified": true,
+    "calldataArtifactHashVerified": true,
+    "decodedMintParamsVerified": true,
+    "nftManagerCodePresent": true,
+    "poolLiquidityVerifiedZero": true,
+    "liquiditySafePayloadGenerated": false,
+    "liquiditySafeTransactionSubmitted": false,
+    "liquiditySafeTransactionExecuted": false,
+    "liquidityAdded": false,
+    "positionMinted": false,
+    "publicTradingApproved": false,
+    "fullLaunchApproved": false,
+    "nextRecommendedMilestone": "DEX Liquidity Safe Payload Generation Approval",
+    "artifactCount": 11
+  },
+  "liquidityMintCalldataVerification": {
+    "verificationHash": "67bb43f70bb2a20998a4bea0468413ae784acb9710d2ff136e3180b9db14522e",
+    "hashAlgorithm": "SHA-256",
+    "mintParams": {
+      "token0": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+      "token1": "0xc7c39837d0e604eeb525fc8fc501a5475a20419b",
+      "fee": "10000",
+      "tickLower": "-887200",
+      "tickUpper": "887200",
+      "amount0Desired": "1000000000",
+      "amount1Desired": "10000000000000000000000000",
+      "amount0Min": "950000000",
+      "amount1Min": "9500000000000000000000000",
+      "recipient": "0x8992B4173cf791Cf88eC36cd53b27F3BF22404D3",
+      "deadline": "1780228145"
+    },
+    "freshlyDecodedMintParams": {
+      "token0": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+      "token1": "0xc7c39837d0e604eeb525fc8fc501a5475a20419b",
+      "fee": "10000",
+      "tickLower": "-887200",
+      "tickUpper": "887200",
+      "amount0Desired": "1000000000",
+      "amount1Desired": "10000000000000000000000000",
+      "amount0Min": "950000000",
+      "amount1Min": "9500000000000000000000000",
+      "recipient": "0x8992b4173cf791cf88ec36cd53b27f3bf22404d3",
+      "deadline": "1780228145"
+    },
+    "liveChecks": {
+      "nftManagerCodePresent": true,
+      "poolLiquidity": "0",
+      "poolLiquidityVerifiedZero": true,
+      "token0": {
+        "tokenAddress": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "desiredRaw": "1000000000",
+        "minRaw": "950000000",
+        "liveBalanceRaw": "1000000000",
+        "liveAllowanceRaw": "1000000000",
+        "balanceCoversDesired": true,
+        "allowanceCoversDesired": true
+      },
+      "token1": {
+        "tokenAddress": "0xc7c39837d0e604eeb525fc8fc501a5475a20419b",
+        "desiredRaw": "10000000000000000000000000",
+        "minRaw": "9500000000000000000000000",
+        "liveBalanceRaw": "10000000000000000000000000",
+        "liveAllowanceRaw": "10000000000000000000000000",
+        "balanceCoversDesired": true,
+        "allowanceCoversDesired": true
+      }
+    },
+    "requiredBeforeLiquiditySafePayloadGenerationApproval": {
+      "liquidityMintCalldataGenerated": true,
+      "liquidityMintCalldataVerified": true,
+      "liquidityMintCalldataHashVerified": true,
+      "liquidityMintCalldataDecoded": true,
+      "nonfungiblePositionManagerVerified": true,
+      "liveBalancesVerified": true,
+      "liveAllowancesVerified": true,
+      "poolLiquidityStillZero": true,
+      "liquiditySafePayloadGenerationApprovalRecorded": false,
+      "liquiditySafePayloadGenerated": false,
+      "liquidityAdded": false,
+      "publicStatusUpdatePrepared": false
+    },
+    "artifactHashes": [
+      {
+        "path": "reports/dex-liquidity-mint-calldata-verification/dex-liquidity-mint-calldata-verification.json",
+        "bytes": 5217,
+        "sha256": "e0b55b0b904857808877072a442fe49df3bf48530aa6ecbf2e74720b35a3c7f8"
+      },
+      {
+        "path": "reports/dex-liquidity-provision/payload/liquidity-mint-calldata.json",
+        "bytes": 5009,
+        "sha256": "d06aa3fe77def9b843628b52058dfb2be949fbae5eba9ccf8490552115df9235"
+      },
+      {
+        "path": "public-docs/dex-liquidity-mint-calldata-status.json",
+        "bytes": 8553,
+        "sha256": "99e8be0c3ba7cea77506248d5458e29e1412a5e0cd2ca920dc5ad89e16353106"
+      },
+      {
+        "path": "reports/dex-liquidity-mint-calldata/dex-liquidity-mint-calldata-generation.json",
+        "bytes": 1137,
+        "sha256": "e0b34e4ad6999283cad02cd147144de115ad94b9e1090497713d65ed1966c6d9"
+      },
+      {
+        "path": "public-docs/dex-liquidity-mint-calldata-generation-approval-status.json",
+        "bytes": 10953,
+        "sha256": "1a2e8215fc3b068f043184bcad2866c7ac74df3f424d21b097f8d16699ca33cd"
+      },
+      {
+        "path": "public-docs/dex-liquidity-token-approval-post-execution-allowances-status.json",
+        "bytes": 7003,
+        "sha256": "7fc48babd7a4546c61d04f51ae29a2e822dae55e902958327e2a88584cb4b82d"
+      },
+      {
+        "path": "public-docs/dex-pool-creation-post-execution-verification-status.json",
+        "bytes": 5623,
+        "sha256": "8ac301118b360ee79a1a6e4dc532048a08ca68f3a1321e7dae35928b59d3af06"
+      },
+      {
+        "path": "public-docs/full-launch-status.json",
+        "bytes": 2717,
+        "sha256": "16dec6e30bbec9b9692ea41c76cac4b798ef2c17ac5adb49a9fffa209e1a9cdc"
+      },
+      {
+        "path": "public-docs/treasury-funding-status.json",
+        "bytes": 2489,
+        "sha256": "d87c2c774d0f782c4ca38857d3c77f2cf06037218af677ad9cdd365ba64c5e91"
+      },
+      {
+        "path": "public-docs/capability-matrix-status.json",
+        "bytes": 4146,
+        "sha256": "f3d48a86d32427813e9e88ab3a813a43768fa8501fab008bf71b6e767e83fa70"
+      },
+      {
+        "path": "public-docs/mainnet-execution-status.json",
+        "bytes": 1320,
+        "sha256": "42bad33fe26d5e32069b50a0a5be273ce093136b0c6bf8a5dca23c136108cee6"
+      }
+    ]
+  },
+  "currentStatuses": {
+    "dexLiquidityMintCalldata": "DEX_LIQUIDITY_MINT_CALLDATA_GENERATED_NO_SAFE_PAYLOAD_NO_LIQUIDITY_NO_PUBLIC_TRADING",
+    "dexLiquidityMintCalldataGenerationApproval": "DEX_LIQUIDITY_MINT_CALLDATA_GENERATION_APPROVED_NO_CALLDATA_NO_LIQUIDITY_NO_PUBLIC_TRADING",
+    "dexTokenApprovalPostExecutionAllowances": "DEX_LIQUIDITY_TOKEN_APPROVAL_POST_EXECUTION_ALLOWANCES_VERIFIED_APPROVALS_EXECUTED_NO_LIQUIDITY_NO_PUBLIC_TRADING",
+    "dexPoolPostExecutionVerification": "DEX_POOL_CREATION_POST_EXECUTION_POOL_VERIFIED_NO_LIQUIDITY_NO_PUBLIC_TRADING",
+    "fullLaunch": "FULL_LAUNCH_READINESS_TRACK_OPEN_PLANNING_ONLY",
+    "treasuryFunding": "TREASURY_FUNDING_READINESS_TRACK_OPEN_NOT_APPROVED",
+    "capabilityMatrix": "CAPABILITY_MATRIX_FINALIZED_ALL_DISABLED",
+    "mainnetExecution": "MAINNET_EXECUTION_QUEUE_DISABLED"
+  },
+  "restrictions": {
+    "liquiditySafePayloadGeneration": false,
+    "liquidityProvision": false,
+    "publicTrading": false,
+    "buyPageActivation": false,
+    "globalTreasuryFunding": false,
+    "fullLaunch": false
+  },
+  "safety": {
+    "verificationOnly": true,
+    "generatesLiquiditySafePayload": false,
+    "submitsLiquiditySafeTransaction": false,
+    "executesLiquiditySafeTransaction": false,
+    "addsLiquidity": false,
+    "mintsPositionOnchain": false,
+    "activatesBuyPage": false,
+    "approvesPublicTrading": false,
+    "approvesFullLaunch": false
+  }
+}

@@ -694,7 +694,12 @@
     "dex:liquidity-mint-calldata:validate": "node scripts/validate-dex-liquidity-mint-calldata.mjs",
     "dex:liquidity-mint-calldata:status": "node services/dex-liquidity-mint-calldata/status.mjs",
     "dex:liquidity-mint-calldata:gate": "npm run dex:liquidity-mint-calldata:validate && npm run dex:liquidity-mint-calldata:status",
-    "release:dex-liquidity-mint-calldata": "bash scripts/release/package-dex-liquidity-mint-calldata.sh"
+    "release:dex-liquidity-mint-calldata": "bash scripts/release/package-dex-liquidity-mint-calldata.sh",
+    "dex:liquidity-mint-calldata-verification:verify": "node scripts/verify-dex-liquidity-mint-calldata.mjs",
+    "dex:liquidity-mint-calldata-verification:validate": "node scripts/validate-dex-liquidity-mint-calldata-verification.mjs",
+    "dex:liquidity-mint-calldata-verification:status": "node services/dex-liquidity-mint-calldata-verification/status.mjs",
+    "dex:liquidity-mint-calldata-verification:gate": "npm run dex:liquidity-mint-calldata-verification:verify && npm run dex:liquidity-mint-calldata-verification:validate && npm run dex:liquidity-mint-calldata-verification:status",
+    "release:dex-liquidity-mint-calldata-verification": "bash scripts/release/package-dex-liquidity-mint-calldata-verification.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",
