@@ -709,7 +709,12 @@
     "dex:liquidity-safe-payload:validate": "node scripts/validate-dex-liquidity-safe-payload.mjs",
     "dex:liquidity-safe-payload:status": "node services/dex-liquidity-safe-payload/status.mjs",
     "dex:liquidity-safe-payload:gate": "npm run dex:liquidity-safe-payload:validate && npm run dex:liquidity-safe-payload:status",
-    "release:dex-liquidity-safe-payload": "bash scripts/release/package-dex-liquidity-safe-payload.sh"
+    "release:dex-liquidity-safe-payload": "bash scripts/release/package-dex-liquidity-safe-payload.sh",
+    "dex:liquidity-safe-payload-verification:verify": "node scripts/verify-dex-liquidity-safe-payload.mjs",
+    "dex:liquidity-safe-payload-verification:validate": "node scripts/validate-dex-liquidity-safe-payload-verification.mjs",
+    "dex:liquidity-safe-payload-verification:status": "node services/dex-liquidity-safe-payload-verification/status.mjs",
+    "dex:liquidity-safe-payload-verification:gate": "npm run dex:liquidity-safe-payload-verification:verify && npm run dex:liquidity-safe-payload-verification:validate && npm run dex:liquidity-safe-payload-verification:status",
+    "release:dex-liquidity-safe-payload-verification": "bash scripts/release/package-dex-liquidity-safe-payload-verification.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",
