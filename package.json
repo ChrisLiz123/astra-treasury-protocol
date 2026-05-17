@@ -739,7 +739,12 @@
     "dex:liquidity-safe-pending-signatures:validate": "node scripts/validate-dex-liquidity-safe-pending-signatures.mjs",
     "dex:liquidity-safe-pending-signatures:status": "node services/dex-liquidity-safe-pending-signatures/status.mjs",
     "dex:liquidity-safe-pending-signatures:gate": "npm run dex:liquidity-safe-pending-signatures:monitor && npm run dex:liquidity-safe-pending-signatures:validate && npm run dex:liquidity-safe-pending-signatures:status",
-    "release:dex-liquidity-safe-pending-signatures": "bash scripts/release/package-dex-liquidity-safe-pending-signatures.sh"
+    "release:dex-liquidity-safe-pending-signatures": "bash scripts/release/package-dex-liquidity-safe-pending-signatures.sh",
+    "dex:liquidity-safe-execution-approval:record": "node scripts/record-dex-liquidity-safe-execution-approval.mjs",
+    "dex:liquidity-safe-execution-approval:validate": "node scripts/validate-dex-liquidity-safe-execution-approval.mjs",
+    "dex:liquidity-safe-execution-approval:status": "node services/dex-liquidity-safe-execution-approval/status.mjs",
+    "dex:liquidity-safe-execution-approval:gate": "npm run dex:liquidity-safe-execution-approval:validate && npm run dex:liquidity-safe-execution-approval:status",
+    "release:dex-liquidity-safe-execution-approval": "bash scripts/release/package-dex-liquidity-safe-execution-approval.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",
