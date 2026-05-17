@@ -684,7 +684,12 @@
     "dex:liquidity-token-approval-post-execution-allowances:validate": "node scripts/validate-dex-liquidity-token-approval-post-execution-allowances.mjs",
     "dex:liquidity-token-approval-post-execution-allowances:status": "node services/dex-liquidity-token-approval-post-execution-allowances/status.mjs",
     "dex:liquidity-token-approval-post-execution-allowances:gate": "npm run dex:liquidity-token-approval-post-execution-allowances:verify && npm run dex:liquidity-token-approval-post-execution-allowances:validate && npm run dex:liquidity-token-approval-post-execution-allowances:status",
-    "release:dex-liquidity-token-approval-post-execution-allowances": "bash scripts/release/package-dex-liquidity-token-approval-post-execution-allowances.sh"
+    "release:dex-liquidity-token-approval-post-execution-allowances": "bash scripts/release/package-dex-liquidity-token-approval-post-execution-allowances.sh",
+    "dex:liquidity-mint-calldata-generation-approval:record": "node scripts/record-dex-liquidity-mint-calldata-generation-approval.mjs",
+    "dex:liquidity-mint-calldata-generation-approval:validate": "node scripts/validate-dex-liquidity-mint-calldata-generation-approval.mjs",
+    "dex:liquidity-mint-calldata-generation-approval:status": "node services/dex-liquidity-mint-calldata-generation-approval/status.mjs",
+    "dex:liquidity-mint-calldata-generation-approval:gate": "npm run dex:liquidity-mint-calldata-generation-approval:validate && npm run dex:liquidity-mint-calldata-generation-approval:status",
+    "release:dex-liquidity-mint-calldata-generation-approval": "bash scripts/release/package-dex-liquidity-mint-calldata-generation-approval.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",
