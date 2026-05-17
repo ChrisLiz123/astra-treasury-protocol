@@ -724,7 +724,12 @@
     "dex:liquidity-safe-submission-preparation:validate": "node scripts/validate-dex-liquidity-safe-submission-preparation.mjs",
     "dex:liquidity-safe-submission-preparation:status": "node services/dex-liquidity-safe-submission-preparation/status.mjs",
     "dex:liquidity-safe-submission-preparation:gate": "npm run dex:liquidity-safe-submission-preparation:prepare && npm run dex:liquidity-safe-submission-preparation:validate && npm run dex:liquidity-safe-submission-preparation:status",
-    "release:dex-liquidity-safe-submission-preparation": "bash scripts/release/package-dex-liquidity-safe-submission-preparation.sh"
+    "release:dex-liquidity-safe-submission-preparation": "bash scripts/release/package-dex-liquidity-safe-submission-preparation.sh",
+    "dex:liquidity-safe-submission-dry-run:run": "node scripts/dry-run-dex-liquidity-safe-submission.mjs",
+    "dex:liquidity-safe-submission-dry-run:validate": "node scripts/validate-dex-liquidity-safe-submission-dry-run.mjs",
+    "dex:liquidity-safe-submission-dry-run:status": "node services/dex-liquidity-safe-submission-dry-run/status.mjs",
+    "dex:liquidity-safe-submission-dry-run:gate": "npm run dex:liquidity-safe-submission-dry-run:run && npm run dex:liquidity-safe-submission-dry-run:validate && npm run dex:liquidity-safe-submission-dry-run:status",
+    "release:dex-liquidity-safe-submission-dry-run": "bash scripts/release/package-dex-liquidity-safe-submission-dry-run.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",
