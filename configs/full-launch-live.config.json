@@ -1,0 +1,69 @@
+{
+  "schema": "astra-full-launch-live-config-v0.1",
+  "status": "full-launch-live-public-finalization-recorded-buy-page-active-public-trading-live-treasury-funding-not-approved",
+  "network": {
+    "name": "Base Mainnet",
+    "chainId": 8453
+  },
+  "currentApprovedMode": "public-launch-finalization",
+  "selectedPublicPurchasePath": "dex-liquidity-pool-trading",
+  "publicFinalizationOnly": true,
+  "liveRecordFile": "reports/full-launch-live/full-launch-live-record.json",
+  "launchPageUrl": "https://astratreasury.ai/launch",
+  "buyPageUrl": "https://astratreasury.ai/buy",
+  "requiresFullLaunchApproval": true,
+  "requiresFullLaunchApproved": true,
+  "requiresBuyPageActivated": true,
+  "requiresPublicTradingLive": true,
+  "requiresPublicTradingApproved": true,
+  "requiresPublicTradingLinkApproved": true,
+  "requiresDexLiquidityPostExecutionVerified": true,
+  "requiresLiquidityAdded": true,
+  "requiresPositionMinted": true,
+  "requiresGlobalTreasuryFundingNotApproved": true,
+  "requiresGlobalTreasuryFundingNotExecuted": true,
+  "fullLaunchLiveRecorded": true,
+  "fullLaunchLive": true,
+  "fullLaunchApproved": true,
+  "buyPageActivated": true,
+  "publicTradingLive": true,
+  "publicTradingApproved": true,
+  "publicTradingLinkApproved": true,
+  "treasuryFundingApproved": false,
+  "treasuryFundingExecuted": false,
+  "finalizationScope": {
+    "recordsFullLaunchLive": true,
+    "publishesLaunchPage": true,
+    "updatesFullLaunchPublicStatus": true,
+    "approvesGlobalTreasuryFunding": false,
+    "executesGlobalTreasuryFunding": false
+  },
+  "finalState": {
+    "buyPageActivated": true,
+    "publicTradingLive": true,
+    "fullLaunchApproved": true,
+    "fullLaunchLive": true,
+    "globalTreasuryFundingApproved": false,
+    "globalTreasuryFundingExecuted": false
+  },
+  "hardStops": {
+    "globalTreasuryFundingApproved": false,
+    "globalTreasuryFundingExecuted": false
+  },
+  "hardRule": "This package records full launch live/public finalization only. It must not approve or execute global treasury funding.",
+  "recordedFullLaunchLive": {
+    "finalizedAt": "2026-05-19T23:39:22.853Z",
+    "finalizedBy": "Founder",
+    "finalizationReference": "ASTRA-Founder-202605191939",
+    "launchPageUrl": "https://astratreasury.ai/launch",
+    "buyPageUrl": "https://astratreasury.ai/buy",
+    "tradingLinkUrl": "https://app.uniswap.org/explore/pools/base/0xe9f5b875ca072073ff66a8596935ec08ca1222bf",
+    "liquiditySafeAddress": "0x8992B4173cf791Cf88eC36cd53b27F3BF22404D3",
+    "executionTxHash": "0x764597dd419950fa57e4ba0e159dfcc89e922f64f95ce4a5bad54ce167f2d950",
+    "poolAddress": "0xe9f5b875ca072073ff66a8596935ec08ca1222bf",
+    "poolLiquidityLive": "10000000000005440",
+    "positionTokenId": "5148445",
+    "finalizationHash": "78c628e23b5af840f0ce20bcd633299d6427641e9597f0153f664570b92573a9",
+    "recordFile": "reports/full-launch-live/full-launch-live-record.json"
+  }
+}

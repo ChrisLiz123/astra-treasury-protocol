@@ -3948,6 +3948,42 @@ const server = http.createServer((req, res) => {
       return;
     }
 
+    if (url.pathname === "/launch") {
+      const filePath = path.join(docsDir, "launch.html");
+
+      if (!fs.existsSync(filePath)) {
+        textResponse(res, "Launch page not generated yet. Run: npm run full-launch:live:status\n", 404);
+        return;
+      }
+
+      textResponse(res, readText(filePath), 200, "text/html; charset=utf-8");
+      return;
+    }
+
+    if (url.pathname === "/full-launch-live") {
+      const filePath = path.join(docsDir, "full-launch-live.html");
+
+      if (!fs.existsSync(filePath)) {
+        textResponse(res, "Full launch live page not generated yet. Run: npm run full-launch:live:status\n", 404);
+        return;
+      }
+
+      textResponse(res, readText(filePath), 200, "text/html; charset=utf-8");
+      return;
+    }
+
+    if (url.pathname === "/api/public/full-launch-live") {
+      const filePath = path.join(docsDir, "full-launch-live-status.json");
+
+      if (!fs.existsSync(filePath)) {
+        jsonResponse(res, { error: "Full launch live status not generated yet. Run: npm run full-launch:live:status" }, 404);
+        return;
+      }
+
+      textResponse(res, readText(filePath), 200, "application/json; charset=utf-8");
+      return;
+    }
+
     if (url.pathname === "/healthz") {
       jsonResponse(res, {
         ok: true,

@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AstraTreasury Full Launch Live</title>
+  <style>
+  :root { color-scheme: dark; --bg: #07101d; --surface: #0e1a2b; --border: rgba(148, 163, 184, 0.22); --text: #edf4fb; --muted: #9aaec4; --blue: #67a7ff; --green: #72f0a6; --yellow: #f4c35f; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+  body { margin: 0; background: linear-gradient(180deg, #07101d, var(--bg)); color: var(--text); }
+  a { color: var(--blue); text-decoration: none; }
+  main { width: min(1120px, calc(100% - 40px)); margin: 0 auto; padding: 44px 0 72px; }
+  .card { background: var(--surface); border: 1px solid var(--border); border-radius: 24px; padding: 28px; box-shadow: 0 22px 70px rgba(0,0,0,.28); margin-bottom: 18px; }
+  h1 { margin: 0 0 10px; font-size: 42px; letter-spacing: -1.2px; }
+  h2 { margin: 0 0 14px; font-size: 24px; }
+  p { color: var(--muted); line-height: 1.65; }
+  .badge { display: inline-flex; padding: 8px 12px; border-radius: 999px; background: rgba(114,240,166,.08); border: 1px solid rgba(114,240,166,.22); color: var(--green); font-weight: 850; margin-bottom: 16px; }
+  table { width: 100%; border-collapse: collapse; border: 1px solid var(--border); border-radius: 18px; overflow: hidden; margin-bottom: 16px; }
+  th, td { padding: 14px 16px; border-bottom: 1px solid var(--border); text-align: left; vertical-align: top; }
+  th { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: .08em; background: rgba(255,255,255,.03); }
+  tr:last-child td { border-bottom: 0; }
+  code { color: var(--muted); overflow-wrap: anywhere; font-size: 12px; }
+  .notice { padding: 16px; border-radius: 16px; background: rgba(244,195,95,.08); border: 1px solid rgba(244,195,95,.22); color: #f7d99a; line-height: 1.6; }
+  .cta { display: inline-flex; margin-top: 14px; margin-right: 10px; padding: 14px 18px; border-radius: 14px; background: rgba(103,167,255,.16); border: 1px solid rgba(103,167,255,.35); color: #d9eaff; font-weight: 850; }
+</style>
+</head>
+<body>
+<main>
+  <section class="card">
+    <div class="badge">Full launch live · treasury funding not approved</div>
+    <h1>Full Launch Live</h1>
+    <p>AstraTreasury full launch is live. The buy page is active, public trading is live, liquidity is verified, and global treasury funding is not approved or executed.</p>
+    <p><strong>Finalization hash:</strong> <code>78c628e23b5af840f0ce20bcd633299d6427641e9597f0153f664570b92573a9</code></p>
+    <a class="cta" href="/launch">Open Launch Page</a>
+    <a class="cta" href="/buy">Open Buy Page</a>
+  </section>
+
+  <section class="card">
+    <h2>Summary</h2>
+    <table><thead><tr><th>Field</th><th>Value</th></tr></thead><tbody><tr><td>finalized</td><td>true</td></tr><tr><td>fullLaunchLiveRecorded</td><td>true</td></tr><tr><td>fullLaunchLive</td><td>true</td></tr><tr><td>fullLaunchApproved</td><td>true</td></tr><tr><td>launchPageUrl</td><td>https://astratreasury.ai/launch</td></tr><tr><td>buyPageUrl</td><td>https://astratreasury.ai/buy</td></tr><tr><td>tradingLinkUrl</td><td>https://app.uniswap.org/explore/pools/base/0xe9f5b875ca072073ff66a8596935ec08ca1222bf</td></tr><tr><td>buyPageActivated</td><td>true</td></tr><tr><td>publicTradingLive</td><td>true</td></tr><tr><td>publicTradingApproved</td><td>true</td></tr><tr><td>publicTradingLinkApproved</td><td>true</td></tr><tr><td>liquiditySafeAddress</td><td>0x8992B4173cf791Cf88eC36cd53b27F3BF22404D3</td></tr><tr><td>executionTxHash</td><td>0x764597dd419950fa57e4ba0e159dfcc89e922f64f95ce4a5bad54ce167f2d950</td></tr><tr><td>poolAddress</td><td>0xe9f5b875ca072073ff66a8596935ec08ca1222bf</td></tr><tr><td>poolLiquidityLive</td><td>10000000000005440</td></tr><tr><td>positionTokenId</td><td>5148445</td></tr><tr><td>positionOwnerLive</td><td>0x8992b4173cf791cf88ec36cd53b27f3bf22404d3</td></tr><tr><td>dexLiquidityPostExecutionVerified</td><td>true</td></tr><tr><td>liquidityAdded</td><td>true</td></tr><tr><td>positionMinted</td><td>true</td></tr><tr><td>treasuryFundingApproved</td><td>false</td></tr><tr><td>treasuryFundingExecuted</td><td>false</td></tr><tr><td>nextRecommendedMilestone</td><td>Global Treasury Funding Approval Review</td></tr><tr><td>artifactCount</td><td>18</td></tr></tbody></table>
+  </section>
+
+  <section class="card">
+    <h2>Finalization prerequisites</h2>
+    <table><thead><tr><th>Requirement</th><th>Value</th></tr></thead><tbody><tr><td>fullLaunchApprovalRecorded</td><td>true</td></tr><tr><td>fullLaunchApproved</td><td>true</td></tr><tr><td>buyPageActivated</td><td>true</td></tr><tr><td>publicTradingLive</td><td>true</td></tr><tr><td>publicTradingApproved</td><td>true</td></tr><tr><td>publicTradingLinkApproved</td><td>true</td></tr><tr><td>dexLiquidityPostExecutionVerified</td><td>true</td></tr><tr><td>liquiditySafeTransactionExecuted</td><td>true</td></tr><tr><td>liquidityAdded</td><td>true</td></tr><tr><td>positionMinted</td><td>true</td></tr><tr><td>poolLiquidityVerifiedGreaterThanZero</td><td>true</td></tr><tr><td>positionOwnerVerified</td><td>true</td></tr><tr><td>globalTreasuryFundingApproved</td><td>false</td></tr><tr><td>globalTreasuryFundingExecuted</td><td>false</td></tr></tbody></table>
+  </section>
+
+  <section class="card">
+    <h2>Current statuses</h2>
+    <table><thead><tr><th>Area</th><th>Status</th></tr></thead><tbody><tr><td>fullLaunchApproval</td><td>Full Launch Approved Buy Page Active Public Trading Live Treasury Funding Not Approved</td></tr><tr><td>fullLaunchReadinessReview</td><td>Full Launch Readiness Review Complete Buy Page Active Public Trading Live Full Launch Not Approved</td></tr><tr><td>dexBuyPageActivationLive</td><td>Dex Buy Page Activation Live Recorded Buy Page Activated Public Trading Live Full Launch Not Approved</td></tr><tr><td>dexPublicTradingLive</td><td>Dex Public Trading Live Buy Page Activated Full Launch Not Approved</td></tr><tr><td>dexLiquidityPostExecutionVerification</td><td>Dex Liquidity Post Execution Verified Liquidity Added Position Minted No Public Trading</td></tr><tr><td>treasuryFunding</td><td>Treasury Funding Readiness Track Open Not Approved</td></tr></tbody></table>
+  </section>
+
+  <section class="card">
+    <h2>Important</h2>
+    <div class="notice">
+      Full launch is live. Global treasury funding remains not approved or executed.
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Public API</h2>
+    <p><a href="/api/public/full-launch-live">/api/public/full-launch-live</a></p>
+    <p><a href="/full-launch-approval">Full Launch Approval</a></p>
+    <p><a href="/">Back to homepage</a></p>
+  </section>
+</main>
+</body>
+</html>
