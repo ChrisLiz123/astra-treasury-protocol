@@ -3900,6 +3900,30 @@ const server = http.createServer((req, res) => {
       return;
     }
 
+    if (url.pathname === "/full-launch-readiness-review") {
+      const filePath = path.join(docsDir, "full-launch-readiness-review.html");
+
+      if (!fs.existsSync(filePath)) {
+        textResponse(res, "Full launch readiness review page not generated yet. Run: npm run full-launch:readiness-review:status\n", 404);
+        return;
+      }
+
+      textResponse(res, readText(filePath), 200, "text/html; charset=utf-8");
+      return;
+    }
+
+    if (url.pathname === "/api/public/full-launch-readiness-review") {
+      const filePath = path.join(docsDir, "full-launch-readiness-review-status.json");
+
+      if (!fs.existsSync(filePath)) {
+        jsonResponse(res, { error: "Full launch readiness review status not generated yet. Run: npm run full-launch:readiness-review:status" }, 404);
+        return;
+      }
+
+      textResponse(res, readText(filePath), 200, "application/json; charset=utf-8");
+      return;
+    }
+
     if (url.pathname === "/healthz") {
       jsonResponse(res, {
         ok: true,
