@@ -1,0 +1,17 @@
+{
+  "schema": "astra-dex-public-trading-live-status-v0.1",
+  "generatedAt": "2026-05-19T22:47:14.515Z",
+  "status": "DEX_PUBLIC_TRADING_LIVE_BUY_PAGE_ACTIVATED_FULL_LAUNCH_NOT_APPROVED",
+  "summary": {
+    "publicTradingLive": true,
+    "publicTradingApproved": true,
+    "publicTradingLinkApproved": true,
+    "buyPageActivated": true,
+    "buyPageUrl": "https://astratreasury.ai/buy",
+    "tradingLinkUrl": "https://app.uniswap.org/explore/pools/base/0xe9f5b875ca072073ff66a8596935ec08ca1222bf",
+    "poolAddress": "0xe9f5b875ca072073ff66a8596935ec08ca1222bf",
+    "poolLiquidityLive": "10000000000005440",
+    "positionTokenId": "5148445",
+    "fullLaunchApproved": false
+  }
+}

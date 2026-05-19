@@ -777,7 +777,12 @@
     "dex:buy-page-activation-approval:validate": "node scripts/validate-dex-buy-page-activation-approval.mjs",
     "dex:buy-page-activation-approval:status": "node services/dex-buy-page-activation-approval/status.mjs",
     "dex:buy-page-activation-approval:gate": "npm run dex:buy-page-activation-approval:validate && npm run dex:buy-page-activation-approval:status",
-    "release:dex-buy-page-activation-approval": "bash scripts/release/package-dex-buy-page-activation-approval.sh"
+    "release:dex-buy-page-activation-approval": "bash scripts/release/package-dex-buy-page-activation-approval.sh",
+    "dex:buy-page-activation-live:record": "node scripts/record-dex-buy-page-activation-live.mjs",
+    "dex:buy-page-activation-live:validate": "node scripts/validate-dex-buy-page-activation-live.mjs",
+    "dex:buy-page-activation-live:status": "node services/dex-buy-page-activation-live/status.mjs",
+    "dex:buy-page-activation-live:gate": "npm run dex:buy-page-activation-live:validate && npm run dex:buy-page-activation-live:status",
+    "release:dex-buy-page-activation-live": "bash scripts/release/package-dex-buy-page-activation-live.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",

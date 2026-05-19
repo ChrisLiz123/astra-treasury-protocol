@@ -1,0 +1,69 @@
+{
+  "schema": "astra-dex-buy-page-activation-live-config-v0.1",
+  "status": "dex-buy-page-activation-live-recorded-buy-page-activated-public-trading-live-full-launch-not-approved",
+  "network": {
+    "name": "Base Mainnet",
+    "chainId": 8453
+  },
+  "currentApprovedMode": "restricted-mainnet-operation",
+  "selectedPublicPurchasePath": "dex-liquidity-pool-trading",
+  "dexVenue": "Uniswap on Base",
+  "activationLiveEvidenceOnly": true,
+  "activationRecordFile": "reports/dex-buy-page-activation-live/dex-buy-page-activation-live-record.json",
+  "buyPageUrl": "https://astratreasury.ai/buy",
+  "requiresDexBuyPageActivationApproval": true,
+  "requiresPublicTradingApproved": true,
+  "requiresPublicTradingLinkApproved": true,
+  "requiresDexLiquidityPostExecutionVerified": true,
+  "requiresLiquiditySafeTransactionExecuted": true,
+  "requiresLiquidityAdded": true,
+  "requiresPositionMinted": true,
+  "requiresPoolLiquidityGreaterThanZero": true,
+  "requiresPositionOwnerIsLiquiditySafe": true,
+  "requiresFullLaunchNotApproved": true,
+  "buyPageActivationLiveRecorded": true,
+  "buyPageActivated": true,
+  "publicTradingLive": true,
+  "publicTradingApproved": true,
+  "publicTradingLinkApproved": true,
+  "buyPageActivationApproved": true,
+  "fullLaunchApproved": false,
+  "activationScope": {
+    "activatesBuyPage": true,
+    "publishesTradingLink": true,
+    "recordsPublicTradingLive": true,
+    "approvesGlobalTreasuryFunding": false,
+    "approvesFullLaunch": false
+  },
+  "requiredBeforeFullLaunchReadinessReview": {
+    "buyPageActivationLiveRecorded": true,
+    "buyPageActivated": true,
+    "publicTradingLive": true,
+    "publicTradingApproved": true,
+    "publicTradingLinkApproved": true,
+    "dexLiquidityPostExecutionVerified": true,
+    "liquiditySafeTransactionExecuted": true,
+    "liquidityAdded": true,
+    "positionMinted": true,
+    "fullLaunchApproved": false,
+    "publicStatusUpdatePrepared": true
+  },
+  "hardStops": {
+    "fullLaunchApproved": false
+  },
+  "hardRule": "This package activates the DEX buy page and records public trading live status. It must not approve global treasury funding or approve full launch.",
+  "recordedDexBuyPageActivationLive": {
+    "activatedAt": "2026-05-19T22:43:37.733Z",
+    "activatedBy": "Founder",
+    "activationReference": "ASTRA-Founder-202605191843",
+    "buyPageUrl": "https://astratreasury.ai/buy",
+    "tradingLinkUrl": "https://app.uniswap.org/explore/pools/base/0xe9f5b875ca072073ff66a8596935ec08ca1222bf",
+    "liquiditySafeAddress": "0x8992B4173cf791Cf88eC36cd53b27F3BF22404D3",
+    "executionTxHash": "0x764597dd419950fa57e4ba0e159dfcc89e922f64f95ce4a5bad54ce167f2d950",
+    "poolAddress": "0xe9f5b875ca072073ff66a8596935ec08ca1222bf",
+    "poolLiquidityLive": "10000000000005440",
+    "positionTokenId": "5148445",
+    "activationHash": "90de7b1324fdaf9734630a5d566d30aede79a51b309ae3871f4d0507b3ebde1e",
+    "recordFile": "reports/dex-buy-page-activation-live/dex-buy-page-activation-live-record.json"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "schema": "astra-dex-buy-page-activated-status-v0.1",
+  "generatedAt": "2026-05-19T22:47:14.515Z",
+  "status": "DEX_BUY_PAGE_ACTIVATED_PUBLIC_TRADING_LIVE_FULL_LAUNCH_NOT_APPROVED",
+  "summary": {
+    "buyPageActivated": true,
+    "publicTradingLive": true,
+    "buyPageUrl": "https://astratreasury.ai/buy",
+    "tradingLinkUrl": "https://app.uniswap.org/explore/pools/base/0xe9f5b875ca072073ff66a8596935ec08ca1222bf",
+    "fullLaunchApproved": false
+  }
+}
