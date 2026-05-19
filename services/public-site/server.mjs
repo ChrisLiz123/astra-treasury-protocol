@@ -3816,6 +3816,30 @@ const server = http.createServer((req, res) => {
       return;
     }
 
+    if (url.pathname === "/dex-public-trading-link-approval") {
+      const filePath = path.join(docsDir, "dex-public-trading-link-approval.html");
+
+      if (!fs.existsSync(filePath)) {
+        textResponse(res, "DEX public trading link approval page not generated yet. Run: npm run dex:public-trading-link-approval:status\n", 404);
+        return;
+      }
+
+      textResponse(res, readText(filePath), 200, "text/html; charset=utf-8");
+      return;
+    }
+
+    if (url.pathname === "/api/public/dex-public-trading-link-approval") {
+      const filePath = path.join(docsDir, "dex-public-trading-link-approval-status.json");
+
+      if (!fs.existsSync(filePath)) {
+        jsonResponse(res, { error: "DEX public trading link approval status not generated yet. Run: npm run dex:public-trading-link-approval:status" }, 404);
+        return;
+      }
+
+      textResponse(res, readText(filePath), 200, "application/json; charset=utf-8");
+      return;
+    }
+
     if (url.pathname === "/healthz") {
       jsonResponse(res, {
         ok: true,

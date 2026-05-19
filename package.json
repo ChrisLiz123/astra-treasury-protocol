@@ -763,7 +763,16 @@
     "dex:public-trading-readiness-review:validate": "node scripts/validate-dex-public-trading-readiness-review.mjs",
     "dex:public-trading-readiness-review:status": "node services/dex-public-trading-readiness-review/status.mjs",
     "dex:public-trading-readiness-review:gate": "npm run dex:public-trading-readiness-review:review && npm run dex:public-trading-readiness-review:validate && npm run dex:public-trading-readiness-review:status",
-    "release:dex-public-trading-readiness-review": "bash scripts/release/package-dex-public-trading-readiness-review.sh"
+    "release:dex-public-trading-readiness-review": "bash scripts/release/package-dex-public-trading-readiness-review.sh",
+    "dex:public-trading-approval:record": "node scripts/record-dex-public-trading-approval.mjs",
+    "dex:public-trading-approval:validate": "node scripts/validate-dex-public-trading-approval.mjs",
+    "dex:public-trading-approval:status": "node services/dex-public-trading-approval/status.mjs",
+    "dex:public-trading-approval:gate": "npm run dex:public-trading-approval:validate && npm run dex:public-trading-approval:status",
+    "dex:public-trading-link-approval:record": "node scripts/record-dex-public-trading-link-approval.mjs",
+    "dex:public-trading-link-approval:validate": "node scripts/validate-dex-public-trading-link-approval.mjs",
+    "dex:public-trading-link-approval:status": "node services/dex-public-trading-link-approval/status.mjs",
+    "dex:public-trading-link-approval:gate": "npm run dex:public-trading-link-approval:validate && npm run dex:public-trading-link-approval:status",
+    "release:dex-public-trading-link-approval": "bash scripts/release/package-dex-public-trading-link-approval.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",

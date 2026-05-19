@@ -1,0 +1,72 @@
+{
+  "schema": "astra-dex-public-trading-link-approval-config-v0.1",
+  "status": "dex-public-trading-link-approved-public-trading-approved-buy-page-not-activated-full-launch-not-approved",
+  "network": {
+    "name": "Base Mainnet",
+    "chainId": 8453
+  },
+  "currentApprovedMode": "restricted-mainnet-operation",
+  "selectedPublicPurchasePath": "dex-liquidity-pool-trading",
+  "dexVenue": "Uniswap on Base",
+  "approvalPrepared": true,
+  "approvalOnly": true,
+  "approvalRecordFile": "reports/dex-public-trading-link-approval/dex-public-trading-link-approval-record.json",
+  "requiresDexPublicTradingApproval": true,
+  "requiresPublicTradingApproved": true,
+  "requiresDexLiquidityPostExecutionVerified": true,
+  "requiresLiquiditySafeTransactionExecuted": true,
+  "requiresLiquidityAdded": true,
+  "requiresPositionMinted": true,
+  "requiresPoolLiquidityGreaterThanZero": true,
+  "requiresPositionOwnerIsLiquiditySafe": true,
+  "requiresNoBuyPageActivated": true,
+  "requiresFullLaunchNotApproved": true,
+  "publicTradingLinkApprovalRecorded": true,
+  "publicTradingApproved": true,
+  "publicTradingLinkApproved": true,
+  "publicTradingLive": false,
+  "buyPageActivationApproved": false,
+  "buyPageActivated": false,
+  "fullLaunchApproved": false,
+  "approvalScope": {
+    "approvesPublicTradingLink": true,
+    "approvesPublicTradingPolicy": false,
+    "activatesBuyPage": false,
+    "approvesGlobalTreasuryFunding": false,
+    "approvesFullLaunch": false
+  },
+  "requiredBeforeBuyPageActivationApproval": {
+    "publicTradingApprovalRecorded": true,
+    "publicTradingApproved": true,
+    "publicTradingLinkApprovalRecorded": true,
+    "publicTradingLinkApproved": true,
+    "dexLiquidityPostExecutionVerified": true,
+    "liquiditySafeTransactionExecuted": true,
+    "liquidityAdded": true,
+    "positionMinted": true,
+    "poolLiquidityVerifiedGreaterThanZero": true,
+    "positionOwnerVerified": true,
+    "buyPageActivationApproved": false,
+    "buyPageActivated": false,
+    "fullLaunchApproved": false,
+    "publicStatusUpdatePrepared": false
+  },
+  "hardStops": {
+    "buyPageActivated": false,
+    "fullLaunchApproved": false
+  },
+  "hardRule": "This package records public trading link approval only. It must not activate the buy page, approve global treasury funding, or approve full launch.",
+  "approvedDexPublicTradingLink": {
+    "recordedAt": "2026-05-19T10:48:57.695Z",
+    "approver": "Founder",
+    "approvalReference": "ASTRA-Founder-202605190648",
+    "tradingLinkUrl": "https://app.uniswap.org/explore/pools/base/0xe9f5b875ca072073ff66a8596935ec08ca1222bf",
+    "liquiditySafeAddress": "0x8992B4173cf791Cf88eC36cd53b27F3BF22404D3",
+    "executionTxHash": "0x764597dd419950fa57e4ba0e159dfcc89e922f64f95ce4a5bad54ce167f2d950",
+    "poolAddress": "0xe9f5b875ca072073ff66a8596935ec08ca1222bf",
+    "poolLiquidityLive": "10000000000005440",
+    "positionTokenId": "5148445",
+    "approvalHash": "06852c94d36376fad6454dc979c338ceb70ce95cd857696cfe16b51675dbe87d",
+    "recordFile": "reports/dex-public-trading-link-approval/dex-public-trading-link-approval-record.json"
+  }
+}
