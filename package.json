@@ -758,7 +758,12 @@
     "dex:liquidity-post-execution-verification:validate": "node scripts/validate-dex-liquidity-post-execution-verification.mjs",
     "dex:liquidity-post-execution-verification:status": "node services/dex-liquidity-post-execution-verification/status.mjs",
     "dex:liquidity-post-execution-verification:gate": "npm run dex:liquidity-post-execution-verification:verify && npm run dex:liquidity-post-execution-verification:validate && npm run dex:liquidity-post-execution-verification:status",
-    "release:dex-liquidity-post-execution-verification": "bash scripts/release/package-dex-liquidity-post-execution-verification.sh"
+    "release:dex-liquidity-post-execution-verification": "bash scripts/release/package-dex-liquidity-post-execution-verification.sh",
+    "dex:public-trading-readiness-review:review": "node scripts/review-dex-public-trading-readiness.mjs",
+    "dex:public-trading-readiness-review:validate": "node scripts/validate-dex-public-trading-readiness-review.mjs",
+    "dex:public-trading-readiness-review:status": "node services/dex-public-trading-readiness-review/status.mjs",
+    "dex:public-trading-readiness-review:gate": "npm run dex:public-trading-readiness-review:review && npm run dex:public-trading-readiness-review:validate && npm run dex:public-trading-readiness-review:status",
+    "release:dex-public-trading-readiness-review": "bash scripts/release/package-dex-public-trading-readiness-review.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",
