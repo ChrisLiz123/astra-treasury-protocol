@@ -749,7 +749,16 @@
     "dex:liquidity-safe-execution-preparation:validate": "node scripts/validate-dex-liquidity-safe-execution-preparation.mjs",
     "dex:liquidity-safe-execution-preparation:status": "node services/dex-liquidity-safe-execution-preparation/status.mjs",
     "dex:liquidity-safe-execution-preparation:gate": "npm run dex:liquidity-safe-execution-preparation:prepare && npm run dex:liquidity-safe-execution-preparation:validate && npm run dex:liquidity-safe-execution-preparation:status",
-    "release:dex-liquidity-safe-execution-preparation": "bash scripts/release/package-dex-liquidity-safe-execution-preparation.sh"
+    "release:dex-liquidity-safe-execution-preparation": "bash scripts/release/package-dex-liquidity-safe-execution-preparation.sh",
+    "dex:liquidity-safe-execution-live:record": "node scripts/record-dex-liquidity-safe-execution-live.mjs",
+    "dex:liquidity-safe-execution-live:validate": "node scripts/validate-dex-liquidity-safe-execution-live.mjs",
+    "dex:liquidity-safe-execution-live:status": "node services/dex-liquidity-safe-execution-live/status.mjs",
+    "dex:liquidity-safe-execution-live:gate": "npm run dex:liquidity-safe-execution-live:validate && npm run dex:liquidity-safe-execution-live:status",
+    "dex:liquidity-post-execution-verification:verify": "node scripts/verify-dex-liquidity-post-execution.mjs",
+    "dex:liquidity-post-execution-verification:validate": "node scripts/validate-dex-liquidity-post-execution-verification.mjs",
+    "dex:liquidity-post-execution-verification:status": "node services/dex-liquidity-post-execution-verification/status.mjs",
+    "dex:liquidity-post-execution-verification:gate": "npm run dex:liquidity-post-execution-verification:verify && npm run dex:liquidity-post-execution-verification:validate && npm run dex:liquidity-post-execution-verification:status",
+    "release:dex-liquidity-post-execution-verification": "bash scripts/release/package-dex-liquidity-post-execution-verification.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",
