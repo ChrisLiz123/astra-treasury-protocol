@@ -772,7 +772,12 @@
     "dex:public-trading-link-approval:validate": "node scripts/validate-dex-public-trading-link-approval.mjs",
     "dex:public-trading-link-approval:status": "node services/dex-public-trading-link-approval/status.mjs",
     "dex:public-trading-link-approval:gate": "npm run dex:public-trading-link-approval:validate && npm run dex:public-trading-link-approval:status",
-    "release:dex-public-trading-link-approval": "bash scripts/release/package-dex-public-trading-link-approval.sh"
+    "release:dex-public-trading-link-approval": "bash scripts/release/package-dex-public-trading-link-approval.sh",
+    "dex:buy-page-activation-approval:record": "node scripts/record-dex-buy-page-activation-approval.mjs",
+    "dex:buy-page-activation-approval:validate": "node scripts/validate-dex-buy-page-activation-approval.mjs",
+    "dex:buy-page-activation-approval:status": "node services/dex-buy-page-activation-approval/status.mjs",
+    "dex:buy-page-activation-approval:gate": "npm run dex:buy-page-activation-approval:validate && npm run dex:buy-page-activation-approval:status",
+    "release:dex-buy-page-activation-approval": "bash scripts/release/package-dex-buy-page-activation-approval.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",
