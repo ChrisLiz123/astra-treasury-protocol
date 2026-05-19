@@ -1,0 +1,196 @@
+{
+  "schema": "astra-global-treasury-funding-approval-review-status-v0.1",
+  "generatedAt": "2026-05-19T23:49:38.396Z",
+  "status": "GLOBAL_TREASURY_FUNDING_APPROVAL_REVIEW_COMPLETE_FULL_LAUNCH_LIVE_TREASURY_FUNDING_NOT_APPROVED",
+  "currentApprovedMode": "public-launch-finalized",
+  "publicStatement": "AstraTreasury completed global treasury funding approval review. Full launch is live, public trading is live, liquidity is verified, and global treasury funding is not approved or executed.",
+  "summary": {
+    "reviewed": true,
+    "globalTreasuryFundingApprovalReviewComplete": true,
+    "readyForGlobalTreasuryFundingApproval": true,
+    "fullLaunchLive": true,
+    "fullLaunchApproved": true,
+    "buyPageActivated": true,
+    "publicTradingLive": true,
+    "launchPageUrl": "https://astratreasury.ai/launch",
+    "buyPageUrl": "https://astratreasury.ai/buy",
+    "tradingLinkUrl": "https://app.uniswap.org/explore/pools/base/0xe9f5b875ca072073ff66a8596935ec08ca1222bf",
+    "liquiditySafeAddress": "0x8992B4173cf791Cf88eC36cd53b27F3BF22404D3",
+    "executionTxHash": "0x764597dd419950fa57e4ba0e159dfcc89e922f64f95ce4a5bad54ce167f2d950",
+    "poolAddress": "0xe9f5b875ca072073ff66a8596935ec08ca1222bf",
+    "poolLiquidityLive": "10000000000005440",
+    "positionTokenId": "5148445",
+    "positionOwnerLive": "0x8992b4173cf791cf88ec36cd53b27f3bf22404d3",
+    "dexLiquidityPostExecutionVerified": true,
+    "liquidityAdded": true,
+    "positionMinted": true,
+    "treasuryFundingApproved": false,
+    "treasuryFundingExecuted": false,
+    "fundsMoved": false,
+    "nextRecommendedMilestone": "Global Treasury Funding Approval",
+    "artifactCount": 20
+  },
+  "globalTreasuryFundingApprovalReview": {
+    "reviewHash": "9d5045e675b6ab480242c3fd8a1c7f9e96e31eb4e8f2b2e8daedc7f84ddc6282",
+    "hashAlgorithm": "SHA-256",
+    "readinessChecks": {
+      "fullLaunchLiveRecorded": true,
+      "fullLaunchApproved": true,
+      "buyPageActivated": true,
+      "publicTradingLive": true,
+      "dexLiquidityPostExecutionVerified": true,
+      "liquidityAdded": true,
+      "positionMinted": true,
+      "poolLiquidityGreaterThanZero": true,
+      "positionOwnerVerified": true,
+      "treasuryFundingStillNotApproved": true,
+      "treasuryFundingStillNotExecuted": true,
+      "fundsStillNotMoved": true
+    },
+    "readinessNotes": [
+      "Full launch is live and public finalization is recorded.",
+      "Buy page is active and public trading is live.",
+      "DEX liquidity and position evidence are verified.",
+      "Global treasury funding remains not approved.",
+      "Global treasury funding remains not executed.",
+      "A separate global treasury funding approval milestone is required before funding payloads or transfers."
+    ],
+    "requiredBeforeGlobalTreasuryFundingApproval": {
+      "globalTreasuryFundingApprovalReviewComplete": true,
+      "readyForGlobalTreasuryFundingApproval": true,
+      "fullLaunchLive": true,
+      "fullLaunchApproved": true,
+      "buyPageActivated": true,
+      "publicTradingLive": true,
+      "dexLiquidityPostExecutionVerified": true,
+      "liquidityAdded": true,
+      "positionMinted": true,
+      "treasuryFundingApproved": false,
+      "treasuryFundingExecuted": false,
+      "globalTreasuryFundingApprovalRecorded": false,
+      "fundingPayloadGenerated": false,
+      "fundsMoved": false
+    },
+    "artifactHashes": [
+      {
+        "path": "reports/global-treasury-funding-approval-review/global-treasury-funding-approval-review.json",
+        "bytes": 3098,
+        "sha256": "ef2b4f1fcd41fb4c5a26368f235c42b968517654b45ebc1f68d1742fb45f6072"
+      },
+      {
+        "path": "public-docs/full-launch-live-status.json",
+        "bytes": 7746,
+        "sha256": "bd62aa8ba7282a03331a70feb04a7c8cf0b6814212e7bb4dee8e21fc7f597148"
+      },
+      {
+        "path": "reports/full-launch-live/full-launch-live-record.json",
+        "bytes": 2076,
+        "sha256": "3ba43da573ba0d317d9b25c9ecf9b8687304801acd20f29744bb7463bc1ee918"
+      },
+      {
+        "path": "reports/full-launch/live/full-launch-live.json",
+        "bytes": 709,
+        "sha256": "4ee8ccc2be0199f67416fa39ccdab91e0c346e9c7836351902e15bdafe3a8a10"
+      },
+      {
+        "path": "public-docs/full-launch-status.json",
+        "bytes": 1115,
+        "sha256": "cda1d4c10ee26f63d8c0f86c6b94886cebf7ef1126ec690d5e829a808021fe16"
+      },
+      {
+        "path": "public-docs/full-launch-approval-status.json",
+        "bytes": 9984,
+        "sha256": "d4197d484013643db63052c5eba34e701cdd5383631e4c40eae84b52e186ab4f"
+      },
+      {
+        "path": "reports/full-launch-approval/full-launch-approval-record.json",
+        "bytes": 2929,
+        "sha256": "59a5f0d4bf7ca037ae5bf9da26ccf6cb7d59272ee03bad35855c84bef4bc6833"
+      },
+      {
+        "path": "public-docs/full-launch-readiness-review-status.json",
+        "bytes": 8694,
+        "sha256": "af52e2d1719d89a27b0a52bab52cad6195e48cb41438f70d4df3471b9deda616"
+      },
+      {
+        "path": "reports/full-launch-readiness-review/full-launch-readiness-review.json",
+        "bytes": 3177,
+        "sha256": "30093b735eb4d075e976c0da462b3f95d06c9319765fb0595ad462c6aba58245"
+      },
+      {
+        "path": "public-docs/dex-buy-page-activation-live-status.json",
+        "bytes": 8671,
+        "sha256": "3102a32f53d7fadd5002af7a4ab5d93c101786d764d5a240efbacfb61a8386dc"
+      },
+      {
+        "path": "reports/dex-buy-page-activation-live/dex-buy-page-activation-live-record.json",
+        "bytes": 2642,
+        "sha256": "362b4379f8efc7483793a42b1dfd8ccc0d77c5d46af1db79c9e7bca9b6f32e6e"
+      },
+      {
+        "path": "public-docs/dex-public-trading-live-status.json",
+        "bytes": 681,
+        "sha256": "2b344965fa9312f41b777cf5b906f863169484537a8e0b7497957a942bd6d45e"
+      },
+      {
+        "path": "reports/dex-public-trading/live/public-trading-live.json",
+        "bytes": 707,
+        "sha256": "35758d5f8e1d099dc80063a97a20a0bfde107f9c2ccbf536a217b2f431f1601b"
+      },
+      {
+        "path": "public-docs/dex-liquidity-post-execution-verification-status.json",
+        "bytes": 6908,
+        "sha256": "469fdaa763de8f4b9015f2479deed5c2274e6a89a9d8048bebe0df992299d558"
+      },
+      {
+        "path": "reports/dex-liquidity-post-execution-verification/dex-liquidity-post-execution-verification.json",
+        "bytes": 4442,
+        "sha256": "e23dfa4d5f1de703a20df5d50d6a930993770b95acee24fb4add0f47cb7cc190"
+      },
+      {
+        "path": "reports/dex-liquidity-provision/live/liquidity-added.json",
+        "bytes": 582,
+        "sha256": "d9918fcad9ba99eb469ea555a9976ceacbd3943d9ee4973df91ba1fd1b825de3"
+      },
+      {
+        "path": "reports/dex-liquidity-provision/live/position-minted.json",
+        "bytes": 595,
+        "sha256": "8333c649076b5fd0d92b597756e58d6062b818a3d9f1c718e028860990f77c0b"
+      },
+      {
+        "path": "public-docs/treasury-funding-status.json",
+        "bytes": 2489,
+        "sha256": "d87c2c774d0f782c4ca38857d3c77f2cf06037218af677ad9cdd365ba64c5e91"
+      },
+      {
+        "path": "public-docs/launch.html",
+        "bytes": 3700,
+        "sha256": "caff192062a0d1dbd9653edd55560d818724dff732f06b67e1dccc42ef0e4255"
+      },
+      {
+        "path": "public-docs/buy.html",
+        "bytes": 3328,
+        "sha256": "e47c6d7c13aeaf67a69c49c9f4772a33839d00dc20fe9ff8c6bf17542d38c2cf"
+      }
+    ]
+  },
+  "currentStatuses": {
+    "fullLaunchLive": "FULL_LAUNCH_LIVE_PUBLIC_FINALIZATION_RECORDED_BUY_PAGE_ACTIVE_PUBLIC_TRADING_LIVE_TREASURY_FUNDING_NOT_APPROVED",
+    "fullLaunch": "FULL_LAUNCH_LIVE_BUY_PAGE_ACTIVE_PUBLIC_TRADING_LIVE_TREASURY_FUNDING_NOT_APPROVED",
+    "fullLaunchApproval": "FULL_LAUNCH_APPROVED_BUY_PAGE_ACTIVE_PUBLIC_TRADING_LIVE_TREASURY_FUNDING_NOT_APPROVED",
+    "dexLiquidityPostExecutionVerification": "DEX_LIQUIDITY_POST_EXECUTION_VERIFIED_LIQUIDITY_ADDED_POSITION_MINTED_NO_PUBLIC_TRADING",
+    "treasuryFunding": "TREASURY_FUNDING_READINESS_TRACK_OPEN_NOT_APPROVED"
+  },
+  "restrictions": {
+    "globalTreasuryFundingApproval": false,
+    "globalTreasuryFundingExecution": false,
+    "fundsMoved": false
+  },
+  "safety": {
+    "reviewOnly": true,
+    "approvesGlobalTreasuryFunding": false,
+    "executesGlobalTreasuryFunding": false,
+    "generatesFundingPayload": false,
+    "movesFunds": false
+  }
+}

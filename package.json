@@ -797,7 +797,12 @@
     "full-launch:live:validate": "node scripts/validate-full-launch-live.mjs",
     "full-launch:live:status": "node services/full-launch-live/status.mjs",
     "full-launch:live:gate": "npm run full-launch:live:validate && npm run full-launch:live:status",
-    "release:full-launch-live": "bash scripts/release/package-full-launch-live.sh"
+    "release:full-launch-live": "bash scripts/release/package-full-launch-live.sh",
+    "treasury:global-funding-approval-review:review": "node scripts/review-global-treasury-funding-approval.mjs",
+    "treasury:global-funding-approval-review:validate": "node scripts/validate-global-treasury-funding-approval-review.mjs",
+    "treasury:global-funding-approval-review:status": "node services/global-treasury-funding-approval-review/status.mjs",
+    "treasury:global-funding-approval-review:gate": "npm run treasury:global-funding-approval-review:review && npm run treasury:global-funding-approval-review:validate && npm run treasury:global-funding-approval-review:status",
+    "release:global-treasury-funding-approval-review": "bash scripts/release/package-global-treasury-funding-approval-review.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",
