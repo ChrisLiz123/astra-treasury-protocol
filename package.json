@@ -787,7 +787,12 @@
     "full-launch:readiness-review:validate": "node scripts/validate-full-launch-readiness-review.mjs",
     "full-launch:readiness-review:status": "node services/full-launch-readiness-review/status.mjs",
     "full-launch:readiness-review:gate": "npm run full-launch:readiness-review:review && npm run full-launch:readiness-review:validate && npm run full-launch:readiness-review:status",
-    "release:full-launch-readiness-review": "bash scripts/release/package-full-launch-readiness-review.sh"
+    "release:full-launch-readiness-review": "bash scripts/release/package-full-launch-readiness-review.sh",
+    "full-launch:approval:record": "node scripts/record-full-launch-approval.mjs",
+    "full-launch:approval:validate": "node scripts/validate-full-launch-approval.mjs",
+    "full-launch:approval:status": "node services/full-launch-approval/status.mjs",
+    "full-launch:approval:gate": "npm run full-launch:approval:validate && npm run full-launch:approval:status",
+    "release:full-launch-approval": "bash scripts/release/package-full-launch-approval.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",

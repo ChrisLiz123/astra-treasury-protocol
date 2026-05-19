@@ -1,0 +1,15 @@
+{
+  "schema": "astra-full-launch-approved-status-v0.1",
+  "generatedAt": "2026-05-19T23:28:22.782Z",
+  "status": "FULL_LAUNCH_APPROVED_TREASURY_FUNDING_NOT_APPROVED_FULL_LAUNCH_LIVE_NOT_FINALIZED",
+  "summary": {
+    "fullLaunchApprovalRecorded": true,
+    "fullLaunchApproved": true,
+    "fullLaunchLive": false,
+    "buyPageActivated": true,
+    "publicTradingLive": true,
+    "treasuryFundingApproved": false,
+    "treasuryFundingExecuted": false,
+    "approvalHash": "4ae80138f7bb425c689b86d32e687dff3b0439026c88bb92059136f4efca6fa1"
+  }
+}
