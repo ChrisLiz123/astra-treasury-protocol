@@ -1,0 +1,14 @@
+{
+  "schema": "astra-global-treasury-funding-approved-status-v0.1",
+  "generatedAt": "2026-05-20T00:02:38.215Z",
+  "status": "GLOBAL_TREASURY_FUNDING_APPROVED_NOT_EXECUTED_FUNDS_NOT_MOVED",
+  "summary": {
+    "globalTreasuryFundingApprovalRecorded": true,
+    "globalTreasuryFundingApproved": true,
+    "treasuryFundingApproved": true,
+    "treasuryFundingExecuted": false,
+    "fundingPayloadGenerated": false,
+    "fundsMoved": false,
+    "approvalHash": "8c13693b25448a2d878337845ddeeb1e59c1568637d7346bd1356b7343b5ae88"
+  }
+}

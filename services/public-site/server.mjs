@@ -4008,6 +4008,30 @@ const server = http.createServer((req, res) => {
       return;
     }
 
+    if (url.pathname === "/global-treasury-funding-approval") {
+      const filePath = path.join(docsDir, "global-treasury-funding-approval.html");
+
+      if (!fs.existsSync(filePath)) {
+        textResponse(res, "Global treasury funding approval page not generated yet. Run: npm run treasury:global-funding-approval:status\n", 404);
+        return;
+      }
+
+      textResponse(res, readText(filePath), 200, "text/html; charset=utf-8");
+      return;
+    }
+
+    if (url.pathname === "/api/public/global-treasury-funding-approval") {
+      const filePath = path.join(docsDir, "global-treasury-funding-approval-status.json");
+
+      if (!fs.existsSync(filePath)) {
+        jsonResponse(res, { error: "Global treasury funding approval status not generated yet. Run: npm run treasury:global-funding-approval:status" }, 404);
+        return;
+      }
+
+      textResponse(res, readText(filePath), 200, "application/json; charset=utf-8");
+      return;
+    }
+
     if (url.pathname === "/healthz") {
       jsonResponse(res, {
         ok: true,

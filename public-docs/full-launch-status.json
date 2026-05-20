@@ -1,7 +1,7 @@
 {
   "schema": "astra-full-launch-status-v0.1",
-  "generatedAt": "2026-05-19T23:39:22.853Z",
-  "status": "FULL_LAUNCH_LIVE_BUY_PAGE_ACTIVE_PUBLIC_TRADING_LIVE_TREASURY_FUNDING_NOT_APPROVED",
+  "generatedAt": "2026-05-20T00:02:38.215Z",
+  "status": "FULL_LAUNCH_LIVE_GLOBAL_TREASURY_FUNDING_APPROVED_NOT_EXECUTED",
   "fullLaunchApproved": true,
   "fullLaunchApprovalRecorded": true,
   "fullLaunchLive": true,
@@ -17,8 +17,9 @@
   "poolAddress": "0xe9f5b875ca072073ff66a8596935ec08ca1222bf",
   "poolLiquidityLive": "10000000000005440",
   "positionTokenId": "5148445",
-  "treasuryFundingApproved": false,
+  "treasuryFundingApproved": true,
   "treasuryFundingExecuted": false,
-  "finalizationHash": "78c628e23b5af840f0ce20bcd633299d6427641e9597f0153f664570b92573a9",
-  "finalizationRecordFile": "reports/full-launch-live/full-launch-live-record.json"
+  "fundingPayloadGenerated": false,
+  "fundsMoved": false,
+  "treasuryFundingApprovalHash": "8c13693b25448a2d878337845ddeeb1e59c1568637d7346bd1356b7343b5ae88"
 }

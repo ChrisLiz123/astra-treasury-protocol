@@ -1,73 +1,21 @@
 {
-  "schema": "astra-public-treasury-funding-readiness-status-v0.1",
-  "generatedAt": "2026-05-13T13:37:10.110Z",
-  "status": "TREASURY_FUNDING_READINESS_TRACK_OPEN_NOT_APPROVED",
-  "currentApprovedMode": "restricted-mainnet-operation",
-  "treasuryFundingApproved": false,
-  "treasuryFundingTransactionAuthorized": false,
+  "schema": "astra-treasury-funding-status-v0.1",
+  "generatedAt": "2026-05-20T00:02:38.215Z",
+  "status": "GLOBAL_TREASURY_FUNDING_APPROVED_NOT_EXECUTED_FUNDS_NOT_MOVED",
+  "treasuryFundingApproved": true,
   "treasuryFundingExecuted": false,
-  "network": {
-    "name": "Base Mainnet",
-    "chainId": 8453
-  },
-  "publicStatement": "AstraTreasury treasury funding readiness track is open for planning. No real treasury funding is approved, authorized, or executed.",
+  "globalTreasuryFundingApproved": true,
+  "globalTreasuryFundingExecuted": false,
+  "fundingPayloadGenerated": false,
+  "fundsMoved": false,
   "summary": {
-    "totalChecks": 24,
-    "passed": 24,
-    "failed": 0,
-    "pendingFundingItems": 10,
-    "activeIncidents": 0,
-    "responseRequired": false
-  },
-  "currentStatuses": {
-    "stabilization": "RESTRICTED_LAUNCH_STABILIZED",
-    "fullLaunch": "FULL_LAUNCH_READINESS_TRACK_OPEN_PLANNING_ONLY",
-    "legalFullLaunch": "LEGAL_FULL_LAUNCH_REVIEW_OPEN_NOT_APPROVED",
-    "restrictedOperations": "MAINNET_RESTRICTED_OPERATION",
-    "executionQueue": "MAINNET_EXECUTION_QUEUE_DISABLED",
-    "monitor": "PASS",
-    "alerts": "CLEAR",
-    "incidents": "NO_ACTIVE_INCIDENTS",
-    "token": "restricted-operational-mode"
-  },
-  "fundingReadiness": {
-    "treasuryFundingApproved": false,
-    "treasuryFundingTransactionAuthorized": false,
+    "treasuryFundingApproved": true,
     "treasuryFundingExecuted": false,
-    "fundingSourceApproved": false,
-    "treasurySafeApprovalRecorded": false,
-    "riskLimitsApproved": false,
-    "accountingReviewComplete": false,
-    "legalReviewComplete": false,
-    "publicDisclosureUpdated": false,
-    "incidentResponseDrillCurrent": false
+    "globalTreasuryFundingApproved": true,
+    "globalTreasuryFundingExecuted": false,
+    "fundingPayloadGenerated": false,
+    "fundsMoved": false
   },
-  "pendingFundingItems": [
-    "treasuryFundingApproved",
-    "treasuryFundingTransactionAuthorized",
-    "treasuryFundingExecuted",
-    "fundingSourceApproved",
-    "treasurySafeApprovalRecorded",
-    "riskLimitsApproved",
-    "accountingReviewComplete",
-    "legalReviewComplete",
-    "publicDisclosureUpdated",
-    "incidentResponseDrillCurrent"
-  ],
-  "restrictions": {
-    "publicTokenSale": false,
-    "realTreasuryFunding": false,
-    "stakingOrRewards": false,
-    "buybackProgram": false,
-    "autonomousExecution": false,
-    "mainnetExecutionQueue": false,
-    "paperToOnchainAutomation": false
-  },
-  "nextPossibleMilestones": [
-    "Treasury funding source review",
-    "Treasury risk limits approval",
-    "Treasury Safe approval package",
-    "Treasury funding transaction dry run",
-    "Public disclosure update for treasury funding"
-  ]
+  "approvalHash": "8c13693b25448a2d878337845ddeeb1e59c1568637d7346bd1356b7343b5ae88",
+  "approvalRecordFile": "reports/global-treasury-funding-approval/global-treasury-funding-approval-record.json"
 }

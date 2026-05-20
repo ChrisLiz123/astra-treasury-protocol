@@ -802,7 +802,12 @@
     "treasury:global-funding-approval-review:validate": "node scripts/validate-global-treasury-funding-approval-review.mjs",
     "treasury:global-funding-approval-review:status": "node services/global-treasury-funding-approval-review/status.mjs",
     "treasury:global-funding-approval-review:gate": "npm run treasury:global-funding-approval-review:review && npm run treasury:global-funding-approval-review:validate && npm run treasury:global-funding-approval-review:status",
-    "release:global-treasury-funding-approval-review": "bash scripts/release/package-global-treasury-funding-approval-review.sh"
+    "release:global-treasury-funding-approval-review": "bash scripts/release/package-global-treasury-funding-approval-review.sh",
+    "treasury:global-funding-approval:record": "node scripts/record-global-treasury-funding-approval.mjs",
+    "treasury:global-funding-approval:validate": "node scripts/validate-global-treasury-funding-approval.mjs",
+    "treasury:global-funding-approval:status": "node services/global-treasury-funding-approval/status.mjs",
+    "treasury:global-funding-approval:gate": "npm run treasury:global-funding-approval:validate && npm run treasury:global-funding-approval:status",
+    "release:global-treasury-funding-approval": "bash scripts/release/package-global-treasury-funding-approval.sh"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.5",

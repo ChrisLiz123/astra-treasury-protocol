@@ -1,0 +1,71 @@
+{
+  "schema": "astra-global-treasury-funding-approval-config-v0.1",
+  "status": "global-treasury-funding-approved-full-launch-live-no-payload-no-funds-moved",
+  "network": {
+    "name": "Base Mainnet",
+    "chainId": 8453
+  },
+  "currentApprovedMode": "public-launch-finalized",
+  "selectedPublicPurchasePath": "dex-liquidity-pool-trading",
+  "approvalPrepared": true,
+  "approvalOnly": true,
+  "approvalRecordFile": "reports/global-treasury-funding-approval/global-treasury-funding-approval-record.json",
+  "requiresGlobalTreasuryFundingApprovalReview": true,
+  "requiresFullLaunchLive": true,
+  "requiresFullLaunchApproved": true,
+  "requiresBuyPageActivated": true,
+  "requiresPublicTradingLive": true,
+  "requiresDexLiquidityPostExecutionVerified": true,
+  "requiresLiquidityAdded": true,
+  "requiresPositionMinted": true,
+  "requiresGlobalTreasuryFundingNotApprovedBeforeRecording": true,
+  "requiresGlobalTreasuryFundingNotExecuted": true,
+  "globalTreasuryFundingApprovalRecorded": true,
+  "globalTreasuryFundingApproved": true,
+  "treasuryFundingApproved": true,
+  "treasuryFundingExecuted": false,
+  "fundingPayloadGenerated": false,
+  "fundsMoved": false,
+  "approvalScope": {
+    "approvesGlobalTreasuryFunding": true,
+    "generatesFundingPayload": false,
+    "submitsSafeTransaction": false,
+    "executesGlobalTreasuryFunding": false,
+    "movesFunds": false
+  },
+  "requiredBeforeGlobalTreasuryFundingRequirementsReview": {
+    "globalTreasuryFundingApprovalRecorded": true,
+    "globalTreasuryFundingApproved": true,
+    "fullLaunchLive": true,
+    "fullLaunchApproved": true,
+    "buyPageActivated": true,
+    "publicTradingLive": true,
+    "dexLiquidityPostExecutionVerified": true,
+    "liquidityAdded": true,
+    "positionMinted": true,
+    "fundingPayloadGenerated": false,
+    "treasuryFundingExecuted": false,
+    "fundsMoved": false
+  },
+  "hardStops": {
+    "fundingPayloadGenerated": false,
+    "treasuryFundingExecuted": false,
+    "fundsMoved": false
+  },
+  "hardRule": "This package records global treasury funding approval only. It must not generate funding payloads, submit Safe transactions, execute funding, or move funds.",
+  "approvedGlobalTreasuryFunding": {
+    "recordedAt": "2026-05-20T00:01:24.460Z",
+    "approver": "Founder",
+    "approvalReference": "ASTRA-Founder-202605192001",
+    "fullLaunchLive": true,
+    "launchPageUrl": "https://astratreasury.ai/launch",
+    "buyPageUrl": "https://astratreasury.ai/buy",
+    "liquiditySafeAddress": "0x8992B4173cf791Cf88eC36cd53b27F3BF22404D3",
+    "executionTxHash": "0x764597dd419950fa57e4ba0e159dfcc89e922f64f95ce4a5bad54ce167f2d950",
+    "poolAddress": "0xe9f5b875ca072073ff66a8596935ec08ca1222bf",
+    "poolLiquidityLive": "10000000000005440",
+    "positionTokenId": "5148445",
+    "approvalHash": "8c13693b25448a2d878337845ddeeb1e59c1568637d7346bd1356b7343b5ae88",
+    "recordFile": "reports/global-treasury-funding-approval/global-treasury-funding-approval-record.json"
+  }
+}
